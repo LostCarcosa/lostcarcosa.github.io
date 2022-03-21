@@ -1,7 +1,7 @@
 {
 	"action": [
 		{
-			"name": "Activate an Item",
+			"name": "Activate an Item test",
 			"source": "DMG",
 			"page": 141,
 			"srd": true,
