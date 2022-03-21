@@ -19,7 +19,7 @@
 					"type": "entries",
 					"name": "Command Word",
 					"entries": [
-						"TEST A command word is a word or phrase that must be spoken audibly for the item to operate. A magic item that requires the user to speak a command word can't be activated in the area of any effect that prevents sound, such as the area created by the silence spell."
+						"A command word is a word or phrase that must be spoken audibly for the item to operate. A magic item that requires the user to speak a command word can't be activated in the area of any effect that prevents sound, such as the area created by the silence spell."
 					]
 				},
 				{
