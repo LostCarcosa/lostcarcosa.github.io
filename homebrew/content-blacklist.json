@@ -1,0 +1,12 @@
+{
+	"siteVersion": "1.152.0",
+	"fileType": "content-blacklist",
+	"blacklist": [
+		{
+			"displayName": "Silvery Barbs",
+			"hash": "silvery%20barbs_scc",
+			"category": "spell",
+			"source": "SCC"
+		}
+	]
+}
