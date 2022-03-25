@@ -2610,16 +2610,213 @@
 			"classes": {
 				"fromClassList": [
 					{
-							"name": "Cleric",
-							"source": "PHB"
+						"name": "Cleric",
+						"source": "PHB"
 					},
 					{
-							"name": "Sorcerer",
-							"source": "PHB"
+						"name": "Sorcerer",
+						"source": "PHB"
 					},
 					{
-							"name": "Warlock",
-							"source": "PHB"
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Encode Thoughts",
+			"source": "MOD",
+			"level": 0,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Putting a finger to your head, you pull a memory, an idea, or a message from your mind and transform it into a tangible string of glowing energy called a thought strand, which persists for the duration or until you cast this spell again. The thought strand appears in an unoccupied space within 5 feet of you as a Tiny, weightless, semisolid object that can be held and carried like a ribbon. It is otherwise stationary.",
+				"If you cast this spell while concentrating on a spell or an ability that allows you to read or manipulate the thoughts of others (such as {@spell detect thoughts} or {@spell modify memory}), you can transform the thoughts or memories you read, rather than your own, into a thought strand.",
+				"Casting this spell while holding a thought strand allows you to instantly receive whatever memory, idea, or message the thought strand contains. (Casting {@spell detect thoughts} on the strand has the same effect.)"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Rime's Binding Ice",
+			"source": "MOD",
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "a vial of meltwater"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"A burst of cold energy emanates from you in a 30-foot cone. Each creature in that area must make a Constitution saving throw. On a failed save, a creature takes {@damage 3d8} cold damage and is {@condition grappled} by ice formations for 1 minute, or until it or another creature within reach of it uses an action to break away the ice. On a successful save, a creature takes half as much damage and isn't {@condition grappled}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, increase the cold damage by {@scaledamage 3d8|2-9|1d8} for each slot level above 2nd."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"N"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Draconic Transformation",
+			"source": "MOD",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a statuette of a dragon, worth at least 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"With a roar, you draw on the magic of dragons to transform yourself, taking on draconic features. You gain the following benefits until the spell ends:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Blindsight",
+							"entries": [
+								"You have {@sense blindsight} with a range of 30 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're {@condition blinded} or in darkness. Moreover, you can see an {@condition invisible} creature, unless the creature successfully hides from you."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Breath Weapon",
+							"entries": [
+								"When you cast this spell, and as a bonus action on subsequent turns for the duration, you can exhale shimmering energy in a 60-foot cone. Each creature in that area must make a Dexterity saving throw, taking {@damage 6d8} force damage on a failed save, or half as much damage on a successful one."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Wings",
+							"entries": [
+								"Incorporeal wings sprout from your back, giving you a flying speed of 60 feet."
+							]
+						}
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
 					}
 				]
 			}
