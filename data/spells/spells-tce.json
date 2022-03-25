@@ -1644,6 +1644,11 @@
 			"classes": {
 				"fromClassListVariant": [
 					{
+						"name": "Cleric",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
 						"name": "Sorcerer",
 						"source": "PHB",
 						"definedInSource": "TCE"
