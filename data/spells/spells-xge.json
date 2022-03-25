@@ -3,13 +3,6 @@
 		{
 			"name": "Abi-Dalzim's Horrid Wilting",
 			"source": "XGE",
-			"page": 150,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 15
-				}
-			],
 			"level": 8,
 			"school": "N",
 			"time": [
@@ -71,13 +64,6 @@
 		{
 			"name": "Absorb Elements",
 			"source": "XGE",
-			"page": 150,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 15
-				}
-			],
 			"level": 1,
 			"school": "A",
 			"time": [
@@ -156,13 +142,6 @@
 		{
 			"name": "Aganazzar's Scorcher",
 			"source": "XGE",
-			"page": 150,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 15
-				}
-			],
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -225,13 +204,6 @@
 		{
 			"name": "Beast Bond",
 			"source": "XGE",
-			"page": 150,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 15
-				}
-			],
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -292,13 +264,6 @@
 		{
 			"name": "Bones of the Earth",
 			"source": "XGE",
-			"page": 150,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 15
-				}
-			],
 			"level": 6,
 			"school": "T",
 			"time": [
@@ -368,13 +333,6 @@
 		{
 			"name": "Catapult",
 			"source": "XGE",
-			"page": 150,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 15
-				}
-			],
 			"level": 1,
 			"school": "T",
 			"time": [
@@ -973,13 +931,6 @@
 		{
 			"name": "Control Flames",
 			"source": "XGE",
-			"page": 152,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 16
-				}
-			],
 			"level": 0,
 			"school": "T",
 			"time": [
@@ -1050,13 +1001,6 @@
 		{
 			"name": "Control Winds",
 			"source": "XGE",
-			"page": 152,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 16
-				}
-			],
 			"level": 5,
 			"school": "T",
 			"time": [
@@ -1142,13 +1086,6 @@
 		{
 			"name": "Create Bonfire",
 			"source": "XGE",
-			"page": 152,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 16
-				}
-			],
 			"level": 0,
 			"school": "C",
 			"time": [
@@ -1676,13 +1613,6 @@
 		{
 			"name": "Dust Devil",
 			"source": "XGE",
-			"page": 154,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 17
-				}
-			],
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -1757,13 +1687,6 @@
 		{
 			"name": "Earth Tremor",
 			"source": "XGE",
-			"page": 155,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 17
-				}
-			],
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -1836,13 +1759,6 @@
 		{
 			"name": "Earthbind",
 			"source": "XGE",
-			"page": 154,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 17
-				}
-			],
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -1907,13 +1823,6 @@
 		{
 			"name": "Elemental Bane",
 			"source": "XGE",
-			"page": 155,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 17
-				}
-			],
 			"level": 4,
 			"school": "T",
 			"time": [
@@ -2142,13 +2051,6 @@
 		{
 			"name": "Erupting Earth",
 			"source": "XGE",
-			"page": 155,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 17
-				}
-			],
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -2338,13 +2240,6 @@
 		{
 			"name": "Flame Arrows",
 			"source": "XGE",
-			"page": 156,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 18
-				}
-			],
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -2420,13 +2315,6 @@
 		{
 			"name": "Frostbite",
 			"source": "XGE",
-			"page": 156,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 18
-				}
-			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -2597,25 +2485,6 @@
 		{
 			"name": "Gust",
 			"source": "XGE",
-			"page": 157,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 19
-				},
-				{
-					"source": "UAWGE",
-					"page": 107
-				},
-				{
-					"source": "ERLW",
-					"page": 50
-				},
-				{
-					"source": "TCE",
-					"page": 50
-				}
-			],
 			"level": 0,
 			"school": "T",
 			"time": [
@@ -2835,13 +2704,6 @@
 		{
 			"name": "Ice Knife",
 			"source": "XGE",
-			"page": 157,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 19
-				}
-			],
 			"level": 1,
 			"school": "C",
 			"time": [
@@ -2982,13 +2844,6 @@
 		{
 			"name": "Immolation",
 			"source": "XGE",
-			"page": 158,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 19
-				}
-			],
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -3204,13 +3059,6 @@
 		{
 			"name": "Investiture of Flame",
 			"source": "XGE",
-			"page": 159,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 19
-				}
-			],
 			"level": 6,
 			"school": "T",
 			"time": [
@@ -3292,13 +3140,6 @@
 		{
 			"name": "Investiture of Ice",
 			"source": "XGE",
-			"page": 159,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 19
-				}
-			],
 			"level": 6,
 			"school": "T",
 			"time": [
@@ -3379,13 +3220,6 @@
 		{
 			"name": "Investiture of Stone",
 			"source": "XGE",
-			"page": 159,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 19
-				}
-			],
 			"level": 6,
 			"school": "T",
 			"time": [
@@ -3464,13 +3298,6 @@
 		{
 			"name": "Investiture of Wind",
 			"source": "XGE",
-			"page": 160,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 20
-				}
-			],
 			"level": 6,
 			"school": "T",
 			"time": [
@@ -3730,13 +3557,6 @@
 		{
 			"name": "Maelstrom",
 			"source": "XGE",
-			"page": 160,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 20
-				}
-			],
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -3795,13 +3615,6 @@
 		{
 			"name": "Magic Stone",
 			"source": "XGE",
-			"page": 160,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 20
-				}
-			],
 			"level": 0,
 			"school": "T",
 			"time": [
@@ -3941,13 +3754,6 @@
 		{
 			"name": "Maximilian's Earthen Grasp",
 			"source": "XGE",
-			"page": 161,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 20
-				}
-			],
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -4018,13 +3824,6 @@
 		{
 			"name": "Melf's Minute Meteors",
 			"source": "XGE",
-			"page": 161,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 20
-				}
-			],
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -4162,17 +3961,6 @@
 		{
 			"name": "Mighty Fortress",
 			"source": "XGE",
-			"page": 161,
-			"otherSources": [
-				{
-					"source": "AitFR-AVT",
-					"page": 10
-				},
-				{
-					"source": "AitFR-FCD",
-					"page": 12
-				}
-			],
 			"level": 8,
 			"school": "C",
 			"time": [
@@ -4312,13 +4100,6 @@
 		{
 			"name": "Mold Earth",
 			"source": "XGE",
-			"page": 162,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 21
-				}
-			],
 			"level": 0,
 			"school": "T",
 			"time": [
@@ -4578,13 +4359,6 @@
 		{
 			"name": "Primordial Ward",
 			"source": "XGE",
-			"page": 163,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 21
-				}
-			],
 			"level": 6,
 			"school": "A",
 			"time": [
@@ -4711,13 +4485,6 @@
 		{
 			"name": "Pyrotechnics",
 			"source": "XGE",
-			"page": 163,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 21
-				}
-			],
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -4988,16 +4755,6 @@
 		{
 			"name": "Shape Water",
 			"source": "XGE",
-			"page": 164,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 21
-				},
-				{
-					"source": "EGW"
-				}
-			],
 			"level": 0,
 			"school": "T",
 			"time": [
@@ -5212,13 +4969,6 @@
 		{
 			"name": "Skywrite",
 			"source": "XGE",
-			"page": 165,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 22
-				}
-			],
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -5362,13 +5112,6 @@
 		{
 			"name": "Snilloc's Snowball Swarm",
 			"source": "XGE",
-			"page": 165,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 22
-				}
-			],
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -5580,13 +5323,6 @@
 		{
 			"name": "Storm Sphere",
 			"source": "XGE",
-			"page": 166,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 22
-				}
-			],
 			"level": 4,
 			"school": "V",
 			"time": [
@@ -6132,13 +5868,6 @@
 		{
 			"name": "Thunderclap",
 			"source": "XGE",
-			"page": 168,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 22
-				}
-			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -6223,13 +5952,6 @@
 		{
 			"name": "Tidal Wave",
 			"source": "XGE",
-			"page": 168,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 22
-				}
-			],
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -6445,13 +6167,6 @@
 		{
 			"name": "Transmute Rock",
 			"source": "XGE",
-			"page": 169,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 22
-				}
-			],
 			"level": 5,
 			"school": "T",
 			"time": [
@@ -6546,13 +6261,6 @@
 		{
 			"name": "Vitriolic Sphere",
 			"source": "XGE",
-			"page": 170,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 23
-				}
-			],
 			"level": 4,
 			"school": "V",
 			"time": [
@@ -6711,13 +6419,6 @@
 		{
 			"name": "Wall of Sand",
 			"source": "XGE",
-			"page": 170,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 23
-				}
-			],
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -6779,21 +6480,6 @@
 		{
 			"name": "Wall of Water",
 			"source": "XGE",
-			"page": 170,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 23
-				},
-				{
-					"source": "VGM",
-					"page": 116
-				},
-				{
-					"source": "MOT",
-					"page": 0
-				}
-			],
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -6860,13 +6546,6 @@
 		{
 			"name": "Warding Wind",
 			"source": "XGE",
-			"page": 170,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 23
-				}
-			],
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -6935,13 +6614,6 @@
 		{
 			"name": "Watery Sphere",
 			"source": "XGE",
-			"page": 170,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 23
-				}
-			],
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -7012,13 +6684,6 @@
 		{
 			"name": "Whirlwind",
 			"source": "XGE",
-			"page": 171,
-			"otherSources": [
-				{
-					"source": "EEPC",
-					"page": 24
-				}
-			],
 			"level": 7,
 			"school": "V",
 			"time": [

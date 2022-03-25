@@ -3,13 +3,6 @@
 		{
 			"name": "Blade of Disaster",
 			"source": "TCE",
-			"page": 106,
-			"otherSources": [
-				{
-					"source": "IDRotF",
-					"page": 318
-				}
-			],
 			"level": 9,
 			"school": "C",
 			"time": [
@@ -79,13 +72,6 @@
 		{
 			"name": "Booming Blade",
 			"source": "TCE",
-			"page": 106,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 142
-				}
-			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -193,13 +179,6 @@
 		{
 			"name": "Green-Flame Blade",
 			"source": "TCE",
-			"page": 107,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 143
-				}
-			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -393,13 +372,6 @@
 		{
 			"name": "Lightning Lure",
 			"source": "TCE",
-			"page": 107,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 143
-				}
-			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -1338,13 +1310,6 @@
 		{
 			"name": "Sword Burst",
 			"source": "TCE",
-			"page": 115,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 143
-				}
-			],
 			"level": 0,
 			"school": "C",
 			"time": [
