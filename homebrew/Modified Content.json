@@ -2547,7 +2547,7 @@
 	"spell": [
 		{
 			"name": "Tasha's Otherworldly Guise",
-			"source": "TCE",
+			"source": "MOD",
 			"page": 116,
 			"level": 6,
 			"school": "T",
@@ -2609,21 +2609,21 @@
 				"MAC"
 			],
 			"classes": {
-				"fromClassListVariant": [
+				"fromClassList": [
 					{
-						"name": "Cleric",
-						"source": "PHB",
-						"definedInSource": "TCE"
+							"name": "Cleric",
+							"source": "PHB",
+							"definedInSource": "TCE"
 					},
 					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "TCE"
+							"name": "Sorcerer",
+							"source": "PHB",
+							"definedInSource": "TCE"
 					},
 					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "TCE"
+							"name": "Warlock",
+							"source": "PHB",
+							"definedInSource": "TCE"
 					}
 				]
 			}
