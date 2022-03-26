@@ -3713,14 +3713,6 @@
 						"name": "Artificer",
 						"source": "TCE"
 					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						}
-					}
 				]
 			}
 		},
@@ -3784,6 +3776,305 @@
 							"name": "Crown",
 							"source": "XGE"
 						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Detect Extraplanar Beings",
+			"source": "MOD",
+			"page": 231,
+			"srd": true,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.",
+				"The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
+			],
+			"affectsCreatureType": [
+				"aberration",
+				"celestial",
+				"elemental",
+				"fey",
+				"fiend",
+				"undead"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie",
+							"source": "TCE"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Hail of Thorns",
+			"source": "MOD",
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"The next time you hit a creature with a ranged weapon attack before the spell ends, this spell creates a rain of thorns that sprouts from your ranged weapon or ammunition. In addition to the normal effect of the attack, the target of the attack and each creature within 5 feet of it must make a Dexterity saving throw. A creature takes {@damage 1d10} piercing damage on a failed save, or half as much damage on a successful one."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"If you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 1d10|1-6|1d10} for each slot level above 1st (to a maximum of {@damage 6d10})."
+					]
+				}
+			],
+			"damageInflict": [
+				"piercing"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Identify",
+			"source": "MOD",
+			"srd": true,
+			"basicRules": true,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a pearl and an owl feather"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You attempt to identify a magical item, magical effect, creature, or corpse.",
+				{
+					"type": "entries",
+					"name": "Item",
+					"entries": [
+						"You touch a item as you cast the spell. If it is a magic item or other magic-imbued object, you learn its properties and how to use them."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Magical Effect",
+					"entries": [
+						"You touch a creature or object and learn about a magical spell or effect that is afflicting it. If the effect or spell is one that you are familiar with, or is common knowledge, you recieve full knowledge. However, if the effect or spell is particularly rare or obscure, like a dying god's curse, you may recieve only cryptic information."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Creature/Corpse",
+					"entries": [
+						"You touch a creature or corpse, and learn basic information about that creature's species. If you attempt to identify an unwilling creature, you must succeed on a melee spell attack against them to do so.",
+						"What information you learn is up to the DM, but at minimum you learn the damage resistances and immunities. You only learn information about the creature's species, not the individual creature, and the spell may fail against unique creatures."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Knowledge",
+							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Forge",
+							"source": "XGE"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Longstrider",
+			"source": "MOD",
+			"srd": true,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a pinch of dirt"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"entries": [
+				"You touch a creature. The target's speed increases by 10 feet and their {@book jump distance|phb|8|Jumping} is tripled until the spell ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
 					}
 				]
 			}
