@@ -7644,7 +7644,7 @@
 				"HL",
 				"SGT"
 			]
-		}
+		},
 		{
 			"name": "Time Stop",
 			"source": "MOD",
@@ -7690,7 +7690,7 @@
 					}
 				]
 			}
-		}
+		},
 		{
 			"name": "Weird",
 			"source": "MOD",
