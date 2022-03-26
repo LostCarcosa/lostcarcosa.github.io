@@ -4585,7 +4585,7 @@
 		},
 		{
 			"name": "Pass without Trace",
-			"source": "PHB",
+			"source": "MOD",
 			"page": 264,
 			"srd": true,
 			"level": 2,
@@ -5369,7 +5369,7 @@
 						}
 					}
 				]
-			}
+			},
 			"hasFluffImages": true
 		},
 		{
