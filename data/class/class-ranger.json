@@ -380,7 +380,7 @@
 				}
 			],
 			"classFeatures": [
-				"Favored Foe|Ranger||1|TCE",,
+				"Favored Foe|Ranger||1|TCE",
 				"Deft Explorer|Ranger||1|TCE",
 				"Fighting Style|Ranger||2",
 				"Spellcasting|Ranger||2",
@@ -391,7 +391,7 @@
 				},
 				"Primeval Awareness|Ranger||3",
 				"Primal Awareness|Ranger||3|TCE",
-				"Ability Score Improvement|Ranger||4",,
+				"Ability Score Improvement|Ranger||4",
 				"Martial Versatility|Ranger||4|TCE",
 				"Extra Attack|Ranger||5",
 				"Deft Explorer Improvement|Ranger||6|TCE",
