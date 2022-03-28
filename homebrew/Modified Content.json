@@ -11487,7 +11487,7 @@
 					}
 				]
 			}
-		}
+		},
 		{
 			"name": "Web",
 			"source": "MOD",
@@ -11572,7 +11572,6 @@
 							"source": "PHB",
 							"subSubclass": "Underdark"
 						}
-					},}
 					},
 					{
 						"class": {
@@ -11765,7 +11764,6 @@
 			},
 			"hasFluffImages": true
 		},
-		
 		{
 			"name": "Levitate",
 			"source": "MOD",
@@ -11845,7 +11843,7 @@
 					"source": "PHB"
 				}
 			]
-		}
+		},
 		{
 			"name": "Planar Binding",
 			"source": "MOD",
