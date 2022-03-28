@@ -929,8 +929,9 @@
 			"classSource": "TCE",
 			"level": 1,
 			"entries": [
-				"Version 1.1.6",
-				"Tracking data. Delete when finalized.",
+				"Version 1.1.7",
+				"Fixing, hopefully, references to nonexistent features",
+				"Tracking data. Delete this + prev 2 lines when finalized.",
 				"At 1st level, you learn how to invest a spark of magic into mundane objects. To use this ability, you must have {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
 				{
 					"type": "list",

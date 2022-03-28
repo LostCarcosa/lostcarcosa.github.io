@@ -366,28 +366,23 @@
 				"Sneak Attack|Rogue||1",
 				"Thieves' Cant|Rogue||1",
 				"Cunning Action|Rogue||2",
-				"Cunning Action: Aim|Rogue||2|UAClassFeatureVariants",
 				{
 					"classFeature": "Roguish Archetype|Rogue||3",
 					"gainSubclassFeature": true
 				},
 				"Steady Aim|Rogue||3|TCE",
 				"Ability Score Improvement|Rogue||4",
-				"Proficiency Versatility|Rogue||4|UAClassFeatureVariants",
 				"Uncanny Dodge|Rogue||5",
 				"Expertise|Rogue||6",
 				"Evasion|Rogue||7",
 				"Ability Score Improvement|Rogue||8",
-				"Proficiency Versatility|Rogue||8|UAClassFeatureVariants",
 				{
 					"classFeature": "Roguish Archetype feature|Rogue||9",
 					"gainSubclassFeature": true
 				},
 				"Ability Score Improvement|Rogue||10",
-				"Proficiency Versatility|Rogue||10|UAClassFeatureVariants",
 				"Reliable Talent|Rogue||11",
 				"Ability Score Improvement|Rogue||12",
-				"Proficiency Versatility|Rogue||12|UAClassFeatureVariants",
 				{
 					"classFeature": "Roguish Archetype feature|Rogue||13",
 					"gainSubclassFeature": true
@@ -395,14 +390,12 @@
 				"Blindsense|Rogue||14",
 				"Slippery Mind|Rogue||15",
 				"Ability Score Improvement|Rogue||16",
-				"Proficiency Versatility|Rogue||16|UAClassFeatureVariants",
 				{
 					"classFeature": "Roguish Archetype feature|Rogue||17",
 					"gainSubclassFeature": true
 				},
 				"Elusive|Rogue||18",
 				"Ability Score Improvement|Rogue||19",
-				"Proficiency Versatility|Rogue||19|UAClassFeatureVariants",
 				"Stroke of Luck|Rogue||20"
 			],
 			"subclassTitle": "Roguish Archetype",
