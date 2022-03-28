@@ -1279,19 +1279,6 @@
 			]
 		},
 		{
-			"name": "Cunning Action: Aim",
-			"source": "UAClassFeatureVariants",
-			"page": 9,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 2,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 2nd-level rogue feature (enhances Cunning Action)}",
-				"You gain an additional way to use your Cunning Action: carefully aiming your next attack. As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this bonus action only if you haven't moved during this turn, and after you use the bonus action, your speed is 0 until the end of the current turn."
-			]
-		},
-		{
 			"name": "Roguish Archetype",
 			"source": "PHB",
 			"page": 94,
@@ -1311,10 +1298,10 @@
 			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 3,
-			"isClassFeatureVariant": true,
+			"isClassFeatureVariant": false,
 			"entries": [
 				"{@i 3rd-level rogue {@variantrule optional class features|tce|optional feature}}",
-				"As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this bonus action only if you haven't moved during this turn, and after you use the bonus action, your speed is 0 until the end of the current turn."
+				"As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this bonus action only if your speed is nonzero and haven't moved during this turn. After you use the bonus action, your speed is 0 until the end of the current turn, and cannot be increased by any means."
 			]
 		},
 		{
@@ -1329,20 +1316,6 @@
 			"entries": [
 				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 4,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 4th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
 			]
 		},
 		{
@@ -1399,20 +1372,6 @@
 			]
 		},
 		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 8,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 8th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
-			]
-		},
-		{
 			"name": "Roguish Archetype feature",
 			"source": "PHB",
 			"page": 94,
@@ -1437,20 +1396,6 @@
 			"entries": [
 				"When you reach 10th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 10,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 10th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
 			]
 		},
 		{
@@ -1481,20 +1426,6 @@
 			]
 		},
 		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 12,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 12th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
-			]
-		},
-		{
 			"name": "Roguish Archetype feature",
 			"source": "PHB",
 			"page": 94,
@@ -1517,7 +1448,7 @@
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
-				"Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or {@condition invisible} creature within 10 feet of you."
+				"Starting at 14th level, your senses have been honed to a razor edge. As long as you can see or hear, you have {@sense blindsight} out to a radius of 20 feet, and you know the location of any hidden creature in that radius."
 			]
 		},
 		{
@@ -1545,20 +1476,6 @@
 			"entries": [
 				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 16,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 16th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
 			]
 		},
 		{
@@ -1599,20 +1516,6 @@
 			"entries": [
 				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 19,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 19th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
 			]
 		},
 		{

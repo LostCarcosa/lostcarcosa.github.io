@@ -23,14 +23,6 @@
 		"dateAdded": 1647935526,
 		"dateLastModified": 1647935526
 	},
-	"blacklist": [
-		{
-			"displayName": "Create Magen",
-			"hash": "create%20magen_idrotf",
-			"category": "spell",
-			"source": "IDRotF"
-		}
-	],
 	"subclass": [
 		{
 			"name": "Tactician TBD",
