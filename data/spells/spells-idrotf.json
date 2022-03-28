@@ -79,8 +79,8 @@
 				}
 			],
 			"entries": [
-				"Version 0.1.4",
-				"finished first pass of spells."
+				"Version 0.1.5",
+				"attempt blacklist of create magen auto-load"
 			],
 			"areaTags": [
 				"ST"
