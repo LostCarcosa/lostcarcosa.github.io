@@ -1517,7 +1517,7 @@
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
-				"Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or {@condition invisible} creature within 10 feet of you."
+				"Starting at 14th level, you have honed your senses to a razor's edge. As long as you are not both {@condition blinded} and {@condition deafened}, you have {@senses blindsight} out to a radius of 20 feet, and you know the location of any hidden creature in this radius."
 			]
 		},
 		{
