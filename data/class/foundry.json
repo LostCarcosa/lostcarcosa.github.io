@@ -529,7 +529,7 @@
 			"level": 2,
 			"data": {
 				"uses.per": "lr",
-				"uses.max": "@classes.sorcerer.levels * sign(max(0, @classes.sorcerer.levels - 2))"
+				"uses.max": "0"
 			},
 			"img": "icons/magic/control/silhouette-hold-change-blue.webp"
 		},

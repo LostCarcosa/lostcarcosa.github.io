@@ -250,26 +250,22 @@
 				"Rage|Barbarian||1",
 				"Unarmored Defense|Barbarian||1",
 				"Danger Sense|Barbarian||2",
-				"Survival Instincts|Barbarian||2|UAClassFeatureVariants",
 				"Reckless Attack|Barbarian||2",
 				{
 					"classFeature": "Primal Path|Barbarian||3",
 					"gainSubclassFeature": true
 				},
-				"Primal Knowledge|Barbarian||3|TCE",
 				"Ability Score Improvement|Barbarian||4",
-				"Proficiency Versatility|Barbarian||4|UAClassFeatureVariants",
 				"Extra Attack|Barbarian||5",
 				"Fast Movement|Barbarian||5",
-				"Instinctive Pounce|Barbarian||5|UAClassFeatureVariants",
 				{
 					"classFeature": "Path Feature|Barbarian||6",
 					"gainSubclassFeature": true
 				},
+				"Primal Knowledge|Barbarian||7|TCE",
 				"Feral Instinct|Barbarian||7",
 				"Instinctive Pounce|Barbarian||7|TCE",
 				"Ability Score Improvement|Barbarian||8",
-				"Proficiency Versatility|Barbarian||8|UAClassFeatureVariants",
 				"Brutal Critical (1 die)|Barbarian||9",
 				{
 					"classFeature": "Path feature|Barbarian||10",
@@ -277,7 +273,6 @@
 				},
 				"Relentless Rage|Barbarian||11",
 				"Ability Score Improvement|Barbarian||12",
-				"Proficiency Versatility|Barbarian||12|UAClassFeatureVariants",
 				"Brutal Critical (2 dice)|Barbarian||13",
 				{
 					"classFeature": "Path feature|Barbarian||14",
@@ -285,11 +280,9 @@
 				},
 				"Persistent Rage|Barbarian||15",
 				"Ability Score Improvement|Barbarian||16",
-				"Proficiency Versatility|Barbarian||16|UAClassFeatureVariants",
 				"Brutal Critical (3 dice)|Barbarian||17",
 				"Indomitable Might|Barbarian||18",
 				"Ability Score Improvement|Barbarian||19",
-				"Proficiency Versatility|Barbarian||19|UAClassFeatureVariants",
 				"Primal Champion|Barbarian||20"
 			],
 			"subclassTitle": "Primal Path",
@@ -600,7 +593,9 @@
 			"subclassFeatures": [
 				"Path of the Berserker|Barbarian||Berserker||3",
 				"Mindless Rage|Barbarian||Berserker||6",
+				"Beast of Blood|Barbarian||Berserker||6",
 				"Intimidating Presence|Barbarian||Berserker||10",
+				"Desperate Wrath|Barbarian||Berserker||10",
 				"Retaliation|Barbarian||Berserker||14"
 			]
 		},
@@ -644,70 +639,9 @@
 			"page": 121,
 			"subclassFeatures": [
 				"Path of the Battlerager|Barbarian||Battlerager|SCAG|3",
-				"Reckless Abandon|Barbarian||Battlerager|SCAG|6",
-				"Battlerager Charge|Barbarian||Battlerager|SCAG|10",
+				"Battlerager Charge|Barbarian||Battlerager|SCAG|6",
+				"Improved Juggernaut|Barbarian||Battlerager|SCAG|10",
 				"Spiked Retribution|Barbarian||Battlerager|SCAG|14"
-			]
-		},
-		{
-			"name": "Path of the Ancestral Guardian (UA)",
-			"shortName": "Ancestral Guardian (UA)",
-			"source": "UABarbarianPrimalPaths",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 1,
-			"isReprinted": true,
-			"subclassFeatures": [
-				"Path of the Ancestral Guardian|Barbarian||Ancestral Guardian (UA)|UABarbarianPrimalPaths|3",
-				"Ancestral Shield|Barbarian||Ancestral Guardian (UA)|UABarbarianPrimalPaths|6",
-				"Consult the Spirits|Barbarian||Ancestral Guardian (UA)|UABarbarianPrimalPaths|10",
-				"Vengeful Ancestors|Barbarian||Ancestral Guardian (UA)|UABarbarianPrimalPaths|14"
-			]
-		},
-		{
-			"name": "Path of the Storm Herald (UA)",
-			"shortName": "Storm Herald (UA)",
-			"source": "UABarbarianPrimalPaths",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 1,
-			"isReprinted": true,
-			"subclassFeatures": [
-				"Path of the Storm Herald|Barbarian||Storm Herald (UA)|UABarbarianPrimalPaths|3",
-				"Storm Soul|Barbarian||Storm Herald (UA)|UABarbarianPrimalPaths|6",
-				"Shield of the Storm|Barbarian||Storm Herald (UA)|UABarbarianPrimalPaths|10",
-				"Raging Storm|Barbarian||Storm Herald (UA)|UABarbarianPrimalPaths|14"
-			]
-		},
-		{
-			"name": "Path of the Zealot (UA)",
-			"shortName": "Zealot (UA)",
-			"source": "UABarbarianPrimalPaths",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 2,
-			"isReprinted": true,
-			"subclassFeatures": [
-				"Path of the Zealot|Barbarian||Zealot (UA)|UABarbarianPrimalPaths|3",
-				"Zealous Focus|Barbarian||Zealot (UA)|UABarbarianPrimalPaths|6",
-				"Zealous Presence|Barbarian||Zealot (UA)|UABarbarianPrimalPaths|10",
-				"Rage Beyond Death|Barbarian||Zealot (UA)|UABarbarianPrimalPaths|14"
-			]
-		},
-		{
-			"name": "Path of the Ancestral Guardian v2 (UA)",
-			"shortName": "Ancestral Guardian v2 (UA)",
-			"source": "UARevisedSubclasses",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 1,
-			"isReprinted": true,
-			"spellcastingAbility": "wis",
-			"subclassFeatures": [
-				"Path of the Ancestral Guardian v2|Barbarian||Ancestral Guardian v2 (UA)|UARevisedSubclasses|3",
-				"Ancestral Shield|Barbarian||Ancestral Guardian v2 (UA)|UARevisedSubclasses|6",
-				"Consult the Spirits|Barbarian||Ancestral Guardian v2 (UA)|UARevisedSubclasses|10",
-				"Vengeful Ancestors|Barbarian||Ancestral Guardian v2 (UA)|UARevisedSubclasses|14"
 			]
 		},
 		{
@@ -722,7 +656,7 @@
 				{
 					"innate": {
 						"10": [
-							"augury",
+							"commune",
 							"clairvoyance"
 						]
 					}
@@ -745,7 +679,7 @@
 			"subclassFeatures": [
 				"Path of the Storm Herald|Barbarian||Storm Herald|XGE|3",
 				"Storm Soul|Barbarian||Storm Herald|XGE|6",
-				"Shielding Storm|Barbarian||Storm Herald|XGE|10",
+				"Wrath of the Storm|Barbarian||Storm Herald|XGE|10",
 				"Raging Storm|Barbarian||Storm Herald|XGE|14"
 			]
 		},
@@ -761,37 +695,6 @@
 				"Fanatical Focus|Barbarian||Zealot|XGE|6",
 				"Zealous Presence|Barbarian||Zealot|XGE|10",
 				"Rage beyond Death|Barbarian||Zealot|XGE|14"
-			]
-		},
-		{
-			"name": "Path of the Wild Soul (UA)",
-			"shortName": "Wild Soul (UA)",
-			"source": "UABarbarianAndMonk",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 1,
-			"isReprinted": true,
-			"subclassFeatures": [
-				"Path of the Wild Soul|Barbarian||Wild Soul (UA)|UABarbarianAndMonk|3",
-				"Magic Reserves|Barbarian||Wild Soul (UA)|UABarbarianAndMonk|6",
-				"Arcane Rebuke|Barbarian||Wild Soul (UA)|UABarbarianAndMonk|10",
-				"Chaotic Fury|Barbarian||Wild Soul (UA)|UABarbarianAndMonk|14",
-				"Improved Magic Reserves|Barbarian||Wild Soul (UA)|UABarbarianAndMonk|14"
-			]
-		},
-		{
-			"name": "Path of the Beast (UA)",
-			"shortName": "Beast (UA)",
-			"source": "UA2020SubclassesPt1",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 1,
-			"isReprinted": true,
-			"subclassFeatures": [
-				"Path of the Beast|Barbarian||Beast (UA)|UA2020SubclassesPt1|3",
-				"Bestial Soul|Barbarian||Beast (UA)|UA2020SubclassesPt1|6",
-				"Infectious Fury|Barbarian||Beast (UA)|UA2020SubclassesPt1|10",
-				"Call the Hunt|Barbarian||Beast (UA)|UA2020SubclassesPt1|14"
 			]
 		},
 		{
@@ -885,30 +788,15 @@
 			]
 		},
 		{
-			"name": "Survival Instincts",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 2,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 2nd-level barbarian feature (replaces Danger Sense)}",
-				"You become proficient in your choice of two of the following skills: {@skill Animal Handling}, {@skill Medicine}, {@skill Nature}, {@skill Perception}, or {@skill Survival}.",
-				"Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
-			]
-		},
-		{
 			"name": "Primal Knowledge",
 			"source": "TCE",
 			"page": 24,
 			"className": "Barbarian",
 			"classSource": "PHB",
-			"level": 3,
-			"isClassFeatureVariant": true,
+			"level": 7,
+			"isClassFeatureVariant": false,
 			"entries": [
-				"{@i 3rd-level barbarian {@variantrule optional class features|tce|optional feature}}",
-				"When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level."
+				"When you reach 7th level, you gain expertise in one skill of your choice from the list of skills available to barbarians at 1st level. You must be proficient in the skill in order to gain expertise in it."
 			]
 		},
 		{
@@ -937,20 +825,6 @@
 			]
 		},
 		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 4,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 4th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
-			]
-		},
-		{
 			"name": "Extra Attack",
 			"source": "PHB",
 			"page": 46,
@@ -972,19 +846,6 @@
 			"level": 5,
 			"entries": [
 				"Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
-			]
-		},
-		{
-			"name": "Instinctive Pounce",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 5,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 5th-level barbarian feature (replaces Fast Movement)}",
-				"When a creature ends its turn within 15 feet of you, you can use your reaction to move up to half your speed to a space closer to the creature. This movement doesn't provoke opportunity attacks."
 			]
 		},
 		{
@@ -1019,9 +880,8 @@
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"level": 7,
-			"isClassFeatureVariant": true,
+			"isClassFeatureVariant": false,
 			"entries": [
-				"{@i 7th-level barbarian {@variantrule optional class features|tce|optional feature}}",
 				"As part of the bonus action you take to enter your rage, you can move up to half your speed."
 			]
 		},
@@ -1036,20 +896,6 @@
 			"entries": [
 				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 8,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 8th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
 			]
 		},
 		{
@@ -1104,20 +950,6 @@
 			]
 		},
 		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 12,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 12th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
-			]
-		},
-		{
 			"name": "Brutal Critical (2 dice)",
 			"source": "PHB",
 			"page": 46,
@@ -1168,20 +1000,6 @@
 			]
 		},
 		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 16,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 16th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
-			]
-		},
-		{
 			"name": "Brutal Critical (3 dice)",
 			"source": "PHB",
 			"page": 46,
@@ -1219,20 +1037,6 @@
 			]
 		},
 		{
-			"name": "Proficiency Versatility",
-			"source": "UAClassFeatureVariants",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 19,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 19th-level feature (enhances Ability Score Improvement)}",
-				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
-				"This change represents one of your skills atrophying as you focus on a different skill."
-			]
-		},
-		{
 			"name": "Primal Champion",
 			"source": "PHB",
 			"page": 46,
@@ -1257,7 +1061,7 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"For some barbarians, rage is a means to an end\u2014that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
+				"For some barbarians, rage is a means to an end\u2014that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being. Friend and foe alike would do well to stay far away from you upon the battlefield.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Frenzy|Barbarian||Berserker||3"
@@ -1276,7 +1080,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of {@condition exhaustion}."
+				"Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, you may immediately make a melee weapon attack as part of the bonus action used to start raging. At the start of each of your subsequent turns, you choose a random target amongst the creatures within 20 feet of yourself (including both friendly and hostile creatures) and immediately move toward them, making a single melee weapon attack against them. The DM chooses the parameters of this attack, picking what weapon and features to apply to this attack, though they cannot forcibly expend limited resources on this attack. You then take your turn as normal."
 			]
 		},
 		{
@@ -1295,6 +1099,22 @@
 			]
 		},
 		{
+			"name": "Beast of Blood",
+			"source": "PHB",
+			"page": 49,
+			"srd": true,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Berserker",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Additionally at 6th level, you gain the ability to attack even more savagely, taking wounds upon yourself to inflict additional damage to your enemies. Whenever you hit a creature with a melee weapon attack, you can opt to deal {@damage 1d12} necrotic damage to yourself, which ignores resistances and immunities, and deal the same amount of damage rolled to your target.",
+				"As long as you have half or more of your maximum hit points, the random attack made as part of your frenzy always uses this feature."
+			]
+		},
+		{
 			"name": "Intimidating Presence",
 			"source": "PHB",
 			"page": 49,
@@ -1306,8 +1126,24 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be {@condition frightened} of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the {@condition frightened} creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
-				"If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
+				"Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose any number of creatures you can see within 30 feet of you, other than yourself. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Strength modifier) or be {@condition frightened} of you. Affected creatures may repeat the saving throw at the end of each of their turns, ending the effect on a succes. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
+				"If you use this feature while raging, it prevents your rage from ending at the end of the current turn, as long as at least one creature made a saving throw against this feature.",
+				"If a creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
+			]
+		},
+		{
+			"name": "Desperate Wrath",
+			"source": "PHB",
+			"page": 49,
+			"srd": true,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Berserker",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Additionally at 10th level,  you become even more powerful when endangered. If you are in a frenzy and your hit point maximum is less than half of its maximum, you may make an additional weapon attack as a bonus action."
 			]
 		},
 		{
@@ -1348,7 +1184,7 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"While you're raging and aren't wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the {@action Dash} action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease."
+				"While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft. The spirit of the eagle allows you to take to the skies."
 			]
 		},
 		{
@@ -1431,10 +1267,6 @@
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||3|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
 							"subclassFeature": "Wolf|Barbarian||Totem Warrior||3"
 						}
 					]
@@ -1451,7 +1283,7 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"You gain the might of a bear. Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects."
+				"You gain the might of a bear. You have advantage on Strength checks made to push, pull, lift, or break objects, and you can move at full speed while grappling a creature. "
 			]
 		},
 		{
@@ -1464,7 +1296,7 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, dim light doesn't impose disadvantage on your Wisdom ({@skill Perception}) checks."
+				"You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, your passive perception increases by 5."
 			]
 		},
 		{
@@ -1477,7 +1309,7 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"You gain the hunting sensibilities of a wolf. You can track other creatures while traveling at a fast pace, and you can move stealthily while traveling at a normal pace."
+				"You gain the hunting sensibilities of a wolf. If you inspect an area for at least ten minutes, you can learn the number and type of creatures who have passed through that area in the last week, how long ago they were present, and the direction they were traveling. Additionally, you have advantage on initiative rolls, and you have advantage on attack rolls during the first round of combat."
 			]
 		},
 		{
@@ -1507,10 +1339,6 @@
 						{
 							"type": "refSubclassFeature",
 							"subclassFeature": "Elk|Barbarian|SCAG|Totem Warrior||6|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||6|SCAG"
 						},
 						{
 							"type": "refSubclassFeature",
@@ -1557,7 +1385,7 @@
 			"subclassSource": "PHB",
 			"level": 14,
 			"entries": [
-				"While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft."
+				"While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it."
 			]
 		},
 		{
@@ -1603,10 +1431,6 @@
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||14|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
 							"subclassFeature": "Wolf|Barbarian||Totem Warrior||14"
 						}
 					]
@@ -1623,14 +1447,14 @@
 			"subclassSource": "SCAG",
 			"level": 3,
 			"entries": [
-				"Known as Kuldjargh (literally \"axe idiot\") in Dwarvish, battleragers are dwarf followers of the gods of war and take the Path of the Battlerager. They specialize in wearing bulky, {@item spiked armor|scag} and throwing themselves into combat, striking with their body itself and giving themselves over to the fury of battle.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Restriction\u2014Dwarves Only|Barbarian||Battlerager|SCAG|3"
-				},
+				"The Path of the Battlerager is followed by some of the most reckless warriors in existence. They specialize in wearing bulky, {@item spiked armor|scag} and throwing themselves into combat, striking with their body itself and giving themselves over to the fury of battle.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Battlerager Armor|Barbarian||Battlerager|SCAG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Juggernaut of War|Barbarian||Battlerager|SCAG|3"
 				}
 			]
 		},
@@ -1645,13 +1469,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you choose this path at 3rd level, you gain the ability to use {@item spiked armor|scag} as a weapon.",
-				"While you are wearing {@item spiked armor|scag} and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes at a target within 5 feet of you. If the attack hits, the spikes deal {@damage 1d4} piercing damage. You use your Strength modifier for the attack and damage rolls.",
-				"Additionally, when you use the {@action Attack} action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds."
+				"When you choose this path at 3rd level, you gain  proficiency in heavy armor and {@item spiked armor|scag} as well as the ability to use {@item spiked armor|scag} as a weapon. You may use spiked armor much like an unarmed strike, requiring no hands free in order to do so; it uses your Strength modifier for the attack and damage roll, and deals 1d12 piercing or bludgeoning damage (your choice) on a hit.",
+				"You can convert any mundane set of medium or heavy armor into a set of spiked armor over the course of a long rest, attaching a rough variety of rusty blades, spearheads, and other sharp objects onto it. At the DM's discretion, you may be able to convert a magical set of medium or heavy armor into spiked armor as well, though it may require a higher level of skill (for instance, the services of a smith familiar with spiked armor). If a set of spiked armor has a bonus to AC, as some magical armor does, you get the same bonus to attack and damage rolls with that armor."
 			]
 		},
 		{
-			"name": "Restriction\u2014Dwarves Only",
+			"name": "Juggernaut of War",
 			"source": "SCAG",
 			"page": 121,
 			"className": "Barbarian",
@@ -1661,22 +1484,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Only dwarves can follow the Path of the Battlerager. The battlerager fills a particular niche in dwarven society and culture.",
-				"Your DM can lift this restriction to better suit the campaign. The restriction exists for the Forgotten Realms. It might not apply to your DM's setting or your DM's version of the Realms."
-			]
-		},
-		{
-			"name": "Reckless Abandon",
-			"source": "SCAG",
-			"page": 121,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Battlerager",
-			"subclassSource": "SCAG",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends."
+				"Additionally at 3rd level, you develop the ability to utilise grapples and shoves far more efficiently. As long as you are wearing spiked armor, whenever you succesfully {@action grapple} or {@action shove} a creature, they take {@damage 1d12} piercing damage. If you have a creature {@condition grappled} at the start of your turn, they take another {@damage 1d12} piercing damage. This damage increases to {@dice 2d12} at 10th level."
 			]
 		},
 		{
@@ -1687,10 +1495,25 @@
 			"classSource": "PHB",
 			"subclassShortName": "Battlerager",
 			"subclassSource": "SCAG",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Beginning at 6th level, if you move at least 20 feet directly toward a creature and successfully hit them with a {@action shove} attack, you may make an additional {@item spiked armor|scag} attack against them as a bonus action."
+			]
+		},
+		{
+			"name": "Improved Juggernaut",
+			"source": "SCAG",
+			"page": 121,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Battlerager",
+			"subclassSource": "SCAG",
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you can take the {@action Dash} action as a bonus action while you are raging."
+				"Beginning at 10th level, the damage dealt by your grapples and shoves increases to {@damage 2d12}, and when you {@action shove} a creature, you can push them up to 10 feet instead of 5.",
+				"Additionally, you gain the ability to {@action shove} and {@action grapple} creatures of any size. If you grapple a creature that is two or more sizes larger than you, their movement is not restricted, and you instead cling onto it and move with it. If you shove a creature that is two or more sizes larger than you, you can push it back from you but not knock it prone."
 			]
 		},
 		{
@@ -1704,7 +1527,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren't {@condition incapacitated}, and are wearing {@item spiked armor|scag}."
+				"Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 10 piercing damage if you are raging, aren't {@condition incapacitated}, and are wearing {@item spiked armor|scag}."
 			]
 		},
 		{
@@ -1776,7 +1599,7 @@
 						{
 							"type": "item",
 							"name": "Bite",
-							"entry": "Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals {@damage 1d8} piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit."
+							"entry": "Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals {@damage 1d10} piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit."
 						},
 						{
 							"type": "item",
@@ -1786,10 +1609,11 @@
 						{
 							"type": "item",
 							"name": "Tail",
-							"entry": "You grow a lashing, spiny tail, which deals {@damage 1d8} piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a {@dice d8}, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you."
+							"entry": "You grow a lashing, spiny tail, which deals {@damage 1d10} piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a {@dice d8}, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you."
 						}
 					]
-				}
+				},
+				"You can change your natural weapon's form as a bonus action."
 			]
 		},
 		{
@@ -1921,7 +1745,7 @@
 					"rows": [
 						[
 							"1",
-							"Shadowy tendrils lash around you. Each creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take {@damage 1d12} necrotic damage. You also gain {@dice 1d12} temporary hit points."
+							"Shadowy tendrils lash around you. Each creature of your choice that you can see within 15 feet of you must succeed on a Constitution saving throw or take {@damage 1d12} necrotic damage. You also gain {@dice 1d12} temporary hit points. Until your rage ends, you can use this effect again on each of your turns as a bonus action, though you do not gain temporary hit points from further uses of this ability."
 						],
 						[
 							"2",
@@ -2012,689 +1836,6 @@
 			]
 		},
 		{
-			"name": "Path of the Beast",
-			"source": "UA2020SubclassesPt1",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast (UA)",
-			"subclassSource": "UA2020SubclassesPt1",
-			"level": 3,
-			"entries": [
-				"Barbarians who walk the Path of Beast draw their rage from a bestial spark burning within their souls. That beast howls to be released and bursts forth in the throes of rage.",
-				"Those who tread this path might be inhabited by a primal spirit or descended from shapeshifters. You can choose the origin of your feral might or determine it randomly by rolling on the Origin of the Beast table.",
-				{
-					"type": "table",
-					"caption": "Origin of the Beast",
-					"colLabels": [
-						"d4",
-						"Origin"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"One of your parents is a lycanthrope, and you've inherited some of the curse."
-						],
-						[
-							"2",
-							"You are descended from a legendary druid, a fact manifested by your ability to partially change shape."
-						],
-						[
-							"3",
-							"A fey spirit gifted you with the ability to adopt different bestial aspects."
-						],
-						[
-							"4",
-							"An ancient animal spirit dwells within you, allowing you to walk this path."
-						]
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Form of the Beast|Barbarian||Beast (UA)|UA2020SubclassesPt1|3"
-				}
-			]
-		},
-		{
-			"name": "Form of the Beast",
-			"source": "UA2020SubclassesPt1",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast (UA)",
-			"subclassSource": "UA2020SubclassesPt1",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Path of the Beast feature}",
-				"When you enter your rage, you can transform, revealing the bestial power within you. Until your rage ends, you manifest a natural melee weapon, choosing one of the following options each time you rage:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Bite",
-							"entry": "Your mouth transforms into a bestial snout or great mandibles (your choice). Your bite deals {@damage 1d8} piercing damage on a hit. Once on each of your turns when you damage a creature with your bite, you regain a number of hit points equal to your Constitution modifier (minimum of 1 hit point)."
-						},
-						{
-							"type": "item",
-							"name": "Claws",
-							"entry": "Your hands transform into claws, which deal {@damage 1d6} slashing damage on a hit. When you take the {@action Attack} action on your turn and make an attack with your claws, you can make one additional attack using your claws as part of the same action."
-						},
-						{
-							"type": "item",
-							"name": "Tail",
-							"entry": "You grow a lashing, spiny tail, which deals {@damage 1d12} piercing damage on a hit and has the reach property."
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Bestial Soul",
-			"source": "UA2020SubclassesPt1",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast (UA)",
-			"subclassSource": "UA2020SubclassesPt1",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Path of the Beast feature}",
-				"The feral spirit within you grows in power, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
-				"You can also call on the feral spirit to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish a short or long rest:",
-				{
-					"type": "list",
-					"items": [
-						"You gain a swimming speed equal to your walking speed, and you can breathe underwater.",
-						"You gain a climbing speed equal to your walking speed, and you can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
-						"When you jump, you can make a Strength ({@skill Athletics}) check and extend your jump by a number of feet equal to the check's total. You can make this special check only once per turn."
-					]
-				}
-			]
-		},
-		{
-			"name": "Infectious Fury",
-			"source": "UA2020SubclassesPt1",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast (UA)",
-			"subclassSource": "UA2020SubclassesPt1",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Path of the Beast feature}",
-				"When you hit a creature with your natural weapons while you are raging, the spirit within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
-				{
-					"type": "list",
-					"items": [
-						"The target must use its reaction to make a melee attack against another creature of your choice that you can see.",
-						"Target takes {@damage 2d12} psychic damage."
-					]
-				},
-				"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Call the Hunt",
-			"source": "UA2020SubclassesPt1",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast (UA)",
-			"subclassSource": "UA2020SubclassesPt1",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-level Path of the Beast feature}",
-				"The beast within grows so powerful that you can spread its ferocity to your allies. When you enter your rage, you can choose a number of willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). Until your rage ends, the chosen creatures gain the Reckless {@action Attack} feature and you have advantage on saving throws against being {@condition frightened}. You also gain 5 temporary hit points for each creature that accepts the benefit. You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Path of the Wild Soul",
-			"source": "UABarbarianAndMonk",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Soul (UA)",
-			"subclassSource": "UABarbarianAndMonk",
-			"level": 3,
-			"entries": [
-				"The realm of the Feywild abounds with beauty, unpredictable emotion, and rampant magic. A barbarian exposed to this realm feels emotions powerfully and magic saturates their body.",
-				"When a barbarian who follows this path rages, it is a bellowing roar for freedom, an explosion of expression, manifesting in unpredictable ways.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Lingering Magic|Barbarian||Wild Soul (UA)|UABarbarianAndMonk|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Wild Surge|Barbarian||Wild Soul (UA)|UABarbarianAndMonk|3"
-				}
-			]
-		},
-		{
-			"name": "Lingering Magic",
-			"source": "UABarbarianAndMonk",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Soul (UA)",
-			"subclassSource": "UABarbarianAndMonk",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, your body reacts to the presence of magic. You can cast the {@spell detect magic} spell without using a spell slot or components. Constitution is your spellcasting ability for this spell. You faintly glow a color corresponding to the school of magic you detect (you choose the colors).",
-				"You can use this feature a number of times equal to your Constitution modifier (minimum of once). You regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Wild Surge",
-			"source": "UABarbarianAndMonk",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Soul (UA)",
-			"subclassSource": "UABarbarianAndMonk",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, magic erupts from you as you rage. When you enter your rage, roll on the Wild Surge table to determine the magical effect produced.",
-				"If the wild surge requires a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.",
-				{
-					"type": "table",
-					"caption": "Wild Surge",
-					"colLabels": [
-						"d8",
-						"Effect"
-					],
-					"colStyles": [
-						"col-1 text-center",
-						"col-11"
-					],
-					"rows": [
-						[
-							1,
-							"Necrotic energy bursts from you. Each creature within 30 feet of you takes {@damage 1d10} necrotic damage, and you gain temporary hit points equal to the sum of the necrotic damage dealt to the creatures."
-						],
-						[
-							2,
-							"You teleport up to 20 feet to an unoccupied space you can see. Until your rage ends, you can activate this effect again on each of your turns as a bonus action."
-						],
-						[
-							3,
-							"You conjure {@dice 1d4} intangible spirits that look like {@creature flumph||flumphs} in unoccupied spaces within 30 feet of you. Each spirit immediately flies 30 feet in a random direction. At the end of your turn, all spirits explode and each creature within 5 feet of one or more of them must succeed on a Dexterity saving throw or take {@damage 2d8} force damage."
-						],
-						[
-							4,
-							"Arcane energy enshrouds you. Until your rage ends, you gain a +2 bonus to AC, and whenever a creature within 10 feet of you hits you with an attack, that creature takes force damage equal to your Constitution modifier."
-						],
-						[
-							5,
-							"Plant life temporarily grows around you: until your rage ends, the ground within 10 feet of you is difficult terrain."
-						],
-						[
-							6,
-							"Arcane energy taps into the minds of those around you. Each creature within 30 feet of you must succeed on a Wisdom saving throw or you see a glimpse of the creature's thoughts, learning how it plans to attack you. As a result, the creature has disadvantage on attack rolls against you until the start of your next turn."
-						],
-						[
-							7,
-							"Shadows weave around a weapon of your choice you are holding. Until your rage ends, your weapon deals psychic damage instead of its bludgeoning, slashing, or piercing damage, and it gains the light and thrown properties with a normal range of 20 feet and a long range of 60 feet. If you drop the weapon or throw it, the weapon dissipates and reappears in your hand at the end of your turn."
-						],
-						[
-							8,
-							"A beam of brilliant light lances from your chest in a 5-foot-wide, 60-foot-long line. Each creature in the line must succeed on a Constitution saving throw or take {@damage 2d8} radiant damage and be {@condition blinded} until the start of your next turn."
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Magic Reserves",
-			"source": "UABarbarianAndMonk",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Soul (UA)",
-			"subclassSource": "UABarbarianAndMonk",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you can channel the magic surging inside you into other creatures. As an action, you can touch a creature and roll a {@dice d4}. The creature recovers an expended spell slot of a level equal to the number rolled. If the creature you touch can't recover a spell slot of that level, the creature instead gains temporary hit points equal to five times the number rolled.",
-				"You take force damage equal to five times the number rolled.",
-				"When you reach 14th level in this class, you increase the die to a {@dice d6}."
-			]
-		},
-		{
-			"name": "Arcane Rebuke",
-			"source": "UABarbarianAndMonk",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Soul (UA)",
-			"subclassSource": "UABarbarianAndMonk",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, the magic crackling within your soul lashes out. When a creature forces you to make a saving throw while you are raging, you can use your reaction to deal {@damage 3d6} force damage to that creature."
-			]
-		},
-		{
-			"name": "Chaotic Fury",
-			"source": "UABarbarianAndMonk",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Soul (UA)",
-			"subclassSource": "UABarbarianAndMonk",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, you become a wellspring of wild magic while you are raging. As a bonus action, you can reroll on the Wild Surge table, replacing your current effect with the new one."
-			]
-		},
-		{
-			"name": "Improved Magic Reserves",
-			"source": "UABarbarianAndMonk",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Soul (UA)",
-			"subclassSource": "UABarbarianAndMonk",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, you increase your magic reserves die to a {@dice d6}."
-			]
-		},
-		{
-			"name": "Path of the Ancestral Guardian",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 3,
-			"entries": [
-				"Some barbarians hail from cultures that revere their ancestors. These tribes teach that the warriors of the past linger on in the world as mighty spirits who can guide and protect the living. When barbarians who follow this path rage, they cross the barrier into the spirit world and call on these guardian spirits for aid.",
-				"Barbarians who draw on their ancestral guardians fight to protect their tribes and their allies. With the spirits' help, they can hinder their foes even as they strike powerful blows against them.",
-				"In order to cement ties to their ancestral guardians, barbarians who follow this path cover themselves in elaborate tattoos that celebrate their ancestors' deeds. These tattoos tell epic sagas of victories against terrible monsters and other fearsome rivals.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Ancestral Protectors|Barbarian||Ancestral Guardian (UA)|UABarbarianPrimalPaths|3"
-				}
-			]
-		},
-		{
-			"name": "Ancestral Protectors",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting when you choose this path at 3rd level, spectral warriors appear when you rage. These warriors distract a foe you designate and hinder its attempts to evade you. While you're raging, you can use a bonus action on your turn to choose one creature you can see within 5 feet of you. Until the start of your next turn or until your rage ends, the chosen creature has disadvantage on any attack roll that doesn't target you, and if the creature takes the {@action Disengage} action within 5 feet of you, its speed is halved until the end of its turn."
-			]
-		},
-		{
-			"name": "Ancestral Shield",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Beginning at 6th level, the guardian spirits that aid you can provide protection for your allies. If you are raging and an ally you can see within 30 feet of you takes bludgeoning, piercing, or slashing damage, you can use your reaction to transfer your resistance to those damage types to the ally. The resistance applies to the incoming damage. Until the start of your next turn, the ally keeps the resistance and you lack it, unless you also have it from a source other than rage."
-			]
-		},
-		{
-			"name": "Consult the Spirits",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you gain the ability to consult with your ancestral spirits. Right before you make an Intelligence or a Wisdom check, you can give yourself advantage on the check. You can use this feature three times, and you regain expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Vengeful Ancestors",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, your ancestral spirits grow powerful enough to strike your foes. When you or an ally you can see within 30 feet of you is damaged by a melee attack while you're raging, you can use your reaction to cause the attacker to take {@damage 2d8} force damage from the spirits."
-			]
-		},
-		{
-			"name": "Path of the Storm Herald",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 3,
-			"entries": [
-				"Typical barbarians harbor a fury that dwells within. Their rage grants them superior strength, durability, and speed. Barbarians who follow the Path of the Storm Herald learn instead to transform their rage into a mantle of primal magic that swirls around them. When in a fury, a barbarian of this path taps into nature to create powerful, magical effects.",
-				"Storm heralds are typically elite champions who train alongside druids, rangers, and others sworn to protect the natural realm. Other storm heralds hone their craft in elite lodges founded in regions wracked by storms, in the frozen reaches at the world's end, or deep in the hottest deserts.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Storm of Fury|Barbarian||Storm Herald (UA)|UABarbarianPrimalPaths|3"
-				}
-			]
-		},
-		{
-			"name": "Storm of Fury",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you select this path at 3rd level, choose one of the following options: desert, sea, or tundra. The environment you choose shapes the nature of the storm you conjure when you rage. While raging, you emanate an aura in a 10-foot radius. The effects of this aura depend on your chosen environment.",
-				{
-					"type": "entries",
-					"name": "Desert",
-					"entries": [
-						"Any enemy that ends its turn in your aura takes fire damage equal to 2 + your barbarian level divided by 4."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Sea",
-					"entries": [
-						"At the end of each of your turns, you can choose a creature in your aura other than yourself. The target must make a Dexterity saving throw against a DC equal to 8 + your proficiency bonus + your Constitution modifier. The target takes {@damage 2d6} lightning damage on a failed save, and half as much damage on a successful one. This damage increases to {@dice 3d6} at 10th level and to {@dice 4d6} at 15th level."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Tundra",
-					"entries": [
-						"Any enemy that ends its turn in your aura takes cold damage equal to 2 + your barbarian level divided by 4."
-					]
-				}
-			]
-		},
-		{
-			"name": "Storm Soul",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, your link to the power of the storm grants you additional abilities based on the environment you chose at 3rd level.",
-				{
-					"type": "entries",
-					"name": "Desert",
-					"entries": [
-						"You gain resistance to fire damage and don't suffer the effects of extreme heat."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Sea",
-					"entries": [
-						"You gain resistance to lightning damage and can breathe underwater."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Tundra",
-					"entries": [
-						"Tundra. You gain resistance to cold damage and don't suffer the effects of extreme cold."
-					]
-				}
-			]
-		},
-		{
-			"name": "Shield of the Storm",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you learn to use your mastery of the storm to protect your allies. While you are raging, allies within your aura gain the benefits of your Storm Soul feature."
-			]
-		},
-		{
-			"name": "Raging Storm",
-			"source": "UABarbarianPrimalPaths",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, the power of the storm you channel grows mightier.",
-				{
-					"type": "entries",
-					"name": "Desert",
-					"entries": [
-						"The ground around you becomes like shifting sand. Any enemy that attempts to move more than 5 feet per turn on the ground while in your aura must make a Strength saving throw (DC 8 + your proficiency bonus + your Constitution modifier). On a failed save, the creature's speed drops to 0 until the start of its next turn."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Sea",
-					"entries": [
-						"Roaring winds tear through the area around you. Any creature in your aura that you hit with an attack must make a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked {@condition prone}."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Tundra",
-					"entries": [
-						"The air around you coldly slows your foes. The area within your aura is difficult terrain for your enemies."
-					]
-				}
-			]
-		},
-		{
-			"name": "Path of the Zealot",
-			"source": "UABarbarianPrimalPaths",
-			"page": 2,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 3,
-			"entries": [
-				"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots\u2014warriors who channel their rage into powerful displays of divine power.",
-				"A variety of gods across the worlds of D&D inspire their followers to embrace this path. Tempus from the Forgotten Realms and Hextor and Erythnul of Greyhawk are all prime examples. In general, the gods who inspire zealots are deities of combat, destruction, and violence. Not all are evil, but few are good.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Divine Fury|Barbarian||Zealot (UA)|UABarbarianPrimalPaths|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Warrior of the Gods|Barbarian||Zealot (UA)|UABarbarianPrimalPaths|3"
-				}
-			]
-		},
-		{
-			"name": "Divine Fury",
-			"source": "UABarbarianPrimalPaths",
-			"page": 2,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting when you choose this path at 3rd level, you can channel divine fury when you start to rage. If you do so, you become cloaked in an aura of divine power until the rage ends. At the end of each of your turns for that duration, each creature within 5 feet of you takes damage equal to {@dice 1d6} + half your barbarian level. The damage is necrotic or radiant; you choose the type of damage when you gain this feature."
-			]
-		},
-		{
-			"name": "Warrior of the Gods",
-			"source": "UABarbarianPrimalPaths",
-			"page": 2,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, your soul is marked for endless battle. If a spell would have the sole effect of restoring you to life (but not undeath), the caster does not need material components to cast the spell on you."
-			]
-		},
-		{
-			"name": "Zealous Focus",
-			"source": "UABarbarianPrimalPaths",
-			"page": 2,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, the divine power that fuels your rage can shield you from harm. If you fail a saving throw while raging, you can instead succeed on that saving throw as a reaction. However, doing so immediately ends your rage, and you can't rage again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Zealous Presence",
-			"source": "UABarbarianPrimalPaths",
-			"page": 2,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you learn to channel divine power to inspire zealotry in others. As an action, you howl in fury and unleash a battle cry infused with divine energy. Every ally within 60 feet of you gains advantage on attack rolls and saving throws until the start of your next turn.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Rage Beyond Death",
-			"source": "UABarbarianPrimalPaths",
-			"page": 2,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot (UA)",
-			"subclassSource": "UABarbarianPrimalPaths",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Beginning at 14th level, the divine power that fuels your rage allows you to shrug off fatal blows.",
-				"While raging, having 0 hit points doesn't knock you {@condition unconscious}. You still must make death saving throws, and you suffer the normal effects of taking damage while at 0 hit points. However, if you would die due to failing death saving throws, you don't die until your rage ends."
-			]
-		},
-		{
-			"name": "Path of the Ancestral Guardian v2",
-			"source": "UARevisedSubclasses",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian v2 (UA)",
-			"subclassSource": "UARevisedSubclasses",
-			"level": 3,
-			"entries": [
-				"Some barbarians hail from cultures that revere their ancestors. These tribes teach that the warriors of the past linger on in the world as mighty spirits who can guide and protect the living. When barbarians who follow this path rage, they cross the barrier into the spirit world and call on these guardian spirits for aid.",
-				"Barbarians who draw on their ancestral guardians fight to protect their tribes and their allies. With the spirits' help, they can hinder their foes even as they strike powerful blows against them.",
-				"In order to cement ties to their ancestral guardians, barbarians who follow this path cover themselves in elaborate tattoos that celebrate their ancestors' deeds. These tattoos tell epic sagas of victories against terrible monsters and other fearsome rivals.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Ancestral Protectors|Barbarian||Ancestral Guardian v2 (UA)|UARevisedSubclasses|3"
-				}
-			]
-		},
-		{
-			"name": "Ancestral Protectors",
-			"source": "UARevisedSubclasses",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian v2 (UA)",
-			"subclassSource": "UARevisedSubclasses",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting when you choose this path at 3rd level, spectral warriors appear when you rage. These warriors distract a foe you designate and hinder its attempts to evade you. While you're raging, the first creature you hit with an attack on your turn becomes the target of these warriors. Until the start of your next turn or until your rage ends, that target has disadvantage on any attack roll that doesn't target you, and creatures other than you have resistance to the damage of the creature's attacks."
-			]
-		},
-		{
-			"name": "Ancestral Shield",
-			"source": "UARevisedSubclasses",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian v2 (UA)",
-			"subclassSource": "UARevisedSubclasses",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Beginning at 6th level, the guardian spirits that aid you can provide protection for your allies. If you are raging and a creature you can see within 30 feet of you takes damage, you can use your reaction and reduce that damage by {@dice 2d8}. When you reach certain levels in this class, you can reduce the damage by more: by {@dice 3d8} at 10th level and by {@dice 4d8} at 14th level."
-			]
-		},
-		{
-			"name": "Consult the Spirits",
-			"source": "UARevisedSubclasses",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian v2 (UA)",
-			"subclassSource": "UARevisedSubclasses",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you gain the ability to consult with your ancestral spirits and use them to scout far-off lands. When you do so, you cast the {@spell clairvoyance} spell, without needing a spell slot. Rather than creating a spherical sensor, the spell invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for the spell. After you cast the spell in this way, you can't do so again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Vengeful Ancestors",
-			"source": "UARevisedSubclasses",
-			"page": 1,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian v2 (UA)",
-			"subclassSource": "UARevisedSubclasses",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, your ancestral spirits grow powerful enough to strike foes that dare harm those that you protect. When you use your Spirit Shield Ability to protect a creature damaged by an attack, the attacker takes the same amount of damage that the Spirit Shield protects."
-			]
-		},
-		{
 			"name": "Path of the Ancestral Guardian",
 			"source": "XGE",
 			"page": 9,
@@ -2723,7 +1864,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage dealt by the attack. The effect on the target ends early if your rage ends."
+				"Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, every creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage dealt by the attack. The effect on the target ends early if your rage ends."
 			]
 		},
 		{
@@ -2737,8 +1878,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by {@dice 2d6}.",
-				"When you reach certain levels in this class, you can reduce the damage by more: by {@dice 3d6} at 10th level and by {@dice 4d6} at 14th level."
+				"Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by {@dice 2d8}.",
+				"When you reach certain levels in this class, you can reduce the damage by more: by {@dice 3d9} at 10th level and by {@dice 4d8} at 14th level."
 			]
 		},
 		{
@@ -2752,7 +1893,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the {@spell augury} or {@spell clairvoyance} spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of {@spell clairvoyance} invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
+				"At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the {@spell commune} or {@spell clairvoyance} spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of {@spell clairvoyance} invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells. Rather than contacting the gods, this use of {@spell commune} allows you to seek advice from the collective wisdom of your ancestors.",
 				"After you cast either spell in this way, you can't use this feature again until you finish a short or long rest."
 			]
 		},
@@ -2800,7 +1941,7 @@
 			"header": 1,
 			"entries": [
 				"Starting at 3rd level, you emanate a stormy, magical aura while you rage. The aura extends 10 feet from you in every direction, but not through total cover.",
-				"Your aura has an effect that activates when you enter your rage, and you can activate the effect again on each of your turns as a bonus action. Choose desert, sea, or tundra. Your aura's effect depends on that chosen environment, as detailed below. You can change your environment choice whenever you gain a level in this class.",
+				"Your aura has an effect that activates when you enter your rage, and you can activate the effect again on each of your turns as a bonus action. Choose desert, sea, or tundra. Your aura's effect depends on that chosen environment, as detailed below. You can change your environment choice whenever you complete a long rest.",
 				"If your aura's effects require a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.",
 				{
 					"type": "options",
@@ -2853,7 +1994,7 @@
 			]
 		},
 		{
-			"name": "Shielding Storm",
+			"name": "Wrath of the Storm",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -2863,7 +2004,24 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you learn to use your mastery of the storm to protect others. Each creature of your choice has the damage resistance you gained from the Storm Soul feature while the creature is in your Storm Aura."
+				"At 10th level, you learn to channel the power of the storm to immense destructive effect. Once per rage, as an action you may invoke one of the following powers, depending on which environment you chose for your storm:",
+				{
+					"type": "options",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Desert|Barbarian|XGE|Storm Herald|XGE|10"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Sea|Barbarian|XGE|Storm Herald|XGE|10"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Tundra|Barbarian|XGE|Storm Herald|XGE|10"
+						}
+					]
+				}
 			]
 		},
 		{
@@ -2944,7 +2102,8 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, your soul is marked for endless battle. If a spell, such as {@spell raise dead}, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you."
+				"At 3rd level, your soul is marked for endless battle. If a spell, such as {@spell raise dead}, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you.",
+				"Additionally, if such a spell imposes a resurrection penalty (like {@spell raise dead}), your resurrection penalty is halved."
 			]
 		},
 		{
@@ -2958,7 +2117,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, the divine power that fuels your rage can protect you. If you fail a saving throw while you're raging, you can reroll it, and you must use the new roll. You can use this ability only once per rage."
+				"Starting at 6th level, the divine power that fuels your rage can protect you. If you fail a saving throw while you're raging, you can reroll it and add your Constitution modifier to the roll. You must use the new roll. You can use this ability only once per rage.",
+				"When you use this ability, you also regain {@dice 2d12} hit points."
 			]
 		},
 		{
@@ -2973,7 +2133,7 @@
 			"header": 2,
 			"entries": [
 				"At 10th level, you learn to channel divine power to inspire zealotry in others. As a bonus action, you unleash a battle cry infused with divine energy. Up to ten other creatures of your choice within 60 feet of you that can hear you gain advantage on attack rolls and saving throws until the start of your next turn.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"You can use this feature twice, and you regain all uses of this feature when you complete a short or long rest."
 			]
 		},
 		{
@@ -3001,20 +2161,7 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"While you're raging and aren't wearing heavy armor, your walking speed increases by 15 feet. The spirit of the elk makes you extraordinarily swift."
-			]
-		},
-		{
-			"name": "Tiger",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"While raging, you can add 10 feet to your long jump distance and 3 feet to your high jump distance. The spirit of the tiger empowers your leaps."
+				"While you're raging and aren't wearing heavy armor, your walking speed increases by 20 feet, and opportunity attacks have disadvantage against you. The spirit of the elk makes you extraordinarily swift."
 			]
 		},
 		{
@@ -3027,20 +2174,7 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not {@condition incapacitated}. The elk spirit helps you roam far and fast."
-			]
-		},
-		{
-			"name": "Tiger",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 6,
-			"entries": [
-				"You gain proficiency in two skills from the following list: {@skill Athletics}, {@skill Acrobatics}, {@skill Stealth}, and {@skill Survival}. The cat spirit hones your survival instincts."
+				"You gain the swiftness and grace of an elk. Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not {@condition incapacitated}. Additionally, you can ignore nonmagical difficult terrain as well as magical difficult terrain imposed by plants or earth."
 			]
 		},
 		{
@@ -3057,19 +2191,6 @@
 			]
 		},
 		{
-			"name": "Tiger",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 14,
-			"entries": [
-				"While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it."
-			]
-		},
-		{
 			"name": "Desert",
 			"source": "XGE",
 			"page": 10,
@@ -3079,7 +2200,7 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"When this effect is activated, all other creatures in your aura take 2 fire damage each. The damage increases when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."
+				"When this effect is activated, all other creatures in your aura take 4 fire damage each. The damage increases when you reach certain levels in this class, increasing to 6 at 5th level, 8 at 10th level, 10 at 15th level, and 12 at 20th level."
 			]
 		},
 		{
@@ -3092,7 +2213,7 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"When this effect is activated, you can choose one other creature you can see in your aura. The target must make a Dexterity saving throw. The target takes {@damage 1d6} lightning damage on a failed save, or half as much damage on a successful one. The damage increases when you reach certain levels in this class, increasing to {@dice 2d6} at 10th level, {@dice 3d6} at 15th level, and {@dice 4d6} at 20th level."
+				"When this effect is activated, you can choose one other creature you can see in your aura. The target must make a Dexterity saving throw. The target takes {@damage 2d6} lightning damage on a failed save, or half as much damage on a successful one. The damage increases when you reach certain levels in this class, increasing to {@dice 4d6} at 10th level, {@dice 6d6} at 15th level, and {@dice 8d6} at 20th level."
 			]
 		},
 		{
@@ -3105,7 +2226,7 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"When this effect is activated, each creature of your choice in your aura gains 2 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."
+				"When this effect is activated, each creature of your choice in your aura gains 4 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 6 at 5th level, 8 at 10th level, 10 at 15th level, and 12 at 20th level."
 			]
 		},
 		{
@@ -3145,6 +2266,47 @@
 			"level": 6,
 			"entries": [
 				"You gain resistance to cold damage, and you don't suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube."
+			]
+		},
+		{
+			"name": "Desert",
+			"source": "XGE",
+			"page": 10,
+			"className": "Barbarian",
+			"classSource": "XGE",
+			"subclassShortName": "Storm Herald",
+			"subclassSource": "XGE",
+			"level": 10,
+			"entries": [
+				"You exhale a 30-foot cone of fire in front of you. Every creature in that area must succeed on a Dexterity saving throw or take {@damage 8d6} fire damage. On a failed save, a creature takes half damage."
+			]
+		},
+		{
+			"name": "Sea",
+			"source": "XGE",
+			"page": 10,
+			"className": "Barbarian",
+			"classSource": "XGE",
+			"subclassShortName": "Storm Herald",
+			"subclassSource": "XGE",
+			"level": 10,
+			"entries": [
+				"You choose a creature within range and strike them with a bolt of lightning, forcing them to make a Dexterity saving throw or take {@damage 8d6} lightning damage. On a failed save, this effect forks to a random new target within 20 feet, and repeats until there are no valid targets within range, the lightning has dealt damage five times, or a creature succeeds on its saving throw. On a successful saving throw, the creature takes half damage and the lightning stops forking.",
+				"A creature can take lightning damage from this effect no more than once."
+			]
+		},
+		{
+			"name": "Tundra",
+			"source": "XGE",
+			"page": 10,
+			"className": "Barbarian",
+			"classSource": "XGE",
+			"subclassShortName": "Storm Herald",
+			"subclassSource": "XGE",
+			"level": 10,
+			"entries": [
+				"Every creature within 20 feet of yourself must succeed on a Constitution saving throw or take {@damage 8d6} cold damage. On a successful save, a creature takes half the damage.",
+				"If a creature must make a concentration saving throw as a result of taking damage from this ability, they make it with disadvantage."
 			]
 		},
 		{
