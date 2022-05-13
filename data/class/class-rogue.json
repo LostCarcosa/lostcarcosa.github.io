@@ -696,6 +696,20 @@
 	],
 	"subclass": [
 		{
+			"name": "Assassin",
+			"shortName": "Assassin",
+			"source": "PHB",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 97,
+			"subclassFeatures": [
+				"Assassin|Rogue||Assassin||3",
+				"Master of Deception|Rogue||Assassin||9",
+				"Artisan of Death|Rogue||Assassin||13",
+				"Instant Death|Rogue||Assassin||17"
+			]
+		},
+		{
 			"name": "Arcane Trickster",
 			"shortName": "Arcane Trickster",
 			"source": "PHB",
@@ -1517,7 +1531,7 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"You focus your training on the grim art of death. Those who adhere to this archetype are diverse\u2014hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency.",
+				"You focus your training on the grim art of death. Those who adhere to this archetype are diverse\u2014hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth and poison help you eliminate your foes with deadly efficiency.",
 				"Your archetype grants you features at 3rd level and then again at 9th, 13th, and 17th level.",
 				{
 					"type": "refSubclassFeature",
@@ -1525,14 +1539,13 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Rogue||Assassin||3"
+					"subclassFeature": "Poisoner|Rogue||Assassin||3"
 				}
 			]
 		},
 		{
 			"name": "Assassinate",
 			"source": "PHB",
-			"page": 97,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Assassin",
@@ -1540,13 +1553,25 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn't taken a turn in the combat yet. In addition, any hit you score against a creature that is surprised is a critical hit."
+				"{@i 3rd level Assassin feature}",
+				"You are an expert at exploiting weakness in your foes. During your turn, when you successfully execute your sneak attack, you can deal bonus damage if your target is under one of the following conditions:",
+				{
+					"type": "list",
+					"items": [
+						"Blinded",
+						"Frightened",
+						"Poisoned",
+						"Prone",
+						"Restrained",
+						"Surprised",
+						"Unconscious"
+					]
+				}
 			]
 		},
 		{
-			"name": "Bonus Proficiencies",
+			"name": "Poisoner",
 			"source": "PHB",
-			"page": 97,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Assassin",
@@ -1554,11 +1579,13 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you choose this archetype at 3rd level, you gain proficiency with the {@item disguise kit|phb} and the {@item poisoner's kit|phb}."
+				"{@i 3rd level Assassin feature}",
+				"You gain proficiency with the {@item poisoner's kit|phb}. Over the course of a long rest, you can use a {@item poisoner's kit} to make several vials of {@item assassin's poison|mod} without expending additional resources. You can create a number of vials up to your proficiency modifier, and any poison created with this feature expires if you do not use it before your next long rest.",
+				"Additionally, you may apply poison to your weapon as a bonus action rather than an action."
 			]
 		},
 		{
-			"name": "Infiltration Expertise",
+			"name": "Master of Deception",
 			"source": "PHB",
 			"page": 97,
 			"className": "Rogue",
@@ -1568,12 +1595,15 @@
 			"level": 9,
 			"header": 2,
 			"entries": [
-				"Starting at 9th level, you can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can't establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official-looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants.",
-				"Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to."
+				"{@i 9th level Assassin feature}",
+				"You can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can't establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official-looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants.",
+				"Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to.",
+				"Additionally, you gain the ability to unerringly mimic another person's speech, writing, and behavior. You must spend at least one hour studying these three components of the person's behavior, listening to speech, examining handwriting, and observing mannerism.",
+				"Your ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma ({@skill Deception}) check you make to avoid detection."
 			]
 		},
 		{
-			"name": "Impostor",
+			"name": "Artisan of Death",
 			"source": "PHB",
 			"page": 97,
 			"className": "Rogue",
@@ -1583,14 +1613,48 @@
 			"level": 13,
 			"header": 2,
 			"entries": [
-				"At 13th level, you gain the ability to unerringly mimic another person's speech, writing, and behavior. You must spend at least three hours studying these three components of the person's behavior, listening to speech, examining handwriting, and observing mannerism.",
-				"Your ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma ({@skill Deception}) check you make to avoid detection."
+				"{@i 13th level Assassin feature}",
+				"Your talents as a dealer of death grow greater, as you improve the efficacy of your poisons and learn to better dispatch your weakened opponents. You gain the following abilities:",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Cruel Poisons|Rogue||Assassin||13"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Coup de Grace|Rogue||Assassin||13"
+				}
 			]
 		},
 		{
-			"name": "Death Strike",
+			"name": "Cruel Poisons",
 			"source": "PHB",
-			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "PHB",
+			"level": 13,
+			"header": 1,
+			"entries": [
+				"The poisons you make now ignore immunity to the {@condition poisoned} condition, and they deal {@damage 3d8} poison damage instead of {@dice 1d8}."
+			]
+		},
+		{
+			"name": "Coup de Grace",
+			"source": "PHB",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "PHB",
+			"level": 13,
+			"header": 1,
+			"entries": [
+				"When you hit a creature with your sneak attack, you can attempt to finish them off. If the damage dealt by the attack is at least half of the target's {@i current} hit points, the target must succeed on a Constitution saving throw. On a failure, they immediately drop to 0 hit points.",
+				"The DC for this ability is equal to 8 + your Dexterity modifier + your proficiency bonus."
+			]
+		},
+		{
+			"name": "Instant Death",
+			"source": "PHB",
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Assassin",
@@ -1598,7 +1662,9 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, you become a master of instant death. When you attack and hit a creature that is surprised, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature."
+				"{@i 17th level Assassin feature}",
+				"When you use your Assassinate feature on a creature, you can treat it as if it were vulnerable to the attack's damage (though this does not cancel out any damage immunities).",
+				"You can use this feature once; after you use it, you must complete a long rest before you can use it again. You can use this feature on a {@condition surprised} creature even if you have no uses left, and it doesn't consume a use if you do so. "
 			]
 		},
 		{
@@ -2268,15 +2334,83 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"You focus your training on the art of the blade, relying on speed, elegance, and charm in equal parts. While some warriors are brutes clad in heavy armor, your method of fighting looks almost like a performance. Duelists and pirates typically belong to this archetype.",
-				"A Swashbuckler excels in single combat, and can fight with two weapons while safely darting away from an opponent.",
+				"You become an artisan of combat, a performer as well as a warrior. For a swashbuckler, style is everything: Rogues of this archetype blend reckless stunts with flashy bladwork into an efficient dance of death. Duelists and pirates typically belong to this archetype.",
+				"A Swashbuckler spents much of their combat performing reckless stunts to generate Panache, then expending it to perform great feats.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Fancy Footwork|Rogue||Swashbuckler|XGE|3"
+					"subclassFeature": "Barroom Brawler|Rogue||Swashbuckler|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Rakish Audacity|Rogue||Swashbuckler|XGE|3"
+					"subclassFeature": "Panache|Rogue||Swashbuckler|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Barroom Brawler",
+			"source": "XGE",
+			"page": 48,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Swashbuckler",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd leve Swashbuckler feature}",
+				"You gain proficiency in improvised weapons, and when you use an improvised weapon, its damage dice is a {@dice 1d8}. You may treat improvised weapons as finesse weapons with the one-handed proprety.",
+				"Additionally, you gain proficiency in {@item shields}."
+			]
+		},
+		{
+			"name": "Panache",
+			"source": "XGE",
+			"page": 48,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Swashbuckler",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd level Swashbucker feature}",
+				"Your fighting is all about risk and style. You gain a resource called Panache, which you use to fuel your Swashbuckler maneuvers.",
+				"Once per turn, you may gain a point of Panache when you succeed on a particularly daring or stylish maneuver which requires an ability check, such as swinging from a chandelier to attack your opponent. The ability check is DC 20, and the DM determines what skill is appropriate (usually Dexterity (Acrobatics) or Charisma (Performance), but the DM may decide that another ability is more appropriate.)",
+				"You can have a maximum number of Panache points equalt o your proficiency modifier. You can only gain Panache during combat, and you lose all points of Panache a minute after leaving combat.",
+				"You can expend Panache to fuel the following abilities:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Flourish",
+							"entries": [
+								"When you make an attack roll, ability check, or saving throw, you can expend 1 point of panache to gain advantage on it. You must use this ability before you roll."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Stylish Strike",
+							"entries": [
+								"When you hit with a melee weapon attack, you can expend any number of panache, adding 1d8 per panache spent to the damage roll."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Buckler",
+							"entries": [
+								"You must be wielding a {@item shield} to use this ability. As a reaction when you take damage damage against you, expend any number of panache, and reduce the damage taken by five times the panache expended."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Riposte",
+							"entries": [
+								"You must {@i not} be wielding a {@item shield} to use this ability. When you are hit by a melee attack, you can use your reaction and expend three points of Panache to make a melee weapon attack against your attacker."
+							]
+						}
+					]
 				}
 			]
 		},
@@ -2288,29 +2422,15 @@
 			"classSource": "PHB",
 			"subclassShortName": "Swashbuckler",
 			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
+			"level": 9,
+			"header": 2,
 			"entries": [
-				"When you choose this archetype at 3rd level, you learn how to land a strike and then slip away without reprisal. During your turn, if you make a melee attack against a creature, that creature can't make opportunity attacks against you for the rest of your turn."
+				"{@i 9th level Swashbuckler Feature}",
+				"You learn how to land a strike and then slip away without reprisal. During your turn, if you make a melee attack against a creature, that creature can't make opportunity attacks against you for the rest of your turn."
 			]
 		},
 		{
-			"name": "Rakish Audacity",
-			"source": "XGE",
-			"page": 48,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Swashbuckler",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, your confidence propels you into battle. You can give yourself a bonus to your initiative rolls equal to your Charisma modifier.",
-				"You also gain an additional way to use your Sneak {@action Attack}; you don't need advantage on your attack roll to use Sneak {@action Attack} against a creature if you are within 5 feet of it, no other creatures are within 5 feet of you, and you don't have disadvantage on the attack roll. All the other rules for Sneak {@action Attack} still apply to you."
-			]
-		},
-		{
-			"name": "Panache",
+			"name": "Overwhelming Charisma",
 			"source": "XGE",
 			"page": 48,
 			"className": "Rogue",
@@ -2320,13 +2440,15 @@
 			"level": 9,
 			"header": 2,
 			"entries": [
+				"{@i 9th level Swashbuckler feature}",
 				"At 9th level, your charm becomes extraordinarily beguiling. As an action, you can make a Charisma ({@skill Persuasion}) check contested by a creature's Wisdom ({@skill Insight}) check. The creature must be able to hear you, and the two of you must share a language.",
 				"If you succeed on the check and the creature is hostile to you, it has disadvantage on attack rolls against targets other than you and can't make opportunity attacks against targets other than you. This effect lasts for 1 minute, until one of your companions attacks the target or affects it with a spell, or until you and the target are more than 60 feet apart.",
-				"If you succeed on the check and the creature isn't hostile to you, it is {@condition charmed} by you for 1 minute. While {@condition charmed}, it regards you as a friendly acquaintance. This effect ends immediately if you or your companions do anything harmful to it."
+				"If you succeed on the check and the creature isn't hostile to you, it is {@condition charmed} by you for 1 minute. While {@condition charmed}, it regards you as a friendly acquaintance. This effect ends immediately if you or your companions do anything harmful to it.",
+				"Once you use this feature upon a creature, you cannot do so again until you complete a long rest."
 			]
 		},
 		{
-			"name": "Elegant Maneuver",
+			"name": "Whirlwind of Blades",
 			"source": "XGE",
 			"page": 48,
 			"className": "Rogue",
@@ -2336,11 +2458,12 @@
 			"level": 13,
 			"header": 2,
 			"entries": [
-				"Starting at 13th level, you can use a bonus action on your turn to gain advantage on the next Dexterity ({@skill Acrobatics}) or Strength ({@skill Athletics}) check you make during the same turn."
+				"When you take the Attack action, you can choose to make a whirlwind attack instead. Make a single melee attack against every creature of your choice within 5 feet of yourself; you can apply sneak attack to every creature you hit in this way, as long as you meet the requirements, but you only roll half the number of sneak attack dice (rounded up).",
+				"You may expend 2 Panache points to gain advantage on every attack made as part of your whirlwind, though you must do so before rolling any attack."
 			]
 		},
 		{
-			"name": "Master Duelist",
+			"name": "Drama Queen",
 			"source": "XGE",
 			"page": 48,
 			"className": "Rogue",
@@ -2350,7 +2473,16 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Beginning at 17th level, your mastery of the blade lets you turn failure into success in combat. If you miss with an attack roll, you can roll it again with advantage. Once you do so, you can't use this feature again until you finish a short or long rest."
+				"{@i 17th level Swashbuckler feature}",
+				"Combat is a show, and you are a master of the stage. At the start of your turn, you can choose to begin a dazzling performance of bladework and death, gaining the following benefits for one minute:",
+				{
+					"type": "list",
+					"items": [
+						"You gain 2 panache when you activate this ability, and at the start of every subsequent turn.",
+						"Your movement speed increases by 15 feet.",
+						"Whenever you land a sneak attack during your turn, you can cause any other creatures of your choice who can see you to take {@damage 3d6} psychic damage, though any creature who is immune to the frightened condition is also immune to this damage. Additionally, any allies who can see you gain {@dice 2d6} temporary hit points."
+					]
+				}
 			]
 		},
 		{

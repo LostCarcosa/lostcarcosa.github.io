@@ -18,7 +18,7 @@
 			}
 		],
 		"optionalFeatureTypes": {
-			"F:RA": "Fighter; Runic Augmentations"
+			"F:BR": "Fighter; Banneret Rallies"
 		},
 		"dateAdded": 1647935526,
 		"dateLastModified": 1647935526
@@ -239,6 +239,7 @@
 		{
 			"name": "Confused",
 			"source": "MOD",
+			"page": 0,
 			"entries": [
 				"A confused creature can't take reactions. Some confusion effects will specify a die to roll for the table below. If no die is specified, use a {@dice d8}. At the start of each of its turns, a creature rolls the confusion die to determine its behavior for that turn.",
 				{
@@ -327,62 +328,305 @@
 		}
 	],
 	"subclass": [
-	],
-	"subclassFeature": [
-	],
-	"optionalfeature": [
 		{
-			"name": "Sokn TBD",
+			"name": "Empty Hand",
+			"shortName": "Empty Hand",
 			"source": "MOD",
-			"page": 20,
-			"entries": [
-				"{@b {@i Attack Augmentation}}",
-				"You can activate a rune with the Sokn augmentation as a bonus action. A rune's power only affects the weapon it is inscribed on.",
-				{
-					"type": "entries",
-					"name": "Ild",
-					"page": 20,
-					"entries": [
-						"Once per turn, when you hit a creature with a weapon attack, you ignite the target. While this rune is active, each creature you've burned takes {@dice 1d4} fire damage at the start of its turn for each time you've burned it, and it can then make a Constitution saving throw, ending the effect of all such burns on itself on a success. Alternatively, the burned creature, or a creature within 5 feet of it, can use an action to make a Wisdom ({@skill Medicine}) check against your runic save DC, ending the effect of all burns on it on a success."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Kalt",
-					"page": 20,
-					"entries": [
-						"When you hit a creature with a weapon attack, it can't take reactions until the start of its next turn."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Ond",
-					"page": 20,
-					"entries": [
-						"Once per turn, when you hit a creature with a weapon attack, you deal an additional {@dice 1d4} necrotic damage and you recover hit points equal to the necrotic damage dealt."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Stein",
-					"page": 20,
-					"entries": [
-						"When you hit a Large or smaller creature with a weapon attack, it must make a Strength saving throw, falling {@condition prone} on a failed save."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Vind",
-					"page": 20,
-					"entries": [
-						"When a creature hits you with a melee attack, you can use your reaction to make a melee weapon attack against that creature."
-					]
-				}
-			],
-			"featureType": [
-				"F:RA"
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 97,
+			"subclassFeatures": [
+				"Empty Hand|Rogue||Empty Hand|MOD|3",
+				"Hollow Hand|Rogue||Empty Hand|MOD|9",
+				"Hollow Eyes|Rogue||Empty Hand|MOD|9",
+				"Void Hand|Rogue||Empty Hand|MOD|13",
+				"Final Theft|Rogue||Empty Hand|MOD|17"
 			]
 		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Empty Hand",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 3,
+			"entries": [
+				"In any society, there are thieves- those who dwell in the gutters of cities, picking pockets and cutting purses. The ignorant might lump you in with that ragged lot, but you know better. You have trained in the Way of the Empty Hand, and you needn't limit yourself to mere trifles like gold; no, you have learned to steal more {@i metaphysica} aspects from your victims.",
+				"Perhaps you learned the ways of the Empty Hand from the Monastery of Cosmic Revelation, where it originated, or maybe another disciple taught it to you. Regardless of where you picked up your talents, they are now yours, to use.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Empty Palm|Rogue||Empty Hand|MOD|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Thievery|Rogue||Empty Hand|MOD|3"
+				}
+			]
+		},
+		{
+			"name": "Empty Palm",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd level Empty Hand feature}",
+				"A signature ability of the Empty Hand is the ability to move objects in and out of a small, personal demiplane. As a bonus action, you can shift an object you are holding into your demiplane, or call an object from your demiplane into your hand.",
+				"You can only use this ability on objects that can be comfortably held or wielded in one hand, and you cannot use this ability on an object that another creature is wearing or wielding, or is otherwise not free to move.",
+				"Your demiplane can hold up to seven objects at a time. If you attempt to put an object into your demiplane while it is full, nothing happens, and the action is wasted."
+			]
+		},
+		{
+			"name": "Thievery",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd level Empty Hand feature}",
+				"You gain the ability steal objects and aspects from other creatures, and to use them for your own benefit. As a bonus action, you can attempt one of the following Steal options listed below on a creature within 5 feet of you; in order to Steal from a creature, you must succeed on a Dexterity (Sleight of Hand) check contested against the target's passive Perception or Acrobatics (their choice).",
+				"You cannot use the same Steal ability two turns in a row.",
+				"Any creature with the magic resistance trait adds a +5 to their defending skill for any of your Steal options, except for Steal Materia.",
+				{
+					"type": "options",
+					"count": 3,
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steal Materia|Rogue||Empty Hand|MOD|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steal Strength|Rogue||Empty Hand|MOD|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steal Speed|Rogue||Empty Hand|MOD|3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Hollow Hand",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"{@i 9th level Empty Hand feature}",
+				"You gain the following Steal options, which you can use as part of your Thievery feature.",
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steal Health|Rogue||Empty Hand|MOD|9"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steal Luck|Rogue||Empty Hand|MOD|9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Hollow Eyes",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"{@i 9th level Empty Hand feature}",
+				"Your eyes are now finely trained enough to identify threats and valuables at a glance. When you come across a door or similar barrier, you immediately know how many creatures are on the other side, though this does not account for invisible or hidden creatures, and is blocked by lead of any thickness, an inch of iron, or a foot of stone.",
+				"Additionally, as a free action, you can make a Wisdom (Perception) check to identify any valuables a creature may have on them; the DM gives you a brief summary of any important items they may have, such as keys, magic items, or hidden equipment. This does not identify items hidden by magic, or any item not on their person. Additionally, once you attempt this check on a particular creature, you cannot do so again until you complete a long rest."
+			]
+		},
+		{
+			"name": "Void Hand",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"{@i 13th level Empty Hand feature}",
+				"You've nearly achieved the pinnacle of metaphysical theft. You learn two more Steal options for your Empty Hand ability. You gain the following Steal options, which you can use as part of your Thievery feature.",
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steal Memory|Rogue||Empty Hand|MOD|13"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steal Heart|Rogue||Empty Hand|MOD|13"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Final Theft",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"{@i 17th level Empty Hand feature}",
+				"You've mastered the final and ultimate form of theft, though it is a difficult and risky endeavor. You learn the last technique of the Empty Hand.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steal Life|Rogue||Empty Hand|MOD|17"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Steal Materia",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 3,
+			"entries": [
+				"You snatch a single object that is not being held or worn from your opponent. You must know the item exists and roughly where it is kept, in general terms. (For example, in order to steal a potion, you must first know that the target has a potion and that they keep it on their belt, though you need not know what type of potion it is).",
+				"If you steal an item that could be used via the {@action Use an Item} action, you can immediately use it as part of the bonus action used to steal it. This does not include most magic items, which are considered part of the Use a Magic Item action. The only exception is a potion, which you may drink as a bonus action if you steal it this turn."
+			]
+		},
+		{
+			"name": "Steal Strength",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 3,
+			"entries": [
+				"You snatch a burst of strength from your target for your own use. Until the end of the target's next turn, they have disadvantage on ability checks and attack rolls that use Strength or Dexterity, and they do one less die of damage with every melee weapon attack they make until the end or their nex tturn. (If this reduces it to 0 die, then it does a base of 1 damage plus modifiers.)",
+				"Once during this turn, if you hit a creature with a melee weapon attack, you can add your proficiency to the damage roll, and you may use your sneak attack even if you do not otherwise meet the requirements to do so."
+			]
+		},
+		{
+			"name": "Steal Speed",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 3,
+			"entries": [
+				"You borrow the target's speed to empower your own movement. Until the end of the target's next turn, their speed is reduced by 15 feet, and they cannot use reactions.",
+				"Until the end of your current turn, your own movement speed increases by 15 feet."
+			]
+		},
+		{
+			"name": "Steal Health",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 9,
+			"entries": [
+				"You can only use this steal option if you have not made an  attack during your current turn.",
+				"You attempt to borrow a creature's vitality for your own. If you successfully make this steal, your next weapson attack against the target deals half damage; you gain temporary hit points equal to the damage done. (If a creature is reduced to 0 hit points, any damage done past 0 is not counted.)",
+				"These temporary hit points expire at the end of your next turn."
+			]
+		},
+		{
+			"name": "Steal Luck",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 9,
+			"entries": [
+				"You steal a portion of the target's luck, borrowing it for yourself. Whenever the creature makes an attack roll, ability check, or saving throw, it must subtract {@dice 1d6} from the roll; this penalty ends at the end of the creature's next turn, or after it fails a roll.",
+				"You may add {@dice 1d8} to any attack roll, ability check, or saving throw you make before the end of your next turn. You can wait until you see the roll before deciding to add this bonus. "
+			]
+		},
+		{
+			"name": "Steal Memory",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 13,
+			"entries": [
+				"You steal a memory from a creature, extracting knowledge from their mind into your own. When you steal a memory, you can choose one of the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"You learn one memory from the creature's mind from within the past 24 hours. You can pick a specific memory if you can describe the general premise (for example, \"a memory of the creature unlocking their safe\" or \"a memory of them meeting a conspirator\"), but the information you obtain is limited to what the target knows. The target does not lose access to the memory, and once you successfully use this ability on the target, you cannot use it again on them until you complete a long rest.",
+						"You steal the knowledge of one spell from the target's mind temporarily. The spell is removed from the target's spell list until the end of the target's next turn, at which point it is returned to them. This ability does not work on Innate Spellcasting."
+					]
+				}
+			]
+		},
+		{
+			"name": "Steal Heart",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 13,
+			"entries": [
+				"You can only use this Steal on a creature who you and your allies have not attacked.",
+				"You quickly remove the hostility a creature bears for you. Your target is charmed by you for ten minutes or until you attack or harm it. The creature's existing allegiances do not change, however, and you cannot exert direct control over their actions.",
+				"After this effect ends, you cannot use it again on the same creature until you complete a long rest. Also, the creature knows it was magically charmed by you."
+			]
+		},
+		{
+			"name": "Steal Life",
+			"source": "MOD",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Empty Hand",
+			"subclassSource": "MOD",
+			"level": 17,
+			"entries": [
+				"You can attempt to rip the vitality from another creature, claiming it for yourself. When you use this steal option, you take a -10 penalty to the check, and if you fail the steal, you immediately take 6d6 necrotic damage, which cannot be reduced in any way. If this damage reduces you to 0 hit points, you immediately die.",
+				"Furthermore, this ability only works on a creature that has less than half of its maximum hit points. You automatically know if a creature satisfies this condition.",
+				"If you succeed on the Steal anyway, the target dies. Its vitality is captured in your Empty Palm demiplane, and as a bonus action, you can consume it to regain hit points equal to half of your maximum. Alternatively, you may use the vitality to cast the revivify spell once as an action. However you use the vitality, it is consumed upon use.",
+				"Once you successfully steal a creature's life in this way, you cannot do so again until you complete a long rest."
+			]
+		}
+	],
+	"optionalfeature": [
 	],
 	"background": [
 	],
@@ -394,6 +638,18 @@
 	"itemGroup": [
 	],
 	"item": [
+		{
+			"name": "Assassin's Poison",
+			"source": "MOD",
+			"type": "G",
+			"rarity": "none",
+			"poison": true,
+			"entries": [
+				"This is a poison intended for use by the Assassin Rogue Archetype, as part of their subclass feature, and is not intended to be otherwise accessible.",
+				"You can use the poison in this vial to coat one slashing or piercing weapon or three pieces of ammunition. A creature hit by the {@condition poisoned} weapon or ammunition must make a Constitution saving throw or take {@damage 1d8} poison damage and become {@condition poisoned} until the end of your next turn. The poison expires after one minute or after it deals damage to a target.",
+				"If this poison is used by a creature that is not an Assassin Rogue, it still deals additional damage on a hit but does not inflict the {@condition poisoned} condition."
+			]
+		}
 	],
 	"variant": [
 	],
@@ -622,6 +878,25 @@
 			]
 		},
 		{
+			"name": "Mounted Combat",
+			"source": "MOD",
+			"type": "section",
+			"entries": [
+				"The rules for {@quickref controlling a mount} are replaced with the following.",
+				"A controlled mount does not have a turn in combat, and can take no actions, reactions, or bonus actions. During your turn, you may use the mount's movement speed as your own, but you must expend movement all at once: once you start moving, you cannot take any action (even free actions) until you finish moving, and once you end your move you cannot move again during the current turn (even if you would otherwise have movement remaining.",
+				"Additionally, if your mount cannot see, you must succeed on a DC 20 Animal Handling check at the start of your turn in order to control it. On a failure, the mount does not move this turn.",
+				{
+					"type": "inset",
+					"name": "Design Notes",
+					"entries": [
+						"Mounted Combat has always been very clunky in 5e. The rules as-written have you act on the same initiative, but still on a separate turn, which actually seems like a reasonable trade-off: extra movement in exchange for less flexibility.",
+						"This ruleset is intended to mimic that tradeoff in a slightly less clunky way- your movement must occur all at once, but you can do things before and after your move.",
+						"Also it removes the ability for mounts to act, as letting mounts take the Dash/Disengage action increases mobility too far. The high base movement speed should probably be sufficient."
+					]
+				}
+			]
+		},
+		{
 			"name": "Multiclassing",
 			"source": "MOD",
 			"type": "section",
@@ -727,6 +1002,220 @@
 	],
 	"monster": [
 		{
+			"name": "Bonded Steed",
+			"source": "MOD",
+			"summonedByClass": "Fighter|PHB",
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"unarmored"
+					]
+				}
+			],
+			"hp": {
+				"special": "5 + five times your fighter level (the steed does not have hit dice)"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 12,
+			"int": 6,
+			"wis": 12,
+			"cha": 9,
+			"passive": 11,
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"action": [
+				{
+					"name": "Maul",
+					"entries": [
+						"{@atk mw} +(4 + PB) to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 4 + PB} slashing damage."
+					]
+				}
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"tokenUrl": "https://5e.tools/img/PHB/Warhorse.png",
+			"save": {
+				"str": "+4",
+				"con": "+1"
+			}
+		},
+		{
+			"name": "Bonded Winged Steed",
+			"source": "MOD",
+			"summonedByClass": "Fighter|PHB",
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"unarmored"
+					]
+				}
+			],
+			"hp": {
+				"special": "5 + five times your fighter level (the steed does not have hit dice)"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 60,
+				"canHover": false
+			},
+			"str": 20,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 15,
+			"cha": 13,
+			"passive": 11,
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"action": [
+				{
+					"name": "Maul",
+					"entries": [
+						"{@atk mw} {+ (4 + your PB) to hit, reach 5 ft., one target. {@h}{@damage 2d6 + 5 + PB} slashing damage."
+					]
+				}
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"tokenUrl": "https://5e.tools/img/PHB/Warhorse.png",
+			"save": {
+				"str": "+5",
+				"con": "+1",
+				"dex": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [
+						"charmed",
+						"frightened"
+					],
+					"note": "while being ridden"
+				}
+			]
+		},
+		{
+			"name": "Bonded Rampaging Steed",
+			"source": "MOD",
+			"summonedByClass": "Fighter|PHB",
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"unarmored"
+					]
+				}
+			],
+			"hp": {
+				"special": "5 + five times your fighter level (the steed does not have hit dice)"
+			},
+			"speed": {
+				"walk": 90
+			},
+			"str": 20,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 15,
+			"cha": 13,
+			"passive": 12,
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"action": [
+				{
+					"name": "Maul",
+					"entries": [
+						"{@atk mw} {+ (4 + your PB) to hit, reach 5 ft., one target. {@h}{@damage 2d6 + 5 + PB} slashing damage."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"tokenUrl": "https://5e.tools/img/PHB/Warhorse.png",
+			"save": {
+				"str": "+5",
+				"con": "+1",
+				"dex": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [
+						"charmed",
+						"frightened"
+					],
+					"note": "while being ridden"
+				}
+			],
+			"trait": [
+				{
+					"name": "Rampage",
+					"entries": [
+						"The rampaging steed can move through any creature its size or smaller without treating them as difficult terrain. Additionally, the first time it enters a creature's space during its turn, the creature takes {@damage 1d8} bludgeoning damage."
+					]
+				}
+			],
+			"traitTags": [
+				"Rampage"
+			]
+		},
+		{
 			"name": "Reanimated Spore Servant",
 			"source": "MOD",
 			"size": "M",
@@ -827,7 +1316,7 @@
 				"type": "point",
 				"distance": {
 					"type": "feet",
-					"amount": 60
+					"amount": 0
 				}
 			},
 			"components": {
@@ -10399,7 +10888,6 @@
 				"You conjure up a wave of water that crashes down on an area within range. The area can be up to 30 feet long, up to 10 feet wide, and up to 10 feet tall. Each creature in that area must make a Strength saving throw. On a failed save, a creature takes {@damage 4d8} bludgeoning damage and is knocked {@condition prone}. On a successful save, a creature takes half as much damage and isn't knocked {@condition prone}. The water then spreads out across the ground in all directions, extinguishing unprotected flames in its area and within 30 feet of it, and then it vanishes."
 			],
 			"damageInflict": [
-				"bludgeoning"
 			],
 			"conditionInflict": [
 				"prone"
