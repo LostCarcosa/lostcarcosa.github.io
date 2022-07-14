@@ -5598,7 +5598,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Death Saves",
+					"name": "Death Saves TEST",
 					"entries": [
 						"If you take damage while you are {@condition bleeding out}, you must make a death saving throw with a DC equal to 5 or half the damage taken (whichever is higher). Death saves are still made with a +0 modifier by default. Rolling a natural 1 on a death save still causes 2 failures. Rolling a natural 20 restores 2d8 hit points to you (although you continue bleeding out if your hit points are still below 0).",
 						"You can no longer 'stabilize'; succeeding on death saves does nothing. You only stop making death saves if you fail 3 death saves (see \"Mortality\", below) or if you stop bleeding out (i.e are healed above 0 hit points). Once you stop bleeding out, your death saves reset to 0 failures.",
