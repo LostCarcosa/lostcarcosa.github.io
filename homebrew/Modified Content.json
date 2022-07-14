@@ -4969,7 +4969,7 @@
 			]
 		},
 		{
-			"name": "Primal Staff (Physical)",
+			"name": "Primal Staff",
 			"source": "MOD",
 			"rarity": "none",
 			"value": 400,
@@ -4986,11 +4986,12 @@
 				"Primal Staff (Physical)|MOD"
 			],
 			"entries": [
-				"{@i A long length of knobbled wood, decorated with symbols of primal power- feathers, bones, vines, and other adornments of nature.}"
+				"{@i A long length of knobbled wood, decorated with symbols of primal power- feathers, bones, vines, and other adornments of nature.}",
+				"Druids have some of the most varied damage types. Some suggested types are given, but you can usually find a staff for any particular damage type."
 			]
 		},
 		{
-			"name": "Holy Staff (Necrotic)",
+			"name": "Holy Staff",
 			"source": "MOD",
 			"rarity": "none",
 			"value": 400,
@@ -15547,7 +15548,7 @@
 					"name": "Material",
 					"entries": [
 						"This item represents a particular material that can be used to plate certain types of weapons and armor. Some materials, such as silver, can be easily acquired and applied to weapons by any smith, while others require great effort to find the necessary material and a smith with the talent to work it.",
-						"An object cannot have more than one material applied to it. The cost to "
+						"An object cannot have more than one material applied to it. See {@variantrule FORGE} for more detail."
 					]
 				}
 				

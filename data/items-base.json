@@ -346,8 +346,8 @@
 					"type": "entries",
 					"name": "Arcing Slash",
 					"entries": [
-						"When you attack with a greatsword, you may choose to target two creatures within your reach with a single attack. You use the same attack roll and damage roll for both targets, and deals {@damage 1d6} slashing damage instead of the weapon's normal damage die.",
-						"Any feature that adds damage to your weapon attacks, such as a paladin's Divine Smite, applies to both targets."
+						"When you attack with a greatsword, you may choose to target two creatures within your reach with a single attack. You use the same attack roll and damage roll for both targets, and deals {@damage 1d6} slashing damage instead of the weapon's normal damage die. (You still add your modifier, as normal.)",
+						"Any feature that adds damage to your weapon attacks, such as a paladin's Divine Smite, deals half damage to each target."
 					]
 				}
 			]
@@ -807,13 +807,6 @@
 					"entries": [
 						"As an action, you can set your pike against a charge. If a creature moves at least 20 feet straight toward you and attacks you, you may use your reaction to make an attack with your pike before the attacker makes its attack roll. If your attack hits, it is an automatic critical hit, and the target has disadvantage on its attack roll."
 					]
-				},
-				{
-					"type": "entries",
-					"name": "Trip",
-					"entries": [
-						"When you take the Attack action, you may use one of your attacks to attempt to knock your opponent prone. Make one pike attack against a Large or smaller creature. If it hits, the attack deals half damage and knocks the creature {@condition prone}."
-					]
 				}
 			]
 		},
@@ -882,7 +875,8 @@
 					"type": "entries",
 					"name": "Parrying Dagger",
 					"entries": [
-						"While wielding both a dagger and a rapier, you may use a reaction after being struck by a melee attack to roll {@dice 1d4} and add the result to your armor class until the end of the current turn."
+						"While wielding both a dagger and a rapier, you may use a reaction after being struck by a melee attack to roll {@dice 1d4} and add the result to your armor class until the end of the current turn, potentially causing the triggering attack to miss.",
+						"If the dagger has a flat bonus to damage rolls, you can add that bonus to the {@dice 1d4}."
 					]
 				}
 			]
