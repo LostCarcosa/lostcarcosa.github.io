@@ -2,9 +2,9 @@
 	"_meta": {
 		"sources": [
 			{
-				"json": "ktp",
-				"abbreviation": "KT:P",
-				"full": "KibblesTasty: Psion",
+				"json": "PSN",
+				"abbreviation": "PSN",
+				"full": "The Psion",
 				"authors": [
 					"KibblesTasty"
 				],
@@ -16,13 +16,14 @@
 				],
 				"version": "1.4.1",
 				"url": "https://www.gmbinder.com/share/-LZSNMgmChWNGW979hrj",
-				"targetSchema": "1.0.0"
+				"targetSchema": "1.0.0",
+				"color": "00f7ff"
 			}
 		],
 		"optionalFeatureTypes": {
-			"PsiD": "Psionic Discipline",
-			"PsiT": "Psionic Talent",
-			"PsiP": "Psionic Power"
+			"PSI:D": "Psionic Discipline",
+			"PSI:T": "Psionic Talent",
+			"PSI:P": "Psionic Power"
 		},
 		"skills": {
 			"Psionics": [
@@ -35,7 +36,7 @@
 	"class": [
 		{
 			"name": "Psion",
-			"source": "ktp",
+			"source": "PSN",
 			"hd": {
 				"number": 1,
 				"faces": 6
@@ -49,7 +50,7 @@
 					"colLabels": [
 						"Psi Points",
 						"Per Use Limit",
-						"{@filter Psionic Talents|optionalfeatures|feature type=PsiT}"
+						"{@filter Psionic Talents|optionalfeatures|feature type=PSI:T}"
 					],
 					"rows": [
 						[
@@ -226,42 +227,42 @@
 			},
 			"classFeatures": [
 				{
-					"classFeature": "Psionic Archetype|Psion|ktp|1",
+					"classFeature": "Psionic Archetype|Psion|PSN|1",
 					"gainSubclassFeature": true
 				},
-				"Psionics|Psion|ktp|1",
-				"Psionic Talents|Psion|ktp|2",
-				"Second Discipline|Psion|ktp|3",
+				"Psionics|Psion|PSN|1",
+				"Psionic Talents|Psion|PSN|2",
+				"Second Discipline|Psion|PSN|3",
 				{
-					"classFeature": "Psionic Archetype Feature|Psion|ktp|3",
+					"classFeature": "Psionic Archetype Feature|Psion|PSN|3",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Psion|ktp|4",
-				"Psionic Mastery (1 point)|Psion|ktp|5",
+				"Ability Score Improvement|Psion|PSN|4",
+				"Psionic Mastery (1 point)|Psion|PSN|5",
 				{
-					"classFeature": "Psionic Archetype Feature|Psion|ktp|6",
+					"classFeature": "Psionic Archetype Feature|Psion|PSN|6",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Psion|ktp|8",
+				"Ability Score Improvement|Psion|PSN|8",
 				{
-					"classFeature": "Psionic Archetype Feature|Psion|ktp|10",
+					"classFeature": "Psionic Archetype Feature|Psion|PSN|10",
 					"gainSubclassFeature": true
 				},
-				"Psionic Mastery (2 points)|Psion|ktp|11",
-				"Innate Psionics (6th level spell)|Psion|ktp|11",
-				"Ability Score Improvement|Psion|ktp|12",
-				"Innate Psionics (7th level spell)|Psion|ktp|13",
+				"Psionic Mastery (2 points)|Psion|PSN|11",
+				"Innate Psionics (6th level spell)|Psion|PSN|11",
+				"Ability Score Improvement|Psion|PSN|12",
+				"Innate Psionics (7th level spell)|Psion|PSN|13",
 				{
-					"classFeature": "Psionic Archetype Feature|Psion|ktp|14",
+					"classFeature": "Psionic Archetype Feature|Psion|PSN|14",
 					"gainSubclassFeature": true
 				},
-				"Innate Psionics (8th level spell)|Psion|ktp|15",
-				"Ability Score Improvement|Psion|ktp|16",
-				"Psionic Mastery (3 points)|Psion|ktp|17",
-				"Innate Psionics (9th level spell)|Psion|ktp|17",
-				"Third Discipline|Psion|ktp|18",
-				"Ability Score Improvement|Psion|ktp|19",
-				"Ascension|Psion|ktp|20"
+				"Innate Psionics (8th level spell)|Psion|PSN|15",
+				"Ability Score Improvement|Psion|PSN|16",
+				"Psionic Mastery (3 points)|Psion|PSN|17",
+				"Innate Psionics (9th level spell)|Psion|PSN|17",
+				"Third Discipline|Psion|PSN|18",
+				"Ability Score Improvement|Psion|PSN|19",
+				"Ascension|Psion|PSN|20"
 			],
 			"subclassTitle": "Psionic Archetype",
 			"fluff": [
@@ -288,7 +289,7 @@
 							]
 						}
 					],
-					"source": "ktp",
+					"source": "PSN",
 					"page": 1,
 					"name": "Psion",
 					"type": "section"
@@ -311,13 +312,13 @@
 							]
 						}
 					],
-					"source": "ktp",
+					"source": "PSN",
 					"page": 2,
 					"name": "Psion",
 					"type": "section"
 				},
 				{
-					"source": "ktp",
+					"source": "PSN",
 					"entries": [
 						{
 							"type": "quote",
@@ -554,11 +555,11 @@
 				"fromClassList": [
 					{
 						"name": "Psion",
-						"source": "ktp"
+						"source": "PSN"
 					}
 				]
 			},
-			"source": "ktp",
+			"source": "PSN",
 			"entries": [
 				"You you create an exact duplicate of yourself in an empty space you can see within 30 feet of you. When you cast this spell at the start of each of your turns for the duration, you can determine which of the duplicates is you.",
 				"It has all of your stats, abilities, and equipment (including magic items). It acts on your initiative, and has its own actions, though it shares its concentration on this spell, and if either of you lose concentration, the spell ends. Your current hit points are divided between you and the duplicate (you can divide them however you want) and shares all other resources and abilities with you (including limited use magic items), with any usage by either you or the duplicate depleting the resource for both of you.",
@@ -600,11 +601,11 @@
 				"fromClassList": [
 					{
 						"name": "Psion",
-						"source": "ktp"
+						"source": "PSN"
 					}
 				]
 			},
-			"source": "ktp",
+			"source": "PSN",
 			"entries": [
 				"You emit a blast of psychic energy. Each creature in a 60-foot cone must make an Intelligence saving throw. A creature takes 6d8 Psychic damage and is stunned until the end of their next turn on a failed save. A creature takes half as much damage and is not stunned on a successful save."
 			],
@@ -655,11 +656,11 @@
 				"fromClassList": [
 					{
 						"name": "Psion",
-						"source": "ktp"
+						"source": "PSN"
 					}
 				]
 			},
-			"source": "ktp",
+			"source": "PSN",
 			"entries": [
 				"You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide. If the creature can understand you, it must succeed on a Wisdom saving throw or become {@condition charmed} by you for the duration. While the creature is {@condition charmed} by you, it takes {@damage 5d10} psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.",
 				"You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.",
@@ -715,7 +716,7 @@
 					}
 				]
 			},
-			"source": "ktp",
+			"source": "PSN",
 			"entries": [
 				"You focus your telepathic powers on a creature and ask it a question. It must make an Intelligence saving throw, or it conjures a short mental thought or image that answers your question to the best of its ability that you can perceive telepathically. If a character passes a saving throw against this ability, they have advantage on saving throws against it for next 24 hours."
 			],
@@ -765,7 +766,7 @@
 					}
 				]
 			},
-			"source": "ktp",
+			"source": "PSN",
 			"entries": [
 				"You delve into a creatures mind forcing it to make an Intelligence saving throw. On a failure, for the duration or until you end the spell, you gain access to its memories from the past 12 hours, able to recall things it remembers as if they are you own memories, but these memories contain only things the target creature remembers."
 			],
@@ -822,7 +823,7 @@
 					}
 				]
 			},
-			"source": "ktp",
+			"source": "PSN",
 			"entries": [
 				"You flicker between the material and ethereal plane. Until the start of your next turn, each time you would take damage, including the triggering attack, roll a d4. On a 2, you gain resistance to that instance of damage. On a 4, you don't take any damage."
 			],
@@ -864,7 +865,7 @@
 					}
 				]
 			},
-			"source": "ktp",
+			"source": "PSN",
 			"entries": [
 				"You draw on the psychic energy of another creature to sustain yourself. The target must make a Charisma saving throw. On failure it takes {@damage 3d8} psychic damage and you gain temporary hit points equal to half the amount of psychic damage dealt and regain one expended psi point."
 			],
@@ -927,7 +928,7 @@
 					}
 				]
 			},
-			"source": "ktp",
+			"source": "PSN",
 			"entries": [
 				"You unlock the potential of a creature's mind, allowing it to push past its limits. For the duration, once per turn the creature can add {@dice 1d4} to any attack roll, damage roll, or saving throw it makes. Each time it adds the additional {@dice 1d4}, it takes 1 psychic damage as it pushes beyond its natural limitations."
 			],
@@ -940,7 +941,7 @@
 	"feat": [
 		{
 			"name": "Psionic Mind",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 15,
 			"prerequisite": [
 				{
@@ -953,7 +954,7 @@
 					"type": "list",
 					"items": [
 						"Your Intelligence, Wisdom, or Charisma score increases by 1, to a maximum of 20.",
-						"You can select a psionic talent from the psion class {@filter psionic talents|optionalfeatures|feature type=PsiT} list. You cannot select a talent you already know or one that requires a level restriction, even if you are already of that level."
+						"You can select a psionic talent from the psion class {@filter psionic talents|optionalfeatures|feature type=PSI:T} list. You cannot select a talent you already know or one that requires a level restriction, even if you are already of that level."
 					]
 				},
 				"You can take this feat multiple times, selecting a different talent each time."
@@ -972,7 +973,7 @@
 		},
 		{
 			"name": "Psionic Adept",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 15,
 			"prerequisite": [
 				{
@@ -984,12 +985,12 @@
 				}
 			],
 			"entries": [
-				"You develop a minor grasp of psionic power, either uncovering an innate potential within yourself, through contact with a psionic source, or through training. You gain one of the {@filter psionic disciplines|optionalfeatures|feature type=PsiD} of the psion class, gaining the attached psionic feature and psionic power, but you do not gain use of any associated spells when gain a discipline from this feat. You gain 1 psi point that you can use to empower the discipline. You regain use of this psi point when you complete a short or long rest."
+				"You develop a minor grasp of psionic power, either uncovering an innate potential within yourself, through contact with a psionic source, or through training. You gain one of the {@filter psionic disciplines|optionalfeatures|feature type=PSI:D} of the psion class, gaining the attached psionic feature and psionic power, but you do not gain use of any associated spells when gain a discipline from this feat. You gain 1 psi point that you can use to empower the discipline. You regain use of this psi point when you complete a short or long rest."
 			]
 		},
 		{
 			"name": "Inner Power",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 15,
 			"prerequisite": [
 				{
@@ -1004,7 +1005,7 @@
 	],
 	"monster": [
 		{
-			"source": "ktp",
+			"source": "PSN",
 			"name": "Psi Crystal",
 			"size": [
 				"T"
@@ -1105,10 +1106,10 @@
 			"entries": [
 				"As an action, you can project a swarm of etheral objects. You can expend 5 psi points to cast {@spell animate object} but it creates new etheral objects rather than animating existing ones."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1116,10 +1117,10 @@
 			"entries": [
 				"You gain the ability to psionically see a creature's aura. As an action you can spend 1 psi point you can determine if a creature of your choice within 30 feet is under the influence of magic and what school it is, or if a creature is under the influence of psionics. A shape shifter or disguised creature makes a Charisma (Deception) check against your Psionics save, on failure you can see their true nature in their aura."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1137,10 +1138,10 @@
 			"entries": [
 				"You gain the ability to cast {@spell awaken} without expending a spell slot. Once you cast this spell in this way, you cannot cast it again until you complete a long rest."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1164,10 +1165,10 @@
 			"entries": [
 				"You gain the ability to use your {@spell alter self} ability at-will without expending psi points. Additionally, you can cast {@spell enlarge/reduce} on yourself for half the psi point cost it would normally cost."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			],
 			"additionalSpells": [
 				{
@@ -1184,10 +1185,10 @@
 			"entries": [
 				"You gain the ability to suppress the glow and somatic component of a psionic power. You can expend 2 psi points to use a power without a visual sign or somatic component. Each time you do this, the cost of doing so doubles until you complete a short or long rest."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1203,12 +1204,12 @@
 				}
 			],
 			"entries": [
-				"You learn the {@spell divide self|ktp} spell, and can cast it by expending 5 psi points. You can cast it higher levels by expending a use of Innate Psionics to cast it once you gain the feature, casting it at the level of the level of the use of Innate Psionics expended to cast it. You do not require the material component of the spell even when casting it with Innate Psionics."
+				"You learn the {@spell divide self|PSN} spell, and can cast it by expending 5 psi points. You can cast it higher levels by expending a use of Innate Psionics to cast it once you gain the feature, casting it at the level of the level of the use of Innate Psionics expended to cast it. You do not require the material component of the spell even when casting it with Innate Psionics."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1217,10 +1218,10 @@
 				"You can psionically link yourself to other creatures. As a reaction to a creature taking psychic, necrotic, or radiant damage you can grant them resistance to the damage taken, but take damage equal to the damage they take (after resistance).",
 				"If the damage would inflict any further negative status effect on the target, you can choose for that effect to affect you instead."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1237,10 +1238,10 @@
 				"As an action, you surround yourself with a swirling shield shield of fire, ice, or lightning. You gain temporary hit points equal to your Psion level. Creatures that strike you while you have these temporary hitpoints take 1d4 damage of the shield type chosen.",
 				"Once you use this talent, you cannot use it again until you complete a short or long rest."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1256,10 +1257,10 @@
 			"entries": [
 				"You gain the {@spell cure wounds} for 1 psi point. You can cast it at a higher level by spending additional psi points. You can cast it a number of times equal to your Intelligence modifier, after which you cannot cast it again until you complete a long rest. When you cast {@spell cure wounds} on a creature, you can use Enhancing Surge on the target creature has a bonus action."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1276,10 +1277,10 @@
 				"Once per turn, as part of making a weapon attack as part of the attack action, you can empower a melee weapon you are holding with psionic power. When you hit a creature with a weapon, you can apply Elemental Blast or Telekinetic Force modifiers (you can only select a power you know) to the attack (you can use Psionic Mastery on this). This does not deal the base damage of the power, but any added damage causes the additional effects of the power damage effects to occur.",
 				"When applying a modifier that would make it target an area of effect, only the target takes the weapon damage, but other creatures in the radius become a target of the attack as if using the power normally."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1295,10 +1296,10 @@
 			"entries": [
 				"When you use the Telekinetic Force power, you can unleash it as a blast of kinetic power. You can use your power as a ranged psionic attack (applying damage and effect on hit). You can only select the Hammering modifier when you use it in this way."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1314,10 +1315,10 @@
 			"entries": [
 				"You gain the ability to solidify some of your projections into real objects, you can cast {@spell fabricate} and {@spell wall of stone} expending psi points equal to the spell level."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			],
 			"additionalSpells": [
 				{
@@ -1341,12 +1342,12 @@
 				}
 			],
 			"entries": [
-				"You gain the ability to turn your {@optfeature Telepathy Discipline|ktp|telepathy} to project images into the minds of creatures with perfect clarity, interposing it over their reality. The spells {@spell silent image}, {@spell major image}, {@spell hallucinatory terrain}, and {@spell seeming} are added to your telepathic mastery alternate effects list."
+				"You gain the ability to turn your {@optfeature Telepathy Discipline|PSN|telepathy} to project images into the minds of creatures with perfect clarity, interposing it over their reality. The spells {@spell silent image}, {@spell major image}, {@spell hallucinatory terrain}, and {@spell seeming} are added to your telepathic mastery alternate effects list."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 11,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1368,10 +1369,10 @@
 			"entries": [
 				"You learn to focus your mental grip. You can make an Intelligence (Athletics) check when you make an Athletics check. Additionally, when you initiate a grapple in this method, you can attempt to grapple a creature within 30 feet. Maintaining a grapple like this requires concentration, as if concentrating on a spell, and the grapple ends if concentration is lost."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1379,10 +1380,10 @@
 			"entries": [
 				"You gain the ability to cast {@spell psychic drain} for 2 psi points. Additionally, whenever a creature within 10 feet of you that had an Intelligence score of 6 or higher dies, you can expend your reaction to draw in its psionic power, regaining 1d4 hit points and 1 expended psi point."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1391,10 +1392,10 @@
 				"As an action, you can touch a willing creature to see through its eyes and hear what it hears for the next hour, gaining the benefits of any Special Senses that the creature has.",
 				"During this time, you are deaf and blind with regard to your own Senses. You can end this effect at any time. While this is active, the creature has advantage on Intelligence, Wisdom, and Charisma saving throws."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1412,10 +1413,10 @@
 			"entries": [
 				"You can enter a state of extreme focus. Your concentration is no longer interrupted by using a second ability that requires concentration, but your movement speed is reduced to zero while concentrating on more than one effect; you have a -5 penalty to any concentration check. If you move or fail a concentration check, one of your concentration affects ends. If you fail the concentration check by 5 or more, you lose concentration on both effects."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1431,10 +1432,10 @@
 			"entries": [
 				"When you use your Phase Rift power, you can make one melee weapon attack as a bonus action against a target you pass through with your Phase Rift. You can spend 1 or more psi points to make an additional attacks as part of the same bonus action, but can only attack a creature as you pass through them once per Phase Rift."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1450,10 +1451,10 @@
 			"entries": [
 				"You can use your Phase Rift power on an object. The effects are the same, but you remain in place and the object you use the ability on is transported."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1469,10 +1470,10 @@
 			"entries": [
 				"When you use Enhancing Surge targeting yourself, you can choose to make your Strength or Dexterity ability score equal to your Intelligence modifier ability score until the start of your next turn."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1480,17 +1481,17 @@
 			"entries": [
 				"When a target passes the saving throw against a damaging psionic power, they still take half damage, but suffer no other effects."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
 			"name": "Psi Crystal",
 			"entries": [
-				"You gain the ability to impart part of your mind into crystal. You can expend 2 psi points to cast the {@spell find familiar} spell, but your familiar takes on the statistics of a {@creature psi crystal|ktp} and the material component required is a crystal worth 10 gp instead of the normal material components.",
-				"The {@creature psi crystal|ktp} gains your mental stats. You can use Psionic Disciplines without a range of Self through your Psi Crystal is if you were standing in it's location. If the {@creature psi crystal|ktp} is destroyed, you gain its memories as your own. While you have a {@creature psi crystal|ktp} active, as a bonus action, you can decativate it to regain 2 expended psi points.",
+				"You gain the ability to impart part of your mind into crystal. You can expend 2 psi points to cast the {@spell find familiar} spell, but your familiar takes on the statistics of a {@creature psi crystal|PSN} and the material component required is a crystal worth 10 gp instead of the normal material components.",
+				"The {@creature psi crystal|PSN} gains your mental stats. You can use Psionic Disciplines without a range of Self through your Psi Crystal is if you were standing in it's location. If the {@creature psi crystal|PSN} is destroyed, you gain its memories as your own. While you have a {@creature psi crystal|PSN} active, as a bonus action, you can decativate it to regain 2 expended psi points.",
 				"When you summon a Psi crystal, you can store a fragment of your personality, that you can then release by shattering the crystal. Select one of the following when summoning a psi crystal:",
 				{
 					"type": "list",
@@ -1502,10 +1503,10 @@
 					]
 				}
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 12,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1522,10 +1523,10 @@
 				"You gain an additional option for Boundless Imagination to apply to your Astral Construct: {@b Horrifying Nightmare}: Creatures that start their turn within 5 feet of your Astral Construct must make a Wisdom saving throw against your Psionics DC or become frightened of your Astral Construct until the start of their next turn.",
 				"Once they have saved against this, they are immune to the effect for the next 24 hours or until you summon a new Astral Construct."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1533,10 +1534,10 @@
 			"entries": [
 				"You gain a way to defend yourself using your psionic powers. While you are not wearing any armor or carrying a shield, your Armor Class equals 13 + your Intelligence modifier."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1545,10 +1546,10 @@
 				"As a bonus action, you can expend 1 psi point to imbue a weapon you are holding with psionic energy. For 1 minute, once per turn when you deal damage with that weapon, you can deal an additional 1d6 psychic damage.",
 				"At higher levels you can expend additional psi points to further enhance the Psionic weapon; 2 points to enhance it 2d6 at 5th level, 3 points to enhance it to 3d6 at 11th level, and 4 points to enhance it to 4d6 at 17th level."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1566,10 +1567,10 @@
 			"entries": [
 				"You can spend a psi point to temporarily subdivide your mind to do two things at once until the end of your turn. While are dividing your mind, if you use your action on a psionic power or spell granted by a psionic discipline, you can use your bonus action to use a psionic power. The two powers share your per use psi point limit between them."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1585,10 +1586,10 @@
 			"entries": [
 				"When you target only yourself with Enhancing Surge, you can use the power as a bonus action instead of an action, but the damage and temporary hit points the base power grants are reduced to 1d4 when using the power this way."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1604,10 +1605,10 @@
 			"entries": [
 				"Your telepathic communication gains an unlimited range as long as you have communicated with the creature within the last day, and the target willingly maintains the link. However, it takes an action to focus to communicate over distance if you cannot see the target (or for the target to communicate with you if they cannot see you). You can maintain a link with a number of people equal to your Intelligence modifier in this way."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1623,10 +1624,10 @@
 			"entries": [
 				"You can expend a psi point to gain 10 additional feet of movement and the effect of spiderclimb, feather fall, or levitate until the end of your turn."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1640,12 +1641,12 @@
 				}
 			],
 			"entries": [
-				"You gain the {@optfeature Telekinetic Weapons Psionic Power|ktp} as part of your Telekinetic Discipline (in addition to your other psionic powers), giving the ability to fling weapons as per the power."
+				"You gain the {@optfeature Telekinetic Weapons Psionic Power|PSN} as part of your Telekinetic Discipline (in addition to your other psionic powers), giving the ability to fling weapons as per the power."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1659,12 +1660,12 @@
 				}
 			],
 			"entries": [
-				"While in a state of perfect focus (concentrating on two effects), you gain a magical flying speed of 10 feet. Moving with this speed does not interrupt {@optfeature perfect focus|ktp}."
+				"While in a state of perfect focus (concentrating on two effects), you gain a magical flying speed of 10 feet. Moving with this speed does not interrupt {@optfeature perfect focus|PSN}."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1672,10 +1673,10 @@
 			"entries": [
 				"You no longer need to see targets of Psionic powers, so long as they are within range and you know where they are. Being unable to see an attacker no longer grants them advantage against you, and you do not suffer disadvantage attacking unseen targets."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiT"
+				"PSI:T"
 			]
 		},
 		{
@@ -1727,7 +1728,7 @@
 											"rows": [
 												[
 													"1",
-													"{@spell heroism}, {@spell longstrider}, {@spell unlocked potential|ktp}"
+													"{@spell heroism}, {@spell longstrider}, {@spell unlocked potential|PSN}"
 												],
 												[
 													"2",
@@ -1755,10 +1756,10 @@
 					]
 				}
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 7,
 			"featureType": [
-				"PsiD"
+				"PSI:D"
 			]
 		},
 		{
@@ -1801,10 +1802,10 @@
 					]
 				}
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 7,
 			"featureType": [
-				"PsiD"
+				"PSI:D"
 			]
 		},
 		{
@@ -1869,7 +1870,7 @@
 												],
 												[
 													"4",
-													"{@spell orbital stones|ktp} {@spell Otiluke's resilient sphere}"
+													"{@spell orbital stones|PSN} {@spell Otiluke's resilient sphere}"
 												],
 												[
 													"5",
@@ -1885,10 +1886,10 @@
 					]
 				}
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 8,
 			"featureType": [
-				"PsiD"
+				"PSI:D"
 			]
 		},
 		{
@@ -1940,7 +1941,7 @@
 											"rows": [
 												[
 													"1",
-													"{@spell compelled query|ktp}, {@spell command}, {@spell cause fear|xge}"
+													"{@spell compelled query|PSN}, {@spell command}, {@spell cause fear|xge}"
 												],
 												[
 													"2",
@@ -1948,7 +1949,7 @@
 												],
 												[
 													"3",
-													"{@spell delve mind|ktp}, {@spell fear}, {@spell enemies abound|xge}"
+													"{@spell delve mind|PSN}, {@spell fear}, {@spell enemies abound|xge}"
 												],
 												[
 													"4",
@@ -1968,10 +1969,10 @@
 					]
 				}
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 8,
 			"featureType": [
-				"PsiD"
+				"PSI:D"
 			]
 		},
 		{
@@ -2024,7 +2025,7 @@
 											"rows": [
 												[
 													"1",
-													"{@spell expeditious retreat}, {@spell flicker|ktp}, {@spell zephyr strike|xge}"
+													"{@spell expeditious retreat}, {@spell flicker|PSN}, {@spell zephyr strike|xge}"
 												],
 												[
 													"2",
@@ -2052,10 +2053,10 @@
 					]
 				}
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 9,
 			"featureType": [
-				"PsiD"
+				"PSI:D"
 			]
 		},
 		{
@@ -2168,10 +2169,10 @@
 					]
 				}
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 9,
 			"featureType": [
-				"PsiD"
+				"PSI:D"
 			]
 		},
 		{
@@ -2193,10 +2194,10 @@
 				"{@bold Multiple} {@italic (1+ psi point)} : For each additional psi point spent, you can fling an additional weapon.",
 				"{@bold Spinning} {@italic (2 psi points)} :You can replace an attack with casting {@spell cloud of daggers}"
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 13,
 			"featureType": [
-				"PsiP"
+				"PSI:P"
 			]
 		}
 	],
@@ -2204,12 +2205,12 @@
 		{
 			"name": "Way of the Soul Knife",
 			"subclassFeatures": [
-				"Way of the Soul Knife|Monk||Soul Knife|ktp|3",
-				"Psion Talent|Monk||Soul Knife|ktp|6",
-				"Focused Blade|Monk||Soul Knife|ktp|11",
-				"Rend the Soul|Monk||Soul Knife|ktp|17"
+				"Way of the Soul Knife|Monk||Soul Knife|PSN|3",
+				"Psion Talent|Monk||Soul Knife|PSN|6",
+				"Focused Blade|Monk||Soul Knife|PSN|11",
+				"Rend the Soul|Monk||Soul Knife|PSN|17"
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"shortName": "Soul Knife",
 			"className": "Monk",
 			"classSource": "PHB"
@@ -2217,67 +2218,67 @@
 		{
 			"name": "Awakened",
 			"subclassFeatures": [
-				"Awakened|Psion|ktp|Awakened|ktp|1",
-				"Mind Reader|Psion|ktp|Awakened|ktp|3",
-				"Empowered Psionics|Psion|ktp|Awakened|ktp|6",
-				"All Seeing Eye|Psion|ktp|Awakened|ktp|10",
-				"Full Awakening|Psion|ktp|Awakened|ktp|14"
+				"Awakened|Psion|PSN|Awakened|PSN|1",
+				"Mind Reader|Psion|PSN|Awakened|PSN|3",
+				"Empowered Psionics|Psion|PSN|Awakened|PSN|6",
+				"All Seeing Eye|Psion|PSN|Awakened|PSN|10",
+				"Full Awakening|Psion|PSN|Awakened|PSN|14"
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"shortName": "Awakened",
 			"className": "Psion",
-			"classSource": "ktp"
+			"classSource": "PSN"
 		},
 		{
 			"name": "Unleashed",
 			"subclassFeatures": [
-				"Unleashed|Psion|ktp|Unleashed|ktp|1",
-				"Rampaging Power|Psion|ktp|Unleashed|ktp|3",
-				"Empowered Psionics|Psion|ktp|Unleashed|ktp|6",
-				"Uncontrollable Mind|Psion|ktp|Unleashed|ktp|10",
-				"Unstoppable Rampage|Psion|ktp|Unleashed|ktp|14"
+				"Unleashed|Psion|PSN|Unleashed|PSN|1",
+				"Rampaging Power|Psion|PSN|Unleashed|PSN|3",
+				"Empowered Psionics|Psion|PSN|Unleashed|PSN|6",
+				"Uncontrollable Mind|Psion|PSN|Unleashed|PSN|10",
+				"Unstoppable Rampage|Psion|PSN|Unleashed|PSN|14"
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"shortName": "Unleashed",
 			"className": "Psion",
-			"classSource": "ktp"
+			"classSource": "PSN"
 		},
 		{
 			"name": "Transcended",
 			"subclassFeatures": [
-				"Transcended|Psion|ktp|Transcended|ktp|1",
-				"Balance of Power|Psion|ktp|Transcended|ktp|3",
-				"Perfected Enhancement|Psion|ktp|Transcended|ktp|6",
-				"Mental Control|Psion|ktp|Transcended|ktp|10",
-				"Mind Over Matter|Psion|ktp|Transcended|ktp|14"
+				"Transcended|Psion|PSN|Transcended|PSN|1",
+				"Balance of Power|Psion|PSN|Transcended|PSN|3",
+				"Perfected Enhancement|Psion|PSN|Transcended|PSN|6",
+				"Mental Control|Psion|PSN|Transcended|PSN|10",
+				"Mind Over Matter|Psion|PSN|Transcended|PSN|14"
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"shortName": "Transcended",
 			"className": "Psion",
-			"classSource": "ktp"
+			"classSource": "PSN"
 		},
 		{
 			"name": "Shaper",
 			"subclassFeatures": [
-				"Shaper|Psion|ktp|Shaper|ktp|1",
-				"Astral Metastability|Psion|ktp|Shaper|ktp|3",
-				"Empowered Construct|Psion|ktp|Shaper|ktp|6",
-				"Astral Guardian|Psion|ktp|Shaper|ktp|10",
-				"Imaginary Army|Psion|ktp|Shaper|ktp|14"
+				"Shaper|Psion|PSN|Shaper|PSN|1",
+				"Astral Metastability|Psion|PSN|Shaper|PSN|3",
+				"Empowered Construct|Psion|PSN|Shaper|PSN|6",
+				"Astral Guardian|Psion|PSN|Shaper|PSN|10",
+				"Imaginary Army|Psion|PSN|Shaper|PSN|14"
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"shortName": "Shaper",
 			"className": "Psion",
-			"classSource": "ktp"
+			"classSource": "PSN"
 		}
 	],
 	"classFeature": [
 		{
 			"name": "Psionic Archetype",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 1,
 			"entries": [
 				"At 1st level, you pick the archetype of Psion you embody, choosing from Awakened, Unleashed, Transcended or Shaper, each of which are detailed at the end of the class description. Your choice grants you features at 1st level, and again at 3rd, 6th, 10th, and 14th level."
@@ -2285,17 +2286,17 @@
 		},
 		{
 			"name": "Psionics",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 1,
 			"entries": [
 				{
 					"type": "entries",
 					"name": "Psionic Disciplines",
 					"entries": [
-						"You are granted access a {@filter psionic discipline|optionalfeatures|feature type=PsiD} (such as {@optfeature Telepathy Discipline|ktp|telepathy} or {@optfeature Telekinesis Discipline|ktp|telekinesis}) by your chosen archetype. A psionic discipline comes with a passive feature that expands your character's capabilities and an active psionic power that can be modified and empowered with psi points. Additionally, you can use your discipline in more detailed applications to recreate the effect of certain spells, listed at the end of the disciple description. At 3rd level, you can select a second discipline, and at 18th level you can select a 3rd discipline.",
+						"You are granted access a {@filter psionic discipline|optionalfeatures|feature type=PSI:D} (such as {@optfeature Telepathy Discipline|PSN|telepathy} or {@optfeature Telekinesis Discipline|PSN|telekinesis}) by your chosen archetype. A psionic discipline comes with a passive feature that expands your character's capabilities and an active psionic power that can be modified and empowered with psi points. Additionally, you can use your discipline in more detailed applications to recreate the effect of certain spells, listed at the end of the disciple description. At 3rd level, you can select a second discipline, and at 18th level you can select a 3rd discipline.",
 						"Psionic powers are suppressed by {@spell antimagic field} and can be dispelled with {@spell dispel magic}, but are only affected by {@spell counterspell} if recreating the effect of a spell. Any check required to {@spell dispel magic}, {@spell counterspell}, or identify a spell being cast with Psionics is made at disadvantage unless the caster also has the Psionics feature. The spell {@spell detect magic} will detect the usage of psionics, but not their nature - it will show up as a mysterious untyped power, even if being used to generate the effect of a spell.",
 						"When recreating a spell through a Psionic effect (using a psionic discipline to cast the spell), the spell has no Material or Verbal components, but using any psionic ability requires Somatic components and causes the Psion to vibrantly glow with otherworldly psionic energies they are controlling."
 					]
@@ -2304,7 +2305,7 @@
 					"type": "entries",
 					"name": "Psi Points",
 					"entries": [
-						"Starting at 1st level, you gain access to psi points used to fuel {@filter psionic discipline|optionalfeatures|feature type=PsiD} powers and effects. You have a number of psi points equal to your Psion level, and regain all spent points after completing a short or long rest. You can spend a number of psi points equal to half your level (rounded up) at a time (for example, at level 5, you can spend 3 psi points on psionic power or cast a spell with a cost of 3 psi points)."
+						"Starting at 1st level, you gain access to psi points used to fuel {@filter psionic discipline|optionalfeatures|feature type=PSI:D} powers and effects. You have a number of psi points equal to your Psion level, and regain all spent points after completing a short or long rest. You can spend a number of psi points equal to half your level (rounded up) at a time (for example, at level 5, you can spend 3 psi points on psionic power or cast a spell with a cost of 3 psi points)."
 					]
 				},
 				{
@@ -2332,33 +2333,33 @@
 		},
 		{
 			"name": "Psionic Talents",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 2,
 			"entries": [
-				"Starting at 2nd level, you gain access to Psionic Talents allowing you to further specialize. Pick a talent from the list of {@filter Psionic Talents|optionalfeatures|feature type=PsiT}.",
+				"Starting at 2nd level, you gain access to Psionic Talents allowing you to further specialize. Pick a talent from the list of {@filter Psionic Talents|optionalfeatures|feature type=PSI:T}.",
 				"You can pick a new Psionic Talent at 5th, 7th, 9th, 12th, 15th, and 18th level. When you level up, you can replace a Psionic Talent you have previously selected with a different option."
 			]
 		},
 		{
 			"name": "Second Discipline",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 3,
 			"entries": [
-				"When you reach 3rd level, you can select a second psionic discipline from the list of {@filter psionic disciplines|optionalfeatures|feature type=PsiD}. You cannot select a discipline you already know. You gain all features of a psionic discipline when selecting it."
+				"When you reach 3rd level, you can select a second psionic discipline from the list of {@filter psionic disciplines|optionalfeatures|feature type=PSI:D}. You cannot select a discipline you already know. You gain all features of a psionic discipline when selecting it."
 			]
 		},
 		{
 			"name": "Psionic Archetype Feature",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 3,
 			"entries": [
 				"At 3rd level, you gain a feature granted to you by your Psionic Archetype."
@@ -2366,10 +2367,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 4,
 			"entries": [
 				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -2378,10 +2379,10 @@
 		},
 		{
 			"name": "Psionic Mastery (1 point)",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 5,
 			"entries": [
 				"When you reach 5th level, you gain mastery of your psionic powers. At the start of your turn, you get 1 temporary psi point. This can be spent to empower psionic abilities, but not to recreate spells or fuel Psionic Talents. If you have any unspent temporary psi points at the end of your turn, then they are lost.",
@@ -2390,10 +2391,10 @@
 		},
 		{
 			"name": "Psionic Archetype Feature",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 6,
 			"entries": [
 				"At 6th level, you gain a feature granted to you by your Psionic Archetype."
@@ -2401,10 +2402,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 8,
 			"entries": [
 				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -2413,10 +2414,10 @@
 		},
 		{
 			"name": "Psionic Archetype Feature",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 10,
 			"entries": [
 				"At 10th level, you gain a feature granted to you by your Psionic Archetype."
@@ -2424,10 +2425,10 @@
 		},
 		{
 			"name": "Psionic Mastery (2 points)",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 11,
 			"entries": [
 				"When you reach 11th level, you gain mastery of your psionic powers. At the start of your turn, you now get 2 temporary psi points. This can be spent to empower psionic abilities, but not to recreate spells. If you have any unspent temporary psi points at the end of your turn, then they are lost.",
@@ -2436,10 +2437,10 @@
 		},
 		{
 			"name": "Innate Psionics (6th level spell)",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 11,
 			"entries": [
 				"At 11th level, you gain the discipline to exert great feats of psionic power. Choose one {@filter 6th-level spell from the Psion spell list|spells|level=6|class=psion} as an innate ability. You can use this innate ability once. You must finish a long rest before you can do so again. At higher level, you gain more innate abilities of your choice that can be used in this way: one 7th level spell at 13th level, one 8th level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Innate Psionics when you finish a long rest.",
@@ -2448,10 +2449,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 12,
 			"entries": [
 				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -2460,10 +2461,10 @@
 		},
 		{
 			"name": "Innate Psionics (7th level spell)",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 13,
 			"entries": [
 				"At 13th level, you choose one {@filter 7th-level spell from the Psion spell list|spells|level=7|class=psion} for your Innate Psionics."
@@ -2471,10 +2472,10 @@
 		},
 		{
 			"name": "Psionic Archetype Feature",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 14,
 			"entries": [
 				"At 14th level, you gain a feature granted to you by your Psionic Archetype."
@@ -2482,10 +2483,10 @@
 		},
 		{
 			"name": "Innate Psionics (8th level spell)",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 15,
 			"entries": [
 				"At 15th level, you choose one {@filter 8th-level spell from the Psion spell list|spells|level=8|class=psion} for your Innate Psionics."
@@ -2493,10 +2494,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 16,
 			"entries": [
 				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -2505,10 +2506,10 @@
 		},
 		{
 			"name": "Psionic Mastery (3 points)",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 17,
 			"entries": [
 				"When you reach 17th level, you gain mastery of your psionic powers. At the start of your turn, you now get 3 temporary psi points. This can be spent to empower psionic abilities, but not to recreate spells. If you have any unspent temporary psi points at the end of your turn, then they are lost.",
@@ -2517,10 +2518,10 @@
 		},
 		{
 			"name": "Innate Psionics (9th level spell)",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 17,
 			"entries": [
 				"At 17th level, you choose one {@filter 9th-level spell from the Psion spell list|spells|level=9|class=psion} for your Innate Psionics."
@@ -2528,21 +2529,21 @@
 		},
 		{
 			"name": "Third Discipline",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 18,
 			"entries": [
-				"When you reach 18th level, you can select a third psionic discipline from the list of {@filter psionic disciplines|optionalfeatures|feature type=PsiD}. You cannot select a discipline you already know. You gain all features of a psionic discipline when selecting it."
+				"When you reach 18th level, you can select a third psionic discipline from the list of {@filter psionic disciplines|optionalfeatures|feature type=PSI:D}. You cannot select a discipline you already know. You gain all features of a psionic discipline when selecting it."
 			]
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 19,
 			"entries": [
 				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -2551,10 +2552,10 @@
 		},
 		{
 			"name": "Ascension",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"level": 20,
 			"entries": [
 				"Starting at 20th level, if you die you can choose to become a incorporeal entity on the ethereal plane at the spot you died in the material plane at the start of your next turn. This entity has the physical ability scores (Strength, Dexterity, Constitution) and abilities of a {@creature ghost}, but has your mental ability scores (Intelligence, Wisdom, Charimsa) and your Psion class abilities.",
@@ -2565,12 +2566,12 @@
 	"subclassFeature": [
 		{
 			"name": "Awakened",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Awakened",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"entries": [
 				"An Awakened is a Psion who had their psionic power awakened within them by an encounter, event, or circumstance. Perhaps their powers were latent, or perhaps their destiny had been that of a normal creature until powers were suddenly thrust on them. The nature of their circumstances varies widely - perhaps they brushed the Far Realm in a vivid dream, perhaps they wandered the Feywild and came back warped, or perhaps they merely glimpsed the eyes of a creature that did not belong walking down the street.",
@@ -2578,25 +2579,25 @@
 				"An Awakened can be either empathetic or cruel, good or evil. Knowing what is on the minds of others affects people in different ways, driving some away from society as they see its true face, while others feel drawn to help the problems only they can see.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Opened Mind|Psion|ktp|Awakened|ktp|1"
+					"subclassFeature": "Opened Mind|Psion|PSN|Awakened|PSN|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Mental Awareness|Psion|ktp|Awakened|ktp|1"
+					"subclassFeature": "Mental Awareness|Psion|PSN|Awakened|PSN|1"
 				}
 			]
 		},
 		{
 			"name": "Opened Mind",
 			"entries": [
-				"At 1st level when you select this archetype, your mind awakens the ability to directly connect to the minds of other creatures, gaining the psionic discipline of {@optfeature Telepathy Discipline|ktp|telepathy}."
+				"At 1st level when you select this archetype, your mind awakens the ability to directly connect to the minds of other creatures, gaining the psionic discipline of {@optfeature Telepathy Discipline|PSN|telepathy}."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Awakened",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"header": 1
 		},
@@ -2605,23 +2606,23 @@
 			"entries": [
 				"Additionally starting at 1st level, you can use Intelligence instead of Wisdom when making an Insight check against a creature with an Intelligence ability score of 6 or higher. Further, once you have telepathically communicated with an allied creature, you know their location for the next hour."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Awakened",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"header": 1
 		},
 		{
 			"name": "Mind Reader",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Awakened",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -2631,12 +2632,12 @@
 		},
 		{
 			"name": "Empowered Psionics",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Awakened",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -2645,12 +2646,12 @@
 		},
 		{
 			"name": "All Seeing Eye",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Awakened",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 10,
 			"header": 2,
 			"entries": [
@@ -2659,12 +2660,12 @@
 		},
 		{
 			"name": "Full Awakening",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Awakened",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -2673,12 +2674,12 @@
 		},
 		{
 			"name": "Unleashed",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Unleashed",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"entries": [
 				"An Unleashed Psion's power is most often an innate force they struggle to understand or control, a reflection of their state of mind and mood projected onto the world around them, often to devastating results. The life of an Unleashed Psion is frequently their journey to control their unruly powers... or one of embracing the destructive powers they grant fully.",
@@ -2686,25 +2687,25 @@
 				"Their alignment frequently depends on the approach to their powers they have taken. An Unleashed Psion who emphasizes control and restraint, keeping their emotions from running wild and their powers from running rampant will most often be lawful, following strict personal codes. On the other hand, an Unleashed Psion who lets their power run rampant will almost always be chaotic in nature, acting on impulse - with great emphasis.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Unshackled Power|Psion|ktp|Unleashed|ktp|1"
+					"subclassFeature": "Unshackled Power|Psion|PSN|Unleashed|PSN|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Overwhelming Power|Psion|ktp|Unleashed|ktp|1"
+					"subclassFeature": "Overwhelming Power|Psion|PSN|Unleashed|PSN|1"
 				}
 			]
 		},
 		{
 			"name": "Unshackled Power",
 			"entries": [
-				"At 1st level when you select this archetype, you gain the ability to unleash your mind to physically interact with the world around you, granting you the psionic discipline {@optfeature Telekinesis Discipline|ktp|telekinesis}."
+				"At 1st level when you select this archetype, you gain the ability to unleash your mind to physically interact with the world around you, granting you the psionic discipline {@optfeature Telekinesis Discipline|PSN|telekinesis}."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Unleashed",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"header": 1
 		},
@@ -2720,23 +2721,23 @@
 					]
 				}
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Unleashed",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"header": 1
 		},
 		{
 			"name": "Rampaging Power",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Unleashed",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -2745,12 +2746,12 @@
 		},
 		{
 			"name": "Empowered Psionics",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Unleashed",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -2759,12 +2760,12 @@
 		},
 		{
 			"name": "Uncontrollable Mind",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Unleashed",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 10,
 			"header": 2,
 			"entries": [
@@ -2773,12 +2774,12 @@
 		},
 		{
 			"name": "Unstoppable Rampage",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Unleashed",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -2787,12 +2788,12 @@
 		},
 		{
 			"name": "Transcended",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Transcended",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"entries": [
 				"A Transcended Psion is most often one that has found their path to psionic powers through a mental epiphany, realizing the place of their mind within the multiverse and how it ties to everything else, seeing the keys and levers to the world laid out before them in their mind's eye.",
@@ -2800,25 +2801,25 @@
 				"Transcended Psions tend to have the best grasp on their powers in control and principle, having come to understanding of the greater cosmos, but lack the reckless abandon some other Psions may have. Unfortunately less transcendent minds frequently cannot understand the greater truths they have learned and may view a Transcended Psion as a bit... peculiar.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Enlightened|Psion|ktp|Transcended|ktp|1"
+					"subclassFeature": "Enlightened|Psion|PSN|Transcended|PSN|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "State of Mind|Psion|ktp|Transcended|ktp|1"
+					"subclassFeature": "State of Mind|Psion|PSN|Transcended|PSN|1"
 				}
 			]
 		},
 		{
 			"name": "Enlightened",
 			"entries": [
-				"At 1st level when you select this archetype, you gain the ability to empower your body with the power of your mind, granting you the psionic discipline of {@optfeature Enhancement Discipline|ktp|enhancement}."
+				"At 1st level when you select this archetype, you gain the ability to empower your body with the power of your mind, granting you the psionic discipline of {@optfeature Enhancement Discipline|PSN|enhancement}."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Transcended",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"header": 1
 		},
@@ -2827,23 +2828,23 @@
 			"entries": [
 				"Additionally at 1st level, you can ignore the effects of extreme heat or cold, hold your breath twice as long as normal, and can go twice as long without eating or sleeping before suffering exhaustion."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Transcended",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"header": 1
 		},
 		{
 			"name": "Balance of Power",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Transcended",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -2852,12 +2853,12 @@
 		},
 		{
 			"name": "Perfected Enhancement",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Transcended",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -2866,26 +2867,26 @@
 		},
 		{
 			"name": "Mental Control",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Transcended",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Starting at 10th level, when you have to make a Constitution saving throw to avoid losing concentration on an effect from a {@filter psionic discipline|optionalfeatures|feature type=PsiD}, you can add your Intelligence modifier to the saving throw."
+				"Starting at 10th level, when you have to make a Constitution saving throw to avoid losing concentration on an effect from a {@filter psionic discipline|optionalfeatures|feature type=PSI:D}, you can add your Intelligence modifier to the saving throw."
 			]
 		},
 		{
 			"name": "Mind Over Matter",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Transcended",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -2895,37 +2896,37 @@
 		},
 		{
 			"name": "Shaper",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Shaper",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"entries": [
 				"A Shaper is a Psion that specializes in the materialization of their imagination, projecting it out into the world. No mere conjurers borrowing the powers of other planes, a Shaper manifests things from nothing but their own mind, weaving their creations into existence through the exertion of raw psionic power and imagination.",
 				"A Shaper's mind is tool of nearly unrivaled power possessing both boundless creativity and inexorable will, but if that will is overrun, the world would do well to fear a Shaper's nightmares.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Creator's Mind|Psion|ktp|Shaper|ktp|1"
+					"subclassFeature": "Creator's Mind|Psion|PSN|Shaper|PSN|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Boundless Imagination|Psion|ktp|Shaper|ktp|1"
+					"subclassFeature": "Boundless Imagination|Psion|PSN|Shaper|PSN|1"
 				}
 			]
 		},
 		{
 			"name": "Creator's Mind",
 			"entries": [
-				"At 1st level when you select this Archetype, you gain the ability to will contents of your mind into the world, granting you the psionic discipline {@optfeature Projection Discipline|ktp|projection}."
+				"At 1st level when you select this Archetype, you gain the ability to will contents of your mind into the world, granting you the psionic discipline {@optfeature Projection Discipline|PSN|projection}."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Shaper",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"header": 1
 		},
@@ -2938,23 +2939,23 @@
 				"*Vivid Existence* Your Astral Construct fully materializes and automatically uses Solidify at the start of its turn without requiring a command to do so.",
 				"You can change which benefit you grant it for the duration of the effect as a bonus action."
 			],
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Shaper",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 1,
 			"header": 1
 		},
 		{
 			"name": "Astral Metastability",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Shaper",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -2963,12 +2964,12 @@
 		},
 		{
 			"name": "Empowered Construct",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Shaper",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -2977,12 +2978,12 @@
 		},
 		{
 			"name": "Astral Guardian",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Shaper",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 10,
 			"header": 2,
 			"entries": [
@@ -2991,12 +2992,12 @@
 		},
 		{
 			"name": "Imaginary Army",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 1,
 			"className": "Psion",
-			"classSource": "ktp",
+			"classSource": "PSN",
 			"subclassShortName": "Shaper",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -3006,12 +3007,12 @@
 		},
 		{
 			"name": "Way of the Soul Knife",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 76,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Soul Knife",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 3,
 			"entries": [
 				"",
@@ -3027,12 +3028,12 @@
 					"type": "entries",
 					"name": "Psionic Ki",
 					"entries": [
-						"Additionally at 3rd level, you gain the ability to express your inner focus as psionic manifestations. You learn a psionic discipline of your choice from the {@filter psionic discipline|optionalfeatures|feature type=PsiD} list, and can expend ki points as psi points while using psionic abilities learned through this feature.",
+						"Additionally at 3rd level, you gain the ability to express your inner focus as psionic manifestations. You learn a psionic discipline of your choice from the {@filter psionic discipline|optionalfeatures|feature type=PSI:D} list, and can expend ki points as psi points while using psionic abilities learned through this feature.",
 						{
 							"type": "inset",
 							"name": "Default Selection: Telekinesis",
 							"entries": [
-								"While a Way of a Soul Knife monk can select any psionic discipline, for building a Soul Knife quickly or simply, select {@optfeature Telekinesis Discipline|ktp|telekinesis} for the enhanced ranged abilities and mobility options it provides."
+								"While a Way of a Soul Knife monk can select any psionic discipline, for building a Soul Knife quickly or simply, select {@optfeature Telekinesis Discipline|PSN|telekinesis} for the enhanced ranged abilities and mobility options it provides."
 							]
 						}
 					]
@@ -3041,33 +3042,33 @@
 		},
 		{
 			"name": "Psion Talent",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 76,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Soul Knife",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you can select a psionic talent from the psion's list of {@filter psionic talents|optionalfeatures|feature type=PsiT}.",
+				"At 6th level, you can select a psionic talent from the psion's list of {@filter psionic talents|optionalfeatures|feature type=PSI:T}.",
 				{
 					"type": "inset",
 					"name": "Default Selection: Mind Devourer",
 					"entries": [
-						"While many talents can provide a Soul Knife unique options, for building a Soul Knife quickly or simply, select {@optfeature Mind Devourer|ktp} for enhancing your durability and resources."
+						"While many talents can provide a Soul Knife unique options, for building a Soul Knife quickly or simply, select {@optfeature Mind Devourer|PSN} for enhancing your durability and resources."
 					]
 				}
 			]
 		},
 		{
 			"name": "Focused Blade",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 76,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Soul Knife",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 11,
 			"header": 2,
 			"entries": [
@@ -3105,12 +3106,12 @@
 		},
 		{
 			"name": "Rend the Soul",
-			"source": "ktp",
+			"source": "PSN",
 			"page": 76,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Soul Knife",
-			"subclassSource": "ktp",
+			"subclassSource": "PSN",
 			"level": 17,
 			"header": 2,
 			"entries": [

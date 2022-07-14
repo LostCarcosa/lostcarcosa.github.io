@@ -90,8 +90,7 @@
 			"components": {
 				"s": true,
 				"m": {
-					"text": "a melee weapon worth at least 1 sp",
-					"cost": 10
+					"text": "a melee weapon"
 				}
 			},
 			"duration": [
@@ -105,7 +104,8 @@
 			],
 			"entries": [
 				"You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects and then becomes sheathed in booming energy until the start of your next turn. If the target willingly moves 5 feet or more before then, the target takes {@damage 1d8} thunder damage, and the spell ends.",
-				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} thunder damage to the target on a hit, and the damage the target takes for moving increases to {@damage 2d8}. Both damage rolls increase by 1d8 at 11th level ({@damage 2d8} and {@damage 3d8}) and again at 17th level ({@damage 3d8} and {@damage 4d8})."
+				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} thunder damage to the target on a hit, and the damage the target takes for moving increases to {@damage 2d8}. Both damage rolls increase by 1d8 at 11th level ({@damage 2d8} and {@damage 3d8}) and again at 17th level ({@damage 3d8} and {@damage 4d8}).",
+				"A component pouch or spellcasting focus cannot substitute for the material component of this spell."
 			],
 			"scalingLevelDice": [
 				{
@@ -197,8 +197,7 @@
 			"components": {
 				"s": true,
 				"m": {
-					"text": "a melee weapon worth at least 1 sp",
-					"cost": 10
+					"text": "a melee weapon"
 				}
 			},
 			"duration": [
@@ -208,7 +207,8 @@
 			],
 			"entries": [
 				"You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects, and you can cause green fire to leap from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.",
-				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} fire damage to the target on a hit, and the fire damage to the second creature increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by {@damage 1d8} at 11th level ({@damage 2d8} and {@damage 2d8}) and 17th level ({@damage 3d8} and {@damage 3d8})."
+				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} fire damage to the target on a hit, and the fire damage to the second creature increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by {@damage 1d8} at 11th level ({@damage 2d8} and {@damage 2d8}) and 17th level ({@damage 3d8} and {@damage 3d8}).",
+				"A component pouch or spellcasting focus cannot substitute for the material component of this spell."
 			],
 			"scalingLevelDice": [
 				{
@@ -565,8 +565,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a pickled tentacle and an eyeball in a platinum-inlaid vial worth at least 400 gp",
-					"cost": 40000
+					"text": "a pickled tentacle and an eyeball in a platinum-inlaid vial worth at least 4 COIN",
+					"cost": 400
 				}
 			},
 			"duration": [
@@ -646,8 +646,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a feather, tuft of fur, and fish tail inside a gilded acorn worth at least 200 gp",
-					"cost": 20000
+					"text": "a feather, tuft of fur, and fish tail inside a gilded acorn worth at least 2 COIN",
+					"cost": 200
 				}
 			},
 			"duration": [
@@ -715,8 +715,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a golden reliquary worth at least 500 gp",
-					"cost": 50000
+					"text": "a golden reliquary worth at least 5 COIN",
+					"cost": 500
 				}
 			},
 			"duration": [
@@ -785,8 +785,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an ornate stone and metal lockbox worth at least 400 gp",
-					"cost": 40000
+					"text": "an ornate stone and metal lockbox worth at least 4 COIN",
+					"cost": 400
 				}
 			},
 			"duration": [
@@ -867,8 +867,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "air, a pebble, ash, and water inside a gold-inlaid vial worth at least 400 gp",
-					"cost": 40000
+					"text": "air, a pebble, ash, and water inside a gold-inlaid vial worth at least 4 COIN",
+					"cost": 400
 				}
 			},
 			"duration": [
@@ -953,8 +953,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a gilded flower worth at least 300 gp",
-					"cost": 30000
+					"text": "a gilded flower worth at least 3 COIN",
+					"cost": 300
 				}
 			},
 			"duration": [
@@ -1032,8 +1032,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "humanoid blood inside a ruby vial worth at least 600 gp",
-					"cost": 60000
+					"text": "humanoid blood inside a ruby vial worth at least 6 COIN",
+					"cost": 600
 				}
 			},
 			"duration": [
@@ -1101,8 +1101,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "tears inside a gem worth at least 300 gp",
-					"cost": 30000
+					"text": "tears inside a gem worth at least 3 COIN",
+					"cost": 300
 				}
 			},
 			"duration": [
@@ -1171,8 +1171,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a gilded skull worth at least 300 gp",
-					"cost": 30000
+					"text": "a gilded skull worth at least 3 COIN",
+					"cost": 300
 				}
 			},
 			"duration": [
@@ -1310,7 +1310,7 @@
 			}
 		},
 		{
-			"name": "Tasha's Caustic Brew",
+			"name": "Caustic Brew",
 			"source": "TCE",
 			"page": 115,
 			"level": 1,
@@ -1383,7 +1383,7 @@
 			}
 		},
 		{
-			"name": "Tasha's Mind Whip",
+			"name": "Mind Whip",
 			"source": "TCE",
 			"page": 115,
 			"level": 2,

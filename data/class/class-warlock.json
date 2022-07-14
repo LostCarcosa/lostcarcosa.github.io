@@ -146,49 +146,21 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item scholar's pack|phb} or (b) a {@item dungeoneer's pack|phb}",
-					"{@item Leather armor|phb}, any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}, and two {@item dagger|phb|daggers}"
+					"An {@item arcane focus|phb}",
+					"{@item Leather armor|phb} and a {@item dagger|phb}"
 				],
-				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
-						"b": [
-							{
-								"equipmentType": "weaponSimple"
-							}
-						]
-					},
-					{
-						"a": [
-							"component pouch|phb"
-						],
-						"b": [
+						"_": [
 							"arcane focus|phb"
-						]
-					},
-					{
-						"a": [
-							"scholar's pack|phb"
-						],
-						"b": [
-							"dungeoneer's pack|phb"
 						]
 					},
 					{
 						"_": [
 							"Leather armor|phb",
 							{
-								"equipmentType": "weaponSimple"
-							},
-							{
 								"item": "dagger|phb",
-								"quantity": 2
+								"quantity": 1
 							}
 						]
 					}
@@ -659,47 +631,6 @@
 		}
 	],
 	"subclass": [
-		{
-			"name": "The Infernal Bureaucracy",
-			"shortName": "Infernal Bureaucracy",
-			"source": "PHB",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 109,
-			"srd": true,
-			"additionalSpells": [
-				{
-					"expanded": {
-						"s1": [
-							"burning hands",
-							"command"
-						],
-						"s2": [
-							"blindness/deafness",
-							"scorching ray"
-						],
-						"s3": [
-							"fireball",
-							"stinking cloud"
-						],
-						"s4": [
-							"fire shield",
-							"wall of fire"
-						],
-						"s5": [
-							"flame strike",
-							"hallow"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Infernal Bureaucracy|Warlock||Infernal Bureaucracy||1",
-				"Dark One's Own Luck|Warlock||Infernal Bureaucracy||6",
-				"Fiendish Resilience|Warlock||Infernal Bureaucracy||10",
-				"Hurl Through Hell|Warlock||Infernal Bureaucracy||14"
-			]
-		},
 		{
 			"name": "The Fathomless",
 			"shortName": "Fathomless",

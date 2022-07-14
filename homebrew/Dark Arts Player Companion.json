@@ -1071,34 +1071,6 @@
 	],
 	"subclass": [
 		{
-			"name": "School of Hemomancy",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"shortName": "Hemomancy",
-			"subclassFeatures": [
-				"School of Hemomancy|Wizard||Hemomancy|DAPC|2",
-				"Deepen Wound|Wizard||Hemomancy|DAPC|6",
-				"Improved Endurance|Wizard||Hemomancy|DAPC|10",
-				"Dance with Dead|Wizard||Hemomancy|DAPC|14"
-			]
-		},
-		{
-			"name": "School of Reawakening",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"shortName": "Reawakening",
-			"subclassFeatures": [
-				"School of Reawakening|Wizard||Reawakening|DAPC|2",
-				"Volatile Soul|Wizard||Reawakening|DAPC|6",
-				"Consume|Wizard||Reawakening|DAPC|10",
-				"Lasting Creation|Wizard||Reawakening|DAPC|14"
-			]
-		},
-		{
 			"name": "The Archlich",
 			"source": "DAPC",
 			"page": 20,
@@ -1169,38 +1141,6 @@
 				"Deceiving Darkness|Rogue||Shadow|DAPC|9",
 				"Shadow Simulacrum|Rogue||Shadow|DAPC|13",
 				"Master of Shadows|Rogue||Shadow|DAPC|17"
-			]
-		},
-		{
-			"name": "Nightstalker",
-			"source": "DAPC",
-			"page": 16,
-			"shortName": "Nightstalker",
-			"className": "Ranger (Revised)",
-			"classSource": "UATheRangerRevised",
-			"subclassSpells": [
-				"Feather Fall",
-				"Thunderwave",
-				"cuase fear|xge",
-				"invisibility",
-				"gust of wind",
-				"darkness",
-				"haste",
-				"call lightning",
-				"fear",
-				"Greater Invisibility",
-				"storm sphere|xge",
-				"sickening radiance|xge",
-				"seeming",
-				"control winds|xge",
-				"contagion"
-			],
-			"subclassFeatures": [
-				"Nightstalker|Ranger (Revised)|UATheRangerRevised|Nightstalker|DAPC|3",
-				"Extra Attack|Ranger (Revised)|UATheRangerRevised|Nightstalker|DAPC|5",
-				"Shadowy Transposition|Ranger (Revised)|UATheRangerRevised|Nightstalker|DAPC|7",
-				"Dark Sentinel|Ranger (Revised)|UATheRangerRevised|Nightstalker|DAPC|11",
-				"Midnight Bulwark|Ranger (Revised)|UATheRangerRevised|Nightstalker|DAPC|15"
 			]
 		},
 		{
@@ -2619,7 +2559,7 @@
 			"subclassSource": "DAPC",
 			"level": 3,
 			"entries": [
-				"The Oath of the Grave is a seldom practised tradition, most commonly reserved for the followers of the Raven Queen. Sometimes called winter knights, black knights, or grave knights, these paladins serve as protectors of the sacred passings into the afterlife. They constantly struggle against the forces of undeath, as they see them as the most unholy abominations that blight this land. They adorn themselves with images of death and winter - skulls, ravens, or similar symbols of their patron gods.",
+				"The Oath of the Grave is a seldom practised tradition, most commonly reserved for the followers of the Last Star. Sometimes called winter knights, black knights, or grave knights, these paladins serve as protectors of the sacred passings into the afterlife. They constantly struggle against the forces of undeath, as they see them as the most unholy abominations that blight this land. They adorn themselves with images of death and night: hourglasses, stars, and so forth.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Tenets of the Grave|Paladin||Grave|DAPC|3"
@@ -2751,7 +2691,7 @@
 					"name": "Restbringer",
 					"type": "entries",
 					"entries": [
-						"As action, you can imbue one weapon that you are holding with necrotic energy, using your Channel Divinity. For 1 minute, you add 1 + your Charisma modifier necrotic damage (minimum 1) to your damage rolls made with that weapon. Additionally, hitting a target with the weapon marks them until the end of your next turn. A marked target can't regain hit points, and if it dies while marked, it can't become undead.",
+						"As action, you can imbue one weapon that you are holding with necrotic energy, using your Channel Divinity. For 1 minute, you add 1 + your Charisma modifier necrotic damage (minimum 1) to your damage rolls made with that weapon. Additionally, hitting a target with the weapon marks them until the end of your next turn. A marked target can't regain hit points, and if it dies while marked, it is automatically placed under the effects of a {@spell gentle repose} spell.",
 						"You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends."
 					]
 				}
@@ -3685,468 +3625,6 @@
 			]
 		}
 	],
-	"race": [
-		{
-			"name": "Shadar-kai",
-			"source": "DAPC",
-			"page": 6,
-			"speed": 30,
-			"size": [
-				"M"
-			],
-			"darkvision": 120,
-			"ability": [
-				{
-					"dex": 2,
-					"choose": {
-						"from": [
-							"int",
-							"cha"
-						],
-						"count": 1,
-						"amount": 1
-					}
-				}
-			],
-			"languageProficiencies": [
-				{
-					"common": true,
-					"other": true
-				}
-			],
-			"skillProficiencies": [
-				{
-					"intimidation": true
-				}
-			],
-			"entries": [
-				{
-					"name": "Age",
-					"type": "entries",
-					"entries": [
-						"The Shadar-kai reach physical maturity at the same rate as humans, but they generally live far longer. A shadar-kai may live up to 800 years."
-					]
-				},
-				{
-					"name": "Alignment",
-					"type": "entries",
-					"entries": [
-						"Shadar-kai society is often seen as cruel and apathetic. The shadar-kai generally strive to create chaos and death, bringing death for both purposes of evil as well as good."
-					]
-				},
-				{
-					"name": "Size",
-					"type": "entries",
-					"entries": [
-						"Shadar-kai are generally a tad below 6 feet in height and they weigh between 110 and 170 pounds. Your size is Medium."
-					]
-				},
-				{
-					"name": "Speed",
-					"type": "entries",
-					"entries": [
-						"Your base walking speed is 30 feet."
-					]
-				},
-				{
-					"name": "Superior Darkvision",
-					"type": "entries",
-					"entries": [
-						"Accustomed to the black skies and eternal shadow of the Shadowfell, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of grey."
-					]
-				},
-				{
-					"name": "Cold of Heart",
-					"type": "entries",
-					"entries": [
-						"The chilling air of the shadowfell has made your body accustomed to the bitter cold. You are natural adapted to cold climates, as described in {@book chapter 5|DMG|5} of the Dungeon Master's Guide."
-					]
-				},
-				{
-					"name": "Doomspeaker",
-					"type": "entries",
-					"entries": [
-						"You gain proficiency in the {@skill Intimidation} skill."
-					]
-				},
-				{
-					"name": "Fatespinner",
-					"type": "entries",
-					"entries": [
-						"When you fail a death saving throw, you can choose to reroll it and use the new roll. After you use this trait, you can't use it again until you finish a long rest."
-					]
-				},
-				{
-					"name": "Shadow Jaunt",
-					"type": "entries",
-					"entries": [
-						"On your turn, when you reduce a creature to 0 hit points, you can use your bonus action to teleport up to 15 feet."
-					]
-				},
-				{
-					"name": "Languages",
-					"type": "entries",
-					"entries": [
-						"You can speak, read, and write Common and one other language of your choice."
-					]
-				}
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/DAPC/Shadar-kai.png"
-						}
-					}
-				],
-				"_raceFluff": {
-					"name": "Shadar-kai",
-					"source": "DAPC"
-				}
-			}
-		},
-		{
-			"name": "Wight",
-			"source": "DAPC",
-			"page": 4,
-			"speed": 30,
-			"size": [
-				"M"
-			],
-			"darkvision": 60,
-			"languageProficiencies": [
-				{
-					"common": true,
-					"other": true
-				}
-			],
-			"ability": [
-				{
-					"con": 2,
-					"cha": 1
-				}
-			],
-			"traitTags": [
-				"Sunlight Sensitivity"
-			],
-			"resist": [
-				"poison"
-			],
-			"conditionImmune": [
-				"disease",
-				"poisoned"
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Age",
-					"entries": [
-						"As beings of undeath, Wights do not age or mature, and can live for thousands of years if they are not killed in battle."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Alignment",
-					"entries": [
-						"Wights are transformed by dark entities to serve their needs, and therefore are most often evil themselves. Although they retain their memories and personalities, Wights are only created from evil and vain humans, so they will remain evil unless they change their alignment after reaching undeath."
-					]
-				},
-				{
-					"name": "Size",
-					"type": "entries",
-					"entries": [
-						"Wights are between 5 and 6 feet tall and average about 180 pounds. Your size is Medium."
-					]
-				},
-				{
-					"name": "Speed",
-					"type": "entries",
-					"entries": [
-						"Your base walking speed is 30 feet."
-					]
-				},
-				{
-					"name": "Darkvision",
-					"type": "entries",
-					"entries": [
-						"As a being forced to live in darkness, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of grey."
-					]
-				},
-				{
-					"name": "Life Drain",
-					"type": "entries",
-					"entries": [
-						"When you kill a humanoid, you can choose to have it rise 24 hours later as a zombie under your control, unless it is restored to life or its body is destroyed. Only one zombie may be created through this ability at any one time; if another is created then the first becomes inanimate.",
-						"The zombie has the statistics of the {@creature zombie|MM|} (Monster Manual pg. 316), except its hp value is instead equal to three times your level."
-					]
-				},
-				{
-					"name": "Sunlight Sensitivity",
-					"type": "entries",
-					"entries": [
-						"You have disadvantage on attack rolls and on Wisdom ({@skill Perception}) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
-					]
-				},
-				{
-					"name": "Undead",
-					"type": "entries",
-					"entries": [
-						"Your type is both humanoid and undead, meaning you are affected by any features or abilities that affect either of those types. For example, you can be targeted by {@spell hold person} or turned by {@classfeature turn undead|Cleric||2}. The exception to this is healing: any spell, feature, or ability that restores hit points and normally has no effect on undead instead restores you for half the number of hit points it would normally restore, rather than having no effect.",
-						"Due to your undead nature, you are immune to disease and the poisoned condition, and you have resistance to poison damage. You do not need to eat or breathe, but you can ingest food or drink if you wish. Instead of sleeping, you enter an inactive state for 4 hours each day. You do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause you to enter this inactive state."
-					]
-				},
-				{
-					"name": "Languages",
-					"type": "entries",
-					"entries": [
-						"You can speak, read, and write Common and one other language you knew in life."
-					]
-				}
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/DAPC/Wight.png"
-						}
-					}
-				],
-				"_raceFluff": {
-					"name": "Wight",
-					"source": "DAPC"
-				}
-			}
-		},
-		{
-			"name": "Mummy",
-			"source": "DAPC",
-			"page": 3,
-			"speed": 25,
-			"size": [
-				"M"
-			],
-			"darkvision": 60,
-			"ability": [
-				{
-					"str": 2,
-					"con": 1
-				}
-			],
-			"traitTags": [
-				"Improved Resting",
-				"Natural Weapon"
-			],
-			"resist": [
-				"poison"
-			],
-			"conditionImmune": [
-				"disease",
-				"poisoned"
-			],
-			"languageProficiencies": [
-				{
-					"common": true,
-					"other": true
-				}
-			],
-			"entries": [
-				{
-					"name": "Age",
-					"type": "entries",
-					"entries": [
-						"As beings of undeath, mummies do not age or mature, and they may live for thousands of years if undisturbed."
-					]
-				},
-				{
-					"name": "Alignment",
-					"type": "entries",
-					"entries": [
-						"As the creations of evil masters, mummies are often evil themselves. Most often mummies tend towards lawfulness in their devotion to their master."
-					]
-				},
-				{
-					"name": "Size",
-					"type": "entries",
-					"entries": [
-						"Mummies are between 5 and 6 feet tall and average about 120 pounds. Your size is Medium."
-					]
-				},
-				{
-					"name": "Speed",
-					"type": "entries",
-					"entries": [
-						"Your base walking speed is 25 feet."
-					]
-				},
-				{
-					"name": "Darkvision",
-					"type": "entries",
-					"entries": [
-						"Accustomed to the eternal darkness of an ancient tomb, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of grey."
-					]
-				},
-				{
-					"name": "Dreadful Glare",
-					"type": "entries",
-					"entries": [
-						"As an action, you can target one creature you can see within 10 feet of you. The target must succeed on a Wisdom saving throw or become {@condition frightened} of you until the end of your next turn. The DC for this saving throw equals 8 + your Constitution modifier + your Proficiency bonus.",
-						"After you use your glare, you can't use it again until you complete a short or long rest."
-					]
-				},
-				{
-					"name": "Rotting Fist",
-					"type": "entries",
-					"entries": [
-						"Your hands rot those they touch. When you hit a creature with an unarmed strike, you deal necrotic damage equal to {@dice 1d6} + your Strength modifier, instead of the bludgeoning damage normal for an unarmed attack."
-					]
-				},
-				{
-					"name": "Undead",
-					"type": "entries",
-					"entries": [
-						"Your type is both humanoid and undead, meaning you are affected by any features or abilities that affect either of those types. For example, you can be targeted by @spell hold person} or turned by {@classfeature turn undead|Cleric||2}. The exception to this is healing: any spell, feature, or ability that restores hit points and normally has no effect on undead instead restores you for half the number of hit points it would normally restore, rather than having no effect.",
-						"Due to your undead nature, you are immune to disease and the poisoned condition, and you have resistance to poison damage. You do not need to eat or breathe, but you can ingest food or drink if you wish. Instead of sleeping, you enter an inactive state for 4 hours each day. You do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause you to enter this inactive state."
-					]
-				},
-				{
-					"name": "Languages",
-					"type": "entries",
-					"entries": [
-						"You can speak, read, and write Common and one other language you knew in life."
-					]
-				}
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/DAPC/Mummy.png"
-						}
-					}
-				],
-				"_raceFluff": {
-					"name": "Mummy",
-					"source": "DAPC"
-				}
-			}
-		}
-	],
-	"raceFluff": [
-		{
-			"name": "Shadar-kai",
-			"source": "DAPC",
-			"entries": [
-				"Shadar-kai were once humans, native to the world. They were all members of an extended tribe who called themselves Shadar-Kai. These early humans had seen the abuses Nerull, once god of death, perpetrated on the souls who passed into his power. They also feared the unknowable reaches of death into which most souls pass even now. When the Raven Queen slew Nerull and ascended to godhood, in an age now largely forgotten, the Shadar-Kai struck a deal with her. They promised to serve as her mortal agents, and in exchange, she gave them incredibly long life and freedom from frailty. The shadar-kai believe that, through their pact, they became the chosen people of death and winter.",
-				"The Shadar-Kai moved to the Shadowfell, setting up their communities on the borders of Letherna, the Raven Queen's domain. Life in shadow changed the humans, reshaping them and altering their appearance. Eventually, they were so different from humans that they became a distinct species. As they expanded their territory in the Shadowfell and began interacting again with the mortal world, the tribal name became the name for their race.",
-				{
-					"type": "entries",
-					"name": "Ashen and Scarred",
-					"entries": [
-						"Shadar-kai are humanlike, but the weight of existence in the Shadowfell has shaped them to be slightly shorter and much thinner than their human counterparts. A shadar-kai has a colorless complexion that varies from alabaster to dark gray. Shadar-kai hair is similarly drab or raven black. Pale hair might have a hint of color within the range of human norms. The eyes are lustrous and black, lacking any white or clear pupil. Shadows near a shadar-kai sometimes seem to reach out or deepen, especially when the shadar-kai is angry.",
-						"Although drab in natural appearance, shadar-kai are quite elaborate and idiosyncratic in personal adornment. They like dark and exotic clothing, jewelry, and weapons, often decorated with swatches of bright color. Hair is similarly ornate and often dyed, and many embellish their skin with tattoos, scars, and piercings.",
-						"The tattoos, scars, and piercings a shadar-kai wears have more than one purpose. They exist as a testament to the wearer's ability to withstand pain as well as a means of personal expression and decoration. Each decoration can also be a record of a deed done, an honor gained, or a misdeed declared."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "The Raven Queen",
-					"entries": [
-						"Through their pact with the {@deity The Raven Queen|DAPC|Raven Queen}, each shadar-kai is an instrument of death and fate. The Raven Queen doesn't demand worship from the shadar-kai, though she receives it in abundance. She demands only that they observe the pact by following her commandments. So most shadar-kai hold no pity for the dying and try to punish those who defy fate. But shadar-kai also believe that nobody truly knows what fate holds.",
-						"The Raven Queen is a fair mother, if not a loving one. When the shadar-kai called upon her in ancient times, she answered. She still does. While she spares little love, she also never demands the love of her children. Almost all shadar-kai revere the Raven Queen, but each shadar-kai is free to choose his or her destiny and way of life, including religion."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Strong Emotions",
-					"entries": [
-						"The Shadowfell saps living creatures of creativity and the will to live. When shadar-kai moved to the Shadowfell ages ago, they were not immune to this depression. Numerous members of their early society gave in to ennui and simply slipped out of existence, driving the shadar-kai to change their lifestyle, embracing strong emotions and peak experiences. These practices, born out of necessity, became traditions over countless generations.",
-						"The current culture of the shadar-kai is a study in pushing boundaries. Shadar-kai welcome difficult tasks and physical and emotional extremes as a way of life. They learn to channel the darkness of the Shadowfell rather than allowing that darkness to consume them. And they accept death as the inevitable end for those who fail to attain the right amount of power or fame.",
-						"Shadar-kai embrace living with gusto. The limits of pleasure and pain distract them from the wearying melancholy of the Shadowfell. They also strive for personal greatness, so that if they fail to gain the ability to live forever, stories of their great deeds will grant a sort of immortality. In this search for personal glory, most shadar-kai ignore banalities such as comfort and safety."
-					]
-				}
-			]
-		},
-		{
-			"name": "Mummy",
-			"source": "DAPC",
-			"entries": [
-				"Hidden within ancient tombs in vast deserts, mummies evoke fear in the heart of every adventurer. Raised by dark funerary rites through necromantic rituals, mummies unquestioningly serve the whims of their masters for as long as they live. However, once those masters are gone a rare few mummies may choose to stray from their ancient tasks, traveling out of their tombs to inflict themselves on the world above.",
-				{
-					"type": "entries",
-					"name": "The Will of the Dark Gods",
-					"entries": [
-						"An undead mummy is created when the priest of a death god or other dark deity ritually imbues a prepared corpse with necromantic magic. The mummy's linen wrappings are inscribed with necromantic markings before the burial ritual concludes with an invocation to darkness. As a mummy endures in undeath, it animates in response to conditions specified by the ritual. Most commonly, a transgression against its tomb, treasures, lands, or former loved ones will cause a mummy to rise.",
-						"The long burial rituals that accompany a mummy's entombment help protect its body from rot. In the embalming process, the newly dead creature's organs are removed and placed in special jars, and its corpse is treated with preserving oils, herbs, and wrappings. After the body has been prepared, the corpse is typically wrapped in linen bandages."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "The Punished",
-					"entries": [
-						"Once deceased, an individual has no say in whether or not its body is made into a mummy. Some mummies were powerful individuals who displeased a high priest or pharaoh, or who committed crimes of treason, adultery, or murder. As punishment, they were cursed with eternal undeath, embalmed, mummified, and sealed away. Other times, mummies acting as tomb guardians are created from slaves put to death specifically to serve a greater purpose. Once created, a mummy obeys the conditions and parameters laid down by the rituals that created it, driven only to punish transgressors."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "The Will of the Dark Gods",
-					"entries": [
-						"An undead mummy is created when the priest of a death god or other dark deity ritually imbues a prepared corpse with necromantic magic. The mummy's linen wrappings are inscribed with necromantic markings before the burial ritual concludes with an invocation to darkness. As a mummy endures in undeath, it animates in response to conditions specified by the ritual. Most commonly, a transgression against its tomb, treasures, lands, or former loved ones will cause a mummy to rise."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Timeless Undeath",
-					"entries": [
-						"Most mummies have existed far longer than even the oldest elves, though most of them have remained in their tomb for nearly the entire period. Once they awake, they cannot remember their past life or personality, so they remain dry husks even throughout their eons of \"life\" if you could call it that.",
-						"However, some mummies do gain some knowledge of the outside world, and even the most rudimentary knowledge from when they were first created may hold untold secrets to the modern world. As a result, some serve as undead repositories of lost lore, and can be consulted by the descendants of those who created them. Powerful individuals sometimes intentionally sequester mummies away for occasional consultation, and particularly talkative mummies are treasured by historians."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Mummy Names",
-					"entries": [
-						"When they are created, mummies are not often named, and they have no memory of their name in life. Even when they are named, it is usually something extremely simple such as a number. However, once a mummy becomes free of its master, it might choose to give itself a real name, or perhaps let a troop of adventurers choose its name for it. Therefore, mummies can have all types of names based on what names they have encountered. If they have encountered many human adventurers in their time, they may choose a human name, and could do the same for any of the other races."
-					]
-				}
-			]
-		},
-		{
-			"name": "Wight",
-			"source": "DAPC",
-			"entries": [
-				"The word \"wight\" meant \"person\" in days of yore, but the name now refers to evil undead who were once mortals driven by dark desire and great vanity. When death stills such a creature's heart and snuffs its living breath, its spirit cries out to the demon lord Orcus or some vile god of the underworld for a reprieve: undeath in return for eternal war on the living. If a dark power answers the call, the spirit is granted undeath so that it can pursue its own malevolent agenda.",
-				"Wights possess the memories and drives of their formerly living selves. They will heed the call of whatever dark entity transformed them into undead, swearing oaths to appease their new lord while retaining their autonomy. Never tiring, a wight can pursue its goals relentlessly and without distraction.",
-				{
-					"name": "Life Eaters",
-					"type": "entries",
-					"entries": [
-						"Neither dead nor alive, a wight exists in a transitional state between one world and the next. The bright spark it possessed in life is gone, and in its place is a yearning to consume that spark in all living things. When a wight attacks, this life essence glows like white-hot embers to its dark eyes, and the wight's cold touch can drain the spark through flesh, clothing, and armor."
-					]
-				},
-				{
-					"name": "Shadow of the Grave",
-					"type": "entries",
-					"entries": [
-						"Wights flee from the world by day, away from the light of the sun, which they hate. They retreat to barrow mounds, crypts, and tombs where they dwell. Their lairs are silent, desolate places, surrounded by dead plants, noticeably blackened, and avoided by bird and beast.",
-						"Humanoids slain by a wight can rise as zombies under its control. Motivated by hunger for living souls and driven by the same desire for power that awakened them in undeath, some wights serve as shock troops for evil leaders, including wraiths. As soldiers, they are able to plan but seldom do so, relying on their hunger for destruction to overwhelm any creature that stands before them."
-					]
-				},
-				{
-					"name": "Wight Names",
-					"type": "entries",
-					"entries": [
-						"When they are created, a wight keeps all of the memories of its former life, and therefore keeps its name as well. Therefore, wights can have all types of names based on whatever race they were in life."
-					]
-				}
-			]
-		}
-	],
 	"spell": [
 		{
 			"name": "Wall of Bones",
@@ -4193,7 +3671,7 @@
 				]
 			},
 			"entries": [
-				"A wall of writhing bones and skeletons springs into existence at a point you choose within range. The wall is 6 inches thick and is composed of three 10-foot-by-10-foot panels. Each panel must be contiguous with at least one other panel. If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice). Any creature that starts its turn next to a wall must make a Dexterity saving throw or take {@damage 1d8} bludgeoning damage and become {@condition restrained}. The creature can make a Strength saving throw at the start of each of its turns, taking the same damage on a failure or freeing itself on a success.",
+				"An opaque wall of writhing bones and skeletons springs into existence at a point you choose within range. The wall is 6 inches thick and is composed of three 10-foot-by-10-foot panels. Each panel must be contiguous with at least one other panel. If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice). Any creature that starts its turn next to a wall must make a Dexterity saving throw or take {@damage 1d8} bludgeoning damage and become {@condition restrained}. The creature can make a Strength saving throw at the start of each of its turns, taking the same damage on a failure or freeing itself on a success.",
 				"The wall is an object that can be damaged and thus breached. Each panel has AC 10 and 20 hit points per inch of thickness. Reducing a panel to 0 hit points destroys it."
 			],
 			"source": "DAPC",
@@ -4569,8 +4047,8 @@
 				]
 			},
 			"entries": [
-				"You transform your blood into a 10-foot-radius protective dome that forms around and above you and remains stationary for the duration. The dome can be damaged, and it has a number of hit points equal to 20 + double the amount of hit points spent in the casting of this spell. Any creature within the dome cannot be targeted by creatures outside the dome, and vice versa. Spells and attacks that would pass or extend through the dome instead hit the dome, dealing it damage, and do not extend farther. As long as the dome lasts you can use your action to spend a number of hit points and add this amount to the dome's current hit points.",
-				"Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it.",
+				"You transform your blood into a 10-foot-radius protective dome that forms around and above you and remains stationary for the duration. The dome can be damaged, and it has a number of hit points equal to 20 + double the amount of hit points spent in the casting of this spell. Any creature within the dome cannot be targeted by creatures outside the dome, and vice versa. Spells and attacks that would pass or extend through the dome instead hit the dome, dealing it damage, and do not extend farther. As long as the dome lasts you can use your action to spend a number of hit points and add this amount to the dome's current hit points. The dome automatically fails saving throws, is automatically hit by attacks, is immune to psychic damage and is vulnerable to force damage.",
+				"Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. All creatures and objects are barred from passing through the walls of the dome.",
 				"The dome is semi-transparent. It can be seen through, but things seen through the walls appear distorted and blurred with the red color of the dome."
 			],
 			"source": "DAPC",
@@ -4872,9 +4350,8 @@
 				{
 					"type": "timed",
 					"duration": {
-						"type": "turn",
-						"amount": 0,
-						"upTo": true
+						"type": "minute",
+						"amount": 1
 					},
 					"concentration": true
 				}
@@ -4907,7 +4384,7 @@
 			]
 		},
 		{
-			"name": "Rary's Rapid Replication",
+			"name": "Rapid Replication",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -5334,7 +4811,7 @@
 		},
 		{
 			"name": "Investiture of Shadow",
-			"level": 6,
+			"level": 4,
 			"school": "T",
 			"time": [
 				{
@@ -5776,15 +5253,11 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
 						"name": "Sorcerer",
 						"source": "PHB"
 					},
 					{
-						"name": "Wizard",
+						"name": "Warlock",
 						"source": "PHB"
 					}
 				]
@@ -6319,7 +5792,7 @@
 			},
 			"entries": [
 				"You touch a creature's open wound and bestow a curse. As you spend a number of hit points to cast the spell, that creature must succeed on a Wisdom saving throw or become cursed. During the casting of the spell, you can make a Charisma ({@skill Deception}) check against the target's Wisdom ({@skill Insight}) check to attempt to conceal the spell's true nature, such as pretending to bandage their wound.",
-				"The curse has no effect until after 1 hour. Thereafter, the curse lasts for a number of days equal to the number of hit points spent, and for that duration the cursed creature can't regain hit points and is {@condition poisoned}. Every 8 hours the creature is cursed, they take {@damage 3d4} necrotic damage as the curse rots away at them.",
+				"The curse has no effect until 1 hour passes. Thereafter, the curse lasts for a number of days equal to the number of hit points spent, and for that duration the cursed creature can't regain hit points and is {@condition poisoned}. Every 8 hours the creature is cursed, they take {@damage 3d4} necrotic damage as the curse rots away at them.",
 				"A {@spell remove curse} spell ends this effect."
 			],
 			"source": "DAPC",
@@ -6653,7 +6126,8 @@
 				]
 			},
 			"entries": [
-				"You release a mournful wail that pierces into the mind of those that hear it. Each creature within 20 feet of you must make a Constitution saving throw. On a failed save, a creature takes {@damage 4d8} psychic damage, falls {@condition unconscious}, and is {@condition deafened} for 1 minute. On a success, it takes half as much damage and suffers no other effect. An {@condition unconscious} creature wakes up after 1 hour, if it takes any damage, or if another creature uses its action to shake them awake. A {@condition deafened} creature automatically succeeds on the save."
+				"You release a mournful wail that pierces into the mind of those that hear it. Each creature within 20 feet of you must make a Constitution saving throw. On a failed save, a creature takes {@damage 4d8} psychic damage, falls {@condition unconscious}, and is {@condition deafened} for 1 minute. On a success, it takes half as much damage and suffers no other effect. An {@condition unconscious} creature wakes up after 1 hour, if it takes any damage, or if another creature uses its action to shake them awake. A {@condition deafened} creature automatically succeeds on the save.",
+				"A creature immune to psychic damag eautomatically succeeds on the save."
 			],
 			"source": "DAPC",
 			"page": 25,

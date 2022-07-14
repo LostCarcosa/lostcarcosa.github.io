@@ -532,17 +532,12 @@
 					]
 				}
 			],
-			"ability": [
-				{
-					"str": 1
-				}
-			],
 			"entries": [
 				"You can use your armor to deflect strikes that would kill others. You gain the following benefits:",
 				{
 					"type": "list",
 					"items": [
-						"While you are wearing heavy armor, bludgeoning, piercing, and slashing damage that you take from nonmagical attacks is reduced by 3."
+						"The Damage Reduction feature from Heavy Armor now works on fire, cold, lightning, thunder, and acid damage in addition to bludgeoning, piercing, and slashing."
 					]
 				}
 			]

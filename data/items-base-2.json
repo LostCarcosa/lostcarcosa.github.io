@@ -1,20 +1,6 @@
 {
 	"baseitem": [
 		{
-			"name": "Arcane Focus",
-			"source": "PHB",
-			"type": "SCF",
-			"scfType": "arcane",
-			"rarity": "none",
-			"weight": 3,
-			"focus": [
-				"Sorcerer",
-				"Warlock",
-				"Wizard"
-			],
-			"value": 300
-		},
-		{
 			"name": "Arrow",
 			"source": "PHB",
 			"page": 150,
@@ -22,8 +8,25 @@
 			"basicRules": true,
 			"type": "A",
 			"rarity": "none",
-			"weight": 0,
-			"value": 0
+			"weight": 0.05,
+			"value": 5
+		},
+		{
+			"name": "Arrows (20)",
+			"source": "PHB",
+			"page": 150,
+			"srd": true,
+			"basicRules": true,
+			"type": "A",
+			"rarity": "none",
+			"weight": 1,
+			"value": 100,
+			"packContents": [
+				{
+					"item": "arrow|phb",
+					"quantity": 20
+				}
+			]
 		},
 		{
 			"name": "Battleaxe",
@@ -34,26 +37,16 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 4,
-			"value": 100,
+			"value": 1000,
 			"weaponCategory": "martial",
 			"property": [
-				"V",
-				"TCHNQ"
+				"V"
 			],
 			"dmg1": "1d8",
 			"dmgType": "S",
 			"dmg2": "1d10",
 			"axe": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Execution",
-					"entries": [
-						"This weapon deals one extra die of damage when you strike a {@condition prone} creature."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Blowgun",
@@ -64,7 +57,7 @@
 			"type": "R",
 			"rarity": "none",
 			"weight": 1,
-			"value": 100,
+			"value": 1000,
 			"weaponCategory": "martial",
 			"property": [
 				"A",
@@ -84,8 +77,25 @@
 			"basicRules": true,
 			"type": "A",
 			"rarity": "none",
-			"weight": 0,
-			"value": 0
+			"weight": 0.02,
+			"value": 2
+		},
+		{
+			"name": "Blowgun Needles (50)",
+			"source": "PHB",
+			"page": 150,
+			"srd": true,
+			"basicRules": true,
+			"type": "A",
+			"rarity": "none",
+			"weight": 1,
+			"value": 100,
+			"packContents": [
+				{
+					"item": "blowgun needle|phb",
+					"quantity": 50
+				}
+			]
 		},
 		{
 			"name": "Breastplate",
@@ -95,8 +105,8 @@
 			"basicRules": true,
 			"type": "MA",
 			"rarity": "none",
-			"weight": 2,
-			"value": 400,
+			"weight": 20,
+			"value": 40000,
 			"ac": 14,
 			"armor": true,
 			"entries": [
@@ -111,16 +121,12 @@
 			"basicRules": true,
 			"type": "HA",
 			"rarity": "none",
-			"weight": 3,
-			"value": 200,
+			"weight": 55,
+			"value": 7500,
 			"ac": 16,
-			"strength": "15",
+			"strength": "13",
 			"armor": true,
 			"stealth": true,
-			"property": [
-				"DMGRED"
-			],
-			"dmgred": 2,
 			"entries": [
 				"Made of interlocking metal rings, chain mail includes a layer of quilted fabric worn underneath the mail to prevent chafing and to cushion the impact of blows. The suit includes gauntlets."
 			]
@@ -133,8 +139,8 @@
 			"basicRules": true,
 			"type": "MA",
 			"rarity": "none",
-			"weight": 2,
-			"value": 100,
+			"weight": 20,
+			"value": 5000,
 			"ac": 13,
 			"armor": true,
 			"entries": [
@@ -149,8 +155,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 0,
+			"weight": 2,
+			"value": 10,
 			"weaponCategory": "simple",
 			"property": [
 				"L"
@@ -168,8 +174,25 @@
 			"basicRules": true,
 			"type": "A",
 			"rarity": "none",
-			"weight": 0,
-			"value": 0
+			"weight": 0.075,
+			"value": 5
+		},
+		{
+			"name": "Crossbow Bolts (20)",
+			"source": "PHB",
+			"page": 150,
+			"srd": true,
+			"basicRules": true,
+			"type": "A",
+			"rarity": "none",
+			"weight": 1.5,
+			"value": 100,
+			"packContents": [
+				{
+					"item": "crossbow bolt|phb",
+					"quantity": 20
+				}
+			]
 		},
 		{
 			"name": "Dagger",
@@ -180,7 +203,7 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
+			"value": 200,
 			"weaponCategory": "simple",
 			"property": [
 				"F",
@@ -201,8 +224,8 @@
 			"basicRules": true,
 			"type": "R",
 			"rarity": "none",
-			"weight": 0,
-			"value": 0,
+			"weight": 0.25,
+			"value": 5,
 			"weaponCategory": "simple",
 			"property": [
 				"F",
@@ -221,24 +244,12 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
-			"property": [
-				"TCHNQ"
-			],
+			"weight": 2,
+			"value": 1000,
 			"weaponCategory": "martial",
 			"dmg1": "1d8",
 			"dmgType": "B",
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Shield Snare",
-					"entries": [
-						"Your flail attacks ignore any bonus to AC granted by shields. Additionally, as an action, you may make a single attack against a target carrying a shield or a similar defensive tool. If the attack hits, it deals normal weapon damage, and the target must make a Strength saving throw or lose hold of its shield, which lands at its feet."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Glaive",
@@ -248,29 +259,17 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 200,
+			"weight": 6,
+			"value": 2000,
 			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"R",
-				"2H",
-				"TCHNQ"
+				"2H"
 			],
 			"dmg1": "1d10",
 			"dmgType": "S",
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Disarming Parry",
-					"entries": [
-						"When a creature attacks you with a melee weapon, you may use your reaction to attempt to catch the weapon in your glaive's hook and disarm them. Make an attack roll with your glaive. If the result of this roll equals or exceeds their attack roll, their attack misses and they must succeed on a Strength saving throw or fumble their weapon, losing hold of it temporarily. A target wielding a weapon with both hands has advantage on this roll.",
-						"A weapon disarmed in this way is automatically retrieved by its original wielder at the end of their turn, but cannot be used before then.",
-						"If you attempt to parry a weapon that cannot be disarmed, your parry attack roll is made at disadvantage. You must decide to use this feature before your opponent rolls their attack."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Greataxe",
@@ -280,27 +279,17 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 2,
-			"value": 200,
+			"weight": 7,
+			"value": 3000,
 			"weaponCategory": "martial",
 			"property": [
 				"H",
-				"2H",
-				"TCHNQ"
+				"2H"
 			],
 			"dmg1": "1d12",
 			"dmgType": "S",
 			"axe": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Horde Sweeper",
-					"entries": [
-						"Whenever you hit a creature with your greataxe, every creature adjacent to you other than the target takes damage equal to your proficiency bonus. "
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Greatclub",
@@ -310,8 +299,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 2,
-			"value": 100,
+			"weight": 10,
+			"value": 20,
 			"weaponCategory": "simple",
 			"property": [
 				"2H"
@@ -330,27 +319,16 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 6,
-			"value": 200,
+			"value": 5000,
 			"weaponCategory": "martial",
 			"property": [
 				"H",
-				"2H",
-				"TCHNQ"
+				"2H"
 			],
 			"dmg1": "2d6",
 			"dmgType": "S",
 			"sword": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Arcing Slash",
-					"entries": [
-						"When you attack with a greatsword, you may choose to target two creatures within your reach with a single attack. You use the same attack roll and damage roll for both targets, and deals {@damage 1d6} slashing damage instead of the weapon's normal damage die.",
-						"Any feature that adds damage to your weapon attacks, such as a paladin's Divine Smite, applies to both targets."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Halberd",
@@ -360,27 +338,17 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 2,
-			"value": 200,
+			"weight": 6,
+			"value": 2000,
 			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"R",
-				"2H",
-				"TCHNQ"
+				"2H"
 			],
 			"dmg1": "1d10",
 			"dmgType": "S",
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Rebuff",
-					"entries": [
-						"As an attack while you are wielding a halberd, you may use the haft of your weapon to rebuff up to two adjacent creatures. Make a single attack roll against one or two adjacent creatures within 5 feet of you. If the attack hits a target, you push it up to 10 feet away from you."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Half Plate Armor",
@@ -390,8 +358,8 @@
 			"basicRules": true,
 			"type": "MA",
 			"rarity": "none",
-			"weight": 2,
-			"value": 800,
+			"weight": 40,
+			"value": 75000,
 			"ac": 15,
 			"armor": true,
 			"stealth": true,
@@ -407,8 +375,8 @@
 			"basicRules": true,
 			"type": "R",
 			"rarity": "none",
-			"weight": 1,
-			"value": 200,
+			"weight": 3,
+			"value": 7500,
 			"weaponCategory": "martial",
 			"property": [
 				"A",
@@ -431,7 +399,7 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 2,
-			"value": 0,
+			"value": 500,
 			"weaponCategory": "simple",
 			"property": [
 				"L",
@@ -451,8 +419,8 @@
 			"basicRules": true,
 			"type": "R",
 			"rarity": "none",
-			"weight": 2,
-			"value": 200,
+			"weight": 18,
+			"value": 5000,
 			"weaponCategory": "martial",
 			"property": [
 				"A",
@@ -475,8 +443,8 @@
 			"basicRules": true,
 			"type": "MA",
 			"rarity": "none",
-			"weight": 1,
-			"value": 0,
+			"weight": 12,
+			"value": 1000,
 			"ac": 12,
 			"armor": true,
 			"entries": [
@@ -491,8 +459,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 0,
+			"weight": 2,
+			"value": 50,
 			"weaponCategory": "simple",
 			"property": [
 				"T"
@@ -511,13 +479,12 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 2,
-			"value": 200,
+			"weight": 6,
+			"value": 1000,
 			"weaponCategory": "martial",
 			"property": [
 				"R",
-				"S",
-				"TCHNQ"
+				"S"
 			],
 			"dmg1": "1d12",
 			"dmgType": "P",
@@ -528,13 +495,6 @@
 					"name": "Special",
 					"entries": [
 						"You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Charge",
-					"entries": [
-						"If you move 20 or more feet straight toward a creature before hitting it with a lance attack, the target takes an extra {@damage 1d12} piercing damage and must succeed on a Strength saving throw or fall {@condition prone}."
 					]
 				}
 			]
@@ -547,8 +507,8 @@
 			"basicRules": true,
 			"type": "LA",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 10,
+			"value": 1000,
 			"ac": 11,
 			"armor": true,
 			"entries": [
@@ -563,8 +523,8 @@
 			"basicRules": true,
 			"type": "R",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 5,
+			"value": 2500,
 			"weaponCategory": "simple",
 			"property": [
 				"A",
@@ -586,8 +546,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 0,
+			"weight": 2,
+			"value": 200,
 			"weaponCategory": "simple",
 			"property": [
 				"L",
@@ -600,6 +560,28 @@
 			"weapon": true
 		},
 		{
+			"name": "Light Repeating Crossbow",
+			"source": "OotA",
+			"page": 224,
+			"type": "R",
+			"rarity": "unknown",
+			"weight": 5,
+			"weaponCategory": "simple",
+			"property": [
+				"A",
+				"2H"
+			],
+			"range": "40/160",
+			"dmg1": "1d8",
+			"dmgType": "P",
+			"crossbow": true,
+			"weapon": true,
+			"entries": [
+				"This crossbow is fitted with a cartridge that can hold up to six crossbow bolts. It automatically reloads after firing until the cartridge runs out of ammunition. Reloading the cartridge takes an action."
+			],
+			"ammoType": "crossbow bolt|phb"
+		},
+		{
 			"name": "Longbow",
 			"source": "PHB",
 			"page": 149,
@@ -608,7 +590,7 @@
 			"type": "R",
 			"rarity": "none",
 			"weight": 2,
-			"value": 200,
+			"value": 5000,
 			"weaponCategory": "martial",
 			"property": [
 				"A",
@@ -630,28 +612,17 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 3,
+			"value": 1500,
 			"weaponCategory": "martial",
 			"property": [
-				"V",
-				"TCHNQ"
+				"V"
 			],
 			"dmg1": "1d8",
 			"dmgType": "S",
 			"dmg2": "1d10",
 			"sword": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Lock Blades",
-					"entries": [
-						"When a creature makes a melee weapon attack against you, you may use your reaction to attempt to lock blades and parry their attack. Make an attack roll with your longsword. You have advantage on this roll if you are wielding your longsword with two hands. If the result of this roll equals or exceeds their attack roll, their attack misses.",
-						"You must choose to use this feature before seeing the result of your opponent's roll."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Mace",
@@ -661,8 +632,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 4,
+			"value": 500,
 			"weaponCategory": "simple",
 			"dmg1": "1d6",
 			"dmgType": "B",
@@ -677,35 +648,17 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 2,
-			"value": 200,
+			"weight": 10,
+			"value": 1000,
 			"weaponCategory": "martial",
 			"property": [
 				"H",
-				"2H",
-				"TCHNQ"
+				"2H"
 			],
 			"dmg1": "2d6",
 			"dmgType": "B",
 			"hammer": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Slam",
-					"entries": [
-						"Once per turn, when you hit a Large or smaller creature with your maul, you may choose to halve the damage and push them 15 feet away from you. You must make this choice before you roll damage.",
-						"If the target moves at least 5 feet and collides with another creature, they each take {@damage 1d6} bludgeoning damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Momentum",
-					"entries": [
-						"Once per {@i your} turn, if you miss a creature with a Maul attack, you immediately reroll the attack against another target within range, chosen randomly. This feature is non-optional."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Morningstar",
@@ -715,25 +668,13 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 4,
+			"value": 1500,
 			"weaponCategory": "martial",
-			"property": [
-				"TCHNQ"
-			],
 			"dmg1": "1d8",
 			"dmgType": "P",
 			"mace": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Cruel Blow",
-					"entries": [
-						"When you score a critical hit with your morningstar, it deals one additional die of damage, and the target must succeed on a Wisdom saving throw or become {@condition frightened} of you for one minute. A target may repeat the save at the end of its turns, ending the condition on a success."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Net",
@@ -743,8 +684,8 @@
 			"basicRules": true,
 			"type": "R",
 			"rarity": "none",
-			"weight": 1,
-			"value": 1,
+			"weight": 3,
+			"value": 100,
 			"weaponCategory": "martial",
 			"property": [
 				"S",
@@ -764,6 +705,15 @@
 			]
 		},
 		{
+			"name": "blOrb",
+			"source": "PHB",
+			"type": "SCF",
+			"scfType": "arcane",
+			"rarity": "none",
+			"weight": 3,
+			"value": 2000
+		},
+		{
 			"name": "Padded Armor",
 			"source": "PHB",
 			"page": 144,
@@ -771,8 +721,8 @@
 			"basicRules": true,
 			"type": "LA",
 			"rarity": "none",
-			"weight": 1,
-			"value": 0,
+			"weight": 8,
+			"value": 500,
 			"ac": 11,
 			"armor": true,
 			"stealth": true,
@@ -788,34 +738,17 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 2,
-			"value": 200,
+			"weight": 18,
+			"value": 500,
 			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"R",
-				"2H",
-				"TCHNQ"
+				"2H"
 			],
 			"dmg1": "1d10",
 			"dmgType": "P",
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Repel Charge",
-					"entries": [
-						"As an action, you can set your pike against a charge. If a creature moves at least 20 feet straight toward you and attacks you, you may use your reaction to make an attack with your pike before the attacker makes its attack roll. If your attack hits, it is an automatic critical hit, and the target has disadvantage on its attack roll."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Trip",
-					"entries": [
-						"When you take the Attack action, you may use one of your attacks to attempt to knock your opponent prone. Make one pike attack against a Large or smaller creature. If it hits, the attack deals half damage and knocks the creature {@condition prone}."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Plate Armor",
@@ -825,16 +758,12 @@
 			"basicRules": true,
 			"type": "HA",
 			"rarity": "none",
-			"weight": 3,
-			"value": 1200,
+			"weight": 65,
+			"value": 150000,
 			"ac": 18,
-			"strength": "19",
+			"strength": "15",
 			"armor": true,
 			"stealth": true,
-			"property": [
-				"DMGRED"
-			],
-			"dmgred": 5,
 			"entries": [
 				"Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body."
 			]
@@ -847,8 +776,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 4,
+			"value": 20,
 			"weaponCategory": "simple",
 			"property": [
 				"V"
@@ -866,26 +795,16 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 2,
+			"value": 2500,
 			"weaponCategory": "martial",
 			"property": [
-				"F",
-				"TCHNQ"
+				"F"
 			],
 			"dmg1": "1d8",
 			"dmgType": "P",
 			"sword": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Parrying Dagger",
-					"entries": [
-						"While wielding both a dagger and a rapier, you may use a reaction after being struck by a melee attack to roll {@dice 1d4} and add the result to your armor class until the end of the current turn."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Ring Mail",
@@ -895,18 +814,30 @@
 			"basicRules": true,
 			"type": "HA",
 			"rarity": "none",
-			"weight": 3,
-			"value": 200,
+			"weight": 40,
+			"value": 3000,
 			"ac": 14,
-			"strength": 13,
 			"armor": true,
 			"stealth": true,
-			"property": [
-				"DMGRED"
-			],
-			"dmgred": 1,
 			"entries": [
 				"This armor is leather armor with heavy rings sewn into it. The rings help reinforce the armor against blows from swords and axes. Ring mail is inferior to chain mail, and it's usually worn only by those who can't afford better armor."
+			]
+		},
+		{
+			"name": "Scale Mail",
+			"source": "PHB",
+			"page": 144,
+			"srd": true,
+			"basicRules": true,
+			"type": "MA",
+			"rarity": "none",
+			"weight": 45,
+			"value": 5000,
+			"ac": 14,
+			"armor": true,
+			"stealth": true,
+			"entries": [
+				"This armor consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets."
 			]
 		},
 		{
@@ -917,29 +848,17 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 3,
+			"value": 2500,
 			"weaponCategory": "martial",
 			"property": [
 				"F",
-				"L",
-				"TCHNQ"
+				"L"
 			],
 			"dmg1": "1d6",
 			"dmgType": "S",
 			"sword": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Bloody Wound",
-					"entries": [
-						"Once per turn, you may attempt to inflict a superficial but bloody wound on your opponent. In place of one attack, you can make a scimitar attack at disadvantage. If it hits, the target takes no damage, but suffers a bloody wound.",
-						"As long as the wound persists, the target takes 1d6 slashing damage at the start of each of their turns, until it uses an action to make a DC 10 Wisdom (Medicine) check or until it recieves any healing. A creature can have only one bloody wound at a time.",
-						"This feature does not work on creatures that do not bleed, such as most constructs and incorporeal undead."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Shield",
@@ -949,8 +868,8 @@
 			"basicRules": true,
 			"type": "S",
 			"rarity": "none",
-			"weight": 1,
-			"value": 200,
+			"weight": 6,
+			"value": 1000,
 			"ac": 2,
 			"entries": [
 				"A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time."
@@ -964,8 +883,8 @@
 			"basicRules": true,
 			"type": "R",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 2,
+			"value": 2500,
 			"weaponCategory": "simple",
 			"property": [
 				"A",
@@ -986,27 +905,17 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 2,
+			"value": 1000,
 			"weaponCategory": "martial",
 			"property": [
 				"F",
-				"L",
-				"TCHNQ"
+				"L"
 			],
 			"dmg1": "1d6",
 			"dmgType": "P",
 			"sword": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Close Quarters Combat",
-					"entries": [
-						"When you successfully grapple a creature or escape a creature's grapple, you may make a single shortsword attack against that creature as a bonus action. Additionally, if a creature tries and fails to escape your grapple, you may make a single shortsword attack as a reaction against them."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Sickle",
@@ -1016,8 +925,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 0,
+			"weight": 2,
+			"value": 100,
 			"weaponCategory": "simple",
 			"property": [
 				"L"
@@ -1034,7 +943,7 @@
 			"basicRules": true,
 			"type": "R",
 			"rarity": "none",
-			"value": 0,
+			"value": 10,
 			"weaponCategory": "simple",
 			"property": [
 				"A"
@@ -1057,6 +966,23 @@
 			"value": 0.2
 		},
 		{
+			"name": "Sling Bullets (20)",
+			"source": "PHB",
+			"page": 150,
+			"srd": true,
+			"basicRules": true,
+			"type": "A",
+			"rarity": "none",
+			"weight": 1.5,
+			"value": 4,
+			"packContents": [
+				{
+					"item": "sling bullet|phb",
+					"quantity": 20
+				}
+			]
+		},
+		{
 			"name": "Spear",
 			"source": "PHB",
 			"page": 149,
@@ -1064,7 +990,7 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
+			"weight": 3,
 			"value": 100,
 			"weaponCategory": "simple",
 			"property": [
@@ -1081,16 +1007,16 @@
 		{
 			"name": "Spiked Armor",
 			"source": "SCAG",
+			"page": 121,
 			"type": "MA",
 			"rarity": "unknown",
 			"weight": 45,
-			"value": 300,
+			"value": 7500,
 			"ac": 14,
 			"armor": true,
 			"stealth": true,
 			"entries": [
-				"Spiked armor is a rare type of medium armor made by dwarves. It consists of a leather coat and leggings covered with spikes that are usually made of metal.",
-				"Spiked armor can only be effectively used by barbarians following the Path of the Battlerager. Anybody else wearing spiked armor takes {@damage 1d4} piercing damage whenever they make an attack or cast a spell."
+				"Spiked armor is a rare type of medium armor made by dwarves. It consists of a leather coat and leggings covered with spikes that are usually made of metal."
 			]
 		},
 		{
@@ -1101,16 +1027,12 @@
 			"basicRules": true,
 			"type": "HA",
 			"rarity": "none",
-			"weight": 3,
-			"value": 400,
+			"weight": 60,
+			"value": 20000,
 			"ac": 17,
-			"strength": "17",
+			"strength": "15",
 			"armor": true,
 			"stealth": true,
-			"property": [
-				"DMGRED"
-			],
-			"dmgred": 3,
 			"entries": [
 				"This armor is made of narrow vertical strips of metal riveted to a backing of leather that is worn over cloth padding. Flexible chain mail protects the joints."
 			]
@@ -1124,7 +1046,7 @@
 			"type": "LA",
 			"rarity": "none",
 			"weight": 13,
-			"value": 400,
+			"value": 4500,
 			"ac": 12,
 			"armor": true,
 			"entries": [
@@ -1139,8 +1061,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 4,
+			"value": 500,
 			"weaponCategory": "martial",
 			"property": [
 				"T",
@@ -1150,24 +1072,7 @@
 			"dmg1": "1d6",
 			"dmgType": "P",
 			"dmg2": "1d8",
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Pin",
-					"entries": [
-						"As an action, you may attempt to pin a medium creature you are grappling. Make a single trident attack; if it hits, you catch the target between the tines of the trident and bury the trident in the ground or a nearby wall. The target is {@condition restrained} until the weapon is dislodged. The target may make a Strength or Dexterity saving throw (its choice) at the end of its turns to escape.",
-						"When you have a creature pinned in this way, your trident is occupied and cannot be used as a weapon until it is dislodged."
-					]
-				},
-				{
-					"type": "inset",
-					"name": "Usage Note",
-					"entries": [
-						"Note that if you pin a creature using a trident, both your hands will be occupied- one maintaining a grapple and the other holding the trident. You can choose to end the grapple, which makes the target hard to re-pin if they escape, or you can let go of the trident, which might result in your weapon being stolen or otherwise lost when the creature escapes. You could also stand there and do nothing but hold the creature and your trident, of course."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "War Pick",
@@ -1178,26 +1083,11 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 2,
-			"value": 200,
+			"value": 500,
 			"weaponCategory": "martial",
-			"property": [
-				"2H",
-				"H",
-				"TCHNQ"
-			],
 			"dmg1": "1d8",
 			"dmgType": "P",
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Sunder Armor",
-					"entries": [
-						"As an action, you may make a single war pick attack {@i without proficiency} against a target wearing medium or heavy armor. On a hit, you deal normal damage with the weapon and impose a -1 penalty to the target's AC. This can stack up to three times, to a total of -3, and lasts until the armor is repaired.",
-						"At the DM's discretion, you may be able to use this ability against foes that are naturally armored with some sort of hard material, such as the plating of a metallic golem or the scales of a dragon. If you do so, the AC penalty does not stack, and maximizes at -1."
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Warhammer",
@@ -1208,7 +1098,7 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 2,
-			"value": 100,
+			"value": 1500,
 			"weaponCategory": "martial",
 			"property": [
 				"V"
@@ -1217,16 +1107,7 @@
 			"dmgType": "B",
 			"dmg2": "1d10",
 			"hammer": true,
-			"weapon": true,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Ringing Blow",
-					"entries": [
-						"As an action, you may make a single warhammer attack. If it hits, it deals its normal damage, and the target has disadvantage on any Concentration saving throw triggered by this damage. Additionally, they have disadvantage on all Intelligence, Wisdom, and Charisma checks until the end of their next turn. "
-					]
-				}
-			]
+			"weapon": true
 		},
 		{
 			"name": "Whip",
@@ -1236,8 +1117,8 @@
 			"basicRules": true,
 			"type": "M",
 			"rarity": "none",
-			"weight": 1,
-			"value": 100,
+			"weight": 3,
+			"value": 200,
 			"weaponCategory": "martial",
 			"property": [
 				"F",
@@ -1346,9 +1227,7 @@
 					"type": "entries",
 					"name": "Loading",
 					"entries": [
-						"Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make.",
-						"However, for each additional attack sacrificed in this way, you deal three extra dice of damage. For example, a level 5 fighter using a heavy crossbow would make only one crossbow attack as the Attack action, but it would have a base damage of 4d10, while a level 11 fighter would deal 7d10 damage. If you {@action Ready} an attack as an action, you can treat it as having sacrificed the same number of attacks as if you had taken the Attack action.",
-						"This does not work if you negate the loading feature of crossbows in any way."
+						"Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make."
 					]
 				}
 			]
@@ -1362,8 +1241,7 @@
 					"type": "entries",
 					"name": "Reach",
 					"entries": [
-						"This weapon adds 5 feet to your reach when you attack with it. This property also determines your reach for opportunity attacks with a reach weapon.",
-						"However, reach weapons are also difficult to use in close quarters; you cannot use a reach weapon to attack a creature in your own space."
+						"This weapon adds 5 feet to your reach when you attack with it. This property also determines your reach for opportunity attacks with a reach weapon."
 					]
 				}
 			]
@@ -1403,25 +1281,6 @@
 				}
 			],
 			"template": "{{prop_name}} ({{item.range}} ft.)"
-		},
-		{
-			"abbreviation": "DMGRED",
-			"source": "MOD",
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Damage Reduction",
-					"entries": [
-						"If a set of armor has the damage reduction X property, you reduce every instance of bludgeoning, piercing, or slashing damage you take by X. Damage reduction triggers only once per instance of damage, is applied before resistance, and can never reduce damage below 0."
-					]
-				}
-			],
-			"template": "{{prop_name}} ({{item.dmgred}})"
-		},
-		{
-			"abbreviation": "TCHNQ",
-			"source": "MOD",
-			"name": "technique"
 		},
 		{
 			"abbreviation": "2H",

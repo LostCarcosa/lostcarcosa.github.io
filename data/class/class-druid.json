@@ -89,9 +89,8 @@
 				"default": [
 					"(a) a wooden {@item shield|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
 					"(a) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-					"{@item Leather armor|phb}, an {@item explorer's pack|phb}, and a {@item druidic focus|phb}"
+					"{@item Leather armor|phb} and a {@item druidic focus|phb}"
 				],
-				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
 						"a": [
@@ -113,7 +112,6 @@
 					{
 						"_": [
 							"Leather armor|phb",
-							"explorer's pack|phb",
 							"druidic focus|phb"
 						]
 					}

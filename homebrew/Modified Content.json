@@ -239,7 +239,6 @@
 		{
 			"name": "Confused",
 			"source": "MOD",
-			"page": 0,
 			"entries": [
 				"A confused creature can't take reactions. Some confusion effects will specify a die to roll for the table below. If no die is specified, use a {@dice d8}. At the start of each of its turns, a creature rolls the confusion die to determine its behavior for that turn.",
 				{
@@ -307,6 +306,30 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Unrested",
+			"source": "MOD",
+			"entries": [
+				"For each level of unrested you have, your proficiency bonus decreases by 1. Like exhaustion, you can have multiple levels of this condition, and it can bring your proficiency bonus below 0.",
+				"You can cure a level of unrested over a long rest if you spend 1 additional {@variantrule COIN}."
+			]
+		},
+		{
+			"name": "Bleeding Out",
+			"source": "MOD",
+			"entries": [
+				"When you drop to 0 or negative hit points, you are bleeding out. While you are bleeding out, you can still take actions and bonus actions. However:",
+				{
+					"type": "list",
+					"items": [
+						"You cannot concentrate on any spell or effect.",
+						"You cannot take reactions. During your turn, you can take an action or a bonus action, but not both.",
+						"Any effect that ends if you are incapacitated (such as a Barbarian's Rage) ends when you begin bleeding out, though you may manually resume such effects (i.e by re-entering a Rage).",
+						"All attack rolls against you have advantage (but are not automatically critical hits). You have disadvantage on all saving throws, except death saving throws."
+					]
+				}
+			]
 		}
 	],
 	"feat": [
@@ -324,6 +347,41 @@
 					]
 				},
 				"If your partner is killed, or you suffer a permanent deterioriation in the relationship for another reason, you may swap this feat out for another when you next gain a level, or you may choose to retain this feat (though you gain no benefits until you find a new partner.)"
+			]
+		},
+		{
+			"name": "Mana Absorption",
+			"source": "MOD",
+			"prerequisite": [
+				{
+					"other": "Sorcerer Only"
+				}
+			],
+			"entries": [
+				"Your body adapts to absorb some of the magical energy hurled at you and convert it to sorcerous power. If another creature casts a damaging spell that targets you, you may expend your reaction to regain sorcery points equal to the spell's level. The spell still takes effect as normal.",
+				"This feature can only be used when a spell is first cast, so it can never drain sorcery points from the same spell more than once. Additionally, you cannot drain energy from spells that you cast yourself, and you can never have more sorcery points than your maximum."
+			]
+		},
+		{
+			"name": "Mana Transfer",
+			"source": "MOD",
+			"entries": [
+				"Over the course of a minute, you can transfer spell slots between yourself and a willing adjacent target, though the act of transfer consumes much of the magic. One participant in the transfer can expend a spell slot of any level, and the recipient regains one spell slot of half that level, rounded down.",
+				"This does not function with spell slots from Pact Magic. The recipient must have an expended spell slot to regain. Sorcerers may expend and regain an equivalent number of sorcery points in place of a spell slot."
+			]
+		},
+		{
+			"name": "Inconspicuous Spellcasting",
+			"source": "MOD",
+			"prerequisite": [
+				{
+					"spellcasting2020": true
+				}
+			],
+			"entries": [
+				"You learn to mask the components in your spellcasting with more innocuous actions, potentially hiding your magic from those around you. For example, you may hide the verbal components of a spell in a passionate speech, argument, or song, and you could hide the somatic components in the playing of an instrument or the workings of a tool.",
+				"You describe how you are attempting to mask the components; Hiding a verbal component requires you to make a Charisma (Performance) check, and hiding a somatic component requires you to make a Dexterity (Sleight of Hand) check against a target's passive Perception. Material components require no check. A spell with both verbal and somatic components would require both a Performance and a Sleight of Hand check. Witnesses have advantage or disadvantage on their passive Perception based on how closely they are paying attention to you.",
+				"You can only mask spells of the Illusion or Enchantment schools, and you cannot mask a spell that deals damage to another creature. Masking a spell does not suppress the sound involved in casting it, it just disguises it as something less obvious. You cannot mask a spell in combat."
 			]
 		}
 	],
@@ -629,13 +687,3381 @@
 	"optionalfeature": [
 	],
 	"background": [
+		{
+			"name": "Acolyte",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"insight": true,
+					"religion": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						{
+							"item": "holy symbol|phb",
+							"displayName": "holy symbol (a gift to you when you entered the priesthood)"
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Insight}, {@skill Religion}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A {@item holy symbol|phb} (a gift to you when you entered the priesthood)"
+						}
+					]
+				},
+				{
+					"name": "Feature: Shelter of the Faithful",
+					"type": "entries",
+					"entries": [
+						"As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. Churches of your faith wlil provide you shelter and sustenance under normal conditions. If you take a long rest in a town where a church of your deity is active and shelter with them or spend time aiding in their services, you gain temporary hit points equal to half of your character level upon completing the rest (minimum of 1). Aiding in church services does not impede you participating in other activities during your long rest."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"Acolytes are shaped by their experience in temples or other religious communities. Their study of the history and tenets of their faith and their relationships to temples, shrines, or hierarchies affect their mannerisms and ideals. Their flaws might be some hidden hypocrisy or heretical idea, or an ideal or bond taken to an extreme.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I idolize a particular hero of my faith, and constantly refer to that person's deeds and example."
+								],
+								[
+									"2",
+									"I can find common ground between the fiercest enemies, empathizing with them and always working toward peace."
+								],
+								[
+									"3",
+									"I see omens in every event and action. The gods try to speak to us, we just need to listen."
+								],
+								[
+									"4",
+									"Nothing can shake my optimistic attitude."
+								],
+								[
+									"5",
+									"I quote (or misquote) sacred texts and proverbs in almost every situation."
+								],
+								[
+									"6",
+									"I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods."
+								],
+								[
+									"7",
+									"I've enjoyed fine food, drink, and high society among my temple's elite. Rough living grates on me."
+								],
+								[
+									"8",
+									"I've spent so long in the temple that I have little practical experience dealing with people in the outside world."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Tradition. The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful)"
+								],
+								[
+									"2",
+									"Charity. I always try to help those in need, no matter what the personal cost. (Good)"
+								],
+								[
+									"3",
+									"Change. We must help bring about the changes the gods are constantly working in the world. (Chaotic)"
+								],
+								[
+									"4",
+									"Power. I hope to one day rise to the top of my faith's religious hierarchy. (Lawful)"
+								],
+								[
+									"5",
+									"Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well. (Lawful)"
+								],
+								[
+									"6",
+									"Aspiration. I seek to prove myself worthy of my god's favor by matching my actions against his or her teachings. (Any)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I would die to recover an ancient relic of my faith that was lost long ago."
+								],
+								[
+									"2",
+									"I will someday get revenge on the corrupt temple hierarchy who branded me a heretic."
+								],
+								[
+									"3",
+									"I owe my life to the priest who took me in when my parents died."
+								],
+								[
+									"4",
+									"Everything I do is for the common people."
+								],
+								[
+									"5",
+									"I will do anything to protect the temple where I served."
+								],
+								[
+									"6",
+									"I seek to preserve a sacred text that my enemies consider heretical and seek to destroy."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I judge others harshly, and myself even more severely."
+								],
+								[
+									"2",
+									"I put too much trust in those who wield power within my temple's hierarchy."
+								],
+								[
+									"3",
+									"My piety sometimes leads me to blindly trust those that profess faith in my god."
+								],
+								[
+									"4",
+									"I am inflexible in my thinking."
+								],
+								[
+									"5",
+									"I am suspicious of strangers and expect the worst of them."
+								],
+								[
+									"6",
+									"Once I pick a goal, I become obsessed with it to the detriment of everything else in my life."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Charlatan",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"sleight of hand": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"special": "stoppered bottles filled with colored liquid",
+							"quantity": 10
+						}
+					],
+					"b": [
+						{
+							"special": "set of weighted dice"
+						}
+					],
+					"c": [
+						{
+							"special": " deck of marked cards"
+						}
+					],
+					"d": [
+						{
+							"special": " signet ring of an imaginary duke"
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Deception}, {@skill Sleight of Hand}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Tools of the con of your choice (ten stoppered bottles filled with colored liquid, a set of weighted dice, a deck of marked cards, or a signet ring of an imaginary duke), and a belt {@item pouch|phb} containing 15 gp"
+						}
+					]
+				},
+				{
+					"name": "Feature: False Identity",
+					"type": "entries",
+					"entries": [
+						"You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Favorite Schemes",
+					"type": "entries",
+					"entries": [
+						"Every charlatan has an angle he or she uses in preference to other schemes. Choose a favorite scam or roll on the table below.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Scam"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I cheat at games of chance."
+								],
+								[
+									"2",
+									"I shave coins or forge documents."
+								],
+								[
+									"3",
+									"I insinuate myself into people's lives to prey on their weakness and secure their fortunes."
+								],
+								[
+									"4",
+									"I put on new identities like clothes."
+								],
+								[
+									"5",
+									"I run sleight-of-hand cons on street corners."
+								],
+								[
+									"6",
+									"I convince people that worthless junk is worth their hard-earned money."
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"Charlatans are colorful characters who conceal their true selves behind the masks they construct. They reflect what people want to see, what they want to believe, and how they see the world. But their true selves are sometimes plagued by an uneasy conscience, an old enemy, or deep-seated trust issues.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I fall in and out of love easily, and am always pursuing someone."
+								],
+								[
+									"2",
+									"I have a joke for every occasion, especially occasions where humor is inappropriate."
+								],
+								[
+									"3",
+									"Flattery is my preferred trick for getting what I want."
+								],
+								[
+									"4",
+									"I'm a born gambler who can't resist taking a risk for a potential payoff."
+								],
+								[
+									"5",
+									"I lie about almost everything, even when there's no reason to."
+								],
+								[
+									"6",
+									"Sarcasm and insults are my weapons of choice."
+								],
+								[
+									"7",
+									"I keep multiple holy symbols on me and invoke whatever deity might come in useful at any given moment."
+								],
+								[
+									"8",
+									"I pocket anything I see that might have some value."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Independence. I am a free spirit\u2014no one tells me what to do. (Chaotic)"
+								],
+								[
+									"2",
+									"Fairness. I never target people who can't afford to lose a few coins. (Lawful)"
+								],
+								[
+									"3",
+									"Charity. I distribute the money I acquire to the people who really need it. (Good)"
+								],
+								[
+									"4",
+									"Creativity. I never run the same con twice. (Chaotic)"
+								],
+								[
+									"5",
+									"Friendship. Material goods come and go. Bonds of friendship last forever. (Good)"
+								],
+								[
+									"6",
+									"Aspiration. I'm determined to make something of myself. (Any)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I fleeced the wrong person and must work to ensure that this individual never crosses paths with me or those I care about."
+								],
+								[
+									"2",
+									"I owe everything to my mentor\u2014a horrible person who's probably rotting in jail somewhere."
+								],
+								[
+									"3",
+									"Somewhere out there, I have a child who doesn't know me. I'm making the world better for him or her."
+								],
+								[
+									"4",
+									"I come from a noble family, and one day I'll reclaim my lands and title from those who stole them from me."
+								],
+								[
+									"5",
+									"A powerful person killed someone I love. Some day soon, I'll have my revenge."
+								],
+								[
+									"6",
+									"I swindled and ruined a person who didn't deserve it. I seek to atone for my misdeeds but might never be able to forgive myself."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I can't resist a pretty face."
+								],
+								[
+									"2",
+									"I'm always in debt. I spend my ill-gotten gains on decadent luxuries faster than I bring them in."
+								],
+								[
+									"3",
+									"I'm convinced that no one could ever fool me the way I fool others."
+								],
+								[
+									"4",
+									"I'm too greedy for my own good. I can't resist taking a risk if there's money involved."
+								],
+								[
+									"5",
+									"I can't resist swindling people who are more powerful than me."
+								],
+								[
+									"6",
+									"I hate to admit it and will hate myself for it, but I'll run and preserve my own hide if the going gets tough."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Red Hand Criminal",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"stealth": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						"club|phb"
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Deception}, {@skill Stealth}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A {@item club}"
+						}
+					]
+				},
+				{
+					"name": "A Scoundrel and a Criminal",
+					"type": "entries",
+					"entries": [
+						"You are associated with the Red Hand, a criminal organization that stretches across the continent, dealing in matters of profit and crime. The dealings of the Hand are many, ranging from smuggling to extortion to outright murder.",
+						"The Hand is only a loose network, and generally exerts its influence by sponsoring local criminal groups with supplies and contacts, and collecting tribute from their profits. Little is known about the leaders of the Hand, even by its members.",
+						"At least for now, your name is clear, and no law enforcement is out for your blood. Perhaps your past is behind you, or perhaps you're simply laying low."
+					]
+				},
+				{
+					"name": "Feature: A Certain Acquaintance",
+					"type": "entries",
+					"entries": [
+						"You have 'associates' scattered across the world. In any major city, you can find a contact who can connect you to the criminal underground. At minimum, this contact can provide you with the following services:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								"Arrange for the commission and purchase of some Black Market goods, items, or upgrades",
+								"Fence stolen goods, though your contact will always take a cut"
+							]
+						}
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"Criminals might seem like villains on the surface, and many of them are villainous to the core. But some have an abundance of endearing, if not redeeming, characteristics. There might be honor among thieves, but criminals rarely show any respect for law or authority.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I always have a plan for when things go wrong."
+								],
+								[
+									"2",
+									"I am always calm, no matter what the situation. I never raise my voice or let my emotions control me."
+								],
+								[
+									"3",
+									"The first thing I do in a new place is note the locations of everything valuable\u2014or where such things could be hidden."
+								],
+								[
+									"4",
+									"I would rather make a new friend than a new enemy."
+								],
+								[
+									"5",
+									"I am incredibly slow to trust. Those who seem the fairest often have the most to hide."
+								],
+								[
+									"6",
+									"I don't pay attention to the risks in a situation. Never tell me the odds."
+								],
+								[
+									"7",
+									"The best way to get me to do something is to tell me I can't do it."
+								],
+								[
+									"8",
+									"I blow up at the slightest insult."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Honor. I don't steal from others in the trade. (Lawful)"
+								],
+								[
+									"2",
+									"Freedom. Chains are meant to be broken, as are those who would forge them. (Chaotic)"
+								],
+								[
+									"3",
+									"Charity. I steal from the wealthy so that I can help people in need. (Good)"
+								],
+								[
+									"4",
+									"Greed. I will do whatever it takes to become wealthy. (Evil)"
+								],
+								[
+									"5",
+									"People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)"
+								],
+								[
+									"6",
+									"Redemption. There's a spark of good in everyone. (Good)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I'm trying to pay off an old debt I owe to a generous benefactor."
+								],
+								[
+									"2",
+									"My ill-gotten gains go to support my family."
+								],
+								[
+									"3",
+									"Something important was taken from me, and I aim to steal it back."
+								],
+								[
+									"4",
+									"I will become the greatest thief that ever lived."
+								],
+								[
+									"5",
+									"I'm guilty of a terrible crime. I hope I can redeem myself for it."
+								],
+								[
+									"6",
+									"Someone I loved died because of a mistake I made. That will never happen again."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"When I see something valuable, I can't think about anything but how to steal it."
+								],
+								[
+									"2",
+									"When faced with a choice between money and my friends, I usually choose the money."
+								],
+								[
+									"3",
+									"If there's a plan, I'll forget it. If I don't forget it, I'll ignore it."
+								],
+								[
+									"4",
+									"I have a 'tell' that reveals when I'm lying."
+								],
+								[
+									"5",
+									"I turn tail and run when things look bad."
+								],
+								[
+									"6",
+									"An innocent person is in prison for a crime that I committed. I'm okay with that."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Entertainer",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"acrobatics": true,
+					"performance": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						"costume clothes|phb"
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Acrobatics}, {@skill Performance}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "{@item costume clothes|phb}"
+						}
+					]
+				},
+				{
+					"name": "Feature: Popular Demand",
+					"type": "entries",
+					"entries": [
+						"In populated areas, you can easily draw a moderate crowd toward your performance, potentially creating a distraction or commotion.",
+						"Additionally, while in a town or populated area, you can spend your long rest performing, which earns you 1 COIN (enough to cover adventuring expenses for the next adventuring day). Performing is a full time job that prevents you from participating in other downtime activities."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Specialty",
+					"type": "entries",
+					"entries": [
+						"A good entertainer is versatile, spicing up every performance with a variety of different routines. Choose one to three routines or roll on the table below to define your expertise as an entertainer.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d10",
+								"Routines"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Actor"
+								],
+								[
+									"2",
+									"Dancer"
+								],
+								[
+									"3",
+									"Fire-eater"
+								],
+								[
+									"4",
+									"Jester"
+								],
+								[
+									"5",
+									"Juggler"
+								],
+								[
+									"6",
+									"Instrumentalist"
+								],
+								[
+									"7",
+									"Poet"
+								],
+								[
+									"8",
+									"Singer"
+								],
+								[
+									"9",
+									"Storyteller"
+								],
+								[
+									"10",
+									"Tumbler"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"Successful entertainers have to be able to capture and hold an audience's attention, so they tend to have flamboyant or forceful personalities. They're inclined toward the romantic and often cling to high-minded ideals about the practice of art and the appreciation of beauty.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I know a story relevant to almost every situation."
+								],
+								[
+									"2",
+									"Whenever I come to a new place, I collect local rumors and spread gossip."
+								],
+								[
+									"3",
+									"I'm a hopeless romantic, always searching for that \"special someone\"."
+								],
+								[
+									"4",
+									"Nobody stays angry at me or around me for long, since I can defuse any amount of tension."
+								],
+								[
+									"5",
+									"I love a good insult, even one directed at me."
+								],
+								[
+									"6",
+									"I get bitter if I'm not the center of attention."
+								],
+								[
+									"7",
+									"I'll settle for nothing less than perfection."
+								],
+								[
+									"8",
+									"I change my mood or my mind as quickly as I change key in a song."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Beauty. When I perform, I make the world better than it was. (Good)"
+								],
+								[
+									"2",
+									"Tradition. The stories, legends, and songs of the past must never be forgotten, for they teach us who we are. (Lawful)"
+								],
+								[
+									"3",
+									"Creativity. The world is in need of new ideas and bold action. (Chaotic)"
+								],
+								[
+									"4",
+									"Greed. I'm only in it for the money and fame. (Evil)"
+								],
+								[
+									"5",
+									"People. I like seeing the smiles on people's faces when I perform. That's all that matters. (Neutral)"
+								],
+								[
+									"6",
+									"Honesty. Art should reflect the soul; it should come from within and reveal who we really are. (Any)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"My instrument is my most treasured possession, and it reminds me of someone I love."
+								],
+								[
+									"2",
+									"Someone stole my precious instrument, and someday I'll get it back."
+								],
+								[
+									"3",
+									"I want to be famous, whatever it takes."
+								],
+								[
+									"4",
+									"I idolize a hero of the old tales and measure my deeds against that person's."
+								],
+								[
+									"5",
+									"I will do anything to prove myself superior to my hated rival."
+								],
+								[
+									"6",
+									"I would do anything for the other members of my old troupe."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I'll do anything to win fame and renown."
+								],
+								[
+									"2",
+									"I'm a sucker for a pretty face."
+								],
+								[
+									"3",
+									"A scandal prevents me from ever going home again. That kind of trouble seems to follow me around."
+								],
+								[
+									"4",
+									"I once satirized a noble who still wants my head. It was a mistake that I will likely repeat."
+								],
+								[
+									"5",
+									"I have trouble keeping my true feelings hidden. My sharp tongue lands me in trouble."
+								],
+								[
+									"6",
+									"Despite my best efforts, I am unreliable to my friends."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},		
+		{
+			"name": "Guild Artisan",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"insight": true,
+					"persuasion": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"anyArtisansTool": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						{
+							"equipmentType": "toolArtisan"
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Insight}, {@skill Persuasion}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies:",
+							"entry": "One type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A set of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} (one of your choice)"
+						}
+					]
+				},
+				{
+					"name": "Feature: Mercantile Craftsmanship",
+					"type": "entries",
+					"entries": [
+						"As long as you are in a city or populated area, you can spend your long rest crafting objects according to your discipline, and selling them to interested parties. This prevents you from participating in other downtime activities but earns you 1d2 COIN."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Specialty",
+					"type": "entries",
+					"entries": [
+						"Choose what type of artisan you are, or roll randomly on the table below. ",
+						{
+							"type": "table",
+							"colLabels": [
+								"d20",
+								"Guild Business"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Alchemists and apothecaries"
+								],
+								[
+									"2",
+									"Armorers, locksmiths, and finesmiths"
+								],
+								[
+									"3",
+									"Brewers, distillers, and vintners"
+								],
+								[
+									"4",
+									"Calligraphers, scribes, and scriveners"
+								],
+								[
+									"5",
+									"Carpenters, roofers, and plasterers"
+								],
+								[
+									"6",
+									"Cartographers, surveyors, and chart-makers"
+								],
+								[
+									"7",
+									"Cobblers and shoemakers"
+								],
+								[
+									"8",
+									"Cooks and bakers"
+								],
+								[
+									"9",
+									"Glassblowers and glaziers"
+								],
+								[
+									"10",
+									"Jewelers and gemcutters"
+								],
+								[
+									"11",
+									"Leatherworkers, skinners, and tanners"
+								],
+								[
+									"12",
+									"Masons and stonecutters"
+								],
+								[
+									"13",
+									"Painters, limners, and sign-makers"
+								],
+								[
+									"14",
+									"Potters and tile-makers"
+								],
+								[
+									"15",
+									"Shipwrights and sail-makers"
+								],
+								[
+									"16",
+									"Smiths and metal-forgers"
+								],
+								[
+									"17",
+									"Tinkers, pewterers, and casters"
+								],
+								[
+									"18",
+									"Wagon-makers and wheelwrights"
+								],
+								[
+									"19",
+									"Weavers and dyers"
+								],
+								[
+									"20",
+									"Woodcarvers, coopers, and bowyers"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"Guild artisans are among the most ordinary people in the world—until they set down their tools and take up an adventuring career. They understand the value of hard work and the importance of community, but they're vulnerable to sins of greed and covetousness.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I believe that anything worth doing is worth doing right. I can't help it—I'm a perfectionist."
+								],
+								[
+									"2",
+									"I'm a snob who looks down on those who can't appreciate fine art."
+								],
+								[
+									"3",
+									"I always want to know how things work and what makes people tick."
+								],
+								[
+									"4",
+									"I'm full of witty aphorisms and have a proverb for every occasion."
+								],
+								[
+									"5",
+									"I'm rude to people who lack my commitment to hard work and fair play."
+								],
+								[
+									"6",
+									"I like to talk at length about my profession."
+								],
+								[
+									"7",
+									"I don't part with my money easily and will haggle tirelessly to get the best deal possible."
+								],
+								[
+									"8",
+									"I'm well known for my work, and I want to make sure everyone appreciates it. I'm always taken aback when people haven't heard of me."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Community. It is the duty of all civilized people to strengthen the bonds of community and the security of civilization. (Lawful)"
+								],
+								[
+									"2",
+									"Generosity. My talents were given to me so that I could use them to benefit the world. (Good)"
+								],
+								[
+									"3",
+									"Freedom. Everyone should be free to pursue his or her own livelihood. (Chaotic)"
+								],
+								[
+									"4",
+									"Greed. I'm only in it for the money. (Evil)"
+								],
+								[
+									"5",
+									"People. I'm committed to the people I care about, not to ideals. (Neutral)"
+								],
+								[
+									"6",
+									"Aspiration. I work hard to be the best there is at my craft. (Any)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"The workshop where I learned my trade is the most important place in the world to me."
+								],
+								[
+									"2",
+									"I created a great work for someone, and then found them unworthy to receive it. I'm still looking for someone worthy."
+								],
+								[
+									"3",
+									"I owe my guild a great debt for forging me into the person I am today."
+								],
+								[
+									"4",
+									"I pursue wealth to secure someone's love."
+								],
+								[
+									"5",
+									"One day I will return to my guild and prove that I am the greatest artisan of them all."
+								],
+								[
+									"6",
+									"I will get revenge on the evil forces that destroyed my place of business and ruined my livelihood."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I'll do anything to get my hands on something rare or priceless."
+								],
+								[
+									"2",
+									"I'm quick to assume that someone is trying to cheat me."
+								],
+								[
+									"3",
+									"No one must ever learn that I once stole money from guild coffers."
+								],
+								[
+									"4",
+									"I'm never satisfied with what I have—I always want more."
+								],
+								[
+									"5",
+									"I would kill to acquire a noble title."
+								],
+								[
+									"6",
+									"I'm horribly jealous of anyone who can outshine my handiwork. Everywhere I go, I'm surrounded by rivals."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Exiled Hermit",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"arcana": true,
+					"religion": true
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Arcana}, {@skill Religion}"
+						}
+					]
+				},
+				{
+					"name": "Feature: Discovery",
+					"type": "entries",
+					"entries": [
+						"The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the people who or consigned you to exile, and hence the reason for your return to society.",
+						"Work with your DM to determine the details of your discovery and its impact on the campaign."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Specialty",
+					"type": "entries",
+					"entries": [
+						"What was the reason for your isolation, and what changed to allow you to end your solitude? You can work with your DM to determine the exact nature of your seclusion, or you can choose or roll on the table below to determine the reason behind your seclusion.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Life of Seclusion"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I was searching for spiritual enlightenment."
+								],
+								[
+									"2",
+									"I was partaking of communal living in accordance with the dictates of a religious order."
+								],
+								[
+									"3",
+									"I was exiled for a crime I didn't commit."
+								],
+								[
+									"4",
+									"I retreated from society after a life-altering event."
+								],
+								[
+									"5",
+									"I needed a quiet place to work on my art, literature, music, or manifesto."
+								],
+								[
+									"6",
+									"I needed to commune with nature, far from civilization."
+								],
+								[
+									"7",
+									"I was the caretaker of an ancient ruin or relic."
+								],
+								[
+									"8",
+									"I was a pilgrim in search of a person, place, or relic of spiritual significance."
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"Some hermits are well suited to a life of seclusion, whereas others chafe against it and long for company. Whether they embrace solitude or long to escape it, the solitary life shapes their attitudes and ideals. A few are driven slightly mad by their years apart from society.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I've been isolated for so long that I rarely speak, preferring gestures and the occasional grunt."
+								],
+								[
+									"2",
+									"I am utterly serene, even in the face of disaster."
+								],
+								[
+									"3",
+									"The leader of my community had something wise to say on every topic, and I am eager to share that wisdom."
+								],
+								[
+									"4",
+									"I feel tremendous empathy for all who suffer."
+								],
+								[
+									"5",
+									"I'm oblivious to etiquette and social expectations."
+								],
+								[
+									"6",
+									"I connect everything that happens to me to a grand, cosmic plan."
+								],
+								[
+									"7",
+									"I often get lost in my own thoughts and contemplation, becoming oblivious to my surroundings."
+								],
+								[
+									"8",
+									"I am working on a grand philosophical theory and love sharing my ideas."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Greater Good. My gifts are meant to be shared with all, not used for my own benefit. (Good)"
+								],
+								[
+									"2",
+									"Logic. Emotions must not cloud our sense of what is right and true, or our logical thinking. (Lawful)"
+								],
+								[
+									"3",
+									"Free Thinking. Inquiry and curiosity are the pillars of progress. (Chaotic)"
+								],
+								[
+									"4",
+									"Power. Solitude and contemplation are paths toward mystical or magical power. (Evil)"
+								],
+								[
+									"5",
+									"Live and Let Live. Meddling in the affairs of others only causes trouble. (Neutral)"
+								],
+								[
+									"6",
+									"Self-Knowledge. If you know yourself, there's nothing left to know. (Any)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Nothing is more important than the other members of my hermitage, order, or association."
+								],
+								[
+									"2",
+									"I entered seclusion to hide from the ones who might still be hunting me. I must someday confront them."
+								],
+								[
+									"3",
+									"I'm still seeking the enlightenment I pursued in my seclusion, and it still eludes me."
+								],
+								[
+									"4",
+									"I entered seclusion because I loved someone I could not have."
+								],
+								[
+									"5",
+									"Should my discovery come to light, it could bring ruin to the world."
+								],
+								[
+									"6",
+									"My isolation gave me great insight into a great evil that only I can destroy."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Now that I've returned to the world, I enjoy its delights a little too much."
+								],
+								[
+									"2",
+									"I harbor dark, bloodthirsty thoughts that my isolation and meditation failed to quell."
+								],
+								[
+									"3",
+									"I am dogmatic in my thoughts and philosophy."
+								],
+								[
+									"4",
+									"I let my need to win arguments overshadow friendships and harmony."
+								],
+								[
+									"5",
+									"I'd risk too much to uncover a lost bit of knowledge."
+								],
+								[
+									"6",
+									"I like keeping secrets and won't share them with anyone."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Guild Venandi Mercenary",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"athletics": true,
+					"persuasion": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						{
+							"special": "A Guild Venandi emblem"
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Athletics}, {@skill Persuasion}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A Guild Venandi badge"
+						}
+					]
+				},
+				{
+					"name": "Blade-for-Hire",
+					"type": "entries",
+					"entries": [
+						"You used to work as part of a minor Guild Venandi mercenary company, as a hired sell-sword or battlemage. Although you're no longer an active mercenary, having taken a leave to undertake another pursuit (maybe temporarily), you still retain your old knowledge and contacts.",
+						"Guild Venandi is a savvy organization, and is paid both for their ability to enact violence and to do nothing. Many nobles have purchased a contract of protection from the Guild, which guarantees that no Guild mercenary will lift a blade against them- including you. Any local Guild office can provide you with a list of people under such protection."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Feature: Mercenary Life",
+					"type": "entries",
+					"entries": [
+						"You can recognize the emblems of well-known Guild Venandi mercenary bands, and you know some basic information about their members. Guild mercenaries will often share interesting local gossip and rumours with you.",
+						"Although the Guild won't allow you to take contracts while working with non-Guild characters, you still have limited access to guild files. As part of a long rest, you can request a single dossier on a well-known local figure, which contains a brief summary of their combat ability (if any) and political connections."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Banished Noble",
+			"source": "MOD",
+			"basicRules": true,
+			"skillProficiencies": [
+				{
+					"history": true,
+					"persuasion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 1
+				}
+			],
+			"toolProficiencies": [
+				{
+					"gaming set": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						"fine clothes|phb",
+						"signet ring|phb"
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill History}, {@skill Persuasion}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies:",
+							"entry": "One type of {@filter gaming set|items|source=phb|miscellaneous=mundane|type=gaming set}"
+						},
+						{
+							"type": "item",
+							"name": "Languages:",
+							"entry": "One of your choice"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A set of {@item fine clothes|phb}, a {@item signet ring|phb}, 3 COIN"
+						}
+					]
+				},
+				{
+					"name": "Feature: Exiled Nobility",
+					"type": "entries",
+					"entries": [
+						"Though your family no longer offers you direct support, your name and seal still opens doors. Local nobility will often open their doors to an audience with you, and many officials will at least know your name. "
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Royalty in Exile",
+					"type": "entries",
+					"entries": [
+						"You are a scion of a minor noble house or mercantile company, banished and sent into the world. Your name still carries weight, but you can no longer rely upon their direct support or favor, until you can find some way of regaining their favor and reclaiming your rightful status. Choose the reason for your exile, or roll on the table below.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Reason for Exile"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"A corrupt relative or associate conspired to have me banished so they could usurp my status and wealth."
+								],
+								[
+									"2",
+									"I was caught in an embarassing scandal, and was banished to dissociate myself from the family."
+								],
+								[
+									"3",
+									"I was implicated in a serious crime, and my family connections put me in exile instead of prison."
+								],
+								[
+									"4",
+									"My family house was attacked by a rival, and I was sent away to keep me safe."
+								],
+								[
+									"5",
+									"I was sent into the world to gain some proper experience, away from the coddling crutches of nobility."
+								],
+								[
+									"6",
+									"Banished? Ridiculous. I left of my own accord."
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"Nobles are born and raised to a very different lifestyle than most people ever experience, and their personalities reflect that upbringing. A noble title comes with a plethora of bonds\u2014responsibilities to family, to other nobles (including the sovereign), to the people entrusted to the family's care, or even to the title itself. But this responsibility is often a good way to undermine a noble.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world."
+								],
+								[
+									"2",
+									"The common folk love me for my kindness and generosity."
+								],
+								[
+									"3",
+									"No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses."
+								],
+								[
+									"4",
+									"I take great pains to always look my best and follow the latest fashions."
+								],
+								[
+									"5",
+									"I don't like to get my hands dirty, and I won't be caught dead in unsuitable accommodations."
+								],
+								[
+									"6",
+									"Despite my noble birth, I do not place myself above other folk. We all have the same blood."
+								],
+								[
+									"7",
+									"My favor, once lost, is lost forever."
+								],
+								[
+									"8",
+									"If you do me an injury, I will crush you, ruin your name, and salt your fields."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Respect. Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity. (Good)"
+								],
+								[
+									"2",
+									"Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)"
+								],
+								[
+									"3",
+									"Independence. I must prove that I can handle myself without coddling from my family. (Chaotic)"
+								],
+								[
+									"4",
+									"Power. If I can attain more power, no one will tell me what to do. (Evil)"
+								],
+								[
+									"5",
+									"Family. Blood runs thicker than water. (Any)"
+								],
+								[
+									"6",
+									"Noble Obligation. It is my duty to protect and care for the people beneath me. (Good)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I will face any challenge to win the approval of my family."
+								],
+								[
+									"2",
+									"My house's alliance with another noble family must be sustained at all costs."
+								],
+								[
+									"3",
+									"Nothing is more important than the other members of my family."
+								],
+								[
+									"4",
+									"I am in love with the heir of a family that my family despises."
+								],
+								[
+									"5",
+									"My loyalty to my sovereign is unwavering."
+								],
+								[
+									"6",
+									"The common folk must see me as a hero of the people."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I secretly believe that everyone is beneath me."
+								],
+								[
+									"2",
+									"I hide a truly scandalous secret that could ruin my family forever."
+								],
+								[
+									"3",
+									"I too often hear veiled insults and threats in every word addressed to me, and I'm quick to anger."
+								],
+								[
+									"4",
+									"I have an insatiable desire for carnal pleasures."
+								],
+								[
+									"5",
+									"In fact, the world does revolve around me."
+								],
+								[
+									"6",
+									"By my words and actions, I often bring shame to my family."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Occult Sage",
+			"source": "MOD",
+			"basicRules": true,
+			"skillProficiencies": [
+				{
+					"arcana": true,
+					"history": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"any": 1
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						{
+							"special": "letter from a dead colleague posing a question you have not yet been able to answer"
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Arcana}, {@skill History}"
+						},
+						{
+							"type": "item",
+							"name": "Languages:",
+							"entry": "One of your choice (including exotic languages)"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "a letter from a dead colleague posing a question you have not yet been able to answer"
+						}
+					]
+				},
+				{
+					"name": "Feature: Accursed Knowledge",
+					"type": "entries",
+					"entries": [
+						"You know the ritual required to access the Accursed Archive, a dark and labyrinthine library filled with ancient and lost information. It is said that every piece of written knowledge is stored in the Archive somewhere, amongst the stygian halls- though finding it is no easy task.",
+						"Accessing the Archive requires 5 COIN worth of rare components (incense, magic ink, etc), and the sacrifice of a humanoid creature's life in the hall of a library, bookstore, or similar location. The ritual takes 1 hour to conduct, and opens the passage to the Archive for exactly 7 hours.",
+						"The Archive is a dangerous place. Common knowledge may be plundered from it easily enough, but rare and obscure knowledge requires you to spend a long time searching the shelves and piercing together knowledge from various sources- all while avoiding the Archive's other denizens."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Academy Scholar",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"arcana",
+							"history",
+							"medicine",
+							"religion",
+							"nature"
+						],
+						"count": 2
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "Choose two from among {@skill Arcana}, {@skill History}, {@skill Nature}, {@skill Medicine}, and {@skill Nature}"
+						}
+					]
+				},
+				{
+					"name": "Hunted Academic",
+					"type": "entries",
+					"entries": [
+						"You are a minor member of the Venerated Academy of Natural Philosophers, a loose and hidden network of mages, scholars, and seekers of knowledge, forced into hiding to avoid persecution at the hand of the Blazing Rose. The Academy is heavily decentralized, organized into loose factions and full of independent personalities, and strives toward no ideal other than secrecy and survival. The singular, overarching principal of the Academy is secrecy, and disclosing information about the Academy to outsiders is to be done with utmost care- lest a leaked rumor lead to your expulsion."
+					]
+				},
+				{
+					"name": "Feature: Three Days of Silence",
+					"type": "entries",
+					"entries": [
+						"The Academy has a Rule: any member of the Academy must offer hospitality to a fellow member in dire need, sheltering them from whatever forces are pursuing them, and to keep them safe for three days. This rule applies no matter the personal relationship between the members in question, which can lead to a tense few days if a mage finds themselves harboring a sworn enemy. Once the three days are over, the host is freed of their obligation, and the guest cannot invoke the Three Days rule with the host again until a year has passed.",
+						"As an academy member in good standing, you are entitled to invoke this aid with any Academy member when you find yourself in danger, and they will provide you shelter, though they are not obligated to fight in your defense. If you invoke this aid, you are bound to certain obligations- you may not act against your host in any way while you are a guest, nor may you use any information you glean as a guest against your host in the future.",
+						"Academy scholars are, necessarily, a secretive lot, and do not make themselves readily known. When visiting a new area, it is often wise to track down the location of an Academic before you need it. An Academic is under no obligation to aid you outside of the Three Days rule.",
+						"Breaking the Three Days rule will result in you permanently being banished from the Academy."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Custom Background",
+			"source": "MOD",
+			"skillProficiencies": [
+				{
+					"any": 2
+				}
+
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "Any 2"
+						}
+					]
+				},
+				{
+					"name": "Feature: Custom Background",
+					"type": "entries",
+					"entries": [
+						"Either work with the DM to decide a custom background feat, or learn 1 additional skill and 1 additional standard language."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			],
+			"hasFluff": true
+		}
+		
 	],
 	"race": [
-		
+		{
+			"name": "Elf",
+			"source": "MOD",
+			"page": 21,
+			"srd": true,
+			"basicRules": true,
+			"hasFluff": true,
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"ability": [
+				{
+					"choose": {
+						"from":
+						[
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 2,
+						"amount": [
+							2,
+							1
+						]
+					}
+				}
+			],
+			"age": {
+				"mature": 50,
+				"max": 750
+			},
+			"skillProficiencies": [
+				{
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": true,
+					"elvish": true
+				}
+			],
+			"entries": [
+				{
+					"name": "Languages",
+					"entries": [
+						"You can speak, read, and write Elvish and one standard language of your choice; common choices are {@language Aesean|MOD}, {@language Eglisian|MOD} or {@language Stellen|MOD}, the three major languages of the human nations."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "A Story told on Skin",
+					"entries": [
+						"Elves have the story of their past tattooed onto them with magical ink at a young age. These tattoos depict some of the major accomplishments of your past lives, and are magically enchanted to move and shift upon your skin in minor ways (for example, depicting a past life plunging a sword into a monster's chest)."
+					],
+					"type": "entries"
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"name": "Age",
+						"type": "entries",
+						"entries": [
+							"Elves reach physical and mental maturity at approximately thirty, and it is about this time that their ancestral traits begin to appear, as per their Reincarnation feature. An elf can live up to 150 years, but their Reincarnation feature gives them a mental capacity far beyond their physical age."
+						]
+					},
+					{
+						"type": "entries",
+						"name": "Size",
+						"entries": [
+							"Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium."
+						]
+					},
+					{
+						"name": "Reincarnation",
+						"entries": [
+							"Elves are subject to a strict reincarnation cycle. Upon death, an elf's soul is transferred to a newborn body to start life anew- but every soul carries with it the memory of its past lives. A newborn elf starts with no memory of its past, but as they age, they slowly begin to remember more and more of their past. When an elf reaches adulthood, their past self begins to emerge, overwhelming and integrating any existing personality, though it takes a long time to truly reacquire all the memories and faculties of the past.",
+							"The process of regaining one's personality is a slow one that plays out in real-time. If a hundred-year-old elf dies, they won't truly feel like themselves until their next life approaches a century of age. Many elves find themselves striving to live long enough to re-achieve a past version of themselves they remember, and perhaps to live for long enough past that to build more memories.",
+							"Most elves have tattoos depicting the great deeds of their past selves adorning their body, both to indicate their past to others and to help themselves recall.",
+							"Not all elves are willing participants of the Cycle. Some elves choose to sever themselves from their past lives before reaching adulthood, claiming their lives for themselves. These elves are ostracized from elven society, and some elves even view this as a form of murder. These elves in turn consider the cycle a curse that roots their species firmly in the past. Although they can prevent their past selves from emerging in their psyche, they are powerless to force their descendents to do the same to themselves."
+						],
+						"type": "entries"
+					}
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Human",
+			"source": "MOD",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"ability": [
+				{
+					"choose": {
+						"from":
+						[
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 2,
+						"amount": [
+							2,
+							1
+						]
+					}
+				}
+			],
+			
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"entries": [
+				{
+					"name": "Languages",
+					"entries": [
+						"You can speak, read, and write two standard languages of your choice. Generally one of these languages includes the local language of wherever you are starting the adventure (Stellen, Aesean, or Eglisian)."
+					],
+					"type": "entries"
+				}
+			]
+		},
+		{
+			"name": "Tauran",
+			"source": "MOD",
+			"hasFluff": true,
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"ability": [
+				{
+					"choose": {
+						"from":
+						[
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 2,
+						"amount": [
+							2,
+							1
+						]
+					}
+				}
+			],
+			"age": {
+				"mature": 18,
+				"max": 120
+			},
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from":
+						[
+							"Nature",
+							"Medicine",
+							"Performance",
+							"Survival"
+						]
+					}
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 1,
+					"tauran": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "wis",
+					"known": {
+						"1": {
+							"_": [
+								{
+									"choose": "level=0|class=Druid"
+								}
+							]
+						}
+					}
+				}
+			],
+			"entries": [
+				{
+					"name": "Languages",
+					"entries": [
+						"You can speak Tauran, though the language is entirely oral; there exists no formalized written Tauran script.",
+						"Additionally, you know one standard language of your choice; common choices are {@language Aesean|MOD}, {@language Eglisian|MOD} or {@language Stellen|MOD}, the three major languages of the human nations."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Tauran Horns",
+					"entries": [
+						"You bear a set of great bull horns upon your head, which you can use as a natural weapon. These {@item tauran horns|MOD} deal 1d8 bludgeoning damage, and if you move at least 20 feet straight toward a creature at most 1 size category larger than you immediately before hitting them with a horn attack, they must succeed on a Strength saving throw or be pushed 10 feet away from you.",
+						"Like most weaponry, your horns can be plated with other material, and can be upgraded once. See {@variantrule FORGE|MOD} for more details.",
+						"Most Tauran decorate their horns, using a variety of pigments and dyes to do so, or carving patterns into the bone."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Charge",
+					"entries": [
+						"As a bonus action, you can move up to your speed in a straight line. You can use this trait a number of times equal to your proficiency bonus, and you regain all uses after completing a long rest."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Thick Skinned",
+					"entries": [
+						"Your hit point maximum increases by 1, and increases by 1 every time you reach an odd level."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Traditional Training",
+					"entries": [
+						"You learn one {@filter druid cantrip|spells|level=0|class=druid} of your choice. Wisdom is your spellcasting ability for this cantrip.",
+						"You gain proficiency in the Nature, Medicine, Performance, or Survival skill. You also gain one proficiency in a set of Artisan's tools or a Musical Instrument."
+					],
+					"type": "entries"
+				}
+			],
+			"fluff":{
+				"entries": [
+					{
+						"name": "The Nomadic Bulls",
+						"entries": [
+							"The Tauran are tribes of nomadic bull-people (you might consider them minotaurs, despite the anachronism), who wander the continent and live via a hunter-gatherer lifestyle. Rejecting the laws of the Three Nations, the Tauran live by their own code, preferring to be as uninvolved as possible with the affairs of mankind. The Tauran spend their lives traveling the land, hunting for food, and tending to spiritual and artistic pursuits. The wandering tribes tend to avoid big cities, but will sometimes visit smaller settlements to trade wares.",
+							"Although some mortals cling to the ignorant image of the bull-headed brute bearing an axe and thirsting in bloodlust, the Tauran are often quite intelligent, having learned through the oral traditions of their tribe and possessing a deep knowledge of the natural world. The Tauran value artistic achievement quite highly, and boast some of the most talented musicians and craftsmen on the continent. This is not to say that the Tauran are pacifists; the bulls consider warfare to be an art form of its own.",
+							"Taurans value honesty and creativity, and tend to be a frank and direct people. Both literally and metaphorically thick-skinned, they look poorly on white lies and are open and honest about their feelings, which sometimes leads to misunderstandings with other cultures.",
+							"The Three Nations have a poor view of Taurans in general, as any state is wont to do, against people who refuse their governance, which is certainly not aided by the occasional conflict between the Tribes and Nations that marrs the record of history. This attitude tends to bleed into the citizens, and so across the three nations, Taurans find themselves less-than-liked; not actively harassed, usually, but certainly distrusted. Of course, individual opinions vary. In turn, Taurans tend to distrust humans upon first meeting them, as most Tribes have at least a few stories of malicious humans assaulting the Tribe. Settlements that have frequent contact with Taurans tend to view them in a better light, as long as relations have been peaceful."
+						],
+						"type": "entries"
+					},
+					{
+						"name": "Leaving the Tribe",
+						"entries": [
+							"Though most Tauran live and die within their tribe, some Tauran choose to leave and seek their fortunes elsewhere, often in human civilization. This is a difficult choice for any Tauran to make; when a Tauran decides to leave, the Tribe throws them a funeral, honoring their achievements within the tribe and mourning their departure. After they leave, the tribe grieves their loss, as a Tauran who leaves the tribe is considered to be deceased, and cannot return to the Tauran Tribes."
+						],
+						"type": "entries"
+					},
+					{
+						"name": "Age",
+						"type": "entries",
+						"entries": [
+							"Tauran"
+						]
+					},
+					{
+						"type": "entries",
+						"name": "Size",
+						"entries": [
+							"Taurans are built rather larger than humans, generally ranging from 5 and a half to 7 feet tall. They are still considered Medium creatures."
+						]
+					}
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Changeling",
+			"source": "MOD",
+			"hasFluff": true,
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"ability": [
+				{
+					"choose": {
+						"from":
+						[
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 2,
+						"amount": [
+							2,
+							1
+						]
+					}
+				}
+			],
+			"age": {
+				"mature": 18,
+				"max": 80
+			},
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"entries": [
+				{
+					"name": "Languages",
+					"entries": [
+						"You know two standard languages of your choice; common choices are {@language Aesean|MOD}, {@language Eglisian|MOD} or {@language Stellen|MOD}, the three major languages of the human nations."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Facethief",
+					"entries": [
+						"As an action, you can touch a humanoid and magically adopt their form, fully changing your appearance to match theirs. This transformation holds up to physical inspection, and is extensive enough that you can become Small to match the size of your target, though it cannot create additional limbs. Your clothes and equipment aren't changed by this trait, nor are non-physical features (such as your voice).",
+						"The exception to this trait is your eyes, which remain violet no matter what form you copy.",
+						"If you attempt to copy the form of an unwilling creature who is aware of you (or otherwise on alert), you must first succeed on a contested Dexterity check.",
+						"Your transformation lasts for eight hours or until you end it by using an action to return to your true form, or to use this trait again. Once you use this ability on a creature, you cannot use it on the same creature again until you complete a long rest.",
+						"You count as a shapeshifter due to this ability. Your true form is your undisguised self."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Sympathetic Memory",
+					"entries": [
+						"When you steal the face of another creature, you also gain a small smattering of their memories. While transformed with your Facethief trait, you gain the following:",
+						{
+							"type": "list",
+							"items": [
+									"Proficiency in one skill that your target is proficient in. This skill is selected randomly from your target's proficiencies, though it cannot be a skill you are otherwise already proficient in unless there are no other choices. If your target is an unknown NPC- for example, a stranger on the street, or a random bar patron, the DM may opt to simply pick a skill randomly.",
+									"One memory of the target from the last 24 hours, determined by the DM"
+							]
+						},
+						"These benefits last until you change to another form, or until you revert to your true form."
+					],
+					"type": "entries"
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"name": "Hated, Hunted, Hidden",
+						"entries": [
+							"A changeling's lot in life is an unfortunate one. Not a true race in any sense, but rather an aberrant phenomenon, children are occasionally born with mottled-gray skin, bright violet eyes, and a strange ability to adopt the appearance of others. This is widely considered an unnerving, dangerous ability, and many changelings never make it through childhood, as many communities simply abandon changeling children in the woods. Those few who survive- or had kinder parents- grow up in a world that despises their kind, viewing changelings as troublemakers and criminals at best, and aberrant monstrosities at worst. Being a changeling is often considered sufficient reason to be arrested and interrogated by the local watch, or to be captured by the Blazing Rose and whisked away to their hidden strongholds, never to be seen again.",
+							"Little wonder, then, that most changelings spend their lives in hiding, borrowing the faces of others to survive in a hostile world. A cruel cycle- mortals despise changelings for their shape-stealing abilities, which only forces them to rely upon them more. Even those who don't seek to persecute changelings are often looking to use them- changelings are naturally excellent spies and infiltrators, and most governments would be eager ot employ one- though on a very tight leash."
+						],
+						"type": "entries"
+					},
+					{
+						"name": "A Crisis of Identity",
+						"entries": [
+							"Changelings spend their lives adopting the faces and memories of others, and this inevitably leads to an amount of confusion. They very often find themselves mimicking the vocal tics of others, dreaming their dreams, haunted by memories that are not theirs. Some changelings who master the art of shapeshifting can retain a stolen form indefinitely, and craft permanent lives under a assumed face. Others become wanderers, flickering from face to face, accumulating a hoard of memories until they can't keep track which memories belong to whom. Unfortunately, changelings have a higher-than-average rate delerium and selinity in old age.",
+							"When making a changeling character, consider how they view their powers, and the storm of memories that linger within them. Do they live life fast and loose, distrusting the memories of yesterday? Do they guard their memories closely, precious slivers of passing lives? Do they prefer to steal from a sea of random faces, each a fleeting moment in existence, or do they secretly have a small number of known contacts whose faces they steal regularly, trading the distance of anonymity for consistency, and an almost vicarious experience throuhg their lives?"
+						],
+						"type": "entries"
+					}
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Suntouched",
+			"source": "MOD",
+			"hasFluff": true,
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"creatureTypes": [
+				"celestial",
+				"humanoid"
+			],
+			"additionalSpells": [
+				{
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"known": {
+						"1": [
+							"light#c"
+						]
+					}
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from":
+						[
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 2,
+						"amount": [
+							2,
+							1
+						]
+					}
+				}
+			],
+			"age": {
+				"mature": 18,
+				"max": 120
+			},
+			"languageProficiencies": [
+				{
+					"anyStandard": 1
+				}
+			],
+			"resist": [
+				"radiant"
+			],
+			"entries": [
+				{
+					"name": "Age",
+					"entries": [
+						"Suntouched live unnaturally short lives, as the divine power that resides in them burns through their mortal body and leaves them empty, bereft of life and light. No suntouched lives past the age of 27.",
+						"All Suntouched have an innate sense of when their life is coming to its natural end. Every year starting at the age of 20, roll a d8 and add it to your age. If the result is 27 or above, you know you will die within the next year. (This only accounts for the natural death of a suntouched's soul extinguishing itself, and not death by external cause).",
+						"No known force can avert or slow a suntouched's innate mortality, except by abandoning the race entirely (as per a {@spell reincarnate} spell. A suntouched that refuses their natural death becomes Scorched instead, and is forced to consume an ever-increasing quantity of fuel to keep their light burning."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Languages",
+					"entries": [
+						"You know one standard language of your choice; common choices are {@language Aesean|MOD}, {@language Eglisian|MOD} or {@language Stellen|MOD}, the three major languages of the human nations."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Healing Hands",
+					"entries": [
+						"As an action, you can touch a creature and roll a number of d4s equal to your proficiency bonus. The creature regains a number of hit points equal to the total rolled. You can use this trait twice per long rest."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Heritage of Light",
+					"entries": [
+						"You have resistance to radiant damage. Additionally, your eyes are continually ablaze with a brilliant radiance which are clearly visible in dim light or darkness, immediately revealing your celestial nature to those around you. The glow of your eyes persists even through magic intended to disguise you, and even if your physical form changes (such as through wildshape or {@spell polymorph})."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Cantrip",
+					"entries": [
+						"You know the {@spell light} cantrip. You may choose Intelligence, Charisma, or Wisdom as your spellcasting ability for this cantrip."
+					],
+					"type": "entries"
+				},
+				{
+					"type": "entries",
+					"name": "Celestial Revelation",
+					"entries": [
+						"When you reach 3rd level, choose one of the revelation options below. Thereafter, you can use a bonus action to unleash the celestial energy within yourself, gaining the benefits of that revelation. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation below, you can't use it again until you finish a long rest.",
+						{
+							"type": "list",
+							"items": [
+								{
+									"type": "item",
+									"name": "Radiant Consumption",
+									"entry": "Searing light temporarily radiates from your eyes and mouth. For the duration, you shed bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes radiant damage equal to your proficiency bonus. Until the transformation ends, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus."
+								},
+								{
+									"type": "item",
+									"name": "Radiant Soul",
+									"entry": "Two luminous, spectral wings sprout from your back temporarily. Until the transformation ends, you have a flying speed equal to your walking speed, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus."
+								}
+							],
+							"style": "list-hang-notitle"
+						}
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"name": "Blessed Warriors, Doomed Souls",
+						"entries": [
+							"A suntouched is both a blessed and a doomed individual. They are born with a gleaming light shining in their eyes and power running through their veins, and they are said to be destined for greatness. However, this power has a cost; a suntouched is like a great fire- it burns so fiercely that it consumes itself, leaving nothing left. A suntouched does not live past twenty-seven naturally, and even otherwise potent magics are helpless to stop or slow the aging of a suntouched.",
+							"Some suntouched come to embrace their role and power, taking it upon themselves to spend their brief lives protecting those they care about. Others resent the touch of the sun as a burden, preventing them from living a normal life. Regardless, suntouched tend to be reckless beings driven by passion. Many seek to place a lasting mark upon the world in their brief existence, so that their legacy may live on past their mortal forms."
+						],
+						"type": "entries"
+					},
+					{
+						"name": "Mortality",
+						"entries": [
+							"The spectre of mortality hangs over the head of every suntouched like the reaper's axe, ready to strike. When making a suntouched character, consider: How do you cope with the inevitability of your end? Will you go gently into that good night? Or do you intend to cling to the precious gift of life?"
+						],
+						"type": "entries"
+					}
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sunscorched",
+			"source": "MOD",
+			"hasFluff": true,
+			"size": [
+				"M"
+			],
+			"creatureTypes": [
+				"humanoid",
+				"celestial"
+			],
+			"speed": 30,
+			"ability": [
+				{
+					"choose": {
+						"from":
+						[
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 2,
+						"amount": [
+							2,
+							1
+						]
+					}
+				}
+			],
+			"age": {
+				"mature": 18,
+				"max": 120
+			},
+			"skillProficiencies": [
+				{
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 1
+				}
+			],
+			"entries": [
+				{
+					"name": "Dying Light",
+					"entries": [
+						"A suntouched becomes a sunscorched if they refuse to die a natural death, and instead fuel the burning light inside of them with an increasing quantity of fuel. A sunscorced can theoretically live forever, but the need for fuel grows continually over time. See the Info tab for additional information.",
+						"A sunscorched does not need to eat or drink normally; instead, they consume fuel and kindling to survive. See the Info tab for details, and for the progression of the sunscorched's hunger."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Languages",
+					"entries": [
+						"You know one standard language of your choice; common choices are {@language Aesean|MOD}, {@language Eglisian|MOD} or {@language Stellen|MOD}, the three major languages of the human nations.",
+						"If you adopt this race after exceeding your lifespan as a Suntouched, you gain no new languages, and you retain whatever languages you had preivously."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Absorb Vitality",
+					"entries": [
+						"As an action, you may make an unarmed attack against an adjacent creature. If it hits, it deals {@damage 3d10} necrotic damage and you heal by the amount of damage done.",
+						"You can use this feature a number of times equal to your proficiency bonus. You regain all uses upon completing a long rest."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Scorched Form",
+					"entries": [
+						"You have resistance to necrotic damage. Additionally, your eyes are suffused with a dim, orange glow, like that of a smouldering piece of coal, immediately revealing your celestial nature to those around you. The glow of your eyes persists even through magic intended to disguise you, and even if your physical form changes (such as through wildshape or {@spell polymorph})."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Cantrip",
+					"entries": [
+						"You know the {@spell scorch|COFS:A} cantrip. You may choose Intelligence, Charisma, or Wisdom as your spellcasting ability for this cantrip."
+					],
+					"type": "entries"
+				},
+				{
+					"type": "entries",
+					"name": "Smouldering Embers",
+					"entries": [
+						"When you reach 3rd level, you can use a bonus action to enter your Scorched Form:",
+						"Your eyes are consumed with ember-glow, and orange light seems to leak from your mouth. Creatures other than your allies within 10 feet of you that can see you must succeed on a Charisma saving throw (DC 8 + your proficiency bonus + your Charisma modifier) or become {@condition frightened} of you until the end of your next turn. Until the transformation ends, once on each of your turns, you can deal extra necrotic damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus. When you kill a creature in your Scorched form, you can choose to absorb their vitality, healing yourself by {@dice 1d8} hit points and counting it as sustenance.",
+						"Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation below, you can't use it again until you finish a long rest."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"name": "Unnatural Mortality",
+						"entries": [
+							"A sunscorched is the result of a suntouched clinging onto their mortality beyond the duration of their short natural lifespans. As the light inside of them threatens to die, they are forced to consume an ever-increasing supply of fuel for their divine fire, starting with candlestubs, moving onto burning coals, and then eventually drinking molten lava, iron, and the life essence of other creatures.",
+							"Every year past your intended date of natural death, roll a d8. On a 1, your hunger grows by 1 stage, as per the following table:",
+							{
+								"type": "table",
+								"caption": "Sunscorched Hunger",
+								"colLabels": [
+									"Hunger",
+									"Diet"
+								],
+								"colStyles": [
+									"col-10",
+									"col-2 text-center"
+								],
+								"rows": [
+									[
+										"1",
+										"10"
+									]
+								]
+							},
+							"Though the price in life-essence is a harsh one, most suntouched are blessed warriors anyway who spend their days meting out justice. Therefore, most sunscorched find themselves in a position where they can sustain themselves by consuming the energy of the criminals and monsters they kill. Still, when a justicar sustains themselves on the lives of the punished, it has a tendency to blunt their mercy, and over time, sunscorched tend to become increasingly harsh executioners."
+						],
+						"type": "entries"
+					}
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dwarf",
+			"source": "MOD",
+			"hasFluff": true,
+			"size": [
+				"M"
+			],
+			"creatureTypes": [
+				"humanoid"
+			],
+			"speed": 30,
+			"ability": [
+				{
+					"choose": {
+						"from":
+						[
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 2,
+						"amount": [
+							2,
+							1
+						]
+					}
+				}
+			],
+			"age": {
+				"mature": 18,
+				"max": 120
+			},
+			"skillProficiencies": [
+				{
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 1,
+					"dwarvish": true
+				}
+			],
+			"entries": [
+				{
+					"name": "Languages",
+					"entries": [
+						"You know {@language Dwarvish|MOD} and one standard language of your choice; common choices are {@language Aesean|MOD}, {@language Eglisian|MOD} or {@language Stellen|MOD}, the three major languages of the human nations."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"The Dwarven diet of mushrooms and fermented goods has given you a remarkably sturdy constitution. You have advantage on saving throws against the {@condition poisoned} condition and resistance to poison damage."
+					],
+					"type": "entries"
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"name": "Dwellers in the Dark",
+						"entries": [
+							"The Dwarves of Sorspecto are a race that have only recently stepped into the light of the continent. Historically, they have dwelt within the earth- sometimes maintaining trade relations with local communities, exchanging ore for food, but are as a whole fairly self-sufficient, and rarely felt the need to engage with surface affairs. The dwarves on the continent are loosely unified into a single empire known as the Deep Kingdom, ruled by the Buried King. However, each dwarven city is essentially under the control of its own local ruler, and the King exerts only guiding influence on other cities.",
+							"Dwarven societies are generally found underneath great mountains, and consist of deep and grand undercities, built far below the earth. The Deep Kingdom is itself splintered into multiple cities and settlements, connected by an extensive series of tunnels. However, underground travel is usually limited to necessary usage, such as trade or communication, as travel is as dangerous underground as it is on the surface.",
+							"Dwarves are the originators of rune magic, the art of embedding mystical powers into material objects through the use of precisely-crafted runes. Dwarven society is less hostile to the use of magic than human society, and runes are used heavily in dwarven architecture and technology.",
+							"Generally, other races are not permitted to live in the Deep Kingdom, and passage down into the depths is permitted only on a per-case basis (and only granted for important circumstances)."
+						],
+						"type": "entries"
+					},
+					{
+						"name": "Life in the Deep",
+						"entries": [
+							"Without natural sunlight or the surface's water cycle, dwarves have necessarily found alternate ways to subsist. Common crops above are simply nonviable for farming in the depths below, but dwarves have cultivated a very impressive selection of edible mushrooms and fungi. Edible is somewhat relative, admittedly, and many specimens that are considered dwarf delicacies would be extremely poisonous to the average human. Surface-dwellers have learned to exercise heavy caution when dealing with dwarven cuisine. Fermented foods also feature quite heavily in dwarven cooking, as a practical means of prepration and preservation.",
+							"It's also generally pretty hard to cultivate large livestock, but dwarves do maintain insect farms as a source of protein. Some larger wurm-type insectoids are even used as burrowing aides, sometimes, and dwarves have used selective breeding to get a species of mole to an impressive size, using them primarily as sources of labor (and in death, fur).",
+							"Most dwarves are so adapted for the darkness that their darkvision is near-perfect, but light is blinding to them. Their societies as a whole use very little light, and what they do use is mostly variants of glow wurms or derivative substances. Fire is rarely used for heat (smoke is dangerous when ventilation is limited); dwarves instead use geothermal heat, and many societies are built around or near hot springs. Dwarves who migrate to the surface generally lose their innate darkvision within a generation, but also adjust to living in bright light."
+
+						],
+						"type": "entries"
+					},
+					{
+						"name": "Cultural Divide",
+						"entries": [
+							"A few generations ago, in the peace following the Tripartite Treaty, some dwarves began a slow migration up to the surface world, trading the narrow underground tnunels for the freedom of the open air. Though dwarves have adapted well to the surface, this migration has caused a schism within dwarven culture; the more traditional dwarven sects decry those who have left for the surface, claiming that this is a betrayal of their race, and will utlimately result in the destruction of their culture. Surface-dwelling dwarves are left in a difficult position, struggling to be accepted by both human culture and their own. When making a dwarf character, consider how your character navigates this cultural divide."
+
+						],
+						"type": "entries"
+					}
+				]
+			},
+			"hasFluffImages": true
+		}
+	],
+	"subrace": [
+		{
+			"name": "Aesrepublican",
+			"source": "MOD",
+			"raceName": "Human",
+			"raceSource": "MOD",
+			"entries": [
+				{
+					"name": "Human Variance",
+					"entries": [
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef}, {@feat fey touched}, {@feat inspiring leader}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched}, {@feat skilled}, or {@feat tavern brawler}.",
+						{
+							"type" : "inset",
+							"name" : "Additional Features",
+							"entries": [
+								"If none of these feats suits your fancy, you can ask the DM for a customized feat to better fit your character. Generally, a feat provided by this trait should not constitute a core part of the character build (like Great Weapon Master), but should instead reflect some unique skill or aspect of the character."
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Thrift",
+					"entries": [
+						"The nation of Aesrepublica values thrift and ingenuity. You have an additional four inventory slots, allowing you to carry and retrieve significantly more. (See {@variantrules STASH} for information on inventory.)"
+					],
+					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Stellen",
+			"source": "MOD",
+			"raceName": "Human",
+			"raceSource": "MOD",
+			"entries": [
+				{
+					"name": "Human Variance",
+					"entries": [
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef}, {@feat fey touched}, {@feat inspiring leader}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched}, {@feat skilled}, or {@feat tavern brawler}.",
+						{
+							"type" : "inset",
+							"name" : "Additional Features",
+							"entries": [
+								"If none of these feats suits your fancy, you can ask the DM for a customized feat to better fit your character. Generally, a feat provided by this trait should not constitute a core part of the character build (like Great Weapon Master), but should instead reflect some unique skill or aspect of the character."
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Steel Soul",
+					"entries": [
+						"You grew up in a military empire, which prioritized the virtues of hard work, endurance, and loyalty. Once per short rest, you can use a bonus action to give yourself temporary hit points equal to your level."
+					],
+					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eglisian",
+			"source": "MOD",
+			"raceName": "Human",
+			"raceSource": "MOD",
+			"entries": [
+				{
+					"name": "Human Variance",
+					"entries": [
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef}, {@feat fey touched}, {@feat inspiring leader}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched}, {@feat skilled}, or {@feat tavern brawler}.",
+						{
+							"type" : "inset",
+							"name" : "Additional Features",
+							"entries": [
+								"If none of these feats suits your fancy, you can ask the DM for a customized feat to better fit your character. Generally, a feat provided by this trait should not constitute a core part of the character build (like Great Weapon Master), but should instead reflect some unique skill or aspect of the character."
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Ease Suffering",
+					"entries": [
+						"You grew up in a theocratic empire, and were taught the virtues of the Mourning Light, which extols empathy and compassion for others, especially those grieving.",
+						"When you regain hit points as the result of a spell or feature, you can use your reaction to cause a willing creature within 30 feet of you to regain the same number of hit points.",
+						"Alternatively, when either you or a willing creature within 30 feet of you takes damage, you can expend your reaction to split the damage between the two of you, halving it against both of you.",
+						"You can use this feature once per short rest."
+					],
+					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Northlander",
+			"source": "MOD",
+			"raceName": "Human",
+			"raceSource": "MOD",
+			"resist": [
+				"cold"
+			],
+			"entries": [
+				{
+					"name": "Frost Born",
+					"entries": [
+						"You have resistance to cold damage, and do not suffer the effects of mundane extreme cold. Difficult terrain imposed by snow and ice does not cost you extra movement, and you have advantage on saving throws against non-magical hazards caused by icy terrain."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Northern Heart",
+					"entries": [
+						"Starting at 3rd level, you can use your action to call upon the inner strength that lies into every sons and daughters of the north. Your strength lasts for 1 minute or until you end it as a bonus action. During it, you have advantage on all Strength and Constitution saving throws, and you gain temporary hit points at the start of each of your turns. The temporary hit points equal half your level (rounded up) + your Constitution modifier.",
+						"Once you use this trait, you must finish a long rest before you can use it again."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{	
+						"name": "The Harsh North",
+						"entries": [
+							"You are a Northlander, a member of the nomadic tribes of the icy north, known collectively as the Cold Sun Clans. The ice and snow is a cruel and unforgiving environment, where starvation is but a season away. Northlanders cannot afford weakness, and have been forged into strong, resilient individuals who can surivve the most grueling conditions.",
+							"The relationship between Northlanders and other members of the continent is extremely rocky. Clan raiding parties have been known to descend upon the Iron Empire and the Church, forcing their militaries to guard the border against intrusion. Northlanders are very rare in the continent, so expect to be met with curiosity and suspicion. Consider why your character finds themselves outside of your ancestral northlands- are you on a mission given to you by your elders, or have you left your tribe against their wishes? Do you intend to return to your tribe and family one day, or do you seek a new home?"
+						],
+						"type": "entries"
+					},
+					{	
+						"name": "Life in the Clan",
+						"entries": [
+							"Though much of the lower Continent knows your people only through the raiding and pillaging, and considers the tribes to be nothing but savage, murderous barbarians, you know your Clan to be a tight-knit and protective group. Each Clan is led by two primary figures: a Thane, who is in charge of all day-to-day operations, including leading the hunters and protecting the Clan, and the Volva, who is considered the leader in spiritual affairs.",
+							"There are no restrictions on who can be the Thane, and any member of the Clan can challenge the current Thane for their position in a contest that involves hunting, navigating, and fighting. However, the Volva is a traditionally female role and is always held by an elderly lady, who hand-picks her successor and trains her from a young age. The title of Volva is transferred only upon death.",
+							"The Thane and Volva are expected to work together to lead the tribe. If there is disagreement, however, tradition dictates that the Thane must defer.",
+							"Daily life in the Clans is an eternal battle against the harsh environment. Many clanspeople are hunters, responsible for catching the meat and fish needed to feed the clan, as well as supply them with furs and clothes. Others are craftsmen, skalds, or shamans. Everyone is expected to contribute to the survival and functioning of the tribe.",
+							"Sometimes, a winter is especially harsh, and food is rare. Though the Clans will never directly abandon one of their own, there is a strong, traditional expectation that the people who can no longer carry their weight in the clan- the old, the infirm, the sick- will volunteer to leave the clan, leaving more resources for the remainder.",
+							"Though each clan is tight-knit, inter-clan relations tend to be quite icy. Northlanders prefer to take care of their own and leave others to do their same, so two Northland clans that meet either give each other a wide berth, or throw themselves into combat against each other to fend the other off. On very rare occasions, however, a single individual manages to rise up and unite multiple clans under the same cause, taking on the title of Jarl. This happens primarily in times of existential crisis, when the survival of all Northlanders are threatened- but the rise of a Jarl inevitably bodes poorly for the rest of the continent, as a united North inevitably turns their gaze down south."
+						],
+						"type": "entries"
+					}
+				]
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Seawrought Islander",
+			"source": "MOD",
+			"raceName": "Human",
+			"raceSource": "MOD",
+			"resist": [
+				"cold"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"1": [
+							"beast bond"
+						],
+						"3": [
+							"beast sense"
+						]
+					},
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"known": {
+						"1": [
+							"druidcraft#c"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"name": "Beast Kinship",
+					"entries": [
+						"You have proficiency in the {@skill Animal Handling} skill. Additionally, you can communicate simple ideas with small beasts. Once you reach third level, you learn the {@spell beast sense} spell and can cast it as a ritual."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Blood of the Earth",
+					"entries": [
+						"Whenever you regain hit points by spending hit die amongst the wilderness, you regain 2 additional hit points per hit die spent."
+					]
+				},
+				{
+					"name": "Natural Attunement",
+					"entries": [
+						"You know the {@spell druidcraft} cantrip. You also know the {@spell beast bond} spell, which you can cast without expending a spell slot once per long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you pick this race)."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{	
+						"name": "Child of the Earth",
+						"entries": [
+							"You belong to the Llwythau Tua'r Môr- or more simply, the Seawrought Tribes, a culture that resides on a collection of verdant islands off of the coast of Sorspecto. Islanders live alongside nature, tending to the land and the beasts that live within, as they believe is the intended way of humanity.",
+							"The Seawrought Tribes are fairly reclusive and do not often seek contact with the Continent. Each Tribe has a single island to itself, and neighboring tribes are not generally welcome to visit; however, despite their isolationist nature, each tribe does pay homage to a central authority known as the Antler King, who is loosely the ruler of all of the Tribes."
+						],
+						"type": "entries"
+					},
+					{	
+						"name": "Beauty and Danger",
+						"entries": [
+							"The Isles are both wondrous and terrifying, the land overgrown and thriving in its primal state. Great ancient beasts prowl the land, many sizes larger than their counterparts on the continent, and many rare specimens of flora and fauna are exclusively found on the Isles.",
+							"The Isles are especially dangerous for outside visitors. The seas that surround them are often wracked with storms, and visitors are unlikely to find the Tribes welcoming. More than one military operation has been undertaken to attempt to capture the territory of the Tribes and bring them under continental sovereignty, and each one has failed- dashed against the rocks by the sea, or cut down by the fearsome Island warriors themselves."
+						],
+						"type": "entries"
+					}
+				]
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Deep Dwarf",
+			"source": "MOD",
+			"raceName": "Dwarf",
+			"raceSource": "MOD",
+			"darkvision": 15,
+			"entries": [
+				{
+					"name": "Darkvision",
+					"entries": [
+						"You have darkvision out to 60 feet. Additionally, you have blindsight out to 5 feet while in darkness or in dim light. "
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Light Sensitivity",
+					"entries": [
+						"You have disadvantage on all ability checks while in bright light, as well as disadvantage on saving throws against light-based effects (including those that create light, do radiant damage, or impose the {@condition blinded} condition)."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Deep Magick",
+					"entries": [
+						"You carry some of the magick of the depths with  you, carved in glyphs upon a runic focus (which can be a tool, weapon, or a suit of armor). As long as you have your rune-inscribed object with you, you can evoke those runes to cast the {@spell mold earth|XGE} cantrip.",
+						"At 3rd level, you can use your runes to cast {@spell darkness}, requiring no spell slots. Once you cast darkness in this manner, you cannot do so again until you complete a long rest.",
+						"At 5th level, you gain the ability to cast {@spell darkness} with your runes twice per long rest instead of once.",
+						"Over the course of a long rest, you may inscribe runes upon a new suitable object, changing the focus of your runic magic. Once you do so, the runes upon your previous focus lose their magic."
+					],
+					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"entries": [
+					{
+						"name": "Deep Dwarves",
+						"entries": [
+							"The Deep Dwarves reside still in the underground dwarven cities, and are generally the traditionalists of dwarven culture. Deep Dwarves have pale skin, due to the lack of sunlight, and are generally slightly smaller on average than their surface brethren. All Deep Dwarves are taught at least some basic rune magicks, and in particular the ability to magically manipulate a small area of earth is very useful for survival in the underground."
+
+						],
+						"type": "entries"
+					}
+				]
+			}
+		},
+		{
+			"name": "Surface Dwarf",
+			"source": "MOD",
+			"raceName": "Dwarf",
+			"raceSource": "MOD",
+			"darkvision": 60,
+			"blindsight": 5,
+			"additionalSpells": [
+				{
+					"innate": {
+						"3": {
+							"daily": {
+								"1": [
+									"darkness"
+								]
+							}
+						}
+					},
+					"ability": "cha",
+					"known": {
+						"1": [
+							"mold earth|XGE"
+						]
+					}
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2,
+					"dwarvish": true
+				}
+			],
+			"entries": [
+				{
+					"name": "Darkvision",
+					"entries": [
+						"You have darkvision out to 15 feet. Life upon the surface has significantly blunted your darkvision, rendering it far less potent than that of the Deep Dwarves."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Mild Light Sensitivity",
+					"entries": [
+						"You have disadvantage on all ability checks while in bright light, as well as disadvantage on saving throws against light-based effects (including those that create light, do radiant damage, or impose the {@condition blinded} condition). However, your exposure to the surface light has allowed you to adapt to this trait, and as long as you wear headwear designed to protect against light (such as heavily tinted glasses or a shielded helmet), you do not suffer the penalties of this feature."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Extra Language",
+					"entries": [
+						"You know one additional standard language."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Adapted Rune Magic",
+					"entries": [
+						"Surface Dwarves have learned to adapt the old traditions of runic magic to their own uses. You have a runic focus, which can be any tool, weapon, or set of armor, carefully inscribed with runes. As a bonus action while in possession of your runic focus, you can invoke one of the three following runes:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Rune of Haste",
+									"entries": [
+										"For the next minute, your movement speed increases by 10 feet and nonmagical difficult terrain does not cost you additional movement."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Rune of Courage",
+									"entries": [
+										"You gain a number of temporary hit points equal to 1d6 + your level, which last for one minute. Additionally, you have advantage on saving throws against being frightened for that minute."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Rune of Skill",
+									"entries": [
+										"Choose a skill or tool that you are not proficient in. For the next hour, you are considered proficient in that skill."
+									]
+								}
+							]
+						},
+						"Once you evoke a rune, you cannot do so again until you complete a long rest.",
+						"At 3rd level, you gain the ability to evoke two different runes per long rest. At 5th level, you can evoke each of your three runes once per long rest."
+					],
+					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"entries": [
+					{
+						"name": "Surface Dwarves",
+						"entries": [
+							"The Surface Dwarves are those who have moved to the surface, joining human civilization. Many still consider themselves beholden to the laws of the Deep Kingdom, although tensions have been mounting between the surface dwarves and the more traditionalist deep dwarves.",
+							"Surface dwarves are easily recognizable by the heavy headwear they employ to block out excessive light. They are, on average, slightly larger than their deep brethren, and exposre to the sun has left their skin significantly more tan."
+
+						],
+						"type": "entries"
+					}
+				]
+			}
+		},
+		{
+			"name": "Bound Elf: Warrior",
+			"source": "MOD",
+			"raceName": "Elf",
+			"raceSource": "MOD",
+			"entries": [
+				{
+					"name": "Past Self: Warrior",
+					"entries": [
+						"Your past life was a warrior of considerable renown. Even if you have not chosen the martial path yourself, you can still feel old battle-instincts suffusing your body when you enter the battlefield, and an ethereal spirit guiding your endeavors."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Ancestral Knowledge",
+					"entries": [
+						"You gain proficiency in any two skills of your choice, which represent the knowledge of your past lives that has manifested within you."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Ancestral Expertise",
+					"entries": [
+						"Choose one skill you are proficient in. You have expertise in that skill."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Self-Correction",
+					"entries": [
+						"Sometimes, when your aim falters or you begin to stumble, you feel a shadow of your old self step in to correct your course. When you fail a weapon attack, ability check, or saving throw, you can choose to reroll it. If you had disadvantage on the roll, you may reroll without disadvantage. You must take the new roll.",
+						"You can use this feature a number of times equal to your proficiency bonus. You regain all uses when you complete a long rest."
+					],
+					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bound Elf: Mage",
+			"source": "MOD",
+			"raceName": "Elf",
+			"raceSource": "MOD",
+			"entries": [
+				{
+					"name": "Past Life: Mage",
+					"entries": [
+						"Your past lives have been mages of considerable skill. Though you may not necessarily have chosen to pursue the path of magic, their powers nevertheless bleeds into you, infusing you with supernatural ability."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Ancestral Knowledge",
+					"entries": [
+						"You gain proficiency in any two skills of your choice, which represent the knowledge of your past lives that has manifested within you."
+					],
+					"type": "entries"
+				},
+				{
+					"type": "entries",
+					"name": "Ancestral Magic",
+					"entries": [
+						"Choose one class: bard, cleric, druid, sorcerer, warlock, or wizard. You know one cantrip from that class. Once you reach 3rd level, you learn one 1st-level spell from the chosen class's list, and can cast it once with this trait per long rest without expending a spell slot. Once you reach fifth level, you learn one 2nd-level spell from the chosen class's list, and can cast it once with this trait per long rest without expending a spell slot.",
+						"Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race). The spells granted by this ability are determined randomly by the DM after character creation. (You may choose to allow the DM to pick out the spells rather than determining them randomly, in order to have the granted spells fit into a consistent theme, though you have no input into what this theme is.)"
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Free Elf",
+			"source": "MOD",
+			"raceName": "Elf",
+			"raceSource": "MOD",
+			"entries": [
+				{
+					"name": "The Broken Cycle",
+					"entries": [
+						"You have severed your ties to your past lives, leaving you free to determine your own fate. Upon your death, however, you'll still reincarnate into a new self."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Forger of Fate",
+					"entries": [
+						"You have broken with the reincarnation cycle of your past selves, and have elected to create your own destiny. You gain one portent die you can use on allies (only); can't use more than 1 portent die on the same roll."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Strength of Mind",
+					"entries": [
+						"The training required to overcome the influence of your past lives has strengthened your will. You have advantage on saving throws against being charmed, as well as resistance to psychic damage."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Mental Repression",
+					"entries": [
+						"You can forcibly repress thoughts within your mind, burying them deep.  You learn the {@spell forget|COFS:A} cantrip, and you can cast it on yourself multiple times instead of only once, forgetting a total number of different things up to your character level."
+					],
+					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"raceFluff": [
+		{
+			"name": "Elf",
+			"source": "MOD",
+			"entries": [
+				{
+					"type": "section",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Elves are an otherworldly people locked deeply in the Reincarnation Cycle, striving in an endless quest to achieve the most perfect version of themselves through countless lifetimes.",
+								{
+									"type": "entries",
+									"name": "Slender and Graceful",
+									"entries": [
+										"With their unearthly grace and fine features, elves appear hauntingly beautiful to humans and members of many other races. They are slightly shorter than humans on average, ranging from well under 5 feet tall to just over 6 feet. They are more slender than humans, weighing only 100 to 145 pounds. Males and females are about the same height, and males are only marginally heavier than females.",
+										"Elves' coloration encompasses the normal human range and also includes skin in shades of copper, bronze, and almost bluish-white, hair of green or blue, and eyes like pools of liquid gold or silver. Elves have no facial and little body hair. They favor elegant clothing in bright colors, and they enjoy simple yet lovely jewelry."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "A Timeless Perspective",
+									"entries": [
+										"Elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorter-lived races more deeply. They are more often amused than excited, and more likely to be curious than greedy. They tend to remain aloof and unfazed by petty happenstance. When pursuing a goal, however, whether adventuring on a mission or learning a new skill or art, elves can be focused and relentless. They are slow to make friends and enemies, and even slower to forget them. They reply to petty insults with disdain and to serious insults with vengeance.",
+										"Like the branches of a young tree, elves are flexible in the face of danger. They trust in diplomacy and compromise to resolve differences before they escalate to violence. They have been known to retreat from intrusions into their woodland homes, confident that they can simply wait the invaders out. But when the need arises, elves reveal a stern martial side, demonstrating skill with sword, bow, and strategy."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Hidden Woodland and Realms",
+									"entries": [
+										"Most elves dwell in small forest villages hidden among the trees. Elves hunt game, gather food, and grow vegetables, and their skill and magic allow them to support themselves without the need for clearing and plowing land. They are talented artisans, crafting finely worked clothes and art objects. Their contact with outsiders is usually limited, though a few elves make a good living by trading crafted items for metals (which they have no interest in mining).",
+										"Elves encountered outside their own lands are commonly traveling minstrels, artists, or sages. Human nobles compete for the services of elf instructors to teach swordplay or magic to their children."
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"language": [
+		{
+			"name": "Aesean",
+			"source": "MOD",
+			"type": "standard",
+			"typicalSpeakers": [
+				"Aesrepublican Citizens"
+			],
+			"entries": [
+				"The language of Aesrepublica (The Copper Commonwealth), one of the three major nations on the continent. Due to the extensive trade network of the Commonwealth, Aesean is treated as the lingua franca of the continent; wherever you go, you'll find people with a rough understanding of Aesean, allowing for basic communication everywhere."
+			]
+		},
+		{
+			"name": "Stellen",
+			"source": "MOD",
+			"type": "standard",
+			"typicalSpeakers": [
+				"Stellenreicht Citizens"
+			],
+			"entries": [
+				"The language of Stellenreicht (The Iron Emprie), one of the three major nations on the continent."
+			]
+		},
+		{
+			"name": "Eglisian",
+			"source": "MOD",
+			"type": "standard",
+			"typicalSpeakers": [
+				"Lumitriente Citizens"
+			],
+			"entries": [
+				"The language of Lumitriente (The Church of the Mourning Light), one of the three major nations on the continent. The name literally means \"the language of the Church\", a reminder of the ubiquity and control of the theocracy."
+			]
+		}
 	],
 	"table": [
 	],
-	"itemGroup": [
+	"baseitem": [
+		{
+			"name": "Tauran Horns",
+			"source": "MOD",
+			"type": "M",
+			"rarity": "none",
+			"property": [
+				"TCHNQ",
+				"S",
+				"NATURAL"
+			],
+			"dmg1": "1d8",
+			"dmgType": "B",
+			"weapon": true,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Special",
+					"entries": [
+						"This weapon represents the natural weapon of the {@race Tauran|MOD} race; it cannot be acquired through other means."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bull Rush",
+					"entries": [
+						"If you move at least 20 feet directly toward a creature immediately before hitting them with a horn attack, they need to make a Strength saving throw or get pushed 10 feet away from you. This only works on creatures at most 1 size category larger than you.",
+						"The DC for this feature is equalt o 8 + your Strength modifier + your proficiency score"
+					]
+				}
+			]
+		}
 	],
 	"item": [
 		{
@@ -649,9 +4075,956 @@
 				"You can use the poison in this vial to coat one slashing or piercing weapon or three pieces of ammunition. A creature hit by the {@condition poisoned} weapon or ammunition must make a Constitution saving throw or take {@damage 1d8} poison damage and become {@condition poisoned} until the end of your next turn. The poison expires after one minute or after it deals damage to a target.",
 				"If this poison is used by a creature that is not an Assassin Rogue, it still deals additional damage on a hit but does not inflict the {@condition poisoned} condition."
 			]
+		},
+		{
+			"name": "One-Shot Crossbow",
+			"source": "MOD",
+			"baseItem": "hand crossbow|phb",
+			"type": "R",
+			"rarity": "none",
+			"weight": 1,
+			"weaponCategory": "martial",
+			"property": [
+				"BMKT",
+				"A",
+				"LD"
+			],
+			"range": "30/60",
+			"dmg1": "1d6",
+			"dmgType": "P",
+			"crossbow": true,
+			"weapon": true,
+			"entries": [
+				"The compact one-shot crossbow is a favorite tool of cutthroats and assassins- at least, those who can afford it. The one-shot is a slender spring-loaded crossbow, scarce more than a pipe, that can easily be concealed in one's sleeve, and can instantly fire a bolt at a moment's notice.",
+				"Though in theory a simple concept, the craftsmanship on one-shot crossbows is quite delicate- after all, the weapon packs quite a lot of pressure into a very small space, concentrated into a very sharp point which is very close to your very own hand. Amongst less reputable circles, stories abound of amateur thugs buying cheap one-shots and discovering that the nickname \"Two-Finger Jimmy\" comes with it, free of charge.",
+				"Most reputable weaponsmiths do not produce or sell one-shot crossbows, and negotiating the purchase of one often requires a visit to less innocent circles.",
+				{
+					"type": "entries",
+					"name": "Special",
+					"entries": [
+						"The one-shot must be installed along the arm to use, and takes one minute to equip. You do not need a free hand to operate the one-shot, although you cannot install more than one on a single arm, nor can you install it alongside similar items that occupy the forearm.",
+						"When you roll initiative, you may immediately expend your reaction to fire the one-shot, or you may fire it as a bonus action during your turn.",
+						"Loading the one-shot requires a significant amount of strength and effort, and one minute of time."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dangerous",
+					"entries": [
+						"If you are not proficient with the one-shot and attempt to use it, there is a fifty percent chance it backfires, dealing {@damage 3d8} piercing damage and disabling the use of your arm for one minute."
+					]
+				}
+			]
+		},
+		{
+			"name": "Kidnapper's Draught",
+			"source": "MOD",
+			"type": "G",
+			"rarity": "none",
+			"value": 500,
+			"weight": 1,
+			"poison": true,
+			"property": [
+				"BMKT"
+			],
+			"entries": [
+				"This injury poison contains a potent paralytic that infects the blood and causes wounds to congeal.",
+				"As an action, you may coat one weapon or one piece of ammunition with this poison, which lasts for ten minutes before losing potency. If a creature is subjected to this poison while at 10\u0025 of their maximum hit points or lower (or has 10 or less hit points in total), they are immediately {@condition poisoned} for one hour. While poisoned in this way, they are also {@condition paralyzed}. If are reduced to 0 hit points by the blow that applies this poison, they do not die and are stable.",
+				"If the target receives any healing or takes damage, the {@condition poisoned} condition immediately ends.",
+				"This poison does not affect any creature that does not have blood.",
+				{
+					"type" : "inset",
+					"name" : "The Assassin's Friend",
+					"entries": [
+						"{@i A favorite of kidnappers and ransomeers. A strange venom, intended not to cause death but to preserve life. Of course, we know that there are fates far worse than death.}",
+						"- taken from the writings of an unnamed Venandi assassin."
+					]
+				}
+			],
+			"poisonTypes": [
+				"injury"
+			]
+		},
+		{
+			"name": "Holy Staff (Radiant)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "holy",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A tall, metal staff, with the symbol of your god or faith affixed to the tip. Radiant staffs are generally made of gold-plated brass.}",
+				"Spells you cast through this staff ignore resistance to radiant damage."
+			]
+		},
+		{
+			"name": "Holy Staff (Necrotic)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "holy",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A tall, metal staff, with the symbol of your god or faith affixed to the tip. Necrotic staffs are generally made of silver-plated brass.}",
+				"Spells you cast through this staff ignore resistance to necrotic damage."
+			]
+		},
+		{
+			"name": "Primal Staff (Venom)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "druidic",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A long length of knobbled wood, decorated with symbols of primal power- feathers, bones, vines, and other adornments of nature.}",
+				"Spells you cast through this staff ignore resistance to acid and poison damage."
+			]
+		},
+		{
+			"name": "Primal Staff (Fire)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "druidic",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A long length of knobbled wood, decorated with symbols of primal power- feathers, bones, vines, and other adornments of nature.}",
+				"Spells you cast through this staff ignore resistance to fire damage."
+			]
+		},
+		{
+			"name": "Primal Staff (necrotic)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "druidic",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A long length of knobbled wood, decorated with symbols of primal power- feathers, bones, vines, and other adornments of nature.}",
+				"Spells you cast through this staff ignore resistance to necrotic damage."
+			]
+		},
+		{
+			"name": "Primal Staff (Physical)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "druidic",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A long length of knobbled wood, decorated with symbols of primal power- feathers, bones, vines, and other adornments of nature.}",
+				"When you cast a spell through this staff that does bludgeoning, piercing, or slashing damage, you can add your wisdom modifier to the damage. This only works on the first damage roll of a spell, and this does not let you add your wisdom modifier more than once on a particular damage roll."
+			]
+		},
+		{
+			"name": "Arcane Staff (Fire)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "arcane",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A polished length of cured wood or metal, topped with a crystal or other focus.}",
+				"Spells you cast through this staff ignore resistance to fire damage."
+			]
+		},
+		{
+			"name": "Arcane Staff (Cold)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "arcane",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A polished length of cured wood or metal, topped with a crystal or other focus.}",
+				"Spells you cast through this staff ignore resistance to cold damage."
+			]
+		},
+		{
+			"name": "Arcane Staff (Lightning)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "arcane",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A polished length of cured wood or metal, topped with a crystal or other focus.}",
+				"Spells you cast through this staff ignore resistance to lightning damage."
+			]
+		},
+		{
+			"name": "Arcane Staff (Necrotic)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "arcane",
+			"property": [
+				"STAFF"
+			],
+			"entries": [
+				"{@i A polished length of cured wood or metal, topped with a crystal or other focus.}",
+				"Spells you cast through this staff ignore resistance to fire damage."
+			]
+		},
+		{
+			"name": "Upgrade: Rope Winch",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: A thrown weapon}",
+				"You attach a reinforced wire to your weapon, connected to a small winch mechanism on your arm. The wire extends up to 60 feet, and as a bonus action you can cause the wire to retract, returning the weapon to your hand.",
+				"If a thrown rope weapon hits a creature, it is stuck in them until they take an action to pull it out or you use the winch to retract it. The winch is not strong enough to move a creature by itself, but as an attack, you may attempt a contested Athletics check to forcibly drag them 15 feet closer to you. The roped creature may attempt the same check to drag you closer. Any creature that cannot be grappled or restrained, or is otherwise incorporeal, cannot be roped.",
+				"While your weapon is thrown, the wire is exposed. The wire has AC 15 and breaks if it takes at least 10 fire or slashing damage from a single attack or effect. A broken wire can be easily repaired out of combat, requiring only 10 minutes of time.",
+				"The wire is sturdy enough to support the weight of a single medium creature, though the winch cannot move you against the force of gravity.",
+				{
+					"type": "entries",
+					"name": "Additional Upgrades",
+					"entries": [
+						"You may take this upgrade a second time, strengthening the wire-winch mechanism. If you do so, you may retract the rope without expending a bonus action, but only during your turn. Furthermore, the mechanism is strengthened to the point where it can support your weight and move you upward. As an action, while your hook is embedded in a surface or a sturdy object, or a creature at least 2 size categories larger than you, and you have a clear path to the hook, you can retract it and grapple to the hook, moving to its location.",
+						"Additionally, the rope now only breaks if it takes at least 20 slashing or fire damage from a single attack or effect."
+					]
+				}
+				
+			]
+		},
+		{
+			"name": "Upgrade: Aerodynamic",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: A thrown weapon}",
+				"The normal range of this weapon increases to 60 feet. If thrown at a target within 20 feet (but not at an adjacent target), the weapon deals bonus damage."
+			]
+		},
+		{
+			"name": "Upgrade: Armor Piercing",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: piercing damage weapon}",
+				"This weapon ignores Damage Reduction up to your proficiency modifier.",
+				{
+					"type": "inset",
+					"name": "Damage Reduction",
+					"entries": [
+						"Many heavily armored creatures (as well as heavy armor) have gained a level of damage reduction, which reduces every instance of damage they take by a flat amount. "
+					]
+				}
+			]
+		},
+		{
+			"name": "Upgrade: Vicious",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: A x weapon}",
+				"A vicious damage deals bonus damage on a critical hit. This bonus damage is applied {@i after} the crit, so it is not doubled.",
+				{
+					"type": "entries",
+					"name": "Additional Upgrades",
+					"entries": [
+						"If you take this upgrade a second time, it instead deals double bonus damage on a crit. If you take it a third time, it instead deals four times bonus damage on a crit."
+					]
+				}
+			]
+		},
+		{
+			"name": "Upgrade: Adaptable",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"This weapon has been modified to be used in different ways. Choose one physical damage type: bludgeoning, piercing, or slashing. When you attack with this weapon, you may have it deal damage of either type, though you must decide before the DM narrates the result of the damage.",
+				{
+					"type": "entries",
+					"name": "Additional Upgrades",
+					"entries": [
+						"If you take the upgrade a second time, your weapon can deal any of the three physical damage types when it hits."
+					]
+				}
+			]
+		},
+		{
+			"name": "Upgrade: Flourish",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"You've added some particularly reflective or noisy components to your weapon, allowing you to distract your opponents from a distance. When you take the {@action Attack} action, you may replace one attack with the Help action against a hostile creature within 30 feet of yourself."
+			]
+		},
+		{
+			"name": "Upgrade: Concealed",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: A light weapon}",
+				"This weapon has been disguised, allowing you to easily conceal it. This disguise takes on a form of your choice, though it must be logical and unassuming- a dagger may be disguised as a pen (or perhaps even cleverly sewn into a hat, or made into a large hairpin), while a sword might be hidden in a cane or a staff.",
+				"A creature does not recognize your disguised weapon as a weapon unless they succeed on a DC 20 Investigation check. If you ever make a Deception or Performance check to ambush a creature with this weapon, you have advantage on that check. Finally, this weapon does not register as a weapon for divination spells such as Locate Object, though it can still be located via divination by other means."
+			]
+		},
+		{
+			"name": "Upgrade: Elongated",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: not light, and not reach}",
+				"This weapon gains the Reach property."
+			]
+		},
+		{
+			"name": "Upgrade: Defender",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: not light}",
+				"This weapon has been adapted to be more effective at defending others. When a creature other than yourself within your reach is hit by an attack, you can expend your reaction to parry the blow, increasing their AC by 3 against the triggering attack and potentially causing it to miss."
+			]
+		},
+		{
+			"name": "Upgrade: Hooked",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"A hook is welded upon the weapon, allowing you to grapple enemies with it. This weapon can be used to maintain a grapple in place of a free hand. When you hit a creature with this weapon, you can use your bonus action to attempt to grapple it (making a contested ability check as usual).",
+				"A hooked weapon can grapple only one creature at a time. While grappling a creature, it can only attack that creature, and it deals only half damage."
+			]
+		},
+		{
+			"name": "Upgrade: Massive",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: A heavy weapon}",
+				"A massive weapon requires a Strength score of 15 or higher to wield.",
+				"Whenever you take the {@action Attack} action with a Massive weapon, you lose the benefits of Extra Attack and any other feature that would grant you more than one attack. For each attack sacrificed in this way, you deal bonus damage three times."
+			]
+		},
+		{
+			"name": "Upgrade: Quick",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: not heavy}",
+				"The weapons' damage dice downscales by one step. Whenever you take the Attack action and make an attack with this weapon, you can make one more attack with it as a bonus action."
+			]
+		},
+		{
+			"name": "Upgrade: Executioner",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"Whenever you attack a {@condition prone} or {@condition grappled} creature with this weapon, it deals bonus damage."
+			]
+		},
+		{
+			"name": "Upgrade: Welded",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"This weapon has been welded directly to a gauntlet. If this item had the Thrown property, it loses it. You cannot be disarmed of this weapon.",
+				"This weapon also cannot be dropped; you may remove the weapon and its gauntlet by spending an action."
+			]
+		},
+		{
+			"name": "Upgrade: Powerful",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"The weapon's damage die upscales by one step.",
+				{
+					"type": "entries",
+					"name": "Additional Upgrades",
+					"entries": [
+						"You may take this upgrade up to 3 times."
+					]
+				}
+			]
+		},
+		{
+			"name": "Upgrade: Stancebreaker",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: not light}",
+				"This weapon has been designed to let you disrupt an opponent's stance. When you attack an opponent that is no more than one size category larger than you, you can choose to deal half damage on your attack and impose disadvantage on the next Strength or Dexterity saving throw they make before the end of your next turn."
+			]
+		},
+		{
+			"name": "Upgrade: Combo",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: d6 or greater damage die}",
+				"Downscale the weapon's damage die by one step. Once per turn, if you land two or more attacks against the same creature with this weapon, deal bonus damage.",
+				{
+					"type": "entries",
+					"name": "Additional Upgrades",
+					"entries": [
+						"If you take this upgrade again, you downscale the weapon's damage die again, but you lose the 'once per turn' restriction, allowing you to deal bonus damage on {@i every} subsequent hit past the first."
+					]
+				}
+			]
+		},
+		{
+			"name": "Upgrade: Precise",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 0,
+			"weight": 0,
+			"property": [
+				"SC"
+			],
+			"type": "UPGRADE",
+			"entries": [
+				"{@i Requirements: not heavy}",
+				"This upgrade trades power for accuracy. You have a +2 to damage rolls with this weapon, but you take a -4 to damage rolls."
+			]
 		}
 	],
 	"variant": [
+		{
+			"name": "Material: Moonsilver",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true,
+				"name": "Whip"
+			},
+			"property": [
+				"MATERIAL"
+			],
+			"entries": [
+				"A purer variant of silver, which can only be extracted from rare nodes on the surface of the moon's corpse. Difficult to extract, only the most skilled craftsmen can work this metal without ruining its purity.",
+				"Moonsilver weapons must be commissioned from legendary smiths, and the material must be provided by the customer. It costs at least 10 COIN to plate a weapon with moonsilver.",
+				{
+					"type": "entries",
+					"name": "Moonsilver",
+					"entries": [
+						"Moonsilver weapons pierce and rend monstrosities, celestials, aberrations, and lunar creatures. Its bonus damage is necrotic."
+					]
+				}
+			],
+			"inherits": {
+				"namePrefix": "Moonsilvered ",
+				"source": "MOD",
+				"rarity": "unknown",
+				"valueExpression": "[[baseItem.value]] + 1000",
+				"entries": [
+					{
+						"type": "entries",
+						"name": "Moonsilver",
+						"entries": [
+							"Moonsilver weapons pierce and rend monstrosities, celestials, aberrations, and lunar creatures. Its bonus damage is necrotic."
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Material: Silver",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true,
+				"name": "Whip"
+			},
+			"property": [
+				"MATERIAL"
+			],
+			"entries": [
+				"Hunters often use silvered blades to hunt dangerous monsters. A fairly standard material, but useful nonetheless.",
+				"Silver weapons can be commissioned from local smiths, and the material is generally readily available. It costs 1 COIN to have a weapon plated in silver.",
+				{
+					"type": "entries",
+					"name": "Silver",
+					"entries": [
+						"Silver weapons pierce monstrosities."
+					]
+				}
+			],
+			"inherits": {
+				"namePrefix": "Silvered ",
+				"source": "MOD",
+				"rarity": "unknown",
+				"valueExpression": "[[baseItem.value]] + 100",
+				"entries": [
+					{
+						"type": "entries",
+						"name": "Silver",
+						"entries": [
+							"Silver weapons pierce monstrosities."
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Material: Deep Lead",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true,
+				"name": "Whip"
+			},
+			"property": [
+				"MATERIAL",
+				"BMKT"
+			],
+			"entries": [
+				"The signature weapons of the Order of the Blazing Rose, deep-lead weapons carry inherent anti-magic properties that are extremely useful when fighting mages. This material can never be applied to a magic weapon.",
+				"As the Blazing Rose is the sole producer of deep lead, it is difficult to acquire the necessary material to create one- and public ownership of a deep lead weapon tends to draw the attention of the Order.",
+				"Deep Lead weapons must be commissioned from expert smiths, and the material must be provided by the customer. Some smiths may outright refuse the order, wishing to avoid entanglement with the Blazing Rose. It costs a minimum of 5 COIN to have a weapon plated with Deep Lead.",
+				{
+					"type": "entries",
+					"name": "Deep Lead",
+					"entries": [
+						"Deep lead weapons pierce and rend any fey, spellcaster, or psion, although this excludes non-psionic Innate Spellcasting (as these generally represent innate abilities rather than true magic). Its bonus damage is cold.",
+						"Any concentration save triggered by a deep lead weapon has a minimum DC of 15. Additionally, deep lead weapons are immune to spells and magical effects that directly target them.",
+						"A spellcaster or psion who holds a deep lead weapon is {@condition poisoned} and cannot cast spells or use psionic powers until they release the weapon."
+					]
+				}
+			],
+			"inherits": {
+				"namePrefix": "Deep Lead ",
+				"source": "MOD",
+				"rarity": "unknown",
+				"valueExpression": "[[baseItem.value]] + 500",
+				"entries": [
+					{
+						"type": "entries",
+						"name": "Deep Lead",
+						"entries": [
+							"Deep lead weapons pierce and rend any fey, spellcaster, or psion, although this excludes non-psionic Innate Spellcasting (as these generally represent innate abilities rather than true magic). Its bonus damage is cold.",
+							"Any concentration save triggered by a deep lead weapon has a minimum DC of 15. Additionally, deep lead weapons are immune to spells and magical effects that directly target them.",
+							"A spellcaster or psion who holds a deep lead weapon is {@condition poisoned} and cannot cast spells or use psionic powers until they release the weapon."
+					]
+				}
+				]
+			}
+		},
+		{
+			"name": "Material: Blessed Gold",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true,
+				"name": "Whip"
+			},
+			"property": [
+				"MATERIAL"
+			],
+			"entries": [
+				"Although gold is normally an impractical material for weaponry, being soft, malleable, and expensive, it does have the unique property of being able to bear and retain holy enchantments. As such, it can be laced with divine blessings to create a weapon that cuts through creatures of darkness with ease.", "Goldblessed weapons are disabled in an antimagic field.",
+				"Goldblessed weapons must be commissioned from expert smiths, with the aid of an expert good-aligned cleric. However, the fine enchantments are extremely difficult to work on smaller weaponry: applying blessed gold to a light or finesse weapon requires the service of a legendary smith and legendary cleric, at a minimum of four times the normal cost. It costs a minimum of 5 COIN to have a weapon plated with Blessed Gold (20 COIN for light or finesse weapons)",
+				{
+					"type": "entries",
+					"name": "Blessed Gold",
+					"entries": [
+						"Goldblessed weapons pierce and rend undead and fiends. Its bonus damage is radiant."
+					]
+				}
+			],
+			"inherits": {
+				"namePrefix": "Goldblessed ",
+				"source": "MOD",
+				"rarity": "unknown",
+				"valueExpression": "[[baseItem.value]] + 700",
+				"entries": [
+					{
+						"type": "entries",
+						"name": "Blessed Gold",
+						"entries": [
+							"Goldblessed weapons pierce and rend undead and fiends. Its bonus damage is radiant."
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Material: Quicksilver",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"weapon": true,
+					"property": "L"
+				},
+				{
+					"type": "M",
+					"weapon": true,
+					"property": "F"
+				}
+			],
+			"excludes": {
+				"net": true,
+				"name": "Whip",
+				"dmgType": "B"
+			},
+			"property": [
+				"MATERIAL",
+				"SC"
+			],
+			"entries": [
+				"Despite its name, quicksilver isn't another variant of silver- it's {@i mercury}, a liquid metal poisonous to most mortals and beasts. It is extraordinarily difficult to work onto a weapon, as it is liquid at room temperature- as such, a quicksilvered blade must be laced with intense cold enchantments to retain its solid form. Once created, however, they are singularly cruel weapons, as any wound upon the opponent allows fragments of frozen mercury to break free of the blade, entering the bloodstream and poisoning the target.",
+				"Quicksilver weapons must be commissioned from legendary smiths. It costs at least 10 COIN to plate a weapon with quicksilver.",
+				{
+					"type": "entries",
+					"name": "Quicksilver",
+					"entries": [
+						"Quicksilver weapons pierce and rend humanoids, beasts, and monstrosities. Their bonus damage is poison.",
+						"Quicksilver weapons break and must be reforged if the cold enchantments upon them are broken."
+					]
+				}
+			],
+			"inherits": {
+				"namePrefix": "Quicksilvered ",
+				"source": "MOD",
+				"rarity": "unknown",
+				"valueExpression": "[[baseItem.value]] + 1000",
+				"entries": [
+					{
+						"type": "entries",
+						"name": "Quicksilver",
+						"entries": [
+							"Quicksilver weapons pierce and rend humanoids, beasts, and monstrosities. Their bonus damage is poison.",
+							"Quicksilver weapons break and must be reforged if the cold enchantments upon them are broken."
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Material: Leviathan Bone",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true,
+				"dmgType": "B",
+				"name": "Whip"
+			},
+			"property": [
+				"MATERIAL"
+			],
+			"entries": [
+				"Normal bone makes for crude weaponry, suitable for hunting beasts and bandits, but fragile and susceptible to breakage against sturdier foes. In the northlands, however, there are barbarians who harvest the bones of a long-dead Leviathan, fashioning it into weaponry and armor. Immensely durable, these bones can retain an edge for years without dulling, and are capable of piercing thick hides.",
+				"Leviathan bone weapons must be commissioned from a local craftsman familiar with Leviathan bone. Most such craftsmen are found in the northern tundras, amongst the nomadic tribes of the Cold Sun Clans. Due to their surprisingly light weight, Leviathan Bone is unsuitable for crafting bludgeoning weapons. Bone weapons cost 2 COIN more than their standard counterparts.",
+				{
+					"type": "entries",
+					"name": "Leviathan Bone",
+					"entries": [
+						"Leviathan weapons pierce giants and dragons."
+					]
+				}
+			],
+			"inherits": {
+				"namePrefix": "Leviathan Bone ",
+				"source": "MOD",
+				"rarity": "unknown",
+				"valueExpression": "[[baseItem.value]] + 200",
+				"entries": [
+					{
+						"type": "entries",
+						"name": "Leviathan Bone",
+						"entries": [
+							"Leviathan weapons pierce giants and dragons."
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Material: Steel",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true,
+				"name": "Whip"
+			},
+			"property": [
+				"MATERIAL",
+				"SC",
+				"BMKT"
+			],
+			"entries": [
+				"Most weapons and armor in Sorspecto is made of bronze, which sets the baseline standard for weapons and armor. However, the military regime of the Iron Empire has developed iron and steel weaponry, and through the Tripartite Treaty has enforced exclusive ownership of the smelting process. Ownership of iron and steel weaponry is considered a right reserved for soldiers of the Empire, and displaying one in public is grounds for confiscation and interrogation. Most individuals find a bronze blade sufficient for their purposes, but even a small advantage multiplied over a thousand soldiers gives the Empire a significant edge in miltary conflict.",
+				"Steel weaponry offers no inherent mystic bonus, but they do offer a +1 to attack and damage rolls (which does not stack with any similar bonus.) Additionally, as the steel makes up the body of the weapon rather than the plating, it is the only base material that can be combined with other materials, allowing for silver-plated steel weaponry and similar. However, a magic weapon cannot have this material applied to it.", 
+				"Steel weapons must be commissioned from expert smiths familiar with forging steel. Unfortunately, such smiths generally reside in the Empire, and as such are forbidden to craft such blades for non-empire soldiers. Steel weaponry costs at least 3 COIN more than equivalent bronze weaponry.",
+				{
+					"type": "entries",
+					"name": "Steel",
+					"entries": [
+						"Steel weapons have a +1 to attack and damage rolls."
+					]
+				}
+			],
+			"inherits": {
+				"namePrefix": "Template ",
+				"source": "MOD",
+				"rarity": "unknown",
+				"bonusWeapon": "+1",
+				"valueExpression": "[[baseItem.value]] + 3000",
+				"entries": [
+					{
+						"type": "entries",
+						"name": "Steel",
+						"entries": [
+							"Steel weapons have a +1 to attack and damage rolls."
+						]
+					}
+				]
+			}
+		}
+	],
+	"itemGroup": [
+		{
+			"name": "Arcane Staff",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "arcane",
+			"property": [
+				"STAFF"
+			],
+			"items": [
+				"Arcane Staff (Fire)|MOD",
+				"Arcane Staff (Cold)|MOD",
+				"Arcane Staff (Lightning)|MOD",
+				"Arcane Staff (Necrotic)|MOD"
+			],
+			"entries": [
+				"{@i A polished length of cured wood or metal, topped with a crystal or other focus.}",
+				"Arcane staffs come in a great variety of types. Some example staffs are given below, but you can usually acquire a staff that pierces any non-physical damage type as a standard item."
+			]
+		},
+		{
+			"name": "Primal Staff (Physical)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "druidic",
+			"property": [
+				"STAFF"
+			],
+			"items": [
+				"Primal Staff (Fire)|MOD",
+				"Primal Staff (Necrotic)|MOD",
+				"Primal Staff (Venom)|MOD",
+				"Primal Staff (Physical)|MOD"
+			],
+			"entries": [
+				"{@i A long length of knobbled wood, decorated with symbols of primal power- feathers, bones, vines, and other adornments of nature.}"
+			]
+		},
+		{
+			"name": "Holy Staff (Necrotic)",
+			"source": "MOD",
+			"rarity": "none",
+			"value": 400,
+			"weight": 2,
+			"type": "SCF",
+			"scfType": "holy",
+			"property": [
+				"STAFF"
+			],
+			"items": [
+				"Holy Staff (Radiant)|MOD",
+				"Holy Staff (Necrotic)|MOD"
+			],
+			"entries": [
+				"{@i A tall, metal staff, with the symbol of your god or faith affixed to the tip. Holy staffs are often made with a core of brass, plated with gold or silver.}",
+				"Radiant and Necrotic holy staffs are by far the most common, but the clerics of certain deities are known to use variations; for example, the clerics of the Burned Lady often use a fire variant."
+			]
+		}
+	],
+	"itemType": [
+		{
+			"abbreviation": "UPGRADE",
+			"source": "MOD",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Upgrade",
+					"entries": [
+						"This item represents an upgrade that can be applied to certain weapons. A weapon can bear no more than three upgrades at a time. The first upgrade costs 3 COIN to apply; the next costs 7 COIN and requires the service of an expert smith, and the last upgrade costs a whopping 12 COIN and requires a legendary craftsman. Unless the upgrade specifies otherwise, you cannot apply the same upgrade to a weapon more than once. See {@variantrule FORGE|MOD} for additional details.",
+						"A magic weapon can bear no more than one upgrade, and it costs 12 COIN to apply. Some upgrades can only be applied to certain weapons. At this point, upgrades can only be applied to melee weapons."
+					]
+				}
+			]
+		}
 	],
 	"variantrule": [
 		{
@@ -809,6 +5182,15 @@
 			]
 		},
 		{
+			"name": "Techniques",
+			"source": "MOD",
+			"entries": [
+				"A number of weapons (mostly martial weapons) have been given one or two innate abilities, which are referred to as Techniques. Any technique is listed as a property on the weapon in question.",
+				"You may only use a weapon's technique if you are proficient in that weapon.",
+				"If a technique ever calls for a saving throw, the DC is equal to 8 + your proficiency modifier + your Strength modifier. If the weapon in question is a finesse weapon (or another feature/ability grants you the ability to use Dexterity instead of Strength for that weapon), you may use Dexterity instead of Strength when determining your save DC."
+			]
+		},
+		{
 			"name": "Falling",
 			"source": "MOD",
 			"type": "section",
@@ -878,11 +5260,11 @@
 			]
 		},
 		{
-			"name": "Mounted Combat",
+			"name": "Mounted Combat 2",
 			"source": "MOD",
 			"type": "section",
 			"entries": [
-				"The rules for {@quickref controlling a mount} are replaced with the following.",
+				"The rules for controlling a mount in combat are replaced with the following.",
 				"A controlled mount does not have a turn in combat, and can take no actions, reactions, or bonus actions. During your turn, you may use the mount's movement speed as your own, but you must expend movement all at once: once you start moving, you cannot take any action (even free actions) until you finish moving, and once you end your move you cannot move again during the current turn (even if you would otherwise have movement remaining.",
 				"Additionally, if your mount cannot see, you must succeed on a DC 20 Animal Handling check at the start of your turn in order to control it. On a failure, the mount does not move this turn.",
 				{
@@ -920,7 +5302,19 @@
 				"This variant uses a short rest of 8 hours and a long rest of 7 days. Additionally, long rests must be taken in a place of relative shelter and safety, with access to food and water.",
 				"Furthermore, you may take at most three short rests between long rests. You may, however, spend an hour resting to spend hit dice without counting it as a short rest, though you regain no other resources.",
 				"With this variant, you regain all of your hit dice upon completing a long rest, rather than half.",
-				"Finally, at the DM's discretion, the duration of a short rest may temporarily shift back to 1 hour in high-pressure environments, like in a dungeon crawl."
+				"Finally, at the DM's discretion, the duration of a short rest may temporarily shift back to 1 hour in high-pressure environments, like in a dungeon crawl.",
+				{
+					"type": "entries",
+					"name": "Costs of Resting",
+					"entries": [
+						"Adventuring comes with associated costs: equipment repair, food, shelter, basic equipment, etc. All minor costs- i.e every cost that isn't assigned a gold value- is abstracted into a single cost of 1 COIN per long rest, per character.",
+						"If you are unable or willing to pay the COIN cost in resting, you cannot cure any levels of {@condition exhaustion}, and you gain a level of {@condition unrested}, which imposes a -1 penalty to your proficiency bonus. The unrested condition can stack indefinitely.",
+						"If you are suffering from being {@condition unrested}, you can spend 1 extra COIN during a long rest to cure 1 level of {@condition unrested}. You cannot cure more than 1 level of unrested per long rest.",
+						"If you are {@i not} suffering from being {@condition unrested}, you can spend an extra COIN during a long rest to live a luxurious lifestyle, which grants you inspiration at the end of the long rest.",
+						"Certain long-term upgrades may increase the cost of resting. For example, a long-term hireling may require payment ever rest, and taking care of a horse might incur an extra cost."
+					]
+				}
+				
 			]
 		},
 		{
@@ -997,8 +5391,270 @@
 				"Choose an {@b intersection of squares as the point of origin} of an area of effect, then follow the rules for that kind of area as normal (see the \"Areas of Effect\" section in chapter 10 of the Player's Handbook). If an area of effect covers at least half a square, it affects that square.",
 				"If a creature is Large or larger, an area-of-effect ability must cover half or more of the creature's space to have full effect. If it covers less than half of the creature's space, the creature has advantage on saving throws against the effect. If it covers less than 1/4th of the creature's space, then it has no effect."
 			]
+		},
+		{
+			"name": "Blacksmiths and Craftsmen",
+			"source": "MOD",
+			"entries": [
+				"In the course of adventuring, warriors often seek the services of blacksmiths and craftsmen to forge weapons, armor, and other items to arm themselves. Of course, not all smiths are created equal- some are content working brass in the local village forge, while others are renowned across the land. Smiths and craftsmen can broadly be grouped into three tiers:",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Local",
+							"entries": [
+								"A local smith or craftsman can be found pretty much anywhere. Their services are not particularly in demand, and they can be commissioned fairly easily, although their talent is limited and they have access to only meagre resources. A village blacksmith or a town fletcher is probably a local smith."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Expert",
+							"entries": [
+								"An expert smith is is renowned and respected in their craft, with access to considerable resources and aid. They are usually only found in capital cities and other significant population centers. Their work is often in-demand and their prices high, but their skill is worth it."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Legendary",
+							"entries": [
+								"A legendary smith is a true master of their craft. Some can be found in city centers, but others have the luxury of isolating themselves on far-off islands or in mountainside retreats, having accumulated sufficient resources to dedicate themselves fully to their craft, away from the constant demands of commercial sites.",
+								"Legendary smiths are rare, extremely talented, and extraordinarily hard to commission. Aside from being in high demand, they tend to be rather picky about the jobs they take. They may require a quest to be completed, or a gift of a rare material or item, before they even consider taking on a job."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "FORGE",
+			"source": "MOD",
+			"entries": [
+				"The blade of a guardsman is quite different from the blade of a warrior. A guard carries a sword as a symbol of authority, and a good guardsman unsheathes the blade rarely. But a warrior often meets foes who cannot be reasoned with, and must entrust their lives to their weapons on a regular basis. Therefore, though a standard brass blade is quite sufficient for a watchman, the adventurer often seeks a blade more finely tuned for their specific purpose.",
+				"The FORGE system introduces a number of new upgrades that may be applied to mundane weapons, to enhance them with greater slaying power and give martials an expanded range of tactical options. At this point in time, these upgrades can only be applied to melee weapons.",
+				"First, a few relevant terms are defined below:",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Bonus Damage",
+							"entries": [
+								"Some abilities tell you to add bonus damage to an attack's damage. Bonus damage is equal to a single roll of the weapon's damage (for example, a greatsword would have a bonus damage of 2d6. A normal greatsword attack deals 2d6 + STR damage, but if you are told to add bonus damage, it becomes 4d6 + STR).",
+								"Bonus damage cannot be stacked from the same source, but it may be stacked from different sources- for example, you might add bonus damage from both the weapon's material and due to an upgrade of the weapon. Some upgrades may have you add multiple bonus damage dice.",
+								"The damage type of the bonus damage is determined by the weapon's material. If there is no special material, or the material lists no bonus damage type, then the bonus damage is the same damage type as the weapon."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Pierce",
+							"entries": [
+								"If a weapon {@i pierces} a creature, then it ignores any resistances (but not immunities) the creature has against the weapon's base damage type and the weapon's bonus damage type."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Rend",
+							"entries": [
+								"If a weapon {@i rends} a creature, then it both {@i pierces} them and deals bonus damage."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Upscale",
+							"entries": [
+								"If you are told to upscale a weapon's damage dice, increment it by one notch: damage dice go from {@dice 1d1} < {@dice 1d4} < {@dice 1d6} < {@dice 1d8} < {@dice 1d10} < {@dice 1d12} < {@dice 2d6}. To downscale a damage dice, simply make it one increment smaller. For example, a upscaled dagger would become a 1d6 weapon, while a downscaled dagger would do a measly 1 damage.",
+								"You cannot take any that would reduce your damage die below a 1. You {@i can} take an upgrade that upscales your die above a 2d6, but it does not modify the dice further."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Materials",
+					"entries": [
+						"Most people are familiar with silver-coated weapons, rumored to be particularly, effective at slaying monsters, but an experienced warrior knows that there is a far greater variety of {@filter materials |items|source=mod|property=material} that might be applied to a blade.",
+						"Some materials are harder to work with than others, and may require an expert or a legendary smith to work. Materials may be applied to magic weapons, but at a drastically increased cost and requiring the service of a legendary smith. If the material in question is rare or restricted, you may be required to provide the material in addition to the cost.",
+						"You must be proficient in a weapon to benefit from a material applied to it."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Upgrades",
+					"entries": [
+						"Many longtime warriors often find it useful to customize their weapons to better suit their fighting style. Up to three {@filter  upgrades|items|source=mod|property=upgrade} can be applied to a single weapon.",
+						"The first upgrade to a weapon costs 3 COIN to apply; the next costs 7 COIN and requires the service of an expert smith, and the last upgrade costs a whopping 12 COIN and requires a legendary craftsman.",
+						"A magic item can bear only one upgrade, requires a legendary smith to add, and costs 12 COIN to augment.",
+						"In addition, many upgrades have their own restrictions on what weapons they can be applied to. You may encounter opportunities to add more unique upgrades to your weapons as you travel.",
+						"You must be proficient with a weapon to benefit from any upgrade it possesses."
+					]
+				},
+				"You may also wish to review {@variantrule blacksmiths and craftsmen} for information on expert and legendary smiths."
+			]
+		},
+		{
+			"name": "COIN",
+			"source": "MOD",
+			"entries": [
+				"5e economy has traditionally been absolutely broken, and therefore ignored- specifically, it has always been unclear how much money players are supposed to have and there's also been nothing to buy. However, I think there is some value in having a simple, functioning economy, with the ability to spend money to improve your equipment and advance your goals, so this COIN system is a rework of the gold system to simplify things down and create a currency that is more easily tracked, awarded, and is more useful to spend.",
+				{
+					"type": "entries",
+					"name": "Abstraction",
+					"entries": [
+						"COIN abstracts down the currency system away from gold and silver and platinum and converts everything into a unit of value that we will just call COIN. The idea is essentially stolen from Blades in the Dark.",
+						"1 COIN is worth significantly more than 1 gp. It is assumed that adventurers generally exist beyond the life of quibbling over silver and copper- for the average adventurer, dropping a couple gold on a purchase is barely even worth paying attention to. As such, most minor purchases have been abstracted away to nothing- most adventuring gear, like rope, is now functionally free. The COIN is certainly not the baseline unit of money in-universe, but it serves as an abstraction for the smallest unit of money an adventurer should really care about.",
+						"Adventurers are expected to earn COIN through significant deeds. Most mundane jobs won't earn you a significant amount of money (with a few exceptions, as per some backgrounds), and therefore won't even get you 1 COIN worth of value. Certainly haggling over inn rooms won't save you anything meaningful. Going out and killing a monster terrorizing the village, or blackmailing a rich politician, are deeds that will earn you some decent COIN.",
+						"The COIN system works hand-in-hand with the {@variantrule STASH} system, which is a simplified inventory system that limits characters to a flat number of inventory slots (so even though most adventuring gear is functionally free, you cannot just carry an infinite amount of it.)"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Uses for COIN",
+					"entries": [
+						"The first and primary use of COIN is the maintenance of your character, your party, and associated belongings. All associated costs of adventuring- housing, food, mundane ammunition, weapon and armor repairs, simple equipment, etc, are not things to be tracked individually, but do incur a cost. Under the COIN system, all minor costs are abstracted into a single cost of 1 COIN per character every time you take a long rest. See {@variantrule Gritty Realism Resting} for details.",
+						"The other major use for COIN is to purchase useful items. See in particular {@variantrule FORGE} for details on the new weapon upgrade system, which martials should take advantage of. You might also look at the items page for a few new mundane items that have been added. Spellcasters of course still have to invest in certain costly components for their spells. Though there are no true magic item shops in Sorspecto, the underground black market {@i does} do a healthy trade in such relics.",
+						"And of course COIN greases the wheels of the world. A well placed 'investment' can open doors or buy valuable information. It's no secret that big spenders get priority treatment."
+						
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Meta: Implementation of COIN on 5e.tools",
+					"entries": [
+						"In 5e.tools, there's no way for me to visually change costs into COIN. In places where cost is listed, like in the Items page, you should assume that the listed price is in COIN rather than gp- for example, a {@item light crossbow} is listed as costing 1 gp, which really means it costs 1 COIN.",
+						"If an item seems to have a cost disproportionate to its value, it may be because I forgot to convert the price into COIN. Please let me know if this happens. At this point in time, I should have converted anything on the Items page and the Spells page; things in any other section may have been missed."
+					]
+				}
+			]
+		},
+		{
+			"name": "STASH",
+			"source": "MOD",
+			"entries": [
+				"The 5e inventory has been defunct for a long time- generally, players are given free reign to carry around whatever they want, which is primary balanced by the fact that (non-magic) items in 5e are generally useless. It's basically the skyrim system. The following inventory rules are made to simplify the inventory system and make it easier to track, which is intended to work in conjunction with more useful weapons and items and more readily purchasable consumables.",
+				{
+					"type": "entries",
+					"name": "Abstraction",
+					"entries": [
+						"The STASH system is pretty simple. You have a number of inventory slots equal to 8 + your Strength modifier. Most items take 1 slot, particularly large items may take more (2-3). Armor and worn equipment don't count toward your inventory slots while they are worn.",
+						"Generally, any tiny item (items that are small enough that you could hold a handful of them- like chalk, candles, or rings) can be carried freely. Held COIN does not consume inventory slots."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Preparation Slots",
+					"entries": [
+						"When you complete a long rest in a town, city, or other populated area, you can allocate some of your inventory slots to be Preparation Slots. These slots serve as a flexible inventory- at any point before you complete another long rest, you can {@i retroactively} decide what that slot contains. For example, you can retroactively decide that you had brought along a grappling hook, or a rope, by using one of your preparation slots.",
+						"Once you declare what is in a preparation slot, it reverts to a regular slot containing that item. You can only fill preparation slots with items that have negligible cost and are readily available for sale. A preparation slot is considered to be filled.",
+						"You can have a number of Preparation slots equal to your Intelligence modifier."	
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Managing your STASH",
+					"entries": [
+						"This inventory system is a lot {@i tighter} than 5e's default. Don't be afraid to throw items away when you no longer need them- you can always salvage things from the environment anyway.",
+						"In particular, holding on to consumables overlong is basically equivalent to wasting an inventory slot- same with carrying too many backup weapons. Hoarding too much will result in having no slots to carry any new items with.",
+						"Note that although abstract COIN does not take up inventory slots, physical treasure does. All treasure found on expeditions and quests needs to be hauled back to town to be sold and converted into useful currency- so you'd better save enough inventory slots to transport your loot."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Meta: Implementation of STASH on 5e.tools",
+					"entries": [
+						"There's no way for me to set things as taking up slots rather than weight on 5e.tools. Assume that for all {@i mundane} items, their weight in pounds is the number of slots they take up. (All mundane items {@i should} have been adjusted to this metric, although I may have missed some.) Magic items will need their weight to be configured upon import, as I am not going to manually set the weight of every possible magic item. As a rule of thumb, most items take 1 slot, but heavy and two-handed items (and any similarly large, heavy item) take 2 slots. I struggle to think of many scenarios where you would get larger items (besides armor, perhaps)."
+					]
+				}
+			]
+		},
+		{
+			"name": "GRIM",
+			"source": "MOD",
+			"entries": [
+				"It's no secret that death saves in 5e are a little bit weird: a PC left on the ground is either ignored, in which case they bounce back up almost immediately after a {@spell healing word}, or they get double-tapped and murdered before anybody has a chance to intervene. It's a system that's often entirely dependent on the DM's mercy, and is basically held up by the DM creating reasons that the enemy doesn't just finish off a downed PC.",
+				"The following system revision, haphazardly called GRIM, is intended to give dying PCs a little more agency in their deaths while removing the factor of DM mercy from the equation.",
+				"Note that this system is pretty heavily experimental. If I feel like it's performing poorly, I may revoke it during a campaign.",
+				{
+					"type": "entries",
+					"name": "Negative Hit Points",
+					"entries": [
+						"Hit points are now allowed to go negative, to a certain point. If a single instance of damage brings your hit points below 0, your hit points go negative. However, if your hit points are already 0 or negative, all subsequent hits do not decrease your hit points further; instead, they trigger death saving throws.",
+						"For example, if you have 4 hit points and a goblin stabs you for 10 damage, your hit points go to -6 rather than 0. If they stab you again, your hit points do not change, but you must make a death saving throw (detailed later). If you heal back to 2 hit points, getting attacked again could drop your hit points negative again."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bleeding Out",
+					"entries": [
+						"Going to 0 hit points (or lower) no longer knocks you unconscious. Instead, you begin {@condition bleeding out|MOD}. Unlike in 5e, you are {@i not} unconscious or incapacitated while bleeding out, and you can continue to take actions under some constraints (see the {@condition bleeding out|MOD} condition).",
+						{
+							"type": "inset",
+							"name": "Recovering",
+							"entries": [
+								"Note that you don't stop bleeding out until you return to positive hit points, which requires you to first heal above any negative hit points you have. This means that small amounts of healing are less useful if you're at very negative hit points. Also, all healing now has value when you're at positive hit points- even if the healing doesn't prevent you from getting knocked below 0 in the next hit, it means your hit points will be less negative, putting you at less risk."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Death Saves",
+					"entries": [
+						"If you take damage while you are {@condition bleeding out}, you must make a death saving throw with a DC equal to 5 or half the damage taken (whichever is higher). Death saves are still made with a +0 modifier by default. Rolling a natural 1 on a death save still causes 2 failures. Rolling a natural 20 restores 2d8 hit points to you (although you continue bleeding out if your hit points are still below 0).",
+						"You can no longer 'stabilize'; succeeding on death saves does nothing. You only stop making death saves if you fail 3 death saves (see \"Mortality\", below) or if you stop bleeding out (i.e are healed above 0 hit points). Once you stop bleeding out, your death saves reset to 0 failures.",
+						"Temporary hit points don't stop you from bleeding out; however, any damage absorbed by temporary hit points is not counted in the death save DC calculation. (If you have 6 temp hp and you take 20 damage, you would only need to succeed on a DC 7 death saving throw rather than a DC 10). You still must make a death saving throw even if all damage taken is absorbed by your temporary hit points."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Mortality",
+					"entries": [
+						"Heroes tend to be resilient- even a mortal blow doesn't necessarily mean certain death. If you fail 3 (or more) death saving throws, you must roll a single d6 and reference the below table to determine what happens.",
+						{
+							"type": "table",
+							"caption": "Mortality Result",
+							"colLabels": [
+								"{@dice 1d6}",
+								"Result"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"You die."
+								],
+								[
+									"2-5",
+									"Your character survives, but suffers a severe lingering injury and is removed from the encounter. Resurrection magic can return your character back to functioning form; otherwise, they cannot meaningfully contribute until they spend a short or long rest recovering."
+								],
+								[
+									"6",
+									"Your character survives without lasting harm, though they are removed from the encounter. is removed from the encounter. Resurrection magic can return your character back to functioning form; otherwise, they cannot meaningfully contribute until they spend a short or long rest recovering."
+								]
+							]
+						},
+						"Lingering injury tables will be added to the site soon. Will be roughly based on this document:   https://drive.google.com/file/d/1z_oTJvusofehZoFKp8iDhRdZlMjWVxa_/view , though it will be pared down and simplified, to account for the fact that these injuries are only meant to be suffered rarely.",
+						"Note that instakill effects (like Disintegrate) subvert the Mortality roll, and still result in immediate death. Moreover, some enemies may have the Lethal ability, which ignores the Mortality roll entirely."
+			
+					]
+				},
+				{
+					"type": "inset",
+					"name": "Design Notes",
+					"entries": [
+						"There's a certain dilemma when it comes to death in 5e- namely that although we want the risk of death to be present in difficult combats, we also don't {@i really} want player characters to die (too often)- frequent death messes with the story, disrupts roleplay, cuts off plot threads, and trivializes death.",
+						"Oftentimes we compensate by using stakes that don't involve PC death- losing doesn't mean you {@i die} but rather you fail in an important objective. This isn't universally applicable, however, and still runs into the problem that 5e doesn't have a solid failstate in combat other than the TPK (or at least the \"everybody is unconscious\" state, which on average kills about half the party anyway).",
+						"So the mortality system is intended to first allow for a risk of death, without relying on DM mercy, but also to keep death from being too common. A 1/6 chance of dying at 3 death saves isn't that big, but it's large enough that it's a very real possibility. Most of the time, instead of dying, a character suffers a lingering wound, which requires time and care to heal.",
+						"This system also works to avoid players lying on the ground unconscious, and keeps them in the battle- which means they can keep helping, but also means they're at greater risk. This means that although players will stay conscious longer, they're also more susceptible to being knocked out of the battle entirely, as enemies will continue attacking them. This is {@i probably} okay- in the worst case it's not that different from being stabbed to death while unconscious anyway.",
+						"Negative hit points is a ruleset that will need to be watched carefully. In theory, the goal is to incentivize healing players who are at low hit points to give them a 'buffer' against negative hp, and to prevent low amounts of healing from being able to easily reset death saves (which is a large reason why 5e death saves are so non-threatening). In practice, negative hp may become too negative to heal (i.e if a low hp player endures a full dragon's breath), given 5e's rather conservative approach toward healing. We'll see if it becomes a problem."
+					]
+				}
+			]
 		}
-		
+	
 	],
 	"monster": [
 		{
@@ -1297,9 +5953,6 @@
 	],
 	"monsterFluff": [
 	],
-	"subrace": [
-		
-	],
 	"spell": [
 		{
 			"name": "Mind Sliver",
@@ -1391,7 +6044,7 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Tasha's Otherworldly Guise",
+			"name": "Otherwordly Guise",
 			"source": "MOD",
 			"level": 6,
 			"school": "T",
@@ -4894,7 +9547,7 @@
 			}
 		},
 		{
-			"name": "Otiluke's Resilient Sphere",
+			"name": "Resilient Sphere",
 			"source": "MOD",
 			"srd": "Resilient Sphere",
 			"level": 4,
@@ -5878,7 +10531,7 @@
 			}
 		},
 		{
-			"name": "Drawmij's Instant Summons",
+			"name": "Instant Summons",
 			"source": "MOD",
 			"srd": "Instant Summons",
 			"level": 5,
@@ -6122,7 +10775,7 @@
 			}
 		},
 		{
-			"name": "Mordenkainen's Sword",
+			"name": "Flying Sword",
 			"source": "MOD",
 			"srd": "Arcane Sword",
 			"basicRules": true,
@@ -10910,6 +15563,76 @@
 					}
 				]
 			}
+		}
+	],
+	"itemProperty": [
+		{
+			"abbreviation": "SC",
+			"source": "MOD",
+			"name": "special commission",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Special Commission",
+					"entries": [
+						"An item that is marked as Special Commission is not readily available from the average merchant or smith. They may require a special order, or a particularly talented craftsman, or a shady contact to obtain."
+					]
+				}
+				
+			]
+		},
+		{
+			"abbreviation": "BMKT",
+			"source": "MOD",
+			"name": "black market",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Black Market",
+					"entries": [
+						"A black market item is at the very least explicitly illegal to buy or sell, and is very often illegal to own. Purchase of black market items can only be done through illegal channels, are subject to complications, and if the customer is not well-integrated into criminal networks, may incur an upcharge in addition to the listed price."
+					]
+				}
+				
+			]
+		},
+		{
+			"abbreviation": "MATERIAL",
+			"source": "MOD",
+			"name": "material",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Material",
+					"entries": [
+						"This item represents a particular material that can be used to plate certain types of weapons and armor. Some materials, such as silver, can be easily acquired and applied to weapons by any smith, while others require great effort to find the necessary material and a smith with the talent to work it.",
+						"An object cannot have more than one material applied to it. The cost to "
+					]
+				}
+				
+			]
+		},
+		{
+			"abbreviation": "STAFF",
+			"source": "MOD",
+			"name": "staff",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Staff",
+					"entries": [
+						"A staff is an alternative to a casting focus. Staffs are generally more cumbersome and harder to conceal, but often come with additional benefits over a traditional focus. As long as you are wielding a staff, you may use it as part of the casting of any spell, not just ones that require a material component.",
+						"Unlike most weapons and foci, it takes an action to equip and use a staff, as the caster must spend some energy attuning to the magical focus.",
+						"Staffs require two hands to use. If you are maintaining concentration on a spell cast using a staff, you must keep hold of the staff with both hands; if you release the staff for any reason, your concentration ends."
+					]
+				}
+				
+			]
+		},
+		{
+			"abbreviation": "NATURAL",
+			"source": "MOD",
+			"name": "natural"
 		}
 	]
 }

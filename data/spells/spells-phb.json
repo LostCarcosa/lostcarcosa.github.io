@@ -1600,8 +1600,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "specially marked sticks, bones, or similar tokens worth at least 25 gp",
-					"cost": 2500
+					"text": "specially marked sticks, bones, or similar tokens worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -1722,8 +1722,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an agate worth at least 1,000 gp, which the spell consumes",
-					"cost": 100000,
+					"text": "an agate worth at least 10 COIN, which the spell consumes",
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -2600,9 +2600,8 @@
 			]
 		},
 		{
-			"name": "Bigby's Hand",
-			"source": "PHB",
-			"page": 218,
+			"name": "Arcane Hand",
+			"source": "MOD",
 			"srd": "Arcane Hand",
 			"level": 5,
 			"school": "V",
@@ -4339,8 +4338,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "the powder of a crushed black pearl worth at least 500 gp",
-					"cost": 50000
+					"text": "the powder of a crushed black pearl worth at least 5 COIN",
+					"cost": 500
 				}
 			},
 			"duration": [
@@ -4499,8 +4498,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a focus worth at least 100 gp, either a jeweled horn for hearing or a glass eye for seeing",
-					"cost": 10000
+					"text": "a focus worth at least 1 COIN, either a jeweled horn for hearing or a glass eye for seeing",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -4626,8 +4625,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold the creature being cloned, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
-					"cost": 100000,
+					"text": "a diamond worth at least 10 COIN and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 20 COIN that has a sealable lid and is large enough to hold the creature being cloned, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -6019,8 +6018,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp",
-					"cost": 150000
+					"text": "a statuette of yourself carved from ivory and decorated with gems worth at least 15 COIN",
+					"cost": 1500
 				}
 			},
 			"duration": [
@@ -6069,8 +6068,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "ruby dust worth 50 gp, which the spell consumes",
-					"cost": 5000,
+					"text": "ruby dust worth 1 COIN, which the spell consumes",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -6491,8 +6490,7 @@
 		},
 		{
 			"name": "Counterspell",
-			"source": "PHB",
-			"page": 228,
+			"source": "MOD",
 			"srd": true,
 			"basicRules": true,
 			"level": 3,
@@ -6520,14 +6518,14 @@
 				}
 			],
 			"entries": [
-				"You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect."
+				"You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 3 + three times the spell's level. On a success, the creature's spell fails and has no effect."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used."
+						"When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used. Otherwise, you gain a +1 bonus to the spellcasting ability check for every level you upcast it (so a 5th level counterspell would get a +2 bonus)."
 					]
 				}
 			],
@@ -6869,8 +6867,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "one clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse",
-					"cost": 15000
+					"text": "one clay pot filled with grave dirt, one clay pot filled with brackish water, and one black onyx stone worth 1 COIN for each corpse",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -8806,8 +8804,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes",
-					"cost": 2500,
+					"text": "incense and a sacrificial offering appropriate to your religion, together worth at least 1 COIN, which the spell consumes",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -11223,8 +11221,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier",
-					"cost": 1000,
+					"text": "1 COIN worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -11332,8 +11330,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a set of divinatory tools\u2014such as bones, ivory sticks, cards, teeth, or carved runes\u2014worth 100 gp and an object from the location you wish to find",
-					"cost": 10000
+					"text": "a set of divinatory tools\u2014such as bones, ivory sticks, cards, teeth, or carved runes\u2014worth 1 COIN and an object from the location you wish to find",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -12461,8 +12459,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp",
-					"cost": 100000,
+					"text": "a sprinkling of holy water, rare incense, and powdered ruby worth at least 10 COIN",
+					"cost": 1000,
 					"consume": "optional"
 				}
 			},
@@ -13139,8 +13137,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 5,000 gp",
-					"cost": 500000
+					"text": "a diamond worth at least 50 COIN",
+					"cost": 5000
 				}
 			},
 			"duration": [
@@ -13436,8 +13434,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "incense and powdered diamond worth at least 200 gp, which the spell consumes",
-					"cost": 20000,
+					"text": "incense and powdered diamond worth at least 2 COIN, which the spell consumes",
+					"cost": 200,
 					"consume": true
 				}
 			},
@@ -13915,8 +13913,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "diamond dust worth at least 100 gp, which the spell consumes",
-					"cost": 10000,
+					"text": "diamond dust worth at least 1 COIN, which the spell consumes",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -14535,8 +14533,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "herbs, oils, and incense worth at least 1,000 gp, which the spell consumes",
-					"cost": 100000,
+					"text": "herbs, oils, and incense worth at least 10 COIN, which the spell consumes",
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -15326,8 +15324,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a gem-encrusted bowl worth at least 1,000 gp, which the spell consumes",
-					"cost": 100000,
+					"text": "a gem-encrusted bowl worth at least 10 COIN, which the spell consumes",
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -16065,8 +16063,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text",
-					"cost": 100000
+					"text": "a tiny reliquary worth at least 10 COIN containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text",
+					"cost": 1000
 				}
 			},
 			"duration": [
@@ -16581,9 +16579,8 @@
 			"components": {
 				"s": true,
 				"m": {
-					"text": "a lead-based ink worth at least 10 gp, which the spell consumes",
-					"cost": 1000,
-					"consume": true
+					"text": "a lead-based ink worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -16660,8 +16657,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500 gp per Hit Die of the target",
-					"cost": 50000
+					"text": "a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 5 COIN per Hit Die of the target",
+					"cost": 500
 				}
 			},
 			"duration": [
@@ -17292,8 +17289,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "incense worth at least 250 gp, which the spell consumes, and four ivory strips worth at least 50 gp each",
-					"cost": 25000,
+					"text": "incense worth at least 2 COIN, which the spell consumes, and four ivory strips worth at least 3 COIN in total",
+					"cost": 200,
 					"consume": true
 				}
 			},
@@ -18262,8 +18259,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "holy water or powdered silver and iron worth at least 100 gp, which the spell consumes",
-					"cost": 10000,
+					"text": "holy water or powdered silver and iron worth at least 1 COIN, which the spell consumes",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -18419,8 +18416,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a small bit of honeycomb and jade dust worth at least 10 gp, which the spell consumes",
-					"cost": 1000,
+					"text": "a small bit of honeycomb and jade dust worth at least 1 COIN, which the spell consumes",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -19186,9 +19183,8 @@
 			]
 		},
 		{
-			"name": "Melf's Acid Arrow",
+			"name": "Acid Arrow",
 			"source": "PHB",
-			"page": 259,
 			"srd": "Acid Arrow",
 			"level": 2,
 			"school": "V",
@@ -20231,7 +20227,7 @@
 			]
 		},
 		{
-			"name": "Mordenkainen's Faithful Hound",
+			"name": "Faithful Hound",
 			"source": "PHB",
 			"page": 261,
 			"srd": "Faithful Hound",
@@ -20305,7 +20301,7 @@
 			]
 		},
 		{
-			"name": "Mordenkainen's Private Sanctum",
+			"name": "Private Sanctum",
 			"source": "PHB",
 			"page": 262,
 			"srd": "Private Sanctum",
@@ -20483,8 +20479,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes",
-					"cost": 2500,
+					"text": "a pinch of diamond dust worth 1 COIN sprinkled over the target, which the spell consumes",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -20577,9 +20573,8 @@
 			]
 		},
 		{
-			"name": "Nystul's Magic Aura",
-			"source": "PHB",
-			"page": 263,
+			"name": "Mask Aura",
+			"source": "MOD",
 			"srd": "Arcanist's Magic Aura",
 			"level": 2,
 			"school": "I",
@@ -20655,7 +20650,7 @@
 			}
 		},
 		{
-			"name": "Otiluke's Freezing Sphere",
+			"name": "Freezing Sphere",
 			"source": "PHB",
 			"page": 263,
 			"srd": "Freezing Sphere",
@@ -21173,7 +21168,7 @@
 				"You beseech an otherworldly entity for aid. The being must be known to you: a god, a primordial, a demon prince, or some other being of cosmic power. That entity sends a {@filter celestial|bestiary|type=celestial|miscellaneous=!swarm}, an {@filter elemental|bestiary|type=elemental|miscellaneous=!swarm}, or a {@filter fiend|bestiary|type=fiend|miscellaneous=!swarm} loyal to it to aid you, making the creature appear in an unoccupied space within range. If you know a specific creature's name, you can speak that name when you cast this spell to request that creature, though you might get a different creature anyway (DM's choice).",
 				"When the creature appears, it is under no compulsion to behave in any particular way. You can ask the creature to perform a service in exchange for payment, but it isn't obliged to do so. The requested task could range from simple (fly us across the chasm, or help us fight a battle) to complex (spy on our enemies, or protect us during our foray into the dungeon). You must be able to communicate with the creature to bargain for its services.",
 				"Payment can take a variety of forms. A celestial might require a sizable donation of gold or magic items to an allied temple, while a fiend might demand a living sacrifice or a gift of treasure. Some creatures might exchange their service for a quest undertaken by you.",
-				"As a rule of thumb, a task that can be measured in minutes requires a payment worth 100 gp per minute. A task measured in hours requires 1,000 gp per hour. And a task measured in days (up to 10 days) requires 10,000 gp per day. The DM can adjust these payments based on the circumstances under which you cast the spell. If the task is aligned with the creature's ethos, the payment might be halved or even waived. Nonhazardous tasks typically require only half the suggested payment, while especially dangerous tasks might require a greater gift. Creatures rarely accept tasks that seem suicidal.",
+				"As a rule of thumb, a task that can be measured in minutes requires a payment worth 1 COIN per minute. A task measured in hours requires 10 COIN per hour. And a task measured in days (up to 10 days) requires 100 COIN per day. The DM can adjust these payments based on the circumstances under which you cast the spell. If the task is aligned with the creature's ethos, the payment might be halved or even waived. Nonhazardous tasks typically require only half the suggested payment, while especially dangerous tasks might require a greater gift. Creatures rarely accept tasks that seem suicidal.",
 				"After the creature completes the task, or when the agreed-upon duration of service expires, the creature returns to its home plane after reporting back to you, if appropriate to the task and if possible. If you are unable to agree on a price for the creature's service, the creature immediately returns to its home plane.",
 				"A creature enlisted to join your group counts as a member of it, receiving a full share of experience points awarded."
 			],
@@ -21212,8 +21207,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a forked, metal rod worth at least 250 gp, attuned to a particular plane of existence",
-					"cost": 25000
+					"text": "a forked, metal rod worth at least 3 COIN, attuned to a particular plane of existence",
+					"cost": 300
 				}
 			},
 			"duration": [
@@ -22194,8 +22189,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a bit of fleece and jade dust worth at least 25 gp",
-					"cost": 2500
+					"text": "a bit of fleece and jade dust worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -22252,8 +22247,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a small replica of you made from materials worth at least 5 gp",
-					"cost": 500
+					"text": "a small replica of you made from materials worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -22743,8 +22738,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 500 gp, which the spell consumes",
-					"cost": 50000,
+					"text": "a diamond worth at least 5 COIN, which the spell consumes",
+					"cost": 500,
 					"consume": true
 				}
 			},
@@ -22857,9 +22852,8 @@
 			}
 		},
 		{
-			"name": "Rary's Telepathic Bond",
-			"source": "PHB",
-			"page": 270,
+			"name": "Telepathic Bond",
+			"source": "MOD",
 			"srd": "Telepathic Bond",
 			"level": 5,
 			"school": "D",
@@ -23423,8 +23417,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 1,000 gp, which the spell consumes",
-					"cost": 100000,
+					"text": "a diamond worth at least 10 COIN, which the spell consumes",
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -23546,8 +23540,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "diamonds worth 300 gp, which the spell consumes",
-					"cost": 30000,
+					"text": "diamonds worth 3 COIN, which the spell consumes",
+					"cost": 300,
 					"consume": true
 				}
 			},
@@ -24024,8 +24018,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water",
-					"cost": 100000
+					"text": "a focus worth at least 10 COIN, such as a crystal ball, a silver mirror, or a font filled with holy water",
+					"cost": 1000
 				}
 			},
 			"duration": [
@@ -24750,8 +24744,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes",
-					"cost": 500000,
+					"text": "a powder composed of diamond, emerald, ruby, and sapphire dust worth at least 50 COIN, which the spell consumes",
+					"cost": 5000,
 					"consume": true
 				}
 			},
@@ -24806,8 +24800,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a jade circlet worth at least 1,500 gp, which you must place on your head before you cast the spell",
-					"cost": 150000
+					"text": "a jade circlet worth at least 15 COIN, which you must place on your head before you cast the spell",
+					"cost": 1500
 				}
 			},
 			"duration": [
@@ -25957,8 +25951,7 @@
 		},
 		{
 			"name": "Spare the Dying",
-			"source": "PHB",
-			"page": 277,
+			"source": "MOD",
 			"srd": true,
 			"basicRules": true,
 			"level": 0,
@@ -25985,7 +25978,7 @@
 				}
 			],
 			"entries": [
-				"You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs."
+				"You touch a living creature that is {@condition bleeding out} (has 0 or negative hit points). The creature regains 2d8 hit points, though this cannot raise their hit points above 1. This spell has no effect on undead or constructs."
 			],
 			"affectsCreatureType": [
 				"aberration",
@@ -27310,8 +27303,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "mercury, phosphorus, and powdered diamond and opal with a total value of at least 1,000 gp, which the spell consumes",
-					"cost": 100000,
+					"text": "mercury, phosphorus, and powdered diamond and opal with a total value of at least 10 COIN, which the spell consumes",
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -27441,7 +27434,7 @@
 			}
 		},
 		{
-			"name": "Tasha's Hideous Laughter",
+			"name": "Hideous Laughter",
 			"source": "PHB",
 			"page": 280,
 			"srd": "Hideous Laughter",
@@ -27869,8 +27862,8 @@
 			"components": {
 				"v": true,
 				"m": {
-					"text": "rare chalks and inks infused with precious gems worth 50 gp, which the spell consumes",
-					"cost": 5000,
+					"text": "rare chalks and inks infused with precious gems worth 1 COIN, which the spell consumes",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -27982,7 +27975,7 @@
 			]
 		},
 		{
-			"name": "Tenser's Floating Disk",
+			"name": "Floating Disk",
 			"source": "PHB",
 			"page": 282,
 			"srd": "Floating Disk",
@@ -28580,8 +28573,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a sprinkle of holy water and diamonds worth at least 25,000 gp, which the spell consumes",
-					"cost": 2500000,
+					"text": "a sprinkle of holy water and diamonds worth at least 25 COIN, which the spell consumes",
+					"cost": 2500,
 					"consume": true
 				}
 			},
@@ -28638,8 +28631,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an ointment for the eyes that costs 25 gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell",
-					"cost": 2500,
+					"text": "an ointment for the eyes that costs 1 COIN; is made from mushroom powder, saffron, and fat; and is consumed by the spell",
+					"cost": 100,
 					"consume": true
 				}
 			},
@@ -29361,8 +29354,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a pair of platinum rings worth at least 50 gp each, which you and the target must wear for the duration",
-					"cost": 5000
+					"text": "a pair of platinum rings worth 1 COIN (in total, not each), which you and the target must wear for the duration",
+					"cost": 100
 				}
 			},
 			"duration": [

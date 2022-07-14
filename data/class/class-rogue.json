@@ -21,7 +21,6 @@
 				"weapons": [
 					"simple",
 					"{@item hand crossbow|phb|hand crossbows}",
-					"{@item longsword|phb|longswords}",
 					"{@item rapier|phb|rapiers}",
 					"{@item shortsword|phb|shortswords}"
 				],
@@ -52,12 +51,9 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item rapier|phb} or (b) a {@item shortsword|phb}",
-					"(a) a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows} or (b) a {@item shortsword|phb}",
-					"(a) a {@item burglar's pack|phb}, (b) a {@item dungeoneer's pack|phb}, or (c) an {@item explorer's pack|phb}",
+					"(a) a {@item rapier|phb} or (b) a {@item shortsword|phb} or (a) a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}",
 					"{@item Leather armor|phb}, two {@item dagger|phb|daggers}, and {@item thieves' tools|phb}"
 				],
-				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
 						"a": [
@@ -65,28 +61,13 @@
 						],
 						"b": [
 							"shortsword|phb"
-						]
-					},
-					{
-						"a": [
-							"shortbow|phb",
-							"arrows (20)|phb"
-						],
-						"b": [
-							"shortsword|phb"
-						]
-					},
-					{
-						"a": [
-							"burglar's pack|phb"
-						],
-						"b": [
-							"dungeoneer's pack|phb"
 						],
 						"c": [
-							"explorer's pack|phb"
+							"shortbow|phb",
+							"arrows (20)|phb"
 						]
 					},
+					
 					{
 						"_": [
 							"Leather armor|phb",

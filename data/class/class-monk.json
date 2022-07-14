@@ -40,11 +40,8 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item shortsword|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"10 {@item dart|phb|darts}"
+					"(a) a {@item shortsword|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}"
 				],
-				"goldAlternative": "{@dice 5d4|5d4|Starting Gold}",
 				"defaultData": [
 					{
 						"a": [
@@ -53,22 +50,6 @@
 						"b": [
 							{
 								"equipmentType": "weaponSimple"
-							}
-						]
-					},
-					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
-					},
-					{
-						"_": [
-							{
-								"item": "dart|phb",
-								"quantity": 10
 							}
 						]
 					}
@@ -1374,46 +1355,7 @@
 			"subclassSource": "FTD",
 			"level": 3,
 			"entries": [
-				"The dragon god Bahamut is known to travel the Material Plane in the guise of a young monk, and legend says that he founded the first monastery of the Way of the Ascendant Dragon in this guise. The fundamental teaching of this tradition holds that by emulating dragons, a monk becomes a more integrated part of the world and its magic. By altering their spirit to resonate with draconic might, monks who follow this tradition augment their prowess in battle, bolster their allies, and can even soar through the air on draconic wings. But all this power is in service of a greater goal: achieving a spiritual unity with the essence of the Material Plane.",
-				"As a follower of the Way of the Ascendant Dragon, you decide how you unlocked the power of dragons within yourself. The Ascendant Dragon Origin table offers a number of possibilities.",
-				{
-					"type": "table",
-					"caption": "Ascendant Dragon Origin",
-					"colLabels": [
-						"d6",
-						"Origin"
-					],
-					"colStyles": [
-						"col-1 text-center",
-						"col-11"
-					],
-					"rows": [
-						[
-							"1",
-							"You honed your abilities by aligning your spirit with a dragon's world-altering power."
-						],
-						[
-							"2",
-							"A dragon personally took an active role in shaping your inner energy."
-						],
-						[
-							"3",
-							"You studied at a monastery that traces its teachings back centuries or more to a single dragon's instruction, or one that is devoted to a dragon god."
-						],
-						[
-							"4",
-							"You spent long stretches meditating in the region around an ancient dragon's lair, absorbing that lair's ambient magic."
-						],
-						[
-							"5",
-							"You found a scroll written in Draconic that contained inspiring new techniques."
-						],
-						[
-							"6",
-							"After a dream featuring a five-handed dragonborn, you awoke with the mystical breath of dragons."
-						]
-					]
-				},
+				"The true dragons of Sorspecto are dead, a mere tale of the past, leaving nothing behind but lesser descendants- wyverns, drakes, and other like, scarce more than beasts. However, certain monks have learned a style that mimics the majesty of the true dragons.  By altering their spirit to resonate with draconic might, monks who follow this tradition augment their prowess in battle, bolster their allies, and can even soar through the air on draconic wings.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Draconic Disciple|Monk||Ascendant Dragon|FTD|3"

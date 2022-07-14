@@ -43,10 +43,8 @@
 				"additionalFromBackground": true,
 				"default": [
 					"(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
-					"(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
+					"(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}"
 				],
-				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
 						"a": [
@@ -68,15 +66,6 @@
 						"b": [
 							{
 								"equipmentType": "weaponSimple"
-							}
-						]
-					},
-					{
-						"_": [
-							"explorer's pack|phb",
-							{
-								"item": "javelin|phb",
-								"quantity": 4
 							}
 						]
 					}
@@ -1690,7 +1679,7 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"Many places in the multiverse abound with beauty, intense emotion, and rampant magic; the Feywild, the Upper Planes, and other realms of supernatural power radiate with such forces and can profoundly influence people. As folk of deep feeling, barbarians are especially susceptible to these wild influences, with some barbarians being transformed by the magic. These magic-suffused barbarians walk the Path of Wild Magic. Elf, tiefling, aasimar, and genasi barbarians often seek this path, eager to manifest the otherworldly magic of their ancestors.",
+				"Many places in the multiverse abound with beauty, intense emotion, and rampant magic; the Dreamgrove, the Rift, and other realms of supernatural power radiate with such forces and can profoundly influence people. As folk of deep feeling, barbarians are especially susceptible to these wild influences, with some barbarians being transformed by the magic. These magic-suffused barbarians walk the Path of Wild Magic.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Magic Awareness|Barbarian||Wild Magic|TCE|3"
@@ -2066,7 +2055,7 @@
 			"level": 3,
 			"entries": [
 				"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots\u2014warriors who channel their rage into powerful displays of divine power.",
-				"A variety of gods across the worlds of D&D inspire their followers to embrace this path. Tempus from the Forgotten Realms and Hextor and Erythnul of Greyhawk are all prime examples. In general, the gods who inspire zealots are deities of combat, destruction, and violence. Not all are evil, but few are good.",
+				"Zealots can rise in the service of any god, but they are especially common amongst the devotees of {@deity the Burned Lady|MOD} and {@deity He Who Weighs Our Sins|MOD}, seeking to enforce their god's ideals through war and violence.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Divine Fury|Barbarian||Zealot|XGE|3"

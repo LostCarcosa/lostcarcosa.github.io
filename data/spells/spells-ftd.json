@@ -1,9 +1,8 @@
 {
 	"spell": [
 		{
-			"name": "Ashardalon's Stride",
-			"source": "FTD",
-			"page": 19,
+			"name": "Blazing Stride",
+			"source": "MOD",
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -33,7 +32,7 @@
 				}
 			],
 			"entries": [
-				"The billowing flames of a dragon blast from your feet, granting you explosive speed. For the duration, your speed increases by 20 feet and moving doesn't provoke opportunity attacks.",
+				"Dragonflame envelops your feet, granting you explosive speed. For the duration, your speed increases by 20 feet and moving doesn't provoke opportunity attacks.",
 				"When you move within 5 feet of a creature or an object that isn't being worn or carried, it takes {@damage 1d6} fire damage from your trail of heat. A creature or object can take this damage only once during a turn."
 			],
 			"entriesHigherLevel": [
@@ -71,8 +70,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Fizban's Platinum Shield",
-			"source": "FTD",
+			"name": "Platinum Shield",
+			"source": "MOD",
 			"page": 20,
 			"level": 6,
 			"school": "A",
@@ -152,7 +151,7 @@
 			}
 		},
 		{
-			"name": "Nathair's Mischief",
+			"name": "Dreamlike Mischief",
 			"source": "FTD",
 			"page": 20,
 			"level": 2,
@@ -185,7 +184,7 @@
 				}
 			],
 			"entries": [
-				"You fill a 20-foot cube you can see within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced, and roll again at the start of each of your turns until the spell ends. You can move the cube up to 10 feet before you roll.",
+				"You fill a 20-foot cube you can see within range with dream magic. Roll on the Mischievous Surge table to determine the magical effect produced, and roll again at the start of each of your turns until the spell ends. You can move the cube up to 10 feet before you roll.",
 				{
 					"type": "table",
 					"caption": "Mischievous Surge",
@@ -239,9 +238,8 @@
 			}
 		},
 		{
-			"name": "Raulothim's Psychic Lance",
-			"source": "FTD",
-			"page": 21,
+			"name": "Psychic Lance",
+			"source": "MOD",
 			"level": 4,
 			"school": "E",
 			"time": [

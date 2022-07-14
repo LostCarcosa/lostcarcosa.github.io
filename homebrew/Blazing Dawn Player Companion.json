@@ -127,7 +127,7 @@
 							"name": "Cleric Domains",
 							"page": 12,
 							"entries": [
-								"At 1st level, a cleric gains the Divine Domain feature. When a cleric gains this feature, the following additional options are available to them: the {@class Cleric|PHB|Artistry Domain|Artistry|BDPC}, {@class Cleric|PHB|Courage Domain|Courage|BDPC}, {@class Cleric|PHB|Elemental Domain|Elemental|BDPC}, {@class Cleric|PHB|Hunt Domain|Hunt|BDPC}, and {@class Cleric|PHB|Justice Domain|Justice|BDPC}."
+								"At 1st level, a cleric gains the Divine Domain feature. When a cleric gains this feature, the following additional options are available to them: the {@class Cleric|PHB|Artistry Domain|Artistry|BDPC}, {@class Cleric|PHB|Courage Domain|Courage|BDPC}, {@class Cleric|PHB|Elemental Domain|Elemental|BDPC}, {@class Cleric|PHB|Hunt Domain|Hunt|BDPC}, and {@class Cleric|PHB|Justice Domain|He Who Weighs Our Sins|BDPC}."
 							]
 						},
 						{
@@ -183,7 +183,7 @@
 							"name": "Sorcerous Origins",
 							"page": 26,
 							"entries": [
-								"At 1st level, a sorcerer gains the Sorcerous Origin feature. When a sorcerer gains this feature, the following additional options are available to them: {@class Sorcerer|PHB|Flametouched|Flametouched|BDPC} and {@class Sorcerer|PHB|Heroic Ancestry|Heroic Ancestry|BDPC}."
+								"At 1st level, a sorcerer gains the Sorcerous Origin feature. When a sorcerer gains this feature, the following additional options are available to them: {@class Sorcerer|PHB|Flametouched|Flametouched|BDPC} and {@class Sorcerer|PHB|Legendary Ancestry|Legendary Ancestry|BDPC}."
 							]
 						},
 						{
@@ -288,580 +288,6 @@
 			]
 		}
 	],
-	"language": [
-		{
-			"name": "Astran",
-			"source": "BDPC",
-			"page": 4,
-			"entries": [
-				"Astran is a language different from all other worldly languages, and many of its words and common sounds are difficult for other races to pronounce. The different intonations used by this language often spill into the other languages an astran knows, causing them to often emphasize the wrong part of a word, or even order their sentences in a non-standard manner."
-			]
-		}
-	],
-	"race": [
-		{
-			"name": "Astran",
-			"source": "BDPC",
-			"size": [
-				"M"
-			],
-			"speed": 30,
-			"ability": [
-				{
-					"wis": 2,
-					"dex": 1
-				}
-			],
-			"skillProficiencies": [
-				{
-					"survival": true
-				}
-			],
-			"resist": [
-				"radiant"
-			],
-			"languageProficiencies": [
-				{
-					"common": true,
-					"astran": true
-				}
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Age",
-					"page": 4,
-					"entries": [
-						"Astrans emerge from their meteoritic egg with intellectual capabilities similar to that of a 12-year-old human child, and they grow to full size in less than 2 years. From this point on their aging virtually stops, and they can live on, unchanging, for nearly a thousand years."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Alignment",
-					"page": 4,
-					"entries": [
-						"Most astrans are kind hearted, though occasionally distant. Though they often live in solitude, they are welcoming of visitors and eager to lend their aid to others. The typical astran tends towards neither law nor chaos, instead opting for a more neutral path. While this is their most common disposition, it isn't uncommon for an astran to be of any good or neutral alignment, and even evil alignments aren't completely out of the question."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Size",
-					"page": 4,
-					"entries": [
-						"Astrans average about 7-8 feet tall, though they have exceptionally wiry builds, and often weigh only about 150 pounds. Your size is Medium."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Speed",
-					"page": 4,
-					"entries": [
-						"Your base walking speed is 30 feet."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Astral Resistance",
-					"page": 4,
-					"entries": [
-						"You have resistance to radiant damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Mystical Mentor",
-					"page": 4,
-					"entries": [
-						"With your touch, you can temporarily transfer some of your skill and knowledge to another creature. As an action, you can touch a willing creature, and select a skill that you are proficient in. If the target isn't already proficient in that skill, it becomes proficient in it for the next 8 hours.",
-						"Once you use this trait, you can't use it again until you finish a long rest."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Natural Survivor",
-					"page": 4,
-					"entries": [
-						"You have proficiency in the {@skill Survival} skill."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Starlight Navigator",
-					"page": 4,
-					"entries": [
-						"Your memory is exceptionally good when it comes to the locations of all the stars that dot the night sky. As long as you can see the night sky, you know which way is north, and you have advantage on Wisdom ({@skill Survival}) checks made to avoid becoming lost."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Wielder of Flame",
-					"page": 4,
-					"entries": [
-						"As a child of the stars, you can call upon innate magic granted to you by your astral heritage. You know the {@spell light} and {@spell control flames} cantrips. When you reach 3rd level, you can cast {@spell faerie fire} with this trait, and starting at 5th level, you can also cast {@spell pyrotechnics|xge} with it as a 2nd level spell. Once you cast a spell with this trait, you can't cast it again until you finish a long rest. Wisdom is your spellcasting ability for these spells."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Languages",
-					"page": 4,
-					"entries": [
-						"You can speak, read, and write Common and Astran. Astran is a language different from all other worldly languages, and many of its words and common sounds are difficult for other races to pronounce. The different intonations used by this language often spill into the other languages an astran knows, causing them to often emphasize the wrong part of a word, or even order their sentences in a non-standard manner."
-					]
-				}
-			],
-			"fluff": {
-				"_raceFluff": {
-					"name": "Astran",
-					"source": "BDPC"
-				}
-			}
-		},
-		{
-			"name": "Guardrin",
-			"source": "BDPC",
-			"page": 5,
-			"ability": [
-				{
-					"str": 1,
-					"cha": 1
-				}
-			],
-			"size": [
-				"M"
-			],
-			"speed": 30,
-			"darkvision": 60,
-			"languageProficiencies": [
-				{
-					"common": true,
-					"celestial": true
-				}
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Age",
-					"page": 5,
-					"entries": [
-						"Guardrins mature at a rate slightly slower than humans, and reach adulthood around the age of 30. They live far longer than ordinary humans, with many living for over three centuries. Many die in battle before reaching old age, however."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Alignment",
-					"page": 5,
-					"entries": [
-						"Most guardrins are neutral good, though any good alignment is common. They are kind and loyal almost as a rule, and have no tolerance for evil acts. While it is possible for a guardrin to turn to evil, it is exceptionally improbable and is practically unheard of."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Size",
-					"page": 5,
-					"entries": [
-						"Guardrins vary in size, though most are at least 6 feet tall, with some standing up to 8 feet tall. They usually weigh more than a human of the same height, thanks to their muscular build. Your size is Medium."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Speed",
-					"page": 5,
-					"entries": [
-						"Your base walking speed is 30 feet."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Darkvision",
-					"page": 5,
-					"entries": [
-						"Your bestial eyesight allows you to see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of grey."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Root Out All Evil",
-					"page": 5,
-					"entries": [
-						"You can cast {@spell detect evil and good} with this trait, using Charisma as your spellcasting ability for it. Once you do so, you can't do so again until you finish a short or long rest."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Languages",
-					"page": 5,
-					"entries": [
-						"You can speak, read, and write Common and Celestial."
-					]
-				}
-			],
-			"fluff": {
-				"_raceFluff": {
-					"name": "Guardrin",
-					"source": "BDPC"
-				}
-			}
-		},
-		{
-			"name": "Volcanus",
-			"source": "BDPC",
-			"page": 7,
-			"size": [
-				"M"
-			],
-			"speed": 30,
-			"ability": [
-				{
-					"cha": 2,
-					"choose": {
-						"from": [
-							"str",
-							"dex",
-							"con",
-							"int",
-							"wis"
-						],
-						"count": 1,
-						"amount": 1
-					}
-				}
-			],
-			"resist": [
-				"fire"
-			],
-			"skillProficiencies": [
-				{
-					"choose": {
-						"from": [
-							"Athletics",
-							"Animal Handling",
-							"Acrobatics",
-							"Arcana",
-							"Deception",
-							"History",
-							"Insight",
-							"Intimidation",
-							"Investigation",
-							"Medicine",
-							"Nature",
-							"Persusasion",
-							"Perception",
-							"Performance",
-							"Religion",
-							"Sleight of Hand",
-							"Stealth",
-							"Survival"
-						],
-						"count": 2
-					}
-				}
-			],
-			"languageProficiencies": [
-				{
-					"common": true,
-					"primordial": true
-				}
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Age",
-					"page": 8,
-					"entries": [
-						"Volcani mature quickly, often reaching adulthood by the age of 10. After reaching adulthood, their remaining lifespan is highly variable, and completely unpredictable, as they show no more signs of aging. A volcanus can die a natural death at the age of 20, though some can live to the age of 80. On average, they live less than 50 years."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Alignment",
-					"page": 8,
-					"entries": [
-						"Volcani are most often good, though many are of neutral alignment. They seek to do good deeds, and generally work well together. Their somewhat regimented society and adherence to tradition gives them a lawful bent. They are reliable allies, and ease into both leader and follower roles."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Size",
-					"page": 8,
-					"entries": [
-						"Volcani have similar builds to humans, and are generally between 5½ and 6½ feet tall. Their dense, stone-like bodies cause them to weigh more than a human of similar height. A volcanus typically weighs over 200 pounds. Your size is Medium."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Speed",
-					"page": 8,
-					"entries": [
-						"Your base walking speed is 30 feet."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Ancestral Aptitiude",
-					"page": 8,
-					"entries": [
-						"When you rest, your dreams of the past can imbue you with skills inherited from your parents. Choose two skills, one that your mother was proficient in and one that your father was proficient in.",
-						"When you finish a long rest, you can choose one of these skills, and gain proficiency in it until you use this trait again."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Ashen Resistance",
-					"page": 8,
-					"entries": [
-						"You have resistance to fire damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Eruption of Power",
-					"page": 8,
-					"entries": [
-						"You can use your action to unleash the true power imbued to you by Kossuth, the Lord of Flames. When you do so, you gain temporary hit points equal to 1d4 + your level. These temporary hit points last for up to 10 minutes, and as long as they last, you have immunity to fire damage.",
-						"Once you unleash this power, you can't do so again until you finish a long rest."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Lineal Visions",
-					"page": 8,
-					"entries": [
-						"You can call upon your ancestral visions to help you recall lore that your parents might have known about. After you fail an Intelligence check made to recall lore, you can choose to immediately spend 1 minute searching for a vision, allowing you to remake the Intelligence check. At the the DM's discretion, you might be able to discover lore that you had no chance of knowing, but your parents could have known.",
-						"Once you call upon a vision, you can't do so again until you complete a long rest."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Primordial Flames",
-					"page": 8,
-					"entries": [
-						"You know the produce flame cantrip. Charisma is your spellcasting ability for it."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Languages",
-					"page": 8,
-					"entries": [
-						"You can speak, read, and write Common and Primordial."
-					]
-				}
-			],
-			"fluff": {
-				"_raceFluff": {
-					"name": "Volcanus",
-					"source": "BDPC"
-				}
-			}
-		}
-	],
-	"raceFluff": [
-		{
-			"name": "Volcanus",
-			"source": "BDPC",
-			"entries": [
-				{
-					"type": "section",
-					"name": "Volcanus",
-					"page": 7,
-					"entries": [
-						"Volcani are a rare, ancient people, first born of primordial fire in an age long past. They live in places seldom traveled to by other races\u2014volcanic mountain ranges and island chains, too hot for most other creatures to stand. But within these lands volcanus society thrives, as they build impressive structures and fortresses from igneous rock, with streams of lava flowing between and around their settlements like rivers. Volcani are highly driven, and many can accomplish great feats during their short lives that many of the longer lived races wouldn't even consider.",
-						{
-							"type": "entries",
-							"name": "Molded from Flame",
-							"page": 7,
-							"entries": [
-								"The primordial god of fire, Kossuth, forged the first volcani from the white-hot magma that flows within the outer edges of the Plane of Fire, which he molded and cooled into a humanoid shape that resembled his own divine image. Over many generations, the physical appearance of volcani has mellowed somewhat, and they have become less elemental and more humanoid. They typically stand between 5 and 6 feet tall, though they are heavier than humans of equivalent height. Their skin color ranges from a deep black to a lighter red, but the most common shades are lighter browns and greys, occasionally accented by streaks of red. Their eyes are often brown or grey, though shades of red, orange, and yellow are also common. Their hair, usually kept of medium length, tends to be of a similar shade to their skin color.",
-								"A volcanus has a more elemental form that they can temporarily manifest, however. For short periods of time, a volcanus can unleash their inner elemental power, causing their eyes to become motes of elemental fire, as their skin darkens and takes on a metallic sheen. According to legend, this form was the natural form of the first volcani, and it only became temporary after many generations."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Unbounded Determination",
-							"page": 7,
-							"entries": [
-								"Kossuth made the volcani for a purpose. They were designed as his servants, driven to build to his specifications, fight for his causes, and exist as an extension of his will. And to this end they served him well, for a time. Kossuth's dealings on the material plane were short lived, however, and he eventually found himself without need of his volcani servants. So he left them to their own devices, abandoned upon the material plane while he returned to the Plane of Fire.",
-								"Though their god had left them, the volcani lived on without him, transforming their drive to work for his purposes into a desire to better themselves. While their physical appearance has mellowed over the centuries, the same cannot be said about their determination. All volcani believe they were born for a reason, and they are always searching for the purpose they believe they must fulfill. When a volcanus finds their purpose, they either complete it or die trying. For a volcanus, there is no such thing as procrastination or giving up."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Vanishing Embers",
-							"page": 7,
-							"entries": [
-								"A volcanus' soul is like a flickering flame\u2014bright and full of life, up until the moment it's snuffed out. Moreso than any other race, a volcanus' lifespan is uncertain. After reaching adulthood, a volcanus shows no more signs of aging, and can die a natural death at any point thereafter. Some might die as early as 20 years old, while others might live to the age of 80. The volcani believe that their lifespan is tied to their innate purpose\u2014when they complete that purpose, death is surely just around the corner.",
-								"But for a volcanus, death isn't truly the end. Death merely signals the beginning of the next generation. When a volcanus dies, their body burns to ash\u2014colored a deep black for males and a vibrant red for females. It is from this ash that a volcanus' children are born. By taking some of the ash of an adult male volcanus, combining it with some of the ash of an adult female volcanus, and using fresh lava to set that mixture ablaze, a new volcanus is born after the flames subside. A pair of two volcani has enough ash to sire four children, but most couples only sire two or three. The memories of a volcanus are in part passed down to their children, who often see the memories of their parents in vivid dreams. These memories can also give a volcanus a natural aptitude in the skills their parents knew.",
-								"The unique reproductive system of volcani, combined with their uncertain lifespans, makes it common for a volcanus to plan for their death early in life. It is almost considered a coming of age ceremony for a young adult volcanus to write their first will. A volcanus' will generally specifies what is to be done with their material possessions, like the wills of other races, but more importantly it specifies what should be done with their ashes. Married volcani will typically create joint wills, stating potential names for their future children, and how many children they wish to have. Unmarried volcani are expected to donate their ashes their community, so that they might be used for adoption purposes. Another oddity of volcanus culture is the creation of a personal urn, which a volcanus either commissions or forges themself. These urns are heavily decorated with symbols telling the life story the volcanus they were made for, and are used to hold and transport a volcanus' ashes upon their death."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Tight-knit Societies",
-							"page": 8,
-							"entries": [
-								"Volcani live in small communities on the outskirts of active volcanoes, where they construct impressive stone buildings and complex roadways. The members of a volcanus community are expected to help the other members of their community, particularly in fulfilling their wills. Many volcani have jobs as caretakers, where they are tasked with raising the children of past community members. Some volcani are \"seekers,\" a job where they are tasked with finding and recovering the ashes of those that died in the field, so that those ashes can be brought back to the community and used as that volcanus' will specified. There are also many adventurers among the volcani, as the desire to find their purpose leads many volcani to travel and perform great deeds, such as hunting down a deadly monster, fighting against oppressive regimes, or otherwise helping those in need."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Volcanus Names",
-							"page": 8,
-							"entries": [
-								"As volcani couples are forced to choose their child's names before they can know their gender, volcani names are typically gender-neutral. They also lack true family names\u2014a volcanus' last name is traditionally their father's first name, followed by their mother's first name, separated by a dash.",
-								{
-									"type": "list",
-									"style": "list-hang-notitle",
-									"items": [
-										"Aldebrand, Azar, Cinaed, Fiamett, Fintan, Flann, Hurik, Ignati, Phoenix, Pyrrhus, Shula, Uriah, Uriel"
-									]
-								}
-							]
-						}
-					]
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "external",
-						"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/lxran-bdpc/_img/BDPC/Volcanus.png"
-					},
-					"title": "Optional Title"
-				}
-			]
-		},
-		{
-			"name": "Guardrin",
-			"source": "BDPC",
-			"entries": [
-				{
-					"type": "section",
-					"name": "Guardrin",
-					"page": 5,
-					"entries": [
-						"Strong and proud, guardrins are the descendants of guardinal and human parents. They are touched by the divine power of elysium, a beautiful plane of rolling hills and flowering meadows that the mighty guardinals call home. Guardrins are not often born in this plane, however. They are usually born on the material plane, as the result of a guardinal traveling there during their missions to ward off evil. Once they come of age, guardrins are expected to take up the mantle of their celestial parent, and do their part in smiting evil and protecting those weaker than them. They are a noble race, as strong and graceful as the animals they resemble.",
-						{
-							"type": "entries",
-							"name": "Animalistic Champions",
-							"page": 5,
-							"entries": [
-								"A guardrin's appearance takes after its guardinal parent, granting it an animalistic form similar to that of a true guardinal. Like their celestial parents, the degree of animalism in their appearance varies greatly. Some guardrins look like humans, but with a light covering of fur over parts of their bodies, and a few distinguishing features like horns, claws, or fangs. Other guardrins more closely resemble animals, and look just like beasts that have learned to walk on two legs and wear clothing.",
-								"Guardrins are typically tall and muscular, though their exact height varies among their different varieties. More human-like guardrins are usually beautiful to behold, and even the more animalistic ones resemble only the most magnificent members their corresponding species. Even the most beastial members typically hold some resemblance to their human parent, such as a shared eye color, hair color, or other identifying feature."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Genlte Allies, Ruthless Enemies",
-							"page": 5,
-							"entries": [
-								"Though guardrins are compassionate and gentle to their friends, they are merciless to all that commit evil. Their disposition can change quickly as the situation commands it, with calm tranquility quickly transitioning to blind anger when evil rears its ugly head. They have no qualms with killing those that have commited evil, especially those that have killed innocents.",
-								"When it comes to close friends and family, guardrins are fierce protectors and loving companions. They value these close connections above all else, and will fight to protect them even when they are clearly outmatched. When it comes to their friends, guardrins are selfless and willing to sacrifice their lives for them."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Wandering Warriors",
-							"page": 5,
-							"entries": [
-								"When they come of age, guardrins typically leave home and wander the world, searching for those that would need their help and companionship, and rooting out evil wherever they find it. Guardrins have a natural inclination towards adventuring, and are usually quite good at it. Their strong sense of justice oftens leads them to become heroes, celebrated far and wide for their great deeds. They fight against oppression, dethrone tyrants, and become champions of moral causes."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Guardrin Names",
-							"page": 5,
-							"entries": [
-								"Guardrins typically grow up with their non-celestial parent, and therefore use human naming conventions. They often have more atypical names, however, and might be given names themed around the beast they share features with."
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Astran",
-			"source": "BDPC",
-			"entries": [
-				{
-					"type": "section",
-					"name": "Astran",
-					"page": 3,
-					"entries": [
-						"Hailing from the stars, as their name suggests, astrans are reclusive beings seldom seen by other races. They live on remote mountaintops or deserted islands, eking out a meager existence far from civilization. Few folk can claim to have met an astran, but those that do seldom forget the encounter. Their strange, mystifying appearance causes most other races to initially fear them, but their peaceful nature and penchant for wisdom makes them good friends of those that can get past the first impression.",
-						{
-							"type": "entries",
-							"name": "Mystical Outsiders",
-							"page": 3,
-							"entries": [
-								"Those that look upon an astran's peculiar features can tell that these creatures are not of this world. Although humanoid in form, an astran's appearance is off-putting. Their bodies are long and wiry, and their skin is the color of ash, accented by deep crimson hues. But their most unique feature is the shape of their head, which is characterized by a set of three tentacle-like protrusions from the back of their skull, as well as pairs of smaller protrusions set into their slender face.",
-								"They are approximately 7 feet tall on average, though some can stand up to 8 and half feet tall. Despite their staggering height, astrans usually only weigh between 130 and 170 pounds. They have no hair on any part of their bodies. To the other races all astrans look quite similar. While other astrans can easily tell their kind apart, most others need to study their features for at least a few moments before coming to a conclusion. If in doubt, all astrans can be set apart by their uniquely colored eyes, which can take on nearly any color and often contain complex patterns that are as unique as fingerprints.",
-								"Astrans are also completely genderless, and therefore have no concept of ‘male' or ‘female.' Their bodies look male to most other races, however, and they are usually fine with being referred to as ‘he.'"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Life from Fallen Stars",
-							"page": 3,
-							"entries": [
-								"Astrans are not born like other races. The rare, tiny embryos that eventually grow up into astrans can be found encased within meteorites. The origins of these meteorites is unknown\u2014some believe that they are created by some celestial deity that casts down shooting stars from the heavens. Others believe that these meteorites are the destroyed remains of an ancient planet, still harboring sparks of life within its countless fragments.",
-								"After an astran meteorite lands, it behaves much like an egg. The astran embryo grows inside the meteorite, until it emerges a few weeks later as a tiny creature, only 1-2 feet tall. Astrans are capable of fending for themselves as soon as they emerge. They can protect themselves with their innate magical capabilities, and they know the astran language and basic survival skills from their inception. They grow quickly, reaching their full size in approximately 1-2 years.",
-								"Even if young astrans are better equipped to survive alone than most humanoid young, the world is still an exceptionally dangerous place for a young astran. Some older astrans watch the night sky for shooting stars, and trek great distances to find where meteorites have landed. Through these treks they seek to find a meteorite that holds an astran embryo, so that the young astran might have a better chance of surviving to adulthood, and so that they might have a companion to ease their loneliness."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Alone Through the Ages",
-							"page": 3,
-							"entries": [
-								"Astrans often live for close to a millenia, and during their long lives little changes about them from a physical standpoint. The changes made by aging are subtle\u2014typically their skin changes color, becoming darker and losing some of its luster, and the light of their eyes becomes slightly dimmer. These changes happen so slowly that they are nearly unnoticeable, however, and only similarly long lived races, like elves, would have a chance of noticing an astran's aging.",
-								"The vast majority of astrans spend their long lives carefully avoiding long-lasting friendships, fearing the sadness that comes with watching their friends grow old as they, in turn, remain unchanged by the years. This fear often fades over time, and they might make friends with other long-lived races, particularly elves, once they have a few centuries behind them. While they tend to make their homes in places untraveled by other folk, they don't actively avoid other races when those folk happen upon their humble abodes, and in fact they often welcome their visitors inside and are eager to share their wisdom with individuals that would appreciate it. Born with innate knowledge, an astran's wisdom can sometimes be prophetic. Those that know of this trait may search far and wide for an astran that could act as an oracle.",
-								"One of the few relationships that an astran is willing to take on with another race is that of a mentor-student relationship, where the astran imparts its knowledge and skill upon a worthy student. Even these associations are often short-lived, however, as they seek to not become too attached to their pupils."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Exploring the World",
-							"page": 4,
-							"entries": [
-								"While most astrans tend to stay put when they can help it, there are many points in their lives where they might take up adventuring. Some astrans are compelled to adventure when they take up students, as they seek to train them in real-life situations. Others might become unintentionally involved in worldly conflicts, if those conflicts reach their homesteads. Their typical kindness might make them protectors of refugees or escorts of travelers, where their involvement can easily rope them into greater adventures. Adventuring astrans tend to be the exception, rather than the rule, and may learn to make lasting friendships with their comrades."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Astran Names",
-							"page": 4,
-							"entries": [
-								"An astran chooses their own name shortly after they emerge from their meteorite. Since astrans are genderless, there are no ‘male' or ‘female' names for them. Their lack of true parents also means they lack a family name. An astran's real name, taken from the astran language, is often difficult for other races to pronounce. Therefore, astrans tend to translate these names into common when dealing with other races. A few of the common translations are listed below.",
-								{
-									"type": "list",
-									"style": "list-hang-notitle",
-									"items": [
-										{
-											"type": "item",
-											"name": "Astran Names",
-											"entries": [
-												"Antlia, Aquila, Aries, Caelum, Cepheus, Circinus, Crux, Dorado, Equuleus, Fornax, Horologium, Hydrus, Leo, Libra, Monoceros, Orion, Pavo, Sculptor, Serpens, Tucana, Virgo, Volans."
-											]
-										}
-									]
-								}
-							]
-						}
-					]
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "external",
-						"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/lxran-bdpc/_img/BDPC/Astran.png"
-					}
-				}
-			]
-		}
-	],
 	"subclass": [
 		{
 			"name": "Path of the Blazing Sun",
@@ -932,168 +358,18 @@
 			]
 		},
 		{
-			"name": "Lightslinger",
-			"source": "BDPC",
-			"page": 34,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"shortName": "Lightslinger",
-			"subclassFeatures": [
-				"Lightslinger|Artificer|TCE|Lightslinger|BDPC|3|BDPC",
-				"Augmented Armaments|Artificer|TCE|Lightslinger|BDPC|5|BDPC",
-				"Aurum Bombs|Artificer|TCE|Lightslinger|BDPC|9|BDPC",
-				"Radiant Mastery|Artificer|TCE|Lightslinger|BDPC|15|BDPC"
-			],
-			"subclassSpells": [
-				"faerie fire",
-				"guiding bolt",
-				"branding smite",
-				"moonbeam",
-				"crusader's mantle",
-				"daylight",
-				"guardian of faith",
-				"sickening radiance|xge",
-				"dawn|xge",
-				"wall of light|xge"
-			]
-		},
-		{
-			"name": "Firescrapper",
-			"source": "BDPC",
-			"page": 34,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"shortName": "Firescrapper",
-			"subclassSpells": [
-				"absorb elements|xge",
-				"shield",
-				"flaming sphere",
-				"heat metal",
-				"fireball",
-				"lightning bolt",
-				"elemental bane|xge",
-				"fire shield",
-				"dawn|xge",
-				"immolation|xge"
-			],
-			"subclassFeatures": [
-				"Firescrapper|Artificer|TCE|Firescrapper|BDPC|3|BDPC",
-				"Extra Attack|Artificer|TCE|Firescrapper|BDPC|5|BDPC",
-				"Enhanced Weaponry|Artificer|TCE|Firescrapper|BDPC|9|BDPC",
-				"Charged Defense|Artificer|TCE|Firescrapper|BDPC|15|BDPC"
-			]
-		},
-		{
-			"name": "School of Heliomancy",
-			"source": "BDPC",
-			"page": 31,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"shortName": "Heliomancy",
-			"subclassSpells": [
-				"Blinding Smite",
-				"Branding Smite",
-				"crusader's mantle",
-				"destructive wave",
-				"divine favor",
-				"flame strike",
-				"forbiddance",
-				"guardian of faith",
-				"holy weapon",
-				"guiding bolt",
-				"holy weapon",
-				"moonbeam",
-				"sacred flame",
-				"spirit guardians",
-				"word of radiance|xge"
-			],
-			"subclassFeatures": [
-				"School of Heliomancy|Wizard||Heliomancy|BDPC|2|BDPC",
-				"Potent Luminosity|Wizard||Heliomancy|BDPC|6|BDPC",
-				"Solar Magic|Wizard||Heliomancy|BDPC|6|BDPC",
-				"Arcane Radiance|Wizard||Heliomancy|BDPC|10|BDPC",
-				"Exposing Light|Wizard||Heliomancy|BDPC|14|BDPC"
-			]
-		},
-		{
-			"name": "School of Pyromancy",
-			"source": "BDPC",
-			"page": 32,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"shortName": "Pyromancy",
-			"subclassFeatures": [
-				"School of Pyromancy|Wizard||Pyromancy|BDPC|2|BDPC",
-				"Controlled Wisps|Wizard||Pyromancy|BDPC|6|BDPC",
-				"Scorching Fire|Wizard||Pyromancy|BDPC|10|BDPC",
-				"Master of the Inferno|Wizard||Pyromancy|BDPC|14|BDPC"
-			]
-		},
-		{
-			"name": "The Elder Sphinx",
-			"source": "BDPC",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 29,
-			"shortName": "Elder Sphinx",
-			"subclassSpells": [
-				"detect evil and good",
-				"detect magic",
-				"lesser restoration",
-				"zone of truth",
-				"clairvoyance",
-				"create food and water",
-				"divination",
-				"freedom of movement",
-				"greater restoration",
-				"legend lore"
-			],
-			"subclassFeatures": [
-				"The Elder Sphinx|Warlock||Elder Sphinx|BDPC|1|BDPC",
-				"Sphinx's Displacement|Warlock||Elder Sphinx|BDPC|6|BDPC",
-				"Inscrutable Mind|Warlock||Elder Sphinx|BDPC|10|BDPC",
-				"Roar of the Sphinx|Warlock||Elder Sphinx|BDPC|14|BDPC"
-			]
-		},
-		{
-			"name": "The Firebird",
-			"source": "BDPC",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 28,
-			"shortName": "Firebird",
-			"subclassSpells": [
-				"burning hands",
-				"searing smite",
-				"lesser resotration",
-				"pyrotechnics|xge",
-				"boil|bdpc",
-				"fireball",
-				"fire shield",
-				"wall of fire",
-				"greater restoration",
-				"immolation|xge"
-			],
-			"subclassFeatures": [
-				"The Firebird|Warlock||Firebird|BDPC|1|BDPC",
-				"Wings of the Firebird|Warlock||Firebird|BDPC|6|BDPC",
-				"Ashen Rebirth|Warlock||Firebird|BDPC|10|BDPC",
-				"Searing Inferno|Warlock||Firebird|BDPC|14|BDPC"
-			]
-		},
-		{
-			"name": "Heroic Ancestry",
+			"name": "Legendary Ancestry",
 			"source": "BDPC",
 			"className": "Sorcerer",
 			"classSource": "PHB",
-			"shortName": "Heroic Ancestry",
+			"shortName": "Legendary Ancestry",
 			"page": 27,
 			"subclassFeatures": [
-				"Heroic Ancestry|Sorcerer||Heroic Ancestry|BDPC|1|BDPC",
-				"Extra Attack|Sorcerer||Heroic Ancestry|BDPC|6|BDPC",
-				"Ancestral Champion|Sorcerer||Heroic Ancestry|BDPC|6|BDPC",
-				"Inspiring Presence|Sorcerer||Heroic Ancestry|BDPC|14|BDPC",
-				"Hero of Legend|Sorcerer||Heroic Ancestry|BDPC|18|BDPC"
+				"Legendary Ancestry|Sorcerer||Legendary Ancestry|BDPC|1|BDPC",
+				"Extra Attack|Sorcerer||Legendary Ancestry|BDPC|6|BDPC",
+				"Ancestral Champion|Sorcerer||Legendary Ancestry|BDPC|6|BDPC",
+				"Inspiring Presence|Sorcerer||Legendary Ancestry|BDPC|14|BDPC",
+				"Hero of Legend|Sorcerer||Legendary Ancestry|BDPC|18|BDPC"
 			]
 		},
 		{
@@ -1308,71 +584,11 @@
 			]
 		},
 		{
-			"name": "Circle of the Sun",
-			"source": "BDPC",
-			"className": "Druid",
-			"classSource": "PHB",
-			"page": 18,
-			"shortName": "Sun",
-			"subclassFeatures": [
-				"Circle of the Sun|Druid||Sun|BDPC|2|BDPC",
-				"Twinned Spirits|Druid||Sun|BDPC|6|BDPC",
-				"Solar Flares|Druid||Sun|BDPC|10|BDPC",
-				"Radiant Body|Druid||Sun|BDPC|14|BDPC"
-			]
-		},
-		{
-			"name": "Circle of Flames",
-			"source": "BDPC",
-			"className": "Druid",
-			"classSource": "PHB",
-			"page": 17,
-			"shortName": "Flames",
-			"subclassSpells": [
-				"aganazzar's scorcher|xge",
-				"flaming sphere",
-				"melf's minute meteors|bdpc",
-				"Protection from Energy",
-				"fire shield",
-				"wall of fire",
-				"flame strike",
-				"immolation|bdpc"
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"3": [
-							"aganazzar's scorcher|xge",
-							"flaming sphere"
-						],
-						"5": [
-							"melf's minute meteors|xge",
-							"protection from energy"
-						],
-						"7": [
-							"fire shield",
-							"wall of fire"
-						],
-						"9": [
-							"flame strike",
-							"immolation|xge"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Circle of Flames|Druid||Flames|BDPC|2|BDPC",
-				"Wildfire|Druid||Flames|BDPC|6|BDPC",
-				"Life from Ash|Druid||Flames|BDPC|10|BDPC",
-				"Master of Primordial Flame|Druid||Flames|BDPC|14|BDPC"
-			]
-		},
-		{
-			"name": "Justice Domain",
+			"name": "He Who Weighs our Sins",
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"shortName": "Justice",
+			"shortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"subclassSpells": [
 				"detect evil and good",
@@ -1413,11 +629,11 @@
 				}
 			],
 			"subclassFeatures": [
-				"Justice Domain|Cleric||Justice|BDPC|1|BDPC",
-				"Channel Divinity: Reveal Injustice|Cleric||Justice|BDPC|2|BDPC",
-				"Channel Divinity: Chains of Reckoning|Cleric||Justice|BDPC|6|BDPC",
-				"Divine Strike|Cleric||Justice|BDPC|8|BDPC",
-				"Divine Truth|Cleric||Justice|BDPC|17|BDPC"
+				"He who Weighs our Sins|Cleric||He Who Weighs Our Sins|BDPC|1|BDPC",
+				"Channel Divinity: Reveal Injustice|Cleric||He Who Weighs Our Sins|BDPC|2|BDPC",
+				"Channel Divinity: Chains of Reckoning|Cleric||He Who Weighs Our Sins|BDPC|6|BDPC",
+				"Divine Strike|Cleric||He Who Weighs Our Sins|BDPC|8|BDPC",
+				"Divine Truth|Cleric||He Who Weighs Our Sins|BDPC|17|BDPC"
 			]
 		},
 		{
@@ -2091,16 +1307,17 @@
 			]
 		},
 		{
-			"name": "Justice Domain",
+			"name": "He who Weighs our Sins",
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Justice",
+			"subclassShortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"level": 1,
 			"entries": [
-				"Gods of justice and law\u2014including Tyr, Pholtus, Trithereon, Aureon, Anubis, and Forseti\u2014exemplify order and lawfulness, and the pursuit of just reparations and retributions. Some of these gods are ruthless in their pursuit of justice, and are quick to enact retribution when crimes are committed, while others are more forgiving and open to punishments other than death. Clerics of this domain often act as judges, lawyers, and investigators, and are well respected by their compatriots and hated by their opponents and detractors. They use their divine powers to find truth, root out evil, and bring justice to criminals.",
+				"You are a devotee of He Who Weighs Our Sins, the Hammer of Judgement, god of justice, vengeance, and punishment. Your duty in this world is to seek out evildoers in whatever form they would take, and mete out appropriate retribution.",
+				"You are burdened with a heavy responsibility, and must act as both judge and executioner in your lord's place. Remember that the punishment must always suit the crime, and that justice must be uncompromising, even-handed, fair.",
 				{
 					"type": "table",
 					"caption": "Justice Domain Spells",
@@ -2137,11 +1354,11 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||Justice|BDPC|1|BDPC"
+					"subclassFeature": "Bonus Proficiencies|Cleric||He Who Weighs Our Sins|BDPC|1|BDPC"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Divine Retribution|Cleric||Justice|BDPC|1|BDPC"
+					"subclassFeature": "Divine Retribution|Cleric||He Who Weighs Our Sins|BDPC|1|BDPC"
 				}
 			]
 		},
@@ -2151,7 +1368,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Justice",
+			"subclassShortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"level": 1,
 			"header": 1,
@@ -2165,7 +1382,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Justice",
+			"subclassShortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"level": 1,
 			"header": 1,
@@ -2180,7 +1397,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Justice",
+			"subclassShortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"level": 2,
 			"header": 2,
@@ -2196,7 +1413,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Justice",
+			"subclassShortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"level": 6,
 			"header": 2,
@@ -2211,7 +1428,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Justice",
+			"subclassShortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"level": 8,
 			"header": 2,
@@ -2225,7 +1442,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Justice",
+			"subclassShortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"level": 17,
 			"header": 2,
@@ -2403,8 +1620,8 @@
 			"page": 18,
 			"level": 2,
 			"entries": [
-				"Druids connected with the Circle of the Sun hail from regions that have strong ties to the celestial planes, like Mount Celestia or Elysium. These druids form connections with celestial spirits and the radiant energy of the upper planes, granting them exceptional magical capabilities, and the ability to summon celestial spirits to aid them. Their order gathers yearly, when the sun reaches its highest point in the sky on the summer solstice. Their meetings often take place upon the highest mountains, where they can feel closer to the heavens, and they are usually attended by a number of low-ranking celestials in addition to their ranks of druids. In their meetings these druids share news about the forces of evil, and coordinate with their celestial comrades in their plans to root out and destroy these evils.",
-				"Members of this circle often consider themselves the opposite of the circle of the moon. Rather than secluding themselves in darkness and secrecy, sun druids do their work in the open, and often come in direct contact with other humanoids\u2014whether to hunt them down or protect them from the forces of evil. Aided by their celestial spirits, these druids watch over the lands and protect the good in the world from encroaching darkness.",
+				"Druids connected with the Circle of the Sun form connections with beings form the Celestial Tide, granting them exceptional magical capabilities, and the ability to summon celestial spirits to aid them.",
+				"Members of this circle often consider themselves the opposite of the circle of the moon. Rather than secluding themselves in darkness and secrecy, sun druids do their work in the open, and often come in direct contact with other humanoids\u2014whether to hunt them down or protect them from the forces of darkness.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Spiritcaller|Druid||Sun|BDPC|2|BDPC"
@@ -3072,7 +2289,7 @@
 			"subclassSource": "BDPC",
 			"level": 3,
 			"entries": [
-				"The Oath of Radiance is almost as old as the sun that it follows, and has remained a steady force of good over the ages. Often called sun warriors or shining knights, paladins that take this oath seek to bring light and knowledge to even the darkest areas of the world. Some of them adorn their armor with dazzling inlaid glass and brilliantly bright metals, so that they can reflect the sun's glory and become physical beacons on the battlefield. They also might wear images of the sun or stars\u2014the holy lights that bring life and knowledge to this world, and reveal all that is hidden by shadows and darkness. Like a star in the night, a paladin of the Oath of Radiance seeks to be a light of truth in the dark.",
+				"The Oath of Radiance is almost as old as the sun that it worships. Often taken by devotees of {@deity the Weeping Sun|MOD}, followers of this oath dedicate themselves to spreading light across the realms, ",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Tenents of Radiance|Paladin||Radiance|BDPC|3"
@@ -3219,9 +2436,8 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Starting at 7th level, you can choose to emit an aura of light while you're not {@condition incapacitated}. The aura extends 10 feet from you in every direction, but not through total cover, and its area is bright light. Dim light extends 10 feet beyond this, but the dim light is not considered part of the aura. You and friendly creatures within the aura have resistance to radiant and necrotic damage, and advantage on death saving throws.",
-				"You can activate and deactivate this aura as a bonus action.",
-				"Starting at 18th level, you can also use your bonus action to increase this aura's range to 30 feet, or reduce it back to 10 feet. The dim light also changes by the same amount."
+				"Starting at 7th level, you emit an aura of light while you're not {@condition incapacitated}. The aura extends 10 feet from you in every direction, but not through total cover, and its area is bright light. Dim light extends 10 feet beyond this, but the dim light is not considered part of the aura. You and friendly creatures within the aura have resistance to radiant and necrotic damage",
+				"Starting at 18th level, this aura's range increases to 30 feet."
 			]
 		},
 		{
@@ -3270,7 +2486,7 @@
 			"page": 24,
 			"level": 3,
 			"entries": [
-				"Rangers that walk the path of the Lightcaller draw their power from the positive plane, and use that power to defend the wildlands and hunt down the evils that dwell there. These rangers wield their radiant weapons like extensions of their body, and learn combat techniques that make them highly varied in their combat styles. To them, every weapon holds a distinct purpose when hunting down prey. Fiends and undead are often these ranger's favored enemies, and many of them ally with celestials.",
+				"Rangers that walk the path of the Lightcaller draw divine power from the heavens, and use that power to defend the wildlands and hunt down their foes. These rangers wield their radiant weapons like extensions of their body, and learn combat techniques that make them highly varied in their combat styles. To them, every weapon holds a distinct purpose when hunting down prey.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Radiant Armaments|Ranger||Lightcaller|BDPC|3|BDPC"
@@ -3395,8 +2611,8 @@
 			"page": 25,
 			"level": 3,
 			"entries": [
-				"As a Divine Hand, you focus your training on the arts of death and execution. However, unlike an assassin you do not employ yourself in the service of mortals. You have a higher calling, and have devoted yourself into the service of a deity. With this deity you have formed a personal connection\u2014they speak with you directly, ordering you to dispose of their enemies and giving you other such tasks. To assist you in your endeavors, your deity has granted you divine powers. These powers can help you slay any foe, but are especially effective against the enemies of your deity.",
-				"Divine Hands are often members of a clergy, working directly for the church of their deity. But others work outside of any organization, and perform their duties independently\u2014working only for themselves and their deity.",
+				"As a Divine Hand, you focus your training on the arts of death and execution. However, unlike an assassin you do not employ yourself in the service of mortals. You have a higher calling, and have devoted yourself into the service of a deity, receiving your orders through visions granted by a specially crafted psychoactive drug, made from a secret blend of herbs.",
+				"Divine Hands are awed and feared- respected for their ability to work outside the law, meting out justice regardless of class or status, and feared for their volatility- indefagitable in their purpose, and seemingly unpredictable in their targets.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Right Hand of God|Rogue||Divine Hand|BDPC|3|BDPC"
@@ -3472,8 +2688,8 @@
 			"level": 13,
 			"header": 2,
 			"entries": [
-				"Starting at 13th level, your deity grants you knowledge to assist you in tracking and slaying your foes. When you mark a creature with your Judgment feature, you learn of any damage resistances and/or immunities that the creature possesses.",
-				"Also, you can call upon your deity as a bonus action, and have them reveal their enemies to you. Until the end of your next turn, you know the location of any of your divine quarries within 120 feet of you that are not behind total cover. You know the creature type of any being you sense, but not its specific identity.",
+				"You gain divine knowledge to assist you in tracking and slaying your foes. When you mark a creature with your Judgment feature, you learn of any damage resistances and/or immunities that the creature possesses.",
+				"Also, you sharpen your senses as a bonus action and have them reveal your targets to you. Until the end of your next turn, you know the location of any of your divine quarries within 120 feet of you that are not behind total cover. You know the creature type of any being you sense, but not its specific identity.",
 				"You can take this bonus action a number of times equal to 1 + your Wisdom modifier. When you finish a long rest, you regain all expended uses."
 			]
 		},
@@ -3607,24 +2823,27 @@
 			]
 		},
 		{
-			"name": "Heroic Ancestry",
+			"name": "Legendary Ancestry",
 			"source": "BDPC",
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Heroic Ancestry",
+			"subclassShortName": "Legendary Ancestry",
 			"page": 27,
 			"level": 1,
 			"entries": [
-				"Your innate magic comes from your connection to an ancient hero\u2014an ancestor of yours that defeated mighty foes and reached the peak of physical ability. In the years beyond their death, your ancestor's deeds have been immortalized by history, and their bloodline has been blessed by the gods. Through your blessed blood, you can channel the abilities of your ancestor, mimicking their unmatched strength and prowess. Most of these bloodlines are well-established, and deeply connected to royal or noble blood. Some of these bloodlines have been obscured by time, however, and many sorcerers of this origin have no knowledge of their history. Not all members of a heroic bloodline awaken this magic, so it can remain hidden for generations and slowly forgotten before suddenly re-emerging.",
-				"Oftentimes, these bloodlines are plagued with conflict. The enemies of your ancestor might become your enemies, as they seek revenge for the deeds of the past or recognize you as a threat to their continued existence.However, you might also find friends due to your lineage. Creatures or societies that knew your ancestor might be willing to offer you assistance as repayment for the great deeds your ancestor did for them.",
+				"{@i Restriction: Bound Elves only}",
+				"Your innate magic comes from a connection to your past lives, which are credited with deeds that have gone down in history. A lifetime ago, your power was immense, and in time it shall be again.",
+				"You bear the blessing and burdens of these deeds, and must see their consequences to the end. Your previous incarnations may have made enemies, who are now your enemies; they may yet also have allies, whose friendship extends into this life. Tread carefully, for every action you take will be remembered.",
+				"Remember that Legendary is not the same thing as Heroic, and that history is rarely simple. A conquering warlord is remembered as strongly as a champion of light, and even a paragon makes difficult choices throughout their life.",
+				"Occasionally, an elven reincarnation cycle is lost, and only resurfaces in obscurity. It is entirely possible that you do not recall who your past lives were, or what it is they did.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Heir to Heroics|Sorcerer||Heroic Ancestry|BDPC|1|BDPC"
+					"subclassFeature": "Heir to Heroics|Sorcerer||Legendary Ancestry|BDPC|1|BDPC"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Ancestral Avatar|Sorcerer||Heroic Ancestry|BDPC|1|BDPC"
+					"subclassFeature": "Ancestral Avatar|Sorcerer||Legendary Ancestry|BDPC|1|BDPC"
 				}
 			]
 		},
@@ -3634,7 +2853,7 @@
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Heroic Ancestry",
+			"subclassShortName": "Legendary Ancestry",
 			"page": 27,
 			"level": 1,
 			"header": 1,
@@ -3648,7 +2867,7 @@
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Heroic Ancestry",
+			"subclassShortName": "Legendary Ancestry",
 			"page": 27,
 			"level": 1,
 			"header": 1,
@@ -3671,7 +2890,7 @@
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Heroic Ancestry",
+			"subclassShortName": "Legendary Ancestry",
 			"page": 27,
 			"level": 6,
 			"header": 2,
@@ -3685,7 +2904,7 @@
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Heroic Ancestry",
+			"subclassShortName": "Legendary Ancestry",
 			"page": 27,
 			"level": 6,
 			"header": 2,
@@ -3699,7 +2918,7 @@
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Heroic Ancestry",
+			"subclassShortName": "Legendary Ancestry",
 			"page": 27,
 			"level": 14,
 			"header": 2,
@@ -3713,7 +2932,7 @@
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassSource": "BDPC",
-			"subclassShortName": "Heroic Ancestry",
+			"subclassShortName": "Legendary Ancestry",
 			"page": 27,
 			"level": 18,
 			"header": 2,
@@ -4401,8 +3620,8 @@
 			"page": 11,
 			"level": 3,
 			"entries": [
-				"Bards of the College of Benevolence honed their craft in the upper planes, or at least through the tutelage of a creature native to the upper planes. These bards often learn their magic from celestial creatures, such as lesser angels, couatls, ki-rin, and unicorns. Others might be tutored by humanoids that have visited or taken residence in the upper planes, and gained enough knowledge of the celestial workings of the world to pass on that knowledge to others.",
-				"Regardless of their tutor, these bards learn to be master physicians and therapists, adept at healing both magically and nonmagically, and capable of putting others at ease with just a few choice words or a calming melody. Their teachers also emphasize the importance of redemption, mercy, and forgiveness, and teach that no life should be snuffed out needlessly. While bards of this college aren't usually true pacifists, they typically seek out non-violent solutions whenever they can. They often attempt to persuade or reason with their foes, and can also use a variety of powerful magics to end conflicts before they start.",
+				"Bards of the College of Benevolence are peacemakers and healers, who lace their voice with restorative magic to soothe pain and bring joy. Some members of this college are followers of {@deity the Flayed God|MOD}, while others are independent forces, out to make the world a better place.",
+				"These bards learn to be master physicians and therapists, adept at healing both magically and nonmagically, and capable of putting others at ease with just a few choice words or a calming melody. Their teachers also emphasize the importance of redemption, mercy, and forgiveness, and teach that no life should be snuffed out needlessly. While bards of this college aren't usually true pacifists, they typically seek out non-violent solutions whenever they can. They often attempt to persuade or reason with their foes, and can also use a variety of powerful magics to end conflicts before they start.",
 				"Bards of this college often travel through the lands and planes of the world, acting as both traveling doctors and traveling musicians. They heal the sick and injured, resolve conflicts, and bring joy and merriment to all settlements they pass through.",
 				{
 					"type": "refSubclassFeature",
@@ -4475,8 +3694,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Beginning at 6th level, you can cut a deal with a hostile creature as it falls\u2014sparing its life, in return for its cooperation. When a hostile creature within 60 feet of you that is capable of speaking a language is reduced to 0 hit points, you can use your reaction to speak with it telepathically in the moments before it passes on. The message you give it must be 25 words or less, and it must include some kind of deal that it can agree or disagree with, in exchange for its life. For example, if you were to use this feature on a mysterious assassin, you could state \"Tell me who hired you, and I will spare your life.\" If it disagrees with your terms or is unable to fulfill them, its death completes as normal. If it agrees with them, however, it is left unconscious at 0 hit points, yet stable. When it awakens, it is forced to comply with whatever it agreed to. This forced compliance ends after 30 days, when you choose to end it, or if {@spell wish} is cast on the target.",
-				"For the next 45 days, you are also expected to hold up your end of the deal. If during this duration you or your companions damage or cast a harmful spell upon the creature without first being attacked by it, you become unable to use this feature again for the next 30 days, and the forced compliance ends.",
+				"Beginning at 6th level, you can cut a deal with a hostile creature as it falls\u2014sparing its life, in return for its cooperation. When a hostile creature within 60 feet of you that is capable of speaking a language is reduced to 0 hit points, you can use your reaction to speak with it telepathically in the moments before it passes on. The message you give it must be 25 words or less, you must share at least one language with the creature, and it must include some kind of deal that it can agree or disagree with, in exchange for its life. For example, if you were to use this feature on a mysterious assassin, you could state \"Tell me who hired you, and I will spare your life.\" If it disagrees with your terms or is unable to fulfill them, its death completes as normal. If it agrees with them, however, it is left unconscious at 0 hit points, yet stable. When it awakens, it is forced to comply with whatever it agreed to. This forced compliance ends after 30 days, when you choose to end it, or if {@spell wish} is cast on the target.",
+				"For the next 45 days, you are also expected to hold up your end of the deal. If during this duration you or your companions damage or cast a harmful spell upon the creature without first being attacked by it, your maximum hit points are halved, you cannot use this feature again for 30 days, and the forced compliance ends.",
 				"As soon as the creature receives the message, it is granted all the information on this feature it would need to make an informed decision. Most importantly, it knows that it will be forced to comply if it accepts, and it knows that you will be negatively impacted if you don't hold up your end of the deal.",
 				"Once you use this feature, you can't use it again until you finish a short or long rest. You also can't use the feature if you already have another creature under forced compliance."
 			]
@@ -5077,8 +4296,8 @@
 			"page": 10,
 			"level": 3,
 			"entries": [
-				"Some barbarians revere the celestial spirits that roam the lands and skies, and seek them out to be their guides and personal connection to the divine. A few barbarian clans have pre-established connections to celestial spirits, and for those clans taking this path is merely proving yourself worthy of that creature's power. For many barbarians, however, taking this path requires them to search far and wide for a celestial willing to let them become an avatar.",
-				"Most any celestial creature is capable of granting a barbarian this path. The most common among these are unicorns, couatls, and low-ranking angels, who accept righteous barbarians as their avatars\u2014extensions of their power that help them carry out their divine will. For some barbarians that take this path, their rage becomes reminiscent of divine possession\u2014In rage, their personality can take on some of the attributes of their celestial guide's personality.",
+				"Some barbarians devote themselves to the angelic beings that compose the Celestial Tide, the great collection of heavenly beings that rules the world beyond the skies. For these divine avatars, their rage is reminiscent of divine possession, filling them with a burning light and taking on aspect of their celestial guide.",
+				"Do not mistake divinity for grace. The Celestials may be divine, but they are {@i not} necessarily benevolent, and have little regard for the law and order of the world below, preferring instead to impose their own individual ideals wherever they may appear.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Avatar of Might|Barbarian||Celestial Avatar|BDPC|3|BDPC"
@@ -5152,7 +4371,7 @@
 			"name": "Blasting Radiance",
 			"source": "BDPC",
 			"entries": [
-				"When you hit witha heavy weapon, you can push your target up to 10 feet away from you."
+				"When you hit with a heavy weapon, you can push your target up to 10 feet away from you."
 			],
 			"featureType": [
 				"LC:DT"
@@ -5202,7 +4421,7 @@
 			"name": "Swift Sunstep",
 			"source": "BDPC",
 			"entries": [
-				"When you attack with a finesse weapon, you can move up to 5 feet without provoking opportunity attacks from your target immediately after completing the attack.."
+				"When you attack with a finesse weapon, you can move up to 5 feet without provoking opportunity attacks from your target immediately after completing the attack."
 			],
 			"featureType": [
 				"LC:DT"
@@ -6076,119 +5295,6 @@
 				"fromClassList": [
 					{
 						"name": "Sorcerer",
-						"source": "PHB"
-					}
-				]
-			}
-		},
-		{
-			"name": "Ceremony",
-			"source": "BDPC",
-			"page": 151,
-			"level": 1,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "25 gp worth of powdered silver, which the spell consumes",
-					"cost": 2500,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"meta": {
-				"ritual": true
-			},
-			"entries": [
-				"You perform a special religious ceremony that is infused with magic. When you cast the spell, choose one of the following rites, the target of which must be within 10 feet of you throughout the casting.",
-				{
-					"type": "entries",
-					"name": "Atonement",
-					"entries": [
-						"You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom ({@skill Insight}) check. On a successful check, you restore the target to its original alignment."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Bless Water",
-					"entries": [
-						"You touch one {@item vial|phb} of water and cause it to become {@item Holy Water (flask)|phb|holy water}."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Coming of Age",
-					"entries": [
-						"You touch one humanoid who is a young adult. For the next 24 hours, whenever the target makes an ability check, it can roll a {@dice d4} and add the number rolled to the ability check. A creature can benefit from this rite only once."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Dedication",
-					"entries": [
-						"You touch one humanoid who wishes to be dedicated to your god's service. For the next 24 hours, whenever the target makes a saving throw, it can roll a {@dice d4} and add the number rolled to the save. A creature can benefit from this rite only once."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Funeral Rite",
-					"entries": [
-						"You touch one corpse, and for the next 7 days, the target can't become undead by any means short of a {@spell wish} spell."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Wedding",
-					"entries": [
-						"You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Brother of the Rite",
-					"entries": [
-						"You touch one humanoid that has been dedicated to your god's service for at least one year. A symbol of your god is inscribed somewhere on the target's body, most commonly upon a hand or on the forehead. This symbol is invisible to other creatures, with the exception of other humanoids that bear the same symbol. A creature with truesight can also see the symbol.",
-						"The symbol lasts until it is dispelled."
-					]
-				}
-			],
-			"miscTags": [
-				"MAC"
-			],
-			"areaTags": [
-				"ST"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
-						"name": "Paladin",
-						"source": "PHB"
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Druid",
 						"source": "PHB"
 					}
 				]
@@ -7629,65 +6735,7 @@
 			}
 		},
 		{
-			"name": "Jono's Cosy Shack",
-			"source": "BDPC",
-			"page": 47,
-			"level": 4,
-			"school": "T",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": "a 1/24th scale model cabin, worth at least  100 gp for an unfurnished cabin or more for a furnished one"
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "day",
-						"amount": 10
-					}
-				}
-			],
-			"entries": [
-				"The model cabin that serves as the material component of this spell magically expands by a factor of 24, until it becomes the size of a real cabin. The full-size cabin must fit on a square area of ground within range that is no larger than 30 feet on a side. Any creatures within the area are harmlessly pushed out of it as the cabin expands.",
-				"The cabin shares the layout of the model used as its material component, which must fit within a 15-inch cube. The model is constructed before the spell is cast. Its walls must make up an enclosed single story area, with one or two doors and up to four windows. The walls are constructed with miniature wooden logs, and are composed of 5-inch tall, 2.5-inch wide panels that are half an inch thick. As the cabin expands by a factor of 24, the walls of the full size cabin are therefore composed of 10-foot tall, 5-foot wide panels that are 1 foot thick. It also has an accordingly sized roof (with attic space) and wooden flooring.",
-				"By default, the cabin is unfurnished. 1/24th scale furnishings can be added to the model before the spell is cast. Though these model furnishings require far less raw materials than their full size counterparts, the magical process used to bind them to the cabin makes up for the difference, causing them to cost the same amount as their full size versions. As many furnishings as can fit inside the model can be added.",
-				"As you cast the spell, or as an action during the duration, you can designate one more more creatures as unwelcome within the cabin. You can choose individual creatures, or entire creature types. If an unwelcome creature starts its turn within the cabin, it must succeed on a Charisma saving throw or be teleported 30 feet outside of the cabin to a non-harmful location. You can also use your action to designate unwelcome creatures as welcome.",
-				"When the spell ends, any creatures within the cabin are harmlessly ejected, as are any objects that were not a part of the original model. The objects that were a part of the original model are moved back to their original positions within the model, though they are not restored to their original conditions. Objects that were damaged or broken remain so in the model.",
-				"As an action, you can end the spell early."
-			],
-			"areaTags": [
-				"C",
-				"Q"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Artificer",
-						"source": "TCE"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			}
-		},
-		{
-			"name": "Jono's Fiery Portal",
+			"name": "Fiery Portal",
 			"source": "BDPC",
 			"page": 47,
 			"level": 4,
@@ -7766,78 +6814,6 @@
 							"type": "external",
 							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/BDPC/Jonos_Fiery_Portal.png"
 						}
-					}
-				]
-			}
-		},
-		{
-			"name": "Jono's Secret Campfire",
-			"source": "BDPC",
-			"page": 47,
-			"level": 1,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 30
-				}
-			},
-			"components": {
-				"s": true,
-				"m": "a set of twigs"
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"You create a magical, silver-flamed campfire that fills a 5-foot cube extending from an area of ground that you can see within range. It lasts for the duration and sheds no smoke, but outside of that and its silver flames it is identical to a nonmagical fire.",
-				"For the duration, a 15-foot radius area around the fire is concealed by an illusion. When viewed from outside the area, this illusion causes the area to appear as it did before this spell was cast, thereby concealing new creatures and objects that enter the area. The area is also filled with bright light, which does not extend outside of it.",
-				"A creature that uses its action to examine the area can determine that it is concealed by an illusion with a successful Intelligence (Investigation) check against your spell save DC. Similarly, a creature that enters the area immediately discerns the illusion for what it is. If a creature discerns the illusion for what it is, the creature can see through it."
-			],
-			"entriesHigherLevel": [
-				{
-					"name": "At Higher Levels",
-					"entries": [
-						"If you cast this spell using a spell slot of 3rd level or higher, the duration becomes 8 hours. If you use a slot of 5th level or higher, the duration becomes 10 days. If you use a slot of 7th level or higher, the spell lasts until it is dispelled"
-					]
-				}
-			],
-			"abilityCheck": [
-				"intelligence"
-			],
-			"miscTags": [
-				"SGT"
-			],
-			"areaTags": [
-				"C",
-				"R"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Ranger",
-						"source": "PHB"
-					},
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
 					}
 				]
 			}
@@ -8658,19 +7634,7 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
 						"name": "Bard",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
 						"source": "PHB"
 					}
 				]
@@ -10424,346 +9388,6 @@
 					}
 				]
 			}
-		}
-	],
-	"subrace": [
-		{
-			"name": "Avoral",
-			"source": "BDPC",
-			"page": 5,
-			"ability": [
-				{
-					"dex": 1
-				}
-			],
-			"traitTags": [
-				"Natural Weapon"
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Far-sighted",
-					"page": 6,
-					"entries": [
-						"Your normal eyesight remains effective for twice the range of normal humanoids, allowing you to discern fine details as though you were looking at something half as far away."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Talons",
-					"page": 6,
-					"entries": [
-						"The long, sharp talons on your feet make for an effective natural weapon, which you can use to make unarmed strikes. Your unarmed strikes with your talons use a {@dice d4} as their damage die, and deal slashing damage rather than the bludgeoning damage normal for an unarmed attack."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Underdeveloped Wings",
-					"page": 6,
-					"entries": [
-						"While you don't have true wings, your feathered, winglike arms can help you glide and buffer your falls. You take half as much damage from falling, and you take no damage from falls less than 30 feet. For every 2 feet you fall vertically, you can also move 1 foot horizontally."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Wind Magic",
-					"page": 6,
-					"entries": [
-						"You know the {@spell gust|xge} cantrip. Charisma is your spellcasting ability for it."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					"Avoral guardrins resemble the cross between a majestic, golden eagle and a human. Their faces are usually more human than avian, but their hair resembles a feathery cowl, and their eyes are bright and golden. They have feathered, wing-like arms, and their legs end in wickedly sharp talons. They are proud creatures, though more solitary than most other guardrins."
-				],
-				"_appendRaceFluff": {
-					"name": "Guardrin",
-					"source": "BDPC"
-				}
-			},
-			"raceName": "Guardrin",
-			"raceSource": "BDPC"
-		},
-		{
-			"name": "Cervidal",
-			"source": "BDPC",
-			"page": 6,
-			"ability": [
-				{
-					"cha": 2
-				}
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Sure-footed",
-					"page": 6,
-					"entries": [
-						"You have advantage on saving throws made to avoid falling {@condition prone}."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Cervidal Resistance",
-					"page": 6,
-					"entries": [
-						"You have advantage on saving throws against poison, and you have resistance against poison damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Revealer of Truth",
-					"page": 6,
-					"entries": [
-						"If you touch your horns to an illusion, the illusion is instantly dispelled. Illusions caused by spells of a level greater than a third of your level (rounded up) are not dispelled."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					"Cervidal guardrins are the most peaceful of their kind, and resort to violence far more rarely than their kin. They bear a striking resemblance to satyrs, with goat-like horns and hooves for feet. They are slim yet strong, and their thick skin is often at least partly covered by short fur in shades of red or brown."
-				],
-				"_appendRaceFluff": {
-					"name": "Guardrin",
-					"source": "BDPC"
-				},
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/lxran-bdpc/_img/BDPC/Guardrin_2.png"
-						}
-					}
-				]
-			},
-			"raceName": "Guardrin",
-			"raceSource": "BDPC"
-		},
-		{
-			"name": "Equinal",
-			"source": "BDPC",
-			"page": 6,
-			"ability": [
-				{
-					"con": 1
-				}
-			],
-			"speed": 40,
-			"traitTags": [
-				"Powerful Build"
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Fleet of Foot",
-					"page": 6,
-					"entries": [
-						"Your base walking speed increases by 10 feet."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Powerful Build",
-					"page": 40,
-					"entries": [
-						"You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					"Equinal guardrins combine the features of a human and a stocky draft horse. They have broad chests and shoulders and their arms end in thick fingers that are as hard as a hoof. Their legs are even more equine in form, with true horse-hooves for feet. A flowing mane runs from their neck to their back, and their faces are long and narrow. Their personalities are often boisterous, and many of them are fond of athletic contests and games of skill"
-				],
-				"_appendRaceFluff": {
-					"name": "Guardrin",
-					"source": "BDPC"
-				}
-			},
-			"raceName": "Guardrin",
-			"raceSource": "BDPC"
-		},
-		{
-			"name": "Leonal",
-			"source": "BDPC",
-			"page": 6,
-			"ability": [
-				{
-					"str": 2
-				}
-			],
-			"traitTags": [
-				"Natural Weapon"
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Brave",
-					"page": 6,
-					"entries": [
-						"You have advantage on saving throws against being {@condition frightened}."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Claws",
-					"page": 6,
-					"entries": [
-						"Your claws are natural weapons, which you can use to make unarmed strikes. Your unarmed strikes with your claws use a {@dice d6} as their damage die, and deal slashing damage rather than the bludgeoning damage normal for an unarmed attack."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Roar",
-					"page": 6,
-					"entries": [
-						"As a bonus action, you can release a roar. Creatures of your choice within 15 feet of you that can hear you must succeed on Wisdom saving throw with a DC of 8 + your proficiency bonus + your Charisma modifier or become deafened and have their speed halved until the end of your next turn. Once you use this trait, you can't use it again until you finish a long rest."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					"Leonal guardrins resemble proud, humanoid lions, with impressive manes and golden fur. Their powerful arms end in claws that are as strong and sharp as swords, and perhaps more deadly. Their leonine visages are both regal and terrifying, and they have a presence that commands respect and exudes bravery."
-				],
-				"_appendRaceFluff": {
-					"name": "Guardrin",
-					"source": "BDPC"
-				},
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/lxran-bdpc/_img/BDPC/Guardrin_1.png"
-						}
-					}
-				]
-			},
-			"raceName": "Guardrin",
-			"raceSource": "BDPC"
-		},
-		{
-			"name": "Lupinal",
-			"source": "BDPC",
-			"page": 6,
-			"ability": [
-				{
-					"wis": 1
-				}
-			],
-			"skillProficiencies": [
-				{
-					"perception": true,
-					"survival": true
-				}
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Perceptive",
-					"page": 6,
-					"entries": [
-						"You have proficiency in the {@skill Perception} skill."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Survivor",
-					"page": 6,
-					"entries": [
-						"You have proficiency in the {@skill Survival} skill."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Tracker",
-					"page": 6,
-					"entries": [
-						"If you know a creature's scent, such as through having one of their belongings or interacting with them, you can use your action to sniff them out. If they are within 1000 feet of you, you know the distance and general direction to the position they were in when you took this action."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					"Lupinal guardrins are half-man and half-wolf with lean, rangy physiques and pronounced muzzles filled with canine teeth. Their legs are bent like a wolf's, and they are covered in silver-grey fur. They are often mistaken for werewolves, but their well-groomed visage and strict loyalty set them apart from most lycanthropes. Most of them are highly driven in their fight against evil, and become quickly bored by mundane tasks."
-				],
-				"_appendRaceFluff": {
-					"name": "Guardrin",
-					"source": "BDPC"
-				}
-			},
-			"raceName": "Guardrin",
-			"raceSource": "BDPC"
-		},
-		{
-			"name": "Ursinal",
-			"source": "BDPC",
-			"ability": [
-				{
-					"int": 1
-				}
-			],
-			"traitTags": [
-				"Powerful Build"
-			],
-			"skillProficiencies": [
-				{
-					"choose": {
-						"from": [
-							"Athletics",
-							"Animal Handling",
-							"Acrobatics",
-							"Arcana",
-							"Deception",
-							"History",
-							"Insight",
-							"Intimidation",
-							"Investigation",
-							"Medicine",
-							"Nature",
-							"Persusasion",
-							"Perception",
-							"Performance",
-							"Religion",
-							"Sleight of Hand",
-							"Stealth",
-							"Survival"
-						],
-						"count": 2
-					}
-				}
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Powerful Build",
-					"page": 6,
-					"entries": [
-						"You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Scholarly",
-					"page": 6,
-					"entries": [
-						"You gain proficiency in two skills and one tool of your choice."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					"Ursinal guardrins are hulking men and women with bearlike attributes. They stand approximately 8 feet tall and are covered with golden, red, or brown fur. Their faces have pronounced muzzles and high ear tufts\u2014and, usually, a kindly expression. Despite their intimidating looks, they are scholarly creatures that often seek to avoid physical confrontations, though they are capable combatants when push comes to shove."
-				],
-				"_appendRaceFluff": {
-					"name": "Guardrin",
-					"source": "BDPC"
-				}
-			},
-			"raceName": "Guardrin",
-			"raceSource": "BDPC",
-			"page": 5
 		}
 	]
 }

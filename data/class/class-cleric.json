@@ -65,10 +65,8 @@
 				"default": [
 					"(a) a {@item warhammer|phb} (if proficient)",
 					"(a) {@item scale mail|phb}, (b) {@item leather armor|phb}, or (c) {@item chain mail|phb} (if proficient)",
-					"(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item shield|phb} and a {@item holy symbol|phb}"
+					"A {@item holy symbol|phb}"
 				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
 						"_": [
@@ -87,16 +85,7 @@
 						]
 					},
 					{
-						"a": [
-							"priest's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
-					},
-					{
 						"_": [
-							"shield|phb",
 							"holy symbol|phb"
 						]
 					}
@@ -773,8 +762,8 @@
 	],
 	"subclass": [
 		{
-			"name": "Knowledge Domain",
-			"shortName": "Knowledge",
+			"name": "The Unblinking Eye",
+			"shortName": "Unblinking Eye",
 			"source": "PHB",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -806,16 +795,16 @@
 				}
 			],
 			"subclassFeatures": [
-				"Knowledge Domain|Cleric||Knowledge||1",
-				"Channel Divinity: Knowledge of the Ages|Cleric||Knowledge||2",
-				"Channel Divinity: Read Thoughts|Cleric||Knowledge||6",
-				"Potent Spellcasting|Cleric||Knowledge||8",
-				"Visions of the Past|Cleric||Knowledge||17"
+				"The Unblinking Eye|Cleric||Unblinking Eye||1",
+				"Channel Divinity: Knowledge of the Ages|Cleric||Unblinking Eye||2",
+				"Lost Knowledge|Cleric||Unblinking Eye||6",
+				"Potent Spellcasting|Cleric||Unblinking Eye||8",
+				"Mass Insanity|Cleric||Unblinking Eye||17"
 			]
 		},
 		{
-			"name": "Life Domain",
-			"shortName": "Life",
+			"name": "The Flayed God",
+			"shortName": "Flayed God",
 			"source": "PHB",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -826,39 +815,39 @@
 				{
 					"prepared": {
 						"1": [
-							"bless",
+							"detect poison and disease",
 							"cure wounds"
 						],
 						"3": [
 							"lesser restoration",
-							"spiritual weapon"
+							"warding bond"
 						],
 						"5": [
-							"beacon of hope",
+							"life transference",
 							"revivify"
 						],
 						"7": [
-							"death ward",
-							"guardian of faith"
+							"insect plague",
+							"mark of objection|COFS:A"
 						],
 						"9": [
 							"mass cure wounds",
-							"raise dead"
+							"contagion"
 						]
 					}
 				}
 			],
 			"subclassFeatures": [
-				"Life Domain|Cleric||Life||1",
-				"Channel Divinity: Preserve Life|Cleric||Life||2",
-				"Blessed Healer|Cleric||Life||6",
-				"Divine Strike|Cleric||Life||8",
-				"Supreme Healing|Cleric||Life||17"
+				"The Flayed God|Cleric||Flayed God||1",
+				"Channel Divinity: Preserve Life|Cleric||Flayed God||2",
+				"Blessed Healer|Cleric||Flayed God||6",
+				"Divine Strike|Cleric||Flayed God||8",
+				"Plague Martyr|Cleric||Flayed God||17"
 			]
 		},
 		{
-			"name": "Light Domain",
-			"shortName": "Light",
+			"name": "The Weeping Sun",
+			"shortName": "Weeping Sun",
 			"source": "PHB",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -867,24 +856,24 @@
 				{
 					"prepared": {
 						"1": [
-							"burning hands",
+							"hand of helious|BDPC",
 							"faerie fire"
 						],
 						"3": [
-							"flaming sphere",
-							"scorching ray"
+							"calm emotions",
+							"silence"
 						],
 						"5": [
 							"daylight",
-							"fireball"
+							"slow"
 						],
 						"7": [
-							"guardian of faith",
-							"wall of fire"
+							"seeking sunfire|BDPC",
+							"slow"
 						],
 						"9": [
-							"flame strike",
-							"scrying"
+							"angelic rebuke|BDPC",
+							"dawn"
 						]
 					},
 					"known": {
@@ -895,16 +884,16 @@
 				}
 			],
 			"subclassFeatures": [
-				"Light Domain|Cleric||Light||1",
-				"Channel Divinity: Radiance of the Dawn|Cleric||Light||2",
-				"Improved Flare|Cleric||Light||6",
-				"Potent Spellcasting|Cleric||Light||8",
-				"Corona of Light|Cleric||Light||17"
+				"The Weeping Sun|Cleric||Weeping Sun||1",
+				"Channel Divinity: Mourning Dawn|Cleric||Weeping Sun||2",
+				"Improved Flare|Cleric||Weeping Sun||6",
+				"Potent Spellcasting|Cleric||Weeping Sun||8",
+				"Corona of Light|Cleric||Weeping Sun||17"
 			]
 		},
 		{
-			"name": "Nature Domain",
-			"shortName": "Nature",
+			"name": "The Hunger of the Earth",
+			"shortName": "Hunger of the Earth",
 			"source": "PHB",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -948,11 +937,11 @@
 				}
 			],
 			"subclassFeatures": [
-				"Nature Domain|Cleric||Nature||1",
-				"Channel Divinity: Nature's Hunger|Cleric||Nature||2",
-				"Dampen Elements|Cleric||Nature||6",
-				"Divine Strike|Cleric||Nature||8",
-				"Voracious Consumption|Cleric||Nature||17"
+				"The Hunger of the Earth|Cleric||Hunger of the Earth||1",
+				"Channel Divinity: Nature's Hunger|Cleric||Hunger of the Earth||2",
+				"Dampen Elements|Cleric||Hunger of the Earth||6",
+				"Divine Strike|Cleric||Hunger of the Earth||8",
+				"Voracious Consumption|Cleric||Hunger of the Earth||17"
 			]
 		},
 		{
@@ -1038,8 +1027,8 @@
 			]
 		},
 		{
-			"name": "War Domain",
-			"shortName": "War",
+			"name": "The Burned Lady",
+			"shortName": "Burned Lady",
 			"source": "PHB",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -1049,33 +1038,33 @@
 					"prepared": {
 						"1": [
 							"divine favor",
-							"shield of faith"
+							"searing smite"
 						],
 						"3": [
-							"magic weapon",
+							"flame blade",
 							"spiritual weapon"
 						],
 						"5": [
 							"crusader's mantle",
-							"spirit guardians"
+							"funeral pyre|COFS:A"
 						],
 						"7": [
-							"freedom of movement",
-							"stoneskin"
+							"wall of fire",
+							"investiture of flame|MOD"
 						],
 						"9": [
-							"flame strike",
+							"immolation|XGE",
 							"hold monster"
 						]
 					}
 				}
 			],
 			"subclassFeatures": [
-				"War Domain|Cleric||War||1",
-				"Channel Divinity: Guided Strike|Cleric||War||2",
-				"Extra Attack|Cleric||War||6",
-				"Divine Strike|Cleric||War||8",
-				"Avatar of Battle|Cleric||War||17"
+				"The Burned Lady|Cleric||Burned Lady||1",
+				"Channel Divinity: Guided Strike|Cleric||Burned Lady||2",
+				"Extra Attack|Cleric||Burned Lady||6",
+				"Divine Strike|Cleric||Burned Lady||8",
+				"Avatar of Battle|Cleric||Burned Lady||17"
 			]
 		},
 		{
@@ -1795,20 +1784,20 @@
 			]
 		},
 		{
-			"name": "Knowledge Domain",
+			"name": "The Unblinking Eye",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Knowledge",
+			"subclassShortName": "Unblinking Eye",
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"The gods of knowledge\u2014including {@deity Oghma}, {@deity Boccob|Greyhawk}, {@deity Gilean|Dragonlance}, {@deity Aureon|Eberron}, and {@deity Thoth|Egyptian}\u2014value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like {@deity Gond}, {@deity Reorx|Dragonlance}, {@deity Onatar|Eberron}, {@deity Moradin|Nonhuman}, {@deity Hephaestus|Greek}, and {@deity Goibhniu|Celtic}.",
+				"You are a devotee of {@deity The Unblinking Eye}, the god of knowledge and magic. Unlike most other gods, the Eye has few rites or rituals associated with its worship, and the sole overriding ideal of the Eye is the acquisition of knowledge. Devotion to the Eye can be dangerous; although its followers inevitably find themselves guided to great troves of knowledge, they also find themselves subject to an unnaturally high rate of madness and insanity.",
 				"At each indicated cleric level, you add the listed spells to your spells prepared.",
 				{
 					"type": "table",
-					"caption": "Knowledge Domain Spells",
+					"caption": "Unblinking Eye Spells",
 					"colLabels": [
 						"Cleric Level",
 						"Spells"
@@ -1820,15 +1809,15 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell command}, {@spell identify}"
+							"{@spell tasha's hideous laughter}, {@spell identify}"
 						],
 						[
 							"3rd",
-							"{@spell augury}, {@spell suggestion}"
+							"{@spell detect thoughts}, {@spell dark secrets|COFS:A}"
 						],
 						[
 							"5th",
-							"{@spell nondetection}, {@spell speak with dead}"
+							"{@spell intellect fortress}, {@spell speak with dead}"
 						],
 						[
 							"7th",
@@ -1836,29 +1825,31 @@
 						],
 						[
 							"9th",
-							"{@spell legend lore}, {@spell scrying}"
+							"{@spell modify memory}, {@spell scrying}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Blessings of Knowledge|Cleric||Knowledge||1"
+					"subclassFeature": "Blessings of the Eye|Cleric||Unblinking Eye||1"
 				}
 			]
 		},
 		{
-			"name": "Blessings of Knowledge",
+			"name": "Blessings of the Eye",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Knowledge",
+			"subclassShortName": "Unblinking Eye",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: {@skill Arcana}, {@skill History}, {@skill Nature}, or {@skill Religion}.",
-				"Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
+				"{@i 1st level Unblinking Eye feature}",
+				"When you create a cleric of the Unblinking Eye, you can choose to use Intelligence instead of Wisdom as your spellcasting ability. Once you make this choice, you cannot change it later.",
+				"At 1st level, you gain proficiency in two of the following skills: Arcana, History, Medicine, Nature, or Investigation.",
+				"Whenever you would deal radiant or necrotic damage with a cleric spell, the damage type instead becomes psychic."
 			]
 		},
 		{
@@ -1867,7 +1858,7 @@
 			"page": 59,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Knowledge",
+			"subclassShortName": "Unblinking Eye",
 			"subclassSource": "PHB",
 			"level": 2,
 			"header": 2,
@@ -1875,16 +1866,17 @@
 				"name": "Channel Divinity"
 			},
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
+				"{@i 2nd level Unblinking Eye feature}",
+				"As an action, you choose one skill, language, or tool. For the next ten minutes, you are proficient in your chosen ability, and you can add double your proficiency modifier to any check made with that ability or tool."
 			]
 		},
 		{
-			"name": "Channel Divinity: Read Thoughts",
+			"name": "Lost Knowledge",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Knowledge",
+			"subclassShortName": "Unblinking Eye",
 			"subclassSource": "PHB",
 			"level": 6,
 			"header": 2,
@@ -1892,10 +1884,8 @@
 				"name": "Channel Divinity"
 			},
 			"entries": [
-				"At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
-				"As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
-				"If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.",
-				"During that time, you can use your action to end this effect and cast the {@spell suggestion} spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell."
+				"{@i 6th level Unblinking Eye feature}",
+				"You can cast {@spell legend lore} once per long rest without spending a spell slot or material components."
 			]
 		},
 		{
@@ -1904,7 +1894,7 @@
 			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Knowledge",
+			"subclassShortName": "Unblinking Eye",
 			"subclassSource": "PHB",
 			"level": 8,
 			"isClassFeatureVariant": true,
@@ -1920,7 +1910,7 @@
 			"page": 59,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Knowledge",
+			"subclassShortName": "Unblinking Eye",
 			"subclassSource": "PHB",
 			"level": 8,
 			"header": 2,
@@ -1929,57 +1919,33 @@
 			]
 		},
 		{
-			"name": "Visions of the Past",
+			"name": "Mass Insanity",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Knowledge",
+			"subclassShortName": "Unblinking Eye",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest.",
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Object Reading",
-							"entries": [
-								"Holding an object as you meditate, you can see visions of the object's previous owner. After meditating for 1 minute, you learn how the owner acquired and lost the object, as well as the most recent significant event involving the object and that owner. If the object was owned by another creature in the recent past (within a number of days equal to your Wisdom score), you can spend 1 additional minute for each owner to learn the same information about that creature."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Area Reading",
-							"entries": [
-								"As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation."
-							]
-						}
-					]
-				}
+				"{@i 17th level Unblinking Eye feature}",
+				"The knowledge crammed into your brain begins to leak and suffuse the space around you. Once per long rest, you may use your action to inundate your surroundings with an intense flood of knowledge, forcing every creature other than yourself within 30 feet of you to make an Intelligence saving throw. On a failure, a creature takes {@damage 10d6} psychic damage and develops a long-term madness. A creature who fails the saving throw by 5 or more also develops a short-term madness, and a creature who fails by 10 or more also develops an indefinite mdaness."
 			]
 		},
 		{
-			"name": "Life Domain",
+			"name": "The Flayed God",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Life",
+			"subclassShortName": "Flayed God",
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"The Life domain focuses on the vibrant positive energy\u2014one of the fundamental forces of the universe\u2014that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities (such as {@deity Chauntea}, {@deity Arawai|Eberron}, and {@deity Demeter|Greek}), sun gods (such as {@deity Lathander}, {@deity Pelor|Greyhawk}, and {@deity Re-Horakhty|Egyptian}), gods of healing or endurance (such as {@deity Ilmater}, {@deity Mishakal|Dragonlance}, {@deity Apollo|Greek}, and {@deity Diancecht|Celtic}), and gods of home and community (such as {@deity Hestia|Greek}, {@deity Hathor|Egyptian}, and {@deity Boldrei|Eberron}).",
+				"You are an adherent of {@deity the Flayed God|MOD}, the deity of redemption, martyrdom, and plague. The Flayed God holds you to the principles of empathy and compassion, to an extreme degree, and you have been granted a sliver of power and tasked with the duty of helping the defenseless- by bearing their pain and burdens yourself, if necessary. Adherents of the Flayed God are able to absorb the diseases from others and hold them in their own body, easing the suffering of others, at the cost of their own well-being- and, it must be said, their appearance. Many devotees of the Flayed God use a mask to hide their faces, concealing the disfiguring effects of the diseases they carry.",
 				"At each indicated cleric level, you add the listed spells to your spells prepared.",
 				{
 					"type": "table",
@@ -1995,50 +1961,53 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell bless}, {@spell cure wounds}"
+							"{@spell detect poison and disease}, {@spell cure wounds}"
 						],
 						[
 							"3rd",
-							"{@spell lesser restoration}, {@spell spiritual weapon}"
+							"{@spell lesser restoration}, {@spell warding bond}"
 						],
 						[
 							"5th",
-							"{@spell beacon of hope}, {@spell revivify}"
+							"{@spell life transference}, {@spell revivify}"
 						],
 						[
 							"7th",
-							"{@spell death ward}, {@spell guardian of faith}"
+							"{@spell insect plague}, {@spell mark of objection|COFS:A}"
 						],
 						[
 							"9th",
-							"{@spell mass cure wounds}, {@spell raise dead}"
+							"{@spell mass cure wounds}, {@spell contagion}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Cleric||Life||1"
+					"subclassFeature": "Strength of Body|Cleric||Flayed God||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Disciple of Life|Cleric||Life||1"
+					"subclassFeature": "Disciple of Life|Cleric||Flayed God||1"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiency",
+			"name": "Strength of Body",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Life",
+			"subclassShortName": "Flayed God",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you gain proficiency with heavy armor."
+				"{@i 1st level Flayed God feature}",
+				"Your maximum hit points increases by an amount equal to your cleric level. Additionally, you have advantage on saving throws against poison and disease, and you can neutralize a number of diseases in your body equal to your proficiency modifier.",
+				"You still bear the physical marks of a neutralized disease, such as rashes, flesh discoloration, or decay, but a neutralized disease otherwise has no effect on you. While neutralized, a disease is not contagious, and any duration on the disease is suspended, so it cannot get either better or more severe naturally.",
+				"You can allow a disease to become active again within your body, un-neutralizing it as an action, but once you do, you cannot re-neutralize this instance of the disease again."
 			]
 		},
 		{
@@ -2049,12 +2018,13 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Life",
+			"subclassShortName": "Flayed God",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
+				"{@i 1st level Flayed God feature}",
+				"Your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
 			]
 		},
 		{
@@ -2065,7 +2035,7 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Life",
+			"subclassShortName": "Flayed God",
 			"subclassSource": "PHB",
 			"level": 2,
 			"header": 2,
@@ -2074,7 +2044,8 @@
 			},
 			"entries": [
 				"Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
-				"As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct."
+				"As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct.",
+				"When you use this ability, you can also transfer any disease from a creature you healed into your own body, effectively curing them. You bear the disease in their stead. If you bear multiple instances of the same disease without neutralizing them, the disease may become more severe than normal."
 			]
 		},
 		{
@@ -2085,7 +2056,7 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Life",
+			"subclassShortName": "Flayed God",
 			"subclassSource": "PHB",
 			"level": 6,
 			"header": 2,
@@ -2101,41 +2072,43 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Life",
+			"subclassShortName": "Flayed God",
 			"subclassSource": "PHB",
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
+				"You are blessed with divine might in battle. When a creature takes damage from one of your cantrips, you deal additional damage equal to the number of unique diseases in your body, up to a maximum of twice your proficiency modifier. This includes neutralized diseases."
 			]
 		},
 		{
-			"name": "Supreme Healing",
+			"name": "Plague Martyr",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Life",
+			"subclassShortName": "Flayed God",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring {@dice 2d6} hit points to a creature, you restore 12."
+				"You may spend an action to attempt to transfer one of your diseases to a creature adjacent to you. The creature must make a Constitution saving throw; on a failure, one disease of your choice is moved from your body and into your target's.",
+				"Additionally, when you would normally roll one or more dice to restore hit points with a spell, you can sacrifice 5 maximum hit points to instead use the highest number possible for each die. For example, instead of restoring {@dice 2d6} hit points to a creature, you restore 12."
 			]
 		},
 		{
-			"name": "Light Domain",
+			"name": "The Weeping Sun",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Light",
+			"subclassShortName": "Weeping Sun",
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Gods of light\u2014including {@deity Helm}, {@deity Lathander}, {@deity Pholtus|Greyhawk}, {@deity Branchala|Dragonlance}, {@deity the Silver Flame|Eberron}, {@deity Belenus|Celtic}, {@deity Apollo|Greek}, and {@deity Re-Horakhty|Egyptian}\u2014promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods' discerning vision, charged with chasing away lies and burning away darkness.",
+				"You are a worshipper of {@deity the Weeping Sun|MOD}, the god of light and grief. Infused with a fragment of its power, you are tasked with brinigng light to the darkness, as well as safeguarding both the safety of those in mourning. Grief is considered a holy state of mind, a state of empathy- both with your fellow mortals, for grief is universal, and with the sun itself, eternally in mourning for the death of its lover.",
+				"Due to the influence of The Church of the Mourning Light, the theocratic government that rules the great nation of Lumitreinte, the Weeping Sun is one of the most well-known and widely accepted gods in the known world. However, due to the Church's monotheistic policy laid upon the land it rules, adherents of other deities and religions often bear a residiual grudge against the Church, which often bleeds over into its worshippers.",
 				"At each indicated cleric level, you add the listed spells to your spells prepared.",
 				{
 					"type": "table",
@@ -2151,33 +2124,33 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell burning hands}, {@spell faerie fire}"
+							"{@spell hand of helios|BDPC}, {@spell faerie fire}"
 						],
 						[
 							"3rd",
-							"{@spell flaming sphere}, {@spell scorching ray}"
+							"{@spell calm emotions}, {@spell silence}"
 						],
 						[
 							"5th",
-							"{@spell daylight}, {@spell fireball}"
+							"{@spell daylight}, {@spell slow}"
 						],
 						[
 							"7th",
-							"{@spell guardian of faith}, {@spell wall of fire}"
+							"{@spell seeking sunfire|BDPC}, {@spell confusion}"
 						],
 						[
 							"9th",
-							"{@spell flame strike}, {@spell scrying}"
+							"{@spell angelic rebuke}, {@spell dawn}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Cantrip|Cleric||Light||1"
+					"subclassFeature": "Bonus Cantrip|Cleric||Weeping Sun||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Warding Flare|Cleric||Light||1"
+					"subclassFeature": "Dolorous Flare|Cleric||Weeping Sun||1"
 				}
 			]
 		},
@@ -2187,7 +2160,7 @@
 			"page": 60,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Light",
+			"subclassShortName": "Weeping Sun",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
@@ -2196,27 +2169,29 @@
 			]
 		},
 		{
-			"name": "Warding Flare",
+			"name": "Dolorous Flare",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Light",
+			"subclassShortName": "Weeping Sun",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Also at 1st level, you can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be {@condition blinded} is immune to this feature.",
-				"You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"{@i 1st level Weeping Sun feature}",
+				"You can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be {@condition blinded} is immune to this feature.",
+				"If the attack hits despite this feature, the attacker is {@condition blinded} until the start of their next turn.",
+				"You can use this feature a number of times equal to your proficiency modifier. You regain all expended uses when you finish a long rest."
 			]
 		},
 		{
-			"name": "Channel Divinity: Radiance of the Dawn",
+			"name": "Channel Divinity: Mourning Dawn",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Light",
+			"subclassShortName": "Weeping Sun",
 			"subclassSource": "PHB",
 			"level": 2,
 			"header": 2,
@@ -2225,7 +2200,7 @@
 			},
 			"entries": [
 				"Starting at 2nd level, you can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes.",
-				"As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to {@dice 2d10} + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected."
+				"As an action, you present your holy symbol, creating a 30 foot sphere of magical light, which persists for 10 minutes, overriding any magical darkness in the area. Additionally, each hostile creature within the light's area when it appears must make a Wisdom saving throw. A creature who fails the save is {@condition charmed} until the end of their next turn; while this charm persists, they are also {@condition blinded} and {@condition incapacitated}, as a sorrowful light floods their brain. This charm effect ends if they take any damage."
 			]
 		},
 		{
@@ -2234,12 +2209,12 @@
 			"page": 60,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Light",
+			"subclassShortName": "Weeping Sun",
 			"subclassSource": "PHB",
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."
+				"Starting at 6th level, you can also use your Dolorous Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."
 			]
 		},
 		{
@@ -2248,7 +2223,7 @@
 			"page": 60,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Light",
+			"subclassShortName": "Weeping Sun",
 			"subclassSource": "PHB",
 			"level": 8,
 			"header": 2,
@@ -2262,25 +2237,25 @@
 			"page": 60,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Light",
+			"subclassShortName": "Weeping Sun",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."
+				"Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals radiant damage, as well as attack rolls against you. Creatures who are immune to {@condition blinded} are not affected by this ability."
 			]
 		},
 		{
-			"name": "Nature Domain",
+			"name": "The Hunger of the Earth",
 			"source": "PHB",
 			"page": 61,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Nature",
+			"subclassShortName": "Hunger of the Earth",
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Gods of nature are as varied as the natural world itself, from inscrutable gods of the deep forests (such as {@deity Silvanus}, {@deity Obad-Hai|Greyhawk}, {@deity Chislev|Dragonlance}, {@deity Balinor|Eberron}, and {@deity Pan|Greek}) to friendly deities associated with particular springs and groves (such as {@deity Eldath}). Druids revere nature as a whole and might serve one of these deities, practicing mysterious rites and reciting all-but-forgotten prayers in their own secret tongue. But many of these gods have clerics as well, champions who take a more active role in advancing the interests of a particular nature god. These clerics might hunt the evil monstrosities that despoil the woodlands, bless the harvest of the faithful, or wither the crops of those who anger their gods.",
+				"You are a follower of {@deity the Hunger of the Earth|MOD}, the true manifestation of nature. As a follower of the Hunger, you possess a deep understanding of the cycles of nature, the bounty the world can provide, and the deep hunger buried in each living thing. The world consists of the predator and the prey, ever locked in a dance of consumption. The Earth may be a generous master, but only if it's Hunger is respected, and appeased.",
 				"At each indicated cleric level, you add the listed spells to your spells prepared.",
 				{
 					"type": "table",
@@ -2318,11 +2293,11 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Acolyte of Nature|Cleric||Nature||1"
+					"subclassFeature": "Acolyte of Nature|Cleric||Hunger of the Earth||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Cleric||Nature||1"
+					"subclassFeature": "Bonus Proficiency|Cleric||Hunger of the Earth||1"
 				}
 			]
 		},
@@ -2332,7 +2307,7 @@
 			"page": 61,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Nature",
+			"subclassShortName": "Hunger of the Earth",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
@@ -2346,7 +2321,7 @@
 			"page": 61,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Nature",
+			"subclassShortName": "Hunger of the Earth",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
@@ -2360,7 +2335,7 @@
 			"page": 61,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Nature",
+			"subclassShortName": "Hunger of the Earth",
 			"subclassSource": "PHB",
 			"level": 2,
 			"header": 2,
@@ -2381,7 +2356,7 @@
 			"page": 61,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Nature",
+			"subclassShortName": "Hunger of the Earth",
 			"subclassSource": "PHB",
 			"level": 6,
 			"header": 2,
@@ -2395,7 +2370,7 @@
 			"page": 61,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Nature",
+			"subclassShortName": "Hunger of the Earth",
 			"subclassSource": "PHB",
 			"level": 8,
 			"header": 2,
@@ -2409,7 +2384,7 @@
 			"page": 61,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Nature",
+			"subclassShortName": "Hunger of the Earth",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
@@ -2427,7 +2402,7 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Gods whose portfolios include the Tempest domain\u2014including {@deity Talos}, {@deity Umberlee}, {@deity Kord|Greyhawk}, {@deity Zeboim|Dragonlance}, {@deity the Devourer|Eberron}, {@deity Zeus|Greek}, and {@deity Thor|Norse}\u2014govern storms, sea, and sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.",
+				"You worship the sea and the storm, the depths that stretch out before you and the clouds that reach across the sky.",
 				"At each indicated cleric level, you add the listed spells to your spells prepared.",
 				{
 					"type": "table",
@@ -2692,17 +2667,16 @@
 			]
 		},
 		{
-			"name": "War Domain",
+			"name": "The Burned Lady",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "War",
+			"subclassShortName": "Burned Lady",
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"War has many manifestations. It can make heroes of ordinary people. It can be desperate and horrific, with acts of cruelty and cowardice eclipsing instances of excellence and courage. In either case, the gods of war watch over warriors and reward them for their great deeds. The clerics of such gods excel in battle, inspiring others to fight the good fight or offering acts of violence as prayers. Gods of war include champions of honor and chivalry (such as {@deity Torm}, {@deity Heironeous|Greyhawk}, and {@deity Kiri-Jolith|Dragonlance}) as well as gods of destruction and pillage (such as {@deity Erythnul|Greyhawk}, {@deity the Fury|Eberron}, {@deity Gruumsh|Nonhuman}, and {@deity Ares|Greek}) and gods of conquest and domination (such as {@deity Bane}, {@deity Hextor|Greyhawk}, and {@deity Maglubiyet|Nonhuman}). Other war gods (such as {@deity Tempus}, {@deity Nike|Greek}, and {@deity Nuada|Celtic}) take a more neutral stance, promoting war in all its manifestations and supporting warriors in any circumstance.",
-				"At each indicated cleric level, add the listed spells to your spells prepared.",
+				"You are a worshipper of {@deity the Burned Lady|MOD}, god of fire, warfare, and rebirth. The spirit of the Lady compels you into the front lines of battle, wielding magics to protect your allies and bathing your foes in flame.",
 				{
 					"type": "table",
 					"caption": "War Domain Spells",
@@ -2739,11 +2713,11 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||War||1"
+					"subclassFeature": "Bonus Proficiencies|Cleric||Burned Lady||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "War Priest|Cleric||War||1"
+					"subclassFeature": "War Priest|Cleric||Burned Lady||1"
 				}
 			]
 		},
@@ -2753,7 +2727,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "War",
+			"subclassShortName": "Burned Lady",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
@@ -2762,12 +2736,26 @@
 			]
 		},
 		{
+			"name": "Ward of Flame",
+			"source": "PHB",
+			"page": 63,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Burned Lady",
+			"subclassSource": "PHB",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"Whenever you deal radiant damage with a cleric spell, the damage type is changed to fire instead."
+			]
+		},
+		{
 			"name": "War Priest",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "War",
+			"subclassShortName": "Burned Lady",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
@@ -2781,7 +2769,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "War",
+			"subclassShortName": "Burned Lady",
 			"subclassSource": "PHB",
 			"level": 2,
 			"header": 2,
@@ -2789,7 +2777,8 @@
 				"name": "Channel Divinity"
 			},
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+				"Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
+				"When you use this feature, you also deal an additional {@damage 2d8} fire damage on the weapon's attack."
 			]
 		},
 		{
@@ -2798,7 +2787,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "War",
+			"subclassShortName": "Burned Lady",
 			"subclassSource": "PHB",
 			"level": 6,
 			"header": 2,
@@ -2812,7 +2801,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "War",
+			"subclassShortName": "Burned Lady",
 			"subclassSource": "PHB",
 			"level": 8,
 			"header": 2,
@@ -2826,7 +2815,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "War",
+			"subclassShortName": "Burned Lady",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,

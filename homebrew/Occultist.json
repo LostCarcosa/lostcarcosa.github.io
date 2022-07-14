@@ -2,8 +2,8 @@
 	"_meta": {
 		"sources": [
 			{
-				"json": "KT:O",
-				"abbreviation": "KT:O",
+				"json": "OCC",
+				"abbreviation": "OCC",
 				"full": "The Occultist",
 				"authors": [
 					"KibblesTasty"
@@ -13,12 +13,13 @@
 					"SasquatchBrah"
 				],
 				"url": "https://www.gmbinder.com/share/-M-WtrKeZNFdEXq0MKXw",
-				"version": "1.1"
+				"version": "1.1",
+				"color": "ff0099"
 			}
 		],
 		"optionalFeatureTypes": {
-			"ktor": "Occult Rite",
-			"ktom": "Oracle Mystery"
+			"OCC:R": "Occult Rite",
+			"OCC:M": "Oracle Mystery"
 		},
 		"dateAdded": 1603793256,
 		"dateLastModified": 1623519395
@@ -26,7 +27,7 @@
 	"class": [
 		{
 			"name": "Occultist",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 1,
 			"hd": {
 				"number": 1,
@@ -126,9 +127,9 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Occult Rites|optionalfeatures|feature type=ktor}",
-						"{@filter Cantrips Known|spells|level=0|class=Occultist (KT:O)}",
-						"{@filter Spells Known|spells|class=Occultist (KT:O)}"
+						"{@filter Occult Rites|optionalfeatures|feature type=OCC:R}",
+						"{@filter Cantrips Known|spells|level=0|class=Occultist (OCC)}",
+						"{@filter Spells Known|spells|class=Occultist (OCC)}"
 					],
 					"rows": [
 						[
@@ -236,15 +237,15 @@
 				{
 					"title": "Spell Slots per Spell Level",
 					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Occultist (KT:O)}",
-						"{@filter 2nd|spells|level=2|class=Occultist (KT:O)}",
-						"{@filter 3rd|spells|level=3|class=Occultist (KT:O)}",
-						"{@filter 4th|spells|level=4|class=Occultist (KT:O)}",
-						"{@filter 5th|spells|level=5|class=Occultist (KT:O)}",
-						"{@filter 6th|spells|level=6|class=Occultist (KT:O)}",
-						"{@filter 7th|spells|level=7|class=Occultist (KT:O)}",
-						"{@filter 8th|spells|level=8|class=Occultist (KT:O)}",
-						"{@filter 9th|spells|level=9|class=Occultist (KT:O)}"
+						"{@filter 1st|spells|level=1|class=Occultist (OCC)}",
+						"{@filter 2nd|spells|level=2|class=Occultist (OCC)}",
+						"{@filter 3rd|spells|level=3|class=Occultist (OCC)}",
+						"{@filter 4th|spells|level=4|class=Occultist (OCC)}",
+						"{@filter 5th|spells|level=5|class=Occultist (OCC)}",
+						"{@filter 6th|spells|level=6|class=Occultist (OCC)}",
+						"{@filter 7th|spells|level=7|class=Occultist (OCC)}",
+						"{@filter 8th|spells|level=8|class=Occultist (OCC)}",
+						"{@filter 9th|spells|level=9|class=Occultist (OCC)}"
 					],
 					"rows": [
 						[
@@ -471,47 +472,47 @@
 				}
 			],
 			"classFeatures": [
-				"Spellcasting|Occultist|KT:O|1",
+				"Spellcasting|Occultist|OCC|1",
 				{
-					"classFeature": "Occult Tradition|Occultist|KT:O|1",
+					"classFeature": "Occult Tradition|Occultist|OCC|1",
 					"gainSubclassFeature": true
 				},
-				"Occult Rites|Occultist|KT:O|2",
+				"Occult Rites|Occultist|OCC|2",
 				{
-					"classFeature": "Occult Tradition feature|Occultist|KT:O|3",
+					"classFeature": "Occult Tradition feature|Occultist|OCC|3",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Occultist|KT:O|4",
+				"Ability Score Improvement|Occultist|OCC|4",
 				{
-					"classFeature": "Occult Tradition feature|Occultist|KT:O|6",
+					"classFeature": "Occult Tradition feature|Occultist|OCC|6",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Occultist|KT:O|8",
-				"Traditional Expertise|Occultist|KT:O|10",
-				"Ability Score Improvement|Occultist|KT:O|12",
+				"Ability Score Improvement|Occultist|OCC|8",
+				"Traditional Expertise|Occultist|OCC|10",
+				"Ability Score Improvement|Occultist|OCC|12",
 				{
-					"classFeature": "Occult Tradition feature|Occultist|KT:O|14",
+					"classFeature": "Occult Tradition feature|Occultist|OCC|14",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Occultist|KT:O|16",
-				"Ability Score Improvement|Occultist|KT:O|19",
-				"The Old Ways|Occultist|KT:O|20"
+				"Ability Score Improvement|Occultist|OCC|16",
+				"Ability Score Improvement|Occultist|OCC|19",
+				"The Old Ways|Occultist|OCC|20"
 			],
 			"subclassTitle": "Occult Tradition",
 			"classSpells": [
 				"Acid Splash",
-				"burn|kt:o",
+				"burn|OCC",
 				"Chill Touch",
 				"create bonfire|xge",
-				"decaying touch|kt:o",
+				"decaying touch|OCC",
 				"Dancing Lights",
 				"Druidcraft",
-				"fists of fire|kt:o",
-				"freeze|kt:o",
+				"fists of fire|OCC",
+				"freeze|OCC",
 				"frostbite|xge",
 				"Guidance",
 				"gust|xge",
-				"ice weapon|kt:o",
+				"ice weapon|OCC",
 				"infestation|xge",
 				"Light",
 				"lightning lure|scag",
@@ -534,43 +535,43 @@
 				"ceremony|xge",
 				"Comprehend Languages",
 				"Cure Wounds",
-				"crippling agony|kt:o",
+				"crippling agony|OCC",
 				"Detect Magic",
 				"Detect Poison and Disease",
 				"Disguise Self",
 				"Dissonant Whispers",
-				"earth ripple|kt:o",
-				"electrify|kt:o",
+				"earth ripple|OCC",
+				"electrify|OCC",
 				"Entangle",
 				"Feather Fall",
 				"Fog Cloud",
-				"grip of the dead|kt:o",
+				"grip of the dead|OCC",
 				"Hail of Thorns",
 				"ice knife|xge",
 				"Identify",
 				"Illusory Script",
 				"Inflict Wounds",
-				"induce headache|kt:o",
-				"nauseating poison|kt:o",
+				"induce headache|OCC",
+				"nauseating poison|OCC",
 				"Ray of Sickness",
 				"Speak with Animals",
-				"spiritual consultation|kt:o",
+				"spiritual consultation|OCC",
 				"Tasha's Hideous Laughter",
 				"Unseen Servant",
 				"Witch Bolt",
 				"Alter Self",
-				"alacrity|kt:o",
+				"alacrity|OCC",
 				"Animal Messenger",
-				"animate object|kt:o",
+				"animate object|OCC",
 				"Augury",
 				"Barkskin",
 				"Blindness/Deafness",
-				"boil blood|kt:o",
+				"boil blood|OCC",
 				"Calm Emotions",
 				"Darkness",
 				"Darkvision",
 				"Detect Thoughts",
-				"form of familiar|kt:o",
+				"form of familiar|OCC",
 				"Enhance Ability",
 				"Enlarge/Reduce",
 				"Gentle Repose",
@@ -593,13 +594,13 @@
 				"Suggestion",
 				"summon beast|tce",
 				"Web",
-				"animate shadow|kt:o",
+				"animate shadow|OCC",
 				"Bestow Curse",
 				"Blink",
 				"catnap|xge",
 				"Clairvoyance",
 				"Counterspell",
-				"cruel puppetry|kt:o",
+				"cruel puppetry|OCC",
 				"Dispel Magic",
 				"Fear",
 				"Fly",
@@ -609,7 +610,7 @@
 				"Magic Circle",
 				"Nondetection",
 				"Plant Growth",
-				"rain of spiders|kt:o",
+				"rain of spiders|OCC",
 				"Remove Curse",
 				"Sending",
 				"Sleet Storm",
@@ -621,7 +622,7 @@
 				"Water Breathing",
 				"Water Walk",
 				"Wind Wall",
-				"wither|kt:o",
+				"wither|OCC",
 				"Arcane Eye",
 				"Banishment",
 				"Blight",
@@ -654,7 +655,7 @@
 				"Contact Other Plane",
 				"Contagion",
 				"danse macabre|xge",
-				"deglove creature|kt:o",
+				"deglove creature|OCC",
 				"Dominate Person",
 				"Dream",
 				"enervation|xge",
@@ -672,7 +673,7 @@
 				"skill empowerment|xge",
 				"transmute rock|xge",
 				"Wall of Stone",
-				"baba's walking hut|kt:o",
+				"baba's walking hut|OCC",
 				"bones of the earth|xge",
 				"Conjure Fey",
 				"Contingency",
@@ -707,7 +708,7 @@
 				"Resurrection",
 				"Sequester",
 				"Teleport",
-				"twisting eruption|kt:o",
+				"twisting eruption|OCC",
 				"whirlwind|xge",
 				"abi-dalzim's horrid wilting|xge",
 				"Animal Shapes",
@@ -728,7 +729,7 @@
 				"Foresight",
 				"Imprisonment",
 				"invulnerability|xge",
-				"manipulate fate|kt:o",
+				"manipulate fate|OCC",
 				"Power Word Heal",
 				"Power Word Kill",
 				"psychic scream|xge",
@@ -798,7 +799,7 @@
 							]
 						}
 					],
-					"source": "KT:O",
+					"source": "OCC",
 					"page": 1
 				}
 			],
@@ -851,10 +852,10 @@
 	"classFeature": [
 		{
 			"name": "Spellcasting",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 3,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 1,
 			"entries": [
 				"As a practioner of occult magic, you have inherited and developed techniques to manipulate reality through mediums of rituals, spirits, elements, and more. See {@book Spells Rules|PHB|10} for the general rules of spellcasting and the Spells Listing for the {@filter Occultist spell list|spells|class=Occultist}.",
@@ -930,10 +931,10 @@
 		},
 		{
 			"name": "Occult Tradition",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 3,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 1,
 			"entries": [
 				"Choose an occult tradition, shaping your the techniques, features, and rites available to you from the following: Oracle, Shaman, or Witch.",
@@ -942,14 +943,14 @@
 		},
 		{
 			"name": "Occult Rites",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 2,
 			"entries": [
 				"In as you delve your Tradition of occult magic, you find deviations and branches to explore that help you specialize and perfect your craft in the way that best suits you.",
-				"At 2nd Level, you gain two {@filter Occult Rites|optionalfeatures|Feature Type=ktor} of your choice. Your Occult Rites options are detailed at the end of the subclass description for subclass specific Rites, and at the end of the class description for general Rites, you can select from either you subclass or class list.. When you gain certain Occultist levels, you gain additional Occult Rites of your choice.",
+				"At 2nd Level, you gain two {@filter Occult Rites|optionalfeatures|Feature Type=OCC:R} of your choice. Your Occult Rites options are detailed at the end of the subclass description for subclass specific Rites, and at the end of the class description for general Rites, you can select from either you subclass or class list.. When you gain certain Occultist levels, you gain additional Occult Rites of your choice.",
 				"Additionally, when you gain a level in this class, you can choose one of the Occult Rites you know and replace it with another Occult Rites that you could learn at that level. A level prerequisite in a Occult Rite refers to Occultist level, not character level.",
 				{
 					"type": "inset",
@@ -962,10 +963,10 @@
 		},
 		{
 			"name": "Occult Tradition feature",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 3,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 3,
 			"entries": [
 				"At 3rd level, you gain a feature from your Occult Tradition."
@@ -973,10 +974,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 4,
 			"entries": [
 				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -985,10 +986,10 @@
 		},
 		{
 			"name": "Occult Tradition feature",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 3,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 6,
 			"entries": [
 				"At 6th level, you gain a feature from your Occult Tradition."
@@ -996,10 +997,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 8,
 			"entries": [
 				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -1008,10 +1009,10 @@
 		},
 		{
 			"name": "Traditional Expertise",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 10,
 			"entries": [
 				"Starting at 10th level, your passed down knowledge of tradition gives you expertise in a skill of your tradition; choose one of your skill proficiencies form {@skill Animal Handling}, {@skill Arcana}, {@skill Medicine}, {@skill Nature}, {@skill Survival}. Your Proficiency Bonus is doubled for any ability check you make that use of the chosen Proficiency. If you have proficiency in none of the selected skills, you can instead gain proficiency in one of your choice.",
@@ -1020,10 +1021,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 12,
 			"entries": [
 				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -1032,10 +1033,10 @@
 		},
 		{
 			"name": "Occult Tradition feature",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 3,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 14,
 			"entries": [
 				"At 14th level, you gain a feature from your Occult Tradition."
@@ -1043,10 +1044,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 16,
 			"entries": [
 				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -1055,10 +1056,10 @@
 		},
 		{
 			"name": "Ability Score Improvement",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 19,
 			"entries": [
 				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
@@ -1067,10 +1068,10 @@
 		},
 		{
 			"name": "The Old Ways",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"level": 20,
 			"entries": [
 				"At 20th level, your master of ritual and tradition is extensive an unparalleled, you've unlocked ancient secrets and perfected techniques to master rituals completely. Any occultist spell you know of 3rd level or lower becomes a ritual spell for you. When you cast a spell that is not normally a ritual as a ritual, it requires additional consumed material components worth 10 gold per level of the spell.",
@@ -1081,7 +1082,7 @@
 	"feat": [
 		{
 			"name": "Occult Specialist",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 14,
 			"prerequisite": [
 				{
@@ -1089,17 +1090,17 @@
 				}
 			],
 			"entries": [
-				"You delve deeper into your tradition perfecting a new rite. You can select an {@filter Occult Rite|optionalfeatures|source=KT:O|feature type=ktor} from the Occultist class Occult Rite list. You cannot select a rite you already know, or one that requires a level restriction, even if you are already of that level. You can only select one from a subclass list if you are have at least one level in that subclass."
+				"You delve deeper into your tradition perfecting a new rite. You can select an {@filter Occult Rite|optionalfeatures|source=OCC|feature type=OCC:R} from the Occultist class Occult Rite list. You cannot select a rite you already know, or one that requires a level restriction, even if you are already of that level. You can only select one from a subclass list if you are have at least one level in that subclass."
 			]
 		}
 	],
 	"optionalfeature": [
 		{
 			"name": "Animate Broom",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 6,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1121,10 +1122,10 @@
 		},
 		{
 			"name": "Animate Hair",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 6,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1141,10 +1142,10 @@
 		},
 		{
 			"name": "Companion Coven",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1161,10 +1162,10 @@
 		},
 		{
 			"name": "Evil Eye",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1186,10 +1187,10 @@
 		},
 		{
 			"name": "Familiar Swap",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1205,10 +1206,10 @@
 		},
 		{
 			"name": "Form of the Familiar",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1219,15 +1220,15 @@
 				}
 			],
 			"entries": [
-				"You learn the {@spell form of familiar|KT:O} spell, and gain the ability to cast it once without expending a spell slot as an action. You regain the ability to cast it in this way again after completing a short or long rest."
+				"You learn the {@spell form of familiar|OCC} spell, and gain the ability to cast it once without expending a spell slot as an action. You regain the ability to cast it in this way again after completing a short or long rest."
 			]
 		},
 		{
 			"name": "Riding Familiar",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1243,10 +1244,10 @@
 		},
 		{
 			"name": "Skulking Familiar",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1267,10 +1268,10 @@
 		},
 		{
 			"name": "Witch's Brew",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1295,10 +1296,10 @@
 		},
 		{
 			"name": "Witch's Claws",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1314,10 +1315,10 @@
 		},
 		{
 			"name": "Witch's Hat",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1333,10 +1334,10 @@
 		},
 		{
 			"name": "Mystery of Death",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 9,
 			"featureType": [
-				"ktom"
+				"OCC:M"
 			],
 			"prerequisite": [
 				{
@@ -1369,7 +1370,7 @@
 						],
 						[
 							"5th",
-							"{@spell wither|KT:O}"
+							"{@spell wither|OCC}"
 						],
 						[
 							"7th",
@@ -1377,7 +1378,7 @@
 						],
 						[
 							"9th",
-							"{@spell killing curse|KT:O}"
+							"{@spell killing curse|OCC}"
 						]
 					]
 				}
@@ -1385,10 +1386,10 @@
 		},
 		{
 			"name": "Mystery of Fire",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 9,
 			"featureType": [
-				"ktom"
+				"OCC:M"
 			],
 			"prerequisite": [
 				{
@@ -1437,10 +1438,10 @@
 		},
 		{
 			"name": "Mystery of Life",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 9,
 			"featureType": [
-				"ktom"
+				"OCC:M"
 			],
 			"prerequisite": [
 				{
@@ -1489,10 +1490,10 @@
 		},
 		{
 			"name": "Mystery of War",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 9,
 			"featureType": [
-				"ktom"
+				"OCC:M"
 			],
 			"prerequisite": [
 				{
@@ -1541,10 +1542,10 @@
 		},
 		{
 			"name": "Mystery of Souls",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 9,
 			"featureType": [
-				"ktom"
+				"OCC:M"
 			],
 			"prerequisite": [
 				{
@@ -1593,10 +1594,10 @@
 		},
 		{
 			"name": "Death Watcher",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1619,10 +1620,10 @@
 		},
 		{
 			"name": "Divine Miracle",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1638,10 +1639,10 @@
 		},
 		{
 			"name": "Divine Sight",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1663,10 +1664,10 @@
 		},
 		{
 			"name": "Oracle's Sight",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1682,10 +1683,10 @@
 		},
 		{
 			"name": "Revelation of Fire",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1705,10 +1706,10 @@
 		},
 		{
 			"name": "Revelation of Life",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1728,10 +1729,10 @@
 		},
 		{
 			"name": "Revelation of Souls",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1750,10 +1751,10 @@
 		},
 		{
 			"name": "Revelation of War",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1772,10 +1773,10 @@
 		},
 		{
 			"name": "Touch of Fire",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1789,15 +1790,15 @@
 				}
 			],
 			"entries": [
-				"You learn the cantrip {@spell burn|KT:O}. Additionally, as a bonus action you can take 1 fire damage and can cause a weapon you are carrying to burst into flames for 1 minute or until you let go of it. For the duration, it sheds bright light for 10 feet and dim light for an additional 10 feet. Attacks made with the weapon while it burns deal an additional 1d6 fire damage."
+				"You learn the cantrip {@spell burn|OCC}. Additionally, as a bonus action you can take 1 fire damage and can cause a weapon you are carrying to burst into flames for 1 minute or until you let go of it. For the duration, it sheds bright light for 10 feet and dim light for an additional 10 feet. Attacks made with the weapon while it burns deal an additional 1d6 fire damage."
 			]
 		},
 		{
 			"name": "Truth of Death",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1816,10 +1817,10 @@
 		},
 		{
 			"name": "Truth of Fire",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1838,10 +1839,10 @@
 		},
 		{
 			"name": "Truth of War",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1866,10 +1867,10 @@
 		},
 		{
 			"name": "Truth of Souls",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1888,10 +1889,10 @@
 		},
 		{
 			"name": "Twin Revelation",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1913,10 +1914,10 @@
 		},
 		{
 			"name": "Understanding of War",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1935,10 +1936,10 @@
 		},
 		{
 			"name": "Avatar of the Elements",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 11,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1960,10 +1961,10 @@
 		},
 		{
 			"name": "Dance of the Spirits",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -1986,16 +1987,16 @@
 		},
 		{
 			"name": "Elemental Weapons",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
 					"spell": [
-						"fists of fire|KT:O#c",
-						"ice weapon|KT:O#c"
+						"fists of fire|OCC#c",
+						"ice weapon|OCC#c"
 					],
 					"otherSummary": {
 						"entry": "Tradition of the Shaman",
@@ -2004,15 +2005,15 @@
 				}
 			],
 			"entries": [
-				"When you create a weapon with {@spell fists of fire|KT:O} or {@spell ice weapon|KT:O} the damage die of the weapon is increased by one size (for example, from a d6 to a d8)."
+				"When you create a weapon with {@spell fists of fire|OCC} or {@spell ice weapon|OCC} the damage die of the weapon is increased by one size (for example, from a d6 to a d8)."
 			]
 		},
 		{
 			"name": "Energized Weapon",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2028,10 +2029,10 @@
 		},
 		{
 			"name": "Guidance of the Spirits",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2047,10 +2048,10 @@
 		},
 		{
 			"name": "Mistwalker",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2066,10 +2067,10 @@
 		},
 		{
 			"name": "Enhanced Bond",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2091,10 +2092,10 @@
 		},
 		{
 			"name": "Primal Earth",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2131,7 +2132,7 @@
 						],
 						[
 							"7th",
-							"{@spell orbital stones|KT:O}"
+							"{@spell orbital stones|OCC}"
 						],
 						[
 							"9th",
@@ -2143,10 +2144,10 @@
 		},
 		{
 			"name": "Primal Ice",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2195,10 +2196,10 @@
 		},
 		{
 			"name": "Primal Fire",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2247,10 +2248,10 @@
 		},
 		{
 			"name": "Primal Storms",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2299,10 +2300,10 @@
 		},
 		{
 			"name": "Radiate Power",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2324,10 +2325,10 @@
 		},
 		{
 			"name": "Rite of Prowess",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2343,10 +2344,10 @@
 		},
 		{
 			"name": "Shaman's Touch",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2368,10 +2369,10 @@
 		},
 		{
 			"name": "Warding Power",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 12,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2387,10 +2388,10 @@
 		},
 		{
 			"name": "Alchemical Rites",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"You gain proficiency with {@item alchemist's supplies|PHB|alchemy tools}. During a long rest, you can use them to concoct an improvised {@item potion of healing} spending 1 hour of the long rest to tend to it's simmering. Due to it's improvised nature, it expires in 24 hours, and has no value in gold pieces.",
@@ -2399,10 +2400,10 @@
 		},
 		{
 			"name": "Blood Rituals",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2422,10 +2423,10 @@
 		},
 		{
 			"name": "Blood Magic",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2442,10 +2443,10 @@
 		},
 		{
 			"name": "Corrupt Item",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2464,10 +2465,10 @@
 		},
 		{
 			"name": "Commune Beyond Death",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"You learn the {@spell speak with dead} spell, and it's a occultist spell for you, but does not count against your spells known. You can cast it without expending a spell slot. Once you cast it this way, you must finish a short or long rest before you can cast it this way again."
@@ -2475,10 +2476,10 @@
 		},
 		{
 			"name": "Emblazoned Focus",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"You emblazon a mystical mark on yourself, via a tattoo, scar, or similar permanent mark. You can use this as your spell casting focus for casting spells. You no longer need a free hand to cast spells with somatic or material components, as you can channel your magic through this mark though it glows visible when you do so. To work in this manner, the mark must remain uncovered (casting in this way does not remove the signs of casting a spell, merely means you do not need a free hand)."
@@ -2486,10 +2487,10 @@
 		},
 		{
 			"name": "Expert of Tradition",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2507,10 +2508,10 @@
 		},
 		{
 			"name": "Forbidden Rites",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2523,15 +2524,15 @@
 				}
 			],
 			"entries": [
-				"You learn the spell {@spell animate dead}. It is an occultist spell for you. You cannot turn this spell into a ritual with {@optfeature Lost Ritual|KT:O}."
+				"You learn the spell {@spell animate dead}. It is an occultist spell for you. You cannot turn this spell into a ritual with {@optfeature Lost Ritual|OCC}."
 			]
 		},
 		{
 			"name": "Lost Ritual",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"You learn of a ritual lost to time. Select on occultist spell you know of 5th level or lower. This spell becomes a ritual spell for you. You can cast this spell as a ritual once, and must complete a short or long rest before casting it as a ritual again."
@@ -2539,10 +2540,10 @@
 		},
 		{
 			"name": "Occult Haste",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2560,10 +2561,10 @@
 		},
 		{
 			"name": "Markings of Protections",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"You mark yourself with magical symbols and patterns, protecting you from harm. You are under the effect of the {@spell mage armor} spell."
@@ -2571,10 +2572,10 @@
 		},
 		{
 			"name": "Rite of Immortality",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2592,10 +2593,10 @@
 		},
 		{
 			"name": "Rite of Youth",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2613,10 +2614,10 @@
 		},
 		{
 			"name": "Root of Magic",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 13,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"prerequisite": [
 				{
@@ -2634,10 +2635,10 @@
 		},
 		{
 			"name": "Spatial Storage",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 14,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"You can convert a pocket, ring, hat, or bag into a spatial storage device, capable of carrying up 5 x your Occultist level lbs, with 0.5 cubic foot of storage space x your Occulist level. So, for example, a level 5 occultist can store things that would fit in a 2.5 cubic area weighting up to 25 lbs in the storage. As action, you can send an item you are holding into the storage or retrieve an item from storage to your hand.",
@@ -2646,10 +2647,10 @@
 		},
 		{
 			"name": "Specialized Poisons",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 14,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"When you deal poison damage with an occultist spell or created poison, you can (but don't have to) specify a creature type (such as beast or monstrosity) it is created to effect. The poison damage from that spell or poison bypasses any resistance or immunity to poison damage a creature of that type has. All other creature types beside the specified type have resistance to damage by that spell effect or poison."
@@ -2657,10 +2658,10 @@
 		},
 		{
 			"name": "Soulburn",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 14,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"You can make your powers sear the very soul of the creature they strike. When you deal fire or lightning damage, you can choose to make it deal necrotic damage instead."
@@ -2668,10 +2669,10 @@
 		},
 		{
 			"name": "Vestaments of War",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 14,
 			"featureType": [
-				"ktor"
+				"OCC:R"
 			],
 			"entries": [
 				"You gain proficiency with {@filter light armor|items|source=PHB|type=light armor}, {@filter medium armor|items|source=PHB|type=medium armor}, and {@item shield|PHB|shields}."
@@ -2719,7 +2720,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -2731,7 +2732,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"Until the spell ends, your speed is doubled, you gain a +2 bonus to AC, you have advantage on Dexterity saving throws, and you gain an additional action. That action can be used only to take the {@action Attack} (one weapon attack only), {@action Dash}, {@action Disengage}, {@action Hide}, or {@action Use an Object} action.",
 				"If you are under the effect of {@spell haste}, you gain no benefit from this spell."
@@ -2781,7 +2782,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -2793,7 +2794,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You bring a small or smaller object to life. Its Constitution is 10 and its Intelligence and Wisdom are 3, and its Charisma is 1. Its speed is 30 feet; if the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. The object has the following stats: HP: 20, AC: 18, Str: 4, Dex: 18. The object has an attack modifier equal to your spell attack modifier. If the object is a weapon, it deals damage equal to the weapon's damage dice + your Wisdom modifier on hit dealing that weapons damage type, otherwise it deals 1d4 + your Wisdom modifier bludgeoning damage on hit.",
 				"As a bonus action, you can mentally command the animated object as long as it is within 60 feet of you. You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.",
@@ -2852,11 +2853,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"Targeting a creature you can see within range, you bring it's shadow to life under your control. If the creature has a CR of more than 3 or the creature has no shadow (either from the nature of the creature or from the lack of a light source to cast one) the spell fails.",
 				"Otherwise a copy of the creature is created using its game statistics is created adjacent to the creature (on the side away from the brightest light near it). The shadow has no legendary actions, legendary resistance, and cannot cast spells. The shadow creature has hit points equal to half the target's hit points, and looks like mirrored version of the creature it was summoned from formed from inky black smoke. The creature is resistant to bludgeoning, piercing, and slashing damage from non-magical sources while in darkness. The creature is vulnerable to all damage while in bright light, and always vulnerable to fire, lightning, and radiant damage. If the shadow is killed, the target creature it was summoned from casts no shadows for the next 8 hours.",
@@ -2917,11 +2918,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You touch a hut, cabin, or other building no more than 15 feet by 15 feet by 10 feet. On completion of the spell, the building grows legs large enough to support it, as well as the structural integrity needed stand and move, and becomes a gargantuan creature. It has 250 hit points, an AC of 12, and a walking speed of 20 feet. If it drops to 0 hit points, the spell ends.",
 				"On your turn, you can direct it to move (no action required) and it will continue to move as directed until you direct it to stop or reaches its destination. It can take no actions, but if it walks over a large or smaller creature, you can direct it to attempt to step on that creature, and that creature must succeed a Dexterity saving throw, or take {@damage 2d10} bludgeoning damage and be knocked prone.",
@@ -2982,11 +2983,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You befuddle a creature's mind, swapping the position of two things it can see that are of the same size and category (for example, two medium creatures or two gargantuan buildings). The target creature must make a Wisdom saving throw. On failure, it is unaware the two things have been swapped.",
 				"Each time the creature interacts with, attacks, or is attacked by a swapped targets, it can repeat its saving throw against the effect."
@@ -3039,11 +3040,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You bind a creature to a point within 5 feet of it, causing a glowing chains of light to connect it to that point. For the duration of the spell, if the creature attempts to move away from that point, the must make a Wisdom saving throw, or be unable to move more than 5 feet away from from that point until the start of their next turn.",
 				"If a creature starts its turn more than 10 feet from the binding point, they must make a Strength saving throw are dragged 5 feet toward the binding point."
@@ -3093,11 +3094,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"Targeting a creature that has taken slashing or piercing damage in the last minute, make it's blood heat and boil. The target creature must make a Constitution saving throw. On failure, it's blood begins to heat. At the start of it's turn while effected, it takes {@damage 3d4} fire damage and is crippled with agony, all terrain is difficult terrain for it.",
 				"At the end of each of its turns, the target can make another Constitution saving throw. On a success, the spell ends on the target."
@@ -3158,7 +3159,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -3166,7 +3167,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You ignite a brilliant flame around your hand that sears anything you touch. Make a melee spell attack against the target. You have advantage if the target creature type is plant, or if it has a vulnerability to fire damage. On hit, the target takes 1d12 fire damage.",
 				"The spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12)."
@@ -3222,11 +3223,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You curse a target creature, causing an overwhelming sense of powerlessness to wash over it. Any time the target creature attempts to attack, cast a spell that deals damage, or use an action that deals damage, it must make a Wisdom saving throw. On failure, they complete their action, but their action does no damage to any target."
 			],
@@ -3275,11 +3276,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You can inflict crippling agony on a foe. Choose one creature that you can see within range to make a Constitution saving throw. If the target fails, it becomes crippled with horrific pain. Whenever the creation moves more than half of it's movement speed or takes an action, the crippling pain causes it to take {@damage 1d6} necrotic damage.",
 				"It can repeat the saving throw at the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends."
@@ -3343,11 +3344,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You attempt to bind a creatures soul to a doll, linking the creature to the doll in a sympathetic link. The target must make a Charisma saving throw. On failure, the creature becomes bound to the doll. On a successful save, the creature is not bound and the spell ends.",
 				"As part of casting the spell when the creature fails the save, and on subsequent turns using your action until the spell ends, you can perform one of the following actions:",
@@ -3421,7 +3422,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -3429,7 +3430,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You wreath your hand in necrotic decay that causes anything you touch to wither and die. Make a melee spell attack against the target. On hit, the targets takes 1d6 necrotic damage is starts to flake and decay. The first time they take damage from another source before the start of your next turn, they take an additional 1d6 necrotic damage. Targets immune to diseases are immune to this effect.",
 				"The both the initial and secondary damage of the spell increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
@@ -3476,11 +3477,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You point at a creature within range, and attempt to make it's skeleton rip free of it's body. The creature must make a Constitution saving throw. The target takes {@damage 7d10 + 7} necrotic damage on a failed save, or half as much damage on a successful one.",
 				"If this damage kills the target creature, it's flesh sloughs of it's skeleton, collapsing a pile, and the skeleton becomes a {@creature Skeleton} (Basic Rules, pg. 152), hostile to all living creatures that attacks the closest target."
@@ -3535,7 +3536,7 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -3547,7 +3548,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You channel lightning into your hands. After casting this spell, if you make a successful melee spell attack, unarmed strike or a melee weapon attack with a weapon made of a conductive material (such as metal), the target takes {@damage 1d10} lightning damage and must make a Constitution saving throw. On a failed save, the target becomes {@condition stunned} until the start of their next turn. The spell ends after dealing damage, or at the start of your next turn, whichever occurs first.",
 				"For the duration of the spell, you can cast the spell {@spell shocking grasp}."
@@ -3600,7 +3601,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -3612,7 +3613,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You cause the earth to deform and ripple, a target creature must make a Dexterity saving throw or suffer one of the following effects (your choice):",
 				{
@@ -3674,7 +3675,7 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Wizard",
@@ -3682,7 +3683,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You assume the form of the familiar that provided the material component to the spell. The transformation lasts for the duration, or until you drop to 0 hit points or die. Your game Statistics are replaced by the Statistics of the chosen creature, though you retain your Alignment and Intelligence, Wisdom, and Charisma scores.",
 				"You assume the Hit Points and Hit Dice of the new form. When you revert to your normal, you return to the number of Hit Points you had before you transformed. If you revert as a result of Dropping to 0 Hit Points, any excess damage carries over to your normal form. As long as the excess damage doesn't reduce your normal form to 0 Hit Points, you aren't knocked Unconscious. You can use an action to revert to your normal form at any time.",
@@ -3730,7 +3731,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -3738,7 +3739,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You cause your fists to erupt in flames. For the duration, your fists become a set of simple natural weapons that deal {@damage 1d6} fire damage. You are proficient in these weapons, and they have the Light property.",
 				"For the duration, any flammable object you attempt to hold catches fire. If you end your turn grappling another creature with your hands, it takes {@damage 1d4} fire damage.",
@@ -3782,7 +3783,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -3790,7 +3791,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You instill a deadly chill into your hand. Make a melee spell attack against the target. On hit, the target takes 1d8 cold damage, and the target's movement speed is reduced by 10 feet until the end of their turn.",
 				"The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
@@ -3841,11 +3842,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You channel unholy strength into you hand, and reach out to grab a creature. The creature must make a Strength saving throw or become {@condition restrained} by your deathly iron grasp. As an action on its turn, the creature can attempt to escape using a Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check against your Spell Save DC.",
 				"At the start of the creatures turn while you maintain the grip and the spell, it takes {@damage 1d8} necrotic damage as you drain the life from it, and regain hit points equal to half the damage dealt."
@@ -3915,11 +3916,11 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You conjure a weapon formed from magical ice from the air. You have proficiency with this weapon. When you form it and as a bonus action while wielding it, you can morph the weapon into different forms that take on the following properties. If you lose or discard the weapon, you can reform it in your hand as a bonus action.",
 				{
@@ -4009,7 +4010,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Wizard",
@@ -4017,7 +4018,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"Targeting a creature with 6 or more intelligence, you inflict an instantaneous headache on it. The target takes 1 psychic damage at the start of its turn, and has disadvantage on Constitution saving throws to maintain Concentration or Intelligence ability checks."
 			],
@@ -4073,7 +4074,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -4089,7 +4090,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You curse a target to die. The targets current and maximum hit points is reduced by {@damage 3d10 + 10}. If this causes a creatures to have zero hit points, the creature dies.",
 				"For the duration of the spell, the target cannot regain hit points unless from a magical effect cast by a spell slot of higher level than this spell slot this curse was cast with, and any death saving throw they roll is automatically considered a 1.",
@@ -4140,7 +4141,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Warlock",
@@ -4148,7 +4149,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You shroud your hand, a weapon you are holding, or a natural weapon in dark ichorous miasma. After casting this spell, if you make a successful melee spell attack, unarmed strike or a melee weapon attack, the target takes an additional {@damage 1d8} poison damage and must make a Constitution saving throw. On a failed save, the target becomes {@condition poisoned} until the end of your next turn.",
 				"The spell ends after dealing damage, or at the start of your next turn, whichever occurs first."
@@ -4208,7 +4209,7 @@
 					},
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Sorcerer",
@@ -4224,7 +4225,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"A vertical column of spiders begins to rain down in 20 foot radius, 40 foot high cylinder, centered on a location you specify. A {@creature Swarm of Spiders} (Monster Manual, pg 334) descends onto each creature within the cylinder when the spell is cast.",
 				"This swarm is considered to be climbing on the target creature and moves with it, even if they leave the affected area, and takes its turn immediately after that creature's turn. A creature can make use its action to attempt to get it off, making a Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check against the spell save DC of the caster.",
@@ -4278,11 +4279,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You inflicting a rotting decay on a creature, causing it to to begin to rot. For the duration of the spell, every time the creature takes damage, it takes an additional {@damage 1d4} necrotic damage, and the effect of all healing on the creature is reduced by half.",
 				"The target creature has disadvantage on any Charisma checks for social interaction during the effect of the spell."
@@ -4333,11 +4334,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You call forth a spirit that is proficient in a skill from {@skill Arcana}, {@skill Animal Handling}, {@skill History}, {@skill Investigation}, {@skill Medicine}, {@skill Nature}, {@skill Perception}, {@skill Religion}, or {@skill Survival}. The spirit is ethereal and ephemeral and cannot interact with physical objects, but can provide guidance on matters relating to the skill selected when you summon it.",
 				"You can treat any check you make in the skill as if you have proficiency with it so long as the spirit can communicate with you. Alternatively, if the ability check is an Intelligence or Wisdom check you can have the spirit make the check, and it has a +8 modifier for the skill was summoned for.",
@@ -4388,11 +4389,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You cast a curse targeting two individuals. Both targets must make a Charisma saving throw (which they can choose to fail). If both targets fail their saving throws, for the duration of the spell their souls are swapped. A soul controls the body it inhabits. It gains any ability score or action the body had (besides legendary actions or legendary resistance), but retains it's own spell casting (if it has the spellcasting, innate or otherwise), and has disadvantage on all attack rolls and strength, dexterity, and constitution saving throws for 1d4 turns after swapping bodies.",
 				"At the end of a swapped creatures turn, it can choose to repeat the saving throw, ending the effect on a successful save. It its CR (or character level if it has no CR) is higher than the body of the creature it is, it has advantage on the save.",
@@ -4446,11 +4447,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You target a point and call forth tendrils, twisted vines, and gnarled roots of dark energy that erupt from the ground in a 60 foot radius. All creatures of your choice must make a Dexterity saving throw or be {@condition restrained} as the shadowy plant tendrils grasp and drain the life from it.",
 				"At start of a creature's turn, if it is restrained by the spell, it takes {@damage 2d10} bludgeoning damage, and {@damage 2d10} necrotic damage. Each time a creature takes necrotic damage from this spell, the caster regains 1d4 hit points.",
@@ -4510,11 +4511,11 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"Dark energy tears the moisture from a body, sapping of life and vitality. The target must make a Constituion saving throw. The target takes {@damage 4d10} necrotic damage on a failed save and becomes withered until the start of your next turn, or half as much on a successful one and does not become withered. A withered creature gains vulnerability to fire damage if they are not resistance to fire damage, or loses their resistance to fire if they were resistant to fire."
 			],
@@ -4579,7 +4580,7 @@
 				"fromClassList": [
 					{
 						"name": "Occultist",
-						"source": "KT:O"
+						"source": "OCC"
 					},
 					{
 						"name": "Wizard",
@@ -4587,7 +4588,7 @@
 					}
 				]
 			},
-			"source": "KT:O",
+			"source": "OCC",
 			"entries": [
 				"You reach out and grasp the imperceptible threads of fate, subtly manipulating them. Whenever a creature within 60 feet of you makes an attack roll, saving throw, or ability check, you can use your reaction to tweak their fate, altering the value of the roll. You can choose to manipulate fate after the die is rolled, but before the outcome is determined.",
 				"You can alter the roll of the die to an adjacent number to the number rolled (outcomes listed on the table below).",
@@ -4702,31 +4703,31 @@
 	"subclassFeature": [
 		{
 			"name": "Tradition of the Witch",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 5,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Witch",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"entries": [
 				"A Witch can be many things, and most often refers to someone that villagers find scary and weird, but at the heart of every crazed story there's a sliver of truth, and that truth is that witches do indeed exist.",
 				"Some may live openly as what they are, while others may be the last person the superstitious villagers might expect. Varied in their powers, designs, and traditions based on their Coven, generalizing about a Witch is challenging, but they are most often defined by the varied utilitarian magic, hexes that make crossing them unwise, and powerful intelligent familiars.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Witch's Magic|Occultist|KT:O|Witch|KT:O|1"
+					"subclassFeature": "Witch's Magic|Occultist|OCC|Witch|OCC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Coven|Occultist|KT:O|Witch|KT:O|1"
+					"subclassFeature": "Coven|Occultist|OCC|Witch|OCC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Witches & Gender|Occultist|KT:O|Witch|KT:O|1"
+					"subclassFeature": "Witches & Gender|Occultist|OCC|Witch|OCC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Witch Specific Rites|Occultist|KT:O|Witch|KT:O|1"
+					"subclassFeature": "Witch Specific Rites|Occultist|OCC|Witch|OCC|1"
 				}
 			]
 		},
@@ -4737,12 +4738,12 @@
 				"While the term Witch is generally thought of to refer to a female spell caster, the typical male counterpart would be Warlock, a class that is certainly open to any gender, and the same would generally be true for Witch.",
 				"Various lore and mythos in and out of a setting may make assumptions, but by their vary nature PCs tend to be the exception to rules, and this subclass is not limited to any particular gender."
 			],
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 5,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Witch",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1
 		},
@@ -4750,25 +4751,25 @@
 			"type": "inset",
 			"name": "Witch Specific Rites",
 			"entries": [
-				"See the Optional Features page for the list of {@filter witch specific rites|optionalfeatures|feature type=ktor|search=witch}."
+				"See the Optional Features page for the list of {@filter witch specific rites|optionalfeatures|feature type=OCC:R|search=witch}."
 			],
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 5,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Witch",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1
 		},
 		{
 			"name": "Witch's Magic",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 5,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Witch",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1,
 			"entries": [
@@ -4778,12 +4779,12 @@
 		},
 		{
 			"name": "Coven",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 5,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Witch",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1,
 			"entries": [
@@ -4805,7 +4806,7 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell rotting curse|KT:O}, {@spell arms of hadar}"
+							"{@spell rotting curse|OCC}, {@spell arms of hadar}"
 						],
 						[
 							"3rd",
@@ -4813,7 +4814,7 @@
 						],
 						[
 							"5th",
-							"{@spell animate shadow|KT:O}, {@spell summon shadowspawn|TCE}"
+							"{@spell animate shadow|OCC}, {@spell summon shadowspawn|TCE}"
 						],
 						[
 							"7th",
@@ -4821,7 +4822,7 @@
 						],
 						[
 							"9th",
-							"{@spell killing curse|KT:O}, {@spell contagion}"
+							"{@spell killing curse|OCC}, {@spell contagion}"
 						]
 					]
 				},
@@ -4839,7 +4840,7 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell binding curse|KT:O}, {@spell healing word}"
+							"{@spell binding curse|OCC}, {@spell healing word}"
 						],
 						[
 							"3rd",
@@ -4855,7 +4856,7 @@
 						],
 						[
 							"9th",
-							"{@spell curse of impotence|KT:O}, {@spell summon celestial|TCE}"
+							"{@spell curse of impotence|OCC}, {@spell summon celestial|TCE}"
 						]
 					]
 				},
@@ -4873,7 +4874,7 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell befuddling curse|KT:O}, {@spell entangle}"
+							"{@spell befuddling curse|OCC}, {@spell entangle}"
 						],
 						[
 							"3rd",
@@ -4889,7 +4890,7 @@
 						],
 						[
 							"9th",
-							"{@spell swapping curse|KT:O}, {@spell wrath of nature|XGE}"
+							"{@spell swapping curse|OCC}, {@spell wrath of nature|XGE}"
 						]
 					]
 				}
@@ -4897,12 +4898,12 @@
 		},
 		{
 			"name": "Familiar Bond",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 6,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Witch",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -4935,12 +4936,12 @@
 		},
 		{
 			"name": "Witch's Touch",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 6,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Witch",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -4959,12 +4960,12 @@
 		},
 		{
 			"name": "Master of Curses",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 6,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Witch",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -4982,12 +4983,12 @@
 		},
 		{
 			"name": "Tradition of the Oracle",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 8,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Oracle",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"entries": [
 				"An oracle is an occultists whose power comes to them from their connection to fate; bound and empowered oracles carry some piece of divine mystery within them, tied to an aspect of destiny and fate. As their power grows they begin to understand this mystery with revelations, unlocking its secrets and the power they contain.",
@@ -4995,19 +4996,19 @@
 				"The college's members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their Oracle with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Divine Touch|Occultist|KT:O|Oracle|KT:O|1"
+					"subclassFeature": "Divine Touch|Occultist|OCC|Oracle|OCC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Mystery Unveiled|Occultist|KT:O|Oracle|KT:O|1"
+					"subclassFeature": "Mystery Unveiled|Occultist|OCC|Oracle|OCC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Oracle's Curse|Occultist|KT:O|Oracle|KT:O|1"
+					"subclassFeature": "Oracle's Curse|Occultist|OCC|Oracle|OCC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Oracle Specific Rites|Occultist|KT:O|Oracle|KT:O|1"
+					"subclassFeature": "Oracle Specific Rites|Occultist|OCC|Oracle|OCC|1"
 				}
 			]
 		},
@@ -5021,7 +5022,7 @@
 					"type": "entries",
 					"name": "Blind",
 					"entries": [
-						"You are permanently {@condition blinded}. You gain the {@optfeature Oracle's Sight|KT:O} rite."
+						"You are permanently {@condition blinded}. You gain the {@optfeature Oracle's Sight|OCC} rite."
 					]
 				},
 				{
@@ -5035,7 +5036,7 @@
 					"type": "entries",
 					"name": "Burned",
 					"entries": [
-						"{@i (Requires {@optfeature Mystery of Fire|KT:O})} Your hands are scarred by terribly burns. You have disadvantage with weapon attacks and {@skill Sleight of Hand} checks. You gain the {@optfeature Revelation of Fire|KT:O} rite."
+						"{@i (Requires {@optfeature Mystery of Fire|OCC})} Your hands are scarred by terribly burns. You have disadvantage with weapon attacks and {@skill Sleight of Hand} checks. You gain the {@optfeature Revelation of Fire|OCC} rite."
 					]
 				},
 				{
@@ -5053,12 +5054,12 @@
 					]
 				}
 			],
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 8,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Oracle",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1
 		},
@@ -5066,25 +5067,25 @@
 			"type": "inset",
 			"name": "Oracle Specific Rites",
 			"entries": [
-				"See the Optional Features page for the list of {@filter oracle specific rites|optionalfeatures|feature type=ktor|search=oracle}."
+				"See the Optional Features page for the list of {@filter oracle specific rites|optionalfeatures|feature type=OCC:R|search=oracle}."
 			],
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 10,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Oracle",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1
 		},
 		{
 			"name": "Divine Touch",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 8,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Oracle",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1,
 			"entries": [
@@ -5128,12 +5129,12 @@
 		},
 		{
 			"name": "Mystery Unveiled",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 8,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Oracle",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1,
 			"entries": [
@@ -5147,23 +5148,23 @@
 					"entries": [
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Mystery of Death|KT:O"
+							"optionalfeature": "Mystery of Death|OCC"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Mystery of Fire|KT:O"
+							"optionalfeature": "Mystery of Fire|OCC"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Mystery of Life|KT:O"
+							"optionalfeature": "Mystery of Life|OCC"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Mystery of War|KT:O"
+							"optionalfeature": "Mystery of War|OCC"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Mystery of Souls|KT:O"
+							"optionalfeature": "Mystery of Souls|OCC"
 						}
 					]
 				},
@@ -5171,19 +5172,19 @@
 					"type": "inset",
 					"name": "Revelations of Fate",
 					"entries": [
-						"You can expand on the powers granted by your Mysteries with special Occult Rites called {@filter Revelations|optionalfeatures|source=KT:O|search=revelation}. A Revelation is triggered when you cast a spell. You can trigger only one Revelation per spell cast."
+						"You can expand on the powers granted by your Mysteries with special Occult Rites called {@filter Revelations|optionalfeatures|source=OCC|search=revelation}. A Revelation is triggered when you cast a spell. You can trigger only one Revelation per spell cast."
 					]
 				}
 			]
 		},
 		{
 			"name": "Fate Reading",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 9,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Oracle",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -5201,12 +5202,12 @@
 		},
 		{
 			"name": "Enlightened Understanding",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 9,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Oracle",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -5216,12 +5217,12 @@
 		},
 		{
 			"name": "Master of Prophecy",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 9,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Oracle",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -5234,27 +5235,27 @@
 		},
 		{
 			"name": "Tradition of the Shaman",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 11,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Shaman",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"entries": [
 				"A shaman is an occultist that walks the paths of the spirits, binding them to their cause to empower themselves or bring havoc to their foes. Tough and powerful, they are most often found in the thick of the fight, wreathed in their primal power.",
 				"A shaman may view themselves as in service to their spirits or as served by the spirits; the what and the how of their contract can vary wildly, as can the source of their spirits, be it pulling from an ancestral or primal powers.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Spiritual Warrior|Occultist|KT:O|Shaman|KT:O|1"
+					"subclassFeature": "Spiritual Warrior|Occultist|OCC|Shaman|OCC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Call Spirit|Occultist|KT:O|Shaman|KT:O|1"
+					"subclassFeature": "Call Spirit|Occultist|OCC|Shaman|OCC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Shaman Specific Rites|Occultist|KT:O|Shaman|KT:O|1"
+					"subclassFeature": "Shaman Specific Rites|Occultist|OCC|Shaman|OCC|1"
 				}
 			]
 		},
@@ -5262,25 +5263,25 @@
 			"type": "inset",
 			"name": "Shaman Specific Rites",
 			"entries": [
-				"See the Optional Features page for the list of {@filter shaman specific rites|optionalfeatures|feature type=ktor|search=shaman}."
+				"See the Optional Features page for the list of {@filter shaman specific rites|optionalfeatures|feature type=OCC:R|search=shaman}."
 			],
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 11,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Shaman",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1
 		},
 		{
 			"name": "Spiritual Warrior",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 11,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Shaman",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1,
 			"entries": [
@@ -5290,12 +5291,12 @@
 		},
 		{
 			"name": "Call Spirit",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 11,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Shaman",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 1,
 			"header": 1,
 			"entries": [
@@ -5308,12 +5309,12 @@
 		},
 		{
 			"name": "Empowered Spirits",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 11,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Shaman",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -5370,12 +5371,12 @@
 		},
 		{
 			"name": "Extra Attack",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 11,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Shaman",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -5386,12 +5387,12 @@
 		},
 		{
 			"name": "Spiritual Empowerment",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 11,
 			"className": "Occultist",
-			"classSource": "KT:O",
+			"classSource": "OCC",
 			"subclassShortName": "Shaman",
-			"subclassSource": "KT:O",
+			"subclassSource": "OCC",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -5404,44 +5405,44 @@
 		{
 			"name": "Tradition of the Oracle",
 			"shortName": "Oracle",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 4,
 			"subclassFeatures": [
-				"Tradition of the Oracle|Occultist|KT:O|Oracle|KT:O|1",
-				"Fate Reading|Occultist|KT:O|Oracle|KT:O|3",
-				"Enlightened Understanding|Occultist|KT:O|Oracle|KT:O|6",
-				"Master of Prophecy|Occultist|KT:O|Oracle|KT:O|14"
+				"Tradition of the Oracle|Occultist|OCC|Oracle|OCC|1",
+				"Fate Reading|Occultist|OCC|Oracle|OCC|3",
+				"Enlightened Understanding|Occultist|OCC|Oracle|OCC|6",
+				"Master of Prophecy|Occultist|OCC|Oracle|OCC|14"
 			],
 			"className": "Occultist",
-			"classSource": "KT:O"
+			"classSource": "OCC"
 		},
 		{
 			"name": "Tradition of the Shaman",
 			"shortName": "Shaman",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 7,
 			"subclassFeatures": [
-				"Tradition of the Shaman|Occultist|KT:O|Shaman|KT:O|1",
-				"Empowered Spirits|Occultist|KT:O|Shaman|KT:O|3",
-				"Extra Attack|Occultist|KT:O|Shaman|KT:O|6",
-				"Spiritual Empowerment|Occultist|KT:O|Shaman|KT:O|14"
+				"Tradition of the Shaman|Occultist|OCC|Shaman|OCC|1",
+				"Empowered Spirits|Occultist|OCC|Shaman|OCC|3",
+				"Extra Attack|Occultist|OCC|Shaman|OCC|6",
+				"Spiritual Empowerment|Occultist|OCC|Shaman|OCC|14"
 			],
 			"className": "Occultist",
-			"classSource": "KT:O"
+			"classSource": "OCC"
 		},
 		{
 			"name": "Tradition of the Witch",
 			"shortName": "Witch",
-			"source": "KT:O",
+			"source": "OCC",
 			"page": 5,
 			"subclassFeatures": [
-				"Tradition of the Witch|Occultist|KT:O|Witch|KT:O|1",
-				"Familiar Bond|Occultist|KT:O|Witch|KT:O|3",
-				"Witch's Touch|Occultist|KT:O|Witch|KT:O|6",
-				"Master of Curses|Occultist|KT:O|Witch|KT:O|14"
+				"Tradition of the Witch|Occultist|OCC|Witch|OCC|1",
+				"Familiar Bond|Occultist|OCC|Witch|OCC|3",
+				"Witch's Touch|Occultist|OCC|Witch|OCC|6",
+				"Master of Curses|Occultist|OCC|Witch|OCC|14"
 			],
 			"className": "Occultist",
-			"classSource": "KT:O"
+			"classSource": "OCC"
 		}
 	]
 }

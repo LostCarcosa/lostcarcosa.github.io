@@ -2,7 +2,7 @@
 	"_meta": {
 		"sources": [
 			{
-				"json": "SproutingChaos",
+				"json": "SCPC",
 				"abbreviation": "SCPC",
 				"full": "Sprouting Chaos Player's Companion",
 				"url": "https://drive.google.com/file/d/0B-g9vLTX0eHKZmFkdFVPME9Lckk/view",
@@ -20,469 +20,99 @@
 		"dateAdded": 1579982418,
 		"dateLastModified": 1579982418,
 		"optionalFeatureTypes": {
-			"NatD": "Nature Discipline"
+			"NAT:D": "Nature Discipline"
 		}
 	},
-	"race": [
-		{
-			"name": "Silva",
-			"source": "SproutingChaos",
-			"page": 3,
-			"ability": [
-				{
-					"wis": 2
-				}
-			],
-			"size": [
-				"M"
-			],
-			"speed": {
-				"walk": 30,
-				"climb": 30
-			},
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Age",
-					"entries": [
-						"Silva emerge from their pods fully grown, and live an average of 150-250 years."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Alignment",
-					"entries": [
-						"Most silva are good, and many lean towards lawfulness. Most city-folk are lawful, though a few adventurers may be chaotic."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Size",
-					"entries": [
-						"Silva are about 6 feet tall. Their bodies are lightweight, weighing 100-130 pounds. Your size is Medium."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Photosynthesis",
-					"entries": [
-						"You do not need to sleep while in sunlight. Instead, you can choose to sunbathe for 4 hours a day. While sunbathing, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep, and you are considered fully nourished for the rest of the day.",
-						"If you do not get the opportunity to sunbathe, you can still sleep and eat normally. When you do so, you consume the same amount of food and sleep for the same length as a human."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Call of the Forest",
-					"entries": [
-						"You know the {@spell druidcraft} cantrip. Once you reach 3rd level, you can cast the {@spell entangle} spell once. Once you reach 5th level, you can also cast the {@spell plant growth} spell once. You regain the ability to cast them this way when you finish a long rest. Wisdom is your spellcasting ability for these spells."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Treewalker",
-					"entries": [
-						"You have a climbing speed of 30 feet."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Languages",
-					"entries": [
-						"You can speak, read, and write Common and Sylvan."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"name": "Silva",
-						"entries": [
-							"Living in grand cities atop the tallest forests, the Silva, often misnamed as \"Green Elves,\" are an ancient race that look like tall, humanoid half-plant, half-elves. In actuality, they are far more similar to the former than the latter. They hail from only the greatest forests and jungles - the only places that can support their Mother Trees."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Born from Nature",
-						"entries": [
-							"The Silva do not reproduce like the other races. Instead, they are born from the seed-pods of giant trees, called \"Mother Trees.\" These trees average around 400 to 500 feet in height, with the base of the trunk being about 20-25 feet in diameter. Each Silva city has one or two of these trees, which are always positioned near the center of the city. These trees grow a new Silva once a month, for an average of 12 a year. When a Silva is released from their seed pod, which they stay in for about a year, they are already fully grown."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Bark and Leaf",
-						"entries": [
-							"The Silva do not merely look like plants - they are plants. They do not need to consume food to survive, and they wither when they are without water and sunlight for a long period of time. They can consume food, but they prefer to get their nourishment from photosynthesis.",
-							"Silva biology is very different from any other race. They do not have internal organs, but instead are formed from growing plant matter, with sap for blood, and leaves and bark for skin. A jaw, for example, can be formed by leaves, vines, or even shards of bark that grow and press together to form the silhouette of a jaw, but if you look closely you can still see the fibers and holes of the structure. Instead of bones, an arm is a mass of tightly-woven stems and leaves that work together to do the work of such a limb.",
-							"As the year goes on, the Silva change with the season. During the winter, their leaves go brown and their limbs become stiff. In the fall, they become a vibrant display of reds and yellows."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Canopy Cities",
-						"entries": [
-							"When they approach a Silva city, a ground-dweller might not even notice. Their cities exist high within the canopies of the forest, dominated by their Mother Tree. Under the shelter of their lush foliage, the Silva have made their homes in these verdant, multi-level cities composed entirely of plants."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Rule of the Nine",
-						"entries": [
-							"The Nine are the first Silva, initially born over 4000 years ago. Although they live to the normal age of Silva, about 150-250 years, their memories are passed on when they die. Whenever one of the Nine dies, they will be reborn exactly one year later. When they are reborn, they do not initially remember their past lives. If they are discovered early, they can be \"trained\" to remember their past lives within a month. For those that aren't found early, they slowly regain memories over the course of 2-5 years.",
-							"The Nine are considered gods on earth, and they are given the divine right to rule, considering their millennia of experience. They rule from the largest Mother Tree, whose branches reach heights of 700 feet or more."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Silva Names",
-						"entries": [
-							"The Silva have short, concise names, merely used as identifiers more than anything. They do not have family or clan names, though some popular names are reused often.",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Male Names:",
-										"entry": "Abur, Banua, Chonai, Dampunts, Gutai, Jara, Magny, Qachaa, Tachu, Targay."
-									},
-									{
-										"type": "item",
-										"name": "Female Names:",
-										"entry": "Choque, Chuaca, Coca, Cuilla, Cura, Ollssill, Pola, Rima, Sica, Sisuyo."
-									}
-								]
-							}
-						]
-					}
-				]
-			}
-		},
-		{
-			"name": "Awakened Blight",
-			"source": "SproutingChaos",
-			"page": 5,
-			"ability": [
-				{
-					"con": 2,
-					"str": 1
-				}
-			],
-			"size": [
-				"M"
-			],
-			"speed": 30,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Age",
-					"entries": [
-						"Blights become awakened a few years after they are grown, if they become awakened at all. They generally live under 60 years after they are awakened."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Alignment",
-					"entries": [
-						"Most Awakened Blights retain their evil nature, still serving their ancient evils. They are generally neutral, not tending towards either chaotic or lawful."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Size",
-					"entries": [
-						"Awakened Blights are about 5-6 feet tall. They weigh about 150-200 pounds. Your size is Medium."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Blindsight",
-					"entries": [
-						"Possessing no real eyes, Awakened Blights have adapted to see without them. You gain Blindsight with a radius of 30 feet, and you are unaffected by the blinded condition within the area of your blindsight. However, you are blind beyond this radius."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Constricting Vines",
-					"entries": [
-						"You know the {@spell thorn whip} cantrip, and Constitution is your spellcasting ability for it. Whenever you cast this cantrip and use it to bring a creature within 5 feet of you, you can use a bonus action to attempt to grapple the target."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Natural Armor",
-					"entries": [
-						"Your skin is made of thick bark and vines. When you aren't wearing armor, your AC is equal to 12 + your Dexterity modifier."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Languages",
-					"entries": [
-						"You can speak, read, and write Common and one other language of your choice."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"name": "Awakened Blight",
-						"entries": [
-							"Awakened plants gifted with the powers of intelligence and mobility, blights plague lands contaminated by darkness. \"Awakened\" Blights are those blights which have ascended to even greater intelligence and power. Although most still follow their evil masters, the awakened ones are able to stray from that path if they so desire. Although they are not necessarily evil, an Awakened Blight is still feared and hunted wherever they go. Most races of the world do not consider awakened blights a race, but instead consider them monstrosities."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Roots of the Gulthias Tree",
-						"entries": [
-							"Legends tell of a vampire named Gulthias who worked terrible magic and raised up an abominable tower called Nightfang Spire. Gulthias was undone when a hero plunged a wooden stake through his heart, but as the vampire was destroyed, his blood infused the stake with a dreadful power. In time, tendrils of new growth sprouted from the wood, growing into a sapling infused with the vampire's evil essence. It is said that a mad druid discovered the sapling, transplanting it to an underground grotto where it could grow. From this Gulthias tree came the seeds from which the first blights were sown."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Dark Conquest",
-						"entries": [
-							"Wherever a tree or plant is contaminated by a fragment of an evil mind or power, a Gulthias tree can rise to infest and corrupt the surrounding forest. Its evil spreads through root and soil to other plants, which perish or transform into blights. As those blights spread, they poison and uproot healthy plants, replacing them with brambles, toxic weeds, and others of their kind. In time, an infestation of blights can turn any land or forest into a place of corruption. In forests infested with blights, trees and plants grow with supernatural speed. Vines and undergrowth rapidly spread through buildings and overrun trails and roads. After blights have killed or driven off their inhabitants, whole villages can disappear in the space of days."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Evil Heritage",
-						"entries": [
-							"Awakened Blights are independent creatures, but most are still influenced by their evil past. They tend towards the evil alignments, and are most often not welcome in civilized places. It is in their nature to carry on the evil legacy of their forefathers."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Awakened Blight Names",
-						"entries": [
-							"When Blights awaken, they generally take on any name that they have heard. Their names may be based off of elves, dwarves, humans, halflings - any race that they have encountered."
-						]
-					}
-				]
-			}
-		},
-		{
-			"name": "Vegepygmy",
-			"source": "SproutingChaos",
-			"page": 6,
-			"ability": [
-				{
-					"dex": 2,
-					"con": 1
-				}
-			],
-			"size": [
-				"S"
-			],
-			"speed": 30,
-			"darkvision": 60,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Age",
-					"entries": [
-						"Vegepygmies are short-lived beings that are born fully grown. While most don't live long enough to see old age, those that do end up dying after about 30 years."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Alignment",
-					"entries": [
-						"Vegepygmies are simple creature that don't tend towards good nor evil; lawful nor chaotic. They are most often true neutral."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Size",
-					"entries": [
-						"Vegepygmies average at about 3 feet in height and they weigh about 40 pounds. Your size is Small."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Darkvision",
-					"entries": [
-						"Accustomed to life in the dark conditions that russet mold prefers, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Grounded",
-					"entries": [
-						"You have resistance to lightning damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Perceptive",
-					"entries": [
-						"You have proficiency in the {@skill Perception} skill."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Plant Camouflage",
-					"entries": [
-						"When standing still, you have advantage on Dexterity ({@skill Stealth}) checks you make while obscured by plants."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Regeneration",
-					"entries": [
-						"At the start of each of your turns, you regain 1 hit point if you have taken damage since the end of your last turn. This feature has no effect when you are unconscious."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Languages",
-					"entries": [
-						"You can speak, read, and write Common and Vegepygmy."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"name": "Vegepygmy",
-						"entries": [
-							"Vegepygmies, also called mold folk or moldies, are fungus creatures that live in simple tribal units, hunting for sustenance and spreading the spores from which they reproduce. Spawned by a unique mold called russet mold, Vegepygmies infest forests, caverns, and ruins where this strange mold grows. Reddish brown in color, russet mold grows only in places that are dark, warm, and wet. This in turn means that Vegepygmy settlements are also in these same conditions.",
-							"No one knows for sure where russet mold came from. One historical account tells of adventurers in a forbidding mountain range discovering russet mold and vegepygmies in a peculiar metal dungeon full of strange life. Another story says that explorers found russet mold in a crater left by a falling star, with vegepygmies infesting the dense jungle nearby."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Primitive Plants",
-						"entries": [
-							"Vegepygmies are most commonly found underground or in dense forests where little sunlight penetrates. A vegepygmy instinctively feels kinship with other plant and fungus creatures, and thus vegepygmy tribes coexist well with creatures such as myconids, shriekers, and violet fungi.",
-							"Although they prefer to eat fresh meat, bone, and blood, vegepygmies can absorb nutrients from soil and many sorts of organic matter, meaning that they rarely go hungry. All vegepygmies can hiss and make other noises by forcing air through their mouth, but only a select few can speak in a conventional sense. Those that can often become tribal leaders, and they may even interact and speak with the other races. Among themselves, vegepygmies communicate by hissing, gestures, and rhythmic tapping on the body. Vegepygmies build and craft little; any gear they have is acquired from other creatures or built by copying simple construction they have witnessed."
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Mold Begets Mold",
-						"entries": [
-							"Vegepygmies originate from the remains left behind when a humanoid or a giant is killed by russet mold. One or more vegepygmies emerge from the corpse a day later. If a beast such as a dog or a bear dies from russet mold, the result is a bestial moldie called a thorny instead of a humanoid-shaped vegepygmy.",
-							"Thornies are less intelligent than vegepygmies, but have greater size and ferocity, as well as a thorn-covered body. Vegepygmies often keep them as pets, utilizing them as \"guard dogs.\""
-						]
-					},
-					{
-						"type": "entries",
-						"name": "Vegepygmy Names",
-						"entries": [
-							"Vegepygmies don't generally have names, and the ones that do have names don't follow any specific naming convention. Their names are generally just short, single-syllable sounds that are easy to remember."
-						]
-					}
-				]
-			}
-		}
-	],
 	"subclass": [
 		{
 			"name": "Path of the Blighted",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"shortName": "Blighted",
 			"subclassFeatures": [
-				"Path of the Blighted|Barbarian|PHB|Blighted|SproutingChaos|3",
-				"False Appearance|Barbarian|PHB|Blighted|SproutingChaos|6",
-				"Unnatural Growth|Barbarian|PHB|Blighted|SproutingChaos|10",
-				"Reactive Tendrils|Barbarian|PHB|Blighted|SproutingChaos|14"
+				"Path of the Blighted|Barbarian|PHB|Blighted|SCPC|3",
+				"False Appearance|Barbarian|PHB|Blighted|SCPC|6",
+				"Unnatural Growth|Barbarian|PHB|Blighted|SCPC|10",
+				"Reactive Tendrils|Barbarian|PHB|Blighted|SCPC|14"
 			]
 		},
 		{
 			"name": "College of the Ancients",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Bard",
 			"classSource": "PHB",
 			"shortName": "Ancients",
 			"subclassFeatures": [
-				"College of the Ancients|Bard|PHB|Ancients|SproutingChaos|3",
-				"Hand of the Ancients|Bard|PHB|Ancients|SproutingChaos|6",
-				"Song of Awakening|Bard|PHB|Ancients|SproutingChaos|14"
+				"College of the Ancients|Bard|PHB|Ancients|SCPC|3",
+				"Hand of the Ancients|Bard|PHB|Ancients|SCPC|6",
+				"Song of Awakening|Bard|PHB|Ancients|SCPC|14"
 			]
 		},
 		{
 			"name": "Circle of the Seedling",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Druid",
 			"classSource": "PHB",
 			"shortName": "Seedling",
 			"subclassFeatures": [
-				"Circle of the Seedling|Druid|PHB|Seedling|SproutingChaos|2",
-				"Take Root|Druid|PHB|Seedling|SproutingChaos|6",
-				"Guardian of the Forest|Druid|PHB|Seedling|SproutingChaos|10",
-				"One with Nature|Druid|PHB|Seedling|SproutingChaos|14"
+				"Circle of the Seedling|Druid|PHB|Seedling|SCPC|2",
+				"Take Root|Druid|PHB|Seedling|SCPC|6",
+				"Guardian of the Forest|Druid|PHB|Seedling|SCPC|10",
+				"One with Nature|Druid|PHB|Seedling|SCPC|14"
 			]
 		},
 		{
 			"name": "Way of Thorns",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Monk",
 			"classSource": "PHB",
 			"shortName": "Thorns",
 			"subclassFeatures": [
-				"Way of Thorns|Monk|PHB|Thorns|SproutingChaos|3",
-				"Additional Nature Discipline|Monk|PHB|Thorns|SproutingChaos|6",
-				"Additional Nature Discipline|Monk|PHB|Thorns|SproutingChaos|11",
-				"Additional Nature Discipline|Monk|PHB|Thorns|SproutingChaos|17"
+				"Way of Thorns|Monk|PHB|Thorns|SCPC|3",
+				"Additional Nature Discipline|Monk|PHB|Thorns|SCPC|6",
+				"Additional Nature Discipline|Monk|PHB|Thorns|SCPC|11",
+				"Additional Nature Discipline|Monk|PHB|Thorns|SCPC|17"
 			]
 		},
 		{
 			"name": "Seedmaster",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Ranger",
 			"classSource": "PHB",
 			"shortName": "Seedmaster",
 			"subclassFeatures": [
-				"Seedmaster|Ranger|PHB|Seedmaster|SproutingChaos|3",
-				"Power of the Seed|Ranger|PHB|Seedmaster|SproutingChaos|7",
-				"Uncanny Strikes|Ranger|PHB|Seedmaster|SproutingChaos|11",
-				"Nature's Bond|Ranger|PHB|Seedmaster|SproutingChaos|15"
-			]
-		},
-		{
-			"name": "Blighted",
-			"source": "SproutingChaos",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"shortName": "Blighted",
-			"subclassFeatures": [
-				"Blighted|Sorcerer|PHB|Blighted|SproutingChaos|1",
-				"Awakening|Sorcerer|PHB|Blighted|SproutingChaos|6",
-				"Blighted Command|Sorcerer|PHB|Blighted|SproutingChaos|14",
-				"Unrelenting Army|Sorcerer|PHB|Blighted|SproutingChaos|18"
+				"Seedmaster|Ranger|PHB|Seedmaster|SCPC|3",
+				"Power of the Seed|Ranger|PHB|Seedmaster|SCPC|7",
+				"Uncanny Strikes|Ranger|PHB|Seedmaster|SCPC|11",
+				"Nature's Bond|Ranger|PHB|Seedmaster|SCPC|15"
 			]
 		}
 	],
 	"subclassFeature": [
 		{
 			"name": "Path of the Blighted",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"entries": [
-				"The Path of the Blighted is a path of unholy origin, traced back to the same origin of the Blights: the Gulthias Tree. By gaining power from this evil source, you can channel your rage to shift your physical form, becoming a monstrous abomination of vines and branches. While transformed, you engulf and constrict your enemies as you tear them apart.",
+				"The Path of the Blighted is a path of ancient origin, traced back to the original source of blackbark trees: the Blackthorn Grove. By gaining power from this primal source, you can channel your rage to shift your physical form, becoming a monstrous abomination of vines and branches. While transformed, you engulf and constrict your enemies as you tear them apart.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Blighted Transformation|Barbarian|PHB|Blighted|SproutingChaos|3"
+					"subclassFeature": "Blighted Transformation|Barbarian|PHB|Blighted|SCPC|3"
 				}
 			]
 		},
 		{
 			"name": "Blighted Transformation",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -492,11 +122,11 @@
 		},
 		{
 			"name": "False Appearance",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -505,11 +135,11 @@
 		},
 		{
 			"name": "Unnatural Growth",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 10,
 			"header": 2,
 			"entries": [
@@ -518,11 +148,11 @@
 		},
 		{
 			"name": "Reactive Tendrils",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -532,31 +162,31 @@
 		},
 		{
 			"name": "College of the Ancients",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"entries": [
 				"Bards of the College of the Ancients have deep knowledge in the area of nature magic, and they often wander the wilderness, collecting knowledge on the magic of the earth. They are most often wandering singers and skalds, traveling through ancient forests and long abandoned roads, often singing to nobody at all. They wish, first and foremost, to protect and honor nature. They tell tales of great floods and good harvests, tremendous storms and frightening gales. They learn to be one with nature.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Bard|PHB|Ancients|SproutingChaos|3"
+					"subclassFeature": "Bonus Proficiencies|Bard|PHB|Ancients|SCPC|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Words of the Ancients|Bard|PHB|Ancients|SproutingChaos|3"
+					"subclassFeature": "Words of the Ancients|Bard|PHB|Ancients|SCPC|3"
 				}
 			]
 		},
 		{
 			"name": "Bonus Proficiencies",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"entries": [
 				"When you join the College of the Ancients at 3rd level, you gain proficiency with medium armor, shields, and the {@skill Nature} skill."
@@ -564,11 +194,11 @@
 		},
 		{
 			"name": "Words of the Ancients",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"entries": [
 				"Also at 3rd level, you learn how to command plants to sprout up and grasp at the heels of your foes, impeding their movement.",
@@ -577,24 +207,24 @@
 		},
 		{
 			"name": "Hand of the Ancients",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can cast {@spell Gaea's hand|SproutingChaos} at will, without expending a spell slot or material components."
+				"Starting at 6th level, you can cast {@spell Gaea's hand|SCPC} at will, without expending a spell slot or material components."
 			]
 		},
 		{
 			"name": "Song of Awakening",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -604,44 +234,45 @@
 		},
 		{
 			"name": "Circle of the Seedling",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 2,
 			"entries": [
 				"Druids of the Circle of the Seedling delve more completely into the ancient rituals and hidden knowledge of plant magic. These druids meet together in their Plant Wild Shape, sharing their wisdom and arcane secrets with each other in Druidic, while appearing to just be a small bunch of shrubs and trees. As a member of this circle, your magic allows you to be one with your surroundings, gaining intricate control over the plants around you.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Plant Wildshape|Druid|PHB|Seedling|SproutingChaos|2"
+					"subclassFeature": "Plant Wildshape|Druid|PHB|Seedling|SCPC|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Plantspeaker|Druid|PHB|Seedling|SproutingChaos|2"
+					"subclassFeature": "Plantspeaker|Druid|PHB|Seedling|SCPC|2"
 				}
 			]
 		},
 		{
 			"name": "Plant Wildshape",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 2,
 			"entries": [
 				"When you choose this circle at 2nd level, you gain the ability to use Wild Shape to assume the shape of a plant creature.",
-				"When you transform into a plant creature, the Max CR that you can transform into is increased to 1. Starting at 6th level, you can transform into a Plant with a challenge rating as high as your druid level divided by 3, rounded down."
+				"When you transform into a plant creature, the Max CR that you can transform into is increased to 1. Starting at 6th level, you can transform into a Plant with a challenge rating as high as your druid level divided by 3, rounded down.",
+				"As with other abilities, you may only wildshape into plants from the monster manual."
 			]
 		},
 		{
 			"name": "Plantspeaker",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 2,
 			"entries": [
 				"Also at 2nd level, when you are transformed into a plant creature you gain the ability to command nearby mundane plants. As an action, you can turn difficult terrain caused by plant growth into ordinary terrain in a 5 foot radius centered on you, or you can turn ordinary terrain where plants are present into difficult terrain in a 5 foot radius centered on you. After a 10 minute duration, the plants return to their original condition.",
@@ -650,11 +281,11 @@
 		},
 		{
 			"name": "Take Root",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -664,11 +295,11 @@
 		},
 		{
 			"name": "Guardian of the Forest",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 10,
 			"header": 2,
 			"entries": [
@@ -677,11 +308,11 @@
 		},
 		{
 			"name": "One with Nature",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -690,31 +321,31 @@
 		},
 		{
 			"name": "Way of Thorns",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"entries": [
 				"You follow a monastic tradition that teaches you to harness the power of nature. Nature has become an extension of yourself, and you have learned to use it to great effect. By following this Way, you learn techniques to manipulate plants, allowing them to bend to your will and aid you both in combat and out of it.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Disciple of the Wilds|Monk|PHB|Thorns|SproutingChaos|3"
+					"subclassFeature": "Disciple of the Wilds|Monk|PHB|Thorns|SCPC|3"
 				}
 			]
 		},
 		{
 			"name": "Disciple of the Wilds",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"entries": [
 				"When you choose this tradition at 3rd level, you learn magical disciplines that harness the power of nature. A discipline requires you to spend ki points each time you use it.",
-				"You know the Natural Attunement discipline and one other nature discipline of your choice, which are detailed in the \"{@filter Nature Disciplines|optionalfeatures|feature type=NatD}\" section.",
+				"You know the Natural Attunement discipline and one other nature discipline of your choice, which are detailed in the \"{@filter Nature Disciplines|optionalfeatures|feature type=NAT:D}\" section.",
 				"Whenever you learn a new nature discipline, you can also replace one nature discipline that you already know with a different discipline.",
 				{
 					"type": "list",
@@ -727,7 +358,7 @@
 						}
 					]
 				},
-				"Once you reach 5th level in this class, you can spend additional ki points to increase the level of a nature discipline spell that you cast, provided that the spell has an enhanced effect at a higher level, as {@spell slicing leaves|SproutingChaos} does. The spell's level increases by 1 for each additional ki point you spend. For example, if you are a 5th-level monk and use Nature's Weapon to cast {@spell slicing leaves|SproutingChaos}, you can spend 3 ki points to cast it as a 2nd-level spell (the discipline's base cost of 2 ki points plus 1).",
+				"Once you reach 5th level in this class, you can spend additional ki points to increase the level of a nature discipline spell that you cast, provided that the spell has an enhanced effect at a higher level, as {@spell slicing leaves|SCPC} does. The spell's level increases by 1 for each additional ki point you spend. For example, if you are a 5th-level monk and use Nature's Weapon to cast {@spell slicing leaves|SCPC}, you can spend 3 ki points to cast it as a 2nd-level spell (the discipline's base cost of 2 ki points plus 1).",
 				"The maximum number of ki points you can spend to cast a spell in this way(including its base ki point cost and any additional ki points you spend to increase its level) is determined by your monk level, as shown in the Spells and Ki Points table.",
 				{
 					"type": "table",
@@ -763,66 +394,66 @@
 		},
 		{
 			"name": "Additional Nature Discipline",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you learn an additional {@filter Nature Discipline|optionalfeatures|feature type=NatD}."
+				"At 6th level, you learn an additional {@filter Nature Discipline|optionalfeatures|feature type=NAT:D}."
 			]
 		},
 		{
 			"name": "Additional Nature Discipline",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 11,
 			"header": 2,
 			"entries": [
-				"At 11th level, you learn an additional {@filter Nature Discipline|optionalfeatures|feature type=NatD}."
+				"At 11th level, you learn an additional {@filter Nature Discipline|optionalfeatures|feature type=NAT:D}."
 			]
 		},
 		{
 			"name": "Additional Nature Discipline",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you learn an additional {@filter Nature Discipline|optionalfeatures|feature type=NatD}."
+				"At 17th level, you learn an additional {@filter Nature Discipline|optionalfeatures|feature type=NAT:D}."
 			]
 		},
 		{
 			"name": "Seedmaster",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Ranger",
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"entries": [
 				"The Seedmaster archetype serves as an alternate path to the Beastmaster archetype, instead growing a bond between a small plant creature and the ranger. The ranger and the plant work as one to fight off forces of evil and destruction. Seedmaster rangers lovingly cultivate their magic seedlings, forming an almost pet-like bond between themselves and the animated plant.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Seedling Companion|Ranger|PHB|Seedmaster|SproutingChaos|3"
+					"subclassFeature": "Seedling Companion|Ranger|PHB|Seedmaster|SCPC|3"
 				}
 			]
 		},
 		{
 			"name": "Seedling Companion",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Ranger",
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 3,
 			"entries": [
 				"At 3rd level, you learn a ritual that creates a magical bond between yourself and a small seedling. You perform the ritual over the course of 1 hour, which can be done during a short rest. At the conclusion of this ritual, the seedling gains magical abilities that you can activate.",
@@ -850,11 +481,11 @@
 		},
 		{
 			"name": "Power of the Seed",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Ranger",
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 7,
 			"header": 2,
 			"entries": [
@@ -879,11 +510,11 @@
 		},
 		{
 			"name": "Uncanny Strikes",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Ranger",
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 11,
 			"header": 2,
 			"entries": [
@@ -892,11 +523,11 @@
 		},
 		{
 			"name": "Nature's Bond",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Ranger",
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 15,
 			"header": 2,
 			"entries": [
@@ -905,31 +536,31 @@
 		},
 		{
 			"name": "Blighted",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 1,
 			"entries": [
 				"Your innate magic stems from the corrupting power of a Gulthias tree. Most with this origin can trace their magic back to a near-death experience caused by a blighted creature, or through extended exposure to blighted land and plant life. Attempting to consume blighted plants over a period of a few weeks or months can often lead to this magic becoming imbued into a creature's system, assuming it doesn't kill them first. Whatever the cause, blight magic allows you to animate blighted creatures to do your bidding, as if you were a living Gulthias tree.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Blighted Construct|Sorcerer|PHB|Blighted|SproutingChaos|1"
+					"subclassFeature": "Blighted Construct|Sorcerer|PHB|Blighted|SCPC|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Rotting Touch|Sorcerer|PHB|Blighted|SproutingChaos|1"
+					"subclassFeature": "Rotting Touch|Sorcerer|PHB|Blighted|SCPC|1"
 				}
 			]
 		},
 		{
 			"name": "Blighted Construct",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 1,
 			"entries": [
 				"Starting when you choose this origin at 1st level, you gain the ability to animate a plant to do your bidding. As an action, you can touch a pile of twigs and infuse it with blighted magic, awakening it as a twig blight. This blight cannot attack, but it can take other actions as normal.",
@@ -939,11 +570,11 @@
 		},
 		{
 			"name": "Rotting Touch",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 1,
 			"entries": [
 				"Also at 1st level, your touch can rot objects and plants. As an action, you can touch a Small or smaller plant or object made from plant material. The target slowly rots over the next minute as if a year had passed. This feature can only be used once on any one plant or object."
@@ -951,11 +582,11 @@
 		},
 		{
 			"name": "Awakening",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -966,11 +597,11 @@
 		},
 		{
 			"name": "Blighted Command",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -980,11 +611,11 @@
 		},
 		{
 			"name": "Unrelenting Army",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
-			"subclassSource": "SproutingChaos",
+			"subclassSource": "SCPC",
 			"level": 18,
 			"header": 2,
 			"entries": [
@@ -995,13 +626,13 @@
 	"optionalfeature": [
 		{
 			"name": "Breath of Pain",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 3 ki points to cast {@spell spray of thorns|SproutingChaos}."
+				"You can spend 3 ki points to cast {@spell spray of thorns|SCPC}."
 			],
 			"prerequisite": [
 				{
@@ -1025,13 +656,13 @@
 		},
 		{
 			"name": "Bridge of Spring",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 2 ki points to cast {@spell bridge of branches|SproutingChaos}."
+				"You can spend 2 ki points to cast {@spell bridge of branches|SCPC}."
 			],
 			"additionalSpells": [
 				{
@@ -1050,10 +681,10 @@
 		},
 		{
 			"name": "Earthen Restraints",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
 				"You can spend 2 ki points to cast {@spell entangle}."
@@ -1075,13 +706,13 @@
 		},
 		{
 			"name": "Fang of the Earth",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 3 ki points to cast {@spell explosive seed|SproutingChaos}."
+				"You can spend 3 ki points to cast {@spell explosive seed|SCPC}."
 			],
 			"prerequisite": [
 				{
@@ -1105,13 +736,13 @@
 		},
 		{
 			"name": "Felling Strike",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 4 ki points to cast {@spell fell|SproutingChaos}."
+				"You can spend 4 ki points to cast {@spell fell|SCPC}."
 			],
 			"prerequisite": [
 				{
@@ -1135,13 +766,13 @@
 		},
 		{
 			"name": "Hidden Grove",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 2 ki points to cast {@spell overgrowth|SproutingChaos}."
+				"You can spend 2 ki points to cast {@spell overgrowth|SCPC}."
 			],
 			"additionalSpells": [
 				{
@@ -1160,10 +791,10 @@
 		},
 		{
 			"name": "Natural Attunement",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
 				"You can use your action to briefly control the natural world, causing one of the following effects of your choice",
@@ -1180,13 +811,13 @@
 		},
 		{
 			"name": "Nature's Commune",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 2 ki points to cast {@spell rapport spores|SproutingChaos}."
+				"You can spend 2 ki points to cast {@spell rapport spores|SCPC}."
 			],
 			"additionalSpells": [
 				{
@@ -1205,13 +836,13 @@
 		},
 		{
 			"name": "Nature's Weapon",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 2 ki points to cast {@spell slicing leaves|SproutingChaos}."
+				"You can spend 2 ki points to cast {@spell slicing leaves|SCPC}."
 			],
 			"additionalSpells": [
 				{
@@ -1230,13 +861,13 @@
 		},
 		{
 			"name": "Skewering Fist",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 4 ki points to cast {@spell skewering branch|SproutingChaos}."
+				"You can spend 4 ki points to cast {@spell skewering branch|SCPC}."
 			],
 			"prerequisite": [
 				{
@@ -1260,10 +891,10 @@
 		},
 		{
 			"name": "Stride of the Dryad",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
 				"You can spend 6 ki points to cast {@spell tree stride}."
@@ -1290,13 +921,13 @@
 		},
 		{
 			"name": "Striking Vine",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 3 ki points to cast {@spell arm of the wild|SproutingChaos}."
+				"You can spend 3 ki points to cast {@spell arm of the wild|SCPC}."
 			],
 			"prerequisite": [
 				{
@@ -1320,13 +951,13 @@
 		},
 		{
 			"name": "Treant's Fist",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 5 ki points to cast {@spell tree strike|SproutingChaos}."
+				"You can spend 5 ki points to cast {@spell tree strike|SCPC}."
 			],
 			"prerequisite": [
 				{
@@ -1350,13 +981,13 @@
 		},
 		{
 			"name": "Wave of Thorns",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 4 ki points to cast {@spell engulfing thorns|SproutingChaos}."
+				"You can spend 4 ki points to cast {@spell engulfing thorns|SCPC}."
 			],
 			"prerequisite": [
 				{
@@ -1380,10 +1011,10 @@
 		},
 		{
 			"name": "Verdant Grasp",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
 				"You can spend 5 ki points to cast {@spell grasping vine}."
@@ -1410,13 +1041,13 @@
 		},
 		{
 			"name": "Verdant Hand",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 10,
 			"featureType": [
-				"NatD"
+				"NAT:D"
 			],
 			"entries": [
-				"You can spend 2 ki points to cast {@spell Gaea's hand|SproutingChaos}. The hand uses your unarmed strike damage as its damage die."
+				"You can spend 2 ki points to cast {@spell Gaea's hand|SCPC}. The hand uses your unarmed strike damage as its damage die."
 			],
 			"additionalSpells": [
 				{
@@ -1437,12 +1068,12 @@
 	"spell": [
 		{
 			"name": "Explosive Seed",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 2,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -1513,12 +1144,12 @@
 		},
 		{
 			"name": "Arm of the Wild",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 2,
 			"school": "T",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -1564,19 +1195,11 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Druid",
+						"name": "Ranger",
 						"source": "PHB"
 					},
 					{
 						"name": "Druid",
-						"source": "PHB"
-					},
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
 						"source": "PHB"
 					}
 				]
@@ -1587,12 +1210,12 @@
 		},
 		{
 			"name": "Bonding Vine",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 0,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -1668,12 +1291,12 @@
 		},
 		{
 			"name": "Bridge of Branches",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 1,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -1714,23 +1337,11 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Bard",
-						"source": "PHB"
-					},
-					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
 						"name": "Druid",
 						"source": "PHB"
 					},
 					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
+						"name": "Ranger",
 						"source": "PHB"
 					}
 				]
@@ -1738,12 +1349,12 @@
 		},
 		{
 			"name": "Cloud of Spores",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 4,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -1804,19 +1415,11 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Bard",
-						"source": "PHB"
-					},
-					{
 						"name": "Druid",
 						"source": "PHB"
 					},
 					{
 						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
 						"source": "PHB"
 					}
 				]
@@ -1826,144 +1429,13 @@
 			]
 		},
 		{
-			"name": "Conjure Minor Plant Creature",
-			"source": "SproutingChaos",
-			"page": -1,
-			"level": 4,
-			"school": "C",
-			"subschools": [
-				"Chloromancy"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 90
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1,
-						"upTo": true
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You summon plant creatures that appear in unoccupied spaces that you can see within range. You choose one the following options for what appears:",
-				"• One plant creature of challenge rating 2 or lower",
-				"• Two plant creatures of challenge rating 1 or lower",
-				"• Four plant creatures of challenge rating 1/2 or lower",
-				"• Eight plant creatures of challenge rating 1/4 or lower.",
-				"A plant creature summoned by this spell disappears when it drops to 0 hit points or when the spell ends. The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise, take no actions. The DM has the creatures' statistics."
-			],
-			"miscTags": [
-				"SGT",
-				"SMN"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Druid",
-						"source": "PHB"
-					},
-					{
-						"name": "Ranger",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			}
-		},
-		{
-			"name": "Conjure Plant Creature",
-			"source": "SproutingChaos",
-			"page": -1,
-			"level": 5,
-			"school": "C",
-			"subschools": [
-				"Chloromancy"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 90
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1,
-						"upTo": true
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You call forth a plant creature to serve you. Choose an area of plant life that fills a 10-foot cube within range. A plant creature of challenge rating 5 or lower appears in an unoccupied space within 10 feet of it. The creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. lt obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the creature, it defends itself from hostile creatures but otherwise takes no actions.",
-				"If your concentration is broken, the plant creature doesn't disappear. Instead, you lose control of it, it becomes hostile toward you and your companions, and it might attack. An uncontrolled creature can't be dismissed by you, and it disappears 1 hour after you summoned it. The DM has the creature's statistics."
-			],
-			"entriesHigherLevel": [
-				{
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
-					]
-				}
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Druid",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			},
-			"miscTags": [
-				"SMN"
-			]
-		},
-		{
 			"name": "Dryad's Leap",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 6,
 			"school": "T",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -2018,12 +1490,12 @@
 		},
 		{
 			"name": "Engulfing Thorns",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 3,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -2096,22 +1568,18 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
 					}
 				]
 			}
 		},
 		{
 			"name": "Fell",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 3,
 			"school": "V",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -2158,10 +1626,6 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
 						"name": "Ranger",
 						"source": "PHB"
 					},
@@ -2172,22 +1636,18 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
 					}
 				]
 			}
 		},
 		{
 			"name": "Gaea's Hand",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 1,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -2234,19 +1694,15 @@
 			"classes": {
 				"fromClassList": [
 					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
 						"name": "Druid",
 						"source": "PHB"
 					},
 					{
 						"name": "Ranger",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
 						"source": "PHB"
 					}
 				]
@@ -2257,7 +1713,7 @@
 		},
 		{
 			"name": "Grasping Sprout",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 0,
 			"school": "C",
@@ -2292,7 +1748,8 @@
 				}
 			],
 			"entries": [
-				"You conjure a small vine with a reach of 5 feet. Whenever a creature enters its reach, you may use your reaction to have the sprout attempt to grasp at its heels, stopping its movement. The target must succeed on a Dexterity saving throw or have their speed reduced to zero until the start of their next turn."
+				"You conjure a small vine with a reach of 5 feet. Whenever a creature enters its reach, you may use your reaction to have the sprout attempt to grasp at its heels, stopping its movement. The target must succeed on a Dexterity saving throw or have their speed reduced to zero until the start of their next turn.",
+				"You can have no more than 3 sprouts active; if you cast this spell with 3 sprouts already active, the oldest one withers and dies."
 			],
 			"savingThrow": [
 				"dexterity"
@@ -2319,12 +1776,12 @@
 		},
 		{
 			"name": "Mind Spore",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 5,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -2404,7 +1861,7 @@
 		},
 		{
 			"name": "Mold Plant",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 0,
 			"school": "T",
@@ -2468,12 +1925,12 @@
 		},
 		{
 			"name": "Overgrowth",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 1,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -2534,19 +1991,11 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Bard",
-						"source": "PHB"
-					},
-					{
 						"name": "Druid",
 						"source": "PHB"
 					},
 					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
+						"name": "Ranger",
 						"source": "PHB"
 					}
 				]
@@ -2554,7 +2003,7 @@
 		},
 		{
 			"name": "Piercing Thorn",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 0,
 			"school": "C",
@@ -2638,7 +2087,7 @@
 		},
 		{
 			"name": "Rapport Spores",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 1,
 			"school": "C",
@@ -2685,14 +2134,6 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Bard",
-						"source": "PHB"
-					},
-					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
 						"name": "Druid",
 						"source": "PHB"
 					},
@@ -2703,17 +2144,13 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
 					}
 				]
 			}
 		},
 		{
 			"name": "Skewering Branch",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 3,
 			"school": "C",
@@ -2783,21 +2220,13 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
 					}
 				]
 			}
 		},
 		{
 			"name": "Slicing Leaves",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 1,
 			"school": "T",
@@ -2854,27 +2283,11 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Bard",
-						"source": "PHB"
-					},
-					{
 						"name": "Druid",
 						"source": "PHB"
 					},
 					{
 						"name": "Ranger",
-						"source": "PHB"
-					},
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
 						"source": "PHB"
 					}
 				]
@@ -2882,7 +2295,7 @@
 		},
 		{
 			"name": "Sporecaller's Smite",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 2,
 			"school": "V",
@@ -2944,12 +2357,12 @@
 		},
 		{
 			"name": "Spray of Thorns",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 3,
 			"school": "C",
 			"subschools": [
-				"Chloromancy"
+				"chloromancy"
 			],
 			"time": [
 				{
@@ -3010,14 +2423,6 @@
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Bard",
-						"source": "PHB"
-					},
-					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
 						"name": "Druid",
 						"source": "PHB"
 					},
@@ -3028,17 +2433,13 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
 					}
 				]
 			}
 		},
 		{
 			"name": "Thorn Shield",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 0,
 			"school": "C",
@@ -3071,7 +2472,7 @@
 				}
 			],
 			"entries": [
-				"You conjure a wooden shield covered in thorns in one of your hands. This shield provides the same bonuses as a normal shield. Whenever you successfully {@action shove} a creature with your thorn shield, that creature takes {@damage 1d8} piercing damage. If you let go of the shield, it wilts away to nothingness."
+				"You conjure a wooden shield covered in thorns and bind it to one of your hands. This shield provides the same bonuses as a normal shield. Whenever you successfully {@action shove} a creature with your thorn shield, that creature takes {@damage 1d8} piercing damage. If you doff the shield (requiring an action), it wilts away to nothingness."
 			],
 			"damageInflict": [
 				"piercing"
@@ -3103,7 +2504,7 @@
 		},
 		{
 			"name": "Tree Strike",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": -1,
 			"level": 4,
 			"school": "T",
@@ -3183,7 +2584,7 @@
 	"monster": [
 		{
 			"name": "Adult Forest Dragon",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 21,
 			"size": [
 				"H"
@@ -3351,7 +2752,7 @@
 		},
 		{
 			"name": "Battlebriar",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 20,
 			"size": [
 				"L"
@@ -3432,7 +2833,7 @@
 		},
 		{
 			"name": "Blighted Husk",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 20,
 			"size": [
 				"L"
@@ -3523,7 +2924,7 @@
 		},
 		{
 			"name": "Mossdog",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"size": [
 				"M"
 			],
@@ -3605,7 +3006,7 @@
 		},
 		{
 			"name": "Sporeback Frog",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 22,
 			"size": [
 				"S"
@@ -3683,7 +3084,7 @@
 		},
 		{
 			"name": "Thorn Giant",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 22,
 			"size": [
 				"H"
@@ -3787,7 +3188,7 @@
 		},
 		{
 			"name": "Vine Terror",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"page": 23,
 			"size": [
 				"L"
@@ -3888,7 +3289,7 @@
 		{
 			"name": "Vine Wisp",
 			"shortName": "Wisp",
-			"source": "SproutingChaos",
+			"source": "SCPC",
 			"size": [
 				"L"
 			],
@@ -3966,73 +3367,6 @@
 				"grappled",
 				"restrained"
 			]
-		}
-	],
-	"subrace": [
-		{
-			"name": "Jungle",
-			"source": "SproutingChaos",
-			"page": 4,
-			"ability": [
-				{
-					"con": 1
-				}
-			],
-			"darkvision": 60,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Darkvision",
-					"entries": [
-						"Accustomed to the dark canopies of the jungle, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"name": "Jungle Silva",
-						"entries": [
-							"As a jungle silva, you are hardier than your forest cousins, tested by the ruthless monsters that roam the large jungles that dot the worlds of D&D. Your time in the dark undergrowth of the jungle has also improved your vision substantially."
-						]
-					}
-				]
-			},
-			"raceName": "Silva",
-			"raceSource": "SproutingChaos"
-		},
-		{
-			"name": "Forest",
-			"source": "SproutingChaos",
-			"page": 4,
-			"ability": [
-				{
-					"dex": 1
-				}
-			],
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Plant Camouflage",
-					"entries": [
-						"When standing still, you have advantage on Dexterity ({@skill Stealth}) checks you make while obscured by plants."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"name": "Forest Silva",
-						"entries": [
-							"As a forest silva, you have inherent quickness and stealth, and you are able to blend into the background of forested environments. In the worlds of D&D, forest silva are found in only the largest sylvan forests, far from civilization. Their body is tall, thin, and covered in a thin bark."
-						]
-					}
-				]
-			},
-			"raceName": "Silva",
-			"raceSource": "SproutingChaos"
 		}
 	]
 }

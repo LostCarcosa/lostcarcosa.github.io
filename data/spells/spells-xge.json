@@ -1,8 +1,8 @@
 {
 	"spell": [
 		{
-			"name": "Abi-Dalzim's Horrid Wilting",
-			"source": "XGE",
+			"name": "Horrid Wilting",
+			"source": "MOD",
 			"level": 8,
 			"school": "N",
 			"time": [
@@ -140,7 +140,7 @@
 			}
 		},
 		{
-			"name": "Aganazzar's Scorcher",
+			"name": "Razing Scorcher",
 			"source": "XGE",
 			"level": 2,
 			"school": "V",
@@ -983,8 +983,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "clay, ash, and mandrake root, all of which the spell consumes, and a jewel-encrusted dagger worth at least 1,000 gp",
-					"cost": 100000,
+					"text": "clay, ash, and mandrake root, all of which the spell consumes, and a jewel-encrusted dagger worth at least 10 COIN",
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -1178,8 +1178,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a sunburst pendant worth at least 100 gp",
-					"cost": 10000
+					"text": "a sunburst pendant worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -2371,8 +2371,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a small piece of adamantine worth at least 500 gp, which the spell consumes",
-					"cost": 50000,
+					"text": "a small piece of adamantine worth at least 5 COIN, which the spell consumes",
+					"cost": 500,
 					"consume": true
 				}
 			},
@@ -2730,7 +2730,7 @@
 			}
 		},
 		{
-			"name": "Maximilian's Earthen Grasp",
+			"name": "Earthen Grasp",
 			"source": "XGE",
 			"level": 2,
 			"school": "T",
@@ -2800,7 +2800,7 @@
 			}
 		},
 		{
-			"name": "Melf's Minute Meteors",
+			"name": "Multitude of Minute Meteors",
 			"source": "XGE",
 			"level": 3,
 			"school": "V",
@@ -3338,8 +3338,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an undead eyeball encased in a gem worth at least 150 gp",
-					"cost": 15000
+					"text": "an undead eyeball encased in a gem worth at least 2 COIN",
+					"cost": 200
 				}
 			},
 			"duration": [
@@ -3583,8 +3583,8 @@
 			}
 		},
 		{
-			"name": "Snilloc's Snowball Swarm",
-			"source": "XGE",
+			"name": "Snowball Swarm",
+			"source": "MOD",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -3804,8 +3804,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a holy symbol worth at least 5 gp",
-					"cost": 500
+					"text": "a holy symbol worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -3852,9 +3852,8 @@
 			}
 		},
 		{
-			"name": "Tenser's Transformation",
-			"source": "XGE",
-			"page": 168,
+			"name": "Heroic Transformation",
+			"source": "MOD",
 			"level": 6,
 			"school": "T",
 			"time": [

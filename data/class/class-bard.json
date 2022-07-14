@@ -103,8 +103,6 @@
 				],
 				"weapons": [
 					"simple",
-					"{@item hand crossbow|phb|hand crossbows}",
-					"{@item longsword|phb|longswords}",
 					"{@item rapier|phb|rapiers}",
 					"{@item shortsword|phb|shortswords}"
 				],
@@ -120,34 +118,10 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item rapier|phb}, (b) a {@item longsword|phb}, or (c) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item diplomat's pack|phb} or (b) an {@item entertainer's pack|phb}",
 					"(a) a {@item lute|phb} or (b) any other {@filter musical instrument|items|miscellaneous=mundane|type=instrument}",
 					"{@item Leather armor|phb}, and a {@item dagger|phb}"
 				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
 				"defaultData": [
-					{
-						"a": [
-							"rapier|phb"
-						],
-						"b": [
-							"longsword|phb"
-						],
-						"c": [
-							{
-								"equipmentType": "weaponSimple"
-							}
-						]
-					},
-					{
-						"a": [
-							"diplomat's pack|phb"
-						],
-						"b": [
-							"entertainer's pack|phb"
-						]
-					},
 					{
 						"a": [
 							"lute|phb"
@@ -1973,7 +1947,7 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"The College of Glamour is the home of bards who mastered their craft in the vibrant realm of the Feywild or under the tutelage of someone who dwelled there. Tutored by satyrs, eladrin, and other fey, these bards learn to use their magic to delight and captivate others.",
+				"The College of Glamour is the home of bards who specialize in illusions or charms, weaving enchantments into their songs to dazzle or terrify.",
 				"The bards of this college are regarded with a mixture of awe and fear. Their performances are the stuff of legend. These bards are so eloquent that a speech or song that one of them performs can cause captors to release the bard unharmed and can lull a furious dragon into complacency. The same magic that allows them to quell beasts can also bend minds. Villainous bards of this college can leech off a community for weeks, misusing their magic to turn their hosts into thralls. Heroic bards of this college instead use this power to gladden the downtrodden and undermine oppressors.",
 				{
 					"type": "refSubclassFeature",

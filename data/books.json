@@ -593,60 +593,6 @@
 			]
 		},
 		{
-			"name": "Plane Shift: Innistrad",
-			"id": "PS-I",
-			"source": "PSI",
-			"group": "supplement-alt",
-			"coverUrl": "img/covers/PSI.png",
-			"published": "2016-07-12",
-			"author": "Wizards RPG Team",
-			"contents": [
-				{
-					"name": "Introduction"
-				},
-				{
-					"name": "The World of Innistrad",
-					"headers": [
-						"Horrors of the Night",
-						"Defenders of Humanity"
-					]
-				},
-				{
-					"name": "Life on Innistrad",
-					"headers": [
-						"People of Innistrad",
-						"The Church of Avacyn",
-						"Inquisitor Background"
-					]
-				},
-				{
-					"name": "Creatures of the Night"
-				},
-				{
-					"name": "The Coming of Emrakul",
-					"headers": [
-						"Rise of Emrakul",
-						"Emrakul's Madness"
-					]
-				},
-				{
-					"name": "Curse of Innistrad",
-					"headers": [
-						"Lands of Barovia\u2014Outland Valleys",
-						"Village of Barovia\u2014Shadowgrange",
-						"Argynvostholt\u2014Heron's Light Hold",
-						"Krezk",
-						"The Ruins of Berez",
-						"Van Richten's Tower\u2014Rem Karolus's Tower",
-						"The Wizard of Wines and Wereravens",
-						"Yester Hill",
-						"Werewolf Den",
-						"Adventure Hooks"
-					]
-				}
-			]
-		},
-		{
 			"name": "Adventurers League",
 			"id": "AL",
 			"source": "AL",

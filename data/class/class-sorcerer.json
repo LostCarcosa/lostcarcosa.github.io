@@ -99,25 +99,12 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}"
+					"an {@item arcane focus|phb}"
 				],
-				"goldAlternative": "{@dice 3d4 × 10|3d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"component pouch|phb"
-						],
-						"b": [
+						"_": [
 							"arcane focus|phb"
-						]
-					},
-					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
 						]
 					}
 				]

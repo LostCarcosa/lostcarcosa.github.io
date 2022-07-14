@@ -60,7 +60,6 @@
 				"default": [
 					"(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
 					"(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
 					"A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
 				],
 				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
@@ -85,14 +84,6 @@
 								"equipmentType": "weaponSimpleMelee",
 								"quantity": 2
 							}
-						]
-					},
-					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
 						]
 					},
 					{
@@ -1219,7 +1210,7 @@
 			"subclassSource": "FTD",
 			"level": 3,
 			"entries": [
-				"Your connection to the natural world takes the form of a draconic spirit, which can manifest in physical form as a drake. As your powers grow, your drake grows as well, blossoming from a small four-legged companion to a majestic winged creature large and strong enough for you to ride. Along the way, you gain an increasing share of the awe-inspiring power of dragons.",
+				"Though no true dragon has been seen in Sorspecto in living memory, their artifacts and teachings live on. Through some means, you have absorbed some draconic power into your soul, allowing you to summon forth a draconic spirit to fight by your side. As your powers grow, your drake grows as well, blossoming from a small four-legged companion to a majestic winged creature large and strong enough for you to ride.",
 				"Consider the source of the draconic spirit you have bonded with. The Drakewarden Origin table offers examples.",
 				{
 					"type": "table",
@@ -1235,7 +1226,7 @@
 					"rows": [
 						[
 							"1",
-							"You studied a dragon's scale or claw, or a trinket from a dragon's hoard, creating your bond through that token's lingering draconic magic."
+							"You studied a dragon's scale or claw, or some other draconic artifact, creating your bond through that token's lingering draconic magic."
 						],
 						[
 							"2",
@@ -1243,19 +1234,11 @@
 						],
 						[
 							"3",
-							"A dragon gave you a geode or gemstone to care for. To your surprise, the drake hatched from that stone."
-						],
-						[
-							"4",
 							"You ingested a few drops of dragon blood, forever infusing your nature magic with draconic power."
 						],
 						[
-							"5",
+							"4",
 							"An ancient Draconic inscription on a standing stone empowered you when you read it aloud."
-						],
-						[
-							"6",
-							"You had a vivid dream of a mysterious figure accompanied by seven yellow canaries, who warned you of impending doom. When you awoke, your drake was there, watching you."
 						]
 					]
 				},

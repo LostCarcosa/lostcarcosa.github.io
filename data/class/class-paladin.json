@@ -79,11 +79,8 @@
 				"additionalFromBackground": true,
 				"default": [
 					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
-					"(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-					"(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
 					"{@item Chain mail|phb} and a {@item holy symbol|phb}"
 				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
 						"a": [
@@ -97,27 +94,6 @@
 								"equipmentType": "weaponMartial",
 								"quantity": 2
 							}
-						]
-					},
-					{
-						"a": [
-							{
-								"item": "javelin|phb",
-								"quantity": 5
-							}
-						],
-						"b": [
-							{
-								"equipmentType": "weaponSimpleMelee"
-							}
-						]
-					},
-					{
-						"a": [
-							"priest's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
 						]
 					},
 					{
@@ -1357,7 +1333,7 @@
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
-				"Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.",
+				"Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious and at positive hit points to grant this bonus.",
 				"At 18th level, the range of this aura increases to 30 feet."
 			]
 		},
@@ -1395,7 +1371,7 @@
 			"classSource": "PHB",
 			"level": 10,
 			"entries": [
-				"Starting at 10th level, you and friendly creatures within 10 feet of you can't become {@condition frightened} while you are conscious. Creatures who are already {@condition frightened} have the condition suppressed while in your aura, though the condition resumes if they leave it.",
+				"Starting at 10th level, you and friendly creatures within 10 feet of you can't become {@condition frightened} while you are conscious and at positive hit points. Creatures who are already {@condition frightened} have the condition suppressed while in your aura, though the condition resumes if they leave it.",
 				"At 18th level, the range of this aura increases to 30 feet."
 			]
 		},
