@@ -4820,8 +4820,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "two fine glass bottles, worth at least 10 gp each",
-					"cost": 1000
+					"text": "two fine glass bottles, worth at least 1 COIN in total",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -5047,8 +5047,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a golden ring, bracelet, or necklace inlaid with a ruby, worth at least 200 gp in total",
-					"cost": 20000
+					"text": "a golden ring, bracelet, or necklace inlaid with a ruby, worth at least 2 COIN in total",
+					"cost": 200
 				}
 			},
 			"duration": [
@@ -5322,8 +5322,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "(a golden ring, bracelet, or necklace worth at least 50 gp in total",
-					"cost": 5000
+					"text": "(a golden ring, bracelet, or necklace worth at least 1 COIN in total",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -5602,8 +5602,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a synthetic eye made from glass or crystal, worth at least 50 gp",
-					"cost": 5000
+					"text": "a synthetic eye made from glass or crystal, worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -6131,9 +6131,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "two days worth of rations, worth at least 1 gp in total, which the spell consumes",
-					"consume": true,
-					"cost": 100
+					"text": "two days worth of rations, which the spell consumes",
+					"consume": true
 				}
 			},
 			"duration": [
@@ -7451,8 +7450,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a nonmagical silvered melee weapon worth at least 50 gp, and a diamond worth at least 2,500 gp",
-					"cost": 2550000
+					"text": "a nonmagical moonsilvered melee weapon worth at least 1 COIN, and a diamond worth at least 25 COIN",
+					"cost": 2600
 				}
 			},
 			"duration": [
@@ -7546,8 +7545,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a map worth at least 1 sp, and a  golden pin worth at least 5 gp",
-					"cost": 510
+					"text": "a map and a golden pin worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -8119,9 +8118,9 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a golden hourglass, worth at least 250 gp, filled with platinum dust worth at least 500 gp. The dust is consumed by the casting.",
+					"text": "a golden hourglass, worth at least 3 COIN, filled with platinum dust worth at least 5 COIN. The dust is consumed by the casting.",
 					"consume": true,
-					"cost": 75000
+					"cost": 800
 				}
 			},
 			"duration": [
@@ -8597,8 +8596,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a torch, worth at least 1 cp",
-					"cost": 1
+					"text": "a torch"
 				}
 			},
 			"duration": [
@@ -8611,6 +8609,7 @@
 				}
 			],
 			"entries": [
+				"You cannot use a spellcasting focus or component pouch to substitute for the material component of this spell.",
 				"You light the torch used as this spell's material component with a silver flame. For the duration, the torch sheds bright light in a 30-foot radius and dim light for an additional 30 feet. The magical light of this torch has a special property: it distorts and blurs its area. The area of bright light is considered lightly obscured to creatures outside of it.",
 				"As you cast the spell, or as an action while you hold the torch, you can release a burst of radiant energy from it. Each creature of your choice within 10 feet of you must succeed on a Dexterity saving throw or take {@damage 2d6} radiant damage. Then, the spell ends."
 			],
@@ -8672,9 +8671,9 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "obsidian worth at least 30 gp, which the spell consumes",
+					"text": "obsidian worth at least 1 COIN, which the spell consumes",
 					"consume": true,
-					"cost": 3000
+					"cost": 100
 				}
 			},
 			"duration": [
@@ -8817,8 +8816,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a black opal, worth at least 1,000 gp",
-					"cost": 100000
+					"text": "a black opal, worth at least 10 COIN",
+					"cost": 1000
 				}
 			},
 			"duration": [

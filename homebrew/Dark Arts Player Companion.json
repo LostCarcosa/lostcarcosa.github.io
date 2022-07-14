@@ -5184,7 +5184,7 @@
 				"type": "point",
 				"distance": {
 					"type": "feet",
-					"amount": 60
+					"amount": 30
 				}
 			},
 			"duration": [
@@ -5678,8 +5678,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an ornate dagger worth at least 25gp",
-					"cost": 2500
+					"text": "an ornate dagger worth at least 1 COIN",
+					"cost": 100
 				}
 			},
 			"entriesHigherLevel": [
@@ -5832,7 +5832,7 @@
 				"type": "point",
 				"distance": {
 					"type": "feet",
-					"amount": 120
+					"amount": 90
 				}
 			},
 			"duration": [

@@ -2020,7 +2020,7 @@
 				"type": "point",
 				"distance": {
 					"type": "feet",
-					"amount": 60
+					"amount": 30
 				}
 			},
 			"components": {
