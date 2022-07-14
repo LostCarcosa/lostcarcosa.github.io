@@ -4315,7 +4315,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "A small vial of incense, which the spell consumes"
+					"text": "A small vial of incense, which the spell consumes",
 					"consume": true
 				}
 			},
