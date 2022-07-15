@@ -794,13 +794,6 @@
 							"source": "TCE"
 						}
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			},
 			"backgrounds": [
@@ -25388,34 +25381,11 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Storm"
-						}
-					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Izzet Engineer",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Silence",
@@ -25503,16 +25473,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -25533,26 +25493,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Lurker in the Deep (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
-						}
-					},
-					{
-						"class": {
 							"name": "Monk",
 							"source": "PHB"
 						},
@@ -25562,15 +25502,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Silent Image",
@@ -25632,14 +25564,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Misty Visions",
@@ -25750,38 +25674,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Redemption (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Redemption",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Twilight (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
 						}
 					},
 					{
@@ -25795,26 +25689,11 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Slow",
-			"source": "PHB",
-			"page": 277,
+			"source": "MOD",
 			"srd": true,
 			"level": 3,
 			"school": "T",
@@ -25847,10 +25726,8 @@
 				}
 			],
 			"entries": [
-				"You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.",
-				"An affected target's speed is halved, it takes a \u22122 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.",
-				"If the creature attempts to cast a spell with a casting time of 1 action, roll a {@dice d20}. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted.",
-				"A creature affected by this spell makes another Wisdom saving throw at the end of each of its turns. On a successful save, the effect ends for it."
+				"You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or become {@condition slowed} for the duration.",
+				"A {@condition slowed} creature makes another Wisdom saving throw at the end of each of its turns. On a successful save, the effect ends for it."
 			],
 			"savingThrow": [
 				"wisdom"
@@ -25924,18 +25801,6 @@
 							"name": "Land",
 							"source": "PHB"
 						}
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "TCE"
 					}
 				]
 			},
@@ -33138,16 +33003,6 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undying",
-							"source": "SCAG"
-						}
-					},
 					{
 						"class": {
 							"name": "Cleric",
