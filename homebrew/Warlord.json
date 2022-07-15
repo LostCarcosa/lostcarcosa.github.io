@@ -79,10 +79,8 @@
 				"default": [
 					"(a) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon} or (b) any {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} (if proficient)",
 					"(a) a {@item light crossbow} and {@item crossbow bolts (20)|phb|20 bolts} or (b) a {@item shield|phb} (if proficient)",
-					"(a) {@item leather armor|phb} or (b) {@item scale mail|phb} or (c) {@item chain mail|phb} (if proficient)",
-					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}"
+					"(a) {@item leather armor|phb} or (b) {@item scale mail|phb} or (c) {@item chain mail|phb} (if proficient)"
 				],
-				"goldAlternative": "{@dice 5d4|5d4|Starting Gold}",
 				"defaultData": [
 					{
 						"a": [
@@ -114,14 +112,6 @@
 						],
 						"c": [
 							"chain mail|phb"
-						]
-					},
-					{
-						"a": [
-							"scholar's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
 						]
 					}
 				]

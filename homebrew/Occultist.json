@@ -42,8 +42,7 @@
 			"startingProficiencies": {
 				"weapons": [
 					"{@item dagger|phb|daggers}",
-					"{@item quarterstaff|phb|quarterstaffs}",
-					"{@item light crossbow|phb|light crossbows}"
+					"{@item quarterstaff|phb|quarterstaffs}"
 				],
 				"tools": [
 					"{@item Herbalism kit|PHB}"
@@ -73,9 +72,7 @@
 				"additionalFromBackground": true,
 				"default": [
 					"(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item Herbalism kit|phb}"
+					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}"
 				],
 				"defaultData": [
 					{
@@ -92,19 +89,6 @@
 						],
 						"b": [
 							"arcane focus|PHB"
-						]
-					},
-					{
-						"a": [
-							"scholar's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
-					},
-					{
-						"_": [
-							"Herbalism kit|phb"
 						]
 					}
 				]
