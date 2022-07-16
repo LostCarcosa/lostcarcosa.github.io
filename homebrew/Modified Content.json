@@ -3514,7 +3514,7 @@
 				{
 					"name": "Thrift",
 					"entries": [
-						"The nation of Aesrepublica values thrift and ingenuity. You have an additional four inventory slots, allowing you to carry and retrieve significantly more. (See {@variantrules STASH} for information on inventory.)"
+						"The nation of Aesrepublica values thrift and ingenuity. You have an additional four inventory slots, allowing you to carry and retrieve significantly more. (See {@variantrule STASH} for information on inventory.)"
 					],
 					"type": "entries"
 				}
