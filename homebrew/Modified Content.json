@@ -46,7 +46,10 @@
 			"pantheon": "Sorspecto",
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Martyrdom",
+				"Suffering",
+				"Healing",
+				"Plague"
 			],
 			"symbol": "A rag stained with mud or blood",
 			"entries": [
