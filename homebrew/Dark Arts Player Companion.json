@@ -3598,33 +3598,6 @@
 			]
 		}
 	],
-	"deity": [
-		{
-			"name": "The Raven Queen",
-			"source": "DAPC",
-			"page": 7,
-			"title": "Goddess of Death, Fate and Winter",
-			"domains": [
-				"Death",
-				"Nature"
-			],
-			"pantheon": "Shadowfell",
-			"symbol": "Head of a black raven",
-			"entries": [
-				"The Raven Queen was once a powerful mortal sorcerer-queen. When she died, she came to Pluton, the domain of the evil death god Nerull. Nerull, impressed with her will and ambition, gave her form and made her his consort, naming her Nera. She stole Nerull's power over mortal shades, and by freeing most of them she managed to destroy Nerull and become the god of death.",
-				"After overthrowing Nerull, she abandoned Pluton and created her own realm in the Shadowfell.",
-				"She is the spinner of fate and the patron of winter. She marks the end of each mortal life, and mourners call upon her during funeral rites, in the hope that she will guard the departed from the curse of undeath. She expects her followers to abide by these commandments:",
-				{
-					"type": "list",
-					"items": [
-						"Hold no pity for those who suffer and die, for death is the natural end of life.",
-						"Bring down the proud who try to cast off the chains of fate; you must punish hubris where you find it.",
-						"Destroy the cults of Orcus, for the Demon Prince of the Undead seeks to claim the Raven Queen's throne."
-					]
-				}
-			]
-		}
-	],
 	"spell": [
 		{
 			"name": "Wall of Bones",

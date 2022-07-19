@@ -28,210 +28,187 @@
 			"name": "The Weeping Sun",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
 				"Light",
 				"Despair"
 			],
-			"province": "Light and Despair",
 			"symbol": "A sunburst, often inscribed with symbolic rivulets of tears",
 			"entries": [
 				"{@i … and the light did dim, amidst a black sorrow, and the world turned to gaze upon the moonless sky…}",
-				"The Weeping Sun, the Mourning Light. They say it drowned a world in its tears, and that our lives flourish under its light only by its mercy."
+				"The Weeping Sun, the Mourning Light. They say it drowned a world in its tears, and that our lives flourish under its light only by its mercy. We are to be greateful for its light, repentant for our sins, and always vigilant to the grief of others.",
+				"To some, the Weeiping Sun is a god of empathy, a force that reaches out to those mourning and grieving and offers them succor. To others, the Sun is the only path, the Ascendant Light, above all other deities and gods, for its role as the bestower of light. As the chosen deity of the theocracy of Lumitreinte, it is the most widely-known and worshipped god on the continent. The Church of the Mourning Light is a monotheistic religion that has sought to impose their monotheism on all those residing in the Church's territory, leading to significant animosity from those they brand as pagans."
 			]
 		},
 		{
 			"name": "The Flayed God",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
 				"blank"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A rag stained with mud or blood",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i When the suffering is too great to bear... find solace, and be calm, for you are not alone.}",
+				"Martyrdom has always held power over humanity. A great sacrifice resonates in the hearts of mortals, and makes one into something greater than the individual.",
+				"Believers of the Flayed God are said to be able to absorb the suffering of others into themselves, bearing the pain and burdens of others in their own flesh, suffering in silence so that others may live in health and happiness. These flagellants are widely respected, though usually from a distance, as the wounds and diseases they bear inevitably leave them scarred and foul. Many adopt a leper's mask to spare others the sight of their ruined faces."
 			]
 		},
 		{
 			"name": "The Rapturous Chorus",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Beauty",
+				"Music",
+				"Love",
+				"Obsession"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A beautiful tune, gently hummed",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i The first thing in the universe was the Song- perfect, pristine. Now, it permeates every fragment of matter in the universe, singing for those who still listen.}",
+				"The Chorus is a god of passion and creation, patron deity of everything beautiful and wondrous, resonating through the world. This god has few churches or priests, but is worshipped in secret meetings, in the woods and in basements: gatherings of music, dance, and pleasure. The religion of the Song is not respected by authority, but quite hard to stamp out."
 			]
 		},
 		{
 			"name": "The Unbroken Circle",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Cycles",
+				"Decay",
+				"Eternity",
+				"Immortality"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A circle, simple and unbroken",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i Fear not, dear child. From one perspective, this is an ending. From another, it is only the beginning.}",
+				"The Unbroken Circle is a god that few people actively worship. Its domains are obscure, and the average mortal finds little reason to be overconcerned with mouldering fungi or the grand scale of time. Nevertheless, priests of the Circle are respected and mostly viewed with respect, as the guardians for some force the average man couldn't describe but invariably recognizes as vital.",
+				"One notable black mark on the Circle's reputation is the fact that many necromancers find a kindred deity in the Circle, whose tenets hold nothing against the raising of the dead, nor the seeking of immortality. These Necromancers of the Circle are varied in their intents or purposes, but are not inherently evil- many view undeath as simply the next stage of life, and see nothing wrong with reanimating corpses to aid the living. No matter what philosophical arguments are levied, however, most people are deeply uncomfortable when the buried bodies of their ancestors begin walking the earth."
 			]
 		},
 		{
 			"name": "The Burned Lady",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Fire",
+				"Rebirth",
+				"Destruction",
+				"Warfare"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A smouldering flame, surrounded by ash",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i The flames lept across her body, and yet she did not cry out. She feels the pain, but she does not bow to it.}",
+				"Do not mistake the Burned Lady for a goddess of martyrdom. Martyrs go willingly to their deaths, sacrificing their lives gladly for their ideals. The Burned Lady holds no love for these fools. She is the god of the unwilling, the murdered- deity of those dragged from their beds kicking and screaming, thrown upon the pyre...",
+				"The Lady is often depicted with her companion, the Ashen Wolf, a great prowling hound made of smoke and ash and flame, set upon those who earn her ire."
 			]
 		},
 		{
 			"name": "The Hunger of the Earth",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Nature",
+				"The Harvest",
+				"Avarice"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A handful of soil and teeth",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i She is no kind, nurturing mother, but a beast, all jaws and teeth and endless hunger.}",
+				"The land is beautiful, commanding both fear and respect. Mortalkind has built their empires upon her back, and feasts upon her harvest. But whatever bounty the earth gives can be just as easily revoked. She is a beast who can be befriended but never tamed, loved but not trusted. Pray for a bountiful fall and a kind winter."
 			]
 		},
 		{
 			"name": "The Unblinking Eye",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Knowledge",
+				"Magic",
+				"Insanity"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A simple eye: a circle with a dot in the middle.",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i It is watching.}",
+				"Scholars are not prone to worship, and the Eye demands none. Many question whether it exists at all. Many of those who have delved deep into the arcane claim to feel its gaze upon them, but what proof, really, is a madman's word?"
 			]
 		},
 		{
 			"name": "He Who Weighs Our Sins",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Justice",
+				"Vengeance",
+				"Punishment"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A set of scales and a hammer",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i A time of reckoning shall come, and your sins shall be weighed upon the cosmic scales...}",
+				"The Warrior-Saint, the Justicar, the Heavenly Scribe... all are said to be different facets of a single force. Errestio Pallas once posited that the god of Justice was, in some sense, a creation of humanity- a manifestation of mortalkind's need for order, made manifest by sheer belief.",
+				"Justice is not always kind, but it is uncompromising, unbiased. Followers of He Who Weighs Our Sins are expected to be strict paragons of morality, to uphold others to those same standards... and to take action against those who falter."
 			]
 		},
 		{
 			"name": "The Maw in the Deep",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Sea",
+				"The Lost",
+				"Betrayal",
+				"Secrets"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A sharkstooth",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i ... cast out and supplanted, it dwells in the ocean, amongst the drowned.}",
+				"Little is known of this enigmatic god. Sailors claim to have heard its voice, guiding them to safety and succor in the storm- though skeptics point out this is no proof of benevolence, as those it leads to their deaths are unlikely to report the incident. Those who have lost their way in life might find comfort in the Depths of the ocean, the sheer vastness an acknowledgement of their place in the world...",
+				"The Maw has few churches or temples. Its name lives on in superstition and rumor, in carvings upon ship decks and whispers amongst sailors."
 			]
 		},
 		{
 			"name": "The Eternal Winter",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"Ice",
+				"Winds",
+				"Wrath",
+				"Preservation"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A diamond, enclosing a sprig of pine",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i All will be preserved in eternal perfection, encased in a sheen of frost.}",
+				"The Winter is worshipped by few southerners, but is widely respected by those who inhabit the Northland Tundras. There is no reasoning with the onset of ice and frost, and there is little point in praying for mercy.",
+				"The Northlanders consider there to be no point in holding animosity for the winter, nor in hoping for mercy. You either prove your worth by surviving on your own strength and wits, and those of your companions, or you perish in the cold, undeserving of the gift of life."
 			]
 		},
 		{
 			"name": "The Last Star in the Black Sky",
 			"source": "MOD",
 			"pantheon": "Sorspecto",
-			"alignment": [
-				"N",
-				"N"
-			],
 			"category": "Major Gods",
 			"domains": [
-				"blank"
+				"The Sky",
+				"Death",
+				"Emptiness",
+				"Travelers"
 			],
-			"province": "blank",
-			"symbol": "blank",
+			"symbol": "A solitary, four-pointed star",
 			"entries": [
-				"{@i blank}",
-				"Blank"
+				"{@i Look up, and It will guide you- in this life, and beyond.}",
+				"The night sky is filled with stars, glimmering and beautiful,  motes of light in an endless black sea.",
+				"Once a year, however, the night sky goes dark, as every light vanishes. Only one star remains, a beacon of hope for travelers plotting their path. The Old Lore says that the Star is the last thing us mortals see as we perish, following the Star as we pass from one life to another."
 			]
 		}
 	],
