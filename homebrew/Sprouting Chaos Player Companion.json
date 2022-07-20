@@ -5,16 +5,16 @@
 				"json": "SCPC",
 				"abbreviation": "SCPC",
 				"full": "Sprouting Chaos Player's Companion",
-				"url": "https://drive.google.com/file/d/0B-g9vLTX0eHKZmFkdFVPME9Lckk/view",
-				"version": "2.0.0",
-				"color": "03d100",
 				"authors": [
-					"u/Jonoman3000"
+					"Jonoman3000"
 				],
 				"convertedBy": [
 					"Bowsori",
 					"Kachow"
-				]
+				],
+				"version": "Regular",
+				"color": "03d100",
+				"targetSchema": "1.2"
 			}
 		],
 		"dateAdded": 1579982418,
@@ -30,6 +30,7 @@
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"shortName": "Blighted",
+			"page": 1,
 			"subclassFeatures": [
 				"Path of the Blighted|Barbarian|PHB|Blighted|SCPC|3",
 				"False Appearance|Barbarian|PHB|Blighted|SCPC|6",
@@ -43,6 +44,7 @@
 			"className": "Bard",
 			"classSource": "PHB",
 			"shortName": "Ancients",
+			"page": 1,
 			"subclassFeatures": [
 				"College of the Ancients|Bard|PHB|Ancients|SCPC|3",
 				"Hand of the Ancients|Bard|PHB|Ancients|SCPC|6",
@@ -55,6 +57,7 @@
 			"className": "Druid",
 			"classSource": "PHB",
 			"shortName": "Seedling",
+			"page": 1,
 			"subclassFeatures": [
 				"Circle of the Seedling|Druid|PHB|Seedling|SCPC|2",
 				"Take Root|Druid|PHB|Seedling|SCPC|6",
@@ -68,6 +71,7 @@
 			"className": "Monk",
 			"classSource": "PHB",
 			"shortName": "Thorns",
+			"page": 1,
 			"subclassFeatures": [
 				"Way of Thorns|Monk|PHB|Thorns|SCPC|3",
 				"Additional Nature Discipline|Monk|PHB|Thorns|SCPC|6",
@@ -81,6 +85,7 @@
 			"className": "Ranger",
 			"classSource": "PHB",
 			"shortName": "Seedmaster",
+			"page": 1,
 			"subclassFeatures": [
 				"Seedmaster|Ranger|PHB|Seedmaster|SCPC|3",
 				"Power of the Seed|Ranger|PHB|Seedmaster|SCPC|7",
@@ -97,6 +102,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"The Path of the Blighted is a path of ancient origin, traced back to the original source of blackbark trees: the Blackthorn Grove. By gaining power from this primal source, you can channel your rage to shift your physical form, becoming a monstrous abomination of vines and branches. While transformed, you engulf and constrict your enemies as you tear them apart.",
@@ -113,6 +119,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"header": 2,
 			"entries": [
@@ -127,6 +134,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -140,6 +148,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 10,
 			"header": 2,
 			"entries": [
@@ -153,6 +162,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -167,6 +177,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"Bards of the College of the Ancients have deep knowledge in the area of nature magic, and they often wander the wilderness, collecting knowledge on the magic of the earth. They are most often wandering singers and skalds, traveling through ancient forests and long abandoned roads, often singing to nobody at all. They wish, first and foremost, to protect and honor nature. They tell tales of great floods and good harvests, tremendous storms and frightening gales. They learn to be one with nature.",
@@ -187,6 +198,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"When you join the College of the Ancients at 3rd level, you gain proficiency with medium armor, shields, and the {@skill Nature} skill."
@@ -199,6 +211,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"Also at 3rd level, you learn how to command plants to sprout up and grasp at the heels of your foes, impeding their movement.",
@@ -212,6 +225,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -225,6 +239,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Ancients",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -239,6 +254,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 2,
 			"entries": [
 				"Druids of the Circle of the Seedling delve more completely into the ancient rituals and hidden knowledge of plant magic. These druids meet together in their Plant Wild Shape, sharing their wisdom and arcane secrets with each other in Druidic, while appearing to just be a small bunch of shrubs and trees. As a member of this circle, your magic allows you to be one with your surroundings, gaining intricate control over the plants around you.",
@@ -259,6 +275,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 2,
 			"entries": [
 				"When you choose this circle at 2nd level, you gain the ability to use Wild Shape to assume the shape of a plant creature.",
@@ -273,6 +290,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 2,
 			"entries": [
 				"Also at 2nd level, when you are transformed into a plant creature you gain the ability to command nearby mundane plants. As an action, you can turn difficult terrain caused by plant growth into ordinary terrain in a 5 foot radius centered on you, or you can turn ordinary terrain where plants are present into difficult terrain in a 5 foot radius centered on you. After a 10 minute duration, the plants return to their original condition.",
@@ -286,6 +304,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -300,6 +319,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 10,
 			"header": 2,
 			"entries": [
@@ -313,6 +333,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedling",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -326,6 +347,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"You follow a monastic tradition that teaches you to harness the power of nature. Nature has become an extension of yourself, and you have learned to use it to great effect. By following this Way, you learn techniques to manipulate plants, allowing them to bend to your will and aid you both in combat and out of it.",
@@ -342,6 +364,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"When you choose this tradition at 3rd level, you learn magical disciplines that harness the power of nature. A discipline requires you to spend ki points each time you use it.",
@@ -399,6 +422,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -412,6 +436,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 11,
 			"header": 2,
 			"entries": [
@@ -425,6 +450,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Thorns",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 17,
 			"header": 2,
 			"entries": [
@@ -438,6 +464,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"The Seedmaster archetype serves as an alternate path to the Beastmaster archetype, instead growing a bond between a small plant creature and the ranger. The ranger and the plant work as one to fight off forces of evil and destruction. Seedmaster rangers lovingly cultivate their magic seedlings, forming an almost pet-like bond between themselves and the animated plant.",
@@ -454,6 +481,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"At 3rd level, you learn a ritual that creates a magical bond between yourself and a small seedling. You perform the ritual over the course of 1 hour, which can be done during a short rest. At the conclusion of this ritual, the seedling gains magical abilities that you can activate.",
@@ -486,6 +514,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 7,
 			"header": 2,
 			"entries": [
@@ -515,6 +544,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 11,
 			"header": 2,
 			"entries": [
@@ -528,6 +558,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Seedmaster",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 15,
 			"header": 2,
 			"entries": [
@@ -541,6 +572,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 1,
 			"entries": [
 				"Your innate magic stems from the corrupting power of a Gulthias tree. Most with this origin can trace their magic back to a near-death experience caused by a blighted creature, or through extended exposure to blighted land and plant life. Attempting to consume blighted plants over a period of a few weeks or months can often lead to this magic becoming imbued into a creature's system, assuming it doesn't kill them first. Whatever the cause, blight magic allows you to animate blighted creatures to do your bidding, as if you were a living Gulthias tree.",
@@ -561,6 +593,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 1,
 			"entries": [
 				"Starting when you choose this origin at 1st level, you gain the ability to animate a plant to do your bidding. As an action, you can touch a pile of twigs and infuse it with blighted magic, awakening it as a twig blight. This blight cannot attack, but it can take other actions as normal.",
@@ -575,6 +608,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 1,
 			"entries": [
 				"Also at 1st level, your touch can rot objects and plants. As an action, you can touch a Small or smaller plant or object made from plant material. The target slowly rots over the next minute as if a year had passed. This feature can only be used once on any one plant or object."
@@ -587,6 +621,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 6,
 			"header": 2,
 			"entries": [
@@ -602,6 +637,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 14,
 			"header": 2,
 			"entries": [
@@ -616,6 +652,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Blighted",
 			"subclassSource": "SCPC",
+			"page": 1,
 			"level": 18,
 			"header": 2,
 			"entries": [

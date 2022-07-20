@@ -400,7 +400,7 @@
 			"source": "MOD",
 			"className": "Rogue",
 			"classSource": "PHB",
-			"page": 97,
+			"page": 1,
 			"subclassFeatures": [
 				"Empty Hand|Rogue||Empty Hand|MOD|3",
 				"Hollow Hand|Rogue||Empty Hand|MOD|9",
@@ -418,6 +418,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"In any society, there are thieves- those who dwell in the gutters of cities, picking pockets and cutting purses. The ignorant might lump you in with that ragged lot, but you know better. You have trained in the Way of the Empty Hand, and you needn't limit yourself to mere trifles like gold; no, you have learned to steal more {@i metaphysica} aspects from your victims.",
@@ -439,6 +440,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 3,
 			"header": 1,
 			"entries": [
@@ -455,6 +457,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 3,
 			"header": 1,
 			"entries": [
@@ -489,6 +492,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 9,
 			"header": 2,
 			"entries": [
@@ -517,6 +521,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 9,
 			"header": 2,
 			"entries": [
@@ -532,6 +537,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 13,
 			"header": 2,
 			"entries": [
@@ -560,6 +566,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 17,
 			"header": 2,
 			"entries": [
@@ -584,6 +591,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"You snatch a single object that is not being held or worn from your opponent. You must know the item exists and roughly where it is kept, in general terms. (For example, in order to steal a potion, you must first know that the target has a potion and that they keep it on their belt, though you need not know what type of potion it is).",
@@ -597,6 +605,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"You snatch a burst of strength from your target for your own use. Until the end of the target's next turn, they have disadvantage on ability checks and attack rolls that use Strength or Dexterity, and they do one less die of damage with every melee weapon attack they make until the end or their nex tturn. (If this reduces it to 0 die, then it does a base of 1 damage plus modifiers.)",
@@ -610,6 +619,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 3,
 			"entries": [
 				"You borrow the target's speed to empower your own movement. Until the end of the target's next turn, their speed is reduced by 15 feet, and they cannot use reactions.",
@@ -623,6 +633,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 9,
 			"entries": [
 				"You can only use this steal option if you have not made an  attack during your current turn.",
@@ -637,6 +648,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 9,
 			"entries": [
 				"You steal a portion of the target's luck, borrowing it for yourself. Whenever the creature makes an attack roll, ability check, or saving throw, it must subtract {@dice 1d6} from the roll; this penalty ends at the end of the creature's next turn, or after it fails a roll.",
@@ -650,6 +662,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 13,
 			"entries": [
 				"You steal a memory from a creature, extracting knowledge from their mind into your own. When you steal a memory, you can choose one of the following effects:",
@@ -669,6 +682,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 13,
 			"entries": [
 				"You can only use this Steal on a creature who you and your allies have not attacked.",
@@ -683,6 +697,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Empty Hand",
 			"subclassSource": "MOD",
+			"page": 1,
 			"level": 17,
 			"entries": [
 				"You can attempt to rip the vitality from another creature, claiming it for yourself. When you use this steal option, you take a -10 penalty to the check, and if you fail the steal, you immediately take 6d6 necrotic damage, which cannot be reduced in any way. If this damage reduces you to 0 hit points, you immediately die.",
@@ -3949,7 +3964,7 @@
 				{
 					"name": "Mental Repression",
 					"entries": [
-						"You can forcibly repress thoughts within your mind, burying them deep.  You learn the {@spell forget|COFS:A} cantrip, and you can cast it on yourself multiple times instead of only once, forgetting a total number of different things up to your character level."
+						"You can forcibly repress thoughts within your mind, burying them deep.  You learn the {@spell forget|COFSA} cantrip, and you can cast it on yourself multiple times instead of only once, forgetting a total number of different things up to your character level."
 					],
 					"type": "entries"
 				}
