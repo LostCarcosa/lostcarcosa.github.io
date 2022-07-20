@@ -448,7 +448,7 @@
 				"faerie fire",
 				"moonbeam",
 				"see invisibility",
-				"daylight",
+				"illuminate|MOD",
 				"spirit guardians",
 				"arcane eye",
 				"guardian of faith",
@@ -467,7 +467,7 @@
 							"see invisibility"
 						],
 						"9": [
-							"daylight",
+							"illuminate|MOD",
 							"spirit guardians"
 						],
 						"13": [
@@ -591,7 +591,7 @@
 			"shortName": "He Who Weighs Our Sins",
 			"page": 16,
 			"subclassSpells": [
-				"detect evil and good",
+				"detect extraplanar beings|MOD",
 				"detect poison and disease",
 				"branding smite",
 				"zone of truth",
@@ -606,7 +606,7 @@
 				{
 					"prepared": {
 						"1": [
-							"detect evil and good",
+							"detect extraplanar beings|MOD",
 							"detect poison and disease"
 						],
 						"3": [
@@ -1332,7 +1332,7 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell detect evil and good}, {@spell detect poison and disease}"
+							"{@spell detect extraplanar beings|MOD}, {@spell detect poison and disease}"
 						],
 						[
 							"3rd",
@@ -2383,7 +2383,7 @@
 						],
 						[
 							"9th",
-							"{@spell daylight}, {@spell spirit guardians}"
+							"{@spell illuminate|MOD}, {@spell spirit guardians}"
 						],
 						[
 							"13th",
@@ -3147,7 +3147,7 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell detect evil and good}, {@spell detect magic}"
+							"{@spell detect extraplanar beings|MOD}, {@spell detect magic}"
 						],
 						[
 							"2nd",
@@ -3425,7 +3425,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Also at 6th level, you add the {@spell daylight} spell to your spellbook. For you, {@spell daylight} can be cast as a ritual."
+				"Also at 6th level, you add the {@spell illuminate|MOD} spell to your spellbook. For you, {@spell illuminate|MOD} can be cast as a ritual."
 			]
 		},
 		{
@@ -3794,7 +3794,7 @@
 						],
 						[
 							"9th",
-							"{@spell crusader's mantle}, {@spell daylight}"
+							"{@spell crusader's mantle}, {@spell illuminate|MOD}"
 						],
 						[
 							"13th",
@@ -4315,11 +4315,11 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you adopt this path at 3rd level, you gain a celestial guide that you will serve as an avatar of its power. In return for your service, the guide bestows upon you the ability to channel divine magic through your rage. You gain access to the following spells: {@spell detect evil and good}, {@spell heroism}, and {@spell protection from evil and good}. Wisdom is your spellcasting ability for all the spells granted by this feature.",
+				"When you adopt this path at 3rd level, you gain a celestial guide that you will serve as an avatar of its power. In return for your service, the guide bestows upon you the ability to channel divine magic through your rage. You gain access to the following spells: {@spell detect extraplanar beings|MOD}, {@spell heroism}, and {@spell protection from extraplanar beings|MOD}. Wisdom is your spellcasting ability for all the spells granted by this feature.",
 				"On the turn you start your rage, you can use your action to cast one of the spells you gained with this feature at 1st level without expending a spell slot or using material components. For you, this spell doesn't require concentration if it normally does, and it lasts for the duration of your rage rather than the duration the spell specifies. Also, as you cast this spell you release a burst of radiant energy, causing each creature of your choice within 5 feet of you to take radiant damage equal to your Wisdom modifier + the spell's level (minimum 1). If this burst deals damage to at least one creature, your rage won't end when this turn ends.",
 				"Once you use this feature, you can't use it again until you finish a long rest. You can use this feature twice per long rest starting at 6th level, and three times per long rest at 14th level.",
 				"At 10th level, you cast all the spells you gain with this feature at 2nd level, and you gain access to the following additional spells: {@spell protection from poison}, {@spell silence}, and {@spell warding bond}.",
-				"At 14th level, you cast all the spells you gain with this feature at 3rd level, and you gain access to the following additional spells: {@spell beacon of hope}, {@spell daylight}, and {@spell protection from energy}."
+				"At 14th level, you cast all the spells you gain with this feature at 3rd level, and you gain access to the following additional spells: {@spell beacon of hope}, {@spell illuminate|MOD}, and {@spell protection from energy}."
 			]
 		},
 		{
@@ -4480,7 +4480,7 @@
 			"name": "Gaze of the Witch",
 			"source": "BDPC",
 			"entries": [
-				"You can cast {@spell detect evil and good} once without expending a spell slot. You regain the ability to do so when you finish a short or long rest"
+				"You can cast {@spell detect extraplanar beings|MOD} once without expending a spell slot. You regain the ability to do so when you finish a short or long rest"
 			],
 			"featureType": [
 				"EI"
@@ -4491,7 +4491,7 @@
 						"_": {
 							"rest": {
 								"1e": [
-									"detect evil and good"
+									"detect extraplanar beings|MOD"
 								]
 							}
 						}
@@ -4510,7 +4510,7 @@
 				}
 			],
 			"entries": [
-				"You are always under the effects of a {@spell protection from evil and good} spell."
+				"You are always under the effects of a {@spell protection from extraplanar beings|MOD} spell."
 			],
 			"featureType": [
 				"EI"
