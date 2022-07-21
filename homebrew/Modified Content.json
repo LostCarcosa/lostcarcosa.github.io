@@ -5417,7 +5417,7 @@
 					"name": "Costs of Resting",
 					"entries": [
 						"Adventuring comes with associated costs: equipment repair, food, shelter, basic equipment, etc. All minor costs- i.e every cost that isn't assigned a gold value- is abstracted into a single cost of 1 COIN per long rest, per character.",
-						"If you are unable or willing to pay the COIN cost in resting, you cannot cure any levels of {@condition exhaustion}, and you gain a level of {@condition unrested}, which imposes a -1 penalty to your proficiency bonus. The unrested condition can stack indefinitely.",
+						"If you are unable or willing to pay the COIN cost in resting, you cannot cure any levels of {@condition exhaustion}, and you gain a level of {@condition unrested|MOD}, which imposes a -1 penalty to your proficiency bonus. The unrested condition can stack indefinitely.",
 						"If you are suffering from being {@condition unrested}, you can spend 1 extra COIN during a long rest to cure 1 level of {@condition unrested}. You cannot cure more than 1 level of unrested per long rest.",
 						"If you are {@i not} suffering from being {@condition unrested}, you can spend an extra COIN during a long rest to live a luxurious lifestyle, which grants you inspiration at the end of the long rest.",
 						"Certain long-term upgrades may increase the cost of resting. For example, a long-term hireling may require payment ever rest, and taking care of a horse might incur an extra cost."
@@ -5747,7 +5747,7 @@
 							]
 						},
 						"A character knocked out of the fight remains at negative hit points when they recover, and is still {@condition bleeding out} until they return to positive hit points. If time is not urgent, an easy way to do this is to take a short rest (see above).",
-						"{@variantrule Lingering Injuries} has the rolltables and rule outline for lingering injuries.",
+						"{@variantrule Lingering Injuries|MOD} has the rolltables and rule outline for lingering injuries.",
 						"Note that instakill effects (like Disintegrate) subvert the Mortality roll, and still result in immediate death. Moreover, some enemies may have the Lethal ability, which ignores the Mortality roll entirely."
 			
 					]
@@ -5797,7 +5797,7 @@
 					"type": "entries",
 					"entries": [
 						"Adventurers are adaptable and hardy. Many injuries can be recovered from through simple time and care, perhaps augmented with some healing magic. More severe injuries may require surgery- either by one of your stalwart companions, or, if you don't trust the barbarian with delicate instruments, by a city surgeon.",
-						"Many of the listed injuries can be treated with an ability check over a short or long rest. Only one ability check can be made over these rests- it's assumed that only one doctor can be operating on the patient at once, and that the treatment occupies much of the rest's time. Some injuries require Surgeries, which are much more specialized operations that benefit from proficiency in the {@item Surgeon's Kit|MOD}. A Surgery check can be repeated, but every check causes the patient to lose a portion of their maximum hit points, so be careful.",
+						"Many of the listed injuries can be treated with an ability check over a short or long rest. Only one ability check can be made over these rests- it's assumed that only one doctor can be operating on the patient at once, and that the treatment occupies much of the rest's time. Some injuries require Surgeries, which are much more specialized operations that benefit from proficiency in the {@item Surgeon's Tools|MOD}. A Surgery check can be repeated, but every check causes the patient to lose a portion of their maximum hit points, so be careful.",
 						"Even if treatment fails and an injury becomes permanent, don't fret- even a permanent injury may be adapted to and worked around. Prosthetics can be acquired and custom weapons can be made to accomodate for the effects of long-lasting injuries, though they may require some time to get used to."
 					]
 				},
