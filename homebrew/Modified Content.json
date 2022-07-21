@@ -5418,8 +5418,8 @@
 					"entries": [
 						"Adventuring comes with associated costs: equipment repair, food, shelter, basic equipment, etc. All minor costs- i.e every cost that isn't assigned a gold value- is abstracted into a single cost of 1 COIN per long rest, per character.",
 						"If you are unable or willing to pay the COIN cost in resting, you cannot cure any levels of {@condition exhaustion}, and you gain a level of {@condition unrested|MOD}, which imposes a -1 penalty to your proficiency bonus. The unrested condition can stack indefinitely.",
-						"If you are suffering from being {@condition unrested}, you can spend 1 extra COIN during a long rest to cure 1 level of {@condition unrested}. You cannot cure more than 1 level of unrested per long rest.",
-						"If you are {@i not} suffering from being {@condition unrested}, you can spend an extra COIN during a long rest to live a luxurious lifestyle, which grants you inspiration at the end of the long rest.",
+						"If you are suffering from being {@condition unrested|MOD}, you can spend 1 extra COIN during a long rest to cure 1 level of {@condition unrested|MOD}. You cannot cure more than 1 level of unrested per long rest.",
+						"If you are {@i not} suffering from being {@condition unrested|MOD}, you can spend an extra COIN during a long rest to live a luxurious lifestyle, which grants you inspiration at the end of the long rest.",
 						"Certain long-term upgrades may increase the cost of resting. For example, a long-term hireling may require payment ever rest, and taking care of a horse might incur an extra cost."
 					]
 				}
