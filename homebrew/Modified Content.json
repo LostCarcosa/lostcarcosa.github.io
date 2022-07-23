@@ -5953,7 +5953,8 @@
 			"entries": [
 				"Sometimes, a feature will have you summon a creature to the field (such as the various Summon X spells), or will ask you to pick from a range of statblocks in some way (such as the {@spell Polymorph|MOD} spell or a druid's Wildshape.)",
 				"If you are ever told to select from a range of creatures, assume you are limited to creatures included in the Monster Manual.",
-				"Additionally, you must prepare these abilities ahead of time- if you have a set statblock, you must let me know what it is so it can be imported into Foundry, and if you select from a range of statblocks, you should choose a selection of statblocks to cover your basic use cases so they can be pre-imported into Foundry."
+				"Additionally, you must prepare these abilities ahead of time- if you have a set statblock, you must let me know what it is so it can be imported into Foundry, and if you select from a range of statblocks, you should choose a selection of statblocks to cover your basic use cases so they can be pre-imported into Foundry.",
+				"Addendum: If a Monster Manual statblock is reprinted in Mordenkainen Presents: Monsters of the Multiverse, you should still use the original Monster Manual statblock."
 			]
 		},
 		{

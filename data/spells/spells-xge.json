@@ -51,13 +51,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			}
 		},
@@ -127,10 +120,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -388,10 +377,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -464,10 +449,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -951,10 +932,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -1006,13 +983,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
 					}
 				]
 			}
@@ -1221,16 +1191,8 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Paladin",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
+					
+					
 				]
 			}
 		},
@@ -1547,10 +1509,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -1893,10 +1851,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -2054,15 +2008,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Storm)",
-					"source": "TCE",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Healing Spirit",
@@ -2339,13 +2285,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			}
 		},
@@ -2460,16 +2399,8 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Paladin",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
+					
+					
 				]
 			}
 		},
@@ -2644,10 +2575,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -2718,13 +2645,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
 					}
 				]
 			}
@@ -2926,13 +2846,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			}
 		},
@@ -3118,13 +3031,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			}
 		},
@@ -3239,13 +3145,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
 					}
 				]
 			}
@@ -3441,15 +3340,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Genasi (Water)",
-					"source": "EEPC",
-					"baseName": "Genasi",
-					"baseSource": "EEPC"
-				}
-			]
+			}
 		},
 		{
 			"name": "Sickening Radiance",
@@ -3570,10 +3461,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -3916,13 +3803,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			}
 		},
@@ -3993,13 +3873,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			}
 		},
@@ -4058,19 +3931,8 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
 					}
 				]
 			},
@@ -4160,10 +4022,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -4228,10 +4086,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					}
 				]
 			}
@@ -4317,13 +4171,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Cleric",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
 					}
 				]
 			}

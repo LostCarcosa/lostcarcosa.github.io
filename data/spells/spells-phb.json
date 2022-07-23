@@ -65,28 +65,11 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Protection (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -95,16 +78,6 @@
 						"subclass": {
 							"name": "Solidarity (PSA)",
 							"source": "PSA"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
 						}
 					},
 					{
@@ -129,16 +102,8 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -150,25 +115,7 @@
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Boros Legionnaire",
-					"source": "GGR"
-				},
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Alarm",
@@ -227,38 +174,11 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Clockwork Soul (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Watchers (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Paladin",
@@ -280,15 +200,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Dwarf (Mark of Warding)",
-					"source": "ERLW",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Alter Self",
@@ -364,38 +276,11 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Horizon Walker (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Horizon Walker (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Artificer",
@@ -418,20 +303,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Master of Myriad Forms",
@@ -527,25 +398,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Yuan-ti Pureblood",
-					"source": "VGM"
-				},
-				{
-					"name": "Human (Mark of Handling)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Animal Messenger",
@@ -621,21 +474,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Animal Shapes",
@@ -780,28 +619,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Spores (UA)",
-							"source": "UAThreeSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Spores",
 							"source": "TCE"
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Antilife Shell",
@@ -883,38 +706,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Protection (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Grave",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
 						}
 					},
 					{
@@ -928,15 +721,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Dwarf (Mark of Warding)",
-					"source": "ERLW",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Antimagic Field",
@@ -1125,11 +910,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -1187,14 +968,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -1231,48 +1004,8 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Seeker (UA)",
-							"source": "UATheFaithful"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Clockwork Soul (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
 							"name": "Ranger",
 							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Spell-less)",
-							"source": "UAModifyingClasses"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
 						},
 						"subclass": {
 							"name": "Swarmkeeper",
@@ -1281,26 +1014,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Half-Elf (Mark of Detection)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Visions of Distant Realms",
@@ -1425,26 +1138,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest v2 (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Paladin",
@@ -1454,40 +1148,9 @@
 							"name": "Conquest",
 							"source": "XGE"
 						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Frost"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Levistus)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Levistus)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Dwarf (Mark of Warding)",
-					"source": "ERLW",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Arms of Hadar",
@@ -1546,16 +1209,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Aberrant Mind (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Sorcerer",
@@ -1656,29 +1310,11 @@
 							"name": "Ancestral Guardian",
 							"source": "XGE"
 						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Watchers (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
+					
 					{
 						"name": "Druid",
 						"source": "PHB",
@@ -1752,29 +1388,8 @@
 						"name": "Druid",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Handling)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Bane",
@@ -1860,16 +1475,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Ambition (PSA)",
 							"source": "PSA"
 						}
@@ -1892,26 +1497,6 @@
 						"subclass": {
 							"name": "Divine Soul",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Onomancy (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
 						}
 					},
 					{
@@ -1989,16 +1574,6 @@
 						"subclass": {
 							"name": "Hexblade",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Battle Smith",
-							"source": "UAArtificerRevisited"
 						}
 					},
 					{
@@ -2125,36 +1700,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Horizon Walker (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Horizon Walker",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Horizon Walker (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
 							"name": "Horizon Walker",
 							"source": "XGE"
 						}
@@ -2165,68 +1710,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Monster Slayer (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Monster Slayer",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Monster Slayer (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Monster Slayer",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Fey Wanderer (UA)",
-							"source": "UA2020SubclassesPt3"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Fey Wanderer (UA)",
-							"source": "UA2020SubclassesPt3"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Watchers (UA)",
-							"source": "UA2020SubclassesPt1"
 						}
 					},
 					{
@@ -2327,46 +1812,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Love (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Peace",
 							"source": "TCE"
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Handling)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Boros Legionnaire",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Beast Sense",
@@ -2431,21 +1882,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Handling)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Gruul Anarch",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Bestow Curse",
@@ -2553,38 +1990,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest v2 (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Conquest",
 							"source": "XGE"
 						}
 					}
 				]
 			},
-			"backgrounds": [
-				{
-					"name": "Orzhov Representative",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Sign of Ill Omen",
@@ -2689,25 +2100,12 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Warlock",
@@ -2726,15 +2124,7 @@
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Sentinel)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Blade Barrier",
@@ -2945,16 +2335,6 @@
 							"name": "Divine Soul",
 							"source": "XGE"
 						}
-					},
-					{
-						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Onomancy (UA)",
-							"source": "UAClericDruidWizard"
-						}
 					}
 				]
 			}
@@ -3064,16 +2444,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Grave",
 							"source": "XGE"
 						}
@@ -3097,36 +2467,6 @@
 						"subclass": {
 							"name": "Oathbreaker",
 							"source": "DMG"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Alchemist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Spores (UA)",
-							"source": "UAThreeSubclasses"
 						}
 					},
 					{
@@ -3160,13 +2500,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Orzhov Representative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Blinding Smite",
@@ -3220,41 +2554,9 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Stone (UA)",
-							"source": "UASorcerer"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Battle Smith",
-							"source": "UAArtificerRevisited"
-						}
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
+					
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Boros Legionnaire",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Blindness/Deafness",
@@ -3369,28 +2671,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Spores (UA)",
-							"source": "UAThreeSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Spores",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
 						}
 					},
 					{
@@ -3457,14 +2739,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -3495,30 +2769,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Hexblade",
 							"source": "XGE"
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Passage)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Blur",
@@ -3568,14 +2824,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -3603,17 +2851,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Marid"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -3631,16 +2868,6 @@
 							"name": "Genie",
 							"source": "TCE",
 							"subSubclass": "Marid"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
 						}
 					}
 				]
@@ -3704,16 +2931,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Warlock",
@@ -3726,26 +2944,6 @@
 					},
 					{
 						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Stone (UA)",
-							"source": "UASorcerer"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Battle Smith",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
@@ -3754,29 +2952,8 @@
 							"source": "TCE"
 						}
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Cleric",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Zariel)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Zariel)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Burning Hands",
@@ -3868,61 +3045,9 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undying Light (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Fire"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Efreeti"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Genie",
 							"source": "TCE",
 							"subSubclass": "Efreeti"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
 						}
 					},
 					{
@@ -3957,38 +3082,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Genasi (Fire)",
-					"source": "EEPC",
-					"baseName": "Genasi",
-					"baseSource": "EEPC"
-				},
-				{
-					"name": "Tiefling (Variant)",
-					"source": "SCAG",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Mephistopheles)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Rakdos Cultist",
-					"source": "GGR"
-				}
-			],
 			"hasFluffImages": true
 		},
 		{
@@ -4090,25 +3183,9 @@
 							"name": "Land",
 							"source": "PHB"
 						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Storm (UA)",
-							"source": "UAWaterborneAdventures"
-						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Izzet Engineer",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Calm Emotions",
@@ -4196,46 +3273,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Aberrant Mind (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Aberrant Mind",
 							"source": "TCE"
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Handling)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				},
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Chain Lightning",
@@ -4450,16 +3493,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Twilight (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Twilight",
 							"source": "TCE"
 						}
@@ -4542,16 +3575,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Seeker (UA)",
-							"source": "UATheFaithful"
-						}
-					},
-					{
-						"class": {
 							"name": "Barbarian",
 							"source": "PHB"
 						},
@@ -4561,39 +3584,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Half-Elf (Mark of Detection)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Half-Orc (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Half-Orc",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Clone",
@@ -4813,28 +3804,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Conquest v2 (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Conquest",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Alchemist",
-							"source": "UAArtificerRevisited"
 						}
 					},
 					{
@@ -4849,32 +3820,12 @@
 					},
 					{
 						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Spores (UA)",
-							"source": "UAThreeSubclasses"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
 						"subclass": {
 							"name": "Alchemist",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
 						}
 					},
 					{
@@ -4899,12 +3850,6 @@
 					}
 				]
 			},
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				}
-			],
 			"hasFluffImages": true
 		},
 		{
@@ -4972,11 +3917,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -5151,38 +4092,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest v2 (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Conquest",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Order (UA)",
-							"source": "UAOrderDomain"
 						}
 					},
 					{
@@ -5207,28 +4118,14 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				},
-				{
-					"name": "Orzhov Representative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Commune",
@@ -5292,26 +4189,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Order (UA)",
-							"source": "UAOrderDomain"
-						}
-					},
-					{
-						"class": {
 							"name": "Cleric",
 							"source": "PHB"
 						},
@@ -5328,16 +4205,6 @@
 						"subclass": {
 							"name": "Glory",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Heroism (UA)",
-							"source": "UABardAndPaladin"
 						}
 					}
 				]
@@ -5435,16 +4302,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Lurker in the Deep (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
 							"name": "Barbarian",
 							"source": "PHB"
 						},
@@ -5464,27 +4321,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Orc (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Half-Orc",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Cone of Cold",
@@ -5568,48 +4405,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Hexblade",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Artillerist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Lurker in the Deep (UA)",
-							"source": "UASorcererAndWarlock"
 						}
 					},
 					{
@@ -5620,17 +4417,6 @@
 						"subclass": {
 							"name": "Artillerist",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Marid"
 						}
 					},
 					{
@@ -5666,17 +4452,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Marid"
-						}
-					},
-					{
-						"class": {
 							"name": "Monk",
 							"source": "PHB"
 						},
@@ -5687,11 +4462,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Druid",
 						"source": "PHB",
@@ -5863,26 +4634,6 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Treachery (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Spores (UA)",
-							"source": "UAThreeSubclasses"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -5890,33 +4641,9 @@
 							"name": "Spores",
 							"source": "TCE"
 						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Love (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Rakdos Cultist",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Dreadful Word",
@@ -5977,13 +4704,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
 					}
 				]
 			}
@@ -6089,38 +4809,18 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Druid",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Making)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Control Water",
@@ -6246,27 +4946,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Lurker in the Deep (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Marid"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -6295,28 +4974,9 @@
 							"source": "TCE",
 							"subSubclass": "Marid"
 						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Marid"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Storm)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Control Weather",
@@ -6538,16 +5198,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Redemption (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Paladin",
@@ -6556,26 +5207,6 @@
 						"subclass": {
 							"name": "Redemption",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Clockwork Soul (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Watchers (UA)",
-							"source": "UA2020SubclassesPt1"
 						}
 					},
 					{
@@ -6589,21 +5220,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Sentinel)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Create Food and Water",
@@ -6666,36 +5283,6 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Alchemist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -6715,15 +5302,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Create or Destroy Water",
@@ -6799,16 +5378,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Lurker in the Deep (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Warlock",
@@ -6820,21 +5390,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Genasi (Water)",
-					"source": "EEPC",
-					"baseName": "Genasi",
-					"baseSource": "EEPC"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Izzet Engineer",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Create Undead",
@@ -6996,25 +5552,12 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Forge (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -7031,46 +5574,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Genie",
 							"source": "TCE"
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Making)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Crusader's Mantle",
@@ -7229,14 +5738,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -7249,16 +5750,6 @@
 						"subclass": {
 							"name": "Life",
 							"source": "PHB"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
 						}
 					},
 					{
@@ -7292,21 +5783,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Halfling (Mark of Healing)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Dancing Lights",
@@ -7366,41 +5843,11 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Drow)",
-					"source": "PHB",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Half-Elf (Drow Descent)",
-					"source": "SCAG",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Darkness",
@@ -7484,16 +5931,6 @@
 					},
 					{
 						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Twilight (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -7523,85 +5960,11 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Drow)",
-					"source": "PHB",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Elf (Zendikar) (Mul Daya Nation)",
-					"source": "PSZ",
-					"baseName": "Elf (Zendikar)",
-					"baseSource": "PSZ"
-				},
-				{
-					"name": "Half-Elf (Drow Descent)",
-					"source": "SCAG",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling",
-					"source": "PHB",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Variant)",
-					"source": "SCAG",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Levistus)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Asmodeus)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Levistus)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Asmodeus)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Variant)",
-					"source": "SCAG",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Illuminate",
-			"source": "MOD",
+			"source": "PHB",
 			"page": 230,
 			"srd": true,
 			"level": 3,
@@ -7694,26 +6057,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undying Light (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Celestial",
 							"source": "XGE"
 						}
@@ -7729,13 +6072,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Aasimar",
-					"source": "DMG"
-				}
-			]
+			}
 		},
 		{
 			"name": "Delayed Blast Fireball",
@@ -7862,11 +6199,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Sorcerer",
 						"source": "PHB",
@@ -7940,16 +6273,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
 							"name": "Cleric",
 							"source": "PHB"
 						},
@@ -7969,13 +6292,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Gruul Anarch",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Detect Poison and Disease",
@@ -8037,21 +6354,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Detection)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Detect Thoughts",
@@ -8131,26 +6434,6 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Archivist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Aberrant Mind (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
 							"name": "Sorcerer",
 							"source": "PHB"
 						},
@@ -8160,39 +6443,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gith (Githzerai)",
-					"source": "UAEladrinAndGith",
-					"baseName": "Gith",
-					"baseSource": "UAEladrinAndGith"
-				},
-				{
-					"name": "Gith (Githzerai)",
-					"source": "MTF",
-					"baseName": "Gith",
-					"baseSource": "MTF"
-				},
-				{
-					"name": "Tiefling (Dispater)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Half-Elf (Mark of Detection)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Dimension Door",
@@ -8294,37 +6545,9 @@
 							"name": "Fey Wanderer",
 							"source": "TCE"
 						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Spell-less)",
-							"source": "UAModifyingClasses"
-						},
-						"subclass": {
-							"name": "Fey Wanderer",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Fey Wanderer",
-							"source": "TCE"
-						}
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Human (Mark of Passage)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
 			"hasFluffImages": true
 		},
 		{
@@ -8387,14 +6610,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -8411,48 +6626,8 @@
 					},
 					{
 						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ambition (PSA)",
-							"source": "PSA"
-						}
-					},
-					{
-						"class": {
 							"name": "Ranger",
 							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Deep Stalker (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Gloom Stalker",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Deep Stalker Conclave",
-							"source": "UATheRangerRevised"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
 						},
 						"subclass": {
 							"name": "Gloom Stalker",
@@ -8461,54 +6636,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Firbolg",
-					"source": "VGM"
-				},
-				{
-					"name": "Tiefling (Dispater)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Glasya)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Dispater)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Glasya)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Hexblood",
-					"source": "VRGR",
-					"baseName": "Hexblood",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Mask of Many Faces",
@@ -8736,26 +6863,6 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Archivist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Aberrant Mind (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
 							"name": "Sorcerer",
 							"source": "PHB"
 						},
@@ -8765,13 +6872,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Rakdos Cultist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Divination",
@@ -8857,16 +6958,8 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
+					
 					{
 						"name": "Druid",
 						"source": "PHB",
@@ -8878,37 +6971,7 @@
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Detection)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Half-Orc (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Half-Orc",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				},
-				{
-					"name": "Izzet Engineer",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Divine Favor",
@@ -9156,26 +7219,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest v2 (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Conquest",
 							"source": "XGE"
 						}
@@ -9192,32 +7235,14 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Ranger",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Handling)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Gruul Anarch",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Dream",
@@ -9294,16 +7319,6 @@
 					},
 					{
 						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Twilight (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -9313,15 +7328,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Druidcraft",
@@ -9383,35 +7390,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Lotusden)",
-					"source": "EGW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Fairy",
-					"source": "WBtW"
-				},
-				{
-					"name": "Halfling (Lotusden)",
-					"source": "EGW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				},
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Earthquake",
@@ -9620,14 +7599,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -9644,36 +7615,6 @@
 					},
 					{
 						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Primeval Guardian (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Primeval Guardian (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Order (UA)",
-							"source": "UAOrderDomain"
-						}
-					},
-					{
-						"class": {
 							"name": "Paladin",
 							"source": "PHB"
 						},
@@ -9681,29 +7622,11 @@
 							"name": "Glory",
 							"source": "TCE"
 						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Heroism (UA)",
-							"source": "UABardAndPaladin"
-						}
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
+					
 					{
 						"name": "Ranger",
 						"source": "PHB",
@@ -9715,13 +7638,7 @@
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Enlarge/Reduce",
@@ -9797,51 +7714,15 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Hill"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					}
+					
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -9853,31 +7734,7 @@
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Dwarf (Duergar)",
-					"source": "SCAG",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Dwarf (Duergar)",
-					"source": "MTF",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Fairy",
-					"source": "WBtW"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Ensnaring Strike",
@@ -9954,13 +7811,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Entangle",
@@ -10021,65 +7872,17 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Primeval Guardian (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Primeval Guardian (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Stone"
-						}
-					}
+					
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Ranger",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Lotusden)",
-					"source": "EGW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Etherealness",
@@ -10161,16 +7964,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Twilight (UA)",
-							"source": "UADruid"
-						}
-					}
+					
 				]
 			}
 		},
@@ -10226,54 +8020,13 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Treachery (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Heroism (UA)",
-							"source": "UABardAndPaladin"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Passage)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Eyebite",
@@ -10412,28 +8165,11 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Forge (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -10445,15 +8181,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Making)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Faerie Fire",
@@ -10513,10 +8241,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -10548,36 +8272,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Twilight (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Swarmkeeper (UA)",
-							"source": "UAFighterRangerRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Swarmkeeper (UA)",
-							"source": "UAFighterRangerRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Twilight",
 							"source": "TCE"
 						}
@@ -10591,59 +8285,9 @@
 							"name": "Swarmkeeper",
 							"source": "TCE"
 						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Spell-less)",
-							"source": "UAModifyingClasses"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Drow)",
-					"source": "PHB",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Half-Elf (Drow Descent)",
-					"source": "SCAG",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Half-Orc (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Half-Orc",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Fairy",
-					"source": "WBtW"
-				}
-			]
+			}
 		},
 		{
 			"name": "False Life",
@@ -10705,14 +8349,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -10743,38 +8379,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Grave",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
 						}
 					},
 					{
@@ -10870,26 +8476,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest v2 (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Conquest",
 							"source": "XGE"
 						}
@@ -10903,25 +8489,9 @@
 							"name": "Gloom Stalker",
 							"source": "XGE"
 						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Gloom Stalker",
-							"source": "XGE"
-						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Rakdos Cultist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Feather Fall",
@@ -10978,35 +8548,14 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Seeker (UA)",
-							"source": "UATheFaithful"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Storm)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Feeblemind",
@@ -11165,26 +8714,6 @@
 						"subclass": {
 							"name": "Undying",
 							"source": "SCAG"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
 						}
 					}
 				]
@@ -11489,63 +9018,12 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undying Light (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Zeal (PSA)",
-							"source": "PSA"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Wildfire (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
 						"subclass": {
 							"name": "Battle Smith",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer (UA)",
-							"source": "UA2020SubclassesPt3"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Efreeti"
 						}
 					},
 					{
@@ -11571,16 +9049,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -11591,16 +9059,8 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
+					
 					{
 						"name": "Druid",
 						"source": "PHB",
@@ -11682,26 +9142,14 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Sorcerer",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Mephistopheles)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Flame Strike",
@@ -11810,59 +9258,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undying Light (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Celestial",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Zeal (PSA)",
-							"source": "PSA"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Wildfire (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Efreeti"
 						}
 					},
 					{
@@ -11888,16 +9285,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -11906,21 +9293,8 @@
 							"source": "TCE"
 						}
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Paladin",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Boros Legionnaire",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Flaming Sphere",
@@ -12012,39 +9386,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undying Light (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Celestial",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Fire"
 						}
 					},
 					{
@@ -12069,24 +9412,14 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Sorcerer",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Rakdos Cultist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Flesh to Stone",
@@ -12155,16 +9488,8 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
+					
 					{
 						"name": "Druid",
 						"source": "PHB",
@@ -12241,14 +9566,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -12350,48 +9667,6 @@
 					},
 					{
 						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Cloud"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Marid"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Storm (UA)",
-							"source": "UAWaterborneAdventures"
-						}
-					},
-					{
-						"class": {
 							"name": "Warlock",
 							"source": "PHB"
 						},
@@ -12400,31 +9675,9 @@
 							"source": "TCE",
 							"subSubclass": "Marid"
 						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Triton",
-					"source": "VGM"
-				},
-				{
-					"name": "Half-Elf (Mark of Storm)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Forbiddance",
@@ -12554,13 +9807,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			}
 		},
@@ -12626,14 +9872,6 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -12748,16 +9986,6 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Heroism (UA)",
-							"source": "UABardAndPaladin"
-						}
-					},
-					{
-						"class": {
 							"name": "Sorcerer",
 							"source": "PHB"
 						},
@@ -12768,24 +9996,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Human (Mark of Passage)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				},
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Trickster's Escape",
@@ -12851,56 +10061,9 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Psionics (UA)",
-							"source": "UAFighterRogueWizard"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Eladrin)",
-					"source": "UAEladrinAndGith",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Siren",
-					"source": "PSX"
-				},
-				{
-					"name": "Tiefling (Fierna)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Fierna)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				},
-				{
-					"name": "Orzhov Representative",
-					"source": "GGR"
-				},
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Gaseous Form",
@@ -12957,14 +10120,6 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -12981,52 +10136,12 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Treachery (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Spores (UA)",
-							"source": "UAThreeSubclasses"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
 						"subclass": {
 							"name": "Spores",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Swarmkeeper (UA)",
-							"source": "UAFighterRangerRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Swarmkeeper (UA)",
-							"source": "UAFighterRangerRogue"
 						}
 					},
 					{
@@ -13061,26 +10176,6 @@
 					},
 					{
 						"class": {
-							"name": "Ranger (Spell-less)",
-							"source": "UAModifyingClasses"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
 							"name": "Monk",
 							"source": "PHB"
 						},
@@ -13090,17 +10185,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				},
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Gate",
@@ -13166,11 +10251,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Warlock",
 						"source": "PHB",
@@ -13231,16 +10312,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -13260,24 +10332,9 @@
 							"name": "Spores",
 							"source": "TCE"
 						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Spores (UA)",
-							"source": "UAThreeSubclasses"
-						}
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Paladin",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
 					{
 						"name": "Paladin",
 						"source": "PHB",
@@ -13500,64 +10557,13 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Deep Stalker (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Deep Stalker Conclave",
-							"source": "UATheRangerRevised"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Clockwork Soul (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Dwarf (Mark of Warding)",
-					"source": "ERLW",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Izzet Engineer",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Grease",
@@ -13613,20 +10619,12 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Sorcerer",
 						"source": "PHB",
@@ -13717,93 +10715,12 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Treachery (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Deep Stalker (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
 							"name": "Ranger",
 							"source": "PHB"
 						},
 						"subclass": {
 							"name": "Gloom Stalker",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Deep Stalker Conclave",
-							"source": "UATheRangerRevised"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Gloom Stalker",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Twilight (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer (UA)",
-							"source": "UA2020SubclassesPt3"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Djinni"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
 						}
 					},
 					{
@@ -13853,31 +10770,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Djinni"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Undead",
 							"source": "VRGR"
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Greater Restoration",
@@ -13943,10 +10841,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -13958,38 +10852,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Celestial",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Love (UA)",
-							"source": "UA2020SubclassesPt2"
 						}
 					},
 					{
@@ -14017,23 +10881,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Ranger",
-						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Healing)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Guardian of Faith",
@@ -14131,36 +10982,6 @@
 					},
 					{
 						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Protection (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Solidarity (PSA)",
-							"source": "PSA"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
 							"name": "Warlock",
 							"source": "PHB"
 						},
@@ -14168,27 +10989,9 @@
 							"name": "Celestial",
 							"source": "XGE"
 						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Human (Mark of Sentinel)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
 			"hasFluffImages": true
 		},
 		{
@@ -14286,16 +11089,6 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Heroism (UA)",
-							"source": "UABardAndPaladin"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -14305,13 +11098,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Boros Legionnaire",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Gust of Wind",
@@ -14391,48 +11178,6 @@
 					},
 					{
 						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Storm"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Lurker in the Deep (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Djinni"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Storm (UA)",
-							"source": "UAWaterborneAdventures"
-						}
-					},
-					{
-						"class": {
 							"name": "Warlock",
 							"source": "PHB"
 						},
@@ -14454,17 +11199,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Djinni"
-						}
-					},
-					{
-						"class": {
 							"name": "Monk",
 							"source": "PHB"
 						},
@@ -14475,30 +11209,14 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Ranger",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Triton",
-					"source": "VGM"
-				},
-				{
-					"name": "Half-Elf (Mark of Storm)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Hallow",
@@ -14655,27 +11373,9 @@
 							"name": "Fiend",
 							"source": "PHB"
 						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Watchers (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Hallucinatory Terrain",
@@ -14763,15 +11463,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Harm",
@@ -14885,14 +11577,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -14916,16 +11600,6 @@
 						"subclass": {
 							"name": "Vengeance",
 							"source": "PHB"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Treachery (UA)",
-							"source": "UAPaladin"
 						}
 					},
 					{
@@ -14960,16 +11634,6 @@
 					},
 					{
 						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Horizon Walker",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
 							"name": "Paladin",
 							"source": "PHB"
 						},
@@ -14987,25 +11651,9 @@
 							"name": "Land",
 							"source": "PHB"
 						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Heroism (UA)",
-							"source": "UABardAndPaladin"
-						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Rakdos Cultist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Heal",
@@ -15172,15 +11820,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Healing)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Hellish Rebuke",
@@ -15255,39 +11895,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling",
-					"source": "PHB",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Variant)",
-					"source": "SCAG",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Asmodeus)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Asmodeus)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Rakdos Cultist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Heroes' Feast",
@@ -15349,11 +11957,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -15428,27 +12032,8 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Order (UA)",
-							"source": "UAOrderDomain"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Hill"
-						}
-					},
+					
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -15461,42 +12046,12 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Battle Smith",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
 						"subclass": {
 							"name": "Battle Smith",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Love (UA)",
-							"source": "UA2020SubclassesPt2"
 						}
 					},
 					{
@@ -15520,13 +12075,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Boros Legionnaire",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Hex",
@@ -15593,20 +12142,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Elf (Zendikar) (Mul Daya Nation)",
-					"source": "PSZ",
-					"baseName": "Elf (Zendikar)",
-					"baseSource": "PSZ"
-				},
-				{
-					"name": "Hexblood",
-					"source": "VRGR",
-					"baseName": "Hexblood",
-					"baseSource": "PHB"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Relentless Hex",
@@ -15734,38 +12269,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Redemption (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Redemption",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Love (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Watchers (UA)",
-							"source": "UA2020SubclassesPt1"
 						}
 					},
 					{
@@ -15782,16 +12287,6 @@
 						"class": {
 							"name": "Ranger",
 							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Monster Slayer",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
 						},
 						"subclass": {
 							"name": "Monster Slayer",
@@ -15925,26 +12420,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest v2 (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Conquest",
 							"source": "XGE"
 						}
@@ -15955,39 +12430,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Redemption (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Redemption",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Order (UA)",
-							"source": "UAOrderDomain"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Frost"
 						}
 					},
 					{
@@ -16021,13 +12465,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Holy Aura",
@@ -16150,16 +12588,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Aberrant Mind (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Sorcerer",
@@ -16246,21 +12675,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Orc (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Half-Orc",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Hypnotic Pattern",
@@ -16330,16 +12745,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Redemption (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Paladin",
@@ -16348,36 +12754,6 @@
 						"subclass": {
 							"name": "Redemption",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Archivist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Love (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer (UA)",
-							"source": "UA2020SubclassesPt3"
 						}
 					},
 					{
@@ -16496,26 +12872,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Artillerist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
@@ -16532,16 +12888,6 @@
 						"subclass": {
 							"name": "Land",
 							"source": "PHB"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Storm (UA)",
-							"source": "UAWaterborneAdventures"
 						}
 					}
 				]
@@ -16606,21 +12952,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Orzhov Representative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Imprisonment",
@@ -16968,16 +13300,6 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
 							"name": "Cleric",
 							"source": "PHB"
 						},
@@ -16992,78 +13314,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Primeval Guardian (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Primeval Guardian (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Swarmkeeper (UA)",
-							"source": "UAFighterRangerRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Swarmkeeper (UA)",
-							"source": "UAFighterRangerRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Spell-less)",
-							"source": "UAModifyingClasses"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
 							"name": "Swarmkeeper",
 							"source": "TCE"
 						}
 					}
 				]
 			},
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				}
-			],
 			"hasFluffImages": true
 		},
 		{
@@ -17139,14 +13395,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -17164,37 +13412,6 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Treachery (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Cloud"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Twilight (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -17205,50 +13422,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Dwarf (Duergar)",
-					"source": "SCAG",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Dwarf (Duergar)",
-					"source": "MTF",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Dispater)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Glasya)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Glasya)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Shroud of Shadow",
@@ -17338,47 +13511,9 @@
 							"name": "Undying",
 							"source": "SCAG"
 						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Seeker (UA)",
-							"source": "UATheFaithful"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Archivist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Detection)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Lesser Restoration",
@@ -17439,14 +13574,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -17477,16 +13604,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Celestial",
 							"source": "XGE"
 						}
@@ -17502,13 +13619,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Aasimar",
-					"source": "DMG"
-				}
-			]
+			}
 		},
 		{
 			"name": "Light",
@@ -17572,25 +13683,12 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undying Light (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Warlock",
@@ -17612,37 +13710,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Aasimar (Fallen)",
-					"source": "VGM",
-					"baseName": "Aasimar",
-					"baseSource": "VGM"
-				},
-				{
-					"name": "Aasimar (Protector)",
-					"source": "VGM",
-					"baseName": "Aasimar",
-					"baseSource": "VGM"
-				},
-				{
-					"name": "Aasimar (Scourge)",
-					"source": "VGM",
-					"baseName": "Aasimar",
-					"baseSource": "VGM"
-				},
-				{
-					"name": "Aasimar",
-					"source": "DMG"
-				},
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Lightning Bolt",
@@ -17718,36 +13786,6 @@
 							"name": "Land",
 							"source": "PHB",
 							"subSubclass": "Mountain"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "City (UA)",
-							"source": "UAModernMagic"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Lurker in the Deep (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer (UA)",
-							"source": "UA2020SubclassesPt3"
 						}
 					},
 					{
@@ -17838,32 +13876,9 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Wildfire (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Orc (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Half-Orc",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Locate Object",
@@ -17932,42 +13947,9 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Seeker (UA)",
-							"source": "UATheFaithful"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Archivist",
-							"source": "UAArtificerRevisited"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Orc (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Half-Orc",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Mage Armor",
@@ -18024,14 +14006,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Dwarf (Mark of Warding)",
-					"source": "ERLW",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Armor of Shadows",
@@ -18097,59 +14071,16 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Fighter",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Psychic Warrior (UA)",
-							"source": "UAFighterRogueWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Psionics (UA)",
-							"source": "UAFighterRogueWizard"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Ranger",
 							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Spell-less)",
-							"source": "UAModifyingClasses"
-						},
-						"subclass": {
-							"name": "Swarmkeeper",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
 						},
 						"subclass": {
 							"name": "Swarmkeeper",
@@ -18167,63 +14098,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gith (Githyanki)",
-					"source": "UAEladrinAndGith",
-					"baseName": "Gith",
-					"baseSource": "UAEladrinAndGith"
-				},
-				{
-					"name": "Gith (Githzerai)",
-					"source": "UAEladrinAndGith",
-					"baseName": "Gith",
-					"baseSource": "UAEladrinAndGith"
-				},
-				{
-					"name": "Gith (Githyanki)",
-					"source": "MTF",
-					"baseName": "Gith",
-					"baseSource": "MTF"
-				},
-				{
-					"name": "Gith (Githzerai)",
-					"source": "MTF",
-					"baseName": "Gith",
-					"baseSource": "MTF"
-				},
-				{
-					"name": "Tiefling (Mammon)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Mephistopheles)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Mammon)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Mephistopheles)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Magic Circle",
@@ -18337,50 +14212,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Monster Slayer (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Monster Slayer",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Monster Slayer (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
 							"name": "Monster Slayer",
 							"source": "XGE"
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Dwarf (Mark of Warding)",
-					"source": "ERLW",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Magic Mouth",
@@ -18441,23 +14278,11 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Magic Weapon",
@@ -18517,14 +14342,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -18547,36 +14364,6 @@
 						"subclass": {
 							"name": "War",
 							"source": "PHB"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Forge (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Stone (UA)",
-							"source": "UASorcerer"
 						}
 					},
 					{
@@ -18611,11 +14398,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Ranger",
 						"source": "PHB",
@@ -18627,15 +14410,7 @@
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Making)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Major Image",
@@ -18712,15 +14487,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Mass Cure Wounds",
@@ -18819,16 +14586,6 @@
 						"subclass": {
 							"name": "Solidarity (PSA)",
 							"source": "PSA"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Battle Smith",
-							"source": "UAArtificerRevisited"
 						}
 					},
 					{
@@ -18987,16 +14744,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Order (UA)",
-							"source": "UAOrderDomain"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -19019,26 +14767,14 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Healing)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Meld into Stone",
@@ -19111,17 +14847,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Dao"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -19140,37 +14865,17 @@
 							"source": "TCE",
 							"subSubclass": "Dao"
 						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Ranger",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Acid Arrow",
@@ -19239,16 +14944,6 @@
 							"name": "Land",
 							"source": "PHB",
 							"subSubclass": "Swamp"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Alchemist",
-							"source": "UAArtificerRevisited"
 						}
 					},
 					{
@@ -19330,23 +15025,11 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Making)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Message",
@@ -19404,47 +15087,14 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Psionics (UA)",
-							"source": "UAFighterRogueWizard"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Meteor Swarm",
@@ -19623,17 +15273,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Cloud"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Wizard",
@@ -19655,39 +15295,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Eladrin)",
-					"source": "UAEladrinAndGith",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Gnome (Forest)",
-					"source": "PHB",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Glasya)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Glasya)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Elf (Mark of Shadow)",
-					"source": "ERLW",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Mirage Arcane",
@@ -19822,32 +15430,12 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Treachery (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
 							"name": "Cleric",
 							"source": "PHB"
 						},
 						"subclass": {
 							"name": "Ambition (PSA)",
 							"source": "PSA"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer (UA)",
-							"source": "UA2020SubclassesPt3"
 						}
 					},
 					{
@@ -19872,26 +15460,14 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Misty Step",
@@ -19987,36 +15563,6 @@
 					},
 					{
 						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Horizon Walker",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Fey Wanderer (UA)",
-							"source": "UA2020SubclassesPt3"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Fey Wanderer (UA)",
-							"source": "UA2020SubclassesPt3"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -20034,55 +15580,9 @@
 							"name": "Fey Wanderer",
 							"source": "TCE"
 						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Spell-less)",
-							"source": "UAModifyingClasses"
-						},
-						"subclass": {
-							"name": "Fey Wanderer",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Fey Wanderer",
-							"source": "TCE"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Eladrin; DMG)",
-					"source": "DMG",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Gith (Githyanki)",
-					"source": "UAEladrinAndGith",
-					"baseName": "Gith",
-					"baseSource": "UAEladrinAndGith"
-				},
-				{
-					"name": "Gith (Githyanki)",
-					"source": "MTF",
-					"baseName": "Gith",
-					"baseSource": "MTF"
-				},
-				{
-					"name": "Human (Mark of Passage)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Modify Memory",
@@ -20179,42 +15679,9 @@
 							"name": "Ambition (PSA)",
 							"source": "PSA"
 						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Archivist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Aberrant Mind (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Faithful Hound",
@@ -20269,26 +15736,10 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Dwarf (Mark of Warding)",
-					"source": "ERLW",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Private Sanctum",
@@ -20363,26 +15814,10 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Move Earth",
@@ -20531,36 +15966,12 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Watchers (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Watchers",
 							"source": "TCE"
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Detection)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Dimir Operative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Mask Aura",
@@ -20774,36 +16185,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Seeker (UA)",
-							"source": "UATheFaithful"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Treachery (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer (UA)",
-							"source": "UA2020SubclassesPt3"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
@@ -20934,36 +16315,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Genie",
 							"source": "TCE"
 						}
@@ -21050,16 +16401,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Warlock",
@@ -21068,36 +16410,6 @@
 						"subclass": {
 							"name": "Hexblade",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Archivist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
 						}
 					},
 					{
@@ -21112,11 +16424,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -21348,16 +16656,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Wildfire (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Land",
 							"source": "PHB"
 						}
@@ -21373,17 +16671,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				},
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Poison Spray",
@@ -21460,21 +16748,11 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Yuan-ti Pureblood",
-					"source": "VGM"
-				}
-			]
+			}
 		},
 		{
 			"name": "Power Word Kill",
@@ -21671,26 +16949,14 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Paladin",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Paladin",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Healing)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Prestidigitation",
@@ -21761,10 +17027,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -21781,21 +17043,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Prismatic Spray",
@@ -21920,11 +17168,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -22056,11 +17300,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -22135,25 +17375,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Genasi (Fire)",
-					"source": "EEPC",
-					"baseName": "Genasi",
-					"baseSource": "EEPC"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Gruul Anarch",
-					"source": "GGR"
-				},
-				{
-					"name": "Izzet Engineer",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Programmed Illusion",
@@ -22277,13 +17499,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
 			}
 		},
@@ -22358,14 +17573,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -22407,26 +17614,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Forge (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Protection (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Strength (PSA)",
 							"source": "PSA"
 						}
@@ -22439,36 +17626,6 @@
 						"subclass": {
 							"name": "Forge",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Horizon Walker (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Horizon Walker (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Noble Genie (UA)",
-							"source": "UA2020SubclassesPt1"
 						}
 					},
 					{
@@ -22493,16 +17650,6 @@
 					},
 					{
 						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Heroism (UA)",
-							"source": "UABardAndPaladin"
-						}
-					},
-					{
-						"class": {
 							"name": "Sorcerer",
 							"source": "PHB"
 						},
@@ -22512,15 +17659,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Sentinel)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Protection from Poison",
@@ -22584,14 +17723,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -22605,25 +17736,9 @@
 							"name": "Strength (PSA)",
 							"source": "PSA"
 						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Protection (UA)",
-							"source": "UAClericDivineDomains"
-						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Purify Food and Drink",
@@ -22683,26 +17798,9 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Alchemist",
-							"source": "UAArtificerRevisited"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Raise Dead",
@@ -22794,38 +17892,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Grave",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Alchemist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Wildfire (UA)",
-							"source": "UAClericDruidWizard"
 						}
 					},
 					{
@@ -22892,26 +17960,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Aberrant Mind (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -22934,11 +17983,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Bard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Bard",
 						"source": "PHB",
@@ -23022,16 +18067,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Ambition (PSA)",
 							"source": "PSA"
 						}
@@ -23045,39 +18080,9 @@
 							"name": "Grave",
 							"source": "XGE"
 						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Redemption (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Spores (UA)",
-							"source": "UAThreeSubclasses"
-						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				},
-				{
-					"name": "Orzhov Representative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Ray of Frost",
@@ -23145,42 +18150,14 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Frost"
-						}
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Levistus)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Levistus)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Ray of Sickness",
@@ -23271,16 +18248,6 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Alchemist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
@@ -23288,39 +18255,9 @@
 							"name": "Alchemist",
 							"source": "TCE"
 						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Baalzebul)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Baalzebul)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Regenerate",
@@ -23561,14 +18498,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -23581,26 +18510,6 @@
 						"subclass": {
 							"name": "Life",
 							"source": "PHB"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
 						}
 					},
 					{
@@ -23635,16 +18544,8 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
+					
 					{
 						"name": "Druid",
 						"source": "PHB",
@@ -23711,14 +18612,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -23745,27 +18638,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Dao"
-						}
-					},
-					{
-						"class": {
 							"name": "Cleric",
 							"source": "PHB"
 						},
@@ -23787,33 +18659,12 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Dao"
-						}
-					},
-					{
-						"class": {
 							"name": "Monk",
 							"source": "PHB"
 						},
 						"subclass": {
 							"name": "Open Hand",
 							"source": "PHB"
-						}
-					},
-					{
-						"class": {
-							"name": "Monk",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Tranquility (UA)",
-							"source": "UAMonk"
 						}
 					}
 				]
@@ -23905,43 +18756,12 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Artillerist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Druid",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Wildfire (UA)",
-							"source": "UAClericDruidWizard"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
 						"subclass": {
 							"name": "Artillerist",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Efreeti"
 						}
 					},
 					{
@@ -23957,16 +18777,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -23977,12 +18787,6 @@
 					}
 				]
 			},
-			"backgrounds": [
-				{
-					"name": "Boros Legionnaire",
-					"source": "GGR"
-				}
-			],
 			"hasFluffImages": true
 		},
 		{
@@ -24171,16 +18975,6 @@
 					},
 					{
 						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Psionics (UA)",
-							"source": "UAFighterRogueWizard"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -24259,26 +19053,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Forge (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Stone (UA)",
-							"source": "UASorcerer"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -24298,45 +19073,17 @@
 							"name": "Forge",
 							"source": "XGE"
 						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Battle Smith",
-							"source": "UAArtificerRevisited"
-						}
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Ranger",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Zariel)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Zariel)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "See Invisibility",
@@ -24389,10 +19136,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -24419,15 +19162,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Detection)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Seeming",
@@ -24512,49 +19247,8 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Deep Stalker (UA)",
-							"source": "UALightDarkUnderdark"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Gloom Stalker",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Deep Stalker Conclave",
-							"source": "UATheRangerRevised"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Gloom Stalker",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Djinni"
 						}
 					},
 					{
@@ -24566,16 +19260,6 @@
 							"name": "Genie",
 							"source": "TCE",
 							"subSubclass": "Djinni"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
 						}
 					}
 				]
@@ -24646,36 +19330,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Seeker (UA)",
-							"source": "UATheFaithful"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Aberrant Mind (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
 							"name": "Cleric",
 							"source": "PHB"
 						},
@@ -24695,21 +19349,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			],
-			"eldritchInvocations": [
-				{
-					"name": "Far Scribe",
-					"source": "UAClassFeatureVariants"
-				}
-			]
+			}
 		},
 		{
 			"name": "Sequester",
@@ -24934,42 +19574,12 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Artillerist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Lurker in the Deep (UA)",
-							"source": "UASorcererAndWarlock"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
 						"subclass": {
 							"name": "Artillerist",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer (UA)",
-							"source": "UA2020SubclassesPt3"
 						}
 					},
 					{
@@ -24993,13 +19603,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Gruul Anarch",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Shield",
@@ -25053,26 +19657,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Forge (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Warlock",
@@ -25081,26 +19666,6 @@
 						"subclass": {
 							"name": "Hexblade",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Redemption (UA)",
-							"source": "UAATrioOfSubclasses"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Artillerist",
-							"source": "UAArtificerRevisited"
 						}
 					},
 					{
@@ -25122,39 +19687,9 @@
 							"name": "Battle Smith",
 							"source": "TCE"
 						}
-					},
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer (UA)",
-							"source": "UA2020SubclassesPt3"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Gith (Githzerai)",
-					"source": "UAEladrinAndGith",
-					"baseName": "Gith",
-					"baseSource": "UAEladrinAndGith"
-				},
-				{
-					"name": "Gith (Githzerai)",
-					"source": "MTF",
-					"baseName": "Gith",
-					"baseSource": "MTF"
-				},
-				{
-					"name": "Human (Mark of Sentinel)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Shield of Faith",
@@ -25210,10 +19745,6 @@
 					{
 						"name": "Paladin",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer",
-						"source": "UAArtificer"
 					}
 				],
 				"fromSubclass": [
@@ -25236,27 +19767,9 @@
 							"name": "Strength (PSA)",
 							"source": "PSA"
 						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Sentinel)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Shillelagh",
@@ -25302,17 +19815,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Hill"
-						}
-					}
+					
 				]
 			}
 		},
@@ -25768,26 +20271,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Protection (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Order (UA)",
-							"source": "UAOrderDomain"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Order",
 							"source": "TCE"
 						}
@@ -25866,10 +20349,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -25896,27 +20375,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Shadar-kai)",
-					"source": "UAElfSubraces",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Golgari Agent",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Speak with Animals",
@@ -26007,20 +20466,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Human (Mark of Handling)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Gruul Anarch",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Beast Speech",
@@ -26130,37 +20575,13 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Undead (UA)",
-							"source": "UA2020SubclassesPt4"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Undead",
 							"source": "VRGR"
 						}
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Wizard",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Wizard",
 						"source": "PHB",
@@ -26168,12 +20589,6 @@
 					}
 				]
 			},
-			"backgrounds": [
-				{
-					"name": "Orzhov Representative",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Whispers of the Grave",
@@ -26236,27 +20651,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Orc (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Half-Orc",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Finding)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Spike Growth",
@@ -26352,28 +20747,6 @@
 					},
 					{
 						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Giant Soul (UA)",
-							"source": "UAGiantSoulSorcerer",
-							"subSubclass": "Stone"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Dao"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -26392,27 +20765,9 @@
 							"source": "TCE",
 							"subSubclass": "Dao"
 						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Lotusden)",
-					"source": "EGW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Spirit Guardians",
@@ -26504,21 +20859,8 @@
 							"source": "SCAG"
 						}
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Paladin",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Orzhov Representative",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Spiritual Weapon",
@@ -26607,36 +20949,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Raven Queen (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest (UA)",
-							"source": "UAPaladin"
-						}
-					},
-					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Conquest v2 (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
 							"name": "Paladin",
 							"source": "PHB"
 						},
@@ -26696,16 +21008,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Warlock",
@@ -26714,26 +21017,6 @@
 						"subclass": {
 							"name": "Hexblade",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Stone (UA)",
-							"source": "UASorcerer"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Battle Smith",
-							"source": "UAArtificerRevisited"
 						}
 					}
 				]
@@ -26835,16 +21118,6 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Alchemist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -26904,14 +21177,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -26940,17 +21205,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Dao"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -26969,27 +21223,9 @@
 							"source": "TCE",
 							"subSubclass": "Dao"
 						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Making)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Sunbeam",
@@ -27282,11 +21518,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Druid",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Druid",
 						"source": "PHB",
@@ -27370,15 +21602,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Abyssal)",
-					"source": "UAThatOldBlackMagic",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Telekinesis",
@@ -27467,16 +21691,6 @@
 						"subclass": {
 							"name": "Great Old One",
 							"source": "PHB"
-						}
-					},
-					{
-						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Psionics (UA)",
-							"source": "UAFighterRogueWizard"
 						}
 					},
 					{
@@ -27779,62 +21993,20 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Horizon Walker (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Horizon Walker",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Horizon Walker (UA)",
-							"source": "UARangerAndRogue"
-						}
-					},
-					{
-						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
 							"name": "Horizon Walker",
 							"source": "XGE"
 						}
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Warlock",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Passage)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Floating Disk",
@@ -27888,27 +22060,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Tiefling (Mammon)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Mammon)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Human (Mark of Making)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Thaumaturgy",
@@ -27966,81 +22118,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Elf (Shadar-kai)",
-					"source": "UAElfSubraces",
-					"baseName": "Elf",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Zariel)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Variant)",
-					"source": "SCAG",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Variant)",
-					"source": "SCAG",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Asmodeus)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Baalzebul)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling",
-					"source": "PHB",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Zariel)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Asmodeus)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Baalzebul)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Dispater)",
-					"source": "MTF",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				},
-				{
-					"name": "Tiefling (Dispater)",
-					"source": "UAFiendishOptions",
-					"baseName": "Tiefling",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Thorn Whip",
@@ -28104,10 +22182,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -28168,16 +22242,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Stone (UA)",
-							"source": "UASorcerer"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Cleric",
@@ -28253,33 +22318,9 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Archivist",
-							"source": "UAArtificerRevisited"
-						}
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
+					
 				]
-			},
-			"races": [
-				{
-					"name": "Gnome (Mark of Scribing)",
-					"source": "ERLW",
-					"baseName": "Gnome",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Transport via Plants",
@@ -28651,21 +22692,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Halfling (Mark of Hospitality)",
-					"source": "ERLW",
-					"baseName": "Halfling",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Izzet Engineer",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Vampiric Touch",
@@ -28752,16 +22779,6 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Grave (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Ambition (PSA)",
 							"source": "PSA"
 						}
@@ -28778,11 +22795,7 @@
 					}
 				],
 				"fromClassListVariant": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
+					
 					{
 						"name": "Sorcerer",
 						"source": "PHB",
@@ -28888,26 +22901,6 @@
 					},
 					{
 						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Forge (UA)",
-							"source": "UAClericDivineDomains"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Celestial (UA)",
-							"source": "UARevisedClassOptions"
-						}
-					},
-					{
-						"class": {
 							"name": "Warlock",
 							"source": "PHB"
 						},
@@ -28924,16 +22917,6 @@
 						"subclass": {
 							"name": "Forge",
 							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Artillerist",
-							"source": "UAArtificerRevisited"
 						}
 					},
 					{
@@ -28957,17 +22940,7 @@
 						}
 					}
 				]
-			},
-			"backgrounds": [
-				{
-					"name": "Boros Legionnaire",
-					"source": "GGR"
-				},
-				{
-					"name": "Rakdos Cultist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Wall of Stone",
@@ -29037,10 +23010,6 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
 						"name": "Artificer",
 						"source": "TCE"
 					}
@@ -29070,17 +23039,6 @@
 					},
 					{
 						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Dao"
-						}
-					},
-					{
-						"class": {
 							"name": "Druid",
 							"source": "PHB"
 						},
@@ -29097,17 +23055,6 @@
 						"subclass": {
 							"name": "Genie",
 							"source": "TCE",
-							"subSubclass": "Dao"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
 							"subSubclass": "Dao"
 						}
 					},
@@ -29269,42 +23216,12 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Battle Smith",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
 						"subclass": {
 							"name": "Battle Smith",
 							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Unity (UA)",
-							"source": "UA2020SubclassesPt2"
-						}
-					},
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Love (UA)",
-							"source": "UA2020SubclassesPt2"
 						}
 					},
 					{
@@ -29322,34 +23239,10 @@
 					{
 						"name": "Paladin",
 						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Ranger",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					},
-					{
-						"name": "Paladin",
-						"source": "PHB",
 						"definedInSource": "TCE"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Human (Mark of Sentinel)",
-					"source": "ERLW",
-					"baseName": "Human",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Selesnya Initiate",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Water Breathing",
@@ -29417,14 +23310,6 @@
 					},
 					{
 						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
-					},
-					{
-						"name": "Artificer",
 						"source": "TCE"
 					}
 				],
@@ -29452,17 +23337,7 @@
 					}
 				]
 			},
-			"backgrounds": [
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			],
 			"eldritchInvocations": [
-				{
-					"name": "Sea Twins' Gift",
-					"source": "UAWarlockAndWizard"
-				},
 				{
 					"name": "Gift of the Depths",
 					"source": "XGE"
@@ -29533,14 +23408,6 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
-					},
-					{
-						"name": "Artificer",
-						"source": "UAArtificer"
-					},
-					{
-						"name": "Artificer (Revisited)",
-						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -29712,16 +23579,6 @@
 					},
 					{
 						"class": {
-							"name": "Artificer (Revisited)",
-							"source": "UAArtificerRevisited"
-						},
-						"subclass": {
-							"name": "Artillerist",
-							"source": "UAArtificerRevisited"
-						}
-					},
-					{
-						"class": {
 							"name": "Artificer",
 							"source": "TCE"
 						},
@@ -29736,48 +23593,13 @@
 							"source": "PHB"
 						},
 						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited",
-							"subSubclass": "Djinni"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
 							"name": "Genie",
 							"source": "TCE",
 							"subSubclass": "Djinni"
 						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
-						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Half-Elf (Mark of Storm)",
-					"source": "ERLW",
-					"baseName": "Half-Elf",
-					"baseSource": "PHB"
-				}
-			],
-			"backgrounds": [
-				{
-					"name": "Simic Scientist",
-					"source": "GGR"
-				}
-			]
+			}
 		},
 		{
 			"name": "Word of Recall",
@@ -29877,16 +23699,7 @@
 					}
 				],
 				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Hexblade (UA)",
-							"source": "UAWarlockAndWizard"
-						}
-					},
+					
 					{
 						"class": {
 							"name": "Warlock",
@@ -29896,23 +23709,6 @@
 							"name": "Hexblade",
 							"source": "XGE"
 						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Stone (UA)",
-							"source": "UASorcerer"
-						}
-					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Cleric",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
 					}
 				]
 			}
@@ -31916,23 +25712,8 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromClassListVariant": [
-					{
-						"name": "Warlock",
-						"source": "PHB",
-						"definedInSource": "UAClassFeatureVariants"
-					}
 				]
-			},
-			"races": [
-				{
-					"name": "Dwarf (Mark of Warding)",
-					"source": "ERLW",
-					"baseName": "Dwarf",
-					"baseSource": "PHB"
-				}
-			]
+			}
 		},
 		{
 			"name": "Moonbeam",
@@ -32128,15 +25909,7 @@
 						}
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Genasi (Earth)",
-					"source": "EEPC",
-					"baseName": "Genasi",
-					"baseSource": "EEPC"
-				}
-			]
+			}
 		},
 		{
 			"name": "Spider Climb",
@@ -36881,13 +30654,7 @@
 						"source": "PHB"
 					}
 				]
-			},
-			"races": [
-				{
-					"name": "Triton",
-					"source": "VGM"
-				}
-			]
+			}
 		},
 		{
 			"name": "Wall of Sand",
@@ -38498,16 +32265,6 @@
 					},
 					{
 						"class": {
-							"name": "Ranger (Revised)",
-							"source": "UATheRangerRevised"
-						},
-						"subclass": {
-							"name": "Monster Slayer",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
 							"name": "Sorcerer",
 							"source": "PHB"
 						},
@@ -39141,14 +32898,6 @@
 					}
 				]
 			},
-			"races": [
-				{
-					"name": "Genasi (Air)",
-					"source": "EEPC",
-					"baseName": "Genasi",
-					"baseSource": "EEPC"
-				}
-			],
 			"eldritchInvocations": [
 				{
 					"name": "Ascendant Step",
