@@ -6700,7 +6700,7 @@
 											"name": "Religion",
 											"page": 178,
 											"entries": [
-												"Your Intelligence ({@skill Religion}) check measures your ability to recall lore about deities, rites and prayers, religious hierarchies, holy symbols, and the practices of secret cults."
+												"Your Wisdom ({@skill Religion}) check measures your ability to recall lore about religions, cults, deities, as well as beings related to the Celestial or Infernal Planes, as well as your ability to engage in religious tasks, such as performing rites."
 											],
 											"id": "12e"
 										},

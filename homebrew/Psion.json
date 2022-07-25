@@ -162,9 +162,9 @@
 				],
 				"skills": [
 					{
-						"psionics": true,
 						"choose": {
 							"from": [
+								"psionics",
 								"deception",
 								"history",
 								"insight",

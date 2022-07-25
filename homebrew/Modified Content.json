@@ -17,12 +17,126 @@
 				"targetSchema": "1"
 			}
 		],
+		"skills": {
+			"Network": [
+				"Network is a charisma-based skill that has replaced performance. Networking is essentially the skill of general socialization- the ability to quickly make acquaintances and contacts in a place and leverage them for your uses. You might be asked to roll a Network check when you are trying to trawl bars for information about a quest, or attempting to leverage your influence into an audience with the local authority."
+			],
+			"Occult": [
+				"Occult is an intelligence-based skill focused on studying the eldritch and otherworldly. It may be used for recalling knowledge about the occult, or when interacting with cult artifacts or rituals."
+			],
+			"Streetwise": [
+				"Streetwise is a dexterity-based skill that represents knowledge and familiarity with cities, towns, and otherwise making your way around crowded urban environments, as well as dealing with their rougher denizens. You might be asked to roll a Dexterity (Streetwise) check when trying to locate an underground black market or a local information dealer."
+			],
+			"Wreck": [
+				"Anybody can break things, but it takes some skill to break things {@i well}. Wreck is a strength-based skill that does pretty much what it sonuds like- it breaks things efficiently and while minimizing consequences. You might be called on to make a Strength (Wreck) check when busting down a door, but you might also make an Intelligence (Wreck) check to safely disable an active ritual device."
+			]
+			
+		},
 		"optionalFeatureTypes": {
 			"F:BR": "Fighter; Banneret Rallies"
 		},
 		"dateAdded": 1647935526,
 		"dateLastModified": 1647935526
 	},
+	"action": [
+		{
+			"name": "Analyze",
+			"source": "MOD",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"The best type of preparation is the kind that is done beforehand, but sometimes you need to learn some little information in the middle of combat. Perhaps you need to know whether a creature is resistant to fire damage before your mage blows a large spell slot. Perhaps you want to know if Dominate Monster is viable, or if it'll be shrugged off without issue.",
+				"You can use the Analyze action to learn some information about creatures you are fighting, though you must be able to see and hear them clearly, and must be within 60 feet of them, and must be actively fighting (i.e in initiative). The Analyze action represents gathering information through combat, rather than simply remembering pre-existing information.",
+				"When you take the Analyze action, you first declare what type of creature you are fighting- berast, undead, human, etc. You then roll the appropriate ability check based on creature type, as in the table below.",
+				{
+					"type": "table",
+					"caption": "Monster Types and Corresponding Knowledge Check",
+					"colLabels": [
+						"Type",
+						"Ability"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-center"
+					],
+					"rows": [
+						[
+							"Aberration",
+							"Arcana"
+						],
+						[
+							"Beast",
+							"Animal Handling"
+						],
+						[
+							"Celestial",
+							"Religion"
+						],
+						[
+							"Construct",
+							"Arcana"
+						],
+						[
+							"Dragon",
+							"History"
+						],
+						[
+							"Elemental",
+							"Arcana"
+						],
+						[
+							"Fey",
+							"Nature"
+						],
+						[
+							"Fiend",
+							"Religion"
+						],
+						[
+							"Giant",
+							"History"
+						],
+						[
+							"Humanoid",
+							"History"
+						],
+						[
+							"Monstrosity",
+							"Nature"
+						],
+						[
+							"Ooze",
+							"Nature"
+						],
+						[
+							"Plant",
+							"Nature"
+						],
+						[
+							"Undead",
+							"Religion"
+						]
+					]
+				},
+				"If you {@i incorrectly} determine the creature type- for example, if a creature is disguising its type- the information you obtain may be erroneous.",
+				"If you succeed on the check, you can learn one of the following pieces of information. You gain 1 additional piece of information for every 5 you roll above the check's DC. (So a roll of a 25 against a DC of 15 would earn you 3 pieces of information.)",
+				{
+					"type": "list",
+					"items": [
+						"Whether the monster is resistant, immune, or vulnerable to one damage type of your choice (including soft vulnerability)",
+						"Whether the monster is immune to one condition of your choice",
+						"Whether the monster possesses a sense of your choice (such as darkvision or blindsight), as well as either the range of that sense, or the organ responsible for that sense, if any",
+						"One condition the monster may impose, which the DM chooses at random"
+					]
+				},
+				"Alternatively, you may ask a single question about the monster that can be answerable with a yes/no response, though the DM is free to reject the question. If they do so, it doesn't count as using up your question."
+			]
+		}
+	],
 	"deity": [
 		{
 			"name": "The Weeping Sun",
@@ -5951,7 +6065,7 @@
 			"name": "Using Creature Statblocks for Players",
 			"source": "MOD",
 			"entries": [
-				"Sometimes, a feature will have you summon a creature to the field (such as the various Summon X spells), or will ask you to pick from a range of statblocks in some way (such as the {@spell Polymorph|MOD} spell or a druid's Wildshape.)",
+				"Sometimes, a feature will have you summon a creature to the field (such as the various Summon X spells), or will ask you to pick from a range of statblocks in some way (such as the {@spell polymorph|MOD} spell or a druid's Wildshape.)",
 				"If you are ever told to select from a range of creatures, assume you are limited to creatures included in the Monster Manual.",
 				"Additionally, you must prepare these abilities ahead of time- if you have a set statblock, you must let me know what it is so it can be imported into Foundry, and if you select from a range of statblocks, you should choose a selection of statblocks to cover your basic use cases so they can be pre-imported into Foundry.",
 				"Addendum: If a Monster Manual statblock is reprinted in Mordenkainen Presents: Monsters of the Multiverse, you should still use the original Monster Manual statblock."
@@ -5972,6 +6086,187 @@
 				"Not a homebrew rule, but a slightly obscure DMG rule. When placing a template that targets a point in space, the point of origin (as determined by Foundry) must be at an intersection of squares or hexes (that is, a corner).",
 				"This doesn't affect spells that originate from the self, like Lightning Bolt, Thunderwave, most cone spells, Spiritual Gardians, etc. It does affect things like Fireball, Moonbeam, etc.",
 				"Technically this is a slight deviation in that the point of origin for cubes is changed, but this is probably OK, in that Foundry's origin functions better than the DMG's origin when working on a grid."
+			]
+		},
+		{
+			"name": "Monster Design",
+			"source": "MOD",
+			"entries": [
+				"Monster design isn't a player-facing side of the game, and really, a player can (and, barring a few builds/spells, {@i should}) get through a campaign without ever having to look at a statblock.",
+				"However, understanding the general trend of 5e monsters {@i is} still very important for player decision-making. For example, the sheer number of creatures resistant to nonmagical bludgeoning, piercing, and slashing damage teaches more experienced players that acquiring a magical weapon for martials is very important for survival. Since I generally either tweak existing statblocks or homebrew them entirely according to my own design principles, I felt it was important to clarify what might be different than in base 5e.",
+				{
+					"type": "entries",
+					"name": "Resistances and Immunities",
+					"entries": [
+						"Personally, I have never quite liked \"resistance to physical damage from nonmagical weapons\". It's a clunky rule which, barring a small number of (frankly not very good) spells and a few subclasses/class features, places the viability of martials almost entirely into the hands of the DM. In base 5e, a martial {@i effectively} has no ability to circumvent resistances while maintaining a reasonable baseline of effectiveless. That is to say- there's no way for a fighter to turn their sword magical, and since 5e's design philosophy has eschewed magic item shops, there's no way for them to prepare long-term either.",
+						"On the other hand, casters have it easy- not only are elemental damage resistances generally {@i rarer}, but casters generally take far more than 1 elemental damage type anyway, rendering most resistances ineffective. {@i Which is good design}, really.",
+						"Meandering aside, my basic point is: {@b resistance and immunity to nonmagical bludgeoning, piericng, and slashing is largely getting scrapped}. Don't feel obligated to invest in abilities that make your weapon magical- it will have no greater intrinsic value. However, creatures may still be resistant to physical damage- which is something you can subvert by coating your weapons in certain materials, as per the {@variantrule FORGE|MOD} rules- which should be enough to pierce the resistances of whatever enemies you face most commonly. Though inventory space (and coinage) might be limited, it might be wise to invest in a lighter backup weapon for dealing with other types of creatures- the right tool for the right job, after all.",
+						"Additionally, expect to see {@i more} creatures with resistance or immunity to {@i some} but not {@i all} of the physical damage types. Expect to see this more commonly elsewhere. A good rule of thumb is that bludgeoning works better on hard/inorganic things, slashing works better on soft/organic things, and piercing is good against malleable and formless things.",
+						"For the casters- expect to see a broader range of resistances and immunities than what base 5e offers. Either prepare a variety of damage types, or invest in something like {@feat Elemental Adept} or one of the new Spellcasting Staffs in order to pierce resistances. In particular, modeling off of existing 5e creatures, some creatures may have resistance or immunity to {@i all} spells under a certain level, which could force you to expend higher level spell slots, or to rely on some resistance-piercing method."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Soft Vulnerabilities",
+					"entries": [
+						"Generally, vulnerabilities in 5e are, bluntly, {@i bad}- they're fine on weak monsters, but they skew the balance on stronger monsters strongly, making them extremely hard to gauge. Instead of traditional vulnerability, you should expect monsters to have \"soft\" vulnerabilities: a vulnerability that doesn't cause extra damage, but does have {@i some} additional, useful effect when used against a certain monster.",
+						"This is already occasionally used in base 5e- for example, Trolls aren't vulnerable to fire, but it stops their regeneration.",
+						"Traditional vulnerabilities aren't going away entirely, but don't expect them too often."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Damage Reduction",
+					"entries": [
+						"Occasionally, creatures will use Damage Reduction rather than (or in addition to) resistances. Damage Reduction always as a number attached to it, such as Damage Reduction 10, and it reduces every instance of damage it takes by that number. Sometimes damage reduction applies to only certain damage types, sometimes it applies to all damage types (requiring large blows to damage). Generally no creature with universal damage reduction (to all types) will have very {@i high} damage reduction.",
+						"The {@item Upgrade: Armor Piercing|MOD} weapon upgrade allows you to ignore some damage reduction. Heavy armor has also inherited some damage reduction, if players wish to take advantage of the mechanic."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Swarms",
+					"entries": [
+						"A revision to how swarms work in 5e- rather than a flat resistance to physical damage, swarms are now resistant to {@i all} single-target damaging effects. In particular, this includes any single-target attack roll or spell. They take damage as normal from area of effect attacks and abilities.",
+						"As in base 5e, they retain an array of prodigious condition immunities."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Legendary Creatures",
+					"entries": [
+						"Some creatures are {@i legendary}- creatures that are capable of handling multiple combatants on their own. Generally, you should assume that any legendary creature is {@i immune} to any effect that would {@condition incapacitated|PHB|incapacitate} it (or otherwise deprive it of the ability to act, like {@spell dominate monster|MOD}. However, {@i when} subjected to an incapacitation condition, rather than losing the ability to act, you can assume that they will instead suffer some sort of debuff- perhaps losing legendary actions or some of their damage resistances."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Monster Behavior",
+					"entries": [
+						"In summary, expect creatures to be capable of the most effective, basic strategy on their statblock, at minimum. For wolves this might just be \" surround one target and kill\", whereas an earth elemental might rely on their earth glide abilities, and an archmage might pull off some nasty spell combination. Also expect monsters to understand the mechanics of the game, and to understand at least the basic summary of spells imposed upon them. (For example, a monster subjected to {@spell witch bolt|MOD} automatically knows that running away will break the spell, without having to jump through hoops to figure this information out- in the same way that I generally hand the full text of monster abilities directly to players. They might {@i not} run away for other reasons, but ignorance of the rules is not one of them.)"
+					]
+				}
+			]
+		},
+		{
+			"name": "Magic Items - Misc Rules",
+			"source": "MOD",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Spell Scrolls",
+					"entries": [
+						"Any character is able to use a spell scroll, regardless of spellcasting ability, no check required. However, using a spell scroll {@i does} still require verbal and somatic components of the spell to be provided, although the somatic component can be provided by the hand holding the scroll. No material components are required.",
+						"Spells cast from spell scrolls can still be counterspelled."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "No Defined Spellcasting Ability",
+					"entries": [	
+						"Sometimes, an item will require a creature to use their own spellcasting stats to cast spells from an item. If you do {@i not} have a spellcasting stat, you can designate any one of your mental stats (INT, WIS, CHA) as your spellcasting stat, and you are proficient in any spell attack rolls you make."
+					]
+				}
+			]
+		},
+		{
+			"name": "New and Removed Skills",
+			"source": "MOD",
+			"entries": [
+				"A fairly important change- this section lists the skills that have been added, removed, or modified in the game. The basic philosophy of these changes is that situations that commonly call for checks should have an associated skill, whereas skills with niche uses should be rolled into another skill or removed entirely.",
+				"Additionally, I believe that the base stat of skills should be flexible, but should be based less on what is strictly logical and more on what ensures that the classes who {@i thematically} should be good at a certain skill, are. That is to say- Religion should be a wisdom ability not strictly because being wise trnaslates to religious knowledge, but because we want clerics to have a reasonable chance to be the {@i best} in religion amongst the party.",
+				{
+					"type": "entries",
+					"name": "Removed Abilities",
+					"entries": [
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Performance",
+									"entries": [
+										"Performance has been removed for two basic reasons- one is that Performance is very rarely used for anything {@i important}, and the second is that its role can largely be handled by either Deception or Musical Instrument Proficiency."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Nature",
+									"entries": [
+										"The role of Nature can largely be rolled into Survival, which also has the convenient effect of pushing it into a Wisdom role- which means Druids and Rangers can be properly good at Nature."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Added Abilities",
+					"entries": [
+						"Hover over the skill name for more details.",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Network",
+									"entries": [
+										"{@skill Network} essentially replaces the slot of Performance in the Charisma list."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Occult",
+									"entries": [
+										"{@skill Occult} expands the list of Intelligence skills to cover a more specific knowledge base that I felt was both commonly used and not a valid part of pure arcana. The difference between Occult and Arcana is basically the difference between Warlocks and Wizards."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Psionics",
+									"entries": [
+										"{@skill Psionics} is added by the Psion homebrew class, and covers knowledge of skills relating to psionics."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Streetwise",
+									"entries": [
+										"{@skill Streetwise} is a Dexterity skill that functions as, essentially, a Survival equivalent for urban environments- navigating towns and cities, finding points of interest, etc."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Wreck",
+									"entries": [
+										"{@skill Wreck} is a simple Strength-based skill for breaking things."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Modified Abilities",
+					"entries": [
+						"Hover over the ability name for details.",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Religion",
+									"entries": [
+										"{@skill Religion} has been moved to a Wisdom based skill instead of an Intelligence based one."
+									]
+								}
+							]
+						}
+					]
+				}
 			]
 		}
 		
