@@ -4515,7 +4515,6 @@
 			],
 			"type": "UPGRADE",
 			"entries": [
-				"{@i Requirements: A x weapon}",
 				"A vicious damage deals bonus damage on a critical hit. This bonus damage is applied {@i after} the crit, so it is not doubled.",
 				{
 					"type": "entries",
@@ -4752,7 +4751,7 @@
 			"type": "UPGRADE",
 			"entries": [
 				"{@i Requirements: not heavy}",
-				"This upgrade trades power for accuracy. You have a +2 to damage rolls with this weapon, but you take a -4 to damage rolls."
+				"This upgrade trades power for accuracy. You have a +2 to attack rolls with this weapon, but you take a -4 to damage rolls."
 			]
 		},
 		{
@@ -5705,7 +5704,7 @@
 					"type": "entries",
 					"name": "Upgrades",
 					"entries": [
-						"Many longtime warriors often find it useful to customize their weapons to better suit their fighting style. Up to three {@filter  upgrades|items|source=mod|property=upgrade} can be applied to a single weapon.",
+						"Many longtime warriors often find it useful to customize their weapons to better suit their fighting style. Up to three {@filter  upgrades|items|source=mod|type=upgrade} can be applied to a single weapon.",
 						"The first upgrade to a weapon costs 3 COIN to apply; the next costs 7 COIN and requires the service of an expert smith, and the last upgrade costs a whopping 12 COIN and requires a legendary craftsman.",
 						"A magic item can bear only one upgrade, requires a legendary smith to add, and costs 12 COIN to augment.",
 						"In addition, many upgrades have their own restrictions on what weapons they can be applied to. You may encounter opportunities to add more unique upgrades to your weapons as you travel.",
