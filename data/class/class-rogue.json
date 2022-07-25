@@ -37,11 +37,12 @@
 								"insight",
 								"intimidation",
 								"investigation",
+								"network",
 								"perception",
-								"performance",
 								"persuasion",
 								"sleight of hand",
-								"stealth"
+								"stealth",
+								"streetwise"
 							],
 							"count": 4
 						}
