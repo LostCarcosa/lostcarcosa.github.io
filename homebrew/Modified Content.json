@@ -66,7 +66,7 @@
 					"rows": [
 						[
 							"Aberration",
-							"Arcana"
+							"Occult"
 						],
 						[
 							"Beast",
@@ -90,7 +90,7 @@
 						],
 						[
 							"Fey",
-							"Nature"
+							"Survival"
 						],
 						[
 							"Fiend",
@@ -106,15 +106,15 @@
 						],
 						[
 							"Monstrosity",
-							"Nature"
+							"Occult"
 						],
 						[
 							"Ooze",
-							"Nature"
+							"Survival"
 						],
 						[
 							"Plant",
-							"Nature"
+							"Survival"
 						],
 						[
 							"Undead",
