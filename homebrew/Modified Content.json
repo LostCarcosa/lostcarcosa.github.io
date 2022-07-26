@@ -410,16 +410,17 @@
 			]
 		},
 		{
-			"name": "Bleeding Out",
+			"name": "Death's Door",
 			"source": "MOD",
 			"entries": [
-				"When you drop to 0 or negative hit points, you are bleeding out. While you are bleeding out, you can still take actions and bonus actions. However:",
+				"{@i You hear the footsteps and the trickle of sand. But you can keep fighting.}",
+				"When you drop to 0 or negative hit points, you arrive at Death's Door. While you are at Death's Door, you can still take actions and bonus actions. However:",
 				{
 					"type": "list",
 					"items": [
 						"You cannot concentrate on any spell or effect.",
 						"You cannot take reactions. During your turn, you can take an action or a bonus action, but not both.",
-						"Any effect that ends if you are incapacitated (such as a Barbarian's Rage) ends when you begin bleeding out, though you may manually resume such effects (i.e by re-entering a Rage).",
+						"Any effect that ends if you are incapacitated (such as a Barbarian's Rage) ends when you arrive at Death's Door, though you may manually resume such effects (i.e by re-entering a Rage).",
 						"All attack rolls against you have advantage (but are not automatically critical hits). You have disadvantage on all saving throws, except death saving throws."
 					]
 				}
@@ -5807,14 +5808,14 @@
 				},
 				{
 					"type": "entries",
-					"name": "Bleeding Out",
+					"name": "Death's Door",
 					"entries": [
-						"Going to 0 hit points (or lower) no longer knocks you unconscious. Instead, you begin {@condition bleeding out|MOD}. Unlike in 5e, you are {@i not} unconscious or incapacitated while bleeding out, and you can continue to take actions under some constraints (see the {@condition bleeding out|MOD} condition).",
+						"Going to 0 hit points (or lower) no longer knocks you unconscious or makes you start bleeding out. Instead, you arrive at {@condition Death's Door|MOD}. Unlike in 5e, you are {@i not} unconscious or incapacitated while at death's door, and you can continue to take actions under some constraints (see the {@condition Death's Door|MOD} condition).",
 						{
 							"type": "inset",
 							"name": "Recovering",
 							"entries": [
-								"Note that you don't stop bleeding out until you return to positive hit points, which requires you to first heal above any negative hit points you have. This means that small amounts of healing are less useful if you're at very negative hit points. Also, all healing now has value when you're at positive hit points- even if the healing doesn't prevent you from getting knocked below 0 in the next hit, it means your hit points will be less negative, putting you at less risk."
+								"Note that you don't leave Death's Door until you return to positive hit points, which requires you to first heal above any negative hit points you have. This means that small amounts of healing are less useful if you're at very negative hit points. Also, all healing now has value when you're at positive hit points- even if the healing doesn't prevent you from getting knocked below 0 in the next hit, it means your hit points will be less negative, putting you at less risk."
 							]
 						}
 					]
@@ -5823,9 +5824,9 @@
 					"type": "entries",
 					"name": "Death Saves",
 					"entries": [
-						"If you take damage while you are {@condition bleeding out}, you must make a death saving throw with a DC equal to 5 or half the damage taken (whichever is higher). Death saves are still made with a +0 modifier by default. Rolling a natural 1 on a death save still causes 2 failures. Rolling a natural 20 restores 2d8 hit points to you (although you continue bleeding out if your hit points are still below 0).",
-						"You can no longer 'stabilize'; succeeding on death saves does nothing. You only stop making death saves if you fail 3 death saves (see \"Mortality\", below) or if you stop bleeding out (i.e are healed above 0 hit points). Once you stop bleeding out, your death saves reset to 0 failures.",
-						"Temporary hit points don't stop you from bleeding out; however, any damage absorbed by temporary hit points is not counted in the death save DC calculation. (If you have 6 temp hp and you take 20 damage, you would only need to succeed on a DC 7 death saving throw rather than a DC 10). You still must make a death saving throw even if all damage taken is absorbed by your temporary hit points."
+						"If you take damage while you are at {@condition Death's Door}, you must make a death saving throw with a DC equal to 5 or half the damage taken (whichever is higher). Death saves are still made with a +0 modifier by default. Rolling a natural 1 on a death save still causes 2 failures. Rolling a natural 20 restores 2d8 hit points to you (although you remain at Death's Door if your hit points are still below 0).",
+						"You can no longer 'stabilize'; succeeding on death saves does nothing. You only stop making death saves if you fail 3 death saves (see \"Mortality\", below) or if you escape from Death's Door (i.e are healed above 0 hit points). Once you escape Death's Door, your death saves reset to 0 failures.",
+						"Temporary hit points don't allow you to leave Death's Door; however, any damage absorbed by temporary hit points is not counted in the death save DC calculation. (If you have 6 temp hp and you take 20 damage, you would only need to succeed on a DC 7 death saving throw rather than a DC 10). You still must make a death saving throw even if all damage taken is absorbed by your temporary hit points."
 					]
 				},
 				{
@@ -5859,7 +5860,7 @@
 								]
 							]
 						},
-						"A character knocked out of the fight remains at negative hit points when they recover, and is still {@condition bleeding out} until they return to positive hit points. If time is not urgent, an easy way to do this is to take a short rest (see above).",
+						"A character knocked out of the fight remains at negative hit points when they recover, and is still at {@condition Death's Door} until they return to positive hit points. If time is not urgent, an easy way to do this is to take a short rest (see above).",
 						"{@variantrule Lingering Injuries|MOD} has the rolltables and rule outline for lingering injuries.",
 						"Note that instakill effects (like Disintegrate) subvert the Mortality roll, and still result in immediate death. Moreover, some enemies may have the Lethal ability, which ignores the Mortality roll entirely."
 			
