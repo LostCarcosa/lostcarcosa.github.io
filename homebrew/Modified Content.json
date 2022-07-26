@@ -391,8 +391,8 @@
 							{
 								"type": "cell",
 								"roll": {
-									"min": 6,
-									"max": 10
+									"min": 11,
+									"max": 12
 								}
 							},
 							"The creature is {@condition stunned} until the start of their next turn."
