@@ -385,7 +385,7 @@
 					"name": "Valid Triggers",
 					"entries": [
 						"\"Perceivable\" is (probably intentionally) ambiguous language. Generally, a valid trigger should be perceptible in-universe- so 'I want to attack the goblin if he moves near me' is a valid trigger, but 'I want to release the spell when he starts his turn' is not.",
-						"Additionally, the trigger should be {@i reasonably specific}, and trigger off of one specific condition. For example, although \'I want to attack when the goblin does literally anything\' is technically perceivable, it's not allowed."
+						"Additionally, the trigger should be {@i reasonably specific}, and trigger off of one specific condition. For example, although 'I want to attack when the goblin does literally anything' is technically perceivable, it's not allowed."
 					]
 				}
 			]
