@@ -440,6 +440,42 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Weakened",
+			"source": "MOD",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"A weakened creature deals half damage with all weapon attacks."
+					]
+				}
+			]
+		},
+		{
+			"name": "Drained",
+			"source": "MOD",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"A drained creature deals half damage with any spell, ability, or feature that is {@i not} a weapon attack, including spells."
+					]
+				}
+			]
+		},
+		{
+			"name": "Ravaged",
+			"source": "MOD",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"A ravaged creature is both {@condition weakened|MOD} and {@condition drained|MOD}, effectively dealing half damage from all sources. "
+					]
+				}
+			]
 		}
 	],
 	"feat": [
@@ -1337,7 +1373,7 @@
 						{
 							"type": "item",
 							"name": "Equipment:",
-							"entry": "A {@item club}"
+							"entry": "A {@item club|PHB}"
 						}
 					]
 				},
@@ -2781,8 +2817,8 @@
 							"arcana",
 							"history",
 							"medicine",
-							"religion",
-							"nature"
+							"occult",
+							"religion"
 						],
 						"count": 2
 					}

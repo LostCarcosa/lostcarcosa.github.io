@@ -78,21 +78,6 @@
 			"script": "Celestial"
 		},
 		{
-			"name": "Common",
-			"source": "PHB",
-			"page": 123,
-			"srd": true,
-			"basicRules": true,
-			"type": "standard",
-			"typicalSpeakers": [
-				"{@filter humans|bestiary|type=humanoid|tag=any race;human}"
-			],
-			"script": "Common",
-			"fonts": [
-				"fonts/languages/PHB/Human/Harpers.ttf"
-			]
-		},
-		{
 			"name": "Deep Speech",
 			"source": "PHB",
 			"page": 123,
