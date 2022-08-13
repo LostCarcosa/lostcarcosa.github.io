@@ -3212,7 +3212,7 @@
 				"FS:R"
 			],
 			"entries": [
-				"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the offhand attack. Additionally, you no longer need to expend your bonus action to make the offhand attack, although you cannot make more than one offhand attack per Attack action."
+				"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the offhand attack. Additionally, you no longer need to expend your bonus action to make the offhand attack, although you cannot make more than one offhand attack per {@action Attack} action."
 			]
 		},
 		{

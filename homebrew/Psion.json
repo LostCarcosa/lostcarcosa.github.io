@@ -1694,11 +1694,11 @@
 											"rows": [
 												[
 													"1",
-													"{@spell heroism}, {@spell longstrider}, {@spell unlocked potential|PSN}"
+													"{@spell heroism}, {@spell longstride|MOD}, {@spell unlocked potential|PSN}"
 												],
 												[
 													"2",
-													"{@spell alter self}, {@spell darkvision}, {@spell enlarge/reduce}, {@spell lesser restoration}"
+													"{@spell alter self}, {@spell darkvision|MOD}, {@spell enlarge/reduce}, {@spell lesser restoration}"
 												],
 												[
 													"3",
@@ -1706,11 +1706,11 @@
 												],
 												[
 													"4",
-													"{@spell freedom of movement}, {@spell stoneskin}"
+													"{@spell freedom of movement}, {@spell stoneskin|MOD}"
 												],
 												[
 													"5",
-													"{@spell greater restoration}, {@spell skill empowerment|xge}"
+													"{@spell greater restoration}, {@spell skill empowerment|MOD}"
 												]
 											]
 										},
@@ -1824,23 +1824,23 @@
 											"rows": [
 												[
 													"1",
-													"{@spell jump}, {@spell catapult|xge}, {@spell thunderwave}"
+													"{@spell jump|MOD}, {@spell catapult|xge}, {@spell thunderwave|MOD}"
 												],
 												[
 													"2",
-													"{@spell levitate}, {@spell dust devil|xge}, {@spell shatter}"
+													"{@spell levitate|MOD}, {@spell dust devil|xge}, {@spell shatter}"
 												],
 												[
 													"3",
-													"{@spell fly}, {@spell erupting earth|xge}, {@spell water walk}"
+													"{@spell fly}, {@spell erupting earth|MOD}, {@spell water walk}"
 												],
 												[
 													"4",
-													"{@spell orbital stones|PSN} {@spell Otiluke's resilient sphere}"
+													"{@spell orbital stones|PSN}, {@spell resilient sphere|MOD}"
 												],
 												[
 													"5",
-													"{@spell telekinesis}, {@spell wall of force}"
+													"{@spell telekinesis}, {@spell wall of force|MOD}"
 												]
 											]
 										},
@@ -1907,11 +1907,11 @@
 											"rows": [
 												[
 													"1",
-													"{@spell compelled query|PSN}, {@spell command}, {@spell cause fear|xge}"
+													"{@spell compelled query|PSN}, {@spell command}, {@spell cause fear|MOD}"
 												],
 												[
 													"2",
-													"{@spell detect thoughts}, {@spell mind spike|xge}, {@spell suggestion}"
+													"{@spell detect thoughts}, {@spell mind spike|MOD}, {@spell suggestion|MOD}"
 												],
 												[
 													"3",
@@ -1919,11 +1919,11 @@
 												],
 												[
 													"4",
-													"{@spell dominate beast}, {@spell compulsion}, {@spell confusion}"
+													"{@spell dominate beast}, {@spell compulsion|MOD}, {@spell confusion}"
 												],
 												[
 													"5",
-													"{@spell dominate person}, {@spell modify memory}, {@spell Rary's telepathic bond}, {@spell synaptic static|xge}"
+													"{@spell dominate person|MOD}, {@spell modify memory}, {@spell telepathic bond|MOD}, {@spell synaptic static|xge}"
 												]
 											]
 										},
@@ -1995,7 +1995,7 @@
 												],
 												[
 													"2",
-													"{@spell misty step}, {@spell blur}, {@spell pass without trace}"
+													"{@spell misty step}, {@spell blur}, {@spell pass without trace|MOD}"
 												],
 												[
 													"3",
@@ -2007,7 +2007,7 @@
 												],
 												[
 													"5",
-													"{@spell far step|xge}, {@spell passwall}, {@spell steel wind strike|xge}"
+													"{@spell far step|xge}, {@spell passwall}, {@spell steel wind strike|MOD}"
 												]
 											]
 										},
@@ -2075,7 +2075,7 @@
 											"rows": [
 												[
 													"1",
-													"{@spell burning hands}, {@spell ice knife|xge}, {@spell thunderwave}"
+													"{@spell burning hands}, {@spell ice knife|MOD}, {@spell thunderwave|MOD}"
 												],
 												[
 													"2",
@@ -2083,7 +2083,7 @@
 												],
 												[
 													"3",
-													"{@spell fireball}, {@spell lightning bolt}"
+													"{@spell fireball|MOD}, {@spell lightning bolt}"
 												],
 												[
 													"4",
