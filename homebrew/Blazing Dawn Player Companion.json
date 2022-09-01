@@ -7193,7 +7193,7 @@
 			"source": "BDPC",
 			"page": 50,
 			"level": 2,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,
@@ -7225,7 +7225,7 @@
 				}
 			],
 			"entries": [
-				"You imbue a creature that you can see within range with positive energy. That creature regains hit points equal to {@dice 1d4} + your spellcasting ability modifier, and the number of hit points it has after this healing becomes this spell's healing threshold for the duration of the spell. ",
+				"You imbue a creature that you can see within range with regenerative energy. That creature regains hit points equal to {@dice 1d4} + your spellcasting ability modifier, and the number of hit points it has after this healing becomes this spell's healing threshold for the duration of the spell. ",
 				"At the start of each of the creature's turns, it regains {@dice 1d4} hit points. This healing cannot bring the creature above this spell's healing threshold, meaning this healing is only effective against damage dealt after the spell was cast.",
 				"If the creature is reduced to 0 hit points during the duration, you must roll a {@dice d20}. On a roll of 10 or lower, the spell ends.",
 				"This spell has no effect on undead or constructs."

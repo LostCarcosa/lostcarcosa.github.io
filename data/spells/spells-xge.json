@@ -3020,6 +3020,10 @@
 			"classes": {
 				"fromClassList": [
 					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
 						"name": "Sorcerer",
 						"source": "PHB"
 					},

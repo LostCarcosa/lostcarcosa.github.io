@@ -541,8 +541,42 @@
 			"entries": [
 				"You gain proficiency in the {@item Surgeon's Tools|MOD}. Whenever you make a Surgeon's Tools check as part of a Surgery, you can add twice your proficiency modifier to the check."
 			]
+		},
+		{
+			"name": "Dual Wielder",
+			"source": "MOD",
+			"entries": [
+				"You master fighting with two weapons, gaining the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When you engage in two-weapon fighting, your offhand attack no longer requires your bonus action, though you still only make 1 offhand attack per Attack action.",
+						"When you engage in two-weapon fighting and take the Attack action, you may choose to attempt to make a Flurry of offhand attacks. Rather than making a single offhand attack, you can make one offhand attack every time you hit a creature with an attack from your Attack action, you can make a one offhand attack against that same creature. Offhand attacks are not considered part of the Attack action.",
+						"When you make an opportunity attack, if you are wielding two weapons that are eligible for two-weapon fighting, you may attack with both weapons instead of one.",
+						"You can draw or stow two one-handed weapons when you would normally be able to draw or stow only one."
+						
+					]
+				},
+				{
+					"type": "inset",
+					"name": "Additional Explanation",
+					"entries": [
+						"This is a complicated feat, so some explanation is in order.",
+						"The meat of the feature is the second bullet point (Flurry), which can potentially allow you to take more offhand attacks than normal, although you risk the possibility of failing to make {@i any} offhand attacks, if you miss your main Attacks.",
+						"It works as follows: If you are a two-weapon Ranger with Extra Attack, you have two options. You can either forgo the Flurry and simply take 1 guaranteed offhand attack, or you can attempt a Flurry. If you attempt a Flurry and hit your target twice during your Attack action, you can take {@i two} offhand attacks against them. If you miss both of your main Attacks, though, you'd be unable to make any offhand attacks at all. Note also that the Flurry has an additional limitation: the offhand attack must be directed at the same target as the mainhand attack.",
+						"Note that Rogues, and any other character that cannot attack more than once normally, do not benefit from Flurry, though they may still benefit from the other aspects of this feature.",
+						"Note also that this feature does not allow you to add your ability modifier to your offhand damage rolls (which requires the {@optfeature two-weapon fighting} style), and that offhand attacks are never considered part of the Attack action (for features that demand it)."
+					]
+				},
+				{
+					"type": "inset",
+					"name": "Main & Offhand",
+					"entries": [
+						"There may be a little confusion as to what 'offhand' actually means. Two weapon fighting is symmetrical and there's no actual reason to designate one weapon as the 'main' weapon. For the above rules, a main-hand attack is one made as part of the Attack action, while an offhand attack is one made as a result of two-weapon fighting."
+					]
+				}
+			]
 		}
-	
 	],
 	"subclass": [
 		{
@@ -2832,7 +2866,7 @@
 						{
 							"type": "item",
 							"name": "Skill Proficiencies:",
-							"entry": "Choose two from among {@skill Arcana}, {@skill History}, {@skill Nature}, {@skill Medicine}, and {@skill Nature}"
+							"entry": "Choose two from among {@skill Arcana}, {@skill History}, {@skill Nature}, {@skill Medicine}, and {@skill Occult|MOD}"
 						}
 					]
 				},
@@ -3334,7 +3368,7 @@
 					"entries": [
 						"Suntouched live unnaturally short lives, as the divine power that resides in them burns through their mortal body and leaves them empty, bereft of life and light. No suntouched lives past the age of 27.",
 						"All Suntouched have an innate sense of when their life is coming to its natural end. Every year starting at the age of 20, roll a d8 and add it to your age. If the result is 27 or above, you know you will die within the next year. (This only accounts for the natural death of a suntouched's soul extinguishing itself, and not death by external cause).",
-						"No known force can avert or slow a suntouched's innate mortality, except by abandoning the race entirely (as per a {@spell reincarnate} spell. A suntouched that refuses their natural death becomes Scorched instead, and is forced to consume an ever-increasing quantity of fuel to keep their light burning."
+						"No known force can avert or slow a suntouched's innate mortality, except by abandoning the race entirely (as per a {@spell reincarnate|MOD} spell. A suntouched that refuses their natural death becomes Scorched instead, and is forced to consume an ever-increasing quantity of fuel to keep their light burning."
 					],
 					"type": "entries"
 				},
@@ -3355,7 +3389,7 @@
 				{
 					"name": "Heritage of Light",
 					"entries": [
-						"You have resistance to radiant damage. Additionally, your eyes are continually ablaze with a brilliant radiance which are clearly visible in dim light or darkness, immediately revealing your celestial nature to those around you. The glow of your eyes persists even through magic intended to disguise you, and even if your physical form changes (such as through wildshape or {@spell polymorph})."
+						"You have resistance to radiant damage. Additionally, your eyes are continually ablaze with a brilliant radiance which are clearly visible in dim light or darkness, immediately revealing your celestial nature to those around you. The glow of your eyes persists even through magic intended to disguise you, and even if your physical form changes (such as through wildshape or {@spell polymorph|MOD})."
 					],
 					"type": "entries"
 				},
@@ -3485,14 +3519,14 @@
 				{
 					"name": "Scorched Form",
 					"entries": [
-						"You have resistance to necrotic damage. Additionally, your eyes are suffused with a dim, orange glow, like that of a smouldering piece of coal, immediately revealing your celestial nature to those around you. The glow of your eyes persists even through magic intended to disguise you, and even if your physical form changes (such as through wildshape or {@spell polymorph})."
+						"You have resistance to necrotic damage. Additionally, your eyes are suffused with a dim, orange glow, like that of a smouldering piece of coal, immediately revealing your celestial nature to those around you. The glow of your eyes persists even through magic intended to disguise you, and even if your physical form changes (such as through wildshape or {@spell polymorph|MOD})."
 					],
 					"type": "entries"
 				},
 				{
 					"name": "Cantrip",
 					"entries": [
-						"You know the {@spell scorch|COFS:A} cantrip. You may choose Intelligence, Charisma, or Wisdom as your spellcasting ability for this cantrip."
+						"You know the {@spell scorch|COFSA} cantrip. You may choose Intelligence, Charisma, or Wisdom as your spellcasting ability for this cantrip."
 					],
 					"type": "entries"
 				},
@@ -3646,7 +3680,7 @@
 				{
 					"name": "Human Variance",
 					"entries": [
-						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef}, {@feat fey touched}, {@feat inspiring leader}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched}, {@feat skilled}, or {@feat tavern brawler}.",
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|MOD}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|MOD}, {@feat skilled}, or {@feat tavern brawler}.",
 						{
 							"type" : "inset",
 							"name" : "Additional Features",
@@ -3677,7 +3711,7 @@
 				{
 					"name": "Human Variance",
 					"entries": [
-						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef}, {@feat fey touched}, {@feat inspiring leader}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched}, {@feat skilled}, or {@feat tavern brawler}.",
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|MOD}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|MOD}, {@feat skilled}, or {@feat tavern brawler}.",
 						{
 							"type" : "inset",
 							"name" : "Additional Features",
@@ -3708,7 +3742,7 @@
 				{
 					"name": "Human Variance",
 					"entries": [
-						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef}, {@feat fey touched}, {@feat inspiring leader}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched}, {@feat skilled}, or {@feat tavern brawler}.",
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|MOD}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|MOD}, {@feat skilled}, or {@feat tavern brawler}.",
 						{
 							"type" : "inset",
 							"name" : "Additional Features",
@@ -3796,7 +3830,7 @@
 				{
 					"innate": {
 						"1": [
-							"beast bond"
+							"beast bond|MOD"
 						],
 						"3": [
 							"beast sense"
@@ -3833,7 +3867,7 @@
 				{
 					"name": "Natural Attunement",
 					"entries": [
-						"You know the {@spell druidcraft} cantrip. You also know the {@spell beast bond} spell, which you can cast without expending a spell slot once per long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you pick this race)."
+						"You know the {@spell druidcraft} cantrip. You also know the {@spell beast bond|MOD} spell, which you can cast without expending a spell slot once per long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you pick this race)."
 					]
 				}
 			],
@@ -5861,8 +5895,9 @@
 					"name": "Death Saves",
 					"entries": [
 						"If you take damage while you are at {@condition Death's Door}, you must make a death saving throw with a DC equal to 5 or half the damage taken (whichever is higher). Death saves are still made with a +0 modifier by default. Rolling a natural 1 on a death save still causes 2 failures. Rolling a natural 20 restores 2d8 hit points to you (although you remain at Death's Door if your hit points are still below 0).",
-						"You can no longer 'stabilize'; succeeding on death saves does nothing. You only stop making death saves if you fail 3 death saves (see \"Mortality\", below) or if you escape from Death's Door (i.e are healed above 0 hit points). Once you escape Death's Door, your death saves reset to 0 failures.",
-						"Temporary hit points don't allow you to leave Death's Door; however, any damage absorbed by temporary hit points is not counted in the death save DC calculation. (If you have 6 temp hp and you take 20 damage, you would only need to succeed on a DC 7 death saving throw rather than a DC 10). You still must make a death saving throw even if all damage taken is absorbed by your temporary hit points."
+						"You can no longer 'stabilize'; succeeding on death saves does nothing. You only stop making death saves if you fail 3 death saves (see \"Mortality\", below) or if you escape from Death's Door (i.e are healed above 0 hit points).",
+						"Temporary hit points don't allow you to leave Death's Door; however, any damage absorbed by temporary hit points is not counted in the death save DC calculation. (If you have 6 temp hp and you take 20 damage, you would only need to succeed on a DC 7 death saving throw rather than a DC 10). You still must make a death saving throw even if all damage taken is absorbed by your temporary hit points.",
+						"{@b Death saves do not reset upon leaving Death's Door.} It takes 10 minutes of medical care from a character trained in {@skill Medicine} or {@item Surgeon's Tools|MOD}, or 20 minutes from an untrained character, to heal a death save, although no other resources are required. Death Saves also reset upon completion of a short or long rest."
 					]
 				},
 				{

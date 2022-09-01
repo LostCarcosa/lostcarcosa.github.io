@@ -5660,7 +5660,7 @@
 			"srd": true,
 			"basicRules": true,
 			"level": 1,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,
@@ -11662,7 +11662,7 @@
 			"srd": true,
 			"basicRules": true,
 			"level": 6,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,
@@ -11738,7 +11738,7 @@
 			"srd": true,
 			"basicRules": true,
 			"level": 1,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,
@@ -14496,7 +14496,7 @@
 			"srd": true,
 			"basicRules": true,
 			"level": 5,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,
@@ -14618,7 +14618,7 @@
 			"srd": true,
 			"basicRules": true,
 			"level": 9,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,
@@ -14681,7 +14681,7 @@
 			"srd": true,
 			"basicRules": true,
 			"level": 3,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,
@@ -16886,7 +16886,7 @@
 			"srd": true,
 			"basicRules": true,
 			"level": 2,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 10,
@@ -26129,7 +26129,7 @@
 			"name": "Aura of Vitality",
 			"source": "MOD",
 			"level": 3,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,
@@ -28863,7 +28863,7 @@
 			"name": "Power Word Heal",
 			"source": "MOD",
 			"level": 9,
-			"school": "V",
+			"school": "N",
 			"time": [
 				{
 					"number": 1,

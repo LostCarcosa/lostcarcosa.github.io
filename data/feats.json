@@ -161,23 +161,6 @@
 			]
 		},
 		{
-			"name": "Dual Wielder",
-			"source": "MOD",
-			"entries": [
-				"You master fighting with two weapons, gaining the following benefits:",
-				{
-					"type": "list",
-					"items": [
-						"When you engage in two-weapon fighting, your offhand attack no longer requires your bonus action.",
-						"When you engage in two-weapon fighting fighting and take Attack action, you may choose to forgo your offhand attack. If you do so, you make a separate offhand attack every time you hit a creature during your Attack action. (Offhand attacks made in this way are not considered part of the Attack action.)",
-						"When you make an opportunity attack, if you are wielding two weapons that are eligible for two-weapon fighting, you may attack with both weapons instead of one.",
-						"You can draw or stow two one-handed weapons when you would normally be able to draw or stow only one."
-						
-					]
-				}
-			]
-		},
-		{
 			"name": "Dungeon Delver",
 			"source": "PHB",
 			"page": 166,

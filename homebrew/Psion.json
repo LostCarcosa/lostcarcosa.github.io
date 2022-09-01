@@ -919,22 +919,10 @@
 				{
 					"type": "list",
 					"items": [
-						"Your Intelligence, Wisdom, or Charisma score increases by 1, to a maximum of 20.",
 						"You can select a psionic talent from the psion class {@filter psionic talents|optionalfeatures|feature type=PSI:T} list. You cannot select a talent you already know or one that requires a level restriction, even if you are already of that level."
 					]
 				},
 				"You can take this feat multiple times, selecting a different talent each time."
-			],
-			"ability": [
-				{
-					"int": 1
-				},
-				{
-					"cha": 1
-				},
-				{
-					"wis": 1
-				}
 			]
 		},
 		{
@@ -1070,7 +1058,7 @@
 				}
 			],
 			"entries": [
-				"As an action, you can project a swarm of etheral objects. You can expend 5 psi points to cast {@spell animate object} but it creates new etheral objects rather than animating existing ones."
+				"As an action, you can project a swarm of etheral objects. You can expend 5 psi points to cast {@spell animate object|PSN} but it creates new etheral objects rather than animating existing ones."
 			],
 			"source": "PSN",
 			"page": 11,
@@ -1221,7 +1209,7 @@
 				}
 			],
 			"entries": [
-				"You gain the {@spell cure wounds} for 1 psi point. You can cast it at a higher level by spending additional psi points. You can cast it a number of times equal to your Intelligence modifier, after which you cannot cast it again until you complete a long rest. When you cast {@spell cure wounds} on a creature, you can use Enhancing Surge on the target creature has a bonus action."
+				"You gain the {@spell cure wounds} for 1 psi point. You can cast it at a higher level by spending additional psi points. You can cast it a number of times equal to your Intelligence modifier, after which you cannot cast it again until you complete a long rest. When you cast {@spell cure wounds} on a creature, you can use Enhancing Surge on the target creature as a bonus action."
 			],
 			"source": "PSN",
 			"page": 11,
@@ -1344,7 +1332,7 @@
 		{
 			"name": "Mind Devourer",
 			"entries": [
-				"You gain the ability to cast {@spell psychic drain} for 2 psi points. Additionally, whenever a creature within 10 feet of you that had an Intelligence score of 6 or higher dies, you can expend your reaction to draw in its psionic power, regaining 1d4 hit points and 1 expended psi point."
+				"You gain the ability to cast {@spell psychic drain|MOD} for 2 psi points. Additionally, whenever a creature within 10 feet of you that had an Intelligence score of 6 or higher dies, you can expend your reaction to draw in its psionic power, regaining 1d4 hit points and 1 expended psi point."
 			],
 			"source": "PSN",
 			"page": 12,
@@ -1456,14 +1444,14 @@
 		{
 			"name": "Psi Crystal",
 			"entries": [
-				"You gain the ability to impart part of your mind into crystal. You can expend 2 psi points to cast the {@spell find familiar} spell, but your familiar takes on the statistics of a {@creature psi crystal|PSN} and the material component required is a crystal worth 10 gp instead of the normal material components.",
+				"You gain the ability to impart part of your mind into crystal. You can expend 2 psi points to cast the {@spell find familiar|MOD} spell, but your familiar takes on the statistics of a {@creature psi crystal|PSN} and the material component required is a crystal worth 10 gp instead of the normal material components.",
 				"The {@creature psi crystal|PSN} gains your mental stats. You can use Psionic Disciplines without a range of Self through your Psi Crystal is if you were standing in it's location. If the {@creature psi crystal|PSN} is destroyed, you gain its memories as your own. While you have a {@creature psi crystal|PSN} active, as a bonus action, you can decativate it to regain 2 expended psi points.",
-				"When you summon a Psi crystal, you can store a fragment of your personality, that you can then release by shattering the crystal. Select one of the following when summoning a psi crystal:",
+				"When you summon a psi crystal, you can store a fragment of your personality, that you can then release by shattering the crystal. Select one of the following when summoning a psi crystal:",
 				{
 					"type": "list",
 					"items": [
 						"{@b Courage}: When you make a saving throw against the Frieghtend condition, you can use your reaction to shatter the crystal to gain advantage on the save.",
-						"{@b Cowardice}:.** When your Psi Crystal is within 30 of you and a creature comes within 5 feet of you, you can use your reaction to shatter the crystal releasing that emotion and immediately move your movement speed away from the creature without taking an attack of opportunity.",
+						"{@b Cowardice}: When your Psi Crystal is within 30 feet of you and a creature comes within 5 feet of you, you can use your reaction to shatter the crystal releasing that emotion and immediately move your movement speed away from the creature without taking an attack of opportunity.",
 						"{@b Cruelty}: When your Psi Crystal is within 30 feet of a creature that takes damage, you can use your reaction to shatter the crystal releasing that emotion and causing the creature take additional damage equal to your Psion level.",
 						"{@b Sympathy}: When your Psi crystal is within 30 feet of you and another creature, if that creature takes damage, you can use your reaction shatter the crystal relasing that emotion and granting the creature resistance to that damage and take an equal amount of damage to the damage it takes."
 					]
@@ -1788,7 +1776,7 @@
 									"type": "entries",
 									"name": "Telekinetic Hands",
 									"entries": [
-										"When you gain thsi feature, you can manipulate small objects within 30 feet of you with your mind as if using your hand to interact with it. You can use this power to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contants out of a vial. You cannot attack, activate magical items, or carry more than 10 pounds in this manner. You can move an item you are controlling in this way up to 30 feet during your turn.",
+										"When you gain this feature, you can manipulate small objects within 30 feet of you with your mind as if using your hand to interact with it. You can use this power to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contants out of a vial. You cannot attack, activate magical items, or carry more than 10 pounds in this manner. You can move an item you are controlling in this way up to 30 feet during your turn.",
 										"You can spend 1 psi point to increase how much you can lift by 100 pounds for 1 turn."
 									]
 								},
@@ -2046,7 +2034,7 @@
 									"type": "entries",
 									"name": "Elemental Blast",
 									"entries": [
-										"{@italic Elemental Blast}",
+										"{@italic Psionic Power}",
 										"{@bold Casting Time:} 1 action<br />{@bold Range:} 30 feet<br />{@bold Components:} S<br />{@bold Duration:} 1 round",
 										"You can use your mind to create a burst of elemental power, blasting a target you can see within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 cold, fire, force or lightning damage.",
 										"For each die of cold damage dealt, the creature's movement speed is reduced by 5 feet until the end of their next turn, for each die of fire damage dealt by the original attack, the creature takes 1d4 fire damage at the start of its next turn, and for each die of lightning damage dealt, an arc of lightning strikes another creature of your choice within 20 feet, dealing 1d4 lightning damage (damage from these effects do not add additional bonuses, such as Empowered Psionics).",
@@ -2116,7 +2104,7 @@
 											"type": "entries",
 											"name": "Electrokinetic",
 											"entries": [
-												"You can only deal Lightning damage with Elemental Blast, but the size of the damage dice of Lightning damage (both the initial damage and arc damage ) is increased by one step (to a d10 initial damage and d10 additional damage per point spent on Amplified, and 1d6 arc damage to a nearby target per die of initial damage).",
+												"You can only deal Lightning damage with Elemental Blast, but the size of the damage dice of Lightning damage (both the initial damage and arc damage) is increased by one step (to a d10 initial damage and d10 additional damage per point spent on Amplified, and 1d6 arc damage to a nearby target per die of initial damage).",
 												"When using your Psionics feature to cast a spell under Alternate Effects, the damage of the spell becomes Lightning damage."
 											]
 										},
