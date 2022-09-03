@@ -1,0 +1,196 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "DM",
+				"abbreviation": "DM",
+				"full": "Deep Magic",
+				"url": "https://koboldpress.com/category/deep-magic/",
+				"authors": [
+					"Kobold Press"
+				],
+				"convertedBy": [
+					"Carcosa"
+				],
+				"version": "modified"
+			}
+		],
+		"dateAdded": 1662087954,
+		"dateLastModified": 1662087954,
+		"_dateLastModifiedHash": "9b7574b973"
+	},
+	"spell": [
+		{
+			"name": "Ashen Memories",
+			"source": "DM",
+			"page": 0,
+			"level": 2,
+			"school": "D",
+			"meta": {
+				"ritual": true
+			},
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You touch the ashes, embers, or soot left behind by a fire and receive a vision of one significant event that occurred in the area while the fire was burning. For example, if you were to touch the cold embers of a campfire, you might witness a snippet of a conversation that occurred around the fire. Similarly, touching the ashes of a burned letter might grant you a vision of the person who destroyed the letter or the contents of the letter. You have no control over what information the spell reveals, but your vision usually is tied to the most meaningful event related to the fire. The GM determines the details of what is revealed."
+			]
+		},
+		{
+			"name": "Aura of Pacifism",
+			"source": "DM",
+			"page": 0,
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"When you cast this spell, you radiate an otherworldly energy that warps the fate of all creatures within 30 feet of you, imbuing a 30-foot-radius around you with an aura of nonviolence. Until the start of your next turn, every attack roll made by or against a creature inside the aura is treated as a natural 1.",
+				"If this spell overlaps with the radius of an {@spell aura of bloodlust|DM}, both spells are suppressed."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the duration is extended by 1 round for each slot level above 3rd."
+					]
+				}
+			]
+		},
+		{
+			"name": "Aura of Bloodlust",
+			"source": "DM",
+			"page": 0,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"M": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+
+				}
+			],
+			"entries": [
+				"When you cast this spell, you radiate an otherworldly energy that warps the fate of all creatures within 30 feet of you, imbuing a 30-foot-radius around you with an aura of immense violence. Until the start of your next turn, every attack roll made by or against a creature inside the aura is treated as a natural 20.",
+				"If this spell overlaps with the radius of an {@spell aura of pacifism|DM}, both spells are suppressed."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the duration is extended by 1 round for each slot level above 3rd."
+					]
+				}
+			]
+		},
+		{
+			"name": "Chains of the Goddess",
+			"source": "DM",
+			"page": 0,
+			"level": 5,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Choose a creature you can see within 90 feet. The target must make a successful Wisdom saving throw or be restrained by chains of psychic force and take {@damage 6d8} bludgeoning damage. A {@condition restrained} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save. While {@condition restrained} in this way, the creature also takes {@damage 4d8} bludgeoning damage at the start of each of your turns."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the duration is extended by 1 round for each slot level above 3rd."
+					]
+				}
+			]
+		}
+}

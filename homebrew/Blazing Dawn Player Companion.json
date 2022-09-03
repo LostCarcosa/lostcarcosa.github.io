@@ -314,7 +314,9 @@
 				"Path of the Celestial Avatar|Barbarian||Celestial Avatar|BDPC|3|BDPC",
 				"Celestial Blessing|Barbarian||Celestial Avatar|BDPC|6|BDPC",
 				"Divine Guidance|Barbarian||Celestial Avatar|BDPC|10|BDPC",
-				"Avatar of Light|Barbarian||Celestial Avatar|BDPC|14|BDPC"
+				"Improved Avatar|Barbarian||Celestial Avatar|BDPC|10|BDPC",
+				"Avatar of Light|Barbarian||Celestial Avatar|BDPC|14|BDPC",
+				"Ascendant Avatar|Barbarian||Celestial Avatar|BDPC|14|BDPC"
 			]
 		},
 		{
@@ -4301,6 +4303,10 @@
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Avatar of Might|Barbarian||Celestial Avatar|BDPC|3|BDPC"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Armor of Faith|Barbarian||Celestial Avatar|BDPC|3|BDPC"
 				}
 			]
 		},
@@ -4315,11 +4321,25 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you adopt this path at 3rd level, you gain a celestial guide that you will serve as an avatar of its power. In return for your service, the guide bestows upon you the ability to channel divine magic through your rage. You gain access to the following spells: {@spell detect extraplanar beings|MOD}, {@spell heroism}, and {@spell protection from extraplanar beings|MOD}. Wisdom is your spellcasting ability for all the spells granted by this feature.",
-				"On the turn you start your rage, you can use your action to cast one of the spells you gained with this feature at 1st level without expending a spell slot or using material components. For you, this spell doesn't require concentration if it normally does, and it lasts for the duration of your rage rather than the duration the spell specifies. Also, as you cast this spell you release a burst of radiant energy, causing each creature of your choice within 5 feet of you to take radiant damage equal to your Wisdom modifier + the spell's level (minimum 1). If this burst deals damage to at least one creature, your rage won't end when this turn ends.",
-				"Once you use this feature, you can't use it again until you finish a long rest. You can use this feature twice per long rest starting at 6th level, and three times per long rest at 14th level.",
-				"At 10th level, you cast all the spells you gain with this feature at 2nd level, and you gain access to the following additional spells: {@spell protection from poison}, {@spell silence}, and {@spell warding bond}.",
-				"At 14th level, you cast all the spells you gain with this feature at 3rd level, and you gain access to the following additional spells: {@spell beacon of hope}, {@spell illuminate|MOD}, and {@spell protection from energy}."
+				"{@i 3rd level Celestial Avatar feature}",
+				"When you adopt this path, you pledge yourself to the Celestial Tide, gaining the ability to channel divine magic through your rage. You gain access to the following spells: {@spell compelled duel}, {@spell divine favor}, and {@spell heroism}. Charisma is your spellcasting ability for all the spells granted by this feature.",
+				"As part of the bonus action used to start your rage, you can cast one of the spells you gained with this feature without expending a spell slot or using material components. The spell is cast at 1st level, doesn’t require concentration if it normally does, and lasts for the duration of rage rather than the spell’s normal duration.",
+				"This feature improves at 10th and 14th level."
+			]
+		},
+		{
+			"name": "Armor of Faith",
+			"source": "BDPC",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Celestial Avatar",
+			"subclassSource": "BDPC",
+			"page": 10,
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd level Celestial Avatar feature}",
+				"The sheer force of your will gives you the strength to endure many wounds. You can use your Charisma modifier in place of your Dexterity modifier for your Unarmored Defense feature."
 			]
 		},
 		{
@@ -4333,7 +4353,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you gain resistance to radiant and necrotic damage.",
+				"{@i 6th level Celestial Avatar feature}",
+				"You gain resistance to radiant and necrotic damage.",
 				"Additionally, once per rage you can use your bonus action to become momentarily incorporeal, as your body and all of your equipment appears to transform into brilliant starlight. For the next 10 feet of movement you make on your turn, you can move through other creatures and objects as if they weren't there, and your movement doesn't provoke opportunity attacks. If this movement ends and you're still inside an object or creature, you are transported to the nearest unoccupied space outside of it, and take {@dice 2d6} force damage."
 			]
 		},
@@ -4348,7 +4369,24 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you can cast the {@spell divination} spell, but only as a ritual. The entity you are put in contact with for this spell is the celestial guide you chose when you selected this subclass."
+				"{@i 10th level Celestial Avatar feature}",
+				"You can cast the {@spell divination} spell, but only as a ritual. The entity you are put in contact with for this spell is a being from the Celestial Tide."
+			]
+		},
+		{
+			"name": "Improved Avatar",
+			"source": "BDPC",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Celestial Avatar",
+			"subclassSource": "BDPC",
+			"page": 1,
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th level Celestial Avatar feature}",
+				"You now cast all the spells associated with your Avatar of Might feature at 2nd level, and you gain access to the following additional spells: {@spell silence}, {@spell spiritual weapon}, and {@spell warding bond}.",
+				"If you would cast a spell that doesn't benefit from being cast at a higher level, you gain 5 temporary hit points for each slot above the spell's base level. These temporary hit points disappear at the end of your rage."
 			]
 		},
 		{
@@ -4362,7 +4400,24 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, you can cause your rage to give off divine light. For the duration of your rage, bright light extends 15 feet from you in every direction, and dim light extends 15 feet beyond that. Creatures of your choice within the bright light gain resistance to radiant damage, necrotic damage, and one other damage type of your choice that isn't bludgeoning, piercing, or slashing damage. You choose the damage type whenever you activate your rage."
+				"{@i 14th level Celestial Avatar feature}",
+				"You can cause your rage to give off divine light. For the duration of your rage, bright light extends 15 feet from you in every direction, and dim light extends 15 feet beyond that. Creatures of your choice within the bright light gain resistance to radiant damage, necrotic damage, and one other damage type of your choice that isn't bludgeoning, piercing, or slashing damage. You choose the damage type whenever you activate your rage."
+			]
+		},
+		{
+			"name": "Ascendant Avatar",
+			"source": "BDPC",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Celestial Avatar",
+			"subclassSource": "BDPC",
+			"page": 1,
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th level Celestial Avatar feature}",
+				"You now cast all the spells associated with your Avatar of Might feature at 3rd level, and you gain access to the following additional spells: {@spell beacon of hope}, {@spell crusader's mantle}, and {@spell elemental weapon}.",
+				"If you would cast a spell that doesn't benefit from being cast at a higher level, you gain 5 temporary hit points for each slot above the spell's base level. These temporary hit points disappear at the end of your rage."
 			]
 		}
 	],

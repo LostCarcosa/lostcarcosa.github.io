@@ -6151,6 +6151,33 @@
 			]
 		},
 		{
+			"name": "Weapon Proficiency",
+			"source": "MOD",
+			"entries": [
+				"{@quote A weapon you can't use is a weapon that is easily turned against you.}",
+				"Weapon proficiency is important. Mechanically speaking, there's few reasons, in character, to ever wield a weapon you are not proficient in- and the cases where it is beneficial to do so are generally unintuitive and somewhat immersion-breaking. (An example is a mage holding a magic greatsword that grants a passive buff to the wielder, despite being entirely incapable of wielding the sword.)",
+				"It's rarely ever a serious problem, but to prevent those little cases, a new rule is being introduced: If you are hit by an attack while holding a weapon you are not proficient in, you must succeed on a DC 15 Strength saving throw or drop the weapon."
+			]
+		},
+		{
+			"name": "Disarming & Picking Up Dropped Weapons",
+			"source": "MOD",
+			"entries": [
+				"Generally, disarming is fairly rare, and is only accomplished via specific abilities (such as {@optfeature disarming attack}). The rules around it are solidified as follows:",
+				"When a creature is disarmed of their weapon, it falls to the ground at their feet. Picking up an opponent's dropped weapon is possible, but you cannot sheathe it, as one generally does not carry proper sheathes for other people's weapons.",
+				"If a creature attempts to pick up a dropped object (such as a weapon) from the ground, they provoke opportunity attacks from every creature that can reach them. (See addendum to {@action opportunity attack}).",
+				{
+					"type": "inset",
+					"name": "DM notes",
+					"entries": [
+						"Disarming in 5e has always been a little screwy. Either the creature negates it entirely by picking it up immediately (or pulling out an exact copy of their weapon) or it completely negates them because the disarmer has disappeared their weapon into inventory hammerspace.",
+						"The rules here are intended to split the difference. It's still possible to hold a creature's weapon away from them, but it functionally requires you to give up at least 1 hand, and possibly mess up your weapon build. Alternatively, it provokes an opportunity attack to retrieve the weapon, which seems reasonable in-world and also a fair cost.",
+						"Note the new rules on {@variantrule weapon proficiency|MOD} prevent non-weapon wielders from serving as an easy resevoir for dropped enemy weapons."
+					]
+				}
+			]
+		},
+		{
 			"name": "Spell Template Placement",
 			"source": "MOD",
 			"entries": [
