@@ -593,6 +593,21 @@
 				"Void Hand|Rogue||Empty Hand|MOD|13",
 				"Final Theft|Rogue||Empty Hand|MOD|17"
 			]
+		},
+		{
+			"name": "Winter Knight",
+			"source": "MOD",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"shortName": "Winter Knight",
+			"page": 20,
+			"subclassFeatures": [
+				"Winter Knight|Fighter||Winter Knight|MOD|3|MOD",
+				"Cryomancy|Fighter||Winter Knight|MOD|7|MOD",
+				"Master of Blades|Fighter||Winter Knight|MOD|10|MOD",
+				"Preservation of Ice|Fighter||Winter Knight|MOD|15|MOD",
+				"Blizzard Aura|Fighter||Winter Knight|MOD|18|MOD"
+			]
 		}
 	],
 	"subclassFeature": [
@@ -889,6 +904,154 @@
 				"Furthermore, this ability only works on a creature that has less than half of its maximum hit points. You automatically know if a creature satisfies this condition.",
 				"If you succeed on the Steal anyway, the target dies. Its vitality is captured in your Empty Palm demiplane, and as a bonus action, you can consume it to regain hit points equal to half of your maximum. Alternatively, you may use the vitality to cast the revivify spell once as an action. However you use the vitality, it is consumed upon use.",
 				"Once you successfully steal a creature's life in this way, you cannot do so again until you complete a long rest."
+			]
+		},
+		{
+			"name": "Winter Knight",
+			"source": "MOD",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassSource": "MOD",
+			"subclassShortName": "Winter Knight",
+			"page": 20,
+			"level": 3,
+			"entries": [
+				"A winter knight employs martial warcraft in conjunction with freezing ice magic, employing techniques learned from the northern mountains or the Elemental planes. Their presence inspires fear in their opponents, and awe in their onlookers, as their flying frozen blades sow death and destruction.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Iceheart|Fighter||Winter Knight|MOD|3|MOD"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Blades of Ice|Fighter||Winter Knight|MOD|3|MOD"
+				}
+			]
+		},
+		{
+			"name": "Iceheart",
+			"source": "MOD",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassSource": "MOD",
+			"subclassShortName": "Winter Knight",
+			"page": 20,
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd Level Winter Knight feature}",
+				"You learn the {@spell shape water|xge} cantrip. Your spellcasting ability for this cantrip is Constitution, and you can choose to cast it as a bonus action, rather than an action."
+			]
+		},
+		{
+			"name": "Blades of Ice",
+			"source": "MOD",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassSource": "MOD",
+			"subclassShortName": "Winter Knight",
+			"page": 20,
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd Level Winter Knight feature}",
+				"Also at 3rd level, you can conjure magical blades of freezing ice. This feature has 4 uses when you gain it, and the number of uses increases to 6 at 7th level, 7 at 10th level, and 8 at 15th level. You regain all expended uses when you finish a long rest.",
+				"As a bonus action, you can spend one use of this ability to summon a number of floating ice weapons. These blades last for up to 10 minutes after they're summoned, and float around you for their duration. You cannot have more blades than your proficiency bonus active at once.",
+				"When you summon these icy weapons, you can choose to have them adopt the form of spears or blades, which each have unique benefits (detailed below), though every weapon adopts the same form.",
+				"As long as you have at least one of these blades summoned, you gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"The weapons are considered martial melee weapons with which you are proficient. As the blades float, you do not need to hold them to attack with them, but attacks with them are otherwise made as normal.",
+						"If you summoned weapons in the form of spears, they have the finesse and reach properties, and deal {@dice 1d6} slashing + {@dice 1d6 cold} damage on a hit. Additionally, you can use them as a thrown weapon with a range of 60 feet, although an ice spear is destroyed after being thrown in this way.",
+						"If you summoned weapons in the form of blades, they have the finesse and light properties, and deal {@dice 1d4} slashing + {@dice 1d4} cold damage on a hit. You may use two-weapon fighting with these blades, but only if you are not wielding a shield.",
+						"Once per round when you hit a creature with a weapon attack, you can deal {@dice 1d4} bonus cold damage to your target. This damage increases to {@dice 1d6} at 7th level, {@dice 1d8} at 10th level, {@dice 1d10} at 15th level, and {@dice 1d12} at 18th level.",
+						"When a creature you can see within 30 feet of you misses you with an attack, you can use your reaction to command a blade to counterattack. Make a melee weapon attack with the blade against your attacker. This attack is as described in the first bullet point, except its reach is increased to 30 feet. After it counterattacks, the blade is destroyed.",
+						"When a creature you can see within 30 feet of you hits you with an attack, you can use your reaction to command a blade to parry. Your AC is increased by 4 against that attack, potentially causing the attack to miss you. After it parries, the blade is destroyed."
+					]
+				}
+			]
+		},
+		{
+			"name": "Cryomancy",
+			"source": "MOD",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassSource": "MOD",
+			"subclassShortName": "Winter Knight",
+			"page": 20,
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7th Level Winter Knight feature}",
+				"Your body has become attuned to the biting cold. You gain resistance to cold damage, and you are permanently under the effects of a {@spell water walking} spell, as liquid water temporarily freezes solid as you walk over it."
+			]
+		},
+		{
+			"name": "Master of Blades",
+			"source": "MOD",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassSource": "MOD",
+			"subclassShortName": "Winter Knight",
+			"page": 20,
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 7thLevel Winter Knight feature}",
+				"Starting at 10th level, you become more adept at counterattacking and parrying with the blades summoned by your Blades of Ice feature. The features are improved as follows:",
+				{
+					"type": "entries",
+					"name": "Counterattack",
+					"page": 20,
+					"entries": [
+						"When you command a blade to counterattack, it deals {@dice 2d6} bonus cold damage to its target on a hit. Hit or miss, you can choose to detonate the blade in a fiery burst after its attack. Each creature within a 5-foot-radius around the target, other than the target, must succeed on a Dexterity saving throw with a DC of 8 + your proficiency bonus + your Constitution modifier or take {@dice 2d10} cold damage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Parry",
+					"page": 20,
+					"entries": [
+						"When you command a blade to parry, the initial AC bonus against the triggering attack is increased to 6, and you also gain a +3 bonus to your AC until the start of your next turn."
+					]
+				}
+			]
+		},
+		{
+			"name": "Preservation of Ice",
+			"source": "MOD",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassSource": "MOD",
+			"subclassShortName": "Winter Knight",
+			"page": 20,
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15th Level Winter Knight feature}",
+				"You learn to channel ice magic into your Second Wind, creating a heavy coating of ice to defend yourself. Whenever you activate Second Wind, you gain temporary hit points equal to twice the number of hit points restored by Second Wind. Whenever a creature damages you with a melee attack while you have these temporary hit points, they take {@dice 2d8} cold damage as the ice shatters."
+			]
+		},
+		{
+			"name": "Blizzard Aura",
+			"source": "MOD",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassSource": "MOD",
+			"subclassShortName": "Winter Knight",
+			"page": 20,
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"{@i 18th Level Winter Knight feature}",
+				"An icy blizzard now surrounds you, granting you unnatural protection",
+				{
+					"type": "list",
+					"items": [
+						"You gain immunity to cold damage.",
+						"At the end of each of your turns, you can choose to release a wave of ice that deals {@dice 2d12} cold damage to each creature within 10 feet of you."
+					]
+				}
 			]
 		}
 	],
@@ -5711,7 +5874,7 @@
 							"type": "entries",
 							"name": "Legendary",
 							"entries": [
-								"A legendary smith is a true master of their craft. Some can be found in city centers, but others have the luxury of isolating themselves on far-off islands or in mountainside retreats, having accumulated sufficient resources to dedicate themselves fully to their craft, away from the constant demands of commercial sites.",
+								"A legendary smith is a true master of their craft. Some can be found in the employ of the ruling class, but others have the luxury of isolating themselves on far-off islands or in mountainside retreats, having accumulated sufficient resources to dedicate themselves fully to their craft, away from the constant demands of commercial sites.",
 								"Legendary smiths are rare, extremely talented, and extraordinarily hard to commission. Aside from being in high demand, they tend to be rather picky about the jobs they take. They may require a quest to be completed, or a gift of a rare material or item, before they even consider taking on a job."
 							]
 						}
