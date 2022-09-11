@@ -6029,14 +6029,23 @@
 			"entries": [
 				"It's no secret that death saves in 5e are a little bit weird: a PC left on the ground is either ignored, in which case they bounce back up almost immediately after a {@spell healing word}, or they get double-tapped and murdered before anybody has a chance to intervene. It's a system that's often entirely dependent on the DM's mercy, and is basically held up by the DM creating reasons that the enemy doesn't just finish off a downed PC.",
 				"The following system revision, haphazardly called GRIM, is intended to give dying PCs a little more agency in their deaths while removing the factor of DM mercy from the equation.",
-				"Note that this system is pretty heavily experimental. If I feel like it's performing poorly, I may revoke it during a campaign.",
+				"Note that this system is pretty heavily experimental. If I feel like it's performing poorly, I may revoke/edit it during a campaign.",
 				{
 					"type": "entries",
 					"name": "Negative Hit Points",
 					"entries": [
 						"Hit points are now allowed to go negative, to a certain point. If a single instance of damage brings your hit points below 0, your hit points go negative. However, if your hit points are already 0 or negative, all subsequent hits do not decrease your hit points further; instead, they trigger death saving throws.",
 						"For example, if you have 4 hit points and a goblin stabs you for 10 damage, your hit points go to -6 rather than 0. If they stab you again, your hit points do not change, but you must make a death saving throw (detailed later). If you heal back to 2 hit points, getting attacked again could drop your hit points negative again.",
-						"If you complete a short rest, your hit points are set to 1 if they were 0 or below. This happens before you recieve any healing from hit dice."
+						"If you complete a short rest, your hit points are set to 1 if they were 0 or below. This happens before you recieve any healing from hit dice.",
+						{
+							"type": "inset",
+							"name": "Death Interruption",
+							"entries": [
+								"One important exception to the negative hit points rule applies to certain death-interruption abilities, such as {@spell death ward}. Generally, if an ability activates 'when a creature drops to 0 hit points', you can assume that it can apply to any case where a creature drops to negative hit points too.",
+								"Generally, death prevention abilities should be worded in a way that avoids strange interactions, but if a specific ability is worded in a way that causes the negative hit points rule to nullify the ability's effectiveness, you should bring it up with the DM. The DM will favor rulings that preserve the original intent of the ability.",
+								"For example, an ability might be worded 'when your character drops to 0 hit points, they immediately regain 5 hit points', which would be significantly weaker due to negative hit points. In this case, we would probably simply errata the ability to read 'when your character would otherwise drop to 0 hit points or below, they instead drop to 5 hit points', or similar."
+							]
+						}
 					]
 				},
 				{
