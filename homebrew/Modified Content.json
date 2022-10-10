@@ -5816,7 +5816,7 @@
 					"name": "Perceiving a Caster at Work",
 					"entries": [
 						"Many spells create obvious effects: explosions of fire, walls of ice, teleportation, and the like. Other spells, such as charm person, display no visible, audible, or otherwise perceptible sign of their effects, and could easily go unnoticed by someone unaffected by them. As noted in the Player's Handbook, you normally don't know that a spell has been cast unless the spell produces a noticeable effect.",
-						"But what about the act of casting a spell? Is it possible for someone to perceive that a spell is being cast in their presence? To be perceptible, the casting of a spell must involve a verbal or somatic component.",
+						"But what about the act of casting a spell? Is it possible for someone to perceive that a spell is being cast in their presence? To be perceptible, the casting of a spell must involve a verbal or somatic component. Such components are always quite audible/visible, respectively- on the level of 'chanting mystic words' and 'waving your hands about dramatically', and cannot generally be hidden through mundane means (whispering, hiding under a cloak). (The {@feat inconspicuous spellcasting|MOD} feature allows you to attempt to mask such components for certain spells, if this is something important to you.)",
 						"If the need for a spell's components has been removed by a special ability, such as the sorcerer's Subtle Spell feature or the Innate Spellcasting trait possessed by many creatures, the casting of the spell is imperceptible. If an imperceptible casting results in a perceptible effect, it may be impossible to determine who the effect originated from, though in other circumstances it is more obvious. (For example, an imperceptibly cast illusion spell may have no obvious source, but a {@spell scorching ray} or {@spell fireball} has a visible effect that emenates from its source.)"
 					]
 				},
@@ -5835,6 +5835,14 @@
 					"entries": [
 						"A spell specifies what a caster can target with it: any type of creature, a creature of a certain type (humanoid or beast, for instance), an object, an area, the caster, or something else. But what happens if a spell targets something that isn't a valid target? For example, someone might cast {@spell charm person} on a creature believed to be a humanoid, not knowing that the target is in fact a vampire. If this issue comes up, handle it using the following rule.",
 						"If you cast a spell on someone or something that can't be affected by the spell, nothing happens to that target, but if you used a spell slot to cast the spell, the slot is still expended. If the spell normally has no effect on a target that succeeds on a saving throw, the invalid target appears to have succeeded on its saving throw, even though it didn't attempt one (giving no hint that the creature is in fact an invalid target). Otherwise, you perceive that the spell did nothing to the target."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Line of Effect",
+					"entries": [
+						"As per RAW: Almost every spell requires line of effect to their target, with minimal exceptions. A spell may not require sight, but you still cannot cast it through a solid wall, or even any sort of barrier that constitutes total cover. Similarly, the effects of most spells are stopped by total cover or other substantial barriers.",
+						"The only exceptions are spells that specifically allow their effects to go through walls, spells with a 'Special' range, and some tangential effects of Self spells. (The Misty Step spell is worth calling out here- it actually CAN go through walls, but only because the spell target is Self, and only if you can see the location on the other side. It's an unusual yet common case.)"
 					]
 				}
 			]
