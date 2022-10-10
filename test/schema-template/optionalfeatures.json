@@ -1,17 +1,11 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "optionalfeatures.json",
-	"version": "1.11.1",
+	"version": "1.11.7",
 	"title": "Optional Features",
 	"type": "object",
 
 	"definitions": {
-		"featureType": {
-			"type": "array",
-			"items": {"$ref": "util.json#/definitions/dataOptionalfeatureType"},
-			"uniqueItems": true
-		},
-
 		"optionalfeature": {
 			"type": "object",
 			"properties": {
@@ -43,21 +37,11 @@
 				"source": {
 					"type": "string"
 				},
-				"page": {
-					"type": "integer"
-				},
+				"page": {"$ref": "util.json#/definitions/page"},
 				"featureType": {
-					"oneOf": [
-						{
-							"$ref": "#/definitions/featureType"
-						},
-						{
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/featureType"
-							}
-						}
-					]
+					"type": "array",
+					"items": {"$ref": "util.json#/definitions/dataOptionalfeatureType"},
+					"uniqueItems": true
 				},
 				"otherSources": {
 					"$ref": "util.json#/definitions/otherSources"
@@ -90,18 +74,18 @@
 					"$ref": "util.json#/definitions/skillToolLanguageProficiencies"
 				},
 				"consumes": {"$ref": "util.json#/definitions/consumesObject"},
+				"senses": {"$ref": "util.json#/definitions/sensesArray"},
+				"optionalfeatureProgression": {"$ref": "util.json#/definitions/optionalfeatureProgression"},
+				"expertise": {"$ref": "util.json#/definitions/expertise"},
+				"resist": {"$ref": "util.json#/definitions/damageResistArrayPlayer"},
+				"immune": {"$ref": "util.json#/definitions/damageImmunityArrayPlayer"},
+				"vulnerable": 	{"$ref": "util.json#/definitions/damageVulnerabilityArrayPlayer"},
+				"conditionImmune": {"$ref": "util.json#/definitions/conditionImmunityArrayPlayer"},
 				"$$ifBrew": {
 					"foundryData": {"$ref": "util.json#/definitions/foundryDataObject"},
 					"foundryFlags": {"$ref": "util.json#/definitions/foundryFlagsObject"},
-					"foundryEffects": {
-						"type": "array",
-						"items": {
-							"$ref": "util.json#/definitions/foundryEffectObject"
-						}
-					},
-					"foundryImg": {
-						"$ref": "util.json#/definitions/foundryImg"
-					}
+					"foundryEffects": {"$ref": "util.json#/definitions/foundryEffectsArray"},
+					"foundryImg": {"$ref": "util.json#/definitions/foundryImg"}
 				}
 			},
 			"required": [

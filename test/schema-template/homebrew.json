@@ -1,8 +1,29 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"version": "1.7.2",
+	"version": "1.10.1",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
+
+	"definitions": {
+		"wrappedAdventureBookDataArray": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {"type": "string"},
+					"source": {"type": "string"},
+					"data": {
+						"$$ifNotFast": {
+							"$ref": "util.json#/definitions/adventureBookData"
+						}
+					}
+				},
+				"required": ["id", "source", "data"],
+				"additionalProperties": false
+			}
+		}
+	},
+
 	"properties": {
 		"_meta": {
 			"description": "Metadata for the included data arrays",
@@ -72,30 +93,6 @@
 							"version"
 						],
 						"additionalProperties": false
-					}
-				},
-				"skills": {
-					"type": "object",
-					"description": "Object keys are Skill names, which can referenced using {@skill <key>} (case sensitive)",
-					"patternProperties": {
-						".*": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"senses": {
-					"type": "object",
-					"description": "Object keys are Sense names, which can referenced using {@sense <key>} (case insensitive)",
-					"patternProperties": {
-						".*": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						}
 					}
 				},
 				"spellSchools": {
@@ -190,6 +187,12 @@
 					"type": "integer",
 					"description": "The epoch timestamp (in seconds) when the homebrew was last modified. Not guaranteed to be anywhere near accurate."
 				},
+				"_dateLastModifiedHash": {
+					"type": "string",
+					"description": "A file hash used to automatically update the value of \"dateLastModified\". Should not be manually created/edited.",
+					"minLength": 10,
+					"maxLength": 10
+				},
 				"currencyConversions": {
 					"type": "object",
 					"description": "Keys should be uniquely-named value conversion objects, and can be referenced from item entities as \"currencyConversion\": \"<MyKey>\". The currency conversion info will then be used when rendering the value of the item.",
@@ -221,7 +224,7 @@
 					}
 				},
 				"dependencies": {
-					"description": "A map of `\"<data property>\": [\"<JsonSource1>\", ..., \"<JsonSourceN>\"]`. Entities from these sources can then be extended/referenced in this file.",
+					"description": "A map of `\"<data property>\": [\"<JsonSource1>\", ..., \"<JsonSourceN>\"]`. Entities from these sources can then be extended/referenced in this file.\nNote: when copying classes/subclasses/class features/subclass features, the array should consist of \"<classIdentifier1>\", ..., \"<classIdentifierN>\" items, where \"classIdentifierN\" matches the keys in \"5etools/data/class/index.json\" (when copying class/etc. homebrew, normal \"source\"-based linking applies).",
 					"type": "object",
 					"patternProperties": {
 						"^[a-zA-Z]+$": {
@@ -257,7 +260,9 @@
 				}
 			},
 			"required": [
-				"sources"
+				"sources",
+				"dateAdded",
+				"dateLastModified"
 			],
 			"additionalProperties": false
 		},
@@ -271,8 +276,8 @@
 				"https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_schema/homebrew.json"
 			]
 		},
-		"blacklist": {
-			"description": "An array of objects to blacklist from display on the site.\nUse of this in public brew files is strongly discouraged.",
+		"blocklist": {
+			"description": "An array of objects to blocklist from display on the site.\nUse of this in public brew files is strongly discouraged.",
 			"type": "array",
 			"items": {
 				"type": "object",
@@ -282,7 +287,7 @@
 					},
 					"hash": {
 						"type": "string",
-						"description": "A unique reference for the removed item. Use the blacklist tool on the site to generate this."
+						"description": "A unique reference for the removed item. Use the blocklist tool on the site to generate this."
 					},
 					"category": {
 						"type": "string"
@@ -304,7 +309,7 @@
 			"$ref": "adventures.json#/properties/adventure"
 		},
 		"adventureData": {
-			"$ref": "adventure/adventure.json#/properties/data"
+			"$ref": "#/definitions/wrappedAdventureBookDataArray"
 		},
 		"monster": {
 			"$ref": "bestiary/bestiary.json#/properties/monster"
@@ -322,7 +327,7 @@
 			"$ref": "books.json#/properties/book"
 		},
 		"bookData": {
-			"$ref": "book/book.json#/properties/data"
+			"$ref": "#/definitions/wrappedAdventureBookDataArray"
 		},
 		"class": {
 			"$ref": "class/class.json#/properties/class"
@@ -380,8 +385,8 @@
 		"itemTypeAdditionalEntries": {
 			"$ref": "items-base.json#/properties/itemTypeAdditionalEntries"
 		},
-		"variant": {
-			"$ref": "magicvariants.json#/properties/variant"
+		"magicvariant": {
+			"$ref": "magicvariants.json#/properties/magicvariant"
 		},
 		"linkedLootTables": {
 			"$ref": "magicvariants.json#/properties/linkedLootTables"
@@ -391,6 +396,9 @@
 		},
 		"background": {
 			"$ref": "backgrounds.json#/properties/background"
+		},
+		"backgroundFeature": {
+			"$ref": "foundry-backgrounds.json#/properties/backgroundFeature"
 		},
 		"backgroundFluff": {
 			"$ref": "fluff-backgrounds.json#/properties/backgroundFluff"
@@ -434,27 +442,6 @@
 		"languageFluff": {
 			"$ref": "fluff-languages.json#/properties/languageFluff"
 		},
-		"individual": {
-			"$ref": "loot.json#/properties/individual"
-		},
-		"hoard": {
-			"$ref": "loot.json#/properties/hoard"
-		},
-		"gems": {
-			"$ref": "loot.json#/properties/gems"
-		},
-		"artObjects": {
-			"$ref": "loot.json#/properties/artObjects"
-		},
-		"magicItems": {
-			"$ref": "loot.json#/properties/magicItems"
-		},
-		"dragonMundaneItems": {
-			"$ref": "loot.json#/properties/dragonMundaneItems"
-		},
-		"dragon": {
-			"$ref": "loot.json#/properties/dragon"
-		},
 		"makebrewCreatureTrait": {
 			"$ref": "makebrew-creature.json#/properties/makebrewCreatureTrait"
 		},
@@ -466,9 +453,6 @@
 		},
 		"monsterfeatures": {
 			"$ref": "monsterfeatures.json#/properties/monsterfeatures"
-		},
-		"cr": {
-			"$ref": "msbcr.json#/properties/cr"
 		},
 		"name": {
 			"$ref": "names.json#/properties/name"
@@ -482,11 +466,20 @@
 		"psionic": {
 			"$ref": "psionics.json#/properties/psionic"
 		},
+		"psionicDisciplineFocus": {
+			"$ref": "foundry-psionics.json#/properties/psionicDisciplineFocus"
+		},
+		"psionicDisciplineActive": {
+			"$ref": "foundry-psionics.json#/properties/psionicDisciplineActive"
+		},
 		"race": {
 			"$ref": "races.json#/properties/race"
 		},
 		"subrace": {
 			"$ref": "races.json#/properties/subrace"
+		},
+		"foundryRaceFeature": {
+			"$ref": "foundry-races.json#/properties/raceFeature"
 		},
 		"raceFluff": {
 			"$ref": "fluff-races.json#/properties/raceFluff"
@@ -499,9 +492,6 @@
 		},
 		"recipeFluff": {
 			"$ref": "fluff-recipes.json#/properties/recipeFluff"
-		},
-		"renderdemo": {
-			"$ref": "renderdemo.json#/properties/data"
 		},
 		"reward": {
 			"$ref": "rewards.json#/properties/reward"
@@ -526,6 +516,12 @@
 		},
 		"vehicleFluff": {
 			"$ref": "fluff-vehicles.json#/properties/vehicleFluff"
+		},
+		"skill": {
+			"$ref": "skills.json#/properties/skill"
+		},
+		"sense": {
+			"$ref": "senses.json#/properties/sense"
 		}
 	},
 	"additionalProperties": false,

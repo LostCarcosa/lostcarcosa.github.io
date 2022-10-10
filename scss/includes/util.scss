@@ -41,6 +41,10 @@ input[type="radio"]:checked {
 	font-weight: bold !important;
 }
 
+.ve-bolder {
+	font-weight: bolder !important;
+}
+
 .italic {
 	font-style: italic !important;
 }
@@ -81,9 +85,9 @@ i > i {
 }
 
 .text-clip-ellipsis {
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	white-space: nowrap !important;
+	text-overflow: ellipsis !important;
+	overflow: hidden !important;
 }
 
 .whitespace-normal {
@@ -98,7 +102,7 @@ i > i {
 	font-variant: small-caps;
 }
 
-.capitalise {
+.capitalize {
 	text-transform: capitalize;
 }
 
@@ -289,6 +293,10 @@ i > i {
 	width: 20px !important;
 }
 
+.w-24p {
+	width: 24px !important;
+}
+
 .w-30p {
 	width: 30px !important;
 }
@@ -299,6 +307,10 @@ i > i {
 
 .w-50p {
 	width: 50px !important;
+}
+
+.w-70p {
+	width: 70px !important;
 }
 
 .w-80p {
@@ -365,6 +377,10 @@ i > i {
 	max-width: 200px !important;
 }
 
+.max-w-300p {
+	max-width: 300px !important;
+}
+
 .max-w-640p {
 	max-width: 640px !important;
 }
@@ -391,16 +407,20 @@ i > i {
 	height: 20px !important;
 }
 
-.h-25p {
-	height: 25px !important;
-}
-
 .h-21p {
 	height: 21px !important;
 }
 
+.h-25p {
+	height: 25px !important;
+}
+
 .h-27p {
 	height: 27px !important;
+}
+
+.h-ipt-xs {
+	height: $h-ipt-xs;
 }
 
 // Often useful as a hack to force flexbox to behave
@@ -419,6 +439,10 @@ i > i {
 .max-h-40 {
 	max-height: 40% !important;
 }
+
+.max-h-unset {
+	max-height: unset !important;
+}
 // endregion
 
 // region Position
@@ -428,6 +452,10 @@ i > i {
 
 .absolute {
 	position: absolute !important;
+}
+
+.sticky {
+	position: sticky !important;
 }
 // endregion
 
@@ -524,11 +552,11 @@ i > i {
 	justify-content: center !important;
 }
 
-.self-ve-flex-start {
+.ve-self-flex-start {
 	align-self: flex-start !important;
 }
 
-.self-ve-flex-center {
+.ve-self-flex-center {
 	align-self: center !important;
 }
 
@@ -536,7 +564,7 @@ i > i {
 	align-self: flex-end !important;
 }
 
-.self-ve-flex-stretch {
+.ve-self-flex-stretch {
 	align-self: stretch !important;
 }
 
@@ -725,6 +753,12 @@ i > i {
 
 .border-dotted {
 	border-style: dotted !important;
+}
+// endregion
+
+// region Opacity
+.opacity-50 {
+	opacity: 0.5 !important;
 }
 // endregion
 

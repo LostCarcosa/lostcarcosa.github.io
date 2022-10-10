@@ -1,0 +1,804 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "KAO",
+				"abbreviation": "KAO",
+				"full": "Kibbles Assorted Options",
+				"authors": [
+					"Kibblestasty"
+				],
+				"convertedBy": [
+					"Wolf"
+				],
+				"version": "1",
+				"color": "558BFF",
+				"url": "no",
+				"targetSchema": "1"
+			}
+		],
+		"optionalFeatureTypes": {
+		},
+		"dateAdded": 1647935526,
+		"dateLastModified": 1647935526
+	},
+	"monster":[
+		{
+			"name": "Sapling",
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"source": "KAO",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "12 + PB"
+				}
+			],
+			"hp": {
+				"special": "10 + 5 times your druid level"
+			},
+			"speed": {
+				"walk": 0
+			},
+			"str": 16,
+			"dex": 1,
+			"con": 16,
+			"int": 2,
+			"wis": 14,
+			"cha": 2,
+			"passive": 0,
+			"senses": [
+				"blindsight 20 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"save": {
+				"str": "+3",
+				"con": "+3"
+			},
+			"skill": {
+				"athletics": "+3"
+			},
+			"resist": [
+				"piercing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"prone"
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 10 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 30 ft., one target. {@h}5 ({@damage 1d4 + 3}) slashing damage, and the creature must succeed a Strength saving throw against your spell save DC or be dragged up to 15 feet toward the sapling. This distance is reduced by 5 feet fore very size category above Medium."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"trait": [
+				{
+					"name": "Grasping Roots",
+					"entries": [
+						"Terrain within 5 feet of the sapling is difficult terrain for hostile creatures."
+					]
+				},
+				{
+					"name": "Sheltering Branches",
+					"entries": [
+						"Allied creatures within 5 feet of Sapling gain half cover."
+					]
+				}
+			]
+		}
+	],
+	"subclass": [
+		{
+			"name": "Path of the Instinct",
+			"shortName": "Instinct",
+			"source": "KAO",
+			"page": 0,
+			"subclassFeatures": [
+				"Path of the Instinct|Barbarian||Instinct|KAO|3",
+				"Blind Fighting|Barbarian||Instinct|KAO|6",
+				"Evasion|Barbarian||Instinct|KAO|10",
+				"Instinctive Strike|Barbarian||Instinct|KAO|14"
+			],
+			"className": "Barbarian",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Path of the Dragon",
+			"shortName": "Dragon",
+			"source": "KAO",
+			"page": 0,
+			"subclassFeatures": [
+				"Path of the Dragon|Barbarian||Dragon|KAO|3",
+				"Unleashed Savagery|Barbarian||Dragon|KAO|6",
+				"Primal Weapons|Barbarian||Dragon|KAO|6",
+				"Dragonhide|Barbarian||Dragon|KAO|10",
+				"Tyrant of the Skies|Barbarian||Dragon|KAO|14"
+			],
+			"className": "Barbarian",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Path of the Bladestorm",
+			"shortName": "Bladestorm",
+			"source": "KAO",
+			"page": 0,
+			"subclassFeatures": [
+				"Path of the Bladestorm|Barbarian||Bladestorm|KAO|3",
+				"Whirling Death|Barbarian||Bladestorm|KAO|6",
+				"Endless Blades|Barbarian||Bladestorm|KAO|6",
+				"Winds of Rage|Barbarian||Bladestorm|KAO|10",
+				"Bladestorm|Barbarian||Bladestorm|KAO|14"
+			],
+			"className": "Barbarian",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Circle of the Sun",
+			"source": "KAO",
+			"className": "Druid",
+			"classSource": "PHB",
+			"shortName": "Sun",
+			"page": 1,
+			"additionalSpells": [
+				{
+					"known": {
+						"2": [
+							"light#c",
+							"word of radiance|XGE#c"
+						]
+					},
+					"prepared": {
+						"2": [
+							"hand of helios|BDPC"
+						],
+						"3": [
+							"flame blade"
+						],
+						"5": [
+							"bonds of light|BDPC"
+						],
+						"7": [
+							"sunwhip|BDPC"
+						],
+						"9": [
+							"halo"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Circle of the Sun|Druid|PHB|Sun|KAO|2",
+				"Burning Light|Druid|PHB|Sun|KAO|6",
+				"Cleansing Fire|Druid|PHB|Sun|KAO|10",
+				"Emissary of the Sun|Druid|PHB|Sun|KAO|14"
+			]
+		},
+		{
+			"name": "Circle of Growth",
+			"source": "SRC",
+			"className": "Druid",
+			"classSource": "PHB",
+			"shortName": "Growth",
+			"page": 1,
+			"subclassFeatures": [
+				"Circle of Growth|Druid|PHB|Growth|SRC|2",
+				"Verdant Power|Druid|PHB|Growth|SRC|6",
+				"Entangling Roots|Druid|PHB|Growth|SRC|10",
+				"Nourishing Magic|Druid|PHB|Growth|SRC|14"
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Path of the Instinct",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Instinct",
+			"subclassSource": "KAO",
+			"level": 3,
+			"entries": [
+				"While many Barbarians lose control when they rage, flying into wild tantrums, some operate in a state of cold absolute focus, becoming creatures of pure instinct and finely honed reflexes. Entering a void-like state of mind, they act almost without conscious thought, accomplishing super human feats and shrugging off hits.",
+				"Though utter calm might seem less frightening than the frothing rage of their counterparts, true terror sets in once their foes witness the destruction such perfect focus can bring.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Focused Rage|Barbarian||Instinct|KAO|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Instinctive Insight|Barbarian||Instinct|KAO|3"
+				}
+			]
+		},
+		{
+			"name": "Focused Rage",
+			"source": "KAO",
+			"page": 84,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Instinct",
+			"subclassSource": "KAO",
+			"level": 3,
+			"entries": [
+				"Starting when you choose this path at 3rd level, your rage becomes a state of pure focus. You can perform impossible feats in this state of extreme focus by expending focus dice. When you enter a rage, you gain a number of d8 focus dice equal to your proficiency bonus. You can expend these dice on the following abilities:",
+				{
+					"type": "list",
+					"items": [
+						{
+							"type": "item",
+							"name": "Perfect Dodge",
+							"entries": [
+								"When you make a Dexterity saving throw or Dexterity ability check, you can expend a focus die, expending it and adding to the roll. You can do this after rolling the d20, but before the outcome is determined."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Perfect Intuition",
+							"entries": [
+								"When you make a Wisdom saving throw or ability check, you can expend a focus die to add it to the roll. When you do this with the Search action, you can take the Search action as a bonus action."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Perfect Parry",
+							"entries": [
+								"When another creature damages you with a weapon attack, you can use your reaction and expend one focus die to reduce the damage by the number you roll on your focus die + your Strength or Dexterity modifier (your choice)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Perfect Strike",
+							"entries": [
+								"When you make a weapon attack roll against a creature, you can expend one focus die to add it to the roll. You can use this ability after making the attack roll, but before any effects of the attack are applied."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Perfect Focus",
+							"entries": [
+								"If your rage would end for any reason other being knocked unconscious, you can expend a focus die to prevent it from ending until the start of your next turn."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Instinctive Insight",
+			"source": "KAO",
+			"page": 84,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Instinct",
+			"subclassSource": "KAO",
+			"level": 3,
+			"entries": [
+				"Additionally at 3rd level, your natural intuition and ability to read creature behavior grants you proficiency in the Insight skill. If you are already proficient in Insight, you gain expertise in it, allowing you to add twice your proficiency bonus to Insight checks.",
+				"Additionally, you may choose to use your Wisdom modifier instead of your Constitution modifier for your Unarmored Defense feature."
+			]
+		},
+		{
+			"name": "Blind Fighting",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Instinct",
+			"subclassSource": "KAO",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, your senses are so sharp while raging you gain an instinctive blindsight of 10 feet while raging. The range of this blind sight increases by 10 feet at 10th level (to 20 feet), and again at 14th level (to 30 feet)."
+			]
+		},
+		{
+			"name": "Evasion",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Instinct",
+			"subclassSource": "KAO",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Beginning at 10th level, you can nimbly dodge out of the way of certain area effects, such as an ancient red dragon’s fiery breath or an ice storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+			]
+		},
+		{
+			"name": "Instinctive Strike",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Instinct",
+			"subclassSource": "KAO",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, when a creature ends their turn within range of your blindsight, you can expend a focus die as a reaction to move toward that creature (up to your movement speed). If you can reach the creature after your movement, you can make one weapon attack against them as part of this reaction. This movement does not trigger opportunity attacks."
+			]
+		},
+		{
+			"name": "Path of the Dragon",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Dragon",
+			"subclassSource": "KAO",
+			"level": 3,
+			"entries": [
+				"The legendary dragons are long extinct, but their power still lingers across the land. Barbarians of this path tap into the remnant of the true dragons, embracing their potent destructive powers to become a fearsome force in combat.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Draconic Wrath|Barbarian||Dragon|KAO|3"
+				}
+			]
+		},
+		{
+			"name": "Draconic Wrath",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Dragon",
+			"subclassSource": "KAO",
+			"level": 3,
+			"entries": [
+				"When you choose this path at 3rd level, when you enter a rage, you can choose to make your Rage bonus damage deal elemenetal damage matching your draconic type.",
+				"Additionally, you can you take on aspects of a draconic being, growing savage natural weapons as claws grow from your hands, fangs sprout from your maw, and a vicious lashing tail grows from your back. Your claws deal 1d4 slashing damage, your fangs deal 1d8 piercing damage, and your lashing tail deals 1d6 bludgeoning damage and has the reach property. Whenever you attack with one of your natural weapons using the Attack action on your turn, if you are not carrying any weapon or shield, you can make a single unarmed strike with your claws as a bonus action.",
+				"When you gain this feature, you pick a color, and gain resistance corresponding to the element type of that color on the following chart while raging. You cannot change your draconic color later.",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-5 text-center",
+						"col-5 text-center"
+					],
+					"colLabels": [
+						"Color",
+						"Element"
+					],
+					"rows": [
+						[
+							"Black",
+							"Acid"
+						],
+						[
+							"Blue",
+							"Lightning"
+						],
+						[
+							"Green",
+							"Poison"
+						],
+						[
+							"Red",
+							"Fire"
+						],
+						[
+							"White",
+							"Cold"
+						]
+					]
+				},
+				"While raging, you are considered to both be humanoid and dragon creature types. Any effect that can affect {@i either} type, affects you."
+			]
+		},
+		{
+			"name": "Unleashed Savagery",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Dragon",
+			"subclassSource": "KAO",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, once during a rage, as an attack as part of the Attack action, you can unleash your Rage into pure energy, exhaling a blast of elemental power. Creatures within 15 foot cone must make a Dexterity saving throw. The DC of this saving throw is 8 + your proficiency modifier + your strength modifier. A creature takes 6d6 damage of the Elemental Type of your Dragon Color on a failed save.",
+				"The damage and range of this breath weapon increases at 10th level (to 8d6 in a 30 foot cone), and 14th level (to 10d6 in a 60 foot cone). Starting at 18th level, you can use this breath weapon twice per rage, but only per turn."
+			]
+		},
+		{
+			"name": "Primal Weapons",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Dragon",
+			"subclassSource": "KAO",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Additionally at 6th level, the natural weapons you gain while raging now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+			]
+		},
+		{
+			"name": "Dragonhide",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Dragon",
+			"subclassSource": "KAO",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, the marks of your Draconic path no longer entirely fade when you are not raging. Heavy scales coat your body, granting you resistance to bludgeoning, piercing, and slashing damage from nonmagical sources even when you are not raging. Additionally, you gain resistance to your Dragon Color's Elemental Type when not raging.",
+				"You are permanently considered to be a dragon as well as a humanoid."
+			]
+		},
+		{
+			"name": "Tyrant of the Skies",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Dragon",
+			"subclassSource": "KAO",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"By 14th level, when you enter a rage, you can massive dragon wings sprout from your back. If you are not wearing heavy armor, you gain a flying speed equal to your movement speed.",
+				"If you choose to manifest natural weapons and wings when you enter a rage, you can choose entirely take on a draconic form while raging, becoming Large sized. When you take on a full draconic form, you choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it."
+			]
+		},
+		{
+			"name": "Path of the Bladestorm",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Bladestorm",
+			"subclassSource": "KAO",
+			"level": 3,
+			"entries": [
+				"Barbarians are notorious for being engines of destruction on the battlefield, and for none is this more an apt description than those that have chosen the Path of the Bladestorm. They are barbarians whose rage is such a transcendent force that their very weapons are restless embodiments of their destructive wrath.",
+				"When a Path of the Bladestorm Barbarian walks unto a battlefield, those unprepared to withstand the rain of sharp steel ought to run away and hide until the storm passes. The ones who stay will have to face the winds of destruction and will soon be drenched by flying droplets of blood as the barbarian at the center of the maelstrom smashes, hacks and",
+				"slashes at the strength of primal winds. Woe to the foe who would stand before the storm.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Walking Armory|Barbarian||Bladestorm|KAO|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Furious Hurl|Barbarian||Bladestorm|KAO|3"
+				}
+			]
+		},
+		{
+			"name": "Walking Armory",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Bladestorm",
+			"subclassSource": "KAO",
+			"level": 3,
+			"entries": [
+				"Starting when you choose this path at 3rd level, all melee weapons with the light property also gain the thrown (20/60) property for you. Additionally, when you throw a weapon, you can immediately draw a weapon as part of the attack."
+			]
+		},
+		{
+			"name": "Furious Hurl",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Bladestorm",
+			"subclassSource": "KAO",
+			"level": 3,
+			"entries": [
+				"Additionally at 3rd level, you can add your Rage bonus damage thrown weapons, as well as use your Reckless Attack feature when you make a ranged weapon attack with a (thrown) light melee weapon."
+			]
+		},
+		{
+			"name": "Whirling Death",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Bladestorm",
+			"subclassSource": "KAO",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, when you throw a weapon while raging it becomes animated with your fury. A whirling weapon stays spinning where it was thrown until the end of your next turn, and automatically attacks the first hostile creature that ends its turn within 5 feet of it. A creature can only take damage from this feature once per turn. You can use your reaction to make an attack of opportunity with any weapon animated by this feature if a target moves out of its reach."
+			]
+		},
+		{
+			"name": "Endless Blades",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Bladestorm",
+			"subclassSource": "KAO",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Additionally at 6th level, while raging your rage suffuses any weapon within 20 feet of you that is not being worn or carried. As a bonus action, you can call one or more such weapons to your open hands. Any blade you throw counts as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+			]
+		},
+		{
+			"name": "Winds of Rage",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Bladestorm",
+			"subclassSource": "KAO",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Beginning at 10th level, the winds around you are tied to your anger. You learn the spell gust. While you are raging, you can cast gust as a bonus action, and the range you can pick up weapons with Endless Blades increases to 60 feet."
+			]
+		},
+		{
+			"name": "Bladestorm",
+			"source": "KAO",
+			"page": 0,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Bladestorm",
+			"subclassSource": "KAO",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, as an action when you are raging, you can start a Bladestorm. You can fling out up two light melee weapons you are carrying and whip any weapons animated by Whirling Death into it. All creatures of your choosing within 20 feet of you must make a Dexterity saving throw with a DC of 8 + your proficiency modifier + your strength modifier. On failure, they take 1d6 damage for each blade that is part of the bladestorm (up to 4d6) + your Strength modifier + your rage bonus damage.",
+				"On subsequent turns while raging, you can use your action to keep the Bladestorm going, forcing all creatures within 20 feet to make the save again. You can keep a Bladestorm going for a number of turns equal to your Strength modifier. You can use this feature once per rage. When a bladestorm ends, all included weapons fall to the ground around you."
+			]
+		},
+		{
+			"name": "Circle of the Sun",
+			"source": "KAO",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "KAO",
+			"subclassShortName": "Sun",
+			"page": 18,
+			"level": 2,
+			"entries": [
+				"Druids revere aspects aspects of nature, and none is more central the cycle of life than the sun, origin of light and life. Druids of this circle are not clerics of the Weeping Sun, and in fact ideologically disagree with the Church's interpretation of the sun, disparaging the idea of a mournful, cold light. Sund ruids represent its aspect in the cycle of life, the light and heat and it brings, and the fiery radiance with which it reigns over the world.",
+				"Druids of the Circle often stand in opposition that with crawls through the dark, that which corrupts in the absence of light, and while still inclined to the neutrality many Druids uphold, they tend to swing further the extremes of passion and action, willing to burn away the rot. Though they might aim for a controlled burn, a controlled burn may often be more destructive than a simple pruning.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Circle Spells|Druid||Sun|KAO|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Unleash Radiance|Druid||Sun|KAO|2"
+				}
+			]
+		},
+		{
+			"name": "Circle Spells",
+			"source": "KAO",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "KAO",
+			"subclassShortName": "Sun",
+			"page": 0,
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"At 2nd level, you learn the {@spell light} and {@spell word of radiance|XGE} cantrips. At 2nd, 3rd, 5th, 7th, and 9th level you gain access to the spells listed for that level in the Circle of the Sun Spells table. Once you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day",
+				{
+					"type": "table",
+					"caption": "Circle of X Spells",
+					"colLabels": [
+						"Druid Level",
+						"Circle Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"2nd",
+							"{@spell hand of helios|BDPC}"
+						],
+						[
+							"3rd",
+							"{@spell flame blade}"
+						],
+						[
+							"5th",
+							"{@spell bonds of light|BDPC}"
+						],
+						[
+							"7th",
+							"{@spell sunwhip|BDPC}"
+						],
+						[
+							"9th",
+							"{@spell halo|BDPC}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Unleash Radiance",
+			"source": "KAO",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "KAO",
+			"subclassShortName": "Sun",
+			"page": 0,
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"When you choose this circle at 2nd level, you gain an alternate use for Wild Shape. You absorb sunlight and as a bonus action, you can unleash the radiance within, transforming into a being of light. When you transform with this ability, creatures within 15 feet of you must make a Constitution saving throw or be {@condition blinded} until the start of your next turn.",
+				"While transformed, you gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You shed bright light in a radius of 15 feet, and dimlight for another 15 feet. The bright light is sunlight.",
+						"When you would take fire or radiant damage, you can instead gain temporary hit points, up to a total of your Druid level. Once you have gained temporary hit points this way up to your Druid level, you no longer gain temporary hit points and gain resistance to fire and radiant damage.",
+						"Once per turn, when you deal fire or radiant damage on your turn, you can deal an addition 1d4 fire or radiant damage."
+					]
+				},
+				"As an action while you are transformed, you can end the effect early, releasing your stored energy in a beam of light a 60 feet long and 5 wide. Each creature in the line must make a Dexterity saving throw, or take 1d12 radiant damage. You can enhance this damage further by expending a spell slot of 5th level or lower, dealing {@damage 1d12} extra damage per level of slot expended.",
+				"If you have not been exposed to at least 1 hour of sunlight in the last 24 hours, the duration of the transformation is halved, and ending it early does not release a beam of energy."
+			]
+		},
+		{
+			"name": "Burning Light",
+			"source": "KAO",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "KAO",
+			"subclassShortName": "Sun",
+			"page": 0,
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, once per turn on your turn, when you roll fire or radiant damage against a creature that is in bright light, you can add your Wisdom modifier to one roll of that damage.",
+				"Additionally, when you take the Attack action and make a melee attack with the weapons created by {@spell flame blade} or {@spell sunwhip|BDPC}, you can make a second attack with the same weapon as part of the same action. (This does not stack with any other feature that lets you attack twice, such as Extra Attack.)"
+			]
+		},
+		{
+			"name": "Cleansing Fire",
+			"source": "KAO",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "KAO",
+			"subclassShortName": "Sun",
+			"page": 0,
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Beginning at 10th level, you can cast {@spell lesser restoration} as a bonus action without expending a spell slot. If the target has a condition or curse removed by the spell, they take {@damage 1d10} fire damage and {@damage 1d10} radiant damage.",
+				"You can do this a number of times equal to your Wisdom modifier, regaining all uses when you complete a long rest."
+			]
+		},
+		{
+			"name": "Emissary of the Sun",
+			"source": "KAO",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "KAO",
+			"subclassShortName": "Sun",
+			"page": 0,
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, when you use Embrace Radiance, you become a beacon of fire and light, gaining the effects of {@spell investiture of flame|MOD} while transformed..",
+				"Additionally, you can expend two uses of wildshape to grow wings of flame, taking on a phoenix-like form and gaining a fly speed of 30 feet in addition to the rest of the effects."
+			]
+		},
+		{
+			"name": "Circle of Growth",
+			"source": "SRC",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "SRC",
+			"subclassShortName": "Growth",
+			"page": 18,
+			"level": 2,
+			"entries": [
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Sprout Sapling|Druid||Growth|SRC|2"
+				}
+			]
+		},
+		{
+			"name": "Sprout Sapling",
+			"source": "SRC",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "SRC",
+			"subclassShortName": "Growth",
+			"page": 0,
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Starting at 2nd level, as a bonus action, you can expend one use of your Wild Shape feature to sprout a {@creature sapling|KAO}, rather than assuming a beast form. The Sapling to sprouts to life in an empty space you can see within 30 feet. The Seedling is friendly to you and your companions and obeys your commands. See this creature's game statistics in the Seedling stat block, which uses your proficiency bonus (PB) in several places.",
+				"In combat, the Sapling shares your initiative count, but it takes its turn immediately after yours. The only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. You can command your sapling as part of the same bonus action used to summon it. That action can be one in its stat block or some other action. If you are incapacitated, the Seedling can take any action of its choice, not just Dodge. When you cast a spell with a range other than self, the spell can originate from you or your Sapling.",
+				"The Seedling manifests for 10 minutes, until it is reduced to 0 hit points, until you use this feature to summon the spirit again, or until you die."
+			]
+		},
+		{
+			"name": "Verdant Power",
+			"source": "SRC",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "SRC",
+			"subclassShortName": "Growth",
+			"page": 0,
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, whenever you expend a spell slot of 1st level or higher while your Sapling is manifested, you can select one of the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"The Sapling can make additional attacks equal to the level of the spell slot divided by 2 (minimum 1).",
+						"All allied creatures of your choice within 30 feet of the Sapling gain temporary hit points equal twice the level of the spell slot.",
+						"The Sapling can move a 5 + 5 times the level of the spell slot spent feet on its turn. Until the start of your next turn, any space it moved through is difficult terrain for creatures of your choice."
+					]
+				}
+			]
+		},
+		{
+			"name": "Entangling Roots",
+			"source": "SRC",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "SRC",
+			"subclassShortName": "Growth",
+			"page": 0,
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, a hostile creature that ends its turn within 5 feet of the sapling must succeed a Dexterity saving throw against your spell save DC or become grappled by the Sapling.",
+				"Additionally, when a creature starts its turn {@condition grappled} or {@condition restrained} by you, your spells, or your Sapling, it takes damage equal to your Wisdom modifier."
+			]
+		},
+		{
+			"name": "Nourishing Magic",
+			"source": "SRC",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassSource": "SRC",
+			"subclassShortName": "Growth",
+			"page": 0,
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, whenever you trigger an effect of Verdant Power your Sapling regains 1d10 hit points per level of spell slot spent, and you can cause it to grow one size (up to a maximum of huge). Its reach increases by 5 feet for each size category above medium."
+			]
+		}
+	]
+}

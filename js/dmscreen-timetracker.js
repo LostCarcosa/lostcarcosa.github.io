@@ -5,6 +5,7 @@ class TimeTracker {
 		const $wrpPanel = $(`<div class="w-100 h-100 dm-time__root dm__panel-bg dm__data-anchor"/>`) // root class used to identify for saving
 			.data("getState", () => tracker.getSaveableState());
 		const tracker = new TimeTrackerRoot(board, $wrpPanel);
+		state = TimeTrackerUtil.getMigratedState(state);
 		tracker.setStateFrom(state);
 		tracker.render($wrpPanel);
 		return $wrpPanel;
@@ -22,6 +23,24 @@ class TimeTrackerUtil {
 
 	static revSlugToText (it) {
 		return it.split("-").reverse().map(s => s.split("|").join("- ")).join(" ").toTitleCase();
+	}
+
+	static getMigratedState (state) {
+		if (!state?.state) return state;
+
+		// region Migrate legacy sub-objects
+		["days", "months", "years", "eras", "moons", "seasons"]
+			.forEach(prop => {
+				if (!state.state[prop]) return;
+				if (state.state[prop] instanceof Array) return;
+				if (typeof state.state[prop] !== "object") return;
+
+				state.state[prop] = Object.values(state.state[prop])
+					.map(({id, ...rest}) => ({id, data: rest}));
+			});
+		// endregion
+
+		return state;
 	}
 }
 
@@ -88,24 +107,22 @@ class TimeTrackerBase extends TimeTrackerComponent {
 		const numMinutes = Math.floor(numSecs / secsPerMinute);
 		numSecs = numSecs - (numMinutes * secsPerMinute);
 
-		const monthInfos = Object.values(this._state.months)
-			.filter(it => !it.isDeleted)
-			.sort((a, b) => SortUtil.ascSort(a.pos, b.pos));
+		const dayInfos = this._state.days
+			.map(it => it.data);
 
-		const dayInfos = Object.values(this._state.days)
-			.filter(it => !it.isDeleted)
-			.sort((a, b) => SortUtil.ascSort(a.pos, b.pos));
+		const monthInfos = this._state.months
+			.map(it => it.data);
 
-		const seasonInfos = Object.values(this._state.seasons)
-			.filter(it => !it.isDeleted)
+		const seasonInfos = this._state.seasons
+			.map(it => it.data)
 			.sort((a, b) => SortUtil.ascSort(a.startDay, b.startDay));
 
-		const yearInfos = Object.values(this._state.years)
-			.filter(it => !it.isDeleted)
+		const yearInfos = this._state.years
+			.map(it => it.data)
 			.sort((a, b) => SortUtil.ascSort(a.year, b.year));
 
-		const eraInfos = Object.values(this._state.eras)
-			.filter(it => !it.isDeleted)
+		const eraInfos = this._state.eras
+			.map(it => it.data)
 			.sort((a, b) => SortUtil.ascSort(a.startYear, b.startYear));
 
 		const secsPerYear = secsPerDay * monthInfos.map(it => it.days).reduce((a, b) => a + b, 0);
@@ -232,8 +249,8 @@ class TimeTrackerBase extends TimeTrackerComponent {
 	}
 
 	_getMoonInfos (numDays) {
-		const moons = Object.values(this._state.moons)
-			.filter(it => !it.isDeleted)
+		const moons = this._state.moons
+			.map(it => it.data)
 			.sort((a, b) => SortUtil.ascSort(a.phaseOffset, b.phaseOffset) || SortUtil.ascSort(a.name, b.name));
 
 		return moons.map(moon => {
@@ -261,9 +278,8 @@ class TimeTrackerBase extends TimeTrackerComponent {
 	}
 
 	_getAllDayInfos () {
-		return Object.values(this._state.days)
-			.filter(it => !it.isDeleted)
-			.sort((a, b) => SortUtil.ascSort(a.pos, b.pos));
+		return this._state.days
+			.map(it => it.data);
 	}
 
 	/**
@@ -280,6 +296,8 @@ class TimeTrackerBase extends TimeTrackerComponent {
 
 	_getDefaultState () { return MiscUtil.copy(TimeTrackerBase._DEFAULT_STATE); }
 
+	get _rendered () { return this.__rendered; }
+
 	getPod () {
 		const pod = super.getPod();
 		pod.getTimeInfo = this._getTimeInfo.bind(this);
@@ -293,20 +311,22 @@ class TimeTrackerBase extends TimeTrackerComponent {
 
 	static getGenericDay (i) {
 		return {
-			...TimeTrackerBase._DEFAULT_STATE__DAY,
 			id: CryptUtil.uid(),
-			name: `${Parser.numberToText(i + 1)}day`.uppercaseFirst(),
-			pos: i,
+			data: {
+				...TimeTrackerBase._DEFAULT_STATE__DAY,
+				name: `${Parser.numberToText(i + 1)}day`.uppercaseFirst(),
+			},
 		};
 	}
 
 	static getGenericMonth (i) {
 		return {
-			...TimeTrackerBase._DEFAULT_STATE__MONTH,
 			id: CryptUtil.uid(),
-			name: `${Parser.numberToText(i + 1)}uary`.uppercaseFirst(),
-			days: 30,
-			pos: i,
+			data: {
+				...TimeTrackerBase._DEFAULT_STATE__MONTH,
+				name: `${Parser.numberToText(i + 1)}uary`.uppercaseFirst(),
+				days: 30,
+			},
 		};
 	}
 
@@ -342,40 +362,48 @@ class TimeTrackerBase extends TimeTrackerComponent {
 
 	static getGenericSeason (i) {
 		return {
-			...TimeTrackerBase._DEFAULT_STATE__SEASON,
 			id: CryptUtil.uid(),
-			name: `Season ${i + 1}`,
-			startDay: i * 90,
-			endDay: ((i + 1) * 90) - 1,
+			data: {
+				...TimeTrackerBase._DEFAULT_STATE__SEASON,
+				name: `Season ${i + 1}`,
+				startDay: i * 90,
+				endDay: ((i + 1) * 90) - 1,
+			},
 		};
 	}
 
 	static getGenericYear (i) {
 		return {
-			...TimeTrackerBase._DEFAULT_STATE__YEAR,
 			id: CryptUtil.uid(),
-			name: `Year of the ${Parser.numberToText(i + 1).uppercaseFirst()}s`,
-			year: i,
+			data: {
+				...TimeTrackerBase._DEFAULT_STATE__YEAR,
+				name: `Year of the ${Parser.numberToText(i + 1).uppercaseFirst()}s`,
+				year: i,
+			},
 		};
 	}
 
 	static getGenericEra (i) {
 		const symbol = Parser.ALPHABET[i % Parser.ALPHABET.length];
 		return {
-			...TimeTrackerBase._DEFAULT_STATE__ERA,
 			id: CryptUtil.uid(),
-			name: `${Parser.getOrdinalForm(i + 1)} Era`,
-			abbreviation: `${symbol}E`,
-			startYear: i,
-			endYear: i,
+			data: {
+				...TimeTrackerBase._DEFAULT_STATE__ERA,
+				name: `${Parser.getOrdinalForm(i + 1)} Era`,
+				abbreviation: `${symbol}E`,
+				startYear: i,
+				endYear: i,
+			},
 		};
 	}
 
 	static getGenericMoon (i) {
 		return {
-			...TimeTrackerBase._DEFAULT_STATE__MOON,
 			id: CryptUtil.uid(),
-			name: `Moon ${i + 1}`,
+			data: {
+				...TimeTrackerBase._DEFAULT_STATE__MOON,
+				name: `Moon ${i + 1}`,
+			},
 		};
 	}
 
@@ -488,12 +516,10 @@ class TimeTrackerBase extends TimeTrackerComponent {
 }
 TimeTrackerBase._DEFAULT_STATE__DAY = {
 	name: "Day",
-	isDeleted: false,
 };
 TimeTrackerBase._DEFAULT_STATE__MONTH = {
 	name: "Month",
 	days: 30,
-	isDeleted: false,
 };
 TimeTrackerBase._DEFAULT_STATE__EVENT = {
 	name: "Event",
@@ -520,26 +546,22 @@ TimeTrackerBase._DEFAULT_STATE__SEASON = {
 	endDay: 0,
 	sunriseHour: 6,
 	sunsetHour: 22,
-	isDeleted: false,
 };
 TimeTrackerBase._DEFAULT_STATE__YEAR = {
 	name: "Year",
 	year: 0,
-	isDeleted: false,
 };
 TimeTrackerBase._DEFAULT_STATE__ERA = {
 	name: "Era",
 	abbreviation: "E",
 	startYear: 0,
 	endYear: 0,
-	isDeleted: false,
 };
 TimeTrackerBase._DEFAULT_STATE__MOON = {
 	name: "Moon",
 	color: "#ffffff",
 	phaseOffset: 0,
 	period: 24,
-	isDeleted: false,
 };
 TimeTrackerBase._DEFAULT_STATE = {
 	time: 0,
@@ -563,30 +585,18 @@ TimeTrackerBase._DEFAULT_STATE = {
 	offsetMonthStartDay: 0,
 
 	// calendar
-	days: {
-		...[...new Array(7)]
-			.map((_, i) => TimeTrackerBase.getGenericDay(i))
-			.mergeMap(it => ({[it.id]: it})),
-	},
-	months: {
-		...[...new Array(12)]
-			.map((_, i) => TimeTrackerBase.getGenericMonth(i))
-			.mergeMap(it => ({[it.id]: it})),
-	},
+	days: [...new Array(7)]
+		.map((_, i) => TimeTrackerBase.getGenericDay(i)),
+	months: [...new Array(12)]
+		.map((_, i) => TimeTrackerBase.getGenericMonth(i)),
 	events: {},
 	encounters: {},
-	seasons: {
-		...[...new Array(4)]
-			.map((_, i) => TimeTrackerBase.getGenericSeason(i))
-			.mergeMap(it => ({[it.id]: it})),
-	},
-	years: {},
-	eras: {},
-	moons: {
-		...[...new Array(1)]
-			.map((_, i) => TimeTrackerBase.getGenericMoon(i))
-			.mergeMap(it => ({[it.id]: it})),
-	},
+	seasons: [...new Array(4)]
+		.map((_, i) => TimeTrackerBase.getGenericSeason(i)),
+	years: [],
+	eras: [],
+	moons: [...new Array(1)]
+		.map((_, i) => TimeTrackerBase.getGenericMoon(i)),
 };
 TimeTrackerBase._MOON_PHASES = [
 	"new-moon",
@@ -1017,34 +1027,27 @@ class TimeTrackerRoot_Clock extends TimeTrackerComponent {
 
 					todayEncounters.forEach(encounter => {
 						const hoverMeta = Renderer.hover.getMakePredefinedHover({type: "entries", entries: []}, {isBookContent: true});
-						const doUpdateMeta = () => {
+
+						const pDoUpdateMeta = async () => {
 							let name = encounter.displayName != null ? encounter.displayName : (encounter.name || "(Unnamed Encounter)");
 							if (encounter.hasTime) {
 								const {hours, minutes, seconds} = TimeTrackerBase.getHoursMinutesSecondsFromSeconds(secsPerHour, secsPerMinute, encounter.timeOfDaySecs);
 								name = `${name} at ${TimeTrackerBase.getPaddedNum(hours, hoursPerDay)}:${TimeTrackerBase.getPaddedNum(minutes, minutesPerHour)}:${TimeTrackerBase.getPaddedNum(seconds, secsPerMinute)}`;
 							}
+
+							const entityInfos = await ListUtil.pGetSublistEntities_fromHover({
+								exportedSublist: encounter.data,
+								page: UrlUtil.PG_BESTIARY,
+							});
+
 							const toShow = {
 								name,
 								type: "entries",
 								entries: [
 									{
 										type: "list",
-										items: encounter.data.l.items.map(it => {
-											const spl = UrlUtil.decodeHash(it.h);
-
-											const name = spl[0].toTitleCase();
-											const source = spl[1];
-
-											const {_scaledCr: scaledCr, _scaledSpellSummonLevel: scaledSpellSummonLevel, _scaledClassSummonLevel: scaledClassSummonLevel} = Renderer.monster.getUnpackedCustomHashId(it.customHashId) || {};
-
-											const parts = [name, source];
-											if (scaledCr != null || scaledSpellSummonLevel != null || scaledClassSummonLevel != null) {
-												parts.push(
-													"", // Display text
-													scaledCr != null ? `${VeCt.HASH_SCALED}=${Parser.numberToCr(scaledCr)}` : scaledSpellSummonLevel != null ? `${VeCt.HASH_SCALED_SPELL_SUMMON}=${scaledSpellSummonLevel}` : scaledClassSummonLevel != null ? `${VeCt.HASH_SCALED_CLASS_SUMMON}=${scaledClassSummonLevel}` : "",
-												);
-											}
-											return `${it.c || 1}× {@creature ${parts.join("|")}}`;
+										items: entityInfos.map(it => {
+											return `${it.count || 1}× ${Renderer.hover.getEntityLink(it.entity)}`;
 										}),
 									},
 								],
@@ -1054,8 +1057,8 @@ class TimeTrackerRoot_Clock extends TimeTrackerComponent {
 						};
 
 						const $dispEncounter = $$`<div class="dm-time__disp-clock-entry dm-time__disp-clock-entry--encounter ${encounter.countUses ? "dm-time__disp-clock-entry--used-encounter" : ""}" title="${encounter.countUses ? "(Encounter has been used)" : "Run Encounter (Add to Initiative Tracker)"}">*</div>`
-							.mouseover(evt => {
-								doUpdateMeta();
+							.mouseover(async evt => {
+								await pDoUpdateMeta();
 								hoverMeta.mouseOver(evt, $dispEncounter[0]);
 							})
 							.mousemove(evt => hoverMeta.mouseMove(evt, $dispEncounter[0]))
@@ -1372,7 +1375,7 @@ class TimeTrackerRoot_Clock_Weather extends TimeTrackerComponent {
 						// load the first on its own, to avoid racing to fill the cache
 						const first = await Renderer.hover.pCacheAndGet(UrlUtil.PG_TRAPS_HAZARDS, SRC_DMG, hashes[0]);
 						const others = await Promise.all(hashes.slice(1).map(hash => Renderer.hover.pCacheAndGet(UrlUtil.PG_TRAPS_HAZARDS, SRC_DMG, hash)));
-						const allEntries = [first, ...others].map(it => ({type: "dataTrapHazard", dataTrapHazard: MiscUtil.copy(it)}));
+						const allEntries = [first, ...others].map(it => ({type: "statblockInline", dataType: "hazard", data: MiscUtil.copy(it)}));
 						const toShow = {
 							type: "entries",
 							entries: allEntries,
@@ -2115,152 +2118,60 @@ class TimeTrackerRoot_Calendar extends TimeTrackerComponent {
 
 		const {year, dayInfo, date, monthInfo, seasonInfos, yearInfos, eraInfos} = getTimeInfo({year: eventYear, dayOfYear: eventDay});
 
-		const pHandleContextSwitch = async (mode, nuEncounter) => {
-			switch (mode) {
-				case 0: {
-					const savedState = await EncounterUtil.pGetInitialState();
-					if (savedState && savedState.data) {
-						const encounter = savedState.data;
-						const name = await InputUiUtil.pGetUserString({
-							title: "Enter Encounter Name",
-							default: EncounterUtil.getEncounterName(encounter),
-						});
-						nuEncounter.name = name || "(Unnamed encounter)";
-						nuEncounter.data = encounter;
-					} else {
-						return JqueryUtil.doToast({
-							content: `No saved encounter! Please first go to the Bestiary and create one.`,
-							type: "warning",
-						});
-					}
-					break;
-				}
-				case 1: {
-					const savedEncounters = (await EncounterUtil.pGetSavedState()).savedEncounters || {};
+		const pMutAddEncounter = async ({exportedSublist, nuEncounter}) => {
+			exportedSublist = MiscUtil.copy(exportedSublist);
+			exportedSublist.name = exportedSublist.name
+				|| await InputUiUtil.pGetUserString({
+					title: "Enter Encounter Name",
+					default: await EncounterBuilderSublistPlugin.pGetEncounterName(exportedSublist),
+				})
+				|| "(Unnamed encounter)";
 
-					const savedKeys = Object.keys(savedEncounters);
-					if (!savedKeys.length) return JqueryUtil.doToast({type: "warning", content: "No saved encounters were found! Go to the Bestiary and create some first."});
+			nuEncounter.name = exportedSublist.name;
+			nuEncounter.data = exportedSublist;
 
-					const $cbCopy = $(`<input type="checkbox">`);
-					$cbCopy.prop("checked", TimeTrackerRoot_Calendar._tmpPrefCbCopy);
-					const selected = await InputUiUtil.pGetUserEnum({
-						values: savedKeys.map(it => savedEncounters[it].name || EncounterUtil.getEncounterName(savedEncounters[it])),
-						placeholder: "Select an encounter",
-						title: "Select Saved Encounter",
-						fnGetExtraState: () => ({isCopy: $cbCopy.prop("checked")}),
-						$elePost: $$`<label class="ve-flex-label ve-flex-h-center w-100 mb-2">
-								<span class="mr-2 help" title="Turning this on will make a copy of the encounter as it currently exists, allowing the original to be modified or deleted without affecting the copy. Leaving this off will instead keep a reference to the encounter, so any change to the encounter will be reflected here.">Make Copy of Encounter</span>
-								${$cbCopy}
-							</label>`,
-					});
-					if (selected != null) {
-						const key = savedKeys[selected.ix];
-						const save = savedEncounters[key];
-						nuEncounter.name = save.name;
-
-						// save the user's preference for copy vs. reference
-						TimeTrackerRoot_Calendar._tmpPrefCbCopy = selected.extraState.isCopy;
-
-						if (selected.extraState.isCopy) nuEncounter.data = save.data;
-						else nuEncounter.data = {isRef: true, bestiaryId: key};
-					} else return;
-					break;
-				}
-				case 2: {
-					const {jsons, errors} = await DataUtil.pUserUpload({expectedFileType: "encounter"});
-
-					DataUtil.doHandleFileLoadErrorsGeneric(errors);
-
-					if (!jsons?.length) return;
-
-					const json = jsons[0];
-					const name = await InputUiUtil.pGetUserString({
-						title: "Enter Encounter Name",
-						default: EncounterUtil.getEncounterName(json),
-					});
-					nuEncounter.name = name || "(Unnamed Encounter)";
-					nuEncounter.data = json;
-
-					break;
-				}
-			}
-
-			this._parent.set("encounters", [...Object.values(this._parent.get("encounters")), nuEncounter].mergeMap(it => ({[it.id]: it})));
+			this._parent.set(
+				"encounters",
+				[...Object.values(this._parent.get("encounters")), nuEncounter]
+					.mergeMap(it => ({[it.id]: it})),
+			);
 		};
 
 		const menuEncounter = ContextUtil.getMenu([
-			new ContextUtil.Action(
-				"From Current Bestiary Encounter",
-				() => {
+			...ListUtilBestiary.getContextOptionsLoadSublist({
+				pFnOnSelect: async ({exportedSublist}) => {
 					const nxtPos = Object.keys(this._parent.get("encounters")).length;
 					const nuEncounter = TimeTrackerBase.getGenericEncounter(nxtPos, year, eventDay);
-					return pHandleContextSwitch(0, nuEncounter);
+
+					return pMutAddEncounter({exportedSublist, nuEncounter});
 				},
-			),
-			new ContextUtil.Action(
-				"From Saved Bestiary Encounter",
-				() => {
-					const nxtPos = Object.keys(this._parent.get("encounters")).length;
-					const nuEncounter = TimeTrackerBase.getGenericEncounter(nxtPos, year, eventDay);
-					return pHandleContextSwitch(1, nuEncounter);
+
+				optsSaveManager: {
+					isReferencable: true,
 				},
-			),
-			new ContextUtil.Action(
-				"From Bestiary Encounter File",
-				() => {
-					const nxtPos = Object.keys(this._parent.get("encounters")).length;
-					const nuEncounter = TimeTrackerBase.getGenericEncounter(nxtPos, year, eventDay);
-					return pHandleContextSwitch(2, nuEncounter);
-				},
-			),
+			}),
 		]);
 
 		const menuEncounterAtTime = ContextUtil.getMenu([
-			new ContextUtil.Action(
-				"From Current Bestiary Encounter",
-				async evt => {
-					const chosenTimeInfo = await this._render_pGetEventTimeOfDay(eventYear, eventDay, evt.shiftKey);
+			...ListUtilBestiary.getContextOptionsLoadSublist({
+				pFnOnSelect: async ({exportedSublist, isShiftKey}) => {
+					const chosenTimeInfo = await this._render_pGetEventTimeOfDay(eventYear, eventDay, isShiftKey);
 					if (chosenTimeInfo == null) return;
 
 					const nxtPos = Object.keys(this._parent.get("encounters")).length;
 					const nuEncounter = TimeTrackerBase.getGenericEncounter(nxtPos, chosenTimeInfo.year, chosenTimeInfo.eventDay, chosenTimeInfo.timeOfDay);
 
-					return pHandleContextSwitch(0, nuEncounter);
+					return pMutAddEncounter({exportedSublist, nuEncounter});
 				},
-				{
-					title: "SHIFT to Add at Current Time",
-				},
-			),
-			new ContextUtil.Action(
-				"From Saved Bestiary Encounter",
-				async evt => {
-					const chosenTimeInfo = await this._render_pGetEventTimeOfDay(eventYear, eventDay, evt.shiftKey);
-					if (chosenTimeInfo == null) return;
 
-					const nxtPos = Object.keys(this._parent.get("encounters")).length;
-					const nuEncounter = TimeTrackerBase.getGenericEncounter(nxtPos, chosenTimeInfo.year, chosenTimeInfo.eventDay, chosenTimeInfo.timeOfDay);
+				optsSaveManager: {
+					isReferencable: true,
+				},
 
-					return pHandleContextSwitch(1, nuEncounter);
-				},
-				{
-					title: "SHIFT to Add at Current Time",
-				},
-			),
-			new ContextUtil.Action(
-				"From Bestiary Encounter File",
-				async evt => {
-					const chosenTimeInfo = await this._render_pGetEventTimeOfDay(eventYear, eventDay, evt.shiftKey);
-					if (chosenTimeInfo == null) return;
-
-					const nxtPos = Object.keys(this._parent.get("encounters")).length;
-					const nuEncounter = TimeTrackerBase.getGenericEncounter(nxtPos, chosenTimeInfo.year, chosenTimeInfo.eventDay, chosenTimeInfo.timeOfDay);
-
-					return pHandleContextSwitch(2, nuEncounter);
-				},
-				{
-					title: "SHIFT to Add at Current Time",
-				},
-			),
+				optsFromCurrent: {title: "SHIFT to Add at Current Time"},
+				optsFromSaved: {title: "SHIFT to Add at Current Time"},
+				optsFromFile: {title: "SHIFT to Add at Current Time"},
+			}),
 		]);
 
 		const $btnAddEncounter = $(`<button class="btn btn-xs btn-success"><span class="glyphicon glyphicon-plus"/> Add Encounter</button>`)
@@ -2275,7 +2186,7 @@ class TimeTrackerRoot_Calendar extends TimeTrackerComponent {
 				this._parent.removeHook("events", hookEvents);
 				ContextUtil.deleteMenu(menuEncounter);
 			},
-			zIndex: TimeTrackerRoot_Calendar._Z_INDEX_MODAL,
+			zIndex: VeCt.Z_INDEX_BENEATH_HOVER,
 			isUncappedHeight: true,
 			isHeight100: true,
 			$titleSplit: $btnJumpToDay,
@@ -2663,7 +2574,7 @@ class TimeTrackerRoot_Calendar extends TimeTrackerComponent {
 
 		const {$modalInner, doClose} = UiUtil.getShowModal({
 			title: opts.title,
-			zIndex: TimeTrackerRoot_Calendar._Z_INDEX_MODAL,
+			zIndex: VeCt.Z_INDEX_BENEATH_HOVER,
 		});
 
 		// Create a copy of the current state, as a temp component
@@ -2707,10 +2618,29 @@ class TimeTrackerRoot_Calendar extends TimeTrackerComponent {
 	}
 
 	static async _pGetDereferencedEncounter (encounter) {
-		if (encounter.data.isRef) {
-			const savedState = await EncounterUtil.pGetSavedState();
-			return (savedState.savedEncounters || {})[encounter.data.bestiaryId];
-		} else return encounter;
+		const saveManager = new SaveManager({
+			isReadOnlyUi: true,
+			page: UrlUtil.PG_BESTIARY,
+			isReferencable: true,
+		});
+		await saveManager.pMutStateFromStorage();
+
+		encounter = MiscUtil.copy(encounter);
+		await EncounterBuilderSublistPlugin.pMutLegacyData({exportedSublist: encounter.data});
+
+		if (
+			encounter.data.managerClient_isReferencable
+			&& !encounter.data.managerClient_isLoadAsCopy
+			&& encounter.data.saveId
+		) {
+			encounter = MiscUtil.copy(encounter);
+
+			const nxtData = await saveManager.pGetSaveBySaveId({saveId: encounter.data.saveId});
+			if (!nxtData) return null;
+
+			encounter.data = nxtData;
+		}
+		return encounter;
 	}
 
 	static async pDoRunEncounter (parent, encounter) {
@@ -2740,8 +2670,10 @@ class TimeTrackerRoot_Calendar extends TimeTrackerComponent {
 
 				if (!toLoad) return JqueryUtil.doToast({content: "Could not find encounter data! Has the encounter been deleted?", type: "warning"});
 
+				const {entityInfos, encounterInfo} = await ListUtilBestiary.pGetLoadableSublist({exportedSublist: toLoad.data});
+
 				try {
-					await $tracker.data("doConvertAndLoadBestiaryList")(toLoad.data);
+					await $tracker.data("pDoLoadEncounter")({entityInfos, encounterInfo});
 				} catch (e) {
 					JqueryUtil.doToast({type: "error", content: `Failed to add encounter! ${VeCt.STR_SEE_CONSOLE}`});
 					throw e;
@@ -2756,8 +2688,6 @@ class TimeTrackerRoot_Calendar extends TimeTrackerComponent {
 		}
 	}
 }
-TimeTrackerRoot_Calendar._Z_INDEX_MODAL = 200;
-TimeTrackerRoot_Calendar._tmpPrefCbCopy = false;
 
 class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 	static getTimeNum (str, isAllowNegative) {
@@ -2825,48 +2755,51 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 		this._parent.addHook("unitsWindSpeed", hookWindUnits);
 		hookWindUnits();
 
-		const metaDays = this._render_getChildMeta("days", TimeTrackerRoot_Settings_Day, "Day", TimeTrackerRoot.getGenericDay);
-		const metaMonths = this._render_getChildMeta("months", TimeTrackerRoot_Settings_Month, "Month", TimeTrackerRoot.getGenericMonth);
-		const metaSeasons = this._render_getChildMeta(
-			"seasons",
-			TimeTrackerRoot_Settings_Season,
-			"Season",
-			TimeTrackerRoot.getGenericSeason,
-			{
-				fnSort: (a, b) => SortUtil.ascSort(a.startDay, b.startDay),
-				isEmptyMessage: `<div class="ve-flex-vh-center my-1 italic w-100">(No seasons)</div>`,
-			},
-		);
-		const metaYears = this._render_getChildMeta(
-			"years",
-			TimeTrackerRoot_Settings_Year,
-			"Year",
-			TimeTrackerRoot.getGenericYear,
-			{
-				fnSort: (a, b) => SortUtil.ascSort(a.year, b.year),
-				isEmptyMessage: `<div class="ve-flex-vh-center my-1 italic w-100">(No named years)</div>`,
-			},
-		);
-		const metaEras = this._render_getChildMeta(
-			"eras",
-			TimeTrackerRoot_Settings_Era,
-			"Era",
-			TimeTrackerRoot.getGenericEra,
-			{
-				fnSort: (a, b) => SortUtil.ascSort(a.startYear, b.startYear),
-				isEmptyMessage: `<div class="ve-flex-vh-center my-1 italic w-100">(No eras)</div>`,
-			},
-		);
-		const metaMoons = this._render_getChildMeta(
-			"moons",
-			TimeTrackerRoot_Settings_Moon,
-			"Moon",
-			TimeTrackerRoot.getGenericMoon,
-			{
-				fnSort: (a, b) => SortUtil.ascSort(a.phaseOffset, b.phaseOffset) || SortUtil.ascSort(a.name, b.name),
-				isEmptyMessage: `<div class="ve-flex-vh-center my-1 italic w-100">(No moons)</div>`,
-			},
-		);
+		const metaDays = this._render_getChildMeta_2({
+			prop: "days",
+			Cls: TimeTrackerRoot_Settings_Day,
+			name: "Day",
+			fnGetGeneric: TimeTrackerRoot.getGenericDay,
+		});
+
+		const metaMonths = this._render_getChildMeta_2({
+			prop: "months",
+			Cls: TimeTrackerRoot_Settings_Month,
+			name: "Month",
+			fnGetGeneric: TimeTrackerRoot.getGenericMonth,
+		});
+
+		const metaSeasons = this._render_getChildMeta_2({
+			prop: "seasons",
+			Cls: TimeTrackerRoot_Settings_Season,
+			name: "Season",
+			$dispEmpty: $(`<div class="ve-flex-vh-center my-1 italic w-100">(No seasons)</div>`),
+			fnGetGeneric: TimeTrackerRoot.getGenericSeason,
+		});
+
+		const metaYears = this._render_getChildMeta_2({
+			prop: "years",
+			Cls: TimeTrackerRoot_Settings_Year,
+			name: "Year",
+			$dispEmpty: $(`<div class="ve-flex-vh-center my-1 italic w-100">(No named years)</div>`),
+			fnGetGeneric: TimeTrackerRoot.getGenericYear,
+		});
+
+		const metaEras = this._render_getChildMeta_2({
+			prop: "eras",
+			Cls: TimeTrackerRoot_Settings_Era,
+			name: "Era",
+			$dispEmpty: $(`<div class="ve-flex-vh-center my-1 italic w-100">(No eras)</div>`),
+			fnGetGeneric: TimeTrackerRoot.getGenericEra,
+		});
+
+		const metaMoons = this._render_getChildMeta_2({
+			prop: "moons",
+			Cls: TimeTrackerRoot_Settings_Moon,
+			name: "Moon",
+			$dispEmpty: $(`<div class="ve-flex-vh-center my-1 italic w-100">(No moons)</div>`),
+			fnGetGeneric: TimeTrackerRoot.getGenericMoon,
+		});
 
 		const $sectClock = $$`<div class="no-shrink w-100 mb-2">
 			<div class="split-v-center mb-2"><div class="w-100">Hours per Day</div>${$getIptTime("hoursPerDay")}</div>
@@ -2907,7 +2840,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 				<div>Name</div>
 				${metaDays.$btnAdd}
 			</div>
-			${metaDays.$wrp}
+			${metaDays.$wrpRows}
 		</div>`;
 		const $btnHideSectDays = $getBtnHide("isDaysSectionHidden", $sectDays);
 		const $headDays = $$`<div class="split-v-center mb-1"><div class="bold">Days</div>${$btnHideSectDays}</div>`;
@@ -2919,7 +2852,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 				<div class="dm-time__spc-drag-header no-shrink mr-2"/>
 				${metaMonths.$btnAdd.addClass("no-shrink")}
 			</div>
-			${metaMonths.$wrp}
+			${metaMonths.$wrpRows}
 		</div>`;
 		const $btnHideSectMonths = $getBtnHide("isMonthsSectionHidden", $sectMonths);
 		const $headMonths = $$`<div class="split-v-center mb-1"><div class="bold">Months</div>${$btnHideSectMonths}</div>`;
@@ -2933,7 +2866,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 				<div class="w-15 no-shrink text-center mr-2 help-subtle" title="For example, to have a season end on the 90th day of the year, enter &quot;90&quot;.">End</div>
 				${metaSeasons.$btnAdd.addClass("no-shrink")}
 			</div>
-			${metaSeasons.$wrp}
+			${metaSeasons.$wrpRows}
 		</div>`;
 		const $btnHideSectSeasons = $getBtnHide("isSeasonsSectionHidden", $sectSeasons);
 		const $headSeasons = $$`<div class="split-v-center mb-1"><div class="bold">Seasons</div>${$btnHideSectSeasons}</div>`;
@@ -2944,7 +2877,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 				<div class="w-25 no-shrink text-center mr-2">Year</div>
 				${metaYears.$btnAdd.addClass("no-shrink")}
 			</div>
-			${metaYears.$wrp}
+			${metaYears.$wrpRows}
 		</div>`;
 		const $btnHideSectYears = $getBtnHide("isYearsSectionHidden", $sectYears);
 		const $headYears = $$`<div class="split-v-center mb-1"><div class="bold">Named Years</div>${$btnHideSectYears}</div>`;
@@ -2957,7 +2890,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 				<div class="w-15 no-shrink text-center mr-2">End</div>
 				${metaEras.$btnAdd.addClass("no-shrink")}
 			</div>
-			${metaEras.$wrp}
+			${metaEras.$wrpRows}
 		</div>`;
 		const $btnHideSectEras = $getBtnHide("isErasSectionHidden", $sectEras);
 		const $headEras = $$`<div class="split-v-center mb-1"><div class="bold">Eras</div>${$btnHideSectEras}</div>`;
@@ -2969,7 +2902,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 				<div class="w-25 no-shrink text-center mr-2 help-subtle" title="Measured in days. Multiples of eight are recommended, as there are eight distinct moon phases.">Period</div>
 				${metaMoons.$btnAdd.addClass("no-shrink")}
 			</div>
-			${metaMoons.$wrp}
+			${metaMoons.$wrpRows}
 		</div>`;
 		const $btnHideSectMoons = $getBtnHide("isMoonsSectionHidden", $sectMoons);
 		const $headMoons = $$`<div class="split-v-center mb-1"><div class="bold">Moons</div>${$btnHideSectMoons}</div>`;
@@ -3011,146 +2944,139 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 		</div>`.appendTo($parent);
 	}
 
-	/**
-	 * @param prop State property.
-	 * @param Cls The component class to make instances of.
-	 * @param name Name to show in the tooltip.
-	 * @param fnGetGeneric Function which returns a fresh/generic data.
-	 * @param [opts] Options object.
-	 * @param [opts.fnSort] Sort function for item values.
-	 * @param [opts.isEmptyMessage] Message to append if there are no entries to display.
-	 */
-	_render_getChildMeta (prop, Cls, name, fnGetGeneric, opts) {
-		opts = opts || {};
+	_render_getChildMeta_2 ({prop, Cls, name, $dispEmpty = null, fnGetGeneric}) {
+		const $wrpRows = this._render_$getWrpChildren();
+		if ($dispEmpty) $wrpRows.append($dispEmpty);
 
-		const $wrp = $(`<div class="ve-flex-col w-100 relative"/>`);
+		const $btnAdd = this._render_$getBtnAddChild({
+			prop: prop,
+			name,
+			fnGetGeneric,
+		});
 
-		let lastState;
-		const hook = () => {
-			const nextState = Object.values(this._parent.get(prop))
-				.filter(it => !it.isDeleted);
+		const dragMeta = {
+			swapRowPositions: (ixA, ixB) => {
+				const a = this._parent.component._state[prop][ixA];
+				this._parent.component._state[prop][ixA] = this._parent.component._state[prop][ixB];
+				this._parent.component._state[prop][ixB] = a;
+				this._parent.component._triggerCollectionUpdate(prop);
 
-			if (opts.fnSort) {
-				nextState.sort(opts.fnSort);
-			} else {
-				nextState.sort((a, b) => SortUtil.ascSort(a.pos, b.pos));
-				nextState.forEach((it, i) => it.pos = i); // remove any holes in the pos continuity
-			}
-
-			if (CollectionUtil.deepEquals(lastState, nextState)) return;
-			lastState = nextState;
-			$wrp.empty();
-			this._tmpComps[prop] = [];
-			nextState.forEach(nxt => {
-				const comp = new Cls(this._board, this._$wrpPanel);
-				this._tmpComps[prop].push(comp);
-				comp.setStateFrom({state: nxt});
-				comp._addHookAll("state", () => this._parent.set(prop, (this._tmpComps[prop] || []).map(c => c.getState()).filter(it => !it.isDeleted).mergeMap(it => ({[it.id]: it}))));
-				comp.render($wrp, this._tmpComps, prop);
-			});
-
-			if (!nextState.length && opts.isEmptyMessage) $wrp.append(opts.isEmptyMessage);
+				this._parent.component._state[prop]
+					.map(it => this._parent.component._rendered[prop][it.id].$wrpRow)
+					.forEach($it => $wrpRows.append($it));
+			},
+			$getChildren: () => {
+				return this._parent.component._state[prop]
+					.map(it => this._parent.component._rendered[prop][it.id].$wrpRow);
+			},
+			$parent: $wrpRows,
 		};
-		this._parent.addHook(prop, hook);
-		hook();
 
-		const $btnAdd = $(`<button class="btn btn-xs btn-primary" title="Add ${name}"><span class="glyphicon glyphicon-plus"/></button>`)
+		const renderableCollection = new Cls(
+			this._parent.component,
+			prop,
+			$wrpRows,
+			dragMeta,
+		);
+		const hk = () => {
+			renderableCollection.render();
+			if ($dispEmpty) $dispEmpty.toggleVe(!this._parent.get(prop)?.length);
+		};
+		this._parent.component._addHookBase(prop, hk);
+		hk();
+
+		return {$btnAdd, $wrpRows};
+	}
+
+	_render_$getWrpChildren () {
+		return $(`<div class="ve-flex-col w-100 relative"></div>`);
+	}
+
+	_render_$getBtnAddChild ({prop, name, fnGetGeneric}) {
+		return $(`<button class="btn btn-xs btn-primary" title="Add ${name}"><span class="glyphicon glyphicon-plus"/></button>`)
 			.click(() => {
-				const dataList = Object.values(this._parent.get(prop));
-				const hasPos = dataList.some(it => it.pos != null);
-				if (hasPos) {
-					const existing = dataList.filter(it => !it.isDeleted).map(it => it.pos);
-					const maxPos = existing.length ? Math.max(...existing) : -1;
-					const nxt = fnGetGeneric(maxPos + 1);
-					this._parent.set(prop, {...this._parent.get(prop), [nxt.id]: nxt});
-				} else {
-					const nxt = fnGetGeneric(dataList.length);
-					this._parent.set(prop, {...this._parent.get(prop), [nxt.id]: nxt});
-				}
+				const nxt = fnGetGeneric(this._parent.get(prop).length);
+				this._parent.set(prop, [...this._parent.get(prop), nxt]);
 			});
-
-		return {$wrp, $btnAdd};
 	}
 }
 
-class TimeTrackerRoot_Settings_Day extends TimeTrackerComponent {
-	constructor (tracker, $wrpPanel) {
-		super(tracker, $wrpPanel);
-
-		this._$rendered = null;
+class RenderableCollectionTimeTracker extends RenderableCollectionBase {
+	constructor (comp, prop, $wrpRows, dragMeta) {
+		super(comp, prop);
+		this._$wrpRows = $wrpRows;
+		this._dragMeta = dragMeta;
 	}
+}
 
-	render ($parent, componentsParent, componentsProp) {
-		const $iptName = ComponentUiUtil.$getIptStr(this, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
-
-		const $padDrag = DragReorderUiUtil.$getDragPad({
-			$parent,
-			componentsParent,
-			componentsProp,
-			componentId: this._state.id,
-			marginSide: "r",
+class TimeTrackerRoot_Settings_Day extends RenderableCollectionTimeTracker {
+	getNewRender (entity, i) {
+		const comp = BaseComponent.fromObject(entity.data, "*");
+		comp._addHookAll("state", () => {
+			entity.data = comp.toObject("*");
+			this._comp._triggerCollectionUpdate("days");
 		});
 
-		const $btnRemove = $(`<button class="btn btn-xs btn-danger no-shrink" title="Delete Day"><span class="glyphicon glyphicon-trash"/></button>`)
-			.click(() => this._state.isDeleted = true);
+		const $iptName = ComponentUiUtil.$getIptStr(comp, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
 
-		this._$rendered = $$`<div class="ve-flex my-1 dm-time__row-delete">
+		const $padDrag = DragReorderUiUtil.$getDragPadOpts(() => $wrpRow, this._dragMeta);
+
+		const $btnRemove = $(`<button class="btn btn-xs btn-danger no-shrink" title="Delete Day"><span class="glyphicon glyphicon-trash"/></button>`)
+			.click(() => this._comp._state.days = this._comp._state.days.filter(it => it !== entity));
+
+		const $wrpRow = $$`<div class="ve-flex my-1 dm-time__row-delete">
 			${$iptName}
 			${$padDrag}
 			${$btnRemove}
 			<div class="dm-time__spc-button"/>
-		</div>`.appendTo($parent);
+		</div>`.appendTo(this._$wrpRows);
+
+		return {
+			comp,
+			$wrpRow,
+		};
 	}
 
-	get id () { return this._state.id; }
-	set pos (pos) { this._state.pos = pos; }
-	get pos () { return this._state.pos; }
-	get height () { return this._$rendered ? this._$rendered.outerHeight(true) : 0; }
-
-	getState () { return MiscUtil.copy(this._state); }
-
-	_getDefaultState () { return MiscUtil.copy(TimeTrackerBase._DEFAULT_STATE__DAY); }
+	doUpdateExistingRender (renderedMeta, entity, i) {
+		renderedMeta.comp._proxyAssignSimple("state", entity.data, true);
+		if (!renderedMeta.$wrpRow.parent().is(this._$wrpRows)) renderedMeta.$wrpRow.appendTo(this._$wrpRows);
+	}
 }
 
-class TimeTrackerRoot_Settings_Month extends TimeTrackerComponent {
-	constructor (tracker, $wrpPanel) {
-		super(tracker, $wrpPanel);
-
-		this._$rendered = null;
-	}
-
-	render ($parent, componentsParent, componentsProp) {
-		const $iptName = ComponentUiUtil.$getIptStr(this, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
-		const $iptDays = ComponentUiUtil.$getIptInt(this, "days", 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-25 no-shrink">`), min: TimeTrackerBase._MIN_TIME, max: TimeTrackerBase._MAX_TIME});
-
-		const $padDrag = DragReorderUiUtil.$getDragPad({
-			$parent,
-			componentsParent,
-			componentsProp,
-			componentId: this._state.id,
-			marginSide: "r",
+class TimeTrackerRoot_Settings_Month extends RenderableCollectionTimeTracker {
+	getNewRender (entity, i) {
+		const comp = BaseComponent.fromObject(entity.data, "*");
+		comp._addHookAll("state", () => {
+			entity.data = comp.toObject("*");
+			this._comp._triggerCollectionUpdate("months");
 		});
 
-		const $btnRemove = $(`<button class="btn btn-xs btn-danger no-shrink" title="Delete Month"><span class="glyphicon glyphicon-trash"/></button>`)
-			.click(() => this._state.isDeleted = true);
+		const $iptName = ComponentUiUtil.$getIptStr(comp, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
+		const $iptDays = ComponentUiUtil.$getIptInt(comp, "days", 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-25 no-shrink">`), min: TimeTrackerBase._MIN_TIME, max: TimeTrackerBase._MAX_TIME});
 
-		this._$rendered = $$`<div class="ve-flex my-1 dm-time__row-delete">
+		const $padDrag = DragReorderUiUtil.$getDragPadOpts(() => $wrpRow, this._dragMeta);
+
+		const $btnRemove = $(`<button class="btn btn-xs btn-danger no-shrink" title="Delete Month"><span class="glyphicon glyphicon-trash"/></button>`)
+			.click(() => this._comp._state.months = this._comp._state.months.filter(it => it !== entity));
+
+		const $wrpRow = $$`<div class="ve-flex my-1 dm-time__row-delete">
 			${$iptName}
 			${$iptDays}
 			${$padDrag}
 			${$btnRemove}
 			<div class="dm-time__spc-button"/>
-		</div>`.appendTo($parent);
+		</div>`.appendTo(this._$wrpRows);
+
+		return {
+			comp,
+			$wrpRow,
+		};
 	}
 
-	get id () { return this._state.id; }
-	set pos (pos) { this._state.pos = pos; }
-	get pos () { return this._state.pos; }
-	get height () { return this._$rendered ? this._$rendered.outerHeight(true) : 0; }
-
-	getState () { return MiscUtil.copy(this._state); }
-
-	_getDefaultState () { return MiscUtil.copy(TimeTrackerBase._DEFAULT_STATE__MONTH); }
+	doUpdateExistingRender (renderedMeta, entity, i) {
+		renderedMeta.comp._proxyAssignSimple("state", entity.data, true);
+		if (!renderedMeta.$wrpRow.parent().is(this._$wrpRows)) renderedMeta.$wrpRow.appendTo(this._$wrpRows);
+	}
 }
 
 class TimeTrackerRoot_Settings_Event extends TimeTrackerComponent {
@@ -3310,13 +3236,19 @@ class TimeTrackerRoot_Settings_Event extends TimeTrackerComponent {
 	}
 }
 
-class TimeTrackerRoot_Settings_Season extends TimeTrackerComponent {
-	render ($parent) {
-		const $iptName = ComponentUiUtil.$getIptStr(this, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
+class TimeTrackerRoot_Settings_Season extends RenderableCollectionTimeTracker {
+	getNewRender (entity, i) {
+		const comp = BaseComponent.fromObject(entity.data, "*");
+		comp._addHookAll("state", () => {
+			entity.data = comp.toObject("*");
+			this._comp._triggerCollectionUpdate("seasons");
+		});
 
-		const $getIptHours = (prop) => ComponentUiUtil.$getIptInt(this, prop, 0, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-15 no-shrink">`), min: 0});
+		const $iptName = ComponentUiUtil.$getIptStr(comp, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
 
-		const $getIptDays = (prop) => ComponentUiUtil.$getIptInt(this, prop, 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-15 no-shrink">`), offset: 1, min: 1});
+		const $getIptHours = (prop) => ComponentUiUtil.$getIptInt(comp, prop, 0, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-15 no-shrink">`), min: 0});
+
+		const $getIptDays = (prop) => ComponentUiUtil.$getIptInt(comp, prop, 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-15 no-shrink">`), offset: 1, min: 1});
 
 		const $iptSunrise = $getIptHours("sunriseHour");
 		const $iptSunset = $getIptHours("sunsetHour");
@@ -3325,90 +3257,132 @@ class TimeTrackerRoot_Settings_Season extends TimeTrackerComponent {
 		const $iptDaysEnd = $getIptDays("endDay");
 
 		const $btnRemove = $(`<button class="btn btn-xs btn-danger no-shrink" title="Delete Season"><span class="glyphicon glyphicon-trash"/></button>`)
-			.click(() => this._state.isDeleted = true);
+			.click(() => this._comp._state.seasons = this._comp._state.seasons.filter(it => it !== entity));
 
-		$$`<div class="ve-flex my-1">
+		const $wrpRow = $$`<div class="ve-flex my-1">
 			${$iptName}
 			${$iptSunrise}
 			${$iptSunset}
 			${$iptDaysStart}
 			${$iptDaysEnd}
 			${$btnRemove}
-		</div>`.appendTo($parent);
+		</div>`.appendTo(this._$wrpRows);
+
+		return {
+			comp,
+			$wrpRow,
+		};
 	}
 
-	getState () { return MiscUtil.copy(this._state); }
-
-	_getDefaultState () { return MiscUtil.copy(TimeTrackerBase._DEFAULT_STATE__SEASON); }
+	doUpdateExistingRender (renderedMeta, entity, i) {
+		renderedMeta.comp._proxyAssignSimple("state", entity.data, true);
+		if (!renderedMeta.$wrpRow.parent().is(this._$wrpRows)) renderedMeta.$wrpRow.appendTo(this._$wrpRows);
+	}
 }
 
-class TimeTrackerRoot_Settings_Year extends TimeTrackerComponent {
-	render ($parent) {
-		const $iptName = ComponentUiUtil.$getIptStr(this, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
+class TimeTrackerRoot_Settings_Year extends RenderableCollectionTimeTracker {
+	getNewRender (entity, i) {
+		const comp = BaseComponent.fromObject(entity.data, "*");
+		comp._addHookAll("state", () => {
+			entity.data = comp.toObject("*");
+			this._comp._triggerCollectionUpdate("years");
+		});
 
-		const $iptYear = ComponentUiUtil.$getIptInt(this, "year", 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-25 no-shrink">`), offset: 1, min: 1});
+		const $iptName = ComponentUiUtil.$getIptStr(comp, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
+
+		const $iptYear = ComponentUiUtil.$getIptInt(comp, "year", 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-25 no-shrink">`), offset: 1, min: 1});
 
 		const $btnRemove = $(`<button class="btn btn-xs btn-danger no-shrink" title="Delete Year"><span class="glyphicon glyphicon-trash"/></button>`)
-			.click(() => this._state.isDeleted = true);
+			.click(() => this._comp._state.years = this._comp._state.years.filter(it => it !== entity));
 
-		$$`<div class="ve-flex my-1">
+		const $wrpRow = $$`<div class="ve-flex my-1">
 			${$iptName}
 			${$iptYear}
 			${$btnRemove}
-		</div>`.appendTo($parent);
+		</div>`.appendTo(this._$wrpRows);
+
+		return {
+			comp,
+			$wrpRow,
+		};
 	}
 
-	getState () { return MiscUtil.copy(this._state); }
-
-	_getDefaultState () { return MiscUtil.copy(TimeTrackerBase._DEFAULT_STATE__YEAR); }
+	doUpdateExistingRender (renderedMeta, entity, i) {
+		renderedMeta.comp._proxyAssignSimple("state", entity.data, true);
+		if (!renderedMeta.$wrpRow.parent().is(this._$wrpRows)) renderedMeta.$wrpRow.appendTo(this._$wrpRows);
+	}
 }
 
-class TimeTrackerRoot_Settings_Era extends TimeTrackerComponent {
-	render ($parent) {
-		const $getIptYears = (prop) => ComponentUiUtil.$getIptInt(this, prop, 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-15 no-shrink">`), offset: 1, min: 1});
+class TimeTrackerRoot_Settings_Era extends RenderableCollectionTimeTracker {
+	getNewRender (entity, i) {
+		const comp = BaseComponent.fromObject(entity.data, "*");
+		comp._addHookAll("state", () => {
+			entity.data = comp.toObject("*");
+			this._comp._triggerCollectionUpdate("eras");
+		});
 
-		const $iptName = ComponentUiUtil.$getIptStr(this, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
-		const $iptAbbreviation = ComponentUiUtil.$getIptStr(this, "abbreviation", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2 w-15 no-shrink">`)});
+		const $getIptYears = (prop) => ComponentUiUtil.$getIptInt(comp, prop, 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-15 no-shrink">`), offset: 1, min: 1});
+
+		const $iptName = ComponentUiUtil.$getIptStr(comp, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
+		const $iptAbbreviation = ComponentUiUtil.$getIptStr(comp, "abbreviation", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2 w-15 no-shrink">`)});
 		const $iptYearsStart = $getIptYears("startYear");
 		const $iptYearsEnd = $getIptYears("endYear");
 
 		const $btnRemove = $(`<button class="btn btn-xs btn-danger no-shrink" title="Delete Year"><span class="glyphicon glyphicon-trash"/></button>`)
-			.click(() => this._state.isDeleted = true);
+			.click(() => this._comp._state.eras = this._comp._state.eras.filter(it => it !== entity));
 
-		$$`<div class="ve-flex my-1">
+		const $wrpRow = $$`<div class="ve-flex my-1">
 			${$iptName}
 			${$iptAbbreviation}
 			${$iptYearsStart}
 			${$iptYearsEnd}
 			${$btnRemove}
-		</div>`.appendTo($parent);
+		</div>`.appendTo(this._$wrpRows);
+
+		return {
+			comp,
+			$wrpRow,
+		};
 	}
 
-	getState () { return MiscUtil.copy(this._state); }
-
-	_getDefaultState () { return MiscUtil.copy(TimeTrackerBase._DEFAULT_STATE__ERA); }
+	doUpdateExistingRender (renderedMeta, entity, i) {
+		renderedMeta.comp._proxyAssignSimple("state", entity.data, true);
+		if (!renderedMeta.$wrpRow.parent().is(this._$wrpRows)) renderedMeta.$wrpRow.appendTo(this._$wrpRows);
+	}
 }
 
-class TimeTrackerRoot_Settings_Moon extends TimeTrackerComponent {
-	render ($parent) {
-		const $iptName = ComponentUiUtil.$getIptStr(this, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
-		const $iptColor = ComponentUiUtil.$getIptColor(this, "color", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2 no-shrink dm-time__ipt-color-moon" type="color" title="Moon Color">`)});
-		const $iptPhaseOffset = ComponentUiUtil.$getIptInt(this, "phaseOffset", 0, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-25 no-shrink">`)});
-		const $iptPeriod = ComponentUiUtil.$getIptInt(this, "period", 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-25 no-shrink">`), min: TimeTrackerBase._MIN_TIME, max: TimeTrackerBase._MAX_TIME});
+class TimeTrackerRoot_Settings_Moon extends RenderableCollectionTimeTracker {
+	getNewRender (entity, i) {
+		const comp = BaseComponent.fromObject(entity.data, "*");
+		comp._addHookAll("state", () => {
+			entity.data = comp.toObject("*");
+			this._comp._triggerCollectionUpdate("moons");
+		});
+
+		const $iptName = ComponentUiUtil.$getIptStr(comp, "name", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2">`)});
+		const $iptColor = ComponentUiUtil.$getIptColor(comp, "color", {$ele: $(`<input class="form-control input-xs form-control--minimal mr-2 no-shrink dm-time__ipt-color-moon" type="color" title="Moon Color">`)});
+		const $iptPhaseOffset = ComponentUiUtil.$getIptInt(comp, "phaseOffset", 0, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-25 no-shrink">`)});
+		const $iptPeriod = ComponentUiUtil.$getIptInt(comp, "period", 1, {$ele: $(`<input class="form-control input-xs form-control--minimal text-right mr-2 w-25 no-shrink">`), min: TimeTrackerBase._MIN_TIME, max: TimeTrackerBase._MAX_TIME});
 
 		const $btnRemove = $(`<button class="btn btn-xs btn-danger no-shrink" title="Delete Moon"><span class="glyphicon glyphicon-trash"/></button>`)
-			.click(() => this._state.isDeleted = true);
+			.click(() => this._comp._state.moons = this._comp._state.moons.filter(it => it !== entity));
 
-		$$`<div class="ve-flex my-1">
+		const $wrpRow = $$`<div class="ve-flex my-1">
 			${$iptName}
 			${$iptColor}
 			${$iptPhaseOffset}
 			${$iptPeriod}
 			${$btnRemove}
-		</div>`.appendTo($parent);
+		</div>`.appendTo(this._$wrpRows);
+
+		return {
+			comp,
+			$wrpRow,
+		};
 	}
 
-	getState () { return MiscUtil.copy(this._state); }
-
-	_getDefaultState () { return MiscUtil.copy(TimeTrackerBase._DEFAULT_STATE__MOON); }
+	doUpdateExistingRender (renderedMeta, entity, i) {
+		renderedMeta.comp._proxyAssignSimple("state", entity.data, true);
+		if (!renderedMeta.$wrpRow.parent().is(this._$wrpRows)) renderedMeta.$wrpRow.appendTo(this._$wrpRows);
+	}
 }

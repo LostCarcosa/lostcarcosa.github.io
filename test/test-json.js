@@ -1,11 +1,10 @@
 const fs = require("fs");
-require("../js/utils");
 const ut = require("../node/util.js");
 const Ajv = require("ajv").default;
 const jsonSourceMap = require("json-source-map");
 
-const isSortResults = !process.env.VET_TEST_JSON_RESULTS_UNSORTED;
-const isTrimResults = !process.env.VET_TEST_JSON_RESULTS_UNTRIMMED;
+const _IS_SORT_RESULTS = !process.env.VET_TEST_JSON_RESULTS_UNSORTED;
+const _IS_TRIM_RESULTS = !process.env.VET_TEST_JSON_RESULTS_UNTRIMMED;
 
 // Compile the schema
 require("../node/compile-schemas.js");
@@ -34,13 +33,13 @@ function handleError (data) {
 
 	// Sort the deepest errors to the bottom, as these are the ones we're most likely to be the ones we care about
 	//   manually checking.
-	if (isSortResults) {
-		ajv.errors.sort((a, b) => SortUtil.ascSort(a.instancePath.length ?? -1, b.instancePath.length ?? -1));
+	if (_IS_SORT_RESULTS) {
+		ajv.errors.sort((a, b) => (a.instancePath.length ?? -1) - (b.instancePath.length ?? -1));
 	}
 
 	// If there are an excessive number of errors, it's probably a junk entry; show only the first error and let the
 	//   user figure it out.
-	if (isTrimResults && ajv.errors.length > 5) {
+	if (_IS_TRIM_RESULTS && ajv.errors.length > 5) {
 		console.error(`(${ajv.errors.length} errors found, showing (hopefully) most-relevant one\u2014see the "log-test-json.json" file for the rest.)`);
 		ajv.errors = ajv.errors.slice(-1);
 	}
@@ -82,52 +81,36 @@ async function main () {
 	const cacheDir = process.cwd();
 	process.chdir(`${cacheDir}/test/schema`);
 
-	const PRELOAD_SINGLE_FILE_SCHEMAS = [
-		"trapshazards.json",
-		"objects.json",
-		"items.json",
-	];
-
-	const PRELOAD_COMMON_SINGLE_FILE_SCHEMAS = [
-		"entry.json",
-		"util.json",
-		"shared-items.json",
-	];
-
-	ajv.addSchema(ut.readJson("spells/spells.json", "utf8"), "spells/spells.json");
-	ajv.addSchema(ut.readJson("bestiary/bestiary.json", "utf8"), "bestiary/bestiary.json");
-	PRELOAD_SINGLE_FILE_SCHEMAS.forEach(schemaName => {
-		ajv.addSchema(ut.readJson(schemaName, "utf8"), schemaName);
-	});
-	PRELOAD_COMMON_SINGLE_FILE_SCHEMAS.forEach(schemaName => {
-		const json = ut.readJson(schemaName, "utf8");
-		ajv.addSchema(json, schemaName);
-	});
+	ut.listFiles({dir: ".", blocklistFilePrefixes: []})
+		.forEach(f => {
+			const fId = f.replace(/^\.\//, "");
+			ajv.addSchema(ut.readJson(f, "utf8"), fId);
+		});
 
 	// Get schema files, ignoring directories
 	const schemaFiles = fs.readdirSync(`${cacheDir}/test/schema`)
 		.filter(file => file.endsWith(".json"));
 
-	const SCHEMA_BLACKLIST = new Set([...PRELOAD_COMMON_SINGLE_FILE_SCHEMAS, "homebrew.json"]);
+	const SCHEMA_BLOCKLIST = new Set([
+		"entry.json",
+		"util.json",
+		"items-shared.json",
+		"homebrew.json",
+	]);
 
 	for (let i = 0; i < schemaFiles.length; ++i) {
 		const schemaFile = schemaFiles[i];
-		if (!SCHEMA_BLACKLIST.has(schemaFile)) {
-			const dataFile = schemaFile; // data and schema filenames match
+		if (SCHEMA_BLOCKLIST.has(schemaFile)) continue;
 
-			console.log(`Testing data/${dataFile}`.padEnd(50), `against schema/${schemaFile}`);
+		const dataFile = schemaFile; // data and schema filenames match
 
-			const data = ut.readJson(`${cacheDir}/data/${dataFile}`);
-			// Avoid re-adding schemas we have already loaded
-			if (!PRELOAD_SINGLE_FILE_SCHEMAS.includes(schemaFile)) {
-				const schema = ut.readJson(schemaFile, "utf8");
-				ajv.addSchema(schema, schemaFile);
-			}
+		console.log(`Testing data/${dataFile}`.padEnd(50), `against schema/${schemaFile}`);
 
-			addImplicits(data);
-			const valid = ajv.validate(schemaFile, data);
-			if (!valid) return handleError(data);
-		}
+		const data = ut.readJson(`${cacheDir}/data/${dataFile}`);
+
+		addImplicits(data);
+		const valid = ajv.validate(schemaFile, data);
+		if (!valid) return handleError(data);
 	}
 
 	// Get schema files in directories
@@ -151,9 +134,6 @@ async function main () {
 				console.log(`Testing data/${schemaDir}/${dataFile}`.padEnd(50), `against schema/${schemaDir}/${schemaFile}`);
 
 				const data = ut.readJson(`${cacheDir}/data/${schemaDir}/${dataFile}`);
-				const schema = ut.readJson(`${cacheDir}/test/schema/${schemaDir}/${schemaFile}`, "utf8");
-				// only add the schema if we didn't do so already for this category
-				if (!ajv.getSchema(schemaKey)) ajv.addSchema(schema, schemaKey);
 
 				addImplicits(data);
 				const valid = ajv.validate(schemaKey, data);

@@ -1,6 +1,12 @@
 "use strict";
 
 class StatGenUi extends BaseComponent {
+	static _PROPS_POINT_BUY_CUSTOM = [
+		"pb_rules",
+		"pb_budget",
+		"pb_isCustom",
+	];
+
 	/**
 	 * @param opts
 	 * @param opts.races
@@ -16,16 +22,30 @@ class StatGenUi extends BaseComponent {
 		super();
 		opts = opts || {};
 
-		TabUiUtilSide.decorate(this);
-
-		this.__meta = {};
-		this._meta = this._getProxy("meta", this.__meta);
+		TabUiUtilSide.decorate(this, {isInitMeta: true});
 
 		this._races = opts.races;
 		this._feats = opts.feats;
 		this._tabMetasAdditional = opts.tabMetasAdditional;
 		this._isCharacterMode = opts.isCharacterMode;
 		this._isFvttMode = opts.isFvttMode;
+
+		this._MODES = this._isFvttMode ? StatGenUi.MODES_FVTT : StatGenUi.MODES;
+		if (this._isFvttMode) {
+			let cnt = 0;
+			this._IX_TAB_NONE = cnt++;
+			this._IX_TAB_ROLLED = cnt++;
+			this._IX_TAB_ARRAY = cnt++;
+			this._IX_TAB_PB = cnt++;
+			this._IX_TAB_MANUAL = cnt;
+		} else {
+			this._IX_TAB_NONE = -1;
+			let cnt = 0;
+			this._IX_TAB_ROLLED = cnt++;
+			this._IX_TAB_ARRAY = cnt++;
+			this._IX_TAB_PB = cnt++;
+			this._IX_TAB_MANUAL = cnt;
+		}
 
 		this._modalFilterRaces = opts.modalFilterRaces || new ModalFilterRaces({namespace: "statgen.races", isRadio: true, allData: this._races});
 		this._modalFilterFeats = opts.modalFilterFeats || new ModalFilterFeats({namespace: "statgen.feats", isRadio: true, allData: this._feats});
@@ -43,10 +63,14 @@ class StatGenUi extends BaseComponent {
 		// endregion
 	}
 
+	get MODES () { return this._MODES; }
+
 	get ixActiveTab () { return this._getIxActiveTab(); }
 	set ixActiveTab (ix) { this._setIxActiveTab({ixActiveTab: ix}); }
 
 	// region Expose for external use
+	addHookPointBuyCustom (hook) { this.constructor._PROPS_POINT_BUY_CUSTOM.forEach(prop => this._addHookBase(prop, hook)); }
+
 	addHookAbilityScores (hook) { Parser.ABIL_ABVS.forEach(ab => this._addHookBase(`common_export_${ab}`, hook)); }
 	addHookPulseAsi (hook) { this._addHookBase("common_pulseAsi", hook); }
 	getFormDataAsi () { return this._compAsi.getFormData(); }
@@ -101,6 +125,7 @@ class StatGenUi extends BaseComponent {
 	removeHookBase (prop, hook) { return this._removeHookBase(prop, hook); }
 	proxyAssignSimple (hookProp, toObj, isOverwrite) { return this._proxyAssignSimple(hookProp, toObj, isOverwrite); }
 	get race () { return this._races[this._state.common_ixRace]; }
+	get isLevelUp () { return this._isLevelUp; }
 	// endregion
 
 	getTotals () {
@@ -114,7 +139,7 @@ class StatGenUi extends BaseComponent {
 		}
 
 		return {
-			mode: StatGenUi.MODES[this.ixActiveTab || 0],
+			mode: this._MODES[this.ixActiveTab || 0],
 			totals: {
 				rolled: this._getTotals_rolled(),
 				array: this._getTotals_array(),
@@ -194,12 +219,13 @@ class StatGenUi extends BaseComponent {
 				...this._tabMetasAdditional || [],
 			]
 			: [
-				new TabUiUtil.TabMeta({name: "Roll", icon: this._isFvttMode ? `fas fa-fw fa-dice` : `far fa-fw fa-dice`, hasBorder: true}),
-				new TabUiUtil.TabMeta({name: "Standard Array", icon: this._isFvttMode ? `fas fa-fw fa-signal` : `far fa-fw fa-signal-alt`, hasBorder: true}),
-				new TabUiUtil.TabMeta({name: "Point Buy", icon: this._isFvttMode ? `fas fa-fw fa-chart-bar` : `far fa-fw fa-chart-bar`, hasBorder: true}),
-				new TabUiUtil.TabMeta({name: "Manual", icon: this._isFvttMode ? `fas fa-fw fa-tools` : `far fa-fw fa-tools`, hasBorder: true}),
+				this._isFvttMode ? new TabUiUtil.TabMeta({name: "Select...", icon: this._isFvttMode ? `fas fa-fw fa-square` : `far fa-fw fa-square`, hasBorder: true, isNoPadding: this._isFvttMode}) : null,
+				new TabUiUtil.TabMeta({name: "Roll", icon: this._isFvttMode ? `fas fa-fw fa-dice` : `far fa-fw fa-dice`, hasBorder: true, isNoPadding: this._isFvttMode}),
+				new TabUiUtil.TabMeta({name: "Standard Array", icon: this._isFvttMode ? `fas fa-fw fa-signal` : `far fa-fw fa-signal-alt`, hasBorder: true, isNoPadding: this._isFvttMode}),
+				new TabUiUtil.TabMeta({name: "Point Buy", icon: this._isFvttMode ? `fas fa-fw fa-chart-bar` : `far fa-fw fa-chart-bar`, hasBorder: true, isNoPadding: this._isFvttMode}),
+				new TabUiUtil.TabMeta({name: "Manual", icon: this._isFvttMode ? `fas fa-fw fa-tools` : `far fa-fw fa-tools`, hasBorder: true, isNoPadding: this._isFvttMode}),
 				...this._tabMetasAdditional || [],
-			];
+			].filter(Boolean);
 
 		const tabMetas = this._renderTabs(iptTabMetas, {$parent: this._isFvttMode ? null : $parent});
 		if (this._isFvttMode) {
@@ -327,10 +353,11 @@ class StatGenUi extends BaseComponent {
 		const nxtState = this._getDefaultStateCommonResettable();
 
 		switch (this.ixActiveTab) {
-			case StatGenUi._IX_TAB_ROLLED: Object.assign(nxtState, this._getDefaultStateRolledResettable()); break;
-			case StatGenUi._IX_TAB_ARRAY: Object.assign(nxtState, this._getDefaultStateArrayResettable()); break;
-			case StatGenUi._IX_TAB_PB: Object.assign(nxtState, this._getDefaultStatePointBuyResettable()); break;
-			case StatGenUi._IX_TAB_MANUAL: Object.assign(nxtState, this._getDefaultStateManualResettable()); break;
+			case this._IX_TAB_NONE: Object.assign(nxtState, this._getDefaultStateNoneResettable()); break;
+			case this._IX_TAB_ROLLED: Object.assign(nxtState, this._getDefaultStateRolledResettable()); break;
+			case this._IX_TAB_ARRAY: Object.assign(nxtState, this._getDefaultStateArrayResettable()); break;
+			case this._IX_TAB_PB: Object.assign(nxtState, this._getDefaultStatePointBuyResettable()); break;
+			case this._IX_TAB_MANUAL: Object.assign(nxtState, this._getDefaultStateManualResettable()); break;
 		}
 
 		this._proxyAssignSimple("state", nxtState);
@@ -536,6 +563,8 @@ class StatGenUi extends BaseComponent {
 	}
 
 	_render_isLevelOne ($wrpTab) {
+		let $stgNone;
+		let $stgMain;
 		const $elesRolled = [];
 		const $elesArray = [];
 		const $elesPb = [];
@@ -543,7 +572,7 @@ class StatGenUi extends BaseComponent {
 
 		// region Rolled header
 		const $stgRolledHeader = this._render_$getStgRolledHeader();
-		const hkStgRolled = () => $stgRolledHeader.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_ROLLED);
+		const hkStgRolled = () => $stgRolledHeader.toggleVe(this.ixActiveTab === this._IX_TAB_ROLLED);
 		this._addHookActiveTab(hkStgRolled);
 		hkStgRolled();
 		// endregion
@@ -554,10 +583,10 @@ class StatGenUi extends BaseComponent {
 		const $vrPbCustom = $(`<div class="vr-5 mobile-ish__hidden"></div>`);
 		const $hrPbCustom = $(`<hr class="hr-5 mobile-ish__visible">`);
 		const hkStgPb = () => {
-			$stgPbHeader.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_PB);
-			$stgPbCustom.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_PB);
-			$vrPbCustom.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_PB);
-			$hrPbCustom.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_PB);
+			$stgPbHeader.toggleVe(this.ixActiveTab === this._IX_TAB_PB);
+			$stgPbCustom.toggleVe(this.ixActiveTab === this._IX_TAB_PB);
+			$vrPbCustom.toggleVe(this.ixActiveTab === this._IX_TAB_PB);
+			$hrPbCustom.toggleVe(this.ixActiveTab === this._IX_TAB_PB);
 		};
 		this._addHookActiveTab(hkStgPb);
 		hkStgPb();
@@ -565,31 +594,34 @@ class StatGenUi extends BaseComponent {
 
 		// region Array header
 		const $stgArrayHeader = this._render_$getStgArrayHeader();
-		const hkStgArray = () => $stgArrayHeader.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_ARRAY);
+		const hkStgArray = () => $stgArrayHeader.toggleVe(this.ixActiveTab === this._IX_TAB_ARRAY);
 		this._addHookActiveTab(hkStgArray);
 		hkStgArray();
 		// endregion
 
 		// region Manual header
 		const $stgManualHeader = this._render_$getStgManualHeader();
-		const hkStgManual = () => $stgManualHeader.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_MANUAL);
+		const hkStgManual = () => $stgManualHeader.toggleVe(this.ixActiveTab === this._IX_TAB_MANUAL);
 		this._addHookActiveTab(hkStgManual);
 		hkStgManual();
 		// endregion
 
 		// region Other elements
 		const hkElesMode = () => {
-			$elesRolled.forEach($ele => $ele.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_ROLLED));
-			$elesArray.forEach($ele => $ele.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_ARRAY));
-			$elesPb.forEach($ele => $ele.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_PB));
-			$elesManual.forEach($ele => $ele.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_MANUAL));
+			$stgNone.toggleVe(this.ixActiveTab === this._IX_TAB_NONE);
+			$stgMain.toggleVe(this.ixActiveTab !== this._IX_TAB_NONE);
+
+			$elesRolled.forEach($ele => $ele.toggleVe(this.ixActiveTab === this._IX_TAB_ROLLED));
+			$elesArray.forEach($ele => $ele.toggleVe(this.ixActiveTab === this._IX_TAB_ARRAY));
+			$elesPb.forEach($ele => $ele.toggleVe(this.ixActiveTab === this._IX_TAB_PB));
+			$elesManual.forEach($ele => $ele.toggleVe(this.ixActiveTab === this._IX_TAB_MANUAL));
 		};
 		this._addHookActiveTab(hkElesMode);
 		// endregion
 
 		const $btnResetRolledOrArrayOrManual = $(`<button class="btn btn-default btn-xxs relative statgen-shared__btn-reset" title="Reset"><span class="glyphicon glyphicon-refresh"></span></button>`)
 			.click(() => this._doReset());
-		const hkRolledOrArray = () => $btnResetRolledOrArrayOrManual.toggleVe(this.ixActiveTab === StatGenUi._IX_TAB_ROLLED || this.ixActiveTab === StatGenUi._IX_TAB_ARRAY || this.ixActiveTab === StatGenUi._IX_TAB_MANUAL);
+		const hkRolledOrArray = () => $btnResetRolledOrArrayOrManual.toggleVe(this.ixActiveTab === this._IX_TAB_ROLLED || this.ixActiveTab === this._IX_TAB_ARRAY || this.ixActiveTab === this._IX_TAB_MANUAL);
 		this._addHookActiveTab(hkRolledOrArray);
 		hkRolledOrArray();
 
@@ -726,15 +758,21 @@ class StatGenUi extends BaseComponent {
 
 			${$wrpRace}
 		</div>`;
-		const hkIxRace = () => {
+
+		// Ensure this is run first, and doesn't trigger further state changes
+		this._addHookBase("common_ixRace", () => this.__state.common_ixAbilityScoreSet = 0);
+
+		const hkIxRace = (prop) => {
 			this._pb_unhookRaceRender();
-			this._state.common_raceChoiceMetasFrom = [];
-			this._state.common_raceChoiceMetasWeighted = [];
+			const isInitialLoad = prop == null;
+			if (!isInitialLoad) this._state.common_raceChoiceMetasFrom = [];
+			if (!isInitialLoad) this._state.common_raceChoiceMetasWeighted = [];
 			const isAnyRacial = this._render_pointBuy_races($wrpRace);
 			$wrpRaceOuter.toggleVe(isAnyRacial);
 		};
 		this._addHookBase("common_ixRace", hkIxRace);
 		this._addHookBase("common_isTashas", hkIxRace);
+		this._addHookBase("common_ixAbilityScoreSet", hkIxRace);
 		hkIxRace();
 
 		const {$wrp: $selRace, fnUpdateHidden: fnUpdateSelRaceHidden} = ComponentUiUtil.$getSelSearchable(
@@ -779,9 +817,42 @@ class StatGenUi extends BaseComponent {
 				html: `<button class="btn btn-xs btn-default" title="Toggle Race Preview"><span class="glyphicon glyphicon-eye-open"></span></button>`,
 			},
 		);
-		const hkBtnPreviewRace = () => $btnPreviewRace.toggleVe(this._state.common_ixRace != null && !~this._state.common_ixRace);
+		const hkBtnPreviewRace = () => $btnPreviewRace.toggleVe(this._state.common_ixRace != null && ~this._state.common_ixRace);
 		this._addHookBase("common_ixRace", hkBtnPreviewRace);
 		hkBtnPreviewRace();
+
+		// region Ability score set selection
+		const {$sel: $selAbilitySet, setValues: setValuesSelAbilitySet} = ComponentUiUtil.$getSelEnum(
+			this,
+			"common_ixAbilityScoreSet",
+			{
+				values: [],
+				asMeta: true,
+				fnDisplay: ixAbSet => {
+					const lst = this._pb_getRacialAbilityList();
+					if (!lst?.[ixAbSet]) return "(Unknown)";
+					return Renderer.getAbilityData([lst[ixAbSet]]).asText;
+				},
+			},
+		);
+
+		const $stgAbilityScoreSet = $$`<div class="ve-flex-v-center mb-2">
+			<div class="mr-2">Ability Score Increase</div>
+			<div>${$selAbilitySet}</div>
+		</div>`;
+
+		const hkSetValuesSelAbilitySet = () => {
+			const race = this.race;
+			$stgAbilityScoreSet.toggleVe(!!race && race.ability?.length > 1);
+			setValuesSelAbilitySet(
+				[...new Array(race?.ability?.length || 0)].map((_, ix) => ix),
+				{isForce: true},
+			);
+		};
+		this._addHookBase("common_ixRace", hkSetValuesSelAbilitySet);
+		this._addHookBase("common_isTashas", hkSetValuesSelAbilitySet);
+		hkSetValuesSelAbilitySet();
+		// endregion
 
 		const $dispPreviewRace = $(`<div class="ve-flex-col mb-2"></div>`);
 		const hkPreviewRace = () => {
@@ -823,9 +894,11 @@ class StatGenUi extends BaseComponent {
 
 		const $wrpAsi = this._render_$getWrpAsi();
 
-		hkElesMode();
+		$stgNone = $$`<div class="ve-flex-col w-100 h-100">
+			<div class="ve-flex-v-center"><i>Please select a mode.</i></div>
+		</div>`;
 
-		$$($wrpTab)`
+		$stgMain = $$`<div class="ve-flex-col w-100 h-100">
 			${$stgRolledHeader}
 			${$stgArrayHeader}
 			${$stgManualHeader}
@@ -875,8 +948,9 @@ class StatGenUi extends BaseComponent {
 							<div class="ve-flex-v-center btn-group w-100 mr-2">${$btnFilterForRace}${$selRace}</div>
 							<div>${$btnPreviewRace}</div>
 						</div>
+						${$stgAbilityScoreSet}
 						<label class="ve-flex-v-center mb-1">
-							<div class="mr-1">Allow Origin Customization</div>
+							<div class="mr-2">Allow Origin Customization</div>
 							${ComponentUiUtil.$getCbBool(this, "common_isTashas")}
 						</label>
 						<div class="ve-flex">
@@ -900,7 +974,13 @@ class StatGenUi extends BaseComponent {
 			${$dispTashas}
 
 			${$wrpAsi}
-		`;
+		</div>`;
+
+		hkElesMode();
+
+		$wrpTab
+			.append($stgMain)
+			.append($stgNone);
 	}
 
 	_render_isLevelUp ($wrpTab) {
@@ -984,16 +1064,19 @@ class StatGenUi extends BaseComponent {
 
 			const exportedStateProp = `common_export_${ab}`;
 
+			const getTotalScore = () => {
+				if (this._isLevelUp) return this._levelUp_getTotalScore(ab);
+				switch (this.ixActiveTab) {
+					case this._IX_TAB_ROLLED: return this._rolled_getTotalScore(ab);
+					case this._IX_TAB_ARRAY: return this._array_getTotalScore(ab);
+					case this._IX_TAB_PB: return this._pb_getTotalScore(ab);
+					case this._IX_TAB_MANUAL: return this._manual_getTotalScore(ab);
+					default: return 0;
+				}
+			};
+
 			const hk = () => {
-				const totalScore = this._isLevelUp
-					? this._levelUp_getTotalScore(ab)
-					: this.ixActiveTab === StatGenUi._IX_TAB_ROLLED
-						? this._rolled_getTotalScore(ab)
-						: this.ixActiveTab === StatGenUi._IX_TAB_ARRAY
-							? this._array_getTotalScore(ab)
-							: this.ixActiveTab === StatGenUi._IX_TAB_PB
-								? this._pb_getTotalScore(ab)
-								: this._manual_getTotalScore(ab);
+				const totalScore = getTotalScore();
 
 				const isOverLimit = totalScore > 20;
 				$iptTotal
@@ -1050,44 +1133,47 @@ class StatGenUi extends BaseComponent {
 		this._pbRaceHookMetas = [];
 	}
 
-	_pb_getRacialAbility () {
-		const race = this._state.common_ixRace != null ? this._races[this._state.common_ixRace] : null;
-		if (!race) return null;
+	_pb_getRacialAbilityList () {
+		const race = this.race;
+		if (!race?.ability?.length) return null;
 
-		// (Always use the first set of ability scores, for simplicity)
-		let fromRace = race.ability ? race.ability[0] : null;
-		if (!fromRace) return null;
+		return race.ability
+			.map(fromRace => {
+				if (this._state.common_isTashas) {
+					const weights = [];
 
-		if (this._state.common_isTashas) {
-			const weights = [];
+					if (fromRace.choose && fromRace.choose.weighted && fromRace.choose.weighted.weights) {
+						weights.push(...fromRace.choose.weighted.weights);
+					}
 
-			if (fromRace.choose && fromRace.choose.weighted && fromRace.choose.weighted.weights) {
-				weights.push(...fromRace.choose.weighted.weights);
-			}
+					Parser.ABIL_ABVS.forEach(it => {
+						if (fromRace[it]) weights.push(fromRace[it]);
+					});
 
-			Parser.ABIL_ABVS.forEach(it => {
-				if (fromRace[it]) weights.push(fromRace[it]);
+					if (fromRace.choose && fromRace.choose.from) {
+						const count = fromRace.choose.count || 1;
+						const amount = fromRace.choose.amount || 1;
+						for (let i = 0; i < count; ++i) weights.push(amount);
+					}
+
+					weights.sort((a, b) => SortUtil.ascSort(b, a));
+
+					fromRace = {
+						choose: {
+							weighted: {
+								from: [...Parser.ABIL_ABVS],
+								weights,
+							},
+						},
+					};
+				}
+
+				return fromRace;
 			});
+	}
 
-			if (fromRace.choose && fromRace.choose.from) {
-				const count = fromRace.choose.count || 1;
-				const amount = fromRace.choose.amount || 1;
-				for (let i = 0; i < count; ++i) weights.push(amount);
-			}
-
-			weights.sort((a, b) => SortUtil.ascSort(b, a));
-
-			fromRace = {
-				choose: {
-					weighted: {
-						from: [...Parser.ABIL_ABVS],
-						weights,
-					},
-				},
-			};
-		}
-
-		return fromRace;
+	_pb_getRacialAbility () {
+		return this._pb_getRacialAbilityList()?.[this._state.common_ixAbilityScoreSet || 0];
 	}
 
 	_pb_getPointsRemaining (baseState) {
@@ -1160,7 +1246,7 @@ class StatGenUi extends BaseComponent {
 
 			$ptChooseFrom = $$`<div class="ve-flex-col mr-3">
 				<div class="my-1 statgen-pb__header statgen-pb__header--choose-from ve-flex-vh-center">
-					<div class="${count !== 1 ? `mr-1` : ""}">${UiUtil.intToBonus(amount)}</div>${count !== 1 ? `<div class="ve-small ve-muted">(x${count})</div>` : ""}
+					<div class="${count !== 1 ? `mr-1` : ""}">${UiUtil.intToBonus(amount, {isPretty: true})}</div>${count !== 1 ? `<div class="ve-small ve-muted">(x${count})</div>` : ""}
 				</div>
 				${$wrpsChoose}
 			</div>`;
@@ -1203,7 +1289,7 @@ class StatGenUi extends BaseComponent {
 				});
 
 				return $$`<div class="ve-flex-col mr-3">
-					<div class="my-1 statgen-pb__header statgen-pb__header--choose-from ve-flex-vh-center">${UiUtil.intToBonus(weight)}</div>
+					<div class="my-1 statgen-pb__header statgen-pb__header--choose-from ve-flex-vh-center">${UiUtil.intToBonus(weight, {isPretty: true})}</div>
 					${$wrpsChoose}
 				</div>`;
 			});
@@ -1288,6 +1374,15 @@ class StatGenUi extends BaseComponent {
 		return out;
 	}
 
+	// region External use
+	getSaveableStatePointBuyCustom () {
+		const base = this.getSaveableState();
+		return {
+			state: this.constructor._PROPS_POINT_BUY_CUSTOM.mergeMap(k => ({[k]: base.state[k]})),
+		};
+	}
+	// endregion
+
 	setStateFrom (saved, isOverwrite = false) {
 		saved = MiscUtil.copy(saved);
 
@@ -1341,6 +1436,8 @@ class StatGenUi extends BaseComponent {
 			common_raceChoiceMetasWeighted: [],
 		};
 	}
+
+	_getDefaultStateNoneResettable () { return {}; }
 
 	_getDefaultStateRolledResettable () {
 		return {
@@ -1403,6 +1500,7 @@ class StatGenUi extends BaseComponent {
 			common_isTashas: false,
 			common_isShowTashasRules: false,
 			common_ixRace: null,
+			common_ixAbilityScoreSet: 0,
 
 			common_pulseAsi: false, // Used as a general pulse for all changes in form data
 			common_cntAsi: 0,
@@ -1453,13 +1551,17 @@ StatGenUi._PROP_PREFIX_COMMON = "common_";
 StatGenUi._PROP_PREFIX_ROLLED = "rolled_";
 StatGenUi._PROP_PREFIX_ARRAY = "array_";
 StatGenUi._PROP_PREFIX_MANUAL = "manual_";
+StatGenUi.MODE_NONE = "none";
 StatGenUi.MODES = [
 	"rolled",
 	"array",
 	"pointbuy",
 	"manual",
 ];
-[StatGenUi._IX_TAB_ROLLED, StatGenUi._IX_TAB_ARRAY, StatGenUi._IX_TAB_PB, StatGenUi._IX_TAB_MANUAL] = StatGenUi.MODES.map((_, i) => i);
+StatGenUi.MODES_FVTT = [
+	StatGenUi.MODE_NONE,
+	...StatGenUi.MODES,
+];
 StatGenUi._MAX_CUSTOM_FEATS = 20;
 
 class UtilAdditionalFeats {
@@ -1842,7 +1944,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 					const abilitySet = feat.ability[this._parent.state[propIxFeatAbility]];
 
 					// region Static/no choices
-					const ptsNoChoose = Parser.ABIL_ABVS.filter(ab => abilitySet[ab]).map(ab => `${Parser.attAbvToFull(ab)} ${UiUtil.intToBonus(abilitySet[ab])}`);
+					const ptsNoChoose = Parser.ABIL_ABVS.filter(ab => abilitySet[ab]).map(ab => `${Parser.attAbvToFull(ab)} ${UiUtil.intToBonus(abilitySet[ab], {isPretty: true})}`);
 					$stgFeatNoChoice.empty().toggleVe(ptsNoChoose.length).html(`<div><span class="mr-2">\u2014</span>${ptsNoChoose.join(", ")}</div>`);
 					// endregion
 
@@ -1860,13 +1962,13 @@ StatGenUi.CompAsi = class extends BaseComponent {
 							propFeatAbilityChooseFrom,
 							{
 								values: abilitySet.choose.from,
-								fnDisplay: v => `${Parser.attAbvToFull(v)} ${UiUtil.intToBonus(amount)}`,
+								fnDisplay: v => `${Parser.attAbvToFull(v)} ${UiUtil.intToBonus(amount, {isPretty: true})}`,
 								count,
 							},
 						);
 						fnsCleanupFeatAbility.push(() => cleanupAsiPicker());
 
-						$stgFeatChooseAsiFrom.append(`<div><span class="mr-2">\u2014</span>choose ${count > 1 ? `${count} ` : ""}${UiUtil.intToBonus(amount)}</div>`);
+						$stgFeatChooseAsiFrom.append(`<div><span class="mr-2">\u2014</span>choose ${count > 1 ? `${count} ` : ""}${UiUtil.intToBonus(amount, {isPretty: true})}</div>`);
 
 						rowMetas.forEach(meta => {
 							meta.$cb.change(() => this._doPulseThrottled());
@@ -1930,7 +2032,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 		</div>`;
 		const hkIxRace = () => {
 			const race = this._parent.race;
-			$stgRace.toggleVe(!!race?.feats);
+			$stgRace.toggleVe(!this._parent.isLevelUp && !!race?.feats);
 		};
 		this._parent.addHookBase("common_ixRace", hkIxRace);
 		hkIxRace();

@@ -40,6 +40,11 @@ class PageFilterFeats extends PageFilter {
 				"Weapon Proficiency",
 			],
 		});
+		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
+		this._resistFilter = FilterCommon.getDamageResistFilter();
+		this._immuneFilter = FilterCommon.getDamageImmuneFilter();
+		this._defenceFilter = new MultiFilter({header: "Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
+		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
 		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD"], isMiscFilter: true});
 	}
 
@@ -73,6 +78,9 @@ class PageFilterFeats extends PageFilter {
 
 		feat._slAbility = ability.asText || VeCt.STR_NONE;
 		feat._slPrereq = prereqText;
+
+		FilterCommon.mutateForFilters_damageVulnResImmune_player(feat);
+		FilterCommon.mutateForFilters_conditionImmune_player(feat);
 	}
 
 	addToFilters (feat, isExcluded) {
@@ -80,6 +88,11 @@ class PageFilterFeats extends PageFilter {
 
 		this._sourceFilter.addItem(feat.source);
 		if (feat.prerequisite) this._levelFilter.addItem(feat._fPrereqLevel);
+		this._vulnerableFilter.addItem(feat._fVuln);
+		this._resistFilter.addItem(feat._fRes);
+		this._immuneFilter.addItem(feat._fImm);
+		this._conditionImmuneFilter.addItem(feat._fCondImm);
+		this._benefitsFilter.addItem(feat._fBenifits);
 	}
 
 	async _pPopulateBoxOptions (opts) {
@@ -88,6 +101,8 @@ class PageFilterFeats extends PageFilter {
 			this._asiFilter,
 			this._prerequisiteFilter,
 			this._benefitsFilter,
+			this._defenceFilter,
+			this._conditionImmuneFilter,
 			this._miscFilter,
 		];
 	}
@@ -102,6 +117,12 @@ class PageFilterFeats extends PageFilter {
 				ft._fPrereqLevel,
 			],
 			ft._fBenifits,
+			[
+				ft._fVuln,
+				ft._fRes,
+				ft._fImm,
+			],
+			ft._fCondImm,
 			ft._fMisc,
 		);
 	}
@@ -134,7 +155,7 @@ class ModalFilterFeats extends ModalFilter {
 	}
 
 	async _pLoadAllData () {
-		const brew = await BrewUtil.pAddBrewData();
+		const brew = await BrewUtil2.pGetBrewProcessed();
 		const fromData = (await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/feats.json`)).feat;
 		const fromBrew = brew.feat || [];
 		return [...fromData, ...fromBrew];
@@ -147,7 +168,7 @@ class ModalFilterFeats extends ModalFilter {
 		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_FEATS](feat);
 		const source = Parser.sourceJsonToAbv(feat.source);
 
-		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst--border no-select lst__wrp-cells">
+		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst--border veapp__list-row no-select lst__wrp-cells ${feat._versionBase_isVersion ? "ve-muted" : ""}">
 			<div class="col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
 			<div class="col-0-5 px-1 ve-flex-vh-center">
@@ -157,7 +178,7 @@ class ModalFilterFeats extends ModalFilter {
 			<div class="col-4 ${this._getNameStyle()}">${feat.name}</div>
 			<span class="col-3 ${feat._slAbility === VeCt.STR_NONE ? "italic" : ""}">${feat._slAbility}</span>
 				<span class="col-3 ${feat._slPrereq === VeCt.STR_NONE ? "italic" : ""}">${feat._slPrereq}</span>
-			<div class="col-1 pr-0 text-center ${Parser.sourceJsonToColor(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}" ${BrewUtil.sourceJsonToStyle(feat.source)}>${source}</div>
+			<div class="col-1 pr-0 text-center ${Parser.sourceJsonToColor(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}" ${BrewUtil2.sourceJsonToStyle(feat.source)}>${source}</div>
 		</div>`;
 
 		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;

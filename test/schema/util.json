@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.11.13",
+	"version": "1.11.27",
 	"definitions": {
 		"metaBlock": {
 			"type": "object",
@@ -15,7 +15,8 @@
 							"type": "array",
 							"items": {
 								"type": "string"
-							}
+							},
+							"uniqueItems": true
 						}
 					}
 				},
@@ -30,6 +31,9 @@
 				}
 			}
 		},
+		"page": {
+			"type": "integer"
+		},
 		"otherSources": {
 			"type": "array",
 			"items": {
@@ -39,14 +43,15 @@
 						"type": "string"
 					},
 					"page": {
-						"type": "integer"
+						"$ref": "#/definitions/page"
 					}
 				},
 				"required": [
 					"source"
 				],
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 		"additionalSources": {
 			"type": "array",
@@ -57,14 +62,15 @@
 						"type": "string"
 					},
 					"page": {
-						"type": "integer"
+						"$ref": "#/definitions/page"
 					}
 				},
 				"required": [
 					"source"
 				],
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 		"reprintedAs": {
 			"type": "array",
@@ -93,7 +99,50 @@
 						]
 					}
 				]
-			}
+			},
+			"uniqueItems": true
+		},
+		"tagNameStats": {
+			"type": "string",
+			"enum": [
+				"spell",
+				"item",
+				"creature",
+				"condition",
+				"disease",
+				"status",
+				"background",
+				"race",
+				"optfeature",
+				"reward",
+				"feat",
+				"psionic",
+				"object",
+				"cult",
+				"boon",
+				"trap",
+				"hazard",
+				"deity",
+				"variantrule",
+				"charoption",
+				"vehicle",
+				"vehupgrade",
+				"class",
+				"action",
+				"language",
+				"classFeature",
+				"subclassFeature",
+				"table",
+				"recipe",
+				"skill",
+				"sense"
+			]
+		},
+		"propNameStats": {
+			"type": "string",
+			"enum": [
+				"subclass"
+			]
 		},
 		"languageNameLower": {
 			"type": "string",
@@ -177,7 +226,8 @@
 								"type": "array",
 								"items": {
 									"$ref": "#/definitions/languageNameLower"
-								}
+								},
+								"uniqueItems": true
 							},
 							"count": {
 								"type": "integer"
@@ -186,7 +236,8 @@
 						"additionalProperties": false
 					}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 		"toolNameLower": {
 			"type": "string",
@@ -218,7 +269,8 @@
 				"thieves' tools",
 				"poisoner's kit",
 				"vehicles (land)",
-				"vehicles (water)"
+				"vehicles (water)",
+				"vehicles (space)"
 			]
 		},
 		"toolProficiencies": {
@@ -316,6 +368,9 @@
 					"vehicles (water)": {
 						"type": "boolean"
 					},
+					"vehicles (space)": {
+						"type": "boolean"
+					},
 					"choose": {
 						"type": "object",
 						"properties": {
@@ -333,7 +388,8 @@
 											]
 										}
 									]
-								}
+								},
+								"uniqueItems": true
 							},
 							"count": {
 								"type": "integer"
@@ -342,7 +398,8 @@
 						"additionalProperties": false
 					}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 		"skillNameLower": {
 			"type": "string",
@@ -436,7 +493,8 @@
 								"type": "array",
 								"items": {
 									"$ref": "#/definitions/skillNameLower"
-								}
+								},
+								"uniqueItems": true
 							},
 							"count": {
 								"type": "integer"
@@ -585,6 +643,9 @@
 					"vehicles (water)": {
 						"type": "boolean"
 					},
+					"vehicles (space)": {
+						"type": "boolean"
+					},
 					"anySkill": {
 						"type": "integer"
 					},
@@ -712,11 +773,13 @@
 									"additionalProperties": false
 								}
 							]
-						}
+						},
+						"uniqueItems": true
 					}
 				},
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 		"weaponProficiencies": {
 			"type": "array",
@@ -867,7 +930,8 @@
 					}
 				},
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 		"armorProficiencies": {
 			"type": "array",
@@ -888,7 +952,8 @@
 					}
 				},
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 		"savingThrowProficiencies": {
 			"type": "array",
@@ -927,7 +992,8 @@
 										"wis",
 										"cha"
 									]
-								}
+								},
+								"uniqueItems": true
 							},
 							"count": {
 								"type": "integer"
@@ -940,7 +1006,8 @@
 					}
 				},
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 		"expertise": {
 			"type": "array",
@@ -1088,11 +1155,15 @@
 					"vehicles (water)": {
 						"type": "boolean"
 					},
+					"vehicles (space)": {
+						"type": "boolean"
+					},
 					"poisoner's kit": {
 						"type": "boolean"
 					}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 		"additionalFeatsArray": {
 			"type": "array",
@@ -1106,7 +1177,8 @@
 				"additionalProperties": {
 					"type": "boolean"
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 		"proficiencyTag": {
 			"type": "string",
@@ -1181,7 +1253,8 @@
 											"fly",
 											"swim"
 										]
-									}
+									},
+									"uniqueItems": true
 								},
 								"amount": {
 									"type": "integer"
@@ -1203,31 +1276,36 @@
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								},
 								"burrow": {
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								},
 								"climb": {
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								},
 								"fly": {
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								},
 								"swim": {
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								}
 							}
 						}
@@ -1394,6 +1472,25 @@
 									"type": "string"
 								},
 								"subrace": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"name"
+							],
+							"additionalProperties": false
+						}
+					},
+					"background": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"displayEntry": {
+									"description": "Optional long-form name to be used in the rendered entity.",
 									"type": "string"
 								}
 							},
@@ -1643,7 +1740,8 @@
 								]
 							}
 						]
-					}
+					},
+					"uniqueItems": true
 				},
 				{
 					"type": "null"
@@ -1675,7 +1773,8 @@
 						}
 					}
 				]
-			}
+			},
+			"uniqueItems": true
 		},
 		"damageResistArray": {
 			"oneOf": [
@@ -1720,7 +1819,8 @@
 								]
 							}
 						]
-					}
+					},
+					"uniqueItems": true
 				},
 				{
 					"type": "null"
@@ -1752,7 +1852,8 @@
 						}
 					}
 				]
-			}
+			},
+			"uniqueItems": true
 		},
 		"damageVulnerabilityArray": {
 			"oneOf": [
@@ -1797,7 +1898,8 @@
 								]
 							}
 						]
-					}
+					},
+					"uniqueItems": true
 				},
 				{
 					"type": "null"
@@ -1829,7 +1931,8 @@
 						}
 					}
 				]
-			}
+			},
+			"uniqueItems": true
 		},
 		"conditionImmunityArray": {
 			"oneOf": [
@@ -1871,7 +1974,8 @@
 								]
 							}
 						]
-					}
+					},
+					"uniqueItems": true
 				},
 				{
 					"type": "null"
@@ -1903,7 +2007,8 @@
 						}
 					}
 				]
-			}
+			},
+			"uniqueItems": true
 		},
 		"resourcesArray": {
 			"type": "array",
@@ -1942,7 +2047,27 @@
 					"name",
 					"type"
 				]
-			}
+			},
+			"uniqueItems": true
+		},
+		"sensesArray": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"propertyNames": {
+					"enum": [
+						"blindsight",
+						"darkvision",
+						"tremorsense",
+						"truesight"
+					]
+				},
+				"additionalProperties": {
+					"type": "integer"
+				},
+				"minProperties": 1
+			},
+			"uniqueItems": true
 		},
 		"consumesObject": {
 			"type": "object",
@@ -2014,64 +2139,6 @@
 					"items": {
 						"$ref": "entry.json"
 					}
-				},
-				"_copy": {
-					"type": "object",
-					"properties": {
-						"name": {
-							"type": "string"
-						},
-						"source": {
-							"type": "string"
-						},
-						"pantheon": {
-							"description": "Used in deity data",
-							"type": "string"
-						},
-						"shortName": {
-							"description": "Used in subclass data",
-							"type": "string"
-						},
-						"className": {
-							"description": "Used in subclass data",
-							"type": "string"
-						},
-						"classSource": {
-							"description": "Used in subclass data",
-							"type": "string"
-						},
-						"_mod": {
-							"$ref": "#/definitions/_modObject"
-						},
-						"_trait": {
-							"type": "object",
-							"properties": {
-								"name": {
-									"type": "string"
-								},
-								"source": {
-									"type": "string"
-								}
-							},
-							"required": [
-								"name",
-								"source"
-							]
-						},
-						"_preserve": {
-							"type": "object",
-							"patternProperties": {
-								".*": {
-									"type": "boolean"
-								}
-							}
-						}
-					},
-					"required": [
-						"name",
-						"source"
-					],
-					"additionalProperties": false
 				}
 			},
 			"additionalProperties": false
@@ -2108,64 +2175,6 @@
 								"items": {
 									"$ref": "entry.json"
 								}
-							},
-							"_copy": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"source": {
-										"type": "string"
-									},
-									"pantheon": {
-										"description": "Used in deity data",
-										"type": "string"
-									},
-									"shortName": {
-										"description": "Used in subclass data",
-										"type": "string"
-									},
-									"className": {
-										"description": "Used in subclass data",
-										"type": "string"
-									},
-									"classSource": {
-										"description": "Used in subclass data",
-										"type": "string"
-									},
-									"_mod": {
-										"$ref": "#/definitions/_modObject"
-									},
-									"_trait": {
-										"type": "object",
-										"properties": {
-											"name": {
-												"type": "string"
-											},
-											"source": {
-												"type": "string"
-											}
-										},
-										"required": [
-											"name",
-											"source"
-										]
-									},
-									"_preserve": {
-										"type": "object",
-										"patternProperties": {
-											".*": {
-												"type": "boolean"
-											}
-										}
-									}
-								},
-								"required": [
-									"name",
-									"source"
-								],
-								"additionalProperties": false
 							}
 						},
 						"additionalProperties": false,
@@ -2642,6 +2651,24 @@
 					"properties": {
 						"mode": {
 							"const": "replaceSpells"
+						},
+						"spells": {
+							"type": "object"
+						},
+						"daily": {
+							"type": "object"
+						}
+					},
+					"required": [
+						"mode"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"mode": {
+							"const": "removeSpells"
 						},
 						"spells": {
 							"type": "object"
@@ -3274,7 +3301,8 @@
 												"wis",
 												"cha"
 											]
-										}
+										},
+										"uniqueItems": true
 									}
 								},
 								"required": [
@@ -3366,6 +3394,7 @@
 										"equipmentType": {
 											"type": "string",
 											"enum": [
+												"weapon",
 												"weaponSimple",
 												"weaponSimpleMelee",
 												"weaponMartial",
@@ -3492,11 +3521,110 @@
 				}
 			}
 		},
+		"adventureBookData": {
+			"type": "array",
+			"items": {
+				"$ref": "entry.json"
+			}
+		},
+		"optionalfeatureProgression": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"featureType": {
+						"type": "array",
+						"items": {
+							"$ref": "#/definitions/dataOptionalfeatureType"
+						},
+						"uniqueItems": true
+					},
+					"progression": {
+						"oneOf": [
+							{
+								"type": "array",
+								"description": "Features gained when the total count of features increases according to level.",
+								"items": {
+									"type": "integer"
+								},
+								"minItems": 20,
+								"maxItems": 20
+							},
+							{
+								"type": "object",
+								"description": "Features gained at the exact levels specified.",
+								"patternProperties": {
+									"^\\d+$": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false
+							},
+							{
+								"type": "object",
+								"description": "Features gained at the level this feature is gained.",
+								"properties": {
+									"*": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false
+							}
+						]
+					},
+					"required": {
+						"oneOf": [
+							{
+								"type": "array",
+								"items": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"minItems": 20,
+								"maxItems": 20
+							},
+							{
+								"type": "object",
+								"patternProperties": {
+									"^\\d+$": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										}
+									}
+								},
+								"additionalProperties": false
+							}
+						]
+					}
+				},
+				"required": [
+					"name",
+					"featureType",
+					"progression"
+				]
+			}
+		},
 		"foundryDataObject": {
 			"type": "object"
 		},
 		"foundryFlagsObject": {
 			"type": "object"
+		},
+		"foundryAdvancementObject": {
+			"type": "object"
+		},
+		"foundryAdvancementsArray": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/foundryAdvancementObject"
+			},
+			"uniqueItems": true
 		},
 		"foundryImg": {
 			"type": "string"
@@ -3536,13 +3664,23 @@
 					}
 				},
 				"disabled": {
-					"type": "boolean"
+					"const": true
+				},
+				"transfer": {
+					"const": true
 				}
 			},
 			"required": [
 				"changes"
 			],
 			"additionalProperties": false
+		},
+		"foundryEffectsArray": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/foundryEffectObject"
+			},
+			"uniqueItems": true
 		},
 		"foundrySideDataGenericArray": {
 			"type": "array",
@@ -3590,6 +3728,9 @@
 						"items": {
 							"$ref": "entry.json"
 						}
+					},
+					"isIgnored": {
+						"const": true
 					},
 					"data": {
 						"$ref": "#/definitions/foundryDataObject"

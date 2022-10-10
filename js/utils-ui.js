@@ -45,174 +45,181 @@ class Prx {
 	}
 }
 
-class ProxyBase {
-	constructor () {
-		this.__hooks = {};
-		this.__hooksAll = {};
-		this.__hooksTmp = null;
-		this.__hooksAllTmp = null;
-	}
-
-	_getProxy (hookProp, toProxy) {
-		return new Proxy(toProxy, {
-			set: (object, prop, value) => {
-				return this._doProxySet(hookProp, object, prop, value);
-			},
-			deleteProperty: (object, prop) => {
-				if (!(prop in object)) return true;
-				const prevValue = object[prop];
-				delete object[prop];
-				this._doFireHooksAll(hookProp, prop, undefined, prevValue);
-				if (this.__hooks[hookProp] && this.__hooks[hookProp][prop]) this.__hooks[hookProp][prop].forEach(hook => hook(prop, undefined, prevValue));
-				return true;
-			},
-		});
-	}
-
-	_doProxySet (hookProp, object, prop, value) {
-		if (object[prop] === value) return true;
-		const prevValue = object[prop];
-		object[prop] = value;
-		this._doFireHooksAll(hookProp, prop, value, prevValue);
-		this._doFireHooks(hookProp, prop, value, prevValue);
-		return true;
-	}
-
-	/** As per `_doProxySet`, but the hooks are run strictly in serial. */
-	async _pDoProxySet (hookProp, object, prop, value) {
-		if (object[prop] === value) return true;
-		const prevValue = object[prop];
-		object[prop] = value;
-		if (this.__hooksAll[hookProp]) for (const hook of this.__hooksAll[hookProp]) await hook(prop, value, prevValue);
-		if (this.__hooks[hookProp] && this.__hooks[hookProp][prop]) for (const hook of this.__hooks[hookProp][prop]) await hook(prop, value, prevValue);
-		return true;
-	}
-
-	_doFireHooks (hookProp, prop, value, prevValue) {
-		if (this.__hooks[hookProp] && this.__hooks[hookProp][prop]) this.__hooks[hookProp][prop].forEach(hook => hook(prop, value, prevValue));
-	}
-
-	_doFireHooksAll (hookProp, prop, value, prevValue) {
-		if (this.__hooksAll[hookProp]) this.__hooksAll[hookProp].forEach(hook => hook(prop, undefined, prevValue));
-	}
-
-	// ...Not to be confused with...
-
-	_doFireAllHooks (hookProp) {
-		if (this.__hooks[hookProp]) Object.entries(this.__hooks[hookProp]).forEach(([prop, hk]) => hk(prop));
-	}
-
-	/**
-	 * Register a hook versus a root property on the state object. **INTERNAL CHANGES TO CHILD OBJECTS ON THE STATE
-	 *   OBJECT ARE NOT TRACKED**.
-	 * @param hookProp The state object.
-	 * @param prop The root property to track.
-	 * @param hook The hook to run. Will be called with two arguments; the property and the value of the property being
-	 *   modified.
-	 */
-	_addHook (hookProp, prop, hook) {
-		ProxyBase._addHook_to(this.__hooks, hookProp, prop, hook);
-		if (this.__hooksTmp) ProxyBase._addHook_to(this.__hooksTmp, hookProp, prop, hook);
-	}
-
-	static _addHook_to (obj, hookProp, prop, hook) {
-		((obj[hookProp] = obj[hookProp] || {})[prop] = (obj[hookProp][prop] || [])).push(hook);
-	}
-
-	_addHookAll (hookProp, hook) {
-		ProxyBase._addHookAll_to(this.__hooksAll, hookProp, hook);
-		if (this.__hooksAllTmp) ProxyBase._addHookAll_to(this.__hooksAllTmp, hookProp, hook);
-	}
-
-	static _addHookAll_to (obj, hookProp, hook) {
-		(obj[hookProp] = obj[hookProp] || []).push(hook);
-	}
-
-	_removeHook (hookProp, prop, hook) {
-		ProxyBase._removeHook_from(this.__hooks, hookProp, prop, hook);
-		if (this.__hooksTmp) ProxyBase._removeHook_from(this.__hooksTmp, hookProp, prop, hook);
-	}
-
-	static _removeHook_from (obj, hookProp, prop, hook) {
-		if (obj[hookProp] && obj[hookProp][prop]) {
-			const ix = obj[hookProp][prop].findIndex(hk => hk === hook);
-			if (~ix) obj[hookProp][prop].splice(ix, 1);
+function MixinProxyBase (Cls) {
+	class MixedProxyBase extends Cls {
+		constructor (...args) {
+			super(...args);
+			this.__hooks = {};
+			this.__hooksAll = {};
+			this.__hooksTmp = null;
+			this.__hooksAllTmp = null;
 		}
-	}
 
-	_removeHooks (hookProp, prop) {
-		if (this.__hooks[hookProp]) delete this.__hooks[hookProp][prop];
-		if (this.__hooksTmp && this.__hooksTmp[hookProp]) delete this.__hooksTmp[hookProp][prop];
-	}
-
-	_removeHookAll (hookProp, hook) {
-		ProxyBase._removeHookAll_from(this.__hooksAll, hookProp, hook);
-		if (this.__hooksAllTmp) ProxyBase._removeHook_from(this.__hooksAllTmp, hookProp, hook);
-	}
-
-	static _removeHookAll_from (obj, hookProp, hook) {
-		if (obj[hookProp]) {
-			const ix = obj[hookProp].findIndex(hk => hk === hook);
-			if (~ix) obj[hookProp].splice(ix, 1);
+		_getProxy (hookProp, toProxy) {
+			return new Proxy(toProxy, {
+				set: (object, prop, value) => {
+					return this._doProxySet(hookProp, object, prop, value);
+				},
+				deleteProperty: (object, prop) => {
+					if (!(prop in object)) return true;
+					const prevValue = object[prop];
+					Reflect.deleteProperty(object, prop);
+					this._doFireHooksAll(hookProp, prop, undefined, prevValue);
+					if (this.__hooks[hookProp] && this.__hooks[hookProp][prop]) this.__hooks[hookProp][prop].forEach(hook => hook(prop, undefined, prevValue));
+					return true;
+				},
+			});
 		}
-	}
 
-	_resetHooks (hookProp) {
-		if (hookProp !== undefined) delete this.__hooks[hookProp];
-		else Object.keys(this.__hooks).forEach(prop => delete this.__hooks[prop]);
-	}
+		_doProxySet (hookProp, object, prop, value) {
+			if (object[prop] === value) return true;
+			const prevValue = object[prop];
+			Reflect.set(object, prop, value);
+			this._doFireHooksAll(hookProp, prop, value, prevValue);
+			this._doFireHooks(hookProp, prop, value, prevValue);
+			return true;
+		}
 
-	_resetHooksAll (hookProp) {
-		if (hookProp !== undefined) delete this.__hooksAll[hookProp];
-		else Object.keys(this.__hooksAll).forEach(prop => delete this.__hooksAll[prop]);
-	}
+		/** As per `_doProxySet`, but the hooks are run strictly in serial. */
+		async _pDoProxySet (hookProp, object, prop, value) {
+			if (object[prop] === value) return true;
+			const prevValue = object[prop];
+			Reflect.set(object, prop, value);
+			if (this.__hooksAll[hookProp]) for (const hook of this.__hooksAll[hookProp]) await hook(prop, value, prevValue);
+			if (this.__hooks[hookProp] && this.__hooks[hookProp][prop]) for (const hook of this.__hooks[hookProp][prop]) await hook(prop, value, prevValue);
+			return true;
+		}
 
-	_saveHookCopiesTo (obj) { this.__hooksTmp = obj; }
-	_saveHookAllCopiesTo (obj) { this.__hooksAllTmp = obj; }
+		_doFireHooks (hookProp, prop, value, prevValue) {
+			if (this.__hooks[hookProp] && this.__hooks[hookProp][prop]) this.__hooks[hookProp][prop].forEach(hook => hook(prop, value, prevValue));
+		}
 
-	/**
-	 * Object.assign equivalent, overwrites values on the current proxied object with some new values,
-	 *   then trigger all the appropriate event handlers.
-	 * @param hookProp Hook property, e.g. "state".
-	 * @param proxyProp Proxied object property, e.g. "_state".
-	 * @param underProp Underlying object property, e.g. "__state".
-	 * @param toObj
-	 * @param isOverwrite If the overwrite should clean/delete all data from the object beforehand.
-	 */
-	_proxyAssign (hookProp, proxyProp, underProp, toObj, isOverwrite) {
-		const oldKeys = Object.keys(this[proxyProp]);
-		const nuKeys = new Set(Object.keys(toObj));
-		const dirtyKeyValues = {};
+		_doFireHooksAll (hookProp, prop, value, prevValue) {
+			if (this.__hooksAll[hookProp]) this.__hooksAll[hookProp].forEach(hook => hook(prop, undefined, prevValue));
+		}
 
-		if (isOverwrite) {
-			oldKeys.forEach(k => {
-				if (!nuKeys.has(k) && this[underProp] !== undefined) {
+		// ...Not to be confused with...
+
+		_doFireAllHooks (hookProp) {
+			if (this.__hooks[hookProp]) Object.entries(this.__hooks[hookProp]).forEach(([prop, hk]) => hk(prop));
+		}
+
+		/**
+		 * Register a hook versus a root property on the state object. **INTERNAL CHANGES TO CHILD OBJECTS ON THE STATE
+		 *   OBJECT ARE NOT TRACKED**.
+		 * @param hookProp The state object.
+		 * @param prop The root property to track.
+		 * @param hook The hook to run. Will be called with two arguments; the property and the value of the property being
+		 *   modified.
+		 */
+		_addHook (hookProp, prop, hook) {
+			ProxyBase._addHook_to(this.__hooks, hookProp, prop, hook);
+			if (this.__hooksTmp) ProxyBase._addHook_to(this.__hooksTmp, hookProp, prop, hook);
+		}
+
+		static _addHook_to (obj, hookProp, prop, hook) {
+			((obj[hookProp] = obj[hookProp] || {})[prop] = (obj[hookProp][prop] || [])).push(hook);
+		}
+
+		_addHookAll (hookProp, hook) {
+			ProxyBase._addHookAll_to(this.__hooksAll, hookProp, hook);
+			if (this.__hooksAllTmp) ProxyBase._addHookAll_to(this.__hooksAllTmp, hookProp, hook);
+		}
+
+		static _addHookAll_to (obj, hookProp, hook) {
+			(obj[hookProp] = obj[hookProp] || []).push(hook);
+		}
+
+		_removeHook (hookProp, prop, hook) {
+			ProxyBase._removeHook_from(this.__hooks, hookProp, prop, hook);
+			if (this.__hooksTmp) ProxyBase._removeHook_from(this.__hooksTmp, hookProp, prop, hook);
+		}
+
+		static _removeHook_from (obj, hookProp, prop, hook) {
+			if (obj[hookProp] && obj[hookProp][prop]) {
+				const ix = obj[hookProp][prop].findIndex(hk => hk === hook);
+				if (~ix) obj[hookProp][prop].splice(ix, 1);
+			}
+		}
+
+		_removeHooks (hookProp, prop) {
+			if (this.__hooks[hookProp]) delete this.__hooks[hookProp][prop];
+			if (this.__hooksTmp && this.__hooksTmp[hookProp]) delete this.__hooksTmp[hookProp][prop];
+		}
+
+		_removeHookAll (hookProp, hook) {
+			ProxyBase._removeHookAll_from(this.__hooksAll, hookProp, hook);
+			if (this.__hooksAllTmp) ProxyBase._removeHook_from(this.__hooksAllTmp, hookProp, hook);
+		}
+
+		static _removeHookAll_from (obj, hookProp, hook) {
+			if (obj[hookProp]) {
+				const ix = obj[hookProp].findIndex(hk => hk === hook);
+				if (~ix) obj[hookProp].splice(ix, 1);
+			}
+		}
+
+		_resetHooks (hookProp) {
+			if (hookProp !== undefined) delete this.__hooks[hookProp];
+			else Object.keys(this.__hooks).forEach(prop => delete this.__hooks[prop]);
+		}
+
+		_resetHooksAll (hookProp) {
+			if (hookProp !== undefined) delete this.__hooksAll[hookProp];
+			else Object.keys(this.__hooksAll).forEach(prop => delete this.__hooksAll[prop]);
+		}
+
+		_saveHookCopiesTo (obj) { this.__hooksTmp = obj; }
+		_saveHookAllCopiesTo (obj) { this.__hooksAllTmp = obj; }
+
+		/**
+		 * Object.assign equivalent, overwrites values on the current proxied object with some new values,
+		 *   then trigger all the appropriate event handlers.
+		 * @param hookProp Hook property, e.g. "state".
+		 * @param proxyProp Proxied object property, e.g. "_state".
+		 * @param underProp Underlying object property, e.g. "__state".
+		 * @param toObj
+		 * @param isOverwrite If the overwrite should clean/delete all data from the object beforehand.
+		 */
+		_proxyAssign (hookProp, proxyProp, underProp, toObj, isOverwrite) {
+			const oldKeys = Object.keys(this[proxyProp]);
+			const nuKeys = new Set(Object.keys(toObj));
+			const dirtyKeyValues = {};
+
+			if (isOverwrite) {
+				oldKeys.forEach(k => {
+					if (!nuKeys.has(k) && this[underProp] !== undefined) {
+						const prevValue = this[proxyProp][k];
+						delete this[underProp][k];
+						dirtyKeyValues[k] = prevValue;
+					}
+				});
+			}
+
+			nuKeys.forEach(k => {
+				if (!CollectionUtil.deepEquals(this[underProp][k], toObj[k])) {
 					const prevValue = this[proxyProp][k];
-					delete this[underProp][k];
+					this[underProp][k] = toObj[k];
 					dirtyKeyValues[k] = prevValue;
 				}
 			});
+
+			Object.entries(dirtyKeyValues)
+				.forEach(([k, prevValue]) => {
+					this._doFireHooksAll(hookProp, k, this[underProp][k], prevValue);
+					if (this.__hooks[hookProp] && this.__hooks[hookProp][k]) this.__hooks[hookProp][k].forEach(hk => hk(k, this[underProp][k], prevValue));
+				});
 		}
 
-		nuKeys.forEach(k => {
-			if (!CollectionUtil.deepEquals(this[underProp][k], toObj[k])) {
-				const prevValue = this[proxyProp][k];
-				this[underProp][k] = toObj[k];
-				dirtyKeyValues[k] = prevValue;
-			}
-		});
-
-		Object.entries(dirtyKeyValues)
-			.forEach(([k, prevValue]) => {
-				this._doFireHooksAll(hookProp, k, this[underProp][k], prevValue);
-				if (this.__hooks[hookProp] && this.__hooks[hookProp][k]) this.__hooks[hookProp][k].forEach(hk => hk(k, this[underProp][k], prevValue));
-			});
+		_proxyAssignSimple (hookProp, toObj, isOverwrite) {
+			return this._proxyAssign(hookProp, `_${hookProp}`, `__${hookProp}`, toObj, isOverwrite);
+		}
 	}
 
-	_proxyAssignSimple (hookProp, toObj, isOverwrite) {
-		return this._proxyAssign(hookProp, `_${hookProp}`, `__${hookProp}`, toObj, isOverwrite);
-	}
+	return MixedProxyBase;
 }
+
+class ProxyBase extends MixinProxyBase(class {}) {}
 
 class UiUtil {
 	/**
@@ -265,7 +272,7 @@ class UiUtil {
 		return string === "true" ? true : string === "false" ? false : opts.fallbackOnNaB;
 	}
 
-	static intToBonus (int) { return `${int >= 0 ? "+" : int < 0 ? "\u2012" : ""}${Math.abs(int)}`; }
+	static intToBonus (int, {isPretty = false} = {}) { return `${int >= 0 ? "+" : int < 0 ? (isPretty ? "\u2012" : "-") : ""}${Math.abs(int)}`; }
 
 	static getEntriesAsText (entryArray) {
 		if (!entryArray || !entryArray.length) return "";
@@ -318,6 +325,8 @@ class UiUtil {
 	 *
 	 * @param {string} [opts.title] Modal title.
 	 *
+	 * @param {string} [opts.window] Browser window.
+	 *
 	 * @param [opts.isUncappedHeight] {boolean}
 	 * @param [opts.isUncappedWidth] {boolean}
 	 * @param [opts.isHeight100] {boolean}
@@ -341,13 +350,19 @@ class UiUtil {
 	static getShowModal (opts) {
 		opts = opts || {};
 
-		UiUtil._initModalEscapeHandler();
-		UiUtil._initModalMouseupHandlers();
-		if (document.activeElement) document.activeElement.blur(); // blur any active element as it will be behind the modal
+		const doc = (opts.window || window).document;
+
+		UiUtil._initModalEscapeHandler({doc});
+		UiUtil._initModalMouseupHandlers({doc});
+		if (doc.activeElement) doc.activeElement.blur(); // blur any active element as it will be behind the modal
+
+		let resolveModal;
+		const pResolveModal = new Promise(resolve => { resolveModal = resolve; });
 
 		// if the user closed the modal by clicking the "cancel" background, isDataEntered is false
 		const pHandleCloseClick = async (isDataEntered, ...args) => {
 			if (opts.cbClose) await opts.cbClose(isDataEntered, ...args);
+			resolveModal([isDataEntered, ...args]);
 
 			if (opts.isIndestructible) wrpOverlay.detach();
 			else wrpOverlay.remove();
@@ -357,12 +372,12 @@ class UiUtil {
 
 		const doTeardown = () => {
 			UiUtil._popFromModalStack(modalStackMeta);
-			if (!UiUtil._MODAL_STACK.length) document.body.classList.remove(`ui-modal__body-active`);
+			if (!UiUtil._MODAL_STACK.length) doc.body.classList.remove(`ui-modal__body-active`);
 		};
 
 		const doOpen = () => {
-			wrpOverlay.appendTo(document.body);
-			document.body.classList.add(`ui-modal__body-active`);
+			wrpOverlay.appendTo(doc.body);
+			doc.body.classList.add(`ui-modal__body-active`);
 		};
 
 		const wrpOverlay = e_({tag: "div", clazz: "ui-modal__overlay"});
@@ -462,6 +477,7 @@ class UiUtil {
 			$modalFooter: $(modalFooter),
 			doClose: pHandleCloseClick,
 			doTeardown,
+			pGetResolved: () => pResolveModal,
 		};
 
 		if (opts.isIndestructible || opts.isClosed) {
@@ -472,6 +488,13 @@ class UiUtil {
 		}
 
 		return out;
+	}
+
+	/**
+	 * Async to support external overrides; should be used in common applications.
+	 */
+	static async pGetShowModal (opts) {
+		return UiUtil.getShowModal(opts);
 	}
 
 	static _pushToModalStack (modalStackMeta) {
@@ -485,11 +508,11 @@ class UiUtil {
 		if (~ixStack) UiUtil._MODAL_STACK.splice(ixStack, 1);
 	}
 
-	static _initModalEscapeHandler () {
+	static _initModalEscapeHandler ({doc}) {
 		if (UiUtil._MODAL_STACK) return;
 		UiUtil._MODAL_STACK = [];
 
-		document.addEventListener("keydown", evt => {
+		doc.addEventListener("keydown", evt => {
 			if (evt.which !== 27) return;
 			if (!UiUtil._MODAL_STACK.length) return;
 			if (EventUtil.isInInput(evt)) return;
@@ -501,8 +524,8 @@ class UiUtil {
 		});
 	}
 
-	static _initModalMouseupHandlers () {
-		document.addEventListener("mousedown", evt => {
+	static _initModalMouseupHandlers ({doc}) {
+		doc.addEventListener("mousedown", evt => {
 			UiUtil._MODAL_LAST_MOUSEDOWN = evt.target;
 		});
 	}
@@ -580,12 +603,14 @@ class UiUtil {
 	static bindTypingEnd ({$ipt, fnKeyup, fnKeypress, fnKeydown, fnClick} = {}) {
 		let timerTyping;
 		$ipt
-			.on("keyup search paste", evt => {
+			// Trigger on blur, as tabbing out of a field triggers the keyup on the element which was tabbed into. Our
+			//   intent. however, is to trigger on any keyup which began in this field.
+			.on("keyup search paste blur", evt => {
 				clearTimeout(timerTyping);
 				timerTyping = setTimeout(() => { fnKeyup(evt); }, UiUtil.TYPE_TIMEOUT_MS);
 			})
-			.on("keypress", (e) => {
-				if (fnKeypress) fnKeypress(e);
+			.on("keypress", evt => {
+				if (fnKeypress) fnKeypress(evt);
 			})
 			.on("keydown", evt => {
 				if (fnKeydown) fnKeydown(evt);
@@ -593,7 +618,12 @@ class UiUtil {
 			})
 			.on("click", () => {
 				if (fnClick) fnClick();
-			});
+			})
+			.on("instantKeyup", () => {
+				clearTimeout(timerTyping);
+				fnKeyup();
+			})
+		;
 	}
 
 	/** Brute-force select the input, in case something has delayed the rendering (e.g. a VTT application window) */
@@ -614,6 +644,8 @@ UiUtil._MODAL_STACK = null;
 UiUtil._MODAL_LAST_MOUSEDOWN = null;
 
 class ListUiUtil {
+	static _EVT_PASS_THOUGH_TAGS = new Set(["A", "BUTTON"]);
+
 	/**
 	 * (Public method for Plutonium use)
 	 * Handle doing a checkbox-based selection toggle on a list.
@@ -624,9 +656,16 @@ class ListUiUtil {
 	 * @param [opts.isNoHighlightSelection] If highlighting selected rows should be skipped.
 	 * @param [opts.fnOnSelectionChange] Function to call when selection status of an item changes.
 	 * @param [opts.fnGetCb] Function which gets the checkbox from a list item.
+	 * @param [opts.isPassThroughEvents] If e.g. click events to links/buttons in the list item should be allowed/ignored.
 	 */
 	static handleSelectClick (list, item, evt, opts) {
 		opts = opts || {};
+
+		if (opts.isPassThroughEvents) {
+			const subEles = evt.path.slice(0, evt.path.indexOf(evt.currentTarget));
+			if (subEles.some(ele => ListUiUtil._EVT_PASS_THOUGH_TAGS.has(ele?.tagName))) return;
+		}
+
 		evt.preventDefault();
 		evt.stopPropagation();
 
@@ -765,17 +804,18 @@ class ListUiUtil {
 		});
 	}
 
-	static bindPreviewButton (page, allData, item, btnShowHidePreview) {
+	static bindPreviewButton (page, allData, item, btnShowHidePreview, {$fnGetPreviewStats} = {}) {
 		btnShowHidePreview.addEventListener("click", evt => {
 			const entity = allData[item.ix];
+			page = page || entity?.__prop;
 
 			const elePreviewWrp = this.getOrAddListItemPreviewLazy(item);
 
-			this.handleClickBtnShowHideListPreview(evt, page, entity, btnShowHidePreview, elePreviewWrp);
+			this.handleClickBtnShowHideListPreview(evt, page, entity, btnShowHidePreview, elePreviewWrp, {$fnGetPreviewStats});
 		});
 	}
 
-	static handleClickBtnShowHideListPreview (evt, page, entity, btnShowHidePreview, elePreviewWrp, nxtText = null) {
+	static handleClickBtnShowHideListPreview (evt, page, entity, btnShowHidePreview, elePreviewWrp, {nxtText = null, $fnGetPreviewStats} = {}) {
 		evt.stopPropagation();
 		evt.preventDefault();
 
@@ -797,8 +837,10 @@ class ListUiUtil {
 
 		elePreviewWrp.dataset.dataType = isFluff ? "fluff" : "stats";
 
-		if (!evt.shiftKey) {
-			Renderer.hover.$getHoverContent_stats(page, entity, {isStatic: true}).appendTo(elePreviewWrpInner);
+		const doAppendStatView = () => ($fnGetPreviewStats || Renderer.hover.$getHoverContent_stats)(page, entity, {isStatic: true}).appendTo(elePreviewWrpInner);
+
+		if (!evt.shiftKey || !UrlUtil.URL_TO_HASH_BUILDER[page]) {
+			doAppendStatView();
 			return;
 		}
 
@@ -808,7 +850,7 @@ class ListUiUtil {
 				//  loading the fluff.
 				if (elePreviewWrpInner.innerHTML) return;
 
-				if (!fluffEntity) return Renderer.hover.$getHoverContent_stats(page, entity).appendTo(elePreviewWrpInner);
+				if (!fluffEntity) return doAppendStatView();
 				Renderer.hover.$getHoverContent_fluff(page, fluffEntity).appendTo(elePreviewWrpInner);
 			});
 	}
@@ -920,7 +962,12 @@ ProfUiUtil.PROF_TO_FULL = {
 };
 
 class TabUiUtilBase {
-	static decorate (obj) {
+	static decorate (obj, {isInitMeta = false} = {}) {
+		if (isInitMeta) {
+			obj.__meta = {};
+			obj._meta = obj._getProxy("meta", obj.__meta);
+		}
+
 		obj.__tabState = {};
 
 		obj._getTabProps = function ({propProxy = TabUiUtilBase._DEFAULT_PROP_PROXY, tabGroup = TabUiUtilBase._DEFAULT_TAB_GROUP} = {}) {
@@ -933,7 +980,7 @@ class TabUiUtilBase {
 		};
 
 		/** Render a collection of tabs. */
-		obj._renderTabs = function (tabMetas, {$parent, propProxy = TabUiUtilBase._DEFAULT_PROP_PROXY, tabGroup = TabUiUtilBase._DEFAULT_TAB_GROUP, cbTabChange} = {}) {
+		obj._renderTabs = function (tabMetas, {$parent, propProxy = TabUiUtilBase._DEFAULT_PROP_PROXY, tabGroup = TabUiUtilBase._DEFAULT_TAB_GROUP, cbTabChange, additionalClassesWrpHeads} = {}) {
 			if (!tabMetas.length) throw new Error(`One or more tab meta must be specified!`);
 			obj._resetTabs({tabGroup});
 
@@ -969,7 +1016,7 @@ class TabUiUtilBase {
 				return renderTabMetas_standard(it, i);
 			}).filter(Boolean);
 
-			if ($parent) obj.__renderTabs_addToParent({$dispTabTitle, $parent, tabMetasOut});
+			if ($parent) obj.__renderTabs_addToParent({$dispTabTitle, $parent, tabMetasOut, additionalClassesWrpHeads});
 
 			const hkActiveTab = () => {
 				tabMetasOut.forEach(it => {
@@ -996,12 +1043,12 @@ class TabUiUtilBase {
 			return tabMetasOut;
 		};
 
-		obj.__renderTabs_addToParent = function ({$dispTabTitle, $parent, tabMetasOut}) {
+		obj.__renderTabs_addToParent = function ({$dispTabTitle, $parent, tabMetasOut, additionalClassesWrpHeads}) {
 			const hasBorder = tabMetasOut.some(it => it.hasBorder);
 			$$`<div class="ve-flex-col w-100 h-100">
 				${$dispTabTitle}
 				<div class="ve-flex-col w-100 h-100 min-h-0">
-					<div class="ve-flex ${hasBorder ? `ui-tab__wrp-tab-heads--border` : ""}">${tabMetasOut.map(it => it.$btnTab)}</div>
+					<div class="ve-flex ${hasBorder ? `ui-tab__wrp-tab-heads--border` : ""} ${additionalClassesWrpHeads || ""}">${tabMetasOut.map(it => it.$btnTab)}</div>
 					<div class="ve-flex w-100 h-100 min-h-0">${tabMetasOut.map(it => it.$wrpTab).filter(Boolean)}</div>
 				</div>
 			</div>`.appendTo($parent);
@@ -1085,8 +1132,8 @@ TabUiUtilBase.TabMeta = class {
 };
 
 class TabUiUtil extends TabUiUtilBase {
-	static decorate (obj) {
-		super.decorate(obj);
+	static decorate (obj, {isInitMeta = false} = {}) {
+		super.decorate(obj, {isInitMeta});
 
 		obj.__$getBtnTab = function ({tabMeta, _propProxy, propActive, ixTab}) {
 			return $(`<button class="btn btn-default ui-tab__btn-tab-head ${tabMeta.isHeadHidden ? "ve-hidden" : ""}">${tabMeta.name.qq()}</button>`)
@@ -1127,23 +1174,24 @@ class TabUiUtil extends TabUiUtilBase {
 TabUiUtil.TabMeta = class extends TabUiUtilBase.TabMeta {
 	constructor (opts) {
 		super(opts);
-		this.hasBorder = opts.hasBorder;
-		this.hasBackground = opts.hasBackground;
-		this.isHeadHidden = opts.isHeadHidden;
+		this.hasBorder = !!opts.hasBorder;
+		this.hasBackground = !!opts.hasBackground;
+		this.isHeadHidden = !!opts.isHeadHidden;
+		this.isNoPadding = !!opts.isNoPadding;
 	}
 };
 
 class TabUiUtilSide extends TabUiUtilBase {
-	static decorate (obj) {
-		super.decorate(obj);
+	static decorate (obj, {isInitMeta = false} = {}) {
+		super.decorate(obj, {isInitMeta});
 
 		obj.__$getBtnTab = function ({isSingleTab, tabMeta, _propProxy, propActive, ixTab}) {
 			return isSingleTab ? null : $(`<button class="btn btn-default btn-sm ui-tab-side__btn-tab mb-2 br-0 btr-0 bbr-0 text-left ve-flex-v-center" title="${tabMeta.name.qq()}"><div class="${tabMeta.icon} ui-tab-side__icon-tab mr-2 mobile-ish__mr-0 text-center"></div><div class="mobile-ish__hidden">${tabMeta.name.qq()}</div></button>`)
 				.click(() => this[_propProxy][propActive] = ixTab);
 		};
 
-		obj.__$getWrpTab = function () {
-			return $(`<div class="ve-flex-col w-100 h-100 ui-tab-side__wrp-tab px-3 py-2 overflow-y-auto"></div>`);
+		obj.__$getWrpTab = function ({tabMeta}) {
+			return $(`<div class="ve-flex-col w-100 h-100 ui-tab-side__wrp-tab ${tabMeta.isNoPadding ? "" : "px-3 py-2"} overflow-y-auto"></div>`);
 		};
 
 		obj.__renderTabs_addToParent = function ({$dispTabTitle, $parent, tabMetasOut}) {
@@ -1188,7 +1236,7 @@ class TabUiUtilSide extends TabUiUtilBase {
 	}
 }
 
-// TODO have this respect the blacklist?
+// TODO have this respect the blocklist?
 class SearchUiUtil {
 	static async pDoGlobalInit () {
 		elasticlunr.clearStopWords();
@@ -1216,7 +1264,7 @@ class SearchUiUtil {
 			await Promise.all(options.additionalIndices.map(async add => {
 				additionalData[add] = Omnidexer.decompressIndex(await DataUtil.loadJSON(`${Renderer.get().baseUrl}search/index-${add}.json`));
 				const maxId = additionalData[add].last().id;
-				const brewIndex = await BrewUtil.pGetAdditionalSearchIndices(maxId, add);
+				const brewIndex = await BrewUtil2.pGetAdditionalSearchIndices(maxId, add);
 				if (brewIndex.length) additionalData[add] = additionalData[add].concat(brewIndex);
 			}));
 		}
@@ -1226,7 +1274,7 @@ class SearchUiUtil {
 			await Promise.all(options.alternateIndices.map(async alt => {
 				alternateData[alt] = Omnidexer.decompressIndex(await DataUtil.loadJSON(`${Renderer.get().baseUrl}search/index-alt-${alt}.json`));
 				const maxId = alternateData[alt].last().id;
-				const brewIndex = await BrewUtil.pGetAlternateSearchIndices(maxId, alt);
+				const brewIndex = await BrewUtil2.pGetAlternateSearchIndices(maxId, alt);
 				if (brewIndex.length) alternateData[alt] = alternateData[alt].concat(brewIndex);
 			}));
 		}
@@ -1258,7 +1306,7 @@ class SearchUiUtil {
 			if (
 				SearchUiUtil._isNoHoverCat(d.c)
 				|| fromDeepIndex(d)
-				|| ExcludeUtil.isExcluded(d.h, Parser.pageCategoryToProp(d.c), d.s, {isNoCount: true})
+				|| ExcludeUtil.isExcluded(d.u, Parser.pageCategoryToProp(d.c), d.s, {isNoCount: true})
 			) return;
 			d.cf = d.c === Parser.CAT_ID_CREATURE ? "Creature" : Parser.pageCategoryToFull(d.c);
 			if (isAlternate) d.cf = `alt_${d.cf}`;
@@ -1272,10 +1320,7 @@ class SearchUiUtil {
 		Object.values(additionalData).forEach(arr => arr.forEach(d => handleDataItem(d)));
 		Object.values(alternateData).forEach(arr => arr.forEach(d => handleDataItem(d, true)));
 
-		// Add homebrew
-		Omnisearch.highestId = Math.max(ixMax, Omnisearch.highestId);
-
-		const brewIndex = await BrewUtil.pGetSearchIndex();
+		const brewIndex = await BrewUtil2.pGetSearchIndex({id: availContent.ALL.documentStore.length});
 
 		brewIndex.forEach(d => {
 			if (SearchUiUtil._isNoHoverCat(d.c) || fromDeepIndex(d)) return;
@@ -1651,7 +1696,18 @@ class SearchWidget {
 	}
 
 	static async pGetUserLegendaryGroupSearch () {
-		await SearchWidget.pLoadCustomIndex("entity_LegendaryGroups", `${Renderer.get().baseUrl}data/bestiary/legendarygroups.json`, "legendaryGroup", Parser.CAT_ID_LEGENDARY_GROUP, "legendaryGroup", "legendary groups");
+		await SearchWidget.pLoadCustomIndex({
+			contentIndexName: "entity_LegendaryGroups",
+			errorName: "legendary groups",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource: `${Renderer.get().baseUrl}data/bestiary/legendarygroups.json`,
+					prop: "legendaryGroup",
+					catId: Parser.CAT_ID_LEGENDARY_GROUP,
+					page: "legendaryGroup",
+				}),
+			],
+		});
 
 		return SearchWidget.pGetUserEntitySearch(
 			"Select Legendary Group",
@@ -1669,7 +1725,18 @@ class SearchWidget {
 
 	static async pGetUserFeatSearch () {
 		// FIXME convert to be more like spell/creature search instead of running custom indexes
-		await SearchWidget.pLoadCustomIndex("entity_Feats", `${Renderer.get().baseUrl}data/feats.json`, "feat", Parser.CAT_ID_FEAT, UrlUtil.PG_FEATS, "feats");
+		await SearchWidget.pLoadCustomIndex({
+			contentIndexName: "entity_Feats",
+			errorName: "feats",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource: `${Renderer.get().baseUrl}data/feats.json`,
+					prop: "feat",
+					catId: Parser.CAT_ID_FEAT,
+					page: UrlUtil.PG_FEATS,
+				}),
+			],
+		});
 
 		return SearchWidget.pGetUserEntitySearch(
 			"Select Feat",
@@ -1687,7 +1754,18 @@ class SearchWidget {
 
 	static async pGetUserBackgroundSearch () {
 		// FIXME convert to be more like spell/creature search instead of running custom indexes
-		await SearchWidget.pLoadCustomIndex("entity_Backgrounds", `${Renderer.get().baseUrl}data/backgrounds.json`, "background", Parser.CAT_ID_BACKGROUND, UrlUtil.PG_BACKGROUNDS, "backgrounds");
+		await SearchWidget.pLoadCustomIndex({
+			contentIndexName: "entity_Backgrounds",
+			errorName: "backgrounds",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource: `${Renderer.get().baseUrl}data/backgrounds.json`,
+					prop: "background",
+					catId: Parser.CAT_ID_BACKGROUND,
+					page: UrlUtil.PG_BACKGROUNDS,
+				}),
+			],
+		});
 
 		return SearchWidget.pGetUserEntitySearch(
 			"Select Background",
@@ -1708,7 +1786,18 @@ class SearchWidget {
 		const dataSource = () => {
 			return DataUtil.race.loadJSON();
 		};
-		await SearchWidget.pLoadCustomIndex("entity_Races", dataSource, "race", Parser.CAT_ID_RACE, UrlUtil.PG_RACES, "races");
+		await SearchWidget.pLoadCustomIndex({
+			contentIndexName: "entity_Races",
+			errorName: "races",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource,
+					prop: "race",
+					catId: Parser.CAT_ID_RACE,
+					page: UrlUtil.PG_RACES,
+				}),
+			],
+		});
 
 		return SearchWidget.pGetUserEntitySearch(
 			"Select Race",
@@ -1726,7 +1815,18 @@ class SearchWidget {
 
 	static async pGetUserOptionalFeatureSearch () {
 		// FIXME convert to be more like spell/creature search instead of running custom indexes
-		await SearchWidget.pLoadCustomIndex("entity_OptionalFeatures", `${Renderer.get().baseUrl}data/optionalfeatures.json`, "optionalfeature", Parser.CAT_ID_OPTIONAL_FEATURE_OTHER, UrlUtil.PG_OPT_FEATURES, "optional features");
+		await SearchWidget.pLoadCustomIndex({
+			contentIndexName: "entity_OptionalFeatures",
+			errorName: "optional features",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource: `${Renderer.get().baseUrl}data/optionalfeatures.json`,
+					prop: "optionalfeature",
+					catId: Parser.CAT_ID_OPTIONAL_FEATURE_OTHER,
+					page: UrlUtil.PG_OPT_FEATURES,
+				}),
+			],
+		});
 
 		return SearchWidget.pGetUserEntitySearch(
 			"Select Optional Feature",
@@ -1743,8 +1843,60 @@ class SearchWidget {
 	}
 
 	static async pGetUserAdventureSearch (opts) {
-		await SearchWidget.pLoadCustomIndex("entity_Adventures", `${Renderer.get().baseUrl}data/adventures.json`, "adventure", Parser.CAT_ID_ADVENTURE, UrlUtil.PG_ADVENTURE, "adventures");
+		await SearchWidget.pLoadCustomIndex({
+			contentIndexName: "entity_Adventures",
+			errorName: "adventures",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource: `${Renderer.get().baseUrl}data/adventures.json`,
+					prop: "adventure",
+					catId: Parser.CAT_ID_ADVENTURE,
+					page: UrlUtil.PG_ADVENTURE,
+				}),
+			],
+		});
 		return SearchWidget.pGetUserEntitySearch("Select Adventure", "entity_Adventures", opts);
+	}
+
+	static async pGetUserBookSearch (opts) {
+		await SearchWidget.pLoadCustomIndex({
+			contentIndexName: "entity_Books",
+			errorName: "books",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource: `${Renderer.get().baseUrl}data/books.json`,
+					prop: "book",
+					catId: Parser.CAT_ID_BOOK,
+					page: UrlUtil.PG_BOOK,
+				}),
+			],
+		});
+		return SearchWidget.pGetUserEntitySearch("Select Book", "entity_Books", opts);
+	}
+
+	static async pGetUserAdventureBookSearch (opts) {
+		const contentIndexName = opts.contentIndexName || "entity_AdventuresBooks";
+		await SearchWidget.pLoadCustomIndex({
+			contentIndexName,
+			errorName: "adventures/books",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource: `${Renderer.get().baseUrl}data/adventures.json`,
+					prop: "adventure",
+					catId: Parser.CAT_ID_ADVENTURE,
+					page: UrlUtil.PG_ADVENTURE,
+					pFnGetDocExtras: opts.pFnGetDocExtras,
+				}),
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource: `${Renderer.get().baseUrl}data/books.json`,
+					prop: "book",
+					catId: Parser.CAT_ID_BOOK,
+					page: UrlUtil.PG_BOOK,
+					pFnGetDocExtras: opts.pFnGetDocExtras,
+				}),
+			],
+		});
+		return SearchWidget.pGetUserEntitySearch("Select Adventure or Book", contentIndexName, opts);
 	}
 
 	static async pGetUserCreatureSearch () {
@@ -1779,7 +1931,19 @@ class SearchWidget {
 			};
 		};
 		const indexName = isBasicIndex == null ? "entity_Items" : isBasicIndex ? "entity_ItemsBasic" : "entity_ItemsMagic";
-		return SearchWidget.pLoadCustomIndex(indexName, dataSource, "item", Parser.CAT_ID_ITEM, UrlUtil.PG_ITEMS, "items");
+
+		return SearchWidget.pLoadCustomIndex({
+			contentIndexName: indexName,
+			errorName: "items",
+			customIndexSubSpecs: [
+				new SearchWidget.CustomIndexSubSpec({
+					dataSource,
+					prop: "item",
+					catId: Parser.CAT_ID_ITEM,
+					page: UrlUtil.PG_ITEMS,
+				}),
+			],
+		});
 	}
 
 	static async __pGetUserItemSearch (isBasicIndex) {
@@ -1851,13 +2015,23 @@ class SearchWidget {
 	}
 
 	// region custom search indexes
-	static async pLoadCustomIndex (contentIndexName, dataSource, jsonProp, catId, page, errorName) {
+	static CustomIndexSubSpec = class {
+		constructor ({dataSource, prop, catId, page, pFnGetDocExtras}) {
+			this.dataSource = dataSource;
+			this.prop = prop;
+			this.catId = catId;
+			this.page = page;
+			this.pFnGetDocExtras = pFnGetDocExtras;
+		}
+	};
+
+	static async pLoadCustomIndex ({contentIndexName, customIndexSubSpecs, errorName}) {
 		if (SearchWidget.P_LOADING_INDICES[contentIndexName]) await SearchWidget.P_LOADING_INDICES[contentIndexName];
 		else {
 			const doClose = SearchWidget._showLoadingModal();
 
 			try {
-				SearchWidget.P_LOADING_INDICES[contentIndexName] = (SearchWidget.CONTENT_INDICES[contentIndexName] = await SearchWidget._pGetIndex(dataSource, jsonProp, catId, page));
+				SearchWidget.P_LOADING_INDICES[contentIndexName] = (SearchWidget.CONTENT_INDICES[contentIndexName] = await SearchWidget._pGetIndex(customIndexSubSpecs));
 				SearchWidget.P_LOADING_INDICES[contentIndexName] = null;
 			} catch (e) {
 				JqueryUtil.doToast({type: "danger", content: `Could not load ${errorName}! ${VeCt.STR_SEE_CONSOLE}`});
@@ -1868,28 +2042,38 @@ class SearchWidget {
 		}
 	}
 
-	static async _pGetIndex (dataSource, prop, catId, page) {
+	static async _pGetIndex (customIndexSubSpecs) {
 		const index = elasticlunr(function () {
 			this.addField("n");
 			this.addField("s");
 			this.setRef("id");
 		});
 
-		const [featJson, homebrew] = await Promise.all([
-			typeof dataSource === "string" ? DataUtil.loadJSON(dataSource) : dataSource(),
-			BrewUtil.pAddBrewData(),
-		]);
+		let id = 0;
+		for (const subSpec of customIndexSubSpecs) {
+			const [json, homebrew] = await Promise.all([
+				typeof subSpec.dataSource === "string"
+					? DataUtil.loadJSON(subSpec.dataSource)
+					: subSpec.dataSource(),
+				BrewUtil2.pGetBrewProcessed(),
+			]);
 
-		featJson[prop].concat(homebrew[prop] || []).forEach((it, i) => index.addDoc({
-			id: i,
-			c: catId,
-			cf: Parser.pageCategoryToFull(catId),
-			h: 1,
-			n: it.name,
-			p: it.page,
-			s: it.source,
-			u: UrlUtil.URL_TO_HASH_BUILDER[page](it),
-		}));
+			await [...json[subSpec.prop], ...(homebrew[subSpec.prop] || [])]
+				.pSerialAwaitMap(async ent => {
+					const doc = {
+						id: id++,
+						c: subSpec.catId,
+						cf: Parser.pageCategoryToFull(subSpec.catId),
+						h: 1,
+						n: ent.name,
+						q: subSpec.page,
+						s: ent.source,
+						u: UrlUtil.URL_TO_HASH_BUILDER[subSpec.page](ent),
+					};
+					if (subSpec.pFnGetDocExtras) Object.assign(doc, await subSpec.pFnGetDocExtras({ent, doc, subSpec}));
+					index.addDoc(doc);
+				});
+		}
 
 		return index;
 	}
@@ -1906,6 +2090,35 @@ SearchWidget.CONTENT_INDICES = {};
 SearchWidget.P_LOADING_INDICES = {};
 
 class InputUiUtil {
+	static async _pGetShowModal (getShowModalOpts) {
+		return UiUtil.getShowModal(getShowModalOpts);
+	}
+
+	static _$getBtnOk ({comp = null, opts, doClose}) {
+		return $(`<button class="btn btn-primary mr-2">${opts.buttonText || "OK"}</button>`)
+			.click(evt => {
+				evt.stopPropagation();
+				if (comp && !comp._state.isValid) return JqueryUtil.doToast({content: `Please enter valid input!`, type: "warning"});
+				doClose(true);
+			});
+	}
+
+	static _$getBtnCancel ({comp = null, opts, doClose}) {
+		return $(`<button class="btn btn-default">Cancel</button>`)
+			.click(evt => {
+				evt.stopPropagation();
+				doClose(false);
+			});
+	}
+
+	static _$getBtnSkip ({comp = null, opts, doClose}) {
+		return !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			.click(evt => {
+				evt.stopPropagation();
+				doClose(VeCt.SYM_UI_SKIP);
+			});
+	}
+
 	/**
 	 * @param opts Options.
 	 * @param opts.min Minimum value.
@@ -1930,54 +2143,58 @@ class InputUiUtil {
 			if (prev != null) defaultVal = prev;
 		}
 
-		return new Promise(resolve => {
-			const $iptNumber = $(`<input class="form-control mb-2 text-right" ${opts.min ? `min="${opts.min}"` : ""} ${opts.max ? `max="${opts.max}"` : ""}>`)
-				.keydown(evt => {
-					if (evt.key === "Escape") { $iptNumber.blur(); return; }
-					// return key
-					if (evt.which === 13) doClose(true);
-					evt.stopPropagation();
-				});
-			if (defaultVal !== undefined) $iptNumber.val(defaultVal);
+		const $iptNumber = $(`<input class="form-control mb-2 text-right" ${opts.min ? `min="${opts.min}"` : ""} ${opts.max ? `max="${opts.max}"` : ""}>`)
+			.keydown(evt => {
+				if (evt.key === "Escape") { $iptNumber.blur(); return; }
 
-			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
-				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
-
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Enter a Number",
-				isMinHeight0: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-
-					if (!isDataEntered) return resolve(null);
-					const raw = $iptNumber.val();
-					if (!raw.trim()) return resolve(null);
-					let num = UiUtil.strToInt(raw);
-					if (opts.min) num = Math.max(opts.min, num);
-					if (opts.max) num = Math.min(opts.max, num);
-					if (opts.int) num = Math.round(num);
-
-					if (opts.storageKey_default) {
-						opts.isGlobal_default
-							? StorageUtil.pSet(opts.storageKey_default, num)
-							: StorageUtil.pSetForPage(opts.storageKey_default, num);
-					}
-
-					resolve(num);
-				},
+				evt.stopPropagation();
+				if (evt.key === "Enter") {
+					evt.preventDefault();
+					doClose(true);
+				}
 			});
+		if (defaultVal !== undefined) $iptNumber.val(defaultVal);
 
-			if (opts.$elePre) opts.$elePre.appendTo($modalInner);
-			$iptNumber.appendTo($modalInner);
-			if (opts.$elePost) opts.$elePost.appendTo($modalInner);
-			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
-			$iptNumber.focus();
-			$iptNumber.select();
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Enter a Number",
+			isMinHeight0: true,
 		});
+
+		const $btnOk = this._$getBtnOk({opts, doClose});
+		const $btnCancel = this._$getBtnCancel({opts, doClose});
+		const $btnSkip = this._$getBtnSkip({opts, doClose});
+
+		if (opts.$elePre) opts.$elePre.appendTo($modalInner);
+		$iptNumber.appendTo($modalInner);
+		if (opts.$elePost) opts.$elePost.appendTo($modalInner);
+		$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		$iptNumber.focus();
+		$iptNumber.select();
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+
+		if (!isDataEntered) return null;
+		const outRaw = $iptNumber.val();
+		if (!outRaw.trim()) return null;
+		let out = UiUtil.strToInt(outRaw);
+		if (opts.min) out = Math.max(opts.min, out);
+		if (opts.max) out = Math.min(opts.max, out);
+		if (opts.int) out = Math.round(out);
+
+		if (opts.storageKey_default) {
+			opts.isGlobal_default
+				? StorageUtil.pSet(opts.storageKey_default, out).then(null)
+				: StorageUtil.pSetForPage(opts.storageKey_default, out).then(null);
+		}
+
+		return out;
+		// endregion
 	}
 
 	/**
@@ -2003,45 +2220,58 @@ class InputUiUtil {
 			if (prev != null) return prev;
 		}
 
-		return new Promise(resolve => {
-			const $btnTrueRemember = opts.textYesRemember ? $(`<button class="btn btn-primary ve-flex-v-center mr-2"><span class="glyphicon glyphicon-ok mr-2"></span><span>${opts.textYesRemember}</span></button>`)
-				.click(() => {
-					doClose(true, true);
-					if (opts.fnRemember) {
-						opts.fnRemember(true);
-					} else {
-						opts.isGlobal
-							? StorageUtil.pSet(opts.storageKey, true)
-							: StorageUtil.pSetForPage(opts.storageKey, true);
-					}
-				}) : null;
+		const $btnTrueRemember = opts.textYesRemember ? $(`<button class="btn btn-primary ve-flex-v-center mr-2"><span class="glyphicon glyphicon-ok mr-2"></span><span>${opts.textYesRemember}</span></button>`)
+			.click(() => {
+				doClose(true, true);
+				if (opts.fnRemember) {
+					opts.fnRemember(true);
+				} else {
+					opts.isGlobal
+						? StorageUtil.pSet(opts.storageKey, true)
+						: StorageUtil.pSetForPage(opts.storageKey, true);
+				}
+			}) : null;
 
-			const $btnTrue = $(`<button class="btn btn-primary ve-flex-v-center mr-3"><span class="glyphicon glyphicon-ok mr-2"></span><span>${opts.textYes || "OK"}</span></button>`)
-				.click(() => doClose(true, true));
-
-			const $btnFalse = opts.isAlert ? null : $(`<button class="btn btn-default btn-sm ve-flex-v-center"><span class="glyphicon glyphicon-remove mr-2"></span><span>${opts.textNo || "Cancel"}</span></button>`)
-				.click(() => doClose(true, false));
-
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default btn-sm ml-3"><span class="glyphicon glyphicon-forward"></span><span>${opts.textSkip || "Skip"}</span></button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
-
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Choose",
-				isMinHeight0: true,
-				cbClose: (isDataEntered, value) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-
-					if (!isDataEntered) return resolve(null);
-					if (value == null) throw new Error(`Callback must receive a value!`); // sanity check
-					resolve(value);
-				},
+		const $btnTrue = $(`<button class="btn btn-primary ve-flex-v-center mr-3"><span class="glyphicon glyphicon-ok mr-2"></span><span>${opts.textYes || "OK"}</span></button>`)
+			.click(evt => {
+				evt.stopPropagation();
+				doClose(true, true);
 			});
 
-			if (opts.htmlDescription && opts.htmlDescription.trim()) $$`<div class="ve-flex w-100 mb-1">${opts.htmlDescription}</div>`.appendTo($modalInner);
-			$$`<div class="ve-flex-v-center ve-flex-h-right py-1 px-1">${$btnTrueRemember}${$btnTrue}${$btnFalse}${$btnSkip}</div>`.appendTo($modalInner);
-			$btnTrue.focus();
-			$btnTrue.select();
+		const $btnFalse = opts.isAlert ? null : $(`<button class="btn btn-default btn-sm ve-flex-v-center"><span class="glyphicon glyphicon-remove mr-2"></span><span>${opts.textNo || "Cancel"}</span></button>`)
+			.click(evt => {
+				evt.stopPropagation();
+				doClose(true, false);
+			});
+
+		const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default btn-sm ml-3"><span class="glyphicon glyphicon-forward"></span><span>${opts.textSkip || "Skip"}</span></button>`)
+			.click(evt => {
+				evt.stopPropagation();
+				doClose(VeCt.SYM_UI_SKIP);
+			});
+
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Choose",
+			isMinHeight0: true,
 		});
+
+		if (opts.htmlDescription && opts.htmlDescription.trim()) $$`<div class="ve-flex w-100 mb-1">${opts.htmlDescription}</div>`.appendTo($modalInner);
+		$$`<div class="ve-flex-v-center ve-flex-h-right py-1 px-1">${$btnTrueRemember}${$btnTrue}${$btnFalse}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		$btnTrue.focus();
+		$btnTrue.select();
+
+		// region Output
+		const [isDataEntered, out] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+
+		if (!isDataEntered) return null;
+		if (out == null) throw new Error(`Callback must receive a value!`); // sanity check
+		return out;
+		// endregion
 	}
 
 	/**
@@ -2058,46 +2288,57 @@ class InputUiUtil {
 	 * @param [opts.isSkippable] If the prompt is skippable.
 	 * @return {Promise} A promise which resolves to the index of the item the user selected (or an object if fnGetExtraState is passed), or null otherwise.
 	 */
-	static pGetUserEnum (opts) {
+	static async pGetUserEnum (opts) {
 		opts = opts || {};
-		return new Promise(resolve => {
-			const $selEnum = $(`<select class="form-control mb-2"><option value="-1" disabled>${opts.placeholder || "Select..."}</option></select>`);
 
-			if (opts.isAllowNull) $(`<option value="-1"></option>`).text(opts.fnDisplay ? opts.fnDisplay(null, -1) : "(None)").appendTo($selEnum);
-
-			opts.values.forEach((v, i) => $(`<option value="${i}"></option>`).text(opts.fnDisplay ? opts.fnDisplay(v, i) : v).appendTo($selEnum));
-			if (opts.default != null) $selEnum.val(opts.default);
-			else $selEnum[0].selectedIndex = 0;
-
-			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
-				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
-
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Select an Option",
-				isMinHeight0: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-
-					if (!isDataEntered) return resolve(null);
-					const ix = Number($selEnum.val());
-					if (!~ix) return resolve(null);
-					if (opts.fnGetExtraState) {
-						const out = {extraState: opts.fnGetExtraState()};
-						if (opts.isResolveItem) out.item = opts.values[ix];
-						else out.ix = ix;
-						resolve(out);
-					} else resolve(opts.isResolveItem ? opts.values[ix] : ix);
-				},
+		const $selEnum = $(`<select class="form-control mb-2"><option value="-1" disabled>${opts.placeholder || "Select..."}</option></select>`)
+			.keydown(async evt => {
+				evt.stopPropagation();
+				if (evt.key === "Enter") {
+					evt.preventDefault();
+					doClose(true);
+				}
 			});
-			$selEnum.appendTo($modalInner);
-			if (opts.$elePost) opts.$elePost.appendTo($modalInner);
-			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
-			$selEnum.focus();
+
+		if (opts.isAllowNull) $(`<option value="-1"></option>`).text(opts.fnDisplay ? opts.fnDisplay(null, -1) : "(None)").appendTo($selEnum);
+
+		opts.values.forEach((v, i) => $(`<option value="${i}"></option>`).text(opts.fnDisplay ? opts.fnDisplay(v, i) : v).appendTo($selEnum));
+		if (opts.default != null) $selEnum.val(opts.default);
+		else $selEnum[0].selectedIndex = 0;
+
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Select an Option",
+			isMinHeight0: true,
 		});
+
+		const $btnOk = this._$getBtnOk({opts, doClose});
+		const $btnCancel = this._$getBtnCancel({opts, doClose});
+		const $btnSkip = this._$getBtnSkip({opts, doClose});
+
+		$selEnum.appendTo($modalInner);
+		if (opts.$elePost) opts.$elePost.appendTo($modalInner);
+		$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		$selEnum.focus();
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+
+		if (!isDataEntered) return null;
+		const ix = Number($selEnum.val());
+		if (!~ix) return null;
+		if (opts.fnGetExtraState) {
+			const out = {extraState: opts.fnGetExtraState()};
+			if (opts.isResolveItem) out.item = opts.values[ix];
+			else out.ix = ix;
+			return out;
+		}
+
+		return opts.isResolveItem ? opts.values[ix] : ix;
+		// endregion
 	}
 
 	/**
@@ -2115,70 +2356,83 @@ class InputUiUtil {
 	 * @param [opts.fnDisplay] Function which takes a value and returns display text.
 	 * @param [opts.modalOpts] Options to pass through to the underlying modal class.
 	 * @param [opts.isSkippable] If the prompt is skippable.
+	 * @param [opts.isSearchable] If a search input should be created.
+	 * @param [opts.fnGetSearchText] Function which takes a value and returns search text.
 	 * @return {Promise} A promise which resolves to the indices of the items the user selected, or null otherwise.
 	 */
-	static pGetUserMultipleChoice (opts) {
-		return new Promise(resolve => {
-			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
-				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
+	static async pGetUserMultipleChoice (opts) {
+		const prop = "formData";
 
-			const prop = "formData";
-
-			const initialState = {};
-			if (opts.defaults) opts.defaults.forEach(ix => initialState[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsActive(prop, ix)] = true);
-			if (opts.required) {
-				opts.required.forEach(ix => {
-					initialState[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsActive(prop, ix)] = true; // "requires" implies "default"
-					initialState[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsRequired(prop, ix)] = true;
-				});
-			}
-
-			const comp = BaseComponent.fromObject(initialState);
-
-			let title = opts.title;
-			if (!title) {
-				if (opts.count != null) title = `Choose ${Parser.numberToText(opts.count).uppercaseFirst()}`;
-				else if (opts.min != null && opts.max != null) title = `Choose Between ${Parser.numberToText(opts.min).uppercaseFirst()} and ${Parser.numberToText(opts.max).uppercaseFirst()} Options`;
-				else if (opts.min != null) title = `Choose At Least ${Parser.numberToText(opts.min).uppercaseFirst()}`;
-				else title = `Choose At Most ${Parser.numberToText(opts.max).uppercaseFirst()}`;
-			}
-
-			const {$ele: $wrpList, propIsAcceptable} = ComponentUiUtil.getMetaWrpMultipleChoice(comp, prop, opts);
-			$wrpList.addClass(`mb-1`);
-
-			const hkIsAcceptable = () => $btnOk.attr("disabled", !comp._state[propIsAcceptable]);
-			comp._addHookBase(propIsAcceptable, hkIsAcceptable);
-			hkIsAcceptable();
-
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				...(opts.modalOpts || {}),
-				title,
-				isMinHeight0: true,
-				isUncappedHeight: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-
-					if (!isDataEntered) return resolve(null);
-
-					const ixs = ComponentUiUtil.getMetaWrpMultipleChoice_getSelectedIxs(comp, prop);
-
-					if (!opts.isResolveItems) resolve(ixs);
-					else if (opts.values) resolve(ixs.map(ix => opts.values[ix]));
-					else if (opts.valueGroups) {
-						const allValues = opts.valueGroups.map(it => it.values).flat();
-						resolve(ixs.map(ix => allValues[ix]));
-					}
-				},
+		const initialState = {};
+		if (opts.defaults) opts.defaults.forEach(ix => initialState[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsActive(prop, ix)] = true);
+		if (opts.required) {
+			opts.required.forEach(ix => {
+				initialState[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsActive(prop, ix)] = true; // "requires" implies "default"
+				initialState[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsRequired(prop, ix)] = true;
 			});
-			if (opts.htmlDescription) $modalInner.append(opts.htmlDescription);
-			$wrpList.appendTo($modalInner);
-			$$`<div class="ve-flex-v-center ve-flex-h-right no-shrink pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
-			$wrpList.focus();
+		}
+
+		const comp = BaseComponent.fromObject(initialState);
+
+		let title = opts.title;
+		if (!title) {
+			if (opts.count != null) title = `Choose ${Parser.numberToText(opts.count).uppercaseFirst()}`;
+			else if (opts.min != null && opts.max != null) title = `Choose Between ${Parser.numberToText(opts.min).uppercaseFirst()} and ${Parser.numberToText(opts.max).uppercaseFirst()} Options`;
+			else if (opts.min != null) title = `Choose At Least ${Parser.numberToText(opts.min).uppercaseFirst()}`;
+			else title = `Choose At Most ${Parser.numberToText(opts.max).uppercaseFirst()}`;
+		}
+
+		const {$ele: $wrpList, $iptSearch, propIsAcceptable} = ComponentUiUtil.getMetaWrpMultipleChoice(comp, prop, opts);
+		$wrpList.addClass(`mb-1`);
+
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			...(opts.modalOpts || {}),
+			title,
+			isMinHeight0: true,
+			isUncappedHeight: true,
 		});
+
+		const $btnOk = this._$getBtnOk({opts, doClose});
+		const $btnCancel = this._$getBtnCancel({opts, doClose});
+		const $btnSkip = this._$getBtnSkip({opts, doClose});
+
+		const hkIsAcceptable = () => $btnOk.attr("disabled", !comp._state[propIsAcceptable]);
+		comp._addHookBase(propIsAcceptable, hkIsAcceptable);
+		hkIsAcceptable();
+
+		if (opts.htmlDescription) $modalInner.append(opts.htmlDescription);
+		if ($iptSearch) {
+			$$`<label class="mb-1">
+				${$iptSearch}
+			</label>`.appendTo($modalInner);
+		}
+		$wrpList.appendTo($modalInner);
+		$$`<div class="ve-flex-v-center ve-flex-h-right no-shrink pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		$wrpList.focus();
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+
+		if (!isDataEntered) return null;
+
+		const ixs = ComponentUiUtil.getMetaWrpMultipleChoice_getSelectedIxs(comp, prop);
+
+		if (!opts.isResolveItems) return ixs;
+
+		if (opts.values) return ixs.map(ix => opts.values[ix]);
+
+		if (opts.valueGroups) {
+			const allValues = opts.valueGroups.map(it => it.values).flat();
+			return ixs.map(ix => allValues[ix]);
+		}
+
+		throw new Error(`Should never occur!`);
+		// endregion
 	}
 
 	/**
@@ -2191,53 +2445,52 @@ class InputUiUtil {
 	 * @param [opts.isSkippable] If the prompt is skippable.
 	 * @return {Promise<number>} A promise which resolves to the index of the item the user selected, or null otherwise.
 	 */
-	static pGetUserIcon (opts) {
+	static async pGetUserIcon (opts) {
 		opts = opts || {};
-		return new Promise(resolve => {
-			let lastIx = opts.default != null ? opts.default : -1;
-			const onclicks = [];
 
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Select an Option",
-				isMinHeight0: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-					if (!isDataEntered) return resolve(null);
-					return resolve(~lastIx ? lastIx : null);
-				},
-			});
+		let lastIx = opts.default != null ? opts.default : -1;
+		const onclicks = [];
 
-			$$`<div class="ve-flex ve-flex-wrap ve-flex-h-center mb-2">${opts.values.map((v, i) => {
-				const $btn = $$`<div class="m-2 btn ${v.buttonClass || "btn-default"} ui__btn-xxl-square ve-flex-col ve-flex-h-center">
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Select an Option",
+			isMinHeight0: true,
+		});
+
+		$$`<div class="ve-flex ve-flex-wrap ve-flex-h-center mb-2">${opts.values.map((v, i) => {
+			const $btn = $$`<div class="m-2 btn ${v.buttonClass || "btn-default"} ui__btn-xxl-square ve-flex-col ve-flex-h-center">
 					${v.iconClass ? `<div class="ui-icn__wrp-icon ${v.iconClass} mb-1"></div>` : ""}
 					${v.iconContent ? v.iconContent : ""}
 					<div class="whitespace-normal w-100">${v.name}</div>
 				</div>`
-					.click(() => {
-						lastIx = i;
-						onclicks.forEach(it => it());
-					})
-					.toggleClass(v.buttonClassActive || "active", opts.default === i);
-				if (v.buttonClassActive && opts.default === i) {
-					$btn.removeClass("btn-default").addClass(v.buttonClassActive);
-				}
+				.click(() => {
+					lastIx = i;
+					onclicks.forEach(it => it());
+				})
+				.toggleClass(v.buttonClassActive || "active", opts.default === i);
+			if (v.buttonClassActive && opts.default === i) {
+				$btn.removeClass("btn-default").addClass(v.buttonClassActive);
+			}
 
-				onclicks.push(() => {
-					$btn.toggleClass(v.buttonClassActive || "active", lastIx === i);
-					if (v.buttonClassActive) $btn.toggleClass("btn-default", lastIx !== i);
-				});
-				return $btn;
-			})}</div>`.appendTo($modalInner);
+			onclicks.push(() => {
+				$btn.toggleClass(v.buttonClassActive || "active", lastIx === i);
+				if (v.buttonClassActive) $btn.toggleClass("btn-default", lastIx !== i);
+			});
+			return $btn;
+		})}</div>`.appendTo($modalInner);
 
-			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
-				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
+		const $btnOk = this._$getBtnOk({opts, doClose});
+		const $btnCancel = this._$getBtnCancel({opts, doClose});
+		const $btnSkip = this._$getBtnSkip({opts, doClose});
 
-			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
-		});
+		$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+		if (!isDataEntered) return null;
+		return ~lastIx ? lastIx : null;
+		// endregion
 	}
 
 	/**
@@ -2249,11 +2502,12 @@ class InputUiUtil {
 	 * @param [opts.isSkippable] If the prompt is skippable.
 	 * @param [opts.fnIsValid] A function which checks if the current input is valid, and prevents the user from
 	 *        submitting the value if it is.
-	 * @param [opts.$elePost] Element to add below the input.
+	 * @param [opts.$elePre] Element to add before the input.
+	 * @param [opts.$elePost] Element to add after the input.
 	 * @param [opts.cbPostRender] Callback to call after rendering the modal
 	 * @return {Promise<String>} A promise which resolves to the string if the user entered one, or null otherwise.
 	 */
-	static pGetUserString (opts) {
+	static async pGetUserString (opts) {
 		opts = opts || {};
 
 		const propValue = "text";
@@ -2262,72 +2516,76 @@ class InputUiUtil {
 			isValid: true,
 		});
 
-		return new Promise(resolve => {
-			const $iptStr = ComponentUiUtil.$getIptStr(
-				comp,
-				propValue,
-				{
-					html: `<input class="form-control mb-2" type="text">`,
-					autocomplete: opts.autocomplete,
-				},
-			)
-				.keydown(async evt => {
-					if (evt.key === "Escape") return; // Already handled
+		const $iptStr = ComponentUiUtil.$getIptStr(
+			comp,
+			propValue,
+			{
+				html: `<input class="form-control mb-2" type="text">`,
+				autocomplete: opts.autocomplete,
+			},
+		)
+			.keydown(async evt => {
+				if (evt.key === "Escape") return; // Already handled
 
-					if (opts.autocomplete) {
-						// prevent double-binding the return key if we have autocomplete enabled
-						await MiscUtil.pDelay(17); // arbitrary delay to allow dropdown to render (~1000/60, i.e. 1 60 FPS frame)
-						if ($modalInner.find(`.typeahead.dropdown-menu`).is(":visible")) return;
-					}
-					// return key
-					if (evt.key === "Enter") doClose(true);
-					evt.stopPropagation();
-				});
-			if (opts.isCode) $iptStr.addClass("code");
+				if (opts.autocomplete) {
+					// prevent double-binding the return key if we have autocomplete enabled
+					await MiscUtil.pDelay(17); // arbitrary delay to allow dropdown to render (~1000/60, i.e. 1 60 FPS frame)
+					if ($modalInner.find(`.typeahead.dropdown-menu`).is(":visible")) return;
+				}
 
-			if (opts.fnIsValid) {
-				const hkText = () => comp._state.isValid = !comp._state.text.trim() || !!opts.fnIsValid(comp._state.text);
-				comp._addHookBase(propValue, hkText);
-				hkText();
-
-				const hkIsValid = () => $iptStr.toggleClass("form-control--error", !comp._state.isValid);
-				comp._addHookBase("isValid", hkIsValid);
-				hkIsValid();
-			}
-
-			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
-				.click(() => {
-					if (!comp._state.isValid) return JqueryUtil.doToast({content: `Please enter valid input!`, type: "warning"});
-					return doClose(true);
-				});
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Enter Text",
-				isMinHeight0: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-					if (!isDataEntered) return resolve(null);
-					const raw = $iptStr.val();
-					return resolve(raw);
-				},
+				evt.stopPropagation();
+				if (evt.key === "Enter") {
+					evt.preventDefault();
+					doClose(true);
+				}
 			});
-			$iptStr.appendTo($modalInner);
-			if (opts.$elePost) opts.$elePost.appendTo($modalInner);
-			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
-			$iptStr.focus();
-			$iptStr.select();
+		if (opts.isCode) $iptStr.addClass("code");
 
-			if (opts.cbPostRender) {
-				opts.cbPostRender({
-					comp,
-					$iptStr,
-					propValue,
-				});
-			}
+		if (opts.fnIsValid) {
+			const hkText = () => comp._state.isValid = !comp._state.text.trim() || !!opts.fnIsValid(comp._state.text);
+			comp._addHookBase(propValue, hkText);
+			hkText();
+
+			const hkIsValid = () => $iptStr.toggleClass("form-control--error", !comp._state.isValid);
+			comp._addHookBase("isValid", hkIsValid);
+			hkIsValid();
+		}
+
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Enter Text",
+			isMinHeight0: true,
 		});
+
+		const $btnOk = this._$getBtnOk({comp, opts, doClose});
+		const $btnCancel = this._$getBtnCancel({comp, opts, doClose});
+		const $btnSkip = this._$getBtnSkip({comp, opts, doClose});
+
+		if (opts.$elePre) opts.$elePre.appendTo($modalInner);
+		$iptStr.appendTo($modalInner);
+		if (opts.$elePost) opts.$elePost.appendTo($modalInner);
+		$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		$iptStr.focus();
+		$iptStr.select();
+
+		if (opts.cbPostRender) {
+			opts.cbPostRender({
+				comp,
+				$iptStr,
+				propValue,
+			});
+		}
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+		if (!isDataEntered) return null;
+		const raw = $iptStr.val();
+		return raw;
+		// endregion
 	}
 
 	/**
@@ -2340,34 +2598,39 @@ class InputUiUtil {
 	 * @param [opts.isSkippable] If the prompt is skippable.
 	 * @return {Promise<String>} A promise which resolves to the string if the user entered one, or null otherwise.
 	 */
-	static pGetUserText (opts) {
+	static async pGetUserText (opts) {
 		opts = opts || {};
-		return new Promise(resolve => {
-			const $iptStr = $(`<textarea class="form-control mb-2 resize-vertical w-100" ${opts.disabled ? "disabled" : ""}></textarea>`)
-				.val(opts.default);
-			if (opts.isCode) $iptStr.addClass("code");
-			const $btnOk = $(`<button class="btn btn-primary mr-2">${opts.buttonText || "OK"}</button>`)
-				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Enter Text",
-				isMinHeight0: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-					if (!isDataEntered) return resolve(null);
-					const raw = $iptStr.val();
-					if (!raw.trim()) return resolve(null);
-					else return resolve(raw);
-				},
-			});
-			$iptStr.appendTo($modalInner);
-			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
-			$iptStr.focus();
-			$iptStr.select();
+
+		const $iptStr = $(`<textarea class="form-control mb-2 resize-vertical w-100" ${opts.disabled ? "disabled" : ""}></textarea>`)
+			.val(opts.default);
+		if (opts.isCode) $iptStr.addClass("code");
+
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Enter Text",
+			isMinHeight0: true,
 		});
+
+		const $btnOk = this._$getBtnOk({opts, doClose});
+		const $btnCancel = this._$getBtnCancel({opts, doClose});
+		const $btnSkip = this._$getBtnSkip({opts, doClose});
+
+		$iptStr.appendTo($modalInner);
+		$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		$iptStr.focus();
+		$iptStr.select();
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+		if (!isDataEntered) return null;
+		const raw = $iptStr.val();
+		if (!raw.trim()) return null;
+		else return raw;
+		// endregion
 	}
 
 	/**
@@ -2377,32 +2640,37 @@ class InputUiUtil {
 	 * @param [opts.isSkippable] If the prompt is skippable.
 	 * @return {Promise<String>} A promise which resolves to the color if the user entered one, or null otherwise.
 	 */
-	static pGetUserColor (opts) {
+	static async pGetUserColor (opts) {
 		opts = opts || {};
-		return new Promise(resolve => {
-			const $iptRgb = $(`<input class="form-control mb-2" ${opts.default != null ? `value="${opts.default}"` : ""} type="color">`);
-			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
-				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Choose Color",
-				isMinHeight0: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-					if (!isDataEntered) return resolve(null);
-					const raw = $iptRgb.val();
-					if (!raw.trim()) return resolve(null);
-					else return resolve(raw);
-				},
-			});
-			$iptRgb.appendTo($modalInner);
-			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
-			$iptRgb.focus();
-			$iptRgb.select();
+
+		const $iptRgb = $(`<input class="form-control mb-2" ${opts.default != null ? `value="${opts.default}"` : ""} type="color">`);
+
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Choose Color",
+			isMinHeight0: true,
 		});
+
+		const $btnOk = this._$getBtnOk({opts, doClose});
+		const $btnCancel = this._$getBtnCancel({opts, doClose});
+		const $btnSkip = this._$getBtnSkip({opts, doClose});
+
+		$iptRgb.appendTo($modalInner);
+		$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		$iptRgb.focus();
+		$iptRgb.select();
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+		if (!isDataEntered) return null;
+		const raw = $iptRgb.val();
+		if (!raw.trim()) return null;
+		else return raw;
+		// endregion
 	}
 
 	/**
@@ -2415,7 +2683,7 @@ class InputUiUtil {
 	 * @param [opts.isSkippable] If the prompt is skippable.
 	 * @returns {Promise<number>} A promise which resolves to the number of degrees if the user pressed "Enter," or null otherwise.
 	 */
-	static pGetUserDirection (opts) {
+	static async pGetUserDirection (opts) {
 		const X = 0;
 		const Y = 1;
 		const DEG_CIRCLE = 360;
@@ -2428,105 +2696,107 @@ class InputUiUtil {
 			return Math.atan2(p2[Y] - p1[Y], p2[X] - p1[X]) * 180 / Math.PI;
 		}
 
-		return new Promise(resolve => {
-			let active = false;
-			let curAngle = Math.min(DEG_CIRCLE, opts.default) || 0;
+		let active = false;
+		let curAngle = Math.min(DEG_CIRCLE, opts.default) || 0;
 
-			const $arm = $(`<div class="ui-dir__arm"></div>`);
-			const handleAngle = () => $arm.css({transform: `rotate(${curAngle + 180}deg)`});
+		const $arm = $(`<div class="ui-dir__arm"></div>`);
+		const handleAngle = () => $arm.css({transform: `rotate(${curAngle + 180}deg)`});
+		handleAngle();
+
+		const $pad = $$`<div class="ui-dir__face">${$arm}</div>`.on("mousedown touchstart", evt => {
+			active = true;
+			handleEvent(evt);
+		});
+
+		const $document = $(document);
+		const evtId = `ui_user_dir_${CryptUtil.uid()}`;
+		$document.on(`mousemove.${evtId} touchmove${evtId}`, evt => {
+			handleEvent(evt);
+		}).on(`mouseup.${evtId} touchend${evtId} touchcancel${evtId}`, evt => {
+			evt.preventDefault();
+			evt.stopPropagation();
+			active = false;
+		});
+		const handleEvent = (evt) => {
+			if (!active) return;
+
+			const coords = [EventUtil.getClientX(evt), EventUtil.getClientY(evt)];
+
+			const {top, left} = $pad.offset();
+			const center = [left + ($pad.width() / 2), top + ($pad.height() / 2)];
+			curAngle = getAngle(center, coords) + 90;
+			if (step !== DEG_CIRCLE) curAngle = Math.round(curAngle / stepDeg) * stepDeg;
+			else curAngle = Math.round(curAngle);
 			handleAngle();
+		};
 
-			const $pad = $$`<div class="ui-dir__face">${$arm}</div>`.on("mousedown touchstart", evt => {
-				active = true;
-				handleEvent(evt);
-			});
+		const BTN_STEP_SIZE = 26;
+		const BORDER_PAD = 16;
+		const CONTROLS_RADIUS = (92 + BTN_STEP_SIZE + BORDER_PAD) / 2;
+		const $padOuter = opts.stepButtons ? (() => {
+			const steps = opts.stepButtons;
+			const SEG_ANGLE = 360 / steps.length;
 
-			const $document = $(document);
-			const evtId = `ui_user_dir_${CryptUtil.uid()}`;
-			$document.on(`mousemove.${evtId} touchmove${evtId}`, evt => {
-				handleEvent(evt);
-			}).on(`mouseup.${evtId} touchend${evtId} touchcancel${evtId}`, evt => {
-				evt.preventDefault();
-				evt.stopPropagation();
-				active = false;
-			});
-			const handleEvent = (evt) => {
-				if (!active) return;
+			const $btns = [];
 
-				const coords = [EventUtil.getClientX(evt), EventUtil.getClientY(evt)];
+			for (let i = 0; i < steps.length; ++i) {
+				const theta = (SEG_ANGLE * i * (Math.PI / 180)) - (1.5708); // offset by -90 degrees
+				const x = CONTROLS_RADIUS * Math.cos(theta);
+				const y = CONTROLS_RADIUS * Math.sin(theta);
+				$btns.push(
+					$(`<button class="btn btn-default btn-xxs absolute">${steps[i]}</button>`)
+						.css({
+							top: y + CONTROLS_RADIUS - (BTN_STEP_SIZE / 2),
+							left: x + CONTROLS_RADIUS - (BTN_STEP_SIZE / 2),
+							width: BTN_STEP_SIZE,
+							height: BTN_STEP_SIZE,
+							zIndex: 1002,
+						})
+						.click(() => {
+							curAngle = SEG_ANGLE * i;
+							handleAngle();
+						}),
+				);
+			}
 
-				const {top, left} = $pad.offset();
-				const center = [left + ($pad.width() / 2), top + ($pad.height() / 2)];
-				curAngle = getAngle(center, coords) + 90;
-				if (step !== DEG_CIRCLE) curAngle = Math.round(curAngle / stepDeg) * stepDeg;
-				else curAngle = Math.round(curAngle);
-				handleAngle();
-			};
+			const $wrpInner = $$`<div class="ve-flex-vh-center relative">${$btns}${$pad}</div>`
+				.css({
+					width: CONTROLS_RADIUS * 2,
+					height: CONTROLS_RADIUS * 2,
+				});
 
-			const BTN_STEP_SIZE = 26;
-			const BORDER_PAD = 16;
-			const CONTROLS_RADIUS = (92 + BTN_STEP_SIZE + BORDER_PAD) / 2;
-			const $padOuter = opts.stepButtons ? (() => {
-				const steps = opts.stepButtons;
-				const SEG_ANGLE = 360 / steps.length;
+			return $$`<div class="ve-flex-vh-center">${$wrpInner}</div>`
+				.css({
+					width: (CONTROLS_RADIUS * 2) + BTN_STEP_SIZE + BORDER_PAD,
+					height: (CONTROLS_RADIUS * 2) + BTN_STEP_SIZE + BORDER_PAD,
+				});
+		})() : null;
 
-				const $btns = [];
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Select Direction",
+			isMinHeight0: true,
+		});
 
-				for (let i = 0; i < steps.length; ++i) {
-					const theta = (SEG_ANGLE * i * (Math.PI / 180)) - (1.5708); // offset by -90 degrees
-					const x = CONTROLS_RADIUS * Math.cos(theta);
-					const y = CONTROLS_RADIUS * Math.sin(theta);
-					$btns.push(
-						$(`<button class="btn btn-default btn-xxs absolute">${steps[i]}</button>`)
-							.css({
-								top: y + CONTROLS_RADIUS - (BTN_STEP_SIZE / 2),
-								left: x + CONTROLS_RADIUS - (BTN_STEP_SIZE / 2),
-								width: BTN_STEP_SIZE,
-								height: BTN_STEP_SIZE,
-								zIndex: 1002,
-							})
-							.click(() => {
-								curAngle = SEG_ANGLE * i;
-								handleAngle();
-							}),
-					);
-				}
+		const $btnOk = this._$getBtnOk({opts, doClose});
+		const $btnCancel = this._$getBtnCancel({opts, doClose});
+		const $btnSkip = this._$getBtnSkip({opts, doClose});
 
-				const $wrpInner = $$`<div class="ve-flex-vh-center relative">${$btns}${$pad}</div>`
-					.css({
-						width: CONTROLS_RADIUS * 2,
-						height: CONTROLS_RADIUS * 2,
-					});
-
-				return $$`<div class="ve-flex-vh-center">${$wrpInner}</div>`
-					.css({
-						width: (CONTROLS_RADIUS * 2) + BTN_STEP_SIZE + BORDER_PAD,
-						height: (CONTROLS_RADIUS * 2) + BTN_STEP_SIZE + BORDER_PAD,
-					});
-			})() : null;
-
-			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
-				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Select Direction",
-				isMinHeight0: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-					$document.off(`mousemove.${evtId} touchmove${evtId} mouseup.${evtId} touchend${evtId} touchcancel${evtId}`);
-					if (!isDataEntered) return resolve(null);
-					if (curAngle < 0) curAngle += 360;
-					return resolve(curAngle); // TODO returning the step number is more useful if step is specified?
-				},
-			});
-			$$`<div class="ve-flex-vh-center mb-3">
+		$$`<div class="ve-flex-vh-center mb-3">
 				${$padOuter || $pad}
 			</div>`.appendTo($modalInner);
-			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
-		});
+		$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+		$document.off(`mousemove.${evtId} touchmove${evtId} mouseup.${evtId} touchend${evtId} touchcancel${evtId}`);
+		if (!isDataEntered) return null;
+		if (curAngle < 0) curAngle += 360;
+		return curAngle; // TODO returning the step number is more useful if step is specified?
+		// endregion
 	}
 
 	/**
@@ -2536,68 +2806,70 @@ class InputUiUtil {
 	 * @param [opts.isSkippable] If the prompt is skippable.
 	 * @return {Promise<String>} A promise which resolves to a dice string if the user entered values, or null otherwise.
 	 */
-	static pGetUserDice (opts) {
+	static async pGetUserDice (opts) {
 		opts = opts || {};
-		return new Promise(resolve => {
-			const comp = BaseComponent.fromObject({
-				num: (opts.default && opts.default.num) || 1,
-				faces: (opts.default && opts.default.faces) || 6,
-				bonus: (opts.default && opts.default.bonus) || null,
-			});
 
-			comp.render = function ($parent) {
-				$parent.empty();
-
-				const $iptNum = ComponentUiUtil.$getIptInt(this, "num", 0, {$ele: $(`<input class="form-control input-xs form-control--minimal text-center mr-1">`)})
-					.appendTo($parent)
-					.keydown(evt => {
-						if (evt.key === "Escape") { $iptNum.blur(); return; }
-						// return key
-						if (evt.which === 13) doClose(true);
-						evt.stopPropagation();
-					});
-				const $selFaces = ComponentUiUtil.$getSelEnum(this, "faces", {values: Renderer.dice.DICE})
-					.addClass("mr-2").addClass("text-center").css("textAlignLast", "center");
-
-				const $iptBonus = $(`<input class="form-control input-xs form-control--minimal text-center">`)
-					.change(() => this._state.bonus = UiUtil.strToInt($iptBonus.val(), null, {fallbackOnNaN: null}))
-					.keydown(evt => {
-						if (evt.key === "Escape") { $iptBonus.blur(); return; }
-						// return key
-						if (evt.which === 13) doClose(true);
-						evt.stopPropagation();
-					});
-				const hook = () => $iptBonus.val(this._state.bonus != null ? UiUtil.intToBonus(this._state.bonus) : this._state.bonus);
-				comp._addHookBase("bonus", hook);
-				hook();
-
-				$$`<div class="ve-flex-vh-center">${$iptNum}<div class="mr-1">d</div>${$selFaces}${$iptBonus}</div>`.appendTo($parent);
-			};
-
-			comp.getAsString = function () {
-				return `${this._state.num}d${this._state.faces}${this._state.bonus ? UiUtil.intToBonus(this._state.bonus) : ""}`;
-			};
-
-			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
-				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
-				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
-				.click(() => doClose(VeCt.SYM_UI_SKIP));
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Enter Dice",
-				isMinHeight0: true,
-				cbClose: (isDataEntered) => {
-					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
-					if (!isDataEntered) return resolve(null);
-					return resolve(comp.getAsString());
-				},
-			});
-
-			comp.render($modalInner);
-
-			$$`<div class="ve-flex-v-center ve-flex-h-center pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+		const comp = BaseComponent.fromObject({
+			num: (opts.default && opts.default.num) || 1,
+			faces: (opts.default && opts.default.faces) || 6,
+			bonus: (opts.default && opts.default.bonus) || null,
 		});
+
+		comp.render = function ($parent) {
+			$parent.empty();
+
+			const $iptNum = ComponentUiUtil.$getIptInt(this, "num", 0, {$ele: $(`<input class="form-control input-xs form-control--minimal text-center mr-1">`)})
+				.appendTo($parent)
+				.keydown(evt => {
+					if (evt.key === "Escape") { $iptNum.blur(); return; }
+					// return key
+					if (evt.which === 13) doClose(true);
+					evt.stopPropagation();
+				});
+			const $selFaces = ComponentUiUtil.$getSelEnum(this, "faces", {values: Renderer.dice.DICE})
+				.addClass("mr-2").addClass("text-center").css("textAlignLast", "center");
+
+			const $iptBonus = $(`<input class="form-control input-xs form-control--minimal text-center">`)
+				.change(() => this._state.bonus = UiUtil.strToInt($iptBonus.val(), null, {fallbackOnNaN: null}))
+				.keydown(evt => {
+					if (evt.key === "Escape") { $iptBonus.blur(); return; }
+					// return key
+					if (evt.which === 13) doClose(true);
+					evt.stopPropagation();
+				});
+			const hook = () => $iptBonus.val(this._state.bonus != null ? UiUtil.intToBonus(this._state.bonus) : this._state.bonus);
+			comp._addHookBase("bonus", hook);
+			hook();
+
+			$$`<div class="ve-flex-vh-center">${$iptNum}<div class="mr-1">d</div>${$selFaces}${$iptBonus}</div>`.appendTo($parent);
+		};
+
+		comp.getAsString = function () {
+			return `${this._state.num}d${this._state.faces}${this._state.bonus ? UiUtil.intToBonus(this._state.bonus) : ""}`;
+		};
+
+		const {$modalInner, doClose, pGetResolved, doAutoResize: doAutoResizeModal} = await InputUiUtil._pGetShowModal({
+			title: opts.title || "Enter Dice",
+			isMinHeight0: true,
+		});
+
+		const $btnOk = this._$getBtnOk({opts, doClose});
+		const $btnCancel = this._$getBtnCancel({opts, doClose});
+		const $btnSkip = this._$getBtnSkip({opts, doClose});
+
+		comp.render($modalInner);
+
+		$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1 mt-2">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+
+		if (doAutoResizeModal) doAutoResizeModal();
+
+		// region Output
+		const [isDataEntered] = await pGetResolved();
+
+		if (typeof isDataEntered === "symbol") return isDataEntered;
+		if (!isDataEntered) return null;
+		return comp.getAsString();
+		// endregion
 	}
 }
 
@@ -2797,7 +3069,7 @@ class SourceUiUtil {
 		if (options.source) $iptConverters.val((options.source.convertedBy || []).join(", "));
 
 		const $btnOk = $(`<button class="btn btn-primary">OK</button>`)
-			.click(() => {
+			.click(async () => {
 				let incomplete = false;
 				[$iptName, $iptAbv, $iptJson].forEach($ipt => {
 					const val = $ipt.val();
@@ -2806,7 +3078,7 @@ class SourceUiUtil {
 				if (incomplete) return;
 
 				const jsonVal = $iptJson.val().trim();
-				if (!isEditMode && BrewUtil.hasSourceJson(jsonVal)) {
+				if (!isEditMode && BrewUtil2.hasSourceJson(jsonVal)) {
 					$iptJson.addClass("form-control--error");
 					JqueryUtil.doToast({content: `The JSON identifier "${jsonVal}" already exists!`, type: "danger"});
 					return;
@@ -2821,7 +3093,7 @@ class SourceUiUtil {
 					convertedBy: $iptConverters.val().trim().split(",").map(it => it.trim()).filter(Boolean),
 				};
 
-				options.cbConfirm(source, options.mode !== "edit");
+				await options.cbConfirm(source, options.mode !== "edit");
 			});
 
 		const $btnCancel = options.isRequired && !isEditMode
@@ -2844,7 +3116,7 @@ class SourceUiUtil {
 				${$iptName}
 			</div></div>
 			<div class="ui-source__row mb-2"><div class="col-12 ve-flex-v-center">
-				<span class="mr-2 ui-source__name help" title="An abbreviated form of the title. This will be shown in lists on the site, and in the top-right corner of statblocks or data entries; for example, 'MM'">Abbreviation</span>
+				<span class="mr-2 ui-source__name help" title="An abbreviated form of the title. This will be shown in lists on the site, and in the top-right corner of stat blocks or data entries; for example, 'MM'">Abbreviation</span>
 				${$iptAbv}
 			</div></div>
 			<div class="ui-source__row mb-2"><div class="col-12 ve-flex-v-center">
@@ -2865,28 +3137,31 @@ class SourceUiUtil {
 			</div></div>
 			<div class="text-center mb-2">${$btnOk}${$btnCancel}</div>
 
-			${!isEditMode && BrewUtil.homebrewMeta.sources && BrewUtil.homebrewMeta.sources.length ? $$`<div class="ve-flex-vh-center mb-3 mt-3"><span class="ui-source__divider"></span>or<span class="ui-source__divider"></span></div>
+			${!isEditMode && BrewUtil2.getMetaLookup("sources")?.length ? $$`<div class="ve-flex-vh-center mb-3 mt-3"><span class="ui-source__divider"></span>or<span class="ui-source__divider"></span></div>
 			<div class="ve-flex-vh-center">${$btnUseExisting}</div>` : ""}
 		</div></div>`.appendTo(options.$parent);
 
 		const $selExisting = $$`<select class="form-control input-sm">
 			<option disabled>Select</option>
-			${(BrewUtil.homebrewMeta.sources || []).sort((a, b) => SortUtil.ascSortLower(a.full, b.full)).map(s => `<option value="${s.json.escapeQuotes()}">${s.full.escapeQuotes()}</option>`)}
+			${(BrewUtil2.getMetaLookup("sources") || []).sort((a, b) => SortUtil.ascSortLower(a.full, b.full)).map(s => `<option value="${s.json.escapeQuotes()}">${s.full.escapeQuotes()}</option>`)}
 		</select>`.change(() => $selExisting.removeClass("form-control--error"));
 		$selExisting[0].selectedIndex = 0;
 
 		const $btnConfirmExisting = $(`<button class="btn btn-default btn-sm">Confirm</button>`)
-			.click(() => {
-				if ($selExisting[0].selectedIndex !== 0) {
-					const sourceJson = $selExisting.val();
-					const source = BrewUtil.sourceJsonToSource(sourceJson);
-					options.cbConfirmExisting(source);
+			.click(async () => {
+				if ($selExisting[0].selectedIndex === 0) {
+					$selExisting.addClass("form-control--error");
+					return;
+				}
 
-					// cleanup
-					$selExisting[0].selectedIndex = 0;
-					$stageExisting.hideVe();
-					$stageInitial.showVe();
-				} else $selExisting.addClass("form-control--error");
+				const sourceJson = $selExisting.val();
+				const source = BrewUtil2.sourceJsonToSource(sourceJson);
+				await options.cbConfirmExisting(source);
+
+				// cleanup
+				$selExisting[0].selectedIndex = 0;
+				$stageExisting.hideVe();
+				$stageInitial.showVe();
 			});
 
 		const $btnBackExisting = $(`<button class="btn btn-default btn-sm mr-2">Back</button>`)
@@ -2904,319 +3179,340 @@ class SourceUiUtil {
 	}
 }
 
-class BaseComponent extends ProxyBase {
-	constructor () {
-		super();
+function MixinBaseComponent (Cls) {
+	class MixedBaseComponent extends Cls {
+		constructor (...args) {
+			super(...args);
 
-		this.__locks = {};
-		this.__rendered = {};
+			this.__locks = {};
+			this.__rendered = {};
 
-		// state
-		this.__state = {...this._getDefaultState()};
-		this._state = this._getProxy("state", this.__state);
-	}
+			// state
+			this.__state = {...this._getDefaultState()};
+			this._state = this._getProxy("state", this.__state);
+		}
 
-	_addHookBase (prop, hook) {
-		return this._addHook("state", prop, hook);
-	}
+		_addHookBase (prop, hook) {
+			return this._addHook("state", prop, hook);
+		}
 
-	_removeHookBase (prop, hook) {
-		return this._removeHook("state", prop, hook);
-	}
+		_removeHookBase (prop, hook) {
+			return this._removeHook("state", prop, hook);
+		}
 
-	_removeHooksBase (prop) {
-		return this._removeHooks("state", prop);
-	}
+		_removeHooksBase (prop) {
+			return this._removeHooks("state", prop);
+		}
 
-	_setState (toState) {
-		this._proxyAssign("state", "_state", "__state", toState, true);
-	}
+		_addHookAllBase (hook) {
+			return this._addHookAll("state", hook);
+		}
 
-	_setStateValue (prop, value, {isForceTriggerHooks = true} = {}) {
-		if (this._state[prop] === value && !isForceTriggerHooks) return value;
-		// If the value is new, hooks will be run automatically
-		if (this._state[prop] !== value) return this._state[prop] = value;
+		_removeHookAllBase (hook) {
+			return this._removeHookAll("state", hook);
+		}
 
-		this._doFireHooksAll("state", prop, value, value);
-		this._doFireHooks("state", prop, value, value);
-		return value;
-	}
+		_setState (toState) {
+			this._proxyAssign("state", "_state", "__state", toState, true);
+		}
 
-	_getState () { return MiscUtil.copy(this.__state); }
+		_setStateValue (prop, value, {isForceTriggerHooks = true} = {}) {
+			if (this._state[prop] === value && !isForceTriggerHooks) return value;
+			// If the value is new, hooks will be run automatically
+			if (this._state[prop] !== value) return this._state[prop] = value;
 
-	getPod () {
-		this.__pod = this.__pod || {
-			get: (prop) => this._state[prop],
-			set: (prop, val) => this._state[prop] = val,
-			delete: (prop) => delete this._state[prop],
-			addHook: (prop, hook) => this._addHookBase(prop, hook),
-			addHookAll: (hook) => this._addHookAll("state", hook),
-			removeHook: (prop, hook) => this._removeHookBase(prop, hook),
-			triggerCollectionUpdate: (prop) => this._triggerCollectionUpdate(prop),
-			setState: (state) => this._setState(state),
-			getState: () => this._getState(),
-			assign: (toObj, isOverwrite) => this._proxyAssign("state", "_state", "__state", toObj, isOverwrite),
-			pLock: lockName => this._pLock(lockName),
-			unlock: lockName => this._unlock(lockName),
-			component: this,
-		};
-		return this.__pod;
-	}
+			this._doFireHooksAll("state", prop, value, value);
+			this._doFireHooks("state", prop, value, value);
+			return value;
+		}
 
-	// to be overridden as required
-	_getDefaultState () { return {}; }
+		_getState () { return MiscUtil.copy(this.__state); }
 
-	getBaseSaveableState () {
-		return {
-			state: MiscUtil.copy(this.__state),
-		};
-	}
+		getPod () {
+			this.__pod = this.__pod || {
+				get: (prop) => this._state[prop],
+				set: (prop, val) => this._state[prop] = val,
+				delete: (prop) => delete this._state[prop],
+				addHook: (prop, hook) => this._addHookBase(prop, hook),
+				addHookAll: (hook) => this._addHookAllBase(hook),
+				removeHook: (prop, hook) => this._removeHookBase(prop, hook),
+				removeHookAll: (hook) => this._removeHookAllBase(hook),
+				triggerCollectionUpdate: (prop) => this._triggerCollectionUpdate(prop),
+				setState: (state) => this._setState(state),
+				getState: () => this._getState(),
+				assign: (toObj, isOverwrite) => this._proxyAssign("state", "_state", "__state", toObj, isOverwrite),
+				pLock: lockName => this._pLock(lockName),
+				unlock: lockName => this._unlock(lockName),
+				component: this,
+			};
+			return this.__pod;
+		}
 
-	setBaseSaveableStateFrom (toLoad, isOverwrite = false) {
-		toLoad.state && this._proxyAssignSimple("state", toLoad.state, isOverwrite);
-	}
+		// to be overridden as required
+		_getDefaultState () { return {}; }
 
-	/**
-	 * @param opts Options object.
-	 * @param opts.prop The state property.
-	 * @param [opts.namespace] The render namespace.
-	 */
-	_getRenderedCollection (opts) {
-		opts = opts || {};
-		const renderedLookupProp = opts.namespace ? `${opts.namespace}.${opts.prop}` : opts.prop;
-		return (this.__rendered[renderedLookupProp] = this.__rendered[renderedLookupProp] || {});
-	}
+		getBaseSaveableState () {
+			return {
+				state: MiscUtil.copy(this.__state),
+			};
+		}
 
-	/**
-	 * Asynchronous version available below.
-	 * @param opts Options object.
-	 * @param opts.prop The state property.
-	 * @param [opts.fnDeleteExisting] Function to run on deleted render meta. Arguments are `rendered, item`.
-	 * @param [opts.fnReorderExisting] Function to run on all meta, as a final step. Useful for re-ordering elements.
-	 * @param opts.fnUpdateExisting Function to run on existing render meta. Arguments are `rendered, item`.
-	 * @param opts.fnGetNew Function to run which generates existing render meta. Arguments are `item`.
-	 * @param [opts.isDiffMode] If a diff of the state should be taken/checked before updating renders.
-	 * @param [opts.namespace] A namespace to store these renders under. Useful if multiple renders are being made from
-	 *        the same collection.
-	 */
-	_renderCollection (opts) {
-		opts = opts || {};
+		setBaseSaveableStateFrom (toLoad, isOverwrite = false) {
+			toLoad?.state && this._proxyAssignSimple("state", toLoad.state, isOverwrite);
+		}
 
-		const rendered = this._getRenderedCollection(opts);
-		const toDelete = new Set(Object.keys(rendered));
+		/**
+		 * @param opts Options object.
+		 * @param opts.prop The state property.
+		 * @param [opts.namespace] The render namespace.
+		 */
+		_getRenderedCollection (opts) {
+			opts = opts || {};
+			const renderedLookupProp = opts.namespace ? `${opts.namespace}.${opts.prop}` : opts.prop;
+			return (this.__rendered[renderedLookupProp] = this.__rendered[renderedLookupProp] || {});
+		}
 
-		(this._state[opts.prop] || []).forEach((it, i) => {
-			if (it.id == null) throw new Error(`Collection item did not have an ID!`);
-			const meta = rendered[it.id];
+		/**
+		 * Asynchronous version available below.
+		 * @param opts Options object.
+		 * @param opts.prop The state property.
+		 * @param [opts.fnDeleteExisting] Function to run on deleted render meta. Arguments are `rendered, item`.
+		 * @param [opts.fnReorderExisting] Function to run on all meta, as a final step. Useful for re-ordering elements.
+		 * @param opts.fnUpdateExisting Function to run on existing render meta. Arguments are `rendered, item`.
+		 * @param opts.fnGetNew Function to run which generates existing render meta. Arguments are `item`.
+		 * @param [opts.isDiffMode] If a diff of the state should be taken/checked before updating renders.
+		 * @param [opts.namespace] A namespace to store these renders under. Useful if multiple renders are being made from
+		 *        the same collection.
+		 */
+		_renderCollection (opts) {
+			opts = opts || {};
 
-			toDelete.delete(it.id);
-			if (meta) {
-				if (opts.isDiffMode) {
-					// Hashing the stringified JSON relies on the property order remaining consistent, but this is fine
-					const nxtHash = CryptUtil.md5(JSON.stringify(it));
-					if (nxtHash !== meta.__hash) {
-						meta.__hash = nxtHash;
-					} else return;
-				}
+			const rendered = this._getRenderedCollection(opts);
+			const toDelete = new Set(Object.keys(rendered));
 
-				meta.data = it; // update any existing pointers
-				opts.fnUpdateExisting(meta, it, i);
-			} else {
-				const meta = opts.fnGetNew(it, i);
-
-				// If the "get new" function returns null, skip rendering this entity
-				if (meta == null) return;
-
-				meta.data = it;
-				if (!meta.$wrpRow) throw new Error(`A "$wrpRow" property is required in order for deletes!`);
-
-				if (opts.isDiffMode) meta.hash = CryptUtil.md5(JSON.stringify(it));
-
-				rendered[it.id] = meta;
-			}
-		});
-
-		toDelete.forEach(id => {
-			const meta = rendered[id];
-			meta.$wrpRow.remove();
-			delete rendered[id];
-			if (opts.fnDeleteExisting) opts.fnDeleteExisting(meta);
-		});
-
-		if (opts.fnReorderExisting) {
 			(this._state[opts.prop] || []).forEach((it, i) => {
+				if (it.id == null) throw new Error(`Collection item did not have an ID!`);
 				const meta = rendered[it.id];
-				opts.fnReorderExisting(meta, it, i);
-			});
-		}
-	}
 
-	/**
-	 * Synchronous version available above.
-	 * @param [opts] Options object.
-	 * @param opts.prop The state property.
-	 * @param [opts.pFnDeleteExisting] Function to run on deleted render meta. Arguments are `rendered, item`.
-	 * @param opts.pFnUpdateExisting Function to run on existing render meta. Arguments are `rendered, item`.
-	 * @param opts.pFnGetNew Function to run which generates existing render meta. Arguments are `item`.
-	 * @param [opts.isDiffMode] If updates should be run in "diff" mode (i.e. no update is run if nothing has changed).
-	 * @param [opts.isMultiRender] If multiple renders will be produced.
-	 * @param [opts.additionalCaches] Additional cache objects to be cleared on entity delete. Should be objects with
-	 *        entity IDs as keys.
-	 * @param [opts.namespace] A namespace to store these renders under. Useful if multiple renders are being made from
-	 *        the same collection.
-	 */
-	async _pRenderCollection (opts) {
-		opts = opts || {};
+				toDelete.delete(it.id);
+				if (meta) {
+					if (opts.isDiffMode) {
+						// Hashing the stringified JSON relies on the property order remaining consistent, but this is fine
+						const nxtHash = CryptUtil.md5(JSON.stringify(it));
+						if (nxtHash !== meta.__hash) {
+							meta.__hash = nxtHash;
+						} else return;
+					}
 
-		const rendered = this._getRenderedCollection(opts);
-		const entities = this._state[opts.prop];
-		return this._pRenderCollection_doRender(rendered, entities, opts);
-	}
+					meta.data = it; // update any existing pointers
+					opts.fnUpdateExisting(meta, it, i);
+				} else {
+					const meta = opts.fnGetNew(it, i);
 
-	async _pRenderCollection_doRender (rendered, entities, opts) {
-		opts = opts || {};
+					// If the "get new" function returns null, skip rendering this entity
+					if (meta == null) return;
 
-		const toDelete = new Set(Object.keys(rendered));
+					meta.data = it;
+					if (!meta.$wrpRow && !meta.fmRemoveEles) throw new Error(`A "$wrpRow" or a "fmRemoveEles" property is required for deletes!`);
 
-		// Run the external functions in serial, to prevent element re-ordering
-		for (let i = 0; i < entities.length; ++i) {
-			const it = entities[i];
+					if (opts.isDiffMode) meta.hash = CryptUtil.md5(JSON.stringify(it));
 
-			if (!it.id) throw new Error(`Collection item did not have an ID!`);
-			// N.B.: Meta can be an array, if one item maps to multiple renders (e.g. the same is shown in two places)
-			const meta = rendered[it.id];
-
-			toDelete.delete(it.id);
-			if (meta) {
-				if (opts.isDiffMode) {
-					// Hashing the stringified JSON relies on the property order remaining consistent, but this is fine
-					const nxtHash = CryptUtil.md5(JSON.stringify(it));
-					if (nxtHash !== meta.__hash) meta.__hash = nxtHash;
-					else continue;
+					rendered[it.id] = meta;
 				}
+			});
 
-				const nxtMeta = await opts.pFnUpdateExisting(meta, it);
-				// Overwrite the existing renders in multi-render mode
-				//    Otherwise, just ignore the result--single renders never modify their render
-				if (opts.isMultiRender) rendered[it.id] = nxtMeta;
-			} else {
-				const meta = await opts.pFnGetNew(it);
-				// If the generator decides there's nothing to render, skip this item
-				if (meta == null) continue;
+			toDelete.forEach(id => {
+				const meta = rendered[id];
+				if (meta.$wrpRow) meta.$wrpRow.remove();
+				if (meta.fmRemoveEles) meta.fmRemoveEles();
+				delete rendered[id];
+				if (opts.fnDeleteExisting) opts.fnDeleteExisting(meta);
+			});
 
-				if (opts.isMultiRender && meta.some(it => !it.$wrpRow)) throw new Error(`A "$wrpRow" property is required in order for deletes!`);
-				if (!opts.isMultiRender && !meta.$wrpRow) throw new Error(`A "$wrpRow" property is required in order for deletes!`);
-
-				if (opts.isDiffMode) meta.__hash = CryptUtil.md5(JSON.stringify(it));
-
-				rendered[it.id] = meta;
+			if (opts.fnReorderExisting) {
+				(this._state[opts.prop] || []).forEach((it, i) => {
+					const meta = rendered[it.id];
+					opts.fnReorderExisting(meta, it, i);
+				});
 			}
 		}
 
-		for (const id of toDelete) {
-			const meta = rendered[id];
-			if (opts.isMultiRender) meta.forEach(it => it.$wrpRow.remove());
-			else meta.$wrpRow.remove();
-			if (opts.additionalCaches) opts.additionalCaches.forEach(it => delete it[id]);
-			delete rendered[id];
-			if (opts.pFnDeleteExisting) await opts.pFnDeleteExisting(meta);
+		/**
+		 * Synchronous version available above.
+		 * @param [opts] Options object.
+		 * @param opts.prop The state property.
+		 * @param [opts.pFnDeleteExisting] Function to run on deleted render meta. Arguments are `rendered, item`.
+		 * @param opts.pFnUpdateExisting Function to run on existing render meta. Arguments are `rendered, item`.
+		 * @param opts.pFnGetNew Function to run which generates existing render meta. Arguments are `item`.
+		 * @param [opts.isDiffMode] If updates should be run in "diff" mode (i.e. no update is run if nothing has changed).
+		 * @param [opts.isMultiRender] If multiple renders will be produced.
+		 * @param [opts.additionalCaches] Additional cache objects to be cleared on entity delete. Should be objects with
+		 *        entity IDs as keys.
+		 * @param [opts.namespace] A namespace to store these renders under. Useful if multiple renders are being made from
+		 *        the same collection.
+		 */
+		async _pRenderCollection (opts) {
+			opts = opts || {};
+
+			const rendered = this._getRenderedCollection(opts);
+			const entities = this._state[opts.prop];
+			return this._pRenderCollection_doRender(rendered, entities, opts);
 		}
-	}
 
-	/**
-	 * Detach (and thus preserve) rendered collection elements so they can be re-used later.
-	 * @param prop The state property.
-	 * @param [namespace] A namespace to store these renders under. Useful if multiple renders are being made from
-	 *        the same collection.
-	 */
-	_detachCollection (prop, namespace = null) {
-		const renderedLookupProp = namespace ? `${namespace}.${prop}` : prop;
-		const rendered = (this.__rendered[renderedLookupProp] = this.__rendered[renderedLookupProp] || {});
-		Object.values(rendered).forEach(it => it.$wrpRow.detach());
-	}
+		async _pRenderCollection_doRender (rendered, entities, opts) {
+			opts = opts || {};
 
-	/**
-	 * Wipe any rendered collection elements, and reset the render cache.
-	 * @param prop The state property.
-	 * @param [namespace] A namespace to store these renders under. Useful if multiple renders are being made from
-	 *        the same collection.
-	 */
-	_resetCollectionRenders (prop, namespace = null) {
-		const renderedLookupProp = namespace ? `${namespace}.${prop}` : prop;
-		const rendered = (this.__rendered[renderedLookupProp] = this.__rendered[renderedLookupProp] || {});
-		Object.values(rendered).forEach(it => it.$wrpRow.remove());
-		delete this.__rendered[renderedLookupProp];
-	}
+			const toDelete = new Set(Object.keys(rendered));
 
-	render () { throw new Error("Unimplemented!"); }
+			// Run the external functions in serial, to prevent element re-ordering
+			for (let i = 0; i < entities.length; ++i) {
+				const it = entities[i];
 
-	// to be overridden as required
-	getSaveableState () { return {...this.getBaseSaveableState()}; }
-	setStateFrom (toLoad, isOverwrite = false) { this.setBaseSaveableStateFrom(toLoad, isOverwrite); }
+				if (!it.id) throw new Error(`Collection item did not have an ID!`);
+				// N.B.: Meta can be an array, if one item maps to multiple renders (e.g. the same is shown in two places)
+				const meta = rendered[it.id];
 
-	async _pLock (lockName) {
-		while (this.__locks[lockName]) await this.__locks[lockName].lock;
-		let unlock = null;
-		const lock = new Promise(resolve => unlock = resolve);
-		this.__locks[lockName] = {
-			lock,
-			unlock,
-		};
-	}
+				toDelete.delete(it.id);
+				if (meta) {
+					if (opts.isDiffMode) {
+						// Hashing the stringified JSON relies on the property order remaining consistent, but this is fine
+						const nxtHash = CryptUtil.md5(JSON.stringify(it));
+						if (nxtHash !== meta.__hash) meta.__hash = nxtHash;
+						else continue;
+					}
 
-	async _pGate (lockName) {
-		while (this.__locks[lockName]) await this.__locks[lockName].lock;
-	}
+					const nxtMeta = await opts.pFnUpdateExisting(meta, it);
+					// Overwrite the existing renders in multi-render mode
+					//    Otherwise, just ignore the result--single renders never modify their render
+					if (opts.isMultiRender) rendered[it.id] = nxtMeta;
+				} else {
+					const meta = await opts.pFnGetNew(it);
+					// If the generator decides there's nothing to render, skip this item
+					if (meta == null) continue;
 
-	_unlock (lockName) {
-		const lockMeta = this.__locks[lockName];
-		if (lockMeta) {
-			delete this.__locks[lockName];
-			lockMeta.unlock();
+					if (opts.isMultiRender && meta.some(it => !it.$wrpRow && !it.fmRemoveEles)) throw new Error(`A "$wrpRow" or a "fmRemoveEles" property is required for deletes!`);
+					if (!opts.isMultiRender && !meta.$wrpRow && !meta.fmRemoveEles) throw new Error(`A "$wrpRow" or a "fmRemoveEles" property is required for deletes!`);
+
+					if (opts.isDiffMode) meta.__hash = CryptUtil.md5(JSON.stringify(it));
+
+					rendered[it.id] = meta;
+				}
+			}
+
+			const doRemoveELements = meta => {
+				if (meta.$wrpRow) meta.$wrpRow.remove();
+				if (meta.fmRemoveEles) meta.fmRemoveEles();
+			};
+
+			for (const id of toDelete) {
+				const meta = rendered[id];
+				if (opts.isMultiRender) meta.forEach(it => doRemoveELements(it));
+				else doRemoveELements(meta);
+				if (opts.additionalCaches) opts.additionalCaches.forEach(it => delete it[id]);
+				delete rendered[id];
+				if (opts.pFnDeleteExisting) await opts.pFnDeleteExisting(meta);
+			}
 		}
+
+		/**
+		 * Detach (and thus preserve) rendered collection elements so they can be re-used later.
+		 * @param prop The state property.
+		 * @param [namespace] A namespace to store these renders under. Useful if multiple renders are being made from
+		 *        the same collection.
+		 */
+		_detachCollection (prop, namespace = null) {
+			const renderedLookupProp = namespace ? `${namespace}.${prop}` : prop;
+			const rendered = (this.__rendered[renderedLookupProp] = this.__rendered[renderedLookupProp] || {});
+			Object.values(rendered).forEach(it => it.$wrpRow.detach());
+		}
+
+		/**
+		 * Wipe any rendered collection elements, and reset the render cache.
+		 * @param prop The state property.
+		 * @param [namespace] A namespace to store these renders under. Useful if multiple renders are being made from
+		 *        the same collection.
+		 */
+		_resetCollectionRenders (prop, namespace = null) {
+			const renderedLookupProp = namespace ? `${namespace}.${prop}` : prop;
+			const rendered = (this.__rendered[renderedLookupProp] = this.__rendered[renderedLookupProp] || {});
+			Object.values(rendered).forEach(it => it.$wrpRow.remove());
+			delete this.__rendered[renderedLookupProp];
+		}
+
+		render () { throw new Error("Unimplemented!"); }
+
+		// to be overridden as required
+		getSaveableState () { return {...this.getBaseSaveableState()}; }
+		setStateFrom (toLoad, isOverwrite = false) { this.setBaseSaveableStateFrom(toLoad, isOverwrite); }
+
+		async _pLock (lockName) {
+			while (this.__locks[lockName]) await this.__locks[lockName].lock;
+			let unlock = null;
+			const lock = new Promise(resolve => unlock = resolve);
+			this.__locks[lockName] = {
+				lock,
+				unlock,
+			};
+		}
+
+		async _pGate (lockName) {
+			while (this.__locks[lockName]) await this.__locks[lockName].lock;
+		}
+
+		_unlock (lockName) {
+			const lockMeta = this.__locks[lockName];
+			if (lockMeta) {
+				delete this.__locks[lockName];
+				lockMeta.unlock();
+			}
+		}
+
+		async _pDoProxySetBase (prop, value) { return this._pDoProxySet("state", this.__state, prop, value); }
+
+		_triggerCollectionUpdate (prop) {
+			if (!this._state[prop]) return;
+			this._state[prop] = [...this._state[prop]];
+		}
+
+		static _toCollection (array) {
+			if (array) return array.map(it => ({id: CryptUtil.uid(), entity: it}));
+		}
+
+		static _fromCollection (array) {
+			if (array) return array.map(it => it.entity);
+		}
+
+		static fromObject (obj, ...noModCollections) {
+			const comp = new this();
+			Object.entries(MiscUtil.copy(obj)).forEach(([k, v]) => {
+				if (v == null) comp.__state[k] = v;
+				else if (noModCollections.includes(k) || noModCollections.includes("*")) comp.__state[k] = v;
+				else if (typeof v === "object" && v instanceof Array) comp.__state[k] = BaseComponent._toCollection(v);
+				else comp.__state[k] = v;
+			});
+			return comp;
+		}
+
+		static fromObjectNoMod (obj) { return this.fromObject(obj, "*"); }
+
+		toObject (...noModCollections) {
+			const cpy = MiscUtil.copy(this.__state);
+			Object.entries(cpy).forEach(([k, v]) => {
+				if (v == null) return;
+
+				if (noModCollections.includes(k) || noModCollections.includes("*")) cpy[k] = v;
+				else if (v instanceof Array && v.every(it => it && it.id)) cpy[k] = BaseComponent._fromCollection(v);
+			});
+			return cpy;
+		}
+
+		toObjectNoMod () { return this.toObject("*"); }
 	}
 
-	async _pDoProxySetBase (prop, value) { return this._pDoProxySet("state", this.__state, prop, value); }
-
-	_triggerCollectionUpdate (prop) {
-		if (!this._state[prop]) return;
-		this._state[prop] = [...this._state[prop]];
-	}
-
-	static _toCollection (array) {
-		if (array) return array.map(it => ({id: CryptUtil.uid(), entity: it}));
-	}
-
-	static _fromCollection (array) {
-		if (array) return array.map(it => it.entity);
-	}
-
-	static fromObject (obj, ...noModCollections) {
-		const comp = new this();
-		Object.entries(MiscUtil.copy(obj)).forEach(([k, v]) => {
-			if (v == null) comp.__state[k] = v;
-			else if (noModCollections.includes(k) || noModCollections.includes("*")) comp.__state[k] = v;
-			else if (typeof v === "object" && v instanceof Array) comp.__state[k] = BaseComponent._toCollection(v);
-			else comp.__state[k] = v;
-		});
-		return comp;
-	}
-
-	static fromObjectNoMod (obj) { return this.fromObject(obj, "*"); }
-
-	toObject (...noModCollections) {
-		const cpy = MiscUtil.copy(this.__state);
-		Object.entries(cpy).forEach(([k, v]) => {
-			if (v == null) return;
-
-			if (noModCollections.includes(k) || noModCollections.includes("*")) cpy[k] = v;
-			else if (v instanceof Array && v.every(it => it && it.id)) cpy[k] = BaseComponent._fromCollection(v);
-		});
-		return cpy;
-	}
-
-	toObjectNoMod () { return this.toObject("*"); }
+	return MixedBaseComponent;
 }
+
+class BaseComponent extends MixinBaseComponent(ProxyBase) {}
 
 class RenderableCollectionBase {
 	/**
@@ -3248,6 +3544,10 @@ class RenderableCollectionBase {
 
 	doReorderExistingComponent (renderedMeta, entity, i) {
 		// No-op
+	}
+
+	_getCollectionItem (id) {
+		return this._comp._state[this._prop].find(it => it.id === id);
 	}
 
 	/**
@@ -3304,8 +3604,8 @@ class RenderableCollectionAsyncBase {
 		opts = opts || {};
 		this._comp._pRenderCollection({
 			prop: this._prop,
-			fnUpdateExisting: (rendered, source, i) => this.pGetNewRender(rendered, source, i),
-			fnGetNew: (entity, i) => this.pDoUpdateExistingRender(entity, i),
+			fnUpdateExisting: (rendered, source, i) => this.pDoUpdateExistingRender(rendered, source, i),
+			fnGetNew: (entity, i) => this.pGetNewRender(entity, i),
 			namespace: this._namespace,
 			isDiffMode: opts.isDiffMode != null ? opts.isDiffMode : this._isDiffMode,
 			isMultiRender: this._isMultiRender,
@@ -3436,123 +3736,129 @@ class CompLayer extends ProxyBase {
 	static fromSavedState (component, savedState) { return new CompLayer(component, savedState.name, savedState.data); }
 }
 
-const MixinComponentHistory = compClass => class extends compClass {
-	constructor () {
-		super(...arguments);
-		this._histStackUndo = [];
-		this._histStackRedo = [];
-		this._isHistDisabled = true;
-		this._histPropBlacklist = new Set();
-		this._histPropWhitelist = null;
+function MixinComponentHistory (Cls) {
+	class MixedComponentHistory extends Cls {
+		constructor () {
+			super(...arguments);
+			this._histStackUndo = [];
+			this._histStackRedo = [];
+			this._isHistDisabled = true;
+			this._histPropBlocklist = new Set();
+			this._histPropAllowlist = null;
 
-		this._histInitialState = null;
-	}
+			this._histInitialState = null;
+		}
 
-	set isHistDisabled (val) { this._isHistDisabled = val; }
-	addBlacklistProps (...props) { props.forEach(p => this._histPropBlacklist.add(p)); }
-	addWhitelistProps (...props) {
-		this._histPropWhitelist = this._histPropWhitelist || new Set();
-		props.forEach(p => this._histPropWhitelist.add(p));
-	}
+		set isHistDisabled (val) { this._isHistDisabled = val; }
+		addBlocklistProps (...props) { props.forEach(p => this._histPropBlocklist.add(p)); }
+		addAllowlistProps (...props) {
+			this._histPropAllowlist = this._histPropAllowlist || new Set();
+			props.forEach(p => this._histPropAllowlist.add(p));
+		}
 
-	/**
-	 * This should be initialised after all other hooks have been added
-	 */
-	initHistory () {
-		// Track the initial state, and watch for further modifications
-		this._histInitialState = MiscUtil.copy(this._state);
-		this._isHistDisabled = false;
+		/**
+		 * This should be initialised after all other hooks have been added
+		 */
+		initHistory () {
+			// Track the initial state, and watch for further modifications
+			this._histInitialState = MiscUtil.copy(this._state);
+			this._isHistDisabled = false;
 
-		this._addHookAll("state", prop => {
-			if (this._isHistDisabled) return;
-			if (this._histPropBlacklist.has(prop)) return;
-			if (this._histPropWhitelist && !this._histPropWhitelist.has(prop)) return;
+			this._addHookAll("state", prop => {
+				if (this._isHistDisabled) return;
+				if (this._histPropBlocklist.has(prop)) return;
+				if (this._histPropAllowlist && !this._histPropAllowlist.has(prop)) return;
 
-			this.recordHistory();
-		});
-	}
+				this.recordHistory();
+			});
+		}
 
-	recordHistory () {
-		const stateCopy = MiscUtil.copy(this._state);
+		recordHistory () {
+			const stateCopy = MiscUtil.copy(this._state);
 
-		// remove any un-tracked properties
-		this._histPropBlacklist.forEach(prop => delete stateCopy[prop]);
-		if (this._histPropWhitelist) Object.keys(stateCopy).filter(k => !this._histPropWhitelist.has(k)).forEach(k => delete stateCopy[k]);
+			// remove any un-tracked properties
+			this._histPropBlocklist.forEach(prop => delete stateCopy[prop]);
+			if (this._histPropAllowlist) Object.keys(stateCopy).filter(k => !this._histPropAllowlist.has(k)).forEach(k => delete stateCopy[k]);
 
-		this._histStackUndo.push(stateCopy);
-		this._histStackRedo = [];
-	}
+			this._histStackUndo.push(stateCopy);
+			this._histStackRedo = [];
+		}
 
-	_histAddExcludedProperties (stateCopy) {
-		Object.entries(this._state).forEach(([k, v]) => {
-			if (this._histPropBlacklist.has(k)) return stateCopy[k] = v;
-			if (this._histPropWhitelist && !this._histPropWhitelist.has(k)) stateCopy[k] = v;
-		});
-	}
+		_histAddExcludedProperties (stateCopy) {
+			Object.entries(this._state).forEach(([k, v]) => {
+				if (this._histPropBlocklist.has(k)) return stateCopy[k] = v;
+				if (this._histPropAllowlist && !this._histPropAllowlist.has(k)) stateCopy[k] = v;
+			});
+		}
 
-	undo () {
-		if (this._histStackUndo.length) {
+		undo () {
+			if (this._histStackUndo.length) {
+				const lastHistDisabled = this._isHistDisabled;
+				this._isHistDisabled = true;
+
+				const curState = this._histStackUndo.pop();
+				this._histStackRedo.push(curState);
+				const toApply = MiscUtil.copy(this._histStackUndo.last() || this._histInitialState);
+				this._histAddExcludedProperties(toApply);
+				this._setState(toApply);
+
+				this._isHistDisabled = lastHistDisabled;
+			} else {
+				const lastHistDisabled = this._isHistDisabled;
+				this._isHistDisabled = true;
+
+				const toApply = MiscUtil.copy(this._histInitialState);
+				this._histAddExcludedProperties(toApply);
+				this._setState(toApply);
+
+				this._isHistDisabled = lastHistDisabled;
+			}
+		}
+
+		redo () {
+			if (!this._histStackRedo.length) return;
+
 			const lastHistDisabled = this._isHistDisabled;
 			this._isHistDisabled = true;
 
-			const curState = this._histStackUndo.pop();
-			this._histStackRedo.push(curState);
-			const toApply = MiscUtil.copy(this._histStackUndo.last() || this._histInitialState);
-			this._histAddExcludedProperties(toApply);
-			this._setState(toApply);
-
-			this._isHistDisabled = lastHistDisabled;
-		} else {
-			const lastHistDisabled = this._isHistDisabled;
-			this._isHistDisabled = true;
-
-			const toApply = MiscUtil.copy(this._histInitialState);
+			const toApplyRaw = this._histStackRedo.pop();
+			this._histStackUndo.push(toApplyRaw);
+			const toApply = MiscUtil.copy(toApplyRaw);
 			this._histAddExcludedProperties(toApply);
 			this._setState(toApply);
 
 			this._isHistDisabled = lastHistDisabled;
 		}
 	}
-
-	redo () {
-		if (!this._histStackRedo.length) return;
-
-		const lastHistDisabled = this._isHistDisabled;
-		this._isHistDisabled = true;
-
-		const toApplyRaw = this._histStackRedo.pop();
-		this._histStackUndo.push(toApplyRaw);
-		const toApply = MiscUtil.copy(toApplyRaw);
-		this._histAddExcludedProperties(toApply);
-		this._setState(toApply);
-
-		this._isHistDisabled = lastHistDisabled;
-	}
-};
+	return MixedComponentHistory;
+}
 
 // region Globally-linked state components
-const MixinComponentGlobalState = compClass => class extends compClass {
-	constructor () {
-		super(...arguments);
+function MixinComponentGlobalState (Cls) {
+	class MixedComponentGlobalState extends Cls {
+		constructor (...args) {
+			super(...args);
 
-		// Point our proxy at the singleton `__stateGlobal` object
-		this._stateGlobal = this._getProxy("stateGlobal", MixinComponentGlobalState._Singleton.__stateGlobal);
+			// Point our proxy at the singleton `__stateGlobal` object
+			this._stateGlobal = this._getProxy("stateGlobal", MixinComponentGlobalState._Singleton.__stateGlobal);
 
-		// Load the singleton's state, then fire all our hooks once it's ready
-		MixinComponentGlobalState._Singleton._pLoadState()
-			.then(() => {
-				this._doFireHooksAll("stateGlobal");
-				this._doFireAllHooks("stateGlobal");
-				this._addHookAll("stateGlobal", MixinComponentGlobalState._Singleton._pSaveStateDebounced);
-			});
+			// Load the singleton's state, then fire all our hooks once it's ready
+			MixinComponentGlobalState._Singleton._pLoadState()
+				.then(() => {
+					this._doFireHooksAll("stateGlobal");
+					this._doFireAllHooks("stateGlobal");
+					this._addHookAll("stateGlobal", MixinComponentGlobalState._Singleton._pSaveStateDebounced);
+				});
+		}
+
+		get __stateGlobal () { return MixinComponentGlobalState._Singleton.__stateGlobal; }
+
+		_addHookGlobal (prop, hook) {
+			return this._addHook("stateGlobal", prop, hook);
+		}
 	}
-
-	get __stateGlobal () { return MixinComponentGlobalState._Singleton.__stateGlobal; }
-
-	_addHookGlobal (prop, hook) {
-		return this._addHook("stateGlobal", prop, hook);
-	}
-};
+	return MixedComponentGlobalState;
+}
 
 MixinComponentGlobalState._Singleton = class {
 	static async _pSaveState () {
@@ -3584,6 +3890,16 @@ class ComponentUiUtil {
 	static trackHook (hooks, prop, hook) {
 		hooks[prop] = hooks[prop] || [];
 		hooks[prop].push(hook);
+	}
+
+	static $getDisp (comp, prop, {html, $ele, fnGetText} = {}) {
+		$ele = ($ele || $(html || `<div></div>`));
+
+		const hk = () => $ele.text(fnGetText ? fnGetText(comp._state[prop]) : comp._state[prop]);
+		comp._addHookBase(prop, hk);
+		hk();
+
+		return $ele;
 	}
 
 	/**
@@ -3970,6 +4286,7 @@ class ComponentUiUtil {
 	 * @param [opts.isAllowNull] If null is allowed.
 	 * @param [opts.fnDisplay] Value display function.
 	 * @param [opts.displayNullAs] If null values are allowed, display them as this string.
+	 * @param [opts.fnGetAdditionalStyleClasses] Function which converts an item into CSS classes.
 	 * @param [opts.asMeta] If a meta-object should be returned containing the hook and the select.
 	 * @param [opts.isDisabled] If the selector should be display-only
 	 * @return {JQuery}
@@ -4043,8 +4360,9 @@ class ComponentUiUtil {
 		const procValues = opts.isAllowNull ? [null, ...opts.values] : opts.values;
 		const metaOptions = procValues.map((v, i) => {
 			const display = v == null ? (opts.displayNullAs || "\u2014") : opts.fnDisplay ? opts.fnDisplay(v) : v;
+			const additionalStyleClasses = opts.fnGetAdditionalStyleClasses ? opts.fnGetAdditionalStyleClasses(v) : null;
 
-			const $ele = $(`<div class="ve-flex-v-center py-1 px-1 clickable ui-sel2__disp-option ${v == null ? `italic` : ""}" tabindex="${i}">${display}</div>`)
+			const $ele = $(`<div class="ve-flex-v-center py-1 px-1 clickable ui-sel2__disp-option ${v == null ? `italic` : ""} ${additionalStyleClasses ? additionalStyleClasses.join(" ") : ""}" tabindex="${i}">${display}</div>`)
 				.click(() => {
 					if (opts.isDisabled) return;
 
@@ -4194,8 +4512,8 @@ class ComponentUiUtil {
 			}
 		};
 
-		const setValues = (nxtValues, {isResetOnMissing = false} = {}) => {
-			if (CollectionUtil.deepEquals(values_, nxtValues)) return;
+		const setValues = (nxtValues, {isResetOnMissing = false, isForce = false} = {}) => {
+			if (!isForce && CollectionUtil.deepEquals(values_, nxtValues)) return;
 			values_ = nxtValues;
 			$sel.empty();
 			// Use native API for performance

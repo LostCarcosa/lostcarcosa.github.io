@@ -1,5 +1,40 @@
 "use strict";
 
+class VehiclesSublistManager extends SublistManager {
+	constructor () {
+		super({
+			sublistClass: "subvehicles",
+		});
+	}
+
+	pGetSublistItem (it, hash) {
+		const displayType = it.vehicleType ? Parser.vehicleTypeToFull(it.vehicleType) : it.upgradeType.map(t => Parser.vehicleTypeToFull(t));
+
+		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col"><a href="#${hash}" class="lst--border lst__row-inner">
+			<span class="col-8 pl-0 text-center">${displayType}</span>
+			<span class="bold col-4 pr-0">${it.name}</span>
+		</a></div>`)
+			.contextmenu(evt => this._handleSublistItemContextMenu(evt, listItem))
+			.click(evt => this._listSub.doSelect(listItem, evt));
+
+		const listItem = new ListItem(
+			hash,
+			$ele,
+			it.name,
+			{
+				hash,
+				vehicleType: it.vehicleType,
+				upgradeType: it.upgradeType,
+				type: displayType,
+			},
+			{
+				entity: it,
+			},
+		);
+		return listItem;
+	}
+}
+
 class VehiclesPage extends ListPage {
 	constructor () {
 		const pageFilter = new PageFilterVehicles();
@@ -11,8 +46,6 @@ class VehiclesPage extends ListPage {
 
 			listClass: "vehicles",
 
-			sublistClass: "subvehicles",
-
 			dataProps: ["vehicle", "vehicleUpgrade"],
 		});
 	}
@@ -21,7 +54,7 @@ class VehiclesPage extends ListPage {
 		this._pageFilter.mutateAndAddToFilters(it, isExcluded);
 
 		const eleLi = document.createElement("div");
-		eleLi.className = `lst__row ve-flex-col ${isExcluded ? "lst__row--blacklisted" : ""}`;
+		eleLi.className = `lst__row ve-flex-col ${isExcluded ? "lst__row--blocklisted" : ""}`;
 
 		const source = Parser.sourceJsonToAbv(it.source);
 		const hash = UrlUtil.autoEncodeHash(it);
@@ -30,7 +63,7 @@ class VehiclesPage extends ListPage {
 		eleLi.innerHTML = `<a href="#${UrlUtil.autoEncodeHash(it)}" class="lst--border lst__row-inner">
 			<span class="col-6 pl-0 text-center">${displayType}</span>
 			<span class="bold col-4">${it.name}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil2.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -45,13 +78,12 @@ class VehiclesPage extends ListPage {
 				type: displayType,
 			},
 			{
-				uniqueId: it.uniqueId ? it.uniqueId : vhI,
 				isExcluded,
 			},
 		);
 
 		eleLi.addEventListener("click", (evt) => this._list.doSelect(listItem, evt));
-		eleLi.addEventListener("contextmenu", (evt) => ListUtil.openContextMenu(evt, this._list, listItem));
+		eleLi.addEventListener("contextmenu", (evt) => this._openContextMenu(evt, this._list, listItem));
 
 		return listItem;
 	}
@@ -62,32 +94,7 @@ class VehiclesPage extends ListPage {
 		FilterBox.selectFirstVisible(this._dataList);
 	}
 
-	pGetSublistItem (it, ix) {
-		const hash = UrlUtil.autoEncodeHash(it);
-		const displayType = it.vehicleType ? Parser.vehicleTypeToFull(it.vehicleType) : it.upgradeType.map(t => Parser.vehicleTypeToFull(t));
-
-		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col"><a href="#${hash}" class="lst--border lst__row-inner">
-			<span class="col-8 pl-0 text-center">${displayType}</span>
-			<span class="bold col-4 pr-0">${it.name}</span>
-		</a></div>`)
-			.contextmenu(evt => ListUtil.openSubContextMenu(evt, listItem))
-			.click(evt => ListUtil.sublist.doSelect(listItem, evt));
-
-		const listItem = new ListItem(
-			ix,
-			$ele,
-			it.name,
-			{
-				hash,
-				vehicleType: it.vehicleType,
-				upgradeType: it.upgradeType,
-				type: displayType,
-			},
-		);
-		return listItem;
-	}
-
-	doLoadHash (id) {
+	_doLoadHash (id) {
 		Renderer.get().setFirstSection(true);
 		const veh = this._dataList[id];
 		this._$pgContent.empty();
@@ -142,7 +149,7 @@ class VehiclesPage extends ListPage {
 			tabLabelReference: tabMetas.map(it => it.label),
 		});
 
-		ListUtil.updateSelected();
+		this._updateSelected();
 	}
 
 	_getSearchCache (entity) {
@@ -167,4 +174,5 @@ VehiclesPage._INDEXABLE_PROPS = [
 ];
 
 const vehiclesPage = new VehiclesPage();
+vehiclesPage.sublistManager = new VehiclesSublistManager();
 window.addEventListener("load", () => vehiclesPage.pOnLoad());

@@ -1,6 +1,6 @@
 "use strict";
 
-class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
+class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProxyBase(ListPage))) {
 	static _ascSortSubclasses (scA, scB) {
 		return SortUtil.ascSortLower(scA.name, scB.name);
 	}
@@ -23,7 +23,7 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 	}
 
 	constructor () {
-		super();
+		super({});
 		// Don't include classId in the main state/proxy, as we want special handling for it as the main hash part
 		this.__classId = {_: 0};
 		this._classId = this._getProxy("classId", this.__classId);
@@ -60,42 +60,47 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 	}
 	get activeClassRaw () { return this._dataList[this._classId._]; }
 
-	get filterBox () { return this._pageFilter.filterBox; }
+	get filterBox () { return this._filterBox; }
 
 	async pOnLoad () {
+		Hist.setListPage(this);
+
 		this._$pgContent = $(`#pagecontent`);
 
+		await BrewUtil2.pInit();
 		await ExcludeUtil.pInitialise();
 		Omnisearch.addScrollTopFloat();
 		const data = await DataUtil.class.loadJSON();
 
-		this._list = ListUtil.initList({listClass: "classes", isUseJquery: true, isBindFindHotkey: true});
-		ListUtil.setOptions({primaryLists: [this._list]});
+		const $btnReset = $("#reset");
+		this._list = this._initList({
+			$iptSearch: $("#lst__search"),
+			$wrpList: $(`.list.classes`),
+			$btnReset,
+			$btnClear: $(`#lst__search-glass`),
+			dispPageTagline: document.getElementById(`page__subtitle`),
+			isBindFindHotkey: true,
+			optsList: {
+				isUseJquery: true,
+			},
+		});
 		SortUtil.initBtnSortHandlers($("#filtertools"), this._list);
 
-		await this._pageFilter.pInitFilterBox({
+		this._filterBox = await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
 			$wrpFormTop: $(`#filter-search-group`),
-			$btnReset: $(`#reset`),
+			$btnReset,
 		});
 
 		this._addData(data);
 
-		BrewUtil.bind({
-			filterBox: this.filterBox,
-			sourceFilter: this._pageFilter.sourceFilter,
-			list: this._list,
-			pHandleBrew: this._pHandleBrew.bind(this),
-		});
-
-		const homebrew = await BrewUtil.pAddBrewData();
+		const homebrew = await BrewUtil2.pGetBrewProcessed();
 		await this._pHandleBrew(homebrew);
 
 		this._pageFilter.trimState();
 
-		BrewUtil.makeBrewButton("manage-brew");
-		await ListUtil.pLoadState();
-		RollerUtil.addListRollButton(true);
+		ManageBrewUi.bindBtnOpen($(`#manage-brew`));
+		this._renderListFeelingLucky({isCompact: true, $btnReset});
 
 		window.onhashchange = this._handleHashChange.bind(this);
 
@@ -111,7 +116,8 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 
 		ListPage._checkShowAllExcluded(this._dataList, this._$pgContent);
 		this._initLinkGrabbers();
-		UrlUtil.bindLinkExportButton(this.filterBox, $(`#btn-link-export`));
+		this._initScrollToSubclassSelection();
+		this._bindLinkExportButton({$btn: $(`#btn-link-export`)});
 		this._doBindBtnSettingsSidebar();
 
 		Hist.initialLoad = false;
@@ -140,7 +146,7 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 		if (data.subclass && data.subclass.length) (isAddedAnySubclass = true) && this._addData_addSubclassData(data);
 
 		const walker = MiscUtil.getWalker({
-			keyBlacklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLACKLIST,
+			keyBlocklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLOCKLIST,
 			isNoModification: true,
 		});
 
@@ -149,7 +155,7 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 			this._pageFilter.constructor.mutateForFilters(cls);
 
 			// Force data on any classes with unusual sources to behave as though they have normal sources
-			if (SourceUtil.isNonstandardSource(cls.source) || BrewUtil.hasSourceJson(cls.source)) {
+			if (SourceUtil.isNonstandardSource(cls.source) || BrewUtil2.hasSourceJson(cls.source)) {
 				if (cls.fluff) cls.fluff.filter(f => f.source === cls.source).forEach(f => f._isStandardSource = true);
 				cls.subclasses.filter(sc => sc.source === cls.source).forEach(sc => sc._isStandardSource = true);
 			}
@@ -189,11 +195,6 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 			this._list.update();
 			this.filterBox.render();
 			this._handleFilterChange(false);
-
-			ListUtil.setOptions({
-				itemList: this._dataList,
-				primaryLists: [this._list],
-			});
 		}
 
 		return {isAddedAnyClass, isAddedAnySubclass};
@@ -224,15 +225,11 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 			const cls = this._dataList.find(c => c.name.toLowerCase() === sc.className.toLowerCase() && c.source.toLowerCase() === (sc.classSource || SRC_PHB).toLowerCase());
 			if (!cls) {
 				JqueryUtil.doToast({
-					content: `Could not add subclass; could not find class with name: ${cls.class} and source ${sc.source || SRC_PHB}`,
+					content: `Could not add subclass; could not find class with name: ${sc.className} and source ${sc.classSource || SRC_PHB}`,
 					type: "danger",
 				});
 				return;
 			}
-
-			// Avoid re-adding existing brew subclasses
-			const existingBrewSc = sc.uniqueId ? (cls.subclasses || []).find(it => it.uniqueId === sc.uniqueId) : null;
-			if (existingBrewSc) return;
 
 			const isExcludedClass = ExcludeUtil.isExcluded(UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](cls), "class", cls.source);
 
@@ -303,6 +300,7 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 				Hist.lastLoadedId = ixToLoad;
 				const cls = this._dataList[ixToLoad];
 				document.title = `${cls ? cls.name : "Classes"} - 5etools`;
+				this._updateSelected();
 				target._ = ixToLoad;
 			}
 		} else {
@@ -444,6 +442,13 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 		});
 	}
 
+	_initScrollToSubclassSelection () {
+		const $wrp = $(`#subclasstabs`);
+		$(document.body).on(`click`, `[data-jump-select-a-subclass]`, evt => {
+			$wrp[0].scrollIntoView({block: "center", inline: "center"});
+		});
+	}
+
 	_doBindBtnSettingsSidebar () {
 		const menu = ContextUtil.getMenu([
 			new ContextUtil.Action(
@@ -463,10 +468,10 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 
 		const $lnk = $(`<a href="#${hash}" class="lst--border lst__row-inner">
 			<span class="bold col-8 pl-0">${cls.name}</span>
-			<span class="col-4 text-center ${Parser.sourceJsonToColor(cls.source)} pr-0" title="${Parser.sourceJsonToFull(cls.source)}" ${BrewUtil.sourceJsonToStyle(cls.source)}>${source}</span>
+			<span class="col-4 text-center ${Parser.sourceJsonToColor(cls.source)} pr-0" title="${Parser.sourceJsonToFull(cls.source)}" ${BrewUtil2.sourceJsonToStyle(cls.source)}>${source}</span>
 		</a>`);
 
-		const $ele = $$`<li class="lst__row ve-flex-col ${isExcluded ? "row--blacklisted" : ""}">${$lnk}</li>`;
+		const $ele = $$`<li class="lst__row ve-flex-col ${isExcluded ? "row--blocklisted" : ""}">${$lnk}</li>`;
 
 		return new ListItem(
 			clsI,
@@ -479,7 +484,6 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 			{
 				$lnk,
 				entity: cls,
-				uniqueId: cls.uniqueId ? cls.uniqueId : clsI,
 				isExcluded,
 			},
 		);
@@ -490,86 +494,24 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 
 		const cpyCls = MiscUtil.copy(this.activeClassRaw);
 
-		const walker = MiscUtil.getWalker({
-			keyBlacklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLACKLIST,
-			isAllowDeleteObjects: true,
-			isDepthFirst: true,
-		});
+		const walker = Renderer.class.getWalkerFilterDereferencedFeatures();
 
 		const isUseSubclassSources = !this._pageFilter.isClassNaturallyDisplayed(f, cpyCls) && this._pageFilter.isAnySubclassDisplayed(f, cpyCls);
 
-		cpyCls.classFeatures = cpyCls.classFeatures.map((lvlFeatures, ixLvl) => {
-			return walker.walk(
-				lvlFeatures,
-				{
-					object: (obj) => {
-						if (!obj.source) return obj;
-						const fText = obj.isClassFeatureVariant ? {isClassFeatureVariant: true} : null;
-
-						const isDisplay = [obj.source, ...(obj.otherSources || []).map(it => it.source)]
-							.some(src => this.filterBox.toDisplayByFilters(
-								f,
-								{
-									filter: this._pageFilter.sourceFilter,
-									value: isUseSubclassSources && src === cpyCls.source
-										? this._pageFilter.getActiveSource(f)
-										: src,
-								},
-								{
-									filter: this._pageFilter.levelFilter,
-									value: ixLvl + 1,
-								},
-								{
-									filter: this._pageFilter.optionsFilter,
-									value: fText,
-								},
-							));
-
-						return isDisplay ? obj : null;
-					},
-					array: (arr) => {
-						return arr.filter(it => it != null);
-					},
-				},
-			);
+		Renderer.class.mutFilterDereferencedClassFeatures({
+			walker,
+			cpyCls,
+			pageFilter: this._pageFilter,
+			filterValues: f,
+			isUseSubclassSources,
 		});
 
 		(cpyCls.subclasses || []).forEach(sc => {
-			sc.subclassFeatures = sc.subclassFeatures.map(lvlFeatures => {
-				const level = CollectionUtil.bfs(lvlFeatures, "level");
-
-				return walker.walk(
-					lvlFeatures,
-					{
-						object: (obj) => {
-							if (obj.entries && !obj.entries.length) return null;
-							if (!obj.source) return obj;
-							const fText = obj.isClassFeatureVariant ? {isClassFeatureVariant: true} : null;
-
-							const isDisplay = [obj.source, ...(obj.otherSources || []).map(it => it.source)]
-								.some(src => this.filterBox.toDisplayByFilters(
-									f,
-									{
-										filter: this._pageFilter.sourceFilter,
-										value: src,
-									},
-									{
-										filter: this._pageFilter.levelFilter,
-										value: level,
-									},
-									{
-										filter: this._pageFilter.optionsFilter,
-										value: fText,
-									},
-								));
-
-							return isDisplay ? obj : null;
-						},
-						array: (arr) => {
-							return arr.filter(it => it != null);
-						},
-					},
-				);
+			Renderer.class.mutFilterDereferencedSubclassFeatures({
+				walker,
+				cpySc: sc,
+				pageFilter: this._pageFilter,
+				filterValues: f,
 			});
 		});
 
@@ -684,7 +626,11 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 		this._addHookBase("isShowFluff", hkDisplayFluff);
 		MiscUtil.pDefer(hkDisplayFluff);
 
+		const hkletDoToggleNoneSubclassMessages = (cntDisplayedSubclasses) => $(`[data-subclass-none-message]`).toggleVe(!cntDisplayedSubclasses && !this._state.isHideFeatures);
+
 		const hkDisplayFeatures = () => {
+			const cntDisplayedSubclasses = this.activeClass.subclasses.map(sc => Number(this._state[UrlUtil.getStateKeySubclass(sc)] || false)).sum();
+
 			const $dispClassFeatures = $(`[data-feature-type="class"]`);
 			const $dispFeaturesSubclassHeader = $(`[data-feature-type="gain-subclass"]`);
 
@@ -706,6 +652,8 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 				$dispClassFeatures.toggleVe(true);
 				$dispFeaturesSubclassHeader.toggleVe(true);
 			}
+
+			hkletDoToggleNoneSubclassMessages(cntDisplayedSubclasses);
 		};
 		this._addHookBase("isHideFeatures", hkDisplayFeatures);
 		MiscUtil.pDefer(hkDisplayFeatures);
@@ -716,6 +664,8 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 		const hkIsShowNamePrefixes = () => {
 			const cntDisplayedSubclasses = cls.subclasses.map(sc => Number(this._state[UrlUtil.getStateKeySubclass(sc)] || false)).sum();
 			$(`[data-subclass-name-prefix]`).toggleVe(cntDisplayedSubclasses > 1);
+
+			hkletDoToggleNoneSubclassMessages(cntDisplayedSubclasses);
 		};
 		const hkIsShowNamePrefixesThrottled = MiscUtil.throttle(hkIsShowNamePrefixes, 50);
 		MiscUtil.pDefer(() => hkIsShowNamePrefixesThrottled);
@@ -1192,7 +1142,7 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 		}
 		// endregion
 
-		$$`<table class="stats shadow-big">
+		$$`<table class="w-100 stats shadow-big">
 			<tr><th class="border" colspan="6"></th></tr>
 			<tr><th colspan="6">
 				<div class="split-v-center pr-1" ${dataPartSendToFoundry}>
@@ -1466,7 +1416,6 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 			{
 				isExcluded,
 				entity: sc,
-				uniqueId: sc.uniqueId ? sc.uniqueId : ix,
 			},
 		);
 	}
@@ -1754,14 +1703,32 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 				].sort(SortUtil.ascSort);
 
 				const filterValues = this._pageFilter.filterBox.getValues();
-				const walker = MiscUtil.getWalker({keyBlacklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLACKLIST, isAllowDeleteObjects: true});
+				const walker = MiscUtil.getWalker({keyBlocklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLOCKLIST, isAllowDeleteObjects: true});
 
 				const isAnySubclassDisplayed = this._pageFilter.isAnySubclassDisplayed(filterValues, cpyCls);
 
-				levelsWithFeatures.forEach((lvl, i) => {
-					const isLastRow = i === levelsWithFeatures - 1;
+				levelsWithFeatures.forEach(lvl => {
+					const isLastRow = lvl === levelsWithFeatures.last();
 
 					renderStack.push(`<div class="ve-flex ${isLastRow ? "mb-4" : ""}">`);
+
+					const isAnyFeature = cls.subclasses
+						.filter(sc => !this.constructor.isSubclassExcluded_(cls, sc))
+						.filter(sc => {
+							const key = UrlUtil.getStateKeySubclass(sc);
+							return this._state[key];
+						})
+						.some((sc, ixSubclass) => {
+							return sc.subclassFeatures
+								.some(it => it.length && it[0].level === lvl);
+						});
+
+					if (isAnyFeature) {
+						renderStack.push(`<div class="ve-flex-vh-center sticky cls-bkmv__wrp-level br-1p bt-1p bb-1p btr-5p bbr-5p mr-2 ml-n2">
+							<span class="cls-bkmv__disp-level no-shrink small-caps">Level ${lvl}</span>
+						</div>`);
+					}
+
 					cls.subclasses
 						.filter(sc => !this.constructor.isSubclassExcluded_(cls, sc))
 						.forEach((sc, ixSubclass) => {
@@ -1809,7 +1776,7 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 						});
 					renderStack.push(`</div>`);
 
-					if (!isLastRow) renderStack.push(`<hr class="hr-2 mt-3 cls-comp__hr-level"/>`);
+					if (!isLastRow && isAnyFeature) renderStack.push(`<hr class="hr-2 mt-3 cls-comp__hr-level"/>`);
 				});
 				$wrpContent.append(renderStack.join(""));
 
@@ -1938,7 +1905,7 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 
 	static getSubclassCssMod (cls, sc) {
 		if (sc.source !== cls.source) {
-			return BrewUtil.hasSourceJson(sc.source)
+			return BrewUtil2.hasSourceJson(sc.source)
 				? "brew"
 				: SourceUtil.isNonstandardSource(sc.source)
 					? sc.isReprinted ? "stale" : "spicy"
@@ -1950,29 +1917,29 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 	_getColorStyleClasses (entry, {isForceStandardSource, prefix, isSubclass} = {}) {
 		if (isSubclass) {
 			if (entry.isClassFeatureVariant) {
-				if (entry.source && !isForceStandardSource && BrewUtil.hasSourceJson(entry.source)) return [`${prefix}feature-variant-brew-subclass`];
+				if (entry.source && !isForceStandardSource && BrewUtil2.hasSourceJson(entry.source)) return [`${prefix}feature-variant-brew-subclass`];
 				if (entry.source && !isForceStandardSource && SourceUtil.isNonstandardSource(entry.source)) return [`${prefix}feature-variant-ua-subclass`];
 				return [`${prefix}feature-variant-subclass`];
 			}
 
 			if (entry.isReprinted) {
-				if (entry.source && !isForceStandardSource && BrewUtil.hasSourceJson(entry.source)) return [`${prefix}feature-brew-subclass-reprint`];
+				if (entry.source && !isForceStandardSource && BrewUtil2.hasSourceJson(entry.source)) return [`${prefix}feature-brew-subclass-reprint`];
 				if (entry.source && !isForceStandardSource && SourceUtil.isNonstandardSource(entry.source)) return [`${prefix}feature-ua-subclass-reprint`];
 				return [`${prefix}feature-subclass-reprint`];
 			}
 
-			if (entry.source && !isForceStandardSource && BrewUtil.hasSourceJson(entry.source)) return [`${prefix}feature-brew-subclass`];
+			if (entry.source && !isForceStandardSource && BrewUtil2.hasSourceJson(entry.source)) return [`${prefix}feature-brew-subclass`];
 			if (entry.source && !isForceStandardSource && SourceUtil.isNonstandardSource(entry.source)) return [`${prefix}feature-ua-subclass`];
 			return [`${prefix}feature-subclass`];
 		}
 
 		if (entry.isClassFeatureVariant) {
-			if (entry.source && !isForceStandardSource && BrewUtil.hasSourceJson(entry.source)) return [`${prefix}feature-variant-brew`];
+			if (entry.source && !isForceStandardSource && BrewUtil2.hasSourceJson(entry.source)) return [`${prefix}feature-variant-brew`];
 			if (entry.source && !isForceStandardSource && SourceUtil.isNonstandardSource(entry.source)) return [`${prefix}feature-variant-ua`];
 			return [`${prefix}feature-variant`];
 		}
 
-		if (entry.source && !isForceStandardSource && BrewUtil.hasSourceJson(entry.source)) return [`${prefix}feature-brew`];
+		if (entry.source && !isForceStandardSource && BrewUtil2.hasSourceJson(entry.source)) return [`${prefix}feature-brew`];
 		if (entry.source && !isForceStandardSource && SourceUtil.isNonstandardSource(entry.source)) return [`${prefix}feature-ua`];
 		return [];
 	}
@@ -2011,6 +1978,9 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 
 				stack += Renderer.get().setDepthTracker(depthArr, {additionalPropsInherited: ["_isStandardSource"]}).render(cpy);
 			});
+
+			// Add a trailing `<hr>`
+			stack += Renderer.get().render({type: "section"});
 
 			const $trFluff = $(`<tr class="cls-main__cls-fluff"><td colspan="6"/></tr>`).fastSetHtml(stack).appendTo($content);
 			this._trackOutlineFluffData(depthArr);
@@ -2103,6 +2073,12 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 		if (ptrHasHandledSubclassFeatures) ptrHasHandledSubclassFeatures._ = true;
 
 		$trClassFeature.attr("data-feature-type", "gain-subclass");
+
+		// Add a placeholder feature to display when no subclasses are active
+		const $trSubclassFeature = $(`<tr class="cls-main__sc-feature" data-subclass-none-message="true"><td colspan="6"/></tr>`)
+			.fastSetHtml(Renderer.get().setDepthTracker([]).render({type: "entries", entries: [{name: `{@note No Subclass Selected}`, type: "entries", entries: [`{@note <span class="clickable roller" data-jump-select-a-subclass="true">Select a subclass</span> to view its feature(s) here.}`]}]}))
+			.appendTo($content);
+
 		cls.subclasses.forEach(sc => {
 			const stateKey = UrlUtil.getStateKeySubclass(sc);
 
@@ -2116,7 +2092,7 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 				const depthArr = [];
 
 				const ptDate = ptrIsFirstSubclassLevel._ === true && SourceUtil.isNonstandardSource(sc.source) && Parser.sourceJsonToDate(sc.source)
-					? Renderer.get().render(`{@note This subclass was published on ${DatetimeUtil.getDateStr(new Date(Parser.sourceJsonToDate(sc.source)))}.}`)
+					? Renderer.get().render(`{@note This subclass was published on ${DatetimeUtil.getDateStr({date: new Date(Parser.sourceJsonToDate(sc.source))})}.}`)
 					: "";
 				const ptSources = ptrIsFirstSubclassLevel._ === true && sc.otherSources ? `{@note {@b Subclass source:} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
 				const toRender = (ptDate || ptSources) && scFeature.entries ? MiscUtil.copy(scFeature) : scFeature;
@@ -2162,24 +2138,6 @@ class ClassesPage extends MixinComponentGlobalState(BaseComponent) {
 		});
 
 		ptrIsFirstSubclassLevel._ = false;
-	}
-
-	async pDeleteSubclassBrew (uniqueId, sc) {
-		sc.classSource = sc.classSource || SRC_PHB;
-		const cls = this._dataList.find(c => c.name.toLowerCase() === sc.className.toLowerCase() && c.source.toLowerCase() === sc.classSource.toLowerCase());
-
-		if (!cls) {
-			setTimeout(() => { throw new Error(`Could not find class "${sc.className}" with source "${sc.classSource}" to delete subclass "${sc.name}" from!`); });
-			return;
-		}
-
-		const ixSc = cls.subclasses.findIndex(it => it.uniqueId === uniqueId);
-		if (~ixSc) {
-			cls.subclasses.splice(ixSc, 1);
-			if (this._listSubclass) this._listSubclass.removeItemByData("uniqueId", uniqueId);
-			const stateKey = UrlUtil.getStateKeySubclass(sc);
-			this._state[stateKey] = false;
-		}
 	}
 
 	static isSubclassExcluded_ (cls, sc) {
@@ -2248,7 +2206,7 @@ ClassesPage.ClassBookView = class {
 		const $pnlMenu = $(`<div class="cls-bkmv__wrp-tabs ve-flex-h-center"/>`).appendTo(this._$wrpBook);
 
 		// Main panel
-		const $tblBook = $(`<table class="stats stats--book stats--book-large"/>`);
+		const $tblBook = $(`<table class="w-100 stats stats--book stats--book-large"/>`);
 		$$`<div class="ve-flex-col overflow-y-auto container">${$tblBook}</div>`.appendTo(this._$wrpBook);
 
 		const renderStack = [];

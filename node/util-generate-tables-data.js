@@ -97,18 +97,28 @@ class UtilGenTables {
 				table.chapter = chapterOut;
 			}
 		} else if (table._tmpMeta.metaType === "class") {
-			table.class = {name: table._tmpMeta.className, source: table._tmpMeta.classSource};
+			table.parentEntity = {
+				type: table._tmpMeta.metaType,
+				name: table._tmpMeta.className,
+				source: table._tmpMeta.classSource,
+			};
 			delete table._tmpMeta;
 		} else if (table._tmpMeta.metaType === "subclass") {
-			table.subclass = {
+			table.parentEntity = {
+				type: table._tmpMeta.metaType,
 				name: table._tmpMeta.subclassName,
+				shortName: table._tmpMeta.subclassShortName,
 				source: table._tmpMeta.subclassSource,
 				className: table._tmpMeta.className,
 				classSource: table._tmpMeta.classSource,
 			};
 			delete table._tmpMeta;
-		} else if (table._tmpMeta.metaType === "variantrule") {
-			table.variantrule = {name: table._tmpMeta.name, source: table._tmpMeta.source};
+		} else {
+			table.parentEntity = {
+				type: table._tmpMeta.metaType,
+				name: table._tmpMeta.name,
+				source: table._tmpMeta.source,
+			};
 			delete table._tmpMeta;
 		}
 
@@ -171,7 +181,7 @@ class UtilGenTables {
 			}
 
 			this._mutDataAddPage(tbl);
-			tbl.source = doc[opts.headProp].id;
+			tbl.source = doc[opts.headProp].source || doc[opts.headProp].id;
 			this._mutCleanData(tbl);
 		});
 
@@ -184,7 +194,7 @@ class UtilGenTables {
 			}
 
 			this._mutDataAddPage(tg);
-			tg.source = doc[opts.headProp].id;
+			tg.source = doc[opts.headProp].source || doc[opts.headProp].id;
 			this._mutCleanData(tg);
 		});
 
@@ -221,6 +231,7 @@ class UtilGenTables {
 		stacks.table.forEach(it => {
 			it.name = it.caption;
 			it.source = it._tmpMeta.subclassSource || it._tmpMeta.classSource;
+			it.srd = !!cls.srd;
 
 			this._mutDataAddPage(it);
 			this._mutCleanData(it);
@@ -243,6 +254,7 @@ class UtilGenTables {
 				classSource: sc.classSource || SRC_PHB,
 				level,
 				subclassName: sc.name,
+				subclassShortName: sc.shortName,
 				subclassSource: sc.source || sc.classSource || SRC_PHB,
 
 				// Used to deduplicate headers
@@ -263,6 +275,7 @@ class UtilGenTables {
 		stacks.table.forEach(it => {
 			it.name = it.caption;
 			it.source = it._tmpMeta.subclassSource || it._tmpMeta.classSource;
+			it.srd = !!sc.srd;
 
 			this._mutDataAddPage(it);
 			this._mutCleanData(it);

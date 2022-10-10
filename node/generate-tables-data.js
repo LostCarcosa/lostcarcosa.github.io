@@ -2,14 +2,13 @@ const fs = require("fs");
 require("../js/utils");
 const ut = require("./util");
 const UtilGenTables = require("./util-generate-tables-data.js");
-
-Object.assign(global, require("../js/hist.js"));
+require("../js/hist.js");
 
 class GenTables {
 	_doLoadAdventureData () {
 		return ut.readJson(`./data/adventures.json`).adventure
 			.map(idx => {
-				if (GenTables.ADVENTURE_WHITELIST[idx.id]) {
+				if (GenTables.ADVENTURE_ALLOWLIST[idx.id]) {
 					return {
 						adventure: idx,
 						adventureData: JSON.parse(fs.readFileSync(`./data/adventure/adventure-${idx.id.toLowerCase()}.json`, "utf-8")),
@@ -22,7 +21,7 @@ class GenTables {
 	_doLoadBookData () {
 		return ut.readJson(`./data/books.json`).book
 			.map(idx => {
-				if (!GenTables.BOOK_BLACKLIST[idx.id]) {
+				if (!GenTables.BOOK_BLOCKLIST[idx.id]) {
 					return {
 						book: idx,
 						bookData: JSON.parse(fs.readFileSync(`./data/book/book-${idx.id.toLowerCase()}.json`, "utf-8")),
@@ -38,6 +37,7 @@ class GenTables {
 		this._addBookAndAdventureData(output);
 		await this._pAddClassData(output);
 		await this._pAddVariantRuleData(output);
+		await this._pAddBackgroundData(output);
 
 		const toSave = JSON.stringify({table: output.tables, tableGroup: output.tableGroups});
 		fs.writeFileSync(`./data/generated/gendata-tables.json`, toSave, "utf-8");
@@ -99,18 +99,43 @@ class GenTables {
 	}
 
 	async _pAddVariantRuleData (output) {
+		return this._pAddGenericEntityData({
+			output,
+			path: `./data/variantrules.json`,
+			props: ["variantrule"],
+		});
+	}
+
+	async _pAddBackgroundData (output) {
+		return this._pAddGenericEntityData({
+			output,
+			path: `./data/backgrounds.json`,
+			props: ["background"],
+		});
+	}
+
+	async _pAddGenericEntityData (
+		{
+			output,
+			path,
+			props,
+		},
+	) {
 		ut.patchLoadJson();
-		const variantRuleData = await DataUtil.loadJSON(`./data/variantrules.json`);
+		const jsonData = await DataUtil.loadJSON(path);
 		ut.unpatchLoadJson();
 
-		variantRuleData.variantrule.forEach(it => {
-			const {table: foundTables} = UtilGenTables.getGenericTables(it, "variantrule", "entries");
-			output.tables.push(...foundTables);
+		props.forEach(prop => {
+			jsonData[prop].forEach(it => {
+				// Note that this implicitly requires each table to have a `"tableInclude"`
+				const {table: foundTables} = UtilGenTables.getGenericTables(it, prop, "entries");
+				output.tables.push(...foundTables);
+			});
 		});
 	}
 }
-GenTables.BOOK_BLACKLIST = {};
-GenTables.ADVENTURE_WHITELIST = {
+GenTables.BOOK_BLOCKLIST = {};
+GenTables.ADVENTURE_ALLOWLIST = {
 	[SRC_SKT]: true,
 	[SRC_TTP]: true,
 };

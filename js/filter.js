@@ -41,7 +41,7 @@ class PageFilter {
 	static _getClassFilterItem ({className, classSource, isVariantClass, definedInSource}) {
 		const nm = className.split("(")[0].trim();
 		const variantSuffix = isVariantClass ? ` [${definedInSource ? Parser.sourceJsonToAbv(definedInSource) : "Unknown"}]` : "";
-		const sourceSuffix = (SourceUtil.isNonstandardSource(classSource || SRC_PHB) || BrewUtil.hasSourceJson(classSource || SRC_PHB))
+		const sourceSuffix = (SourceUtil.isNonstandardSource(classSource || SRC_PHB) || BrewUtil2.hasSourceJson(classSource || SRC_PHB))
 			? ` (${Parser.sourceJsonToAbv(classSource)})` : "";
 		const name = `${nm}${variantSuffix}${sourceSuffix}`;
 
@@ -75,6 +75,14 @@ class PageFilter {
 			userData: {
 				group,
 			},
+		});
+	}
+
+	static _isReprinted ({reprintedAs, tag, page, prop}) {
+		return reprintedAs?.length && reprintedAs.some(it => {
+			const {name, source} = DataUtil.generic.unpackUid(it?.uid ?? it, tag);
+			const hash = UrlUtil.URL_TO_HASH_BUILDER[page]({name, source});
+			return !ExcludeUtil.isExcluded(hash, prop, source, {isNoCount: true});
 		});
 	}
 	// endregion
@@ -264,7 +272,7 @@ class ModalFilter {
 	async pGetUserSelection ({filterExpression = null} = {}) {
 		// eslint-disable-next-line no-async-promise-executor
 		return new Promise(async resolve => {
-			const {$modalInner, doClose} = this._getShowModal(resolve);
+			const {$modalInner, doClose} = await this._pGetShowModal(resolve);
 
 			await this.pPreloadHidden($modalInner);
 
@@ -289,8 +297,8 @@ class ModalFilter {
 		});
 	}
 
-	_getShowModal (resolve) {
-		const {$modalInner, doClose} = UiUtil.getShowModal({
+	async _pGetShowModal (resolve) {
+		const {$modalInner, doClose} = await UiUtil.pGetShowModal({
 			isHeight100: true,
 			isWidth100: true,
 			title: `Filter/Search for ${this._modalTitle}`,
@@ -404,6 +412,7 @@ class FilterBox extends ProxyBase {
 		this._cachedState = null;
 
 		this._compSearch = BaseComponent.fromObject({search: ""});
+		this._metaIptSearch = null;
 
 		this._filters.forEach(f => f.filterBox = this);
 
@@ -562,7 +571,7 @@ class FilterBox extends ProxyBase {
 
 		const sourceFilter = this._filters.find(it => it.header === FilterBox.SOURCE_HEADER);
 		if (sourceFilter) {
-			const selFnAlt = (val) => !SourceUtil.isNonstandardSource(val) && !BrewUtil.hasSourceJson(val);
+			const selFnAlt = (val) => !SourceUtil.isNonstandardSource(val) && !BrewUtil2.hasSourceJson(val);
 			const hkSelFn = () => {
 				if (this._meta.isBrewDefaultHidden) sourceFilter.setTempFnSel(selFnAlt);
 				else sourceFilter.setTempFnSel(null);
@@ -575,22 +584,23 @@ class FilterBox extends ProxyBase {
 		if (this._$wrpMiniPills) this._filters.map((f, i) => f.$renderMinis({filterBox: this, isFirst: i === 0, $wrpMini: this._$wrpMiniPills}));
 	}
 
-	_render_renderModal () {
+	async _render_pRenderModal () {
 		this._isModalRendered = true;
 
-		this._modalMeta = UiUtil.getShowModal({
+		this._modalMeta = await UiUtil.pGetShowModal({
 			isHeight100: true,
 			isWidth100: true,
 			isUncappedHeight: true,
 			isIndestructible: true,
 			isClosed: true,
 			isEmpty: true,
+			title: "Filter", // Not shown due toe `isEmpty`, but useful for external overrides
 			cbClose: (isDataEntered) => this._pHandleHide(!isDataEntered),
 		});
 
 		const $children = this._filters.map((f, i) => f.$render({filterBox: this, isFirst: i === 0, $wrpMini: this._$wrpMiniPills}));
 
-		const metaIptSearch = ComponentUiUtil.$getIptStr(
+		this._metaIptSearch = ComponentUiUtil.$getIptStr(
 			this._compSearch, "search",
 			{decorationRight: "clear", asMeta: true, html: `<input class="form-control input-xs" placeholder="Search...">`},
 		);
@@ -608,20 +618,24 @@ class FilterBox extends ProxyBase {
 			.click(evt => this.reset(evt.shiftKey));
 
 		const $btnSettings = $(`<button class="btn btn-xs btn-default mr-3"><span class="glyphicon glyphicon-cog"></span></button>`)
-			.click(() => this._openSettingsModal());
+			.click(() => this._pOpenSettingsModal());
 
 		const $btnSaveAlt = $(`<button class="btn btn-xs btn-primary" title="Save"><span class="glyphicon glyphicon-ok"></span></button>`)
 			.click(() => this._modalMeta.doClose(true));
 
 		const $wrpBtnCombineFilters = $(`<div class="btn-group mr-3"></div>`);
 		const $btnCombineFilterSettings = $(`<button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-cog"></span></button>`)
-			.click(() => this._openCombineAsModal());
+			.click(() => this._pOpenCombineAsModal());
 
-		const $btnCombineFiltersAs = $(`<button class="btn btn-xs btn-default"></button>`)
-			.appendTo($wrpBtnCombineFilters)
-			.click(() => this._meta.modeCombineFilters = FilterBox._COMBINE_MODES.getNext(this._meta.modeCombineFilters));
+		const btnCombineFiltersAs = e_({
+			tag: "button",
+			clazz: `btn btn-xs btn-default`,
+			click: () => this._meta.modeCombineFilters = FilterBox._COMBINE_MODES.getNext(this._meta.modeCombineFilters),
+			title: `"AND" requires every filter to match. "OR" requires any filter to match. "Custom" allows you to specify a combination (every "AND" filter must match; only one "OR" filter must match) .`,
+		}).appendTo($wrpBtnCombineFilters[0]);
+
 		const hook = () => {
-			$btnCombineFiltersAs.text(this._meta.modeCombineFilters === "custom" ? this._meta.modeCombineFilters.uppercaseFirst() : this._meta.modeCombineFilters.toUpperCase());
+			btnCombineFiltersAs.innerText = this._meta.modeCombineFilters === "custom" ? this._meta.modeCombineFilters.uppercaseFirst() : this._meta.modeCombineFilters.toUpperCase();
 			if (this._meta.modeCombineFilters === "custom") $wrpBtnCombineFilters.append($btnCombineFilterSettings);
 			else $btnCombineFilterSettings.detach();
 			this._doSaveStateThrottled();
@@ -638,7 +652,7 @@ class FilterBox extends ProxyBase {
 		$$(this._modalMeta.$modal)`<div class="split mb-2 mt-2 ve-flex-v-center mobile__ve-flex-col">
 			<div class="ve-flex-v-baseline mobile__ve-flex-col">
 				<h4 class="m-0 mr-2 mobile__mb-2">Filters</h4>
-				${metaIptSearch.$wrp.addClass("mobile__mb-2")}
+				${this._metaIptSearch.$wrp.addClass("mobile__mb-2")}
 			</div>
 			<div class="ve-flex-v-center mobile__ve-flex-col">
 				<div class="ve-flex-v-center mobile__m-1">
@@ -666,8 +680,8 @@ class FilterBox extends ProxyBase {
 		<div class="w-100 ve-flex-vh-center my-1">${$btnSave}${$btnCancel}</div>`;
 	}
 
-	_openSettingsModal () {
-		const {$modalInner} = UiUtil.getShowModal({title: "Settings"});
+	async _pOpenSettingsModal () {
+		const {$modalInner} = await UiUtil.pGetShowModal({title: "Settings"});
 
 		UiUtil.$getAddModalRowCb($modalInner, "Deselect Homebrew Sources by Default", this._meta, "isBrewDefaultHidden");
 
@@ -688,8 +702,8 @@ class FilterBox extends ProxyBase {
 			});
 	}
 
-	_openCombineAsModal () {
-		const {$modalInner} = UiUtil.getShowModal({title: "Filter Combination Logic"});
+	async _pOpenCombineAsModal () {
+		const {$modalInner} = await UiUtil.pGetShowModal({title: "Filter Combination Logic"});
 		const $btnReset = $(`<button class="btn btn-xs btn-default">Reset</button>`)
 			.click(() => {
 				Object.keys(this._combineAs).forEach(k => this._combineAs[k] = "and");
@@ -732,10 +746,11 @@ class FilterBox extends ProxyBase {
 		this.fireChangeEvent();
 	}
 
-	show () {
-		if (!this._isModalRendered) this._render_renderModal();
+	async show () {
+		if (!this._isModalRendered) await this._render_pRenderModal();
 		this._cachedState = this._getSaveableState();
 		this._modalMeta.doOpen();
+		if (this._metaIptSearch?.$ipt) this._metaIptSearch.$ipt.focus();
 	}
 
 	async _pHandleHide (isCancel = false) {
@@ -774,6 +789,7 @@ class FilterBox extends ProxyBase {
 	}
 
 	setFromSubHashes (subHashes, {force = false, $iptSearch = null} = {}) {
+		// TODO(unpack) refactor
 		const unpacked = {};
 		subHashes.forEach(s => {
 			const unpackedPart = UrlUtil.unpackSubHash(s, true);
@@ -841,9 +857,9 @@ class FilterBox extends ProxyBase {
 		Hist.setSuppressHistory(true);
 		Hist.replaceHistoryHash(`${link}${outSub.length ? `${HASH_PART_SEP}${outSub.join(HASH_PART_SEP)}` : ""}`);
 
-		if (filterInitialSearch && ($iptSearch || this._$iptSearch)) ($iptSearch || this._$iptSearch).val(filterInitialSearch).change().keydown().keyup();
+		if (filterInitialSearch && ($iptSearch || this._$iptSearch)) ($iptSearch || this._$iptSearch).val(filterInitialSearch).change().keydown().keyup().trigger("instantKeyup");
 		this.fireChangeEvent();
-		Hist.hashChange();
+		Hist.hashChange({isBlankFilterLoad: true});
 		return outSub;
 	}
 
@@ -942,6 +958,7 @@ class FilterBox extends ProxyBase {
 
 	setFromValues (values) {
 		this._filters.forEach(it => it.setFromValues(values));
+		this.fireChangeEvent();
 	}
 
 	toDisplay (boxState, ...entryVals) {
@@ -1095,12 +1112,9 @@ class FilterBase extends BaseComponent {
 	}
 
 	getMetaSubHashes () {
-		const defaultMeta = this.getDefaultMeta();
-		const anyNotDefault = Object.keys(defaultMeta).find(k => this._meta[k] !== defaultMeta[k]);
-		if (anyNotDefault) {
-			const serMeta = Object.keys(defaultMeta).map(k => UrlUtil.mini.compress(this._meta[k] === undefined ? defaultMeta[k] : this._meta[k]));
-			return [UrlUtil.packSubHash(this.getSubHashPrefix("meta", this.header), serMeta)];
-		} else return null;
+		const compressedMeta = this._getCompressedMeta();
+		if (!compressedMeta) return null;
+		return [UrlUtil.packSubHash(this.getSubHashPrefix("meta", this.header), compressedMeta)];
 	}
 
 	setMetaFromSubHashState (state) {
@@ -1141,7 +1155,7 @@ class FilterBase extends BaseComponent {
 	_getBtnMobToggleControls (wrpControls) {
 		const btnMobToggleControls = e_({
 			tag: "button",
-			clazz: `btn btn-xs btn-default mobile__visible ml-2 px-3`,
+			clazz: `btn btn-xs btn-default mobile__visible ml-auto px-3 mr-2`,
 			html: `<span class="glyphicon glyphicon-option-vertical"></span>`,
 			click: () => this._meta.isMobileHeaderHidden = !this._meta.isMobileHeaderHidden,
 		});
@@ -1166,6 +1180,25 @@ class FilterBase extends BaseComponent {
 		return vals[this.header]._isActive;
 	}
 
+	_getCompressedMeta ({isStripUiKeys = false} = {}) {
+		const defaultMeta = this.getDefaultMeta();
+		const isAnyNotDefault = Object.keys(defaultMeta).some(k => this._meta[k] !== defaultMeta[k]);
+		if (!isAnyNotDefault) return null;
+
+		let keys = Object.keys(defaultMeta);
+
+		if (isStripUiKeys) {
+			// Always pop the trailing n keys, as these are all UI options, which we don't want to embed in @filter tags
+			const popCount = Object.keys(FilterBase._DEFAULT_META).length;
+			if (popCount) keys = keys.slice(0, -popCount);
+		}
+
+		// Pop keys from the end if they match the default value
+		while (keys.length && defaultMeta[keys.last()] === this._meta[keys.last()]) keys.pop();
+
+		return keys.map(k => UrlUtil.mini.compress(this._meta[k] === undefined ? defaultMeta[k] : this._meta[k]));
+	}
+
 	$render () { throw new Error(`Unimplemented!`); }
 	$renderMinis () { throw new Error(`Unimplemented!`); }
 	getValues () { throw new Error(`Unimplemented!`); }
@@ -1181,6 +1214,7 @@ class FilterBase extends BaseComponent {
 	setFromSubHashState () { throw new Error(`Unimplemented!`); }
 	setFromValues () { throw new Error(`Unimplemented!`); }
 	handleSearch () { throw new Error(`Unimplemented`); }
+	getFilterTagPart () { throw new Error(`Unimplemented`); }
 	_doTeardown () { /* No-op */ }
 	trimState_ () { /* No-op */ }
 }
@@ -1341,7 +1375,11 @@ class Filter extends FilterBase {
 
 	getFilterTagPart () {
 		const areNotDefaultState = this._getStateNotDefault();
-		if (!areNotDefaultState.length) return null;
+		const compressedMeta = this._getCompressedMeta({isStripUiKeys: true});
+
+		// If _any_ value is non-default, we need to include _all_ values in the tag
+		// The same goes for meta values
+		if (!areNotDefaultState.length && !compressedMeta) return null;
 
 		const pt = Object.entries(this._state)
 			.filter(([k]) => !k.startsWith("_"))
@@ -1350,7 +1388,13 @@ class Filter extends FilterBase {
 			.join(";")
 			.toLowerCase();
 
-		return `${this.header.toLowerCase()}=${pt}`;
+		return [
+			this.header.toLowerCase(),
+			pt,
+			compressedMeta ? compressedMeta.join(HASH_SUB_LIST_SEP) : null,
+		]
+			.filter(it => it != null)
+			.join("=");
 	}
 
 	/**
@@ -1599,7 +1643,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--blue fltr__h-btn-logic w-100`,
 			click: () => this._meta.combineBlue = Filter._getNextCombineMode(this._meta.combineBlue),
-			title: `Positive matches mode for this filter. AND requires all blues to match, OR requires at least one blue to match, XOR requires exactly one blue to match.`,
+			title: `Blue match mode for this filter. "AND" requires all blues to match, "OR" requires at least one blue to match, "XOR" requires exactly one blue to match.`,
 		});
 		const hookCombineBlue = () => e_({ele: btnCombineBlue, text: `${this._meta.combineBlue}`.toUpperCase()});
 		this._addHook("meta", "combineBlue", hookCombineBlue);
@@ -1609,7 +1653,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--red fltr__h-btn-logic w-100`,
 			click: () => this._meta.combineRed = Filter._getNextCombineMode(this._meta.combineRed),
-			title: `Negative match mode for this filter. AND requires all reds to match, OR requires at least one red to match, XOR requires exactly one red to match.`,
+			title: `Red match mode for this filter. "AND" requires all reds to match, "OR" requires at least one red to match, "XOR" requires exactly one red to match.`,
 		});
 		const hookCombineRed = () => e_({ele: btnCombineRed, text: `${this._meta.combineRed}`.toUpperCase()});
 		this._addHook("meta", "combineRed", hookCombineRed);
@@ -1719,7 +1763,7 @@ class Filter extends FilterBase {
 		this.__$wrpFilter = $$`<div>
 			${opts.isFirst ? "" : `<div class="fltr__dropdown-divider ${opts.isMulti ? "fltr__dropdown-divider--indented" : ""} mb-1"></div>`}
 			<div class="split fltr__h ${this._minimalUi ? "fltr__minimal-hide" : ""} mb-1">
-				<div class="ml-2 fltr__h-text ve-flex-h-center">${opts.isMulti ? `<span class="mr-2">\u2012</span>` : ""}${this._getRenderedHeader()}${btnMobToggleControls}</div>
+				<div class="ml-2 fltr__h-text ve-flex-h-center mobile__w-100">${opts.isMulti ? `<span class="mr-2">\u2012</span>` : ""}${this._getRenderedHeader()}${btnMobToggleControls}</div>
 				${wrpControls}
 			</div>
 			${this.__wrpPills}
@@ -1947,10 +1991,14 @@ class Filter extends FilterBase {
 
 	addItem (item) {
 		if (item == null) return;
+
 		if (item instanceof Array) {
 			const len = item.length;
 			for (let i = 0; i < len; ++i) this.addItem(item[i]);
-		} else if (!this.__itemsSet.has(item.item || item)) {
+			return;
+		}
+
+		if (!this.__itemsSet.has(item.item || item)) {
 			item = item instanceof FilterItem ? item : new FilterItem({item});
 			Filter._validateItemNest(item, this._nests);
 
@@ -2177,14 +2225,14 @@ class SourceFilter extends Filter {
 	static _SORT_ITEMS_MINI (a, b) {
 		a = a.item ?? a;
 		b = b.item ?? b;
-		const valA = BrewUtil.hasSourceJson(a) ? 2 : SourceUtil.isNonstandardSource(a) ? 1 : 0;
-		const valB = BrewUtil.hasSourceJson(b) ? 2 : SourceUtil.isNonstandardSource(b) ? 1 : 0;
+		const valA = BrewUtil2.hasSourceJson(a) ? 2 : SourceUtil.isNonstandardSource(a) ? 1 : 0;
+		const valB = BrewUtil2.hasSourceJson(b) ? 2 : SourceUtil.isNonstandardSource(b) ? 1 : 0;
 		return SortUtil.ascSort(valA, valB) || SortUtil.ascSortLower(Parser.sourceJsonToFull(a), Parser.sourceJsonToFull(b));
 	}
 
 	static _getDisplayHtmlMini (item) {
 		item = item.item || item;
-		const isBrewSource = BrewUtil.hasSourceJson(item);
+		const isBrewSource = BrewUtil2.hasSourceJson(item);
 		const isNonStandardSource = !isBrewSource && SourceUtil.isNonstandardSource(item);
 		return `<span ${isBrewSource ? `title="(Homebrew)"` : isNonStandardSource ? `title="(UA/Etc.)"` : ""} class="glyphicon ${isBrewSource ? `glyphicon-glass` : isNonStandardSource ? `glyphicon-file` : `glyphicon-book`}"></span> ${Parser.sourceJsonToAbv(item)}`;
 	}
@@ -2292,6 +2340,7 @@ class SourceFilter extends Filter {
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			html: `<span class="glyphicon glyphicon-option-vertical"></span>`,
 			click: evt => ContextUtil.pOpenMenu(evt, menu),
+			title: "Other Options",
 		});
 
 		const btnOnlyPrimary = e_({
@@ -2551,8 +2600,8 @@ class SourceFilter extends Filter {
 	getDefaultMeta () {
 		// Key order is important, as @filter tags depend on it
 		return {
-			...super.getDefaultMeta(),
 			...SourceFilter._DEFAULT_META,
+			...super.getDefaultMeta(),
 		};
 	}
 }
@@ -2692,6 +2741,7 @@ class RangeFilter extends FilterBase {
 		return out.length ? out : null;
 	}
 
+	// `meta` is not included, as it is used purely for UI
 	getFilterTagPart () {
 		if (this._state.min === this._state.curMin && this._state.max === this._state.curMax) return null;
 
@@ -3099,7 +3149,12 @@ class RangeFilter extends FilterBase {
 
 	addItem (item) {
 		if (item == null) return;
-		if (item instanceof Array) return item.forEach(it => this.addItem(it));
+
+		if (item instanceof Array) {
+			const len = item.length;
+			for (let i = 0; i < len; ++i) this.addItem(item[i]);
+			return;
+		}
 
 		if (this._labels) {
 			if (!this._labels.some(it => it === item)) this._labels.push(item);
@@ -3147,7 +3202,11 @@ class RangeFilter extends FilterBase {
 	}
 
 	getDefaultMeta () {
-		const out = {...RangeFilter._DEFAULT_META, ...super.getDefaultMeta()};
+		// Key order is important, as @filter tags depend on it
+		const out = {
+			...RangeFilter._DEFAULT_META,
+			...super.getDefaultMeta(),
+		};
 		if (Renderer.hover.isSmallScreen()) out.isUseDropdowns = true;
 		return out;
 	}
@@ -3218,6 +3277,11 @@ class OptionsFilter extends FilterBase {
 		Object.assign(this._state, toAssign);
 	}
 
+	_getStateNotDefault () {
+		return Object.entries(this._state)
+			.filter(([k, v]) => this._defaultState[k] !== v);
+	}
+
 	getSubHashes () {
 		const out = [];
 
@@ -3236,7 +3300,17 @@ class OptionsFilter extends FilterBase {
 		return out.length ? out : null;
 	}
 
-	getFilterTagPart () { return null; }
+	// `meta` is not included, as it is used purely for UI
+	getFilterTagPart () {
+		const areNotDefaultState = this._getStateNotDefault();
+		if (!areNotDefaultState.length) return null;
+
+		const pt = areNotDefaultState
+			.map(([k, v]) => `${v ? "" : "!"}${k}`)
+			.join(";").toLowerCase();
+
+		return `${this.header.toLowerCase()}=::${pt}::`;
+	}
 
 	setFromSubHashState (state) {
 		this.setMetaFromSubHashState(state);
@@ -3419,7 +3493,11 @@ class OptionsFilter extends FilterBase {
 	}
 
 	getDefaultMeta () {
-		return {...OptionsFilter._DEFAULT_META, ...super.getDefaultMeta()};
+		// Key order is important, as @filter tags depend on it
+		return {
+			...OptionsFilter._DEFAULT_META,
+			...super.getDefaultMeta(),
+		};
 	}
 
 	handleSearch (searchTerm) {
@@ -3485,10 +3563,9 @@ class MultiFilter extends FilterBase {
 		const baseMeta = this.getMetaSubHashes();
 		if (baseMeta) out.push(...baseMeta);
 
-		const anyNotDefault = Object.keys(this._defaultState).find(k => this._state[k] !== this._defaultState[k]);
-		if (anyNotDefault) {
-			const serState = Object.keys(this._defaultState).map(k => UrlUtil.mini.compress(this._state[k] === undefined ? this._defaultState[k] : this._state[k]));
-			out.push(UrlUtil.packSubHash(this.getSubHashPrefix("state", this.header), serState));
+		const anyNotDefault = this._getStateNotDefault();
+		if (anyNotDefault.length) {
+			out.push(UrlUtil.packSubHash(this.getSubHashPrefix("state", this.header), this._getCompressedState()));
 		}
 
 		// each getSubHashes should return an array of arrays, or null
@@ -3497,8 +3574,31 @@ class MultiFilter extends FilterBase {
 		return out.length ? out : null;
 	}
 
+	_getStateNotDefault () {
+		return Object.entries(this._defaultState)
+			.filter(([k, v]) => this._state[k] !== v);
+	}
+
+	// `meta` is not included, as it is used purely for UI
 	getFilterTagPart () {
-		return this._filters.map(it => it.getFilterTagPart()).filter(Boolean).join("|");
+		return [
+			this._getFilterTagPart_self(),
+			...this._filters.map(it => it.getFilterTagPart()).filter(Boolean),
+		]
+			.filter(it => it != null)
+			.join("|");
+	}
+
+	_getFilterTagPart_self () {
+		const areNotDefaultState = this._getStateNotDefault();
+		if (!areNotDefaultState.length) return null;
+
+		return `${this.header.toLowerCase()}=${this._getCompressedState().join(HASH_SUB_LIST_SEP)}`;
+	}
+
+	_getCompressedState () {
+		return Object.keys(this._defaultState)
+			.map(k => UrlUtil.mini.compress(this._state[k] === undefined ? this._defaultState[k] : this._state[k]));
 	}
 
 	setFromSubHashState (state) {
@@ -3584,9 +3684,14 @@ class MultiFilter extends FilterBase {
 	_getHeaderControls_addExtraStateBtns (opts, wrpStateBtnsOuter) {}
 
 	$render (opts) {
-		const $btnAndOr = $(`<div class="fltr__group-comb-toggle ve-muted"></div>`)
-			.click(() => this._state.mode = this._state.mode === "and" ? "or" : "and");
-		const hookAndOr = () => $btnAndOr.text(`(group ${this._state.mode.toUpperCase()})`);
+		const btnAndOr = e_({
+			tag: "div",
+			clazz: `fltr__group-comb-toggle ve-muted`,
+			click: () => this._state.mode = this._state.mode === "and" ? "or" : "and",
+			title: `"Group AND" requires all filters in this group to match. "Group OR" required any filter in this group to match.`,
+		});
+
+		const hookAndOr = () => btnAndOr.innerText = `(group ${this._state.mode.toUpperCase()})`;
 		this._addHook("state", "mode", hookAndOr);
 		hookAndOr();
 
@@ -3600,7 +3705,7 @@ class MultiFilter extends FilterBase {
 			<div class="split fltr__h fltr__h--multi ${this._minimalUi ? "fltr__minimal-hide" : ""} mb-1">
 				<div class="ve-flex-v-center">
 					<div class="mr-2">${this._getRenderedHeader()}</div>
-					${$btnAndOr}
+					${btnAndOr}
 				</div>
 				${wrpControls}
 			</div>

@@ -1,17 +1,51 @@
 "use strict";
 
+class RacesSublistManager extends SublistManager {
+	constructor () {
+		super({
+			sublistClass: "subraces",
+		});
+	}
+
+	pGetSublistItem (race, hash) {
+		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col">
+				<a href="#${UrlUtil.autoEncodeHash(race)}" class="lst--border lst__row-inner">
+					<span class="bold col-5 pl-0">${race.name}</span>
+					<span class="col-5 ${race._slAbility === "Lineage (choose)" ? "italic" : ""}">${race._slAbility}</span>
+					<span class="col-2 text-center pr-0">${(race.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/")}</span>
+				</a>
+			</div>
+		`)
+			.contextmenu(evt => this._handleSublistItemContextMenu(evt, listItem))
+			.click(evt => this._listSub.doSelect(listItem, evt));
+
+		const listItem = new ListItem(
+			hash,
+			$ele,
+			race.name,
+			{
+				hash,
+				ability: race._slAbility,
+			},
+			{
+				entity: race,
+			},
+		);
+		return listItem;
+	}
+}
+
 class RacesPage extends ListPage {
 	constructor () {
 		const pageFilter = new PageFilterRaces();
 		super({
 			dataSource: DataUtil.race.loadJSON.bind(DataUtil.race, {isAddBaseRaces: true}),
-			dataSourceFluff: "data/fluff-races.json",
+			dataSourceFluff: DataUtil.raceFluff.loadJSON.bind(DataUtil.raceFluff),
+			brewDataSource: DataUtil.race.loadBrew.bind(DataUtil.race),
 
 			pageFilter,
 
 			listClass: "races",
-
-			sublistClass: "subraces",
 
 			dataProps: ["race"],
 
@@ -29,25 +63,6 @@ class RacesPage extends ListPage {
 		if (nxtData.length) this._addData({race: Renderer.race.mergeSubraces(nxtData)});
 	}
 
-	async _pHandleBrew (homebrew) {
-		if (homebrew.race) {
-			homebrew = MiscUtil.copy(homebrew);
-			homebrew.race = Renderer.race.mergeSubraces(homebrew.race, {isAddBaseRaces: true});
-		}
-		return super._pHandleBrew(homebrew);
-	}
-
-	/**
-	 * For a given homebrew race, fetch entries that have been expanded from its "subraces" array.
-	 * @param uniqueId
-	 */
-	getMergedSubraces (uniqueId) {
-		const race = this._dataList.find(it => it.uniqueId === uniqueId);
-		if (!race || !race._isBaseRace) return [];
-		// Note that this may include other subraces which were not on the original
-		return this._dataList.filter(it => it._baseName === race.name && it._baseSource === race.source);
-	}
-
 	getListItem (race, rcI, isExcluded) {
 		const hash = UrlUtil.autoEncodeHash(race);
 		if (this._seenHashes.has(hash)) return null;
@@ -56,7 +71,7 @@ class RacesPage extends ListPage {
 		this._pageFilter.mutateAndAddToFilters(race, isExcluded);
 
 		const eleLi = document.createElement("div");
-		eleLi.className = `lst__row ve-flex-col ${isExcluded ? "lst__row--blacklisted" : ""}`;
+		eleLi.className = `lst__row ve-flex-col ${isExcluded ? "lst__row--blocklisted" : ""}`;
 
 		const size = (race.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/");
 		const source = Parser.sourceJsonToAbv(race.source);
@@ -65,7 +80,7 @@ class RacesPage extends ListPage {
 			<span class="bold col-4 pl-0">${race.name}</span>
 			<span class="col-4 ${race._slAbility === "Lineage (choose)" ? "italic" : ""}">${race._slAbility}</span>
 			<span class="col-2 text-center">${size}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(race.source)} pr-0" title="${Parser.sourceJsonToFull(race.source)}" ${BrewUtil.sourceJsonToStyle(race.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(race.source)} pr-0" title="${Parser.sourceJsonToFull(race.source)}" ${BrewUtil2.sourceJsonToStyle(race.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -81,13 +96,12 @@ class RacesPage extends ListPage {
 				alias: PageFilterRaces.getListAliases(race),
 			},
 			{
-				uniqueId: race.uniqueId ? race.uniqueId : rcI,
 				isExcluded,
 			},
 		);
 
 		eleLi.addEventListener("click", (evt) => this._list.doSelect(listItem, evt));
-		eleLi.addEventListener("contextmenu", (evt) => ListUtil.openContextMenu(evt, this._list, listItem));
+		eleLi.addEventListener("contextmenu", (evt) => this._openContextMenu(evt, this._list, listItem));
 
 		return listItem;
 	}
@@ -98,33 +112,7 @@ class RacesPage extends ListPage {
 		FilterBox.selectFirstVisible(this._dataList);
 	}
 
-	pGetSublistItem (race, ix) {
-		const hash = UrlUtil.autoEncodeHash(race);
-
-		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col">
-				<a href="#${UrlUtil.autoEncodeHash(race)}" class="lst--border lst__row-inner">
-					<span class="bold col-5 pl-0">${race.name}</span>
-					<span class="col-5 ${race._slAbility === "Lineage (choose)" ? "italic" : ""}">${race._slAbility}</span>
-					<span class="col-2 text-center pr-0">${(race.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/")}</span>
-				</a>
-			</div>
-		`)
-			.contextmenu(evt => ListUtil.openSubContextMenu(evt, listItem))
-			.click(evt => ListUtil.sublist.doSelect(listItem, evt));
-
-		const listItem = new ListItem(
-			ix,
-			$ele,
-			race.name,
-			{
-				hash,
-				ability: race._slAbility,
-			},
-		);
-		return listItem;
-	}
-
-	doLoadHash (id) {
+	_doLoadHash (id) {
 		const renderer = this._renderer;
 		renderer.setFirstSection(true);
 		this._$pgContent.empty();
@@ -166,9 +154,10 @@ class RacesPage extends ListPage {
 			tabLabelReference: tabMetas.map(it => it.label),
 		});
 
-		ListUtil.updateSelected();
+		this._updateSelected();
 	}
 }
 
 const racesPage = new RacesPage();
+racesPage.sublistManager = new RacesSublistManager();
 window.addEventListener("load", () => racesPage.pOnLoad());

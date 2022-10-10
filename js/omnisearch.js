@@ -1,17 +1,38 @@
 "use strict";
 
 class Omnisearch {
+	static _sortResults (a, b) {
+		const byScore = SortUtil.ascSort(b.score, a.score);
+		if (byScore) return byScore;
+
+		const byName = SortUtil.ascSortLower(a.doc.n || "", b.doc.n || "");
+		if (byName) return byName;
+
+		const isNonStandardA = SourceUtil.isNonstandardSource(a.doc.s);
+		const isNonStandardB = SourceUtil.isNonstandardSource(b.doc.s);
+
+		return Number(isNonStandardA) - Number(isNonStandardB);
+	}
+
 	static init () {
 		if (IS_VTT) return;
 
 		const $nav = $(`#navbar`);
 
-		this._$iptSearch = $(`<input class="form-control search omni__input" placeholder="${this._PLACEHOLDER_TEXT}" title="Hotkey: F. Disclaimer: unlikely to search everywhere. Use with caution.">`).disableSpellcheck();
+		this._$iptSearch = $(`<input class="form-control search omni__input" placeholder="${this._PLACEHOLDER_TEXT}" title="Hotkey: F. Disclaimer: unlikely to search everywhere. Use with caution." type="search">`)
+			.disableSpellcheck();
+		const $btnClearSearch = $(`<span class="absolute glyphicon glyphicon-remove omni__btn-clear"></span>`)
+			.mousedown(evt => {
+				evt.stopPropagation();
+				evt.preventDefault();
+				this._$iptSearch.val("").focus();
+			});
 		const $searchSubmit = $(`<button class="btn btn-default omni__submit" tabindex="-1"><span class="glyphicon glyphicon-search"></span></button>`);
 
 		this._$searchInputWrapper = $$`
 			<div class="input-group omni__wrp-input">
 				${this._$iptSearch}
+				${$btnClearSearch}
 				<div class="input-group-btn">
 					${$searchSubmit}
 				</div>
@@ -98,7 +119,7 @@ class Omnisearch {
 				this._$searchOut.removeClass("omni__output--scrolled");
 			} else {
 				if ($window.scrollTop() > 50) {
-					this._$iptSearch.attr("placeholder", "");
+					this._$iptSearch.attr("placeholder", " ");
 					this._$searchInputWrapper.addClass("omni__wrp-input--scrolled");
 					this._$searchOut.addClass("omni__output--scrolled");
 				} else {
@@ -201,17 +222,35 @@ class Omnisearch {
 			results = results.filter(r => r.doc.r);
 		}
 
+		if (!this._state.isShowBrew) {
+			results = results.filter(r => !r.doc.s || SourceUtil.isSiteSource(r.doc.s));
+		}
+
 		if (!this._state.isShowUa) {
 			results = results.filter(r => !r.doc.s || !SourceUtil.isNonstandardSourceWotc(r.doc.s));
 		}
 
-		if (!this._state.isShowBlacklisted && ExcludeUtil.getList().length) {
-			results = results.filter(r => {
-				if (r.doc.c === Parser.CAT_ID_QUICKREF || r.doc.c === Parser.CAT_ID_PAGE) return true;
+		if (!this._state.isShowBlocklisted && ExcludeUtil.getList().length) {
+			const resultsNxt = [];
+			for (const r of results) {
+				if (r.doc.c === Parser.CAT_ID_QUICKREF || r.doc.c === Parser.CAT_ID_PAGE) {
+					resultsNxt.push(r);
+					continue;
+				}
+
 				const bCat = Parser.pageCategoryToProp(r.doc.c);
-				return !ExcludeUtil.isExcluded(r.doc.u, bCat, r.doc.s, {isNoCount: true});
-			});
+				if (bCat !== "item") {
+					if (!ExcludeUtil.isExcluded(r.doc.u, bCat, r.doc.s, {isNoCount: true})) resultsNxt.push(r);
+					continue;
+				}
+
+				const item = await Renderer.hover.pCacheAndGetHash(UrlUtil.PG_ITEMS, r.doc.u);
+				if (!Renderer.item.isExcluded(item, {hash: r.doc.u})) resultsNxt.push(r);
+			}
+			results = resultsNxt;
 		}
+
+		results.sort(this._sortResults);
 
 		return results;
 	}
@@ -222,61 +261,85 @@ class Omnisearch {
 		this._pDoSearch_renderLinks(results);
 	}
 
-	static _renderLink_getHoverString (category, url, src) {
-		return `onmouseover="Renderer.hover.pHandleLinkMouseOver(event, this)" onmouseleave="Renderer.hover.handleLinkMouseLeave(event, this)" onmousemove="Renderer.hover.handleLinkMouseMove(event, this)" data-vet-page="${UrlUtil.categoryToHoverPage(category).qq()}" data-vet-source="${src.qq()}" data-vet-hash="${url.qq()}" ${Renderer.hover.getPreventTouchString()}`;
+	static _renderLink_getHoverString (category, url, src, {isFauxPage = false} = {}) {
+		return `onmouseover="Renderer.hover.pHandleLinkMouseOver(event, this)" onmouseleave="Renderer.hover.handleLinkMouseLeave(event, this)" onmousemove="Renderer.hover.handleLinkMouseMove(event, this)" data-vet-page="${UrlUtil.categoryToHoverPage(category).qq()}" data-vet-source="${src.qq()}" data-vet-hash="${url.qq()}" ${isFauxPage ? `data-vet-is-faux-page="true"` : ""} ${Renderer.hover.getPreventTouchString()}`;
 	}
 
 	static $getResultLink (r) {
+		const isFauxPage = !!r.hx;
+
+		if (isFauxPage) return $(`<span ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s, {isFauxPage}) : ""} class="omni__lnk-name help-subtle">${r.cf}: ${r.n}</span>`);
+
 		const href = r.c === Parser.CAT_ID_PAGE ? r.u : `${Renderer.get().baseUrl}${UrlUtil.categoryToPage(r.c)}#${r.uh || r.u}`;
-		return $(`<a href="${href}" ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s) : ""} class="omni__lnk-name">${r.cf}: ${r.n}</a>`);
+		return $(`<a href="${href}" ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s, {isFauxPage}) : ""} class="omni__lnk-name">${r.cf}: ${r.n}</a>`);
+	}
+
+	static _$btnToggleBrew = null;
+	static _$btnToggleUa = null;
+	static _$btnToggleBlocklisted = null;
+	static _$btnToggleSrd = null;
+
+	static _doInitBtnToggleFilter (
+		{
+			propState,
+			propBtn,
+			title,
+			text,
+		},
+	) {
+		if (this[propBtn]) this[propBtn].detach();
+		else {
+			this[propBtn] = $(`<button class="btn btn-default btn-xs" title="${title.qq()}" tabindex="-1">${text.qq()}</button>`)
+				.on("click", () => this._state[propState] = !this._state[propState]);
+
+			const hk = (val) => {
+				this[propBtn].toggleClass("active", this._state[propState]);
+				if (val != null) this._pDoSearch().then(null);
+			};
+			this._state._addHookBase(propState, hk);
+			hk();
+		}
 	}
 
 	static _pDoSearch_renderLinks (results, page = 0) {
-		if (this._$btnToggleUa) this._$btnToggleUa.detach();
-		else {
-			this._$btnToggleUa = $(`<button class="btn btn-default btn-xs mr-2" title="Include Unearthed Arcana and other unofficial source results" tabindex="-1">Include UA/etc.</button>`)
-				.on("click", () => this._state.isShowUa = !this._state.isShowUa);
+		this._doInitBtnToggleFilter({
+			propState: "isShowBrew",
+			propBtn: "_$btnToggleBrew",
+			title: "Include homebrew content results",
+			text: "Include Homebrew",
+		});
 
-			const hk = (val) => {
-				this._$btnToggleUa.toggleClass("active", this._state.isShowUa);
-				if (val != null) this._pDoSearch();
-			};
-			this._state._addHookBase("isShowUa", hk);
-			hk();
-		}
+		this._doInitBtnToggleFilter({
+			propState: "isShowUa",
+			propBtn: "_$btnToggleUa",
+			title: "Include Unearthed Arcana and other unofficial source results",
+			text: "Include UA/etc.",
+		});
 
-		if (this._$btnToggleBlacklisted) this._$btnToggleBlacklisted.detach();
-		else {
-			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="Include blacklisted content results" tabindex="-1">Include Blacklisted</button>`)
-				.on("click", async () => this._state.isShowBlacklisted = !this._state.isShowBlacklisted);
+		this._doInitBtnToggleFilter({
+			propState: "isShowBlocklisted",
+			propBtn: "_$btnToggleBlocklisted",
+			title: "Include blocklisted content results",
+			text: "Include Blocklisted",
+		});
 
-			const hk = (val) => {
-				this._$btnToggleBlacklisted.toggleClass("active", this._state.isShowBlacklisted);
-				if (val != null) this._pDoSearch();
-			};
-			this._state._addHookBase("isShowBlacklisted", hk);
-			hk();
-		}
-
-		if (this._$btnToggleSrd) this._$btnToggleSrd.detach();
-		else {
-			this._$btnToggleSrd = $(`<button class="btn btn-default btn-xs mr-2" title="Only show Systems Reference Document content results" tabindex="-1">SRD Only</button>`)
-				.on("click", async () => this._state.isSrdOnly = !this._state.isSrdOnly);
-
-			const hk = (val) => {
-				this._$btnToggleSrd.toggleClass("active", this._state.isSrdOnly);
-				if (val != null) this._pDoSearch();
-			};
-			this._state._addHookBase("isSrdOnly", hk);
-			hk();
-		}
+		this._doInitBtnToggleFilter({
+			propState: "isSrdOnly",
+			propBtn: "_$btnToggleSrd",
+			title: "Only show Systems Reference Document content results",
+			text: "SRD Only",
+		});
 
 		this._$searchOut.empty();
 
-		const $btnHelp = $(`<button class="btn btn-default btn-xs" title="Help"><span class="glyphicon glyphicon-info-sign"></span></button>`)
+		const $btnHelp = $(`<button class="btn btn-default btn-xs ml-2" title="Help"><span class="glyphicon glyphicon-info-sign"></span></button>`)
 			.click(() => this.doShowHelp());
 
-		this._$searchOut.append($(`<div class="text-right"/>`).append([this._$btnToggleUa, this._$btnToggleBlacklisted, this._$btnToggleSrd, $btnHelp]));
+		this._$searchOut.append($(`<div class="ve-flex-h-right ve-flex-v-center mb-2"/>`)
+			.append([
+				$$`<div class="btn-group ve-flex-v-center">${this._$btnToggleBrew}${this._$btnToggleUa}${this._$btnToggleBlocklisted}${this._$btnToggleSrd}</div>`,
+				$btnHelp,
+			]));
 		const base = page * this._MAX_RESULTS;
 		for (let i = base; i < Math.max(Math.min(results.length, this._MAX_RESULTS + base), base); ++i) {
 			const r = results[i].doc;
@@ -291,7 +354,7 @@ class Omnisearch {
 				? `<a href="${adventureBookSourceHref}">${ptPageInner}</a>`
 				: ptPageInner;
 
-			const ptSourceInner = source ? `<span class="${Parser.sourceJsonToColor(source)}" ${BrewUtil.sourceJsonToStyle(source)} title="${Parser.sourceJsonToFull(source)}">${Parser.sourceJsonToAbv(source)}</span>` : `<span></span>`;
+			const ptSourceInner = source ? `<span class="${Parser.sourceJsonToColor(source)}" ${BrewUtil2.sourceJsonToStyle(source)} title="${Parser.sourceJsonToFull(source)}">${Parser.sourceJsonToAbv(source)}</span>` : `<span></span>`;
 			const ptSource = ptPage || !adventureBookSourceHref
 				? ptSourceInner
 				: `<a href="${adventureBookSourceHref}">${ptSourceInner}</a>`;
@@ -353,14 +416,23 @@ class Omnisearch {
 	static initState () {
 		if (this._state) return;
 
-		const saved = StorageUtil.syncGet(this._STORAGE_NAME) || {isShowUa: true, isShowBlacklisted: false, isSrdOnly: false};
+		const saved = StorageUtil.syncGet(this._STORAGE_NAME)
+			|| {
+				isShowBrew: true,
+				isShowUa: true,
+				isShowBlocklisted: false,
+				isSrdOnly: false,
+			};
+
 		class SearchState extends BaseComponent {
+			get isShowBrew () { return this._state.isShowBrew; }
 			get isShowUa () { return this._state.isShowUa; }
-			get isShowBlacklisted () { return this._state.isShowBlacklisted; }
+			get isShowBlocklisted () { return this._state.isShowBlocklisted; }
 			get isSrdOnly () { return this._state.isSrdOnly; }
-			set isShowUa (val) { this._state.isShowUa = val; }
-			set isShowBlacklisted (val) { this._state.isShowBlacklisted = val; }
-			set isSrdOnly (val) { this._state.isSrdOnly = val; }
+			set isShowBrew (val) { this._state.isShowBrew = !!val; }
+			set isShowUa (val) { this._state.isShowUa = !!val; }
+			set isShowBlocklisted (val) { this._state.isShowBlocklisted = !!val; }
+			set isSrdOnly (val) { this._state.isSrdOnly = !!val; }
 		}
 		this._state = SearchState.fromObject(saved);
 		this._state._addHookAll("state", () => {
@@ -368,14 +440,17 @@ class Omnisearch {
 		});
 	}
 
+	static addHookBrew (hk) { this._state._addHookBase("isShowBrew", hk); }
 	static addHookUa (hk) { this._state._addHookBase("isShowUa", hk); }
-	static addHookBlacklisted (hk) { this._state._addHookBase("isShowBlacklisted", hk); }
+	static addHookBlocklisted (hk) { this._state._addHookBase("isShowBlocklisted", hk); }
 	static addHookSrdOnly (hk) { this._state._addHookBase("isSrdOnly", hk); }
+	static doToggleBrew () { this._state.isShowBrew = !this._state.isShowBrew; }
 	static doToggleUa () { this._state.isShowUa = !this._state.isShowUa; }
-	static doToggleBlacklisted () { this._state.isShowBlacklisted = !this._state.isShowBlacklisted; }
+	static doToggleBlocklisted () { this._state.isShowBlocklisted = !this._state.isShowBlocklisted; }
 	static doToggleSrdOnly () { this._state.isSrdOnly = !this._state.isSrdOnly; }
+	static get isShowBrew () { return this._state.isShowBrew; }
 	static get isShowUa () { return this._state.isShowUa; }
-	static get isShowBlacklisted () { return this._state.isShowBlacklisted; }
+	static get isShowBlocklisted () { return this._state.isShowBlocklisted; }
 	static get isSrdOnly () { return this._state.isSrdOnly; }
 
 	static async _pDoSearchLoad () {
@@ -391,12 +466,9 @@ class Omnisearch {
 		SearchUtil.removeStemmer(this._searchIndex);
 
 		data.forEach(it => this._addToIndex(it));
-		this.highestId = data.last().id;
 
-		// this doesn't update if the 'Brew changes later, but so be it.
-		const brewIndex = await BrewUtil.pGetSearchIndex();
+		const brewIndex = await BrewUtil2.pGetSearchIndex({id: this._maxId + 1});
 		brewIndex.forEach(it => this._addToIndex(it));
-		if (brewIndex.length) this.highestId = brewIndex.last().id;
 
 		this._adventureBookLookup = {};
 		[brewIndex, data].forEach(index => {
@@ -406,29 +478,9 @@ class Omnisearch {
 		});
 	}
 
-	static async pAddToIndex (prop, ...entries) {
-		if (!entries.length) return;
-
-		await this.pInit();
-		const indexer = new Omnidexer(this.highestId + 1);
-
-		const toIndex = {[prop]: entries};
-
-		const toIndexMultiPart = Omnidexer.TO_INDEX__FROM_INDEX_JSON.filter(it => it.listProp === prop);
-		for (const it of toIndexMultiPart) {
-			await indexer.pAddToIndex(it, toIndex);
-		}
-		const toIndexSingle = Omnidexer.TO_INDEX.filter(it => it.listProp === prop);
-		for (const it of toIndexSingle) {
-			await indexer.pAddToIndex(it, toIndex);
-		}
-
-		const toAdd = Omnidexer.decompressIndex(indexer.getIndex());
-		toAdd.forEach(it => this._addToIndex(it));
-		if (toAdd.length) this.highestId = toAdd.last().id;
-	}
-
+	static _maxId = null;
 	static _addToIndex (d) {
+		this._maxId = d.id;
 		d.cf = Parser.pageCategoryToFull(d.c);
 		if (!this._CATEGORY_COUNTS[d.cf]) this._CATEGORY_COUNTS[d.cf] = 1;
 		else this._CATEGORY_COUNTS[d.cf]++;
@@ -521,11 +573,7 @@ Omnisearch._searchIndex = null;
 Omnisearch._adventureBookLookup = null; // A map of `<sourceLower>: (adventureCatId|bookCatId)`
 Omnisearch._pLoadSearch = null;
 Omnisearch._CATEGORY_COUNTS = {};
-Omnisearch.highestId = -1;
 
-Omnisearch._$btnToggleUa = null;
-Omnisearch._$btnToggleBlacklisted = null;
-Omnisearch._$btnToggleSrd = null;
 Omnisearch._$searchOut = null;
 Omnisearch._$searchOutWrapper = null;
 Omnisearch._$searchInputWrapper = null;
@@ -534,7 +582,7 @@ Omnisearch._$wrpNoResultsFound = null;
 Omnisearch._clickFirst = false;
 Omnisearch._MAX_RESULTS = 15;
 Omnisearch._showUaEtc = false;
-Omnisearch._hideBlacklisted = false;
+Omnisearch._hideBlocklisted = false;
 
 Omnisearch._STORAGE_NAME = "search";
 

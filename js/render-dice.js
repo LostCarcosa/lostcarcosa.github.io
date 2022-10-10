@@ -105,7 +105,7 @@ Renderer.dice = {
 	/** Initialise the roll box UI. */
 	async _pInit () {
 		const $wrpRoll = $(`<div class="rollbox ve-flex-col min-h-0"></div>`).hideVe();
-		const $minRoll = $(`<div class="rollbox-min"><span class="glyphicon glyphicon-chevron-up"></span></div>`).on("click", () => {
+		const $minRoll = $(`<button class="rollbox-min"><span class="glyphicon glyphicon-chevron-up"></span></button>`).on("click", () => {
 			Renderer.dice._showBox();
 			Renderer.dice._$iptRoll.focus();
 		});
@@ -314,6 +314,8 @@ Renderer.dice = {
 		return wrpTree.tree.evl({});
 	},
 
+	$getEleUnknownTableRoll (total) { return $(Renderer.dice._pRollerClick_getMsgBug(total)); },
+
 	_pRollerClick_getMsgBug (total) { return `<span class="message">No result found matching roll ${total}?! <span class="help-subtle" title="Bug!">🐛</span></span>`; },
 
 	async pRollerClick (evtMock, ele, packed, name) {
@@ -321,132 +323,191 @@ Renderer.dice = {
 		const entry = JSON.parse(packed);
 		const additionalData = {...ele.dataset};
 
-		// Aka "getTableName", probably
-		function attemptToGetNameOfRoll () {
-			// Try to use the entry's built-in name
-			if (entry.name) return entry.name;
-
-			// try to use table caption
-			let titleMaybe = $(ele).closest(`table:not(.stats)`).children(`caption`).text();
-			if (titleMaybe) return titleMaybe.trim();
-
-			// try to use list item title
-			titleMaybe = $(ele).parent().children(`.rd__list-item-name`).text();
-			if (titleMaybe) return titleMaybe.trim().replace(/[.,:]$/, "");
-
-			// use the section title, where applicable
-			titleMaybe = $(ele).closest(`div`).children(`.rd__h`).first().find(`.entry-title-inner`).text();
-			if (titleMaybe) {
-				titleMaybe = titleMaybe.trim().replace(/[.,:]$/, "");
-				return titleMaybe;
-			}
-
-			// try to use stats table name row
-			titleMaybe = $(ele).closest(`table.stats`).children(`tbody`).first().children(`tr`).first().find(`.rnd-name .stats-name`).text();
-			if (titleMaybe) return titleMaybe.trim();
-
-			if (UrlUtil.getCurrentPage() === UrlUtil.PG_CHARACTERS) {
-				// try use mini-entity name
-				titleMaybe = ($(ele).closest(`.chr-entity__row`).find(".chr-entity__ipt-name").val() || "").trim();
-				if (titleMaybe) return titleMaybe;
-			}
-
-			return titleMaybe;
-		}
-
-		function attemptToGetNameOfRoller () {
-			const $hov = $ele.closest(`.hwin`);
-			if ($hov.length) return $hov.find(`.stats-name`).first().text();
-			const $roll = $ele.closest(`.out-roll-wrp`);
-			if ($roll.length) return $roll.data("name");
-			const $dispPanelTitle = $ele.closest(`.dm-screen-panel`).children(`.panel-control-title`);
-			if ($dispPanelTitle.length) return $dispPanelTitle.text().trim();
-			let name = document.title.replace("- 5etools", "").trim();
-			return name === "DM Screen" ? "Dungeon Master" : name;
-		}
-
-		function _$getTdsFromTotal (total) {
-			const $table = $ele.closest(`table`);
-			const $tdRoll = $table.find(`td`).filter((i, e) => {
-				const $e = $(e);
-				if (!$e.closest(`table`).is($table)) return false;
-				return total >= Number($e.data("roll-min")) && total <= Number($e.data("roll-max"));
-			});
-			if ($tdRoll.length && $tdRoll.nextAll().length) {
-				return $tdRoll.nextAll().get();
-			}
-			return null;
-		}
-
-		function _rollInlineRollers ($ele) {
-			$ele.find(`.render-roller`).each((i, e) => {
-				const $e = $(e);
-				const r = Renderer.dice.__rollPackedData($e);
-				$e.attr("onclick", `Renderer.dice.__rerollNextInlineResult(this)`);
-				$e.after(` (<span class="result">${r}</span>)`);
-			});
-		}
-
-		function fnGetMessageTable (total) {
-			const elesTd = _$getTdsFromTotal(total);
-			if (elesTd) {
-				const tableRow = elesTd.map(ele => ele.innerHTML.trim()).filter(it => it).join(" | ");
-				const $row = $(`<span class="message">${tableRow}</span>`);
-				_rollInlineRollers($ele);
-				return $row.html();
-			}
-			return Renderer.dice._pRollerClick_getMsgBug(total);
-		}
-
-		function fnGetMessageGeneratorTable (ix, total) {
-			const elesTd = _$getTdsFromTotal(total);
-			if (elesTd) {
-				const $row = $(`<span class="message">${elesTd[ix].innerHTML.trim()}</span>`);
-				_rollInlineRollers($ele);
-				return $row.html();
-			}
-			return Renderer.dice._pRollerClick_getMsgBug(total);
-		}
-
-		async function pRollGeneratorTable () {
-			Renderer.dice.addElement(rolledBy, `<i>${rolledBy.label}:</i>`);
-
-			const out = [];
-			const numRolls = Number($parent.attr("data-rd-namegeneratorrolls"));
-			const $ths = $ele.closest(`table`).find(`th`);
-			for (let i = 0; i < numRolls; ++i) {
-				const cpyRolledBy = MiscUtil.copy(rolledBy);
-				cpyRolledBy.label = $($ths.get(i + 1)).text().trim();
-
-				const result = await Renderer.dice.pRollEntry(modRollMeta.entry, cpyRolledBy, {fnGetMessage: fnGetMessageGeneratorTable.bind(null, i), rollCount: modRollMeta.rollCount});
-				const elesTd = _$getTdsFromTotal(result);
-
-				if (!elesTd) {
-					out.push(`(no result)`);
-					continue;
-				}
-
-				out.push(elesTd[i].innerHTML.trim());
-			}
-
-			Renderer.dice.addElement(rolledBy, `= ${out.join(" ")}`);
-		}
-
 		const rolledBy = {
-			name: attemptToGetNameOfRoller(),
-			label: name != null ? name : attemptToGetNameOfRoll(ele),
+			name: Renderer.dice._pRollerClick_attemptToGetNameOfRoller({$ele}),
+			label: name != null ? name : Renderer.dice._pRollerClick_attemptToGetNameOfRoll({entry, $ele}),
 		};
 
 		const modRollMeta = Renderer.dice.getEventModifiedRollMeta(evtMock, entry);
 		const $parent = $ele.closest("th, p, table");
 
+		const rollResult = await this._pRollerClick_pGetResult({
+			$parent,
+			$ele,
+			entry,
+			modRollMeta,
+			rolledBy,
+			additionalData,
+		});
+
+		if (!entry.autoRoll) return;
+
+		const $tgt = $ele.next(`[data-rd-is-autodice-result="true"]`);
+		const curTxt = $tgt.text();
+		$tgt.text(rollResult);
+		JqueryUtil.showCopiedEffect($tgt, curTxt, true);
+	},
+
+	async _pRollerClick_pGetResult ({$parent, $ele, entry, modRollMeta, rolledBy, additionalData}) {
+		const sharedRollOpts = {
+			rollCount: modRollMeta.rollCount,
+			additionalData,
+			isHidden: !!entry.autoRoll,
+		};
+
 		if ($parent.is("th") && $parent.attr("data-rd-isroller") === "true") {
 			if ($parent.attr("data-rd-namegeneratorrolls")) {
-				pRollGeneratorTable();
-			} else {
-				Renderer.dice.pRollEntry(modRollMeta.entry, rolledBy, {fnGetMessage: fnGetMessageTable, rollCount: modRollMeta.rollCount, additionalData});
+				return Renderer.dice._pRollerClick_pRollGeneratorTable({
+					$parent,
+					$ele,
+					rolledBy,
+					modRollMeta,
+					rollOpts: sharedRollOpts,
+				});
 			}
-		} else Renderer.dice.pRollEntry(modRollMeta.entry, rolledBy, {rollCount: modRollMeta.rollCount, additionalData});
+
+			return Renderer.dice.pRollEntry(
+				modRollMeta.entry,
+				rolledBy,
+				{
+					...sharedRollOpts,
+					fnGetMessage: Renderer.dice._pRollerClick_fnGetMessageTable.bind(Renderer.dice, $ele),
+				},
+			);
+		}
+
+		return Renderer.dice.pRollEntry(
+			modRollMeta.entry,
+			rolledBy,
+			{
+				...sharedRollOpts,
+			},
+		);
+	},
+
+	_pRollerClick_fnGetMessageTable ($ele, total) {
+		const elesTd = Renderer.dice._pRollerClick_$getTdsFromTotal($ele, total);
+		if (elesTd) {
+			const tableRow = elesTd.map(ele => ele.innerHTML.trim()).filter(it => it).join(" | ");
+			const $row = $(`<span class="message">${tableRow}</span>`);
+			Renderer.dice._pRollerClick_rollInlineRollers($ele);
+			return $row.html();
+		}
+		return Renderer.dice._pRollerClick_getMsgBug(total);
+	},
+
+	// Aka "getTableName", probably
+	_pRollerClick_attemptToGetNameOfRoll ({entry, $ele}) {
+		// Try to use the entry's built-in name
+		if (entry.name) return entry.name;
+
+		// try to use table caption
+		let titleMaybe = $ele.closest(`table:not(.stats)`).children(`caption`).text();
+		if (titleMaybe) return titleMaybe.trim();
+
+		// try to use list item title
+		titleMaybe = $ele.parent().children(`.rd__list-item-name`).text();
+		if (titleMaybe) return titleMaybe.trim().replace(/[.,:]$/, "");
+
+		// use the section title, where applicable
+		titleMaybe = $ele.closest(`div`).children(`.rd__h`).first().find(`.entry-title-inner`).text();
+		if (titleMaybe) {
+			titleMaybe = titleMaybe.trim().replace(/[.,:]$/, "");
+			return titleMaybe;
+		}
+
+		// try to use stats table name row
+		titleMaybe = $ele.closest(`table.stats`).children(`tbody`).first().children(`tr`).first().find(`.rnd-name .stats-name`).text();
+		if (titleMaybe) return titleMaybe.trim();
+
+		if (UrlUtil.getCurrentPage() === UrlUtil.PG_CHARACTERS) {
+			// try use mini-entity name
+			titleMaybe = ($ele.closest(`.chr-entity__row`).find(".chr-entity__ipt-name").val() || "").trim();
+			if (titleMaybe) return titleMaybe;
+		}
+
+		return titleMaybe;
+	},
+
+	_pRollerClick_attemptToGetNameOfRoller ({$ele}) {
+		const $hov = $ele.closest(`.hwin`);
+		if ($hov.length) return $hov.find(`.stats-name`).first().text();
+		const $roll = $ele.closest(`.out-roll-wrp`);
+		if ($roll.length) return $roll.data("name");
+		const $dispPanelTitle = $ele.closest(`.dm-screen-panel`).children(`.panel-control-title`);
+		if ($dispPanelTitle.length) return $dispPanelTitle.text().trim();
+		let name = document.title.replace("- 5etools", "").trim();
+		return name === "DM Screen" ? "Dungeon Master" : name;
+	},
+
+	_pRollerClick_$getTdsFromTotal ($ele, total) {
+		const $table = $ele.closest(`table`);
+		const $tdRoll = $table.find(`td`).filter((i, e) => {
+			const $e = $(e);
+			if (!$e.closest(`table`).is($table)) return false;
+			return total >= Number($e.data("roll-min")) && total <= Number($e.data("roll-max"));
+		});
+		if ($tdRoll.length && $tdRoll.nextAll().length) {
+			return $tdRoll.nextAll().get();
+		}
+		return null;
+	},
+
+	// TODO erm
+	_pRollerClick_rollInlineRollers ($ele) {
+		$ele.find(`.render-roller`).each((i, e) => {
+			const $e = $(e);
+			const r = Renderer.dice.__rollPackedData($e);
+			$e.attr("onclick", `Renderer.dice.__rerollNextInlineResult(this)`);
+			$e.after(` (<span class="result">${r}</span>)`);
+		});
+	},
+
+	_pRollerClick_fnGetMessageGeneratorTable ($ele, ix, total) {
+		const elesTd = Renderer.dice._pRollerClick_$getTdsFromTotal($ele, total);
+		if (elesTd) {
+			const $row = $(`<span class="message">${elesTd[ix].innerHTML.trim()}</span>`);
+			Renderer.dice._pRollerClick_rollInlineRollers($ele);
+			return $row.html();
+		}
+		return Renderer.dice._pRollerClick_getMsgBug(total);
+	},
+
+	async _pRollerClick_pRollGeneratorTable ({$parent, $ele, rolledBy, modRollMeta, rollOpts}) {
+		Renderer.dice.addElement({rolledBy, html: `<i>${rolledBy.label}:</i>`, isMessage: true});
+
+		// Track a total of all rolls--this is a bit meaningless, but this method is expected to return a result value
+		let total = 0;
+
+		const out = [];
+		const numRolls = Number($parent.attr("data-rd-namegeneratorrolls"));
+		const $ths = $ele.closest(`table`).find(`th`);
+		for (let i = 0; i < numRolls; ++i) {
+			const cpyRolledBy = MiscUtil.copy(rolledBy);
+			cpyRolledBy.label = $($ths.get(i + 1)).text().trim();
+
+			const result = await Renderer.dice.pRollEntry(
+				modRollMeta.entry,
+				cpyRolledBy,
+				{
+					...rollOpts,
+					fnGetMessage: Renderer.dice._pRollerClick_fnGetMessageGeneratorTable.bind(Renderer.dice, $ele, i),
+				},
+			);
+			total += result;
+			const elesTd = Renderer.dice._pRollerClick_$getTdsFromTotal($ele, result);
+
+			if (!elesTd) {
+				out.push(`(no result)`);
+				continue;
+			}
+
+			out.push(elesTd[i].innerHTML.trim());
+		}
+
+		Renderer.dice.addElement({rolledBy, html: `= ${out.join(" ")}`, isMessage: true});
+
+		return total;
 	},
 
 	getEventModifiedRollMeta (evt, entry) {
@@ -502,18 +563,17 @@ Renderer.dice = {
 		if (!str) return;
 		if (rolledBy.isUser) Renderer.dice._addHistory(str);
 
-		if (str.startsWith("/")) Renderer.dice._handleCommand(str, rolledBy);
-		else if (str.startsWith("#")) return Renderer.dice._pHandleSavedRoll(str, rolledBy, opts);
-		else {
-			const [head, ...tail] = str.split(":");
-			if (tail.length) {
-				str = tail.join(":");
-				rolledBy.label = head;
-			}
-			const wrpTree = Renderer.dice.lang.getTree3(str);
-			if (!wrpTree) return Renderer.dice._SYMBOL_PARSE_FAILED;
-			return Renderer.dice._pHandleRoll2(wrpTree, rolledBy, opts);
+		if (str.startsWith("/")) return Renderer.dice._pHandleCommand(str, rolledBy);
+		if (str.startsWith("#")) return Renderer.dice._pHandleSavedRoll(str, rolledBy, opts);
+
+		const [head, ...tail] = str.split(":");
+		if (tail.length) {
+			str = tail.join(":");
+			rolledBy.label = head;
 		}
+		const wrpTree = Renderer.dice.lang.getTree3(str);
+		if (!wrpTree) return Renderer.dice._SYMBOL_PARSE_FAILED;
+		return Renderer.dice._pHandleRoll2(wrpTree, rolledBy, opts);
 	},
 
 	/**
@@ -525,6 +585,7 @@ Renderer.dice = {
 	 * @param [opts.isResultUsed] If an input box should be provided for the user to enter the result (manual mode only).
 	 * @param [opts.rollCount]
 	 * @param [opts.additionalData]
+	 * @param [opts.isHidden] If the result should not be posted to the rollbox.
 	 */
 	async pRollEntry (entry, rolledBy, opts) {
 		opts = opts || {};
@@ -536,10 +597,13 @@ Renderer.dice = {
 		const wrpTree = Renderer.dice.lang.getTree3(entry.toRoll);
 		wrpTree.tree.successThresh = entry.successThresh;
 		wrpTree.tree.successMax = entry.successMax;
+		wrpTree.tree.chanceSuccessText = entry.chanceSuccessText;
+		wrpTree.tree.chanceFailureText = entry.chanceFailureText;
+		wrpTree.tree.isColorSuccessFail = entry.isColorSuccessFail;
 
 		// arbitrarily return the result of the highest roll if we roll multiple times
 		const results = [];
-		if (rollCount > 1) Renderer.dice._showMessage(`Rolling twice...`, rolledBy);
+		if (rollCount > 1 && !opts.isHidden) Renderer.dice._showMessage(`Rolling twice...`, rolledBy);
 		for (let i = 0; i < rollCount; ++i) {
 			const result = await Renderer.dice._pHandleRoll2(wrpTree, rolledBy, opts);
 			if (result == null) return null;
@@ -614,11 +678,13 @@ Renderer.dice = {
 	 * @param [opts.pb] User-entered proficiency bonus, to be propagated to the meta.
 	 * @param [opts.summonSpellLevel] User-entered summon spell level, to be propagated to the meta.
 	 * @param [opts.summonClassLevel] User-entered summon class level, to be propagated to the meta.
+	 * @param [opts.target] Generic target number (e.g. save DC, AC) to meet/beat.
+	 * @param [opts.isHidden] If the result should not be posted to the rollbox.
 	 */
 	_pHandleRoll2_automatic (tree, rolledBy, opts) {
 		opts = opts || {};
 
-		Renderer.dice._showBox();
+		if (!opts.isHidden) Renderer.dice._showBox();
 		Renderer.dice._checkHandleName(rolledBy.name);
 		const $out = Renderer.dice._$lastRolledBy;
 
@@ -635,32 +701,45 @@ Renderer.dice = {
 
 			const lbl = rolledBy.label && (!rolledBy.name || rolledBy.label.trim().toLowerCase() !== rolledBy.name.trim().toLowerCase()) ? rolledBy.label : null;
 
-			const totalPart = tree.successThresh
-				? `<span class="roll">${result > (tree.successMax || 100) - tree.successThresh ? "Success!" : "Failure"}</span>`
+			const ptTarget = opts.target != null
+				? result >= opts.target ? ` <b>&geq;${opts.target}</b>` : ` <span class="ve-muted">&lt;${opts.target}</span>`
+				: "";
+
+			const isThreshSuccess = tree.successThresh != null && result > (tree.successMax || 100) - tree.successThresh;
+			const isColorSuccess = tree.isColorSuccessFail || !tree.chanceSuccessText;
+			const isColorFail = tree.isColorSuccessFail || !tree.chanceFailureText;
+			const totalPart = tree.successThresh != null
+				? `<span class="roll ${isThreshSuccess && isColorSuccess ? "roll-max" : !isThreshSuccess && isColorFail ? "roll-min" : ""}">${isThreshSuccess ? (tree.chanceSuccessText || "Success!") : (tree.chanceFailureText || "Failure")}</span>`
 				: `<span class="roll ${allMax ? "roll-max" : allMin ? "roll-min" : ""}">${result}</span>`;
 
 			const title = `${rolledBy.name ? `${rolledBy.name} \u2014 ` : ""}${lbl ? `${lbl}: ` : ""}${tree}`;
 
-			$out.append(`
-				<div class="out-roll-item" title="${title}">
-					<div>
-						${lbl ? `<span class="roll-label">${lbl}: </span>` : ""}
-						${totalPart}
-						<span class="all-rolls ve-muted">${fullHtml}</span>
-						${opts.fnGetMessage ? `<span class="message">${opts.fnGetMessage(result)}</span>` : ""}
-					</div>
-					<div class="out-roll-item-button-wrp">
-						<button title="Copy to input" class="btn btn-default btn-xs btn-copy-roll" onclick="Renderer.dice._$iptRoll.val('${tree.toString().replace(/\s+/g, "")}'); Renderer.dice._$iptRoll.focus()"><span class="glyphicon glyphicon-pencil"></span></button>
-					</div>
-				</div>`);
-
 			ExtensionUtil.doSendRoll({dice: tree.toString(), rolledBy: rolledBy.name, label: lbl});
 
-			Renderer.dice._scrollBottom();
+			if (!opts.isHidden) {
+				$out.append(`
+					<div class="out-roll-item" title="${title}">
+						<div>
+							${lbl ? `<span class="roll-label">${lbl}: </span>` : ""}
+							${totalPart}
+							${ptTarget}
+							<span class="all-rolls ve-muted">${fullHtml}</span>
+							${opts.fnGetMessage ? `<span class="message">${opts.fnGetMessage(result)}</span>` : ""}
+						</div>
+						<div class="out-roll-item-button-wrp">
+							<button title="Copy to input" class="btn btn-default btn-xs btn-copy-roll" onclick="Renderer.dice._$iptRoll.val('${tree.toString().replace(/\s+/g, "")}'); Renderer.dice._$iptRoll.focus()"><span class="glyphicon glyphicon-pencil"></span></button>
+						</div>
+					</div>`);
+
+				Renderer.dice._scrollBottom();
+			}
+
 			return result;
 		} else {
-			$out.append(`<div class="out-roll-item">Invalid input! Try &quot;/help&quot;</div>`);
-			Renderer.dice._scrollBottom();
+			if (!opts.isHidden) {
+				$out.append(`<div class="out-roll-item">Invalid input! Try &quot;/help&quot;</div>`);
+				Renderer.dice._scrollBottom();
+			}
 			return null;
 		}
 	},
@@ -699,20 +778,14 @@ Renderer.dice = {
 		Renderer.dice._showMessage("Invalid input! Try &quot;/help&quot;", Renderer.dice.SYSTEM_USER);
 	},
 
-	_validCommands: new Set(["/c", "/cls", "/clear"]),
-	_handleCommand (com, rolledBy) {
+	_validCommands: new Set(["/c", "/cls", "/clear", "/iterroll"]),
+	async _pHandleCommand (com, rolledBy) {
 		Renderer.dice._showMessage(`<span class="out-roll-item-code">${com}</span>`, rolledBy); // parrot the user's command back to them
-		const PREF_MACRO = "/macro";
 
-		function checkLength (arr, desired) {
-			return arr.length === desired;
-		}
+		const comParsed = Renderer.dice._getParsedCommand(com);
+		const [comOp] = comParsed;
 
-		async function pSave () {
-			await StorageUtil.pSet(VeCt.STORAGE_ROLLER_MACRO, Renderer.dice.storage);
-		}
-
-		if (com === "/help" || com === "/h") {
+		if (comOp === "/help" || comOp === "/h") {
 			Renderer.dice._showMessage(
 				`<ul class="rll__list">
 					<li>Keep highest; <span class="out-roll-item-code">4d6kh3</span></li>
@@ -753,21 +826,25 @@ Renderer.dice = {
 				</ul>
 				Up and down arrow keys cycle input history.<br>
 				Anything before a colon is treated as a label (<span class="out-roll-item-code">Fireball: 8d6</span>)<br>
-Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved macros.<br>
-				Use <span class="out-roll-item-code">${PREF_MACRO} add myName 1d2+3</span> to add (or update) a macro. Macro names should not contain spaces or hashes.<br>
-				Use <span class="out-roll-item-code">${PREF_MACRO} remove myName</span> to remove a macro.<br>
+Use <span class="out-roll-item-code">/macro list</span> to list saved macros.<br>
+				Use <span class="out-roll-item-code">/macro add myName 1d2+3</span> to add (or update) a macro. Macro names should not contain spaces or hashes.<br>
+				Use <span class="out-roll-item-code">/macro remove myName</span> to remove a macro.<br>
 				Use <span class="out-roll-item-code">#myName</span> to roll a macro.<br>
+				Use <span class="out-roll-item-code">/iterroll roll count [target]</span> to roll multiple times, optionally against a target.
 				Use <span class="out-roll-item-code">/clear</span> to clear the roller.`,
 				Renderer.dice.SYSTEM_USER,
 			);
-		} else if (com.startsWith(PREF_MACRO)) {
-			const [_, mode, ...others] = com.split(/\s+/);
+			return;
+		}
+
+		if (comOp === "/macro") {
+			const [, mode, ...others] = comParsed;
 
 			if (!["list", "add", "remove", "clear"].includes(mode)) Renderer.dice._showInvalid();
 			else {
 				switch (mode) {
 					case "list":
-						if (checkLength(others, 0)) {
+						if (!others.length) {
 							Object.keys(Renderer.dice.storage).forEach(name => {
 								Renderer.dice._showMessage(`<span class="out-roll-item-code">#${name}</span> \u2014 ${Renderer.dice.storage[name]}`, Renderer.dice.SYSTEM_USER);
 							});
@@ -776,13 +853,13 @@ Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved mac
 						}
 						break;
 					case "add": {
-						if (checkLength(others, 2)) {
+						if (others.length === 2) {
 							const [name, macro] = others;
 							if (name.includes(" ") || name.includes("#")) Renderer.dice._showInvalid();
 							else {
 								Renderer.dice.storage[name] = macro;
-								pSave()
-									.then(() => Renderer.dice._showMessage(`Saved macro <span class="out-roll-item-code">#${name}</span>`, Renderer.dice.SYSTEM_USER));
+								await Renderer.dice._pSaveMacros();
+								Renderer.dice._showMessage(`Saved macro <span class="out-roll-item-code">#${name}</span>`, Renderer.dice.SYSTEM_USER);
 							}
 						} else {
 							Renderer.dice._showInvalid();
@@ -790,11 +867,11 @@ Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved mac
 						break;
 					}
 					case "remove":
-						if (checkLength(others, 1)) {
+						if (others.length === 1) {
 							if (Renderer.dice.storage[others[0]]) {
 								delete Renderer.dice.storage[others[0]];
-								pSave()
-									.then(() => Renderer.dice._showMessage(`Removed macro <span class="out-roll-item-code">#${others[0]}</span>`, Renderer.dice.SYSTEM_USER));
+								await Renderer.dice._pSaveMacros();
+								Renderer.dice._showMessage(`Removed macro <span class="out-roll-item-code">#${others[0]}</span>`, Renderer.dice.SYSTEM_USER);
 							} else {
 								Renderer.dice._showMessage(`Macro <span class="out-roll-item-code">#${others[0]}</span> not found`, Renderer.dice.SYSTEM_USER);
 							}
@@ -804,17 +881,55 @@ Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved mac
 						break;
 				}
 			}
-		} else if (Renderer.dice._validCommands.has(com)) {
-			switch (com) {
+			return;
+		}
+
+		if (Renderer.dice._validCommands.has(comOp)) {
+			switch (comOp) {
 				case "/c":
 				case "/cls":
 				case "/clear":
 					Renderer.dice._$outRoll.empty();
 					Renderer.dice._$lastRolledBy.empty();
 					Renderer.dice._$lastRolledBy = null;
-					break;
+					return;
+
+				case "/iterroll": {
+					let [, exp, count, target] = comParsed;
+
+					if (!exp) return Renderer.dice._showInvalid();
+					const wrpTree = Renderer.dice.lang.getTree3(exp);
+					if (!wrpTree) return Renderer.dice._showInvalid();
+
+					count = count && !isNaN(count) ? Number(count) : 1;
+					target = target && !isNaN(target) ? Number(target) : undefined;
+
+					for (let i = 0; i < count; ++i) {
+						await Renderer.dice.pRoll2(
+							exp,
+							{
+								name: "Anon",
+							},
+							{
+								target,
+							},
+						);
+					}
+				}
 			}
-		} else Renderer.dice._showInvalid();
+			return;
+		}
+
+		Renderer.dice._showInvalid();
+	},
+
+	async _pSaveMacros () {
+		await StorageUtil.pSet(VeCt.STORAGE_ROLLER_MACRO, Renderer.dice.storage);
+	},
+
+	_getParsedCommand (str) {
+		// TODO(Future) this is probably too naive
+		return str.split(/\s+/);
 	},
 
 	_pHandleSavedRoll (id, rolledBy, opts) {
@@ -827,18 +942,39 @@ Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved mac
 		} else Renderer.dice._showMessage(`Macro <span class="out-roll-item-code">#${id}</span> not found`, Renderer.dice.SYSTEM_USER);
 	},
 
-	addRoll (rolledBy, msgText) {
-		if (!msgText.trim()) return;
+	addRoll ({rolledBy, html, $ele}) {
+		if (html && $ele) throw new Error(`Must specify one of html or $ele!`);
+
+		if (html != null && !html.trim()) return;
+
 		Renderer.dice._showBox();
 		Renderer.dice._checkHandleName(rolledBy.name);
-		Renderer.dice._$outRoll.prepend(`<div class="out-roll-item" title="${rolledBy.name || ""}">${msgText}</div>`);
+
+		if (html) {
+			Renderer.dice._$lastRolledBy.append(`<div class="out-roll-item" title="${(rolledBy.name || "").qq()}">${html}</div>`);
+		} else {
+			$$`<div class="out-roll-item" title="${(rolledBy.name || "").qq()}">${$ele}</div>`
+				.appendTo(Renderer.dice._$lastRolledBy);
+		}
+
 		Renderer.dice._scrollBottom();
 	},
 
-	addElement (rolledBy, $ele) {
+	addElement ({rolledBy, html, $ele}) {
+		if (html && $ele) throw new Error(`Must specify one of html or $ele!`);
+
+		if (html != null && !html.trim()) return;
+
 		Renderer.dice._showBox();
 		Renderer.dice._checkHandleName(rolledBy.name);
-		$$`<div class="out-roll-item out-roll-item--message">${$ele}</div>`.appendTo(Renderer.dice._$lastRolledBy);
+
+		if (html) {
+			Renderer.dice._$lastRolledBy.append(`<div class="out-roll-item out-roll-item--message" title="${(rolledBy.name || "").qq()}">${html}</div>`);
+		} else {
+			$$`<div class="out-roll-item out-roll-item--message" title="${(rolledBy.name || "").qq()}">${$ele}</div>`
+				.appendTo(Renderer.dice._$lastRolledBy);
+		}
+
 		Renderer.dice._scrollBottom();
 	},
 
@@ -1441,11 +1577,13 @@ Renderer.dice.AbstractSymbol = class {
 	_min () { throw new Error("Unimplemented!"); } // minimum value of all _rolls_, not the minimum possible result
 	_max () { throw new Error("Unimplemented!"); } // maximum value of all _rolls_, not the maximum possible result
 	toString () { throw new Error("Unimplemented!"); }
-	addToMeta (meta, html, text) {
+	addToMeta (meta, {text, html = null, md = null} = {}) {
 		if (!meta) return;
-		text = text || html;
+		html = html || text;
+		md = md || text;
 		(meta.html = meta.html || []).push(html);
 		(meta.text = meta.text || []).push(text);
+		(meta.md = meta.md || []).push(md);
 	}
 };
 
@@ -1475,6 +1613,7 @@ Renderer.dice.parsed = {
 
 		for (const mod of mods) {
 			vals.sort(SortUtil.ascSortProp.bind(null, "val")).reverse();
+			const valsAlive = vals.filter(it => !it.isDropped);
 
 			const modNum = mod.numSym[fnName]();
 
@@ -1485,10 +1624,10 @@ Renderer.dice.parsed = {
 				case Renderer.dice.tk.KEEP_LOWEST.type: {
 					const isHighest = mod.modSym.type.endsWith("H");
 
-					const splitPoint = isHighest ? modNum : vals.length - modNum;
+					const splitPoint = isHighest ? modNum : valsAlive.length - modNum;
 
-					const highSlice = vals.slice(0, splitPoint);
-					const lowSlice = vals.slice(splitPoint, vals.length);
+					const highSlice = valsAlive.slice(0, splitPoint);
+					const lowSlice = valsAlive.slice(splitPoint, valsAlive.length);
 
 					switch (mod.modSym.type) {
 						case Renderer.dice.tk.DROP_HIGHEST.type:
@@ -1519,7 +1658,7 @@ Renderer.dice.parsed = {
 						default: throw new Error(`Unimplemented!`);
 					}
 
-					const toReroll = vals.filter(val => fnPartition(val.val, modNum));
+					const toReroll = valsAlive.filter(val => fnPartition(val.val, modNum));
 					toReroll.forEach(val => val.isDropped = true);
 
 					const nuVals = opts.fnGetRerolls(toReroll);
@@ -1546,7 +1685,7 @@ Renderer.dice.parsed = {
 
 					let tries = 999; // limit the maximum explosions to a sane amount
 					let lastLen;
-					let toExplodeNext = vals;
+					let toExplodeNext = valsAlive;
 					do {
 						lastLen = vals.length;
 
@@ -1582,7 +1721,7 @@ Renderer.dice.parsed = {
 						default: throw new Error(`Unimplemented!`);
 					}
 
-					const successes = vals.filter(val => fnPartition(val.val, modNum));
+					const successes = valsAlive.filter(val => fnPartition(val.val, modNum));
 					successes.forEach(val => val.isSuccess = true);
 
 					break;
@@ -1593,9 +1732,9 @@ Renderer.dice.parsed = {
 				case Renderer.dice.tk.MARGIN_SUCCESS_GTEQ.type:
 				case Renderer.dice.tk.MARGIN_SUCCESS_LT.type:
 				case Renderer.dice.tk.MARGIN_SUCCESS_LTEQ.type: {
-					const total = vals.map(it => it.val).reduce((valA, valB) => valA + valB, 0);
+					const total = valsAlive.map(it => it.val).reduce((valA, valB) => valA + valB, 0);
 
-					const subDisplayDice = displayVals.map(r => `[${Renderer.dice.parsed._rollToNumPart(r, opts.faces)}]`).join("+");
+					const subDisplayDice = displayVals.map(r => `[${Renderer.dice.parsed._rollToNumPart_html(r, opts.faces)}]`).join("+");
 
 					let delta;
 					let subDisplay;
@@ -1638,7 +1777,7 @@ Renderer.dice.parsed = {
 		return displayVals;
 	},
 
-	_rollToNumPart (r, faces) {
+	_rollToNumPart_html (r, faces) {
 		if (faces == null) return r.val;
 		return r.val === faces ? `<span class="rll__max--muted">${r.val}</span>` : r.val === 1 ? `<span class="rll__min--muted">${r.val}</span>` : r.val;
 	},
@@ -1671,14 +1810,14 @@ Renderer.dice.parsed = {
 				case Renderer.dice.tk.MAX.type:
 				case Renderer.dice.tk.MIN.type: {
 					const [, ...symExps] = this._nodes;
-					this.addToMeta(meta, `${symFunc.toString()}(`);
+					this.addToMeta(meta, {text: `${symFunc.toString()}(`});
 					const args = [];
 					symExps.forEach((symExp, i) => {
-						if (i !== 0) this.addToMeta(meta, `, `);
+						if (i !== 0) this.addToMeta(meta, {text: `, `});
 						args.push(symExp[fnName](meta));
 					});
 					const out = Math[symFunc.toString()](...args);
-					this.addToMeta(meta, ")");
+					this.addToMeta(meta, {text: ")"});
 					return out;
 				}
 				case Renderer.dice.tk.AVERAGE.type: {
@@ -1769,8 +1908,9 @@ Renderer.dice.parsed = {
 				}).join("+");
 
 				const asText = displayVals.map(v => `(${v.meta.text.join("")})`).join("+");
+				const asMd = displayVals.map(v => `(${v.meta.md.join("")})`).join("+");
 
-				this.addToMeta(meta, asHtml, asText);
+				this.addToMeta(meta, {html: asHtml, text: asText, md: asMd});
 
 				if (isSuccessMode) {
 					return vals.filter(it => !it.isDropped && it.isSuccess).length;
@@ -1778,7 +1918,12 @@ Renderer.dice.parsed = {
 					return vals.filter(it => !it.isDropped).map(it => it.val).sum();
 				}
 			} else {
-				this.addToMeta(meta, `${vals.map(it => `(${it.meta.html.join("")})`).join("+")}`, `${vals.map(it => `(${it.meta.text.join("")})`).join("+")}`);
+				this.addToMeta(
+					meta,
+					["html", "text", "md"].mergeMap(prop => ({
+						[prop]: `${vals.map(it => `(${it.meta[prop].join("")})`).join("+")}`,
+					})),
+				);
 				return vals.map(it => it.val).sum();
 			}
 		}
@@ -1804,25 +1949,25 @@ Renderer.dice.parsed = {
 		_invoke (fnName, meta) {
 			switch (this._node.type) {
 				case Renderer.dice.tk.TYP_NUMBER: {
-					this.addToMeta(meta, this.toString());
+					this.addToMeta(meta, {text: this.toString()});
 					return Number(this._node.value);
 				}
 				case Renderer.dice.tk.TYP_SYMBOL: {
-					if (this._hasParens) this.addToMeta(meta, "(");
+					if (this._hasParens) this.addToMeta(meta, {text: "("});
 					const out = this._node[fnName](meta);
-					if (this._hasParens) this.addToMeta(meta, ")");
+					if (this._hasParens) this.addToMeta(meta, {text: ")"});
 					return out;
 				}
 				case Renderer.dice.tk.PB.type: {
-					this.addToMeta(meta, this.toString(meta));
+					this.addToMeta(meta, {text: this.toString(meta)});
 					return meta.pb == null ? 0 : meta.pb;
 				}
 				case Renderer.dice.tk.SUMMON_SPELL_LEVEL.type: {
-					this.addToMeta(meta, this.toString(meta));
+					this.addToMeta(meta, {text: this.toString(meta)});
 					return meta.summonSpellLevel == null ? 0 : meta.summonSpellLevel;
 				}
 				case Renderer.dice.tk.SUMMON_CLASS_LEVEL.type: {
-					this.addToMeta(meta, this.toString(meta));
+					this.addToMeta(meta, {text: this.toString(meta)});
 					return meta.summonClassLevel == null ? 0 : meta.summonClassLevel;
 				}
 				default: throw new Error(`Unimplemented!`);
@@ -1921,7 +2066,7 @@ Renderer.dice.parsed = {
 				const asHtml = displayRolls.map(r => {
 					if (r.htmlDisplay) return r.htmlDisplay;
 
-					const numPart = Renderer.dice.parsed._rollToNumPart(r, faces);
+					const numPart = Renderer.dice.parsed._rollToNumPart_html(r, faces);
 
 					if (r.isDropped) return `<span class="rll__dropped">[${numPart}]</span>`;
 					else if (r.isExploded) return `<span class="rll__exploded">[</span>${numPart}<span class="rll__exploded">]</span>`;
@@ -1931,10 +2076,20 @@ Renderer.dice.parsed = {
 
 				const asText = displayRolls.map(r => `[${r.val}]`).join("+");
 
+				const asMd = displayRolls.map(r => {
+					if (r.isDropped) return `~~[${r.val}]~~`;
+					else if (r.isExploded) return `_[${r.val}]_`;
+					else if (r.isSuccess) return `**[${r.val}]**`;
+					else return `[${r.val}]`;
+				}).join("+");
+
 				this.addToMeta(
 					meta,
-					asHtml,
-					asText,
+					{
+						html: asHtml,
+						text: asText,
+						md: asMd,
+					},
 				);
 			}
 
@@ -1985,7 +2140,7 @@ Renderer.dice.parsed = {
 			const view = this._nodes.slice();
 			let val = view.pop()[fnName](meta);
 			while (view.length) {
-				this.addToMeta(meta, "^");
+				this.addToMeta(meta, {text: "^"});
 				val = view.pop()[fnName](meta) ** val;
 			}
 			return val;
@@ -2015,10 +2170,10 @@ Renderer.dice.parsed = {
 
 			for (let i = 1; i < this._nodes.length; i += 2) {
 				if (this._nodes[i].eq(Renderer.dice.tk.MULT)) {
-					this.addToMeta(meta, " × ");
+					this.addToMeta(meta, {text: " × "});
 					out *= this._nodes[i + 1][fnName](meta);
 				} else if (this._nodes[i].eq(Renderer.dice.tk.DIV)) {
-					this.addToMeta(meta, " ÷ ");
+					this.addToMeta(meta, {text: " ÷ "});
 					out /= this._nodes[i + 1][fnName](meta);
 				} else throw new Error(`Unimplemented!`);
 			}
@@ -2054,7 +2209,7 @@ Renderer.dice.parsed = {
 			let isNeg = false;
 			if (view[0].eq(Renderer.dice.tk.ADD) || view[0].eq(Renderer.dice.tk.SUB)) {
 				isNeg = view.shift().eq(Renderer.dice.tk.SUB);
-				if (isNeg) this.addToMeta(meta, "-");
+				if (isNeg) this.addToMeta(meta, {text: "-"});
 			}
 
 			let out = view[0][fnName](meta);
@@ -2062,10 +2217,10 @@ Renderer.dice.parsed = {
 
 			for (let i = 1; i < view.length; i += 2) {
 				if (view[i].eq(Renderer.dice.tk.ADD)) {
-					this.addToMeta(meta, " + ");
+					this.addToMeta(meta, {text: " + "});
 					out += view[i + 1][fnName](meta);
 				} else if (view[i].eq(Renderer.dice.tk.SUB)) {
-					this.addToMeta(meta, " - ");
+					this.addToMeta(meta, {text: " - "});
 					out -= view[i + 1][fnName](meta);
 				} else throw new Error(`Unimplemented!`);
 			}

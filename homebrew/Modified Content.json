@@ -7460,6 +7460,141 @@
 				"MW"
 			],
 			"hasToken": true
+		},
+		{
+			"name": "Spark Mephit",
+			"source": "MOD",
+			"page": 0,
+			"size": "S",
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 17,
+				"formula": "5d6"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 5,
+			"dex": 14,
+			"con": 10,
+			"int": 9,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"slashing"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Auran"
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (1/Day)",
+					"headerEntries": [
+						"The mephit can innately cast {@spell blindness/deafness}, requiring no material components. Its innate spellcasting ability is Charisma. The mephit can only use the deafness option of the spell, which takes the form of a deafening thunderclap."
+					],
+					"will": [	
+						"{@spell sleep}"
+					],
+					"hidden": [
+						"will"
+					],
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Death Burst",
+					"entries": [
+						"When the mephit dies, it explodes in a burst of dust. Each creature within 5 feet of it must then succeed on a {@dc 10} Dexterity saving throw or take {@damage 3d4} lightning damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}4 ({@damage 1d4 + 2}) slashing damage."
+					]
+				},
+				{
+					"name": "Lightning Breath {@recharge}",
+					"entries": [
+						"The mephit exhales a 15-foot cone of crackling lightning. Each creature in that area must succeed on a {@dc 10} Dexterity saving throw or take {@damage 3d4} lightning damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Summon Mephits (1/Day)",
+					"entries": [
+						"The mephit has a {@chance 25|25 percent|25% summoning chance} chance of summoning {@dice 1d4} mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+					],
+					"_version": {
+						"name": "Dust Mephit (Summoner)",
+						"addAs": "action"
+					}
+				}
+			],
+			"environment": [
+				"sky"
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/mephit.mp3"
+			},
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
+			],
+			"languageTags": [
+				"AU"
+			],
+			"damageTags": [
+				"L"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"unconscious"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"monsterFluff": [

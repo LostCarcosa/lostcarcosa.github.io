@@ -18,7 +18,7 @@ Only "official" (that is, published by WotC) data is to be included in the site.
 - Anything published in the Dragon+ magazine.
 - Anything veto'd by the maintainers of this repository.
 
-Prioritise RAW above all else. Aim to provide a 1:1 copy of the original data. Obvious typos (for instance, mathematical errors in creature statblocks) may be corrected at the discretion of the maintainer(s).
+Prioritise RAW above all else. Aim to provide a 1:1 copy of the original data. Obvious typos (for instance, mathematical errors in creature stat blocks) may be corrected at the discretion of the maintainer(s).
 
 Aim to use the latest version of any published material. Older versions which are sufficiently different (and relevant to community interests) can be moved to the homebrew repository.
 
@@ -59,7 +59,7 @@ Any language feature which is available in both main-line Chrome and main-line F
 
 - When "tagging" references in data (e.g. `{@creature goblin}`), the following rules apply:
 	- Only tag references which are _intended as references_. For example, the Wizard class in `You gain one cantrip of your choice from the wizard spell list` should be tagged, whereas the Wizard class in `Together, a group of seven powerful wizards sought to contain the demon` should not be tagged. One is a reference to the mechanical class, one is merely the casual usage of the word "wizard."
-	- In a similar vein, never tag anything within a `quote`-type block. Even if the quote directly refers to a specific creature, we can assume the quote is from a universe/perspective in which (for example) statblocks don't exist, and therefore the tag should be omitted to maintain the flavor of the quote.
+	- In a similar vein, never tag anything within a `quote`-type block. Even if the quote directly refers to a specific creature, we can assume the quote is from a universe/perspective in which (for example) stat blocks don't exist, and therefore the tag should be omitted to maintain the flavor of the quote.
 	- Within data from a source, avoid referencing content from a source printed after the publication of that source. For example, MTF content might reference SCAG deities, but SCAG deities should refrain from referencing MTF content.
 
 ### JSON Cleaning
@@ -123,6 +123,19 @@ Do `npm run version-bump -- [OPTION]`, where `[OPTION]` is one of the following:
 It will first run the tests and fail to increase the version if the tests fail.
 It will then automatically replace the version in the files where it needs to be replaced, create a commit with the message `chore(version): bump` and create a tag (in the form `v1.2.3`) at the commit.
 This feature can be easily disabled by doing `npm config set git-tag-version false`.
+
+### Service Worker
+
+The service worker--which adds a client-side network caching layer, improving performance and allowing offline use--is not committed to the repository, and so must (optionally) be built locally. This can be done using either:
+
+- `npm run build:sw`, to build a development version which outputs useful log messages
+- `npm run build:sw:prod`, to build a production version
+
+Both versions handle caching for the same files, which is an index of your local files on disk.
+
+Note that building the service worker is optional.
+
+Note that while using the service worker, some files are served cache-first (see the comments in the service worker files for more information). Care should be taken to either disable or work around the service worker when developing locally, as local changes may not otherwise be visible when refreshing a page.
 
 ---
 

@@ -4,9 +4,10 @@ const JSON_URL = "data/renderdemo.json";
 const STORAGE_LOCATION = "demoInput";
 
 window.addEventListener("load", async () => {
+	await BrewUtil2.pInit();
 	const rendererType = await StorageUtil.pGetForPage("renderer");
-	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
-	BrewUtil.pAddBrewData(); // don't await, as this is only used for tags
+	ExcludeUtil.pInitialise().then(null); // don't await, as this is only used for search
+	BrewUtil2.pGetBrewProcessed(); // don't await, as this is only used for tags
 	const data = await DataUtil.loadJSON(JSON_URL);
 	return initDemo(data, rendererType);
 });
@@ -49,12 +50,7 @@ async function initDemo (data, rendererType) {
 	$selRenderer.val(rendererType || "html");
 
 	// init editor
-	const editor = ace.edit("jsoninput");
-	editor.setOptions({
-		wrap: true,
-		showPrintMargin: false,
-		tabSize: 2,
-	});
+	const editor = EditorUtil.initEditor("jsoninput", {mode: "ace/mode/json"});
 
 	function demoRender () {
 		$msg.html("");

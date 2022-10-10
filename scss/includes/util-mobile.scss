@@ -2,7 +2,7 @@
 
 // If it's anything less than full desktop size, enable these styles
 .mobile-ish__ {
-	@media only screen and (min-width: $width-screen-lg) {
+	@media only screen and (min-width: $width-screen-lg--min) {
 		&visible {
 			display: none !important;
 		}
@@ -18,14 +18,26 @@
 			flex-direction: column !important;
 		}
 
+		&ve-flex-ai-start {
+			align-items: flex-start !important;
+		}
+
+		&w-100 {
+			width: 100% !important;
+		}
+
 		&mr-0 {
 			margin-right: 0 !important;
+		}
+
+		&mb-2 {
+			margin-bottom: ($spacer * 0.5) !important;
 		}
 	}
 }
 
 .mobile__ {
-	@media only screen and (min-width: $width-screen-sm) {
+	@media only screen and (min-width: $width-screen-sm--min) {
 		&visible {
 			display: none !important;
 		}
@@ -38,6 +50,12 @@
 
 		&text-center {
 			text-align: center !important;
+		}
+
+		&text-clip-ellipsis {
+			white-space: nowrap !important;
+			text-overflow: ellipsis !important;
+			overflow: hidden !important;
 		}
 
 		&ve-flex-col {

@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.11.13",
+	"version": "1.11.27",
 
 	"definitions" : {
 		"metaBlock": {
@@ -15,7 +15,8 @@
 					"properties": {
 						"monster": {
 							"type": "array",
-							"items": {"type": "string"}
+							"items": {"type": "string"},
+							"uniqueItems": true
 						}
 					}
 				},
@@ -31,6 +32,11 @@
 			}
 		},
 
+		"page": {
+			"$$ifSite": {"type": "integer"},
+			"$$ifBrew": {"type": ["integer", "string"]}
+		},
+
 		"otherSources": {
 			"type": "array",
 			"items": {
@@ -40,14 +46,15 @@
 						"type": "string"
 					},
 					"page": {
-						"type": "integer"
+						"$ref": "#/definitions/page"
 					}
 				},
 				"required": [
 					"source"
 				],
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"additionalSources": {
@@ -59,14 +66,15 @@
 						"type": "string"
 					},
 					"page": {
-						"type": "integer"
+						"$ref": "#/definitions/page"
 					}
 				},
 				"required": [
 					"source"
 				],
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"reprintedAs": {
@@ -93,7 +101,52 @@
 						"required": ["tag", "uid"]
 					}
 				]
-			}
+			},
+			"uniqueItems": true
+		},
+
+		"tagNameStats": {
+			"type": "string",
+			"enum": [
+				"spell",
+				"item",
+				"creature",
+				"condition",
+				"disease",
+				"status",
+				"background",
+				"race",
+				"optfeature",
+				"reward",
+				"feat",
+				"psionic",
+				"object",
+				"cult",
+				"boon",
+				"trap",
+				"hazard",
+				"deity",
+				"variantrule",
+				"charoption",
+				"vehicle",
+				"vehupgrade",
+				"class",
+				"action",
+				"language",
+				"classFeature",
+				"subclassFeature",
+				"table",
+				"recipe",
+				"skill",
+				"sense"
+			]
+		},
+
+		"propNameStats": {
+			"type": "string",
+			"enum": [
+				"subclass"
+			]
 		},
 
 		"languageNameLower": {
@@ -153,7 +206,8 @@
 								"type": "array",
 								"items": {
 									"$ref": "#/definitions/languageNameLower"
-								}
+								},
+								"uniqueItems": true
 							},
 							"count": {
 								"type": "integer"
@@ -162,7 +216,8 @@
 						"additionalProperties": false
 					}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"toolNameLower": {
@@ -200,7 +255,8 @@
 					"thieves' tools",
 					"poisoner's kit",
 					"vehicles (land)",
-					"vehicles (water)"
+					"vehicles (water)",
+					"vehicles (space)"
 				]
 			}
 		},
@@ -243,6 +299,7 @@
 					"poisoner's kit": {"type": "boolean"},
 					"vehicles (land)": {"type": "boolean"},
 					"vehicles (water)": {"type": "boolean"},
+					"vehicles (space)": {"type": "boolean"},
 
 					"choose": {
 						"type": "object",
@@ -254,7 +311,8 @@
 										{"$ref": "#/definitions/toolNameLower"},
 										{"type": "string", "enum": ["anyArtisansTool"]}
 									]
-								}
+								},
+								"uniqueItems": true
 							},
 							"count": {
 								"type": "integer"
@@ -266,7 +324,8 @@
 				"$$ifBrew": {
 					"additionalProperties": {"type": "boolean"}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"skillNameLower": {
@@ -330,7 +389,8 @@
 								"type": "array",
 								"items": {
 									"$ref": "#/definitions/skillNameLower"
-								}
+								},
+								"uniqueItems": true
 							},
 							"count": {
 								"type": "integer"
@@ -404,6 +464,7 @@
 					"poisoner's kit": {"type": "boolean"},
 					"vehicles (land)": {"type": "boolean"},
 					"vehicles (water)": {"type": "boolean"},
+					"vehicles (space)": {"type": "boolean"},
 
 
 
@@ -464,7 +525,8 @@
 									"additionalProperties": false
 								}
 							]
-						}
+						},
+						"uniqueItems": true
 					}
 				},
 				"$$ifSite": {
@@ -473,7 +535,8 @@
 				"$$ifBrew": {
 					"additionalProperties": {"type": "boolean"}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"weaponProficiencies": {
@@ -540,7 +603,8 @@
 					}
 				},
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"armorProficiencies": {
@@ -554,7 +618,8 @@
 					"shield|phb": {"type": "boolean"}
 				},
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"savingThrowProficiencies": {
@@ -583,7 +648,8 @@
 										"wis",
 										"cha"
 									]
-								}
+								},
+								"uniqueItems": true
 							},
 							"count": {"type": "integer"}
 						},
@@ -592,7 +658,8 @@
 					}
 				},
 				"additionalProperties": false
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"expertise": {
@@ -654,9 +721,11 @@
 					"thieves' tools": {"type": "boolean"},
 					"vehicles (land)": {"type": "boolean"},
 					"vehicles (water)": {"type": "boolean"},
+					"vehicles (space)": {"type": "boolean"},
 					"poisoner's kit": {"type": "boolean"}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"additionalFeatsArray": {
@@ -667,7 +736,8 @@
 					"any": {"type": "integer"}
 				},
 				"additionalProperties": {"type": "boolean"}
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"proficiencyTag": {
@@ -742,7 +812,8 @@
 											"fly",
 											"swim"
 										]
-									}
+									},
+									"uniqueItems": true
 								},
 								"amount": {
 									"type": "integer"
@@ -761,31 +832,36 @@
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								},
 								"burrow": {
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								},
 								"climb": {
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								},
 								"fly": {
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								},
 								"swim": {
 									"type": "array",
 									"items": {
 										"$ref": "#/definitions/_speedVal"
-									}
+									},
+									"uniqueItems": true
 								}
 							}
 						}
@@ -943,6 +1019,23 @@
 									"type": "string"
 								},
 								"subrace": {
+									"type": "string"
+								}
+							},
+							"required": ["name"],
+							"additionalProperties": false
+						}
+					},
+					"background": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"displayEntry": {
+									"description": "Optional long-form name to be used in the rendered entity.",
 									"type": "string"
 								}
 							},
@@ -1173,7 +1266,8 @@
 								"required": ["immune"]
 							}
 						]
-					}
+					},
+					"uniqueItems": true
 				},
 				{
 					"type": "null"
@@ -1203,7 +1297,8 @@
 						}
 					}
 				]
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"damageResistArray": {
@@ -1245,7 +1340,8 @@
 								"required": ["resist"]
 							}
 						]
-					}
+					},
+					"uniqueItems": true
 				},
 				{
 					"type": "null"
@@ -1275,7 +1371,8 @@
 						}
 					}
 				]
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"damageVulnerabilityArray":  {
@@ -1317,7 +1414,8 @@
 								"required": ["vulnerable"]
 							}
 						]
-					}
+					},
+					"uniqueItems": true
 				},
 				{
 					"type": "null"
@@ -1347,7 +1445,8 @@
 						}
 					}
 				]
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"conditionImmunityArray": {
@@ -1386,7 +1485,8 @@
 								"required": ["conditionImmune"]
 							}
 						]
-					}
+					},
+					"uniqueItems": true
 				},
 				{
 					"type": "null"
@@ -1416,7 +1516,8 @@
 						}
 					}
 				]
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"resourcesArray": {
@@ -1433,7 +1534,23 @@
 					"faces": {"type": ["integer", "string"]}
 				},
 				"required": ["name", "type"]
-			}
+			},
+			"uniqueItems": true
+		},
+
+		"sensesArray": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"propertyNames": {
+					"enum": ["blindsight", "darkvision", "tremorsense", "truesight"]
+				},
+				"additionalProperties": {
+					"type": "integer"
+				},
+				"minProperties": 1
+			},
+			"uniqueItems": true
 		},
 
 		"consumesObject": {
@@ -1752,6 +1869,16 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "replaceSpells"},
+						"spells": {"type": "object"},
+						"daily": {"type": "object"}
+					},
+					"required": ["mode"],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"mode": {"const": "removeSpells"},
 						"spells": {"type": "object"},
 						"daily": {"type": "object"}
 					},
@@ -2186,7 +2313,8 @@
 										"items":{
 											"type": "string",
 											"enum": ["str", "dex", "con", "int", "wis", "cha"]
-										}
+										},
+										"uniqueItems": true
 									}
 								},
 								"required": ["choose"],
@@ -2267,6 +2395,7 @@
 										"equipmentType": {
 											"type": "string",
 											"enum": [
+												"weapon",
 												"weaponSimple",
 												"weaponSimpleMelee",
 												"weaponMartial",
@@ -2361,12 +2490,87 @@
 			}
 		},
 
+		"adventureBookData": {
+			"type": "array",
+			"items": {"$ref": "entry.json"}
+		},
+
+		"optionalfeatureProgression": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {"type": "string"},
+					"featureType": {
+						"type": "array",
+						"items": {"$ref": "#/definitions/dataOptionalfeatureType"},
+						"uniqueItems": true
+					},
+					"progression": {
+						"oneOf": [
+							{
+								"type": "array",
+								"description": "Features gained when the total count of features increases according to level.",
+								"items": {"type": "integer"},
+								"minItems": 20,
+								"maxItems": 20
+							},
+							{
+								"type": "object",
+								"description": "Features gained at the exact levels specified.",
+								"patternProperties": {
+									"^\\d+$": {"type": "integer"}
+								},
+								"additionalProperties": false
+							},
+							{
+								"type": "object",
+								"description": "Features gained at the level this feature is gained.",
+								"properties": {
+									"*": {"type": "integer"}
+								},
+								"additionalProperties": false
+							}
+						]
+					},
+					"required": {
+						"oneOf": [
+							{
+								"type": "array",
+								"items": {"type": "array", "items": {"type": "string"}},
+								"minItems": 20,
+								"maxItems": 20
+							},
+							{
+								"type": "object",
+								"patternProperties": {
+									"^\\d+$": {"type": "array", "items": {"type": "string"}}
+								},
+								"additionalProperties": false
+							}
+						]
+					}
+				},
+				"required": ["name", "featureType", "progression"]
+			}
+		},
+
 		"foundryDataObject": {
 			"type": "object"
 		},
 
 		"foundryFlagsObject": {
 			"type": "object"
+		},
+
+		"foundryAdvancementObject": {
+			"type": "object"
+		},
+
+		"foundryAdvancementsArray": {
+			"type": "array",
+			"items": {"$ref": "#/definitions/foundryAdvancementObject"},
+			"uniqueItems": true
 		},
 
 		"foundryImg": {
@@ -2395,10 +2599,17 @@
 						"additionalProperties": false
 					}
 				},
-				"disabled": {"type": "boolean"}
+				"disabled": {"const": true},
+				"transfer": {"const": true}
 			},
 			"required": ["changes"],
 			"additionalProperties": false
+		},
+
+		"foundryEffectsArray": {
+			"type": "array",
+			"items": {"$ref": "#/definitions/foundryEffectObject"},
+			"uniqueItems": true
 		},
 
 		"foundrySideDataGenericArray": {
@@ -2432,6 +2643,7 @@
 					"source": {"type": "string"},
 
 					"entries": {"type": "array", "items": {"$ref": "entry.json"}},
+					"isIgnored": {"const": true},
 
 					"data": {"$ref": "#/definitions/foundryDataObject"},
 					"actorDataMod": {"type": "object"},

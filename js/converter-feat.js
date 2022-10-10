@@ -120,7 +120,9 @@ class FeatParser extends BaseParser {
 				if (mLevel) return pre.level = Number(mLevel.groups.level);
 
 				const mFeat = /^(?<feat>.*?) feat$/i.exec(pt);
-				if (mFeat) return pre.feat = mFeat.groups.feat.toLowerCase().trim();
+				if (mFeat) {
+					return (pre.feat = pre.feat || []).push(mFeat.groups.feat.toLowerCase().trim());
+				}
 
 				const mAlignment = /^(?<align>.*?) alignment/i.exec(pt);
 				if (mAlignment) {
@@ -154,7 +156,7 @@ class FeatParser extends BaseParser {
 
 	static _setAbility (feat, options) {
 		const walker = MiscUtil.getWalker({
-			keyBlacklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLACKLIST,
+			keyBlocklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLOCKLIST,
 			isNoModification: true,
 		});
 		walker.walk(
@@ -183,7 +185,7 @@ class FeatParser extends BaseParser {
 						}
 
 						obj.items.shift();
-					} else if (typeof obj.items[0] === "string" && /^increase one ability score of your choice by 1/i.test(obj.items[0])) {
+					} else if (typeof obj.items[0] === "string" && /^increase (?:one|an) ability score of your choice by 1/i.test(obj.items[0])) {
 						feat.ability = [
 							{
 								choose: {
