@@ -181,16 +181,7 @@
 				}
 			],
 			"entries": [
-				"Choose a creature you can see within 90 feet. The target must make a successful Wisdom saving throw or be restrained by chains of psychic force and take {@damage 6d8} bludgeoning damage. A {@condition restrained} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save. While {@condition restrained} in this way, the creature also takes {@damage 4d8} bludgeoning damage at the start of each of your turns."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the duration is extended by 1 round for each slot level above 3rd."
-					]
-				}
+				"Choose a creature you can see within 90 feet. The target must make a successful Strength saving throw or be restrained by magical iron chains and take {@damage 6d8} bludgeoning damage. A {@condition restrained} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save. While {@condition restrained} in this way, the creature also takes {@damage 4d8} bludgeoning damage at the start of each of your turns."
 			]
 		}
 }

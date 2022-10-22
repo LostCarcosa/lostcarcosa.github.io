@@ -1,22 +1,6 @@
 {
 	"feat": [
 		{
-			"name": "Dragon Wings",
-			"source": "UAFeatsForRaces",
-			"effects": [
-				{
-					"name": "Flying Speed",
-					"changes": [
-						{
-							"key": "data.attributes.movement.fly",
-							"mode": "UPGRADE",
-							"value": 20
-						}
-					]
-				}
-			]
-		},
-		{
 			"name": "Mobile",
 			"source": "PHB",
 			"effects": [
@@ -27,22 +11,6 @@
 							"key": "data.attributes.movement.walk",
 							"mode": "ADD",
 							"value": 10
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Squat Nimbleness",
-			"source": "UAFeatsForRaces",
-			"effects": [
-				{
-					"name": "Movement Speed Increase",
-					"changes": [
-						{
-							"key": "data.attributes.movement.walk",
-							"mode": "ADD",
-							"value": 5
 						}
 					]
 				}
@@ -168,10 +136,6 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Close Quarters Shooter|UALightDarkUnderdark"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Defense"
 						},
 						{
@@ -184,39 +148,11 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Mariner|UAWaterborneAdventures"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Protection"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Tunnel Fighter|UALightDarkUnderdark"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Two-Weapon Fighting"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Superior Technique|UAClassFeatureVariants"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Blind Fighting|UAClassFeatureVariants"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Interception|UAClassFeatureVariants"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Thrown Weapon Fighting|UAClassFeatureVariants"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Unarmed Fighting|UAClassFeatureVariants"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -281,18 +217,6 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Twinned Spell"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Elemental Spell|UAClassFeatureVariants"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Seeking Spell|UAClassFeatureVariants"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Unerring Spell|UAClassFeatureVariants"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -397,23 +321,11 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Arcane Gunslinger|UAMM"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Armor of Shadows|PHB"
 						},
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Ascendant Step|PHB"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Aspect of the Moon|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Aspect of the Moon|UAWAW"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -437,23 +349,7 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Bond of the Talisman|UACFV"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Book of Ancient Secrets|PHB"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Burning Hex|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Caiphon's Beacon|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Chain Master's Fury|UACFV"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -461,31 +357,7 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Chilling Hex|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Chronicle of the Raven Queen|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Claw of Acamar|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Cloak of Baalzebul|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Cloak of Flies|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Cloak of Flies|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Curse Bringer|UAWAW"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -497,23 +369,11 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Eldritch Armor|UACFV"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Eldritch Mind|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Eldritch Mind|UACFV"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Eldritch Sight|PHB"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Eldritch Smite|UARCO"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -533,23 +393,7 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Far Scribe|UACFV"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Fiendish Vigor|PHB"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Frost Lance|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Frost Lance|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Gaze of Khirad|UAWAW"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -557,23 +401,11 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Ghostly Gaze|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Ghostly Gaze|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Gift of the Depths|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Gift of the Depths|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Gift of the Ever-Living Ones|UARCO"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -585,31 +417,7 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Gift of the Protectors|UACFV"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Grasp of Hadar|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Grasp of Hadar|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Grasp of Hadar|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Green Lord's Gift|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Improved Pact Weapon|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Improved Pact Weapon|UAWAW"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -621,31 +429,11 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Investment of the Chain Master|UACFV"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Kiss of Mephistopheles|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Kiss of Mephistopheles|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Lance of Lethargy|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Lifedrinker|PHB"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Mace of Dispater|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Maddening Hex|UARCO"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -673,10 +461,6 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Moon Bow|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "One with Shadows|PHB"
 						},
 						{
@@ -685,35 +469,11 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Path of the Seeker|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Protection of the Talisman|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Protection of the Talisman|UACFV"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Raven Queen's Blessing|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Rebuke of the Talisman|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Rebuke of the Talisman|UACFV"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Relentless Hex|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Relentless Hex|UAWAW"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -729,31 +489,11 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Sea Twins' Gift|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Seeker's Speech|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Shroud of Shadow|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Shroud of Shadow|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Shroud of Ulban|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Sign of Ill Omen|PHB"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Superior Pact Weapon|UAWAW"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -765,27 +505,11 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Tomb of Levistus|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Tomb of Levistus|UAWAW"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Tomb of Levistus|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Trickster's Escape|UARCO"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Trickster's Escape|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Ultimate Pact Weapon|UAWAW"
 						},
 						{
 							"type": "refOptionalfeature",
