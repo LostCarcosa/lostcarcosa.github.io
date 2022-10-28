@@ -244,10 +244,6 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Disarming Attack"
-						},
-						{
-							"type": "refOptionalfeature",
 							"optionalfeature": "Distracting Strike"
 						},
 						{

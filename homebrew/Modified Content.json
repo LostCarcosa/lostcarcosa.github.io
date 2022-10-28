@@ -17,27 +17,48 @@
 				"targetSchema": "1"
 			}
 		],
-		"skills": {
-			"Network": [
-				"Network is a charisma-based skill that has replaced performance. Networking is essentially the skill of general socialization- the ability to quickly make acquaintances and contacts in a place and leverage them for your uses. You might be asked to roll a Network check when you are trying to trawl bars for information about a quest, or attempting to leverage your influence into an audience with the local authority."
-			],
-			"Occult": [
-				"Occult is an intelligence-based skill focused on studying the eldritch and otherworldly. It may be used for recalling knowledge about the occult, or when interacting with cult artifacts or rituals."
-			],
-			"Streetwise": [
-				"Streetwise is a dexterity-based skill that represents knowledge and familiarity with cities, towns, and otherwise making your way around crowded urban environments, as well as dealing with their rougher denizens. You might be asked to roll a Dexterity (Streetwise) check when trying to locate an underground black market or a local information dealer."
-			],
-			"Wreck": [
-				"Anybody can break things, but it takes some skill to break things {@i well}. Wreck is a strength-based skill that does pretty much what it sonuds like- it breaks things efficiently and while minimizing consequences. You might be called on to make a Strength (Wreck) check when busting down a door, but you might also make an Intelligence (Wreck) check to safely disable an active ritual device."
-			]
-			
-		},
+		
 		"optionalFeatureTypes": {
 			"F:BR": "Fighter; Banneret Rallies"
 		},
 		"dateAdded": 1647935526,
 		"dateLastModified": 1647935526
 	},
+	"skills": [
+		{
+			"name": "Network",
+			"source": "MOD",
+			"page": 0,
+			"entries": [
+				"Network is a charisma-based skill that has replaced performance. Networking is essentially the skill of general socialization- the ability to quickly make acquaintances and contacts in a place and leverage them for your uses. You might be asked to roll a Network check when you are trying to trawl bars for information about a quest, or attempting to leverage your influence into an audience with the local authority."
+			]
+		},
+		{
+			"name": "Network",
+			"source": "MOD",
+			"page": 0,
+			"entries": [
+				"Occult is an intelligence-based skill focused on studying the eldritch and otherworldly. It may be used for recalling knowledge about the occult, or when interacting with cult artifacts or rituals."
+			]
+		},
+		{
+			"name": "Streetwise",
+			"source": "MOD",
+			"page": 0,
+			"entries": [
+				"Streetwise is a dexterity-based skill that represents knowledge and familiarity with cities, towns, and otherwise making your way around crowded urban environments, as well as dealing with their rougher denizens. You might be asked to roll a Dexterity (Streetwise) check when trying to locate an underground black market or a local information dealer."
+			]
+		},
+		{
+			"name": "Wreck",
+			"source": "MOD",
+			"page": 0,
+			"entries": [
+				"Anybody can break things, but it takes some skill to break things {@i well}. Wreck is a Strength-based skill that does pretty much what it sonuds like- it breaks things efficiently and while minimizing consequences. You might be called on to make a Strength (Wreck) check when busting down a door, but you might also make an Intelligence (Wreck) check to safely disable an active ritual device."
+			]
+		}
+		
+	],
 	"action": [
 		{
 			"name": "Analyze",
@@ -6061,6 +6082,7 @@
 					"name": "Death's Door",
 					"entries": [
 						"Going to 0 hit points (or lower) no longer knocks you unconscious or makes you start bleeding out. Instead, you arrive at {@condition Death's Door|MOD}. Unlike in 5e, you are {@i not} unconscious or incapacitated while at death's door, and you can continue to take actions under some constraints (see the {@condition Death's Door|MOD} condition).",
+						"However, if you take Massive Damage (damage which is greater than or equal to your current hit points plus your maximum hit points), you skip Death's Door and immediately collapse, as if you had failed all three saving throws (see Mortality, below).",
 						{
 							"type": "inset",
 							"name": "Recovering",
@@ -6089,7 +6111,7 @@
 							"type": "table",
 							"caption": "Mortality Result",
 							"colLabels": [
-								"{@dice 1d6}",
+								"{@dice 1d8}",
 								"Result"
 							],
 							"colStyles": [
@@ -6102,11 +6124,11 @@
 									"You die."
 								],
 								[
-									"2-5",
+									"2-7",
 									"Your character survives, but suffers a severe lingering injury and is removed from the encounter. Resurrection magic can return your character back to functioning form; otherwise, they cannot meaningfully contribute until they spend at least an hour recovering."
 								],
 								[
-									"6",
+									"8",
 									"Your character survives without lasting harm, though they are removed from the encounter. Resurrection magic can return your character back to functioning form; otherwise, they cannot meaningfully contribute until they spend at least an hour recovering."
 								]
 							]
@@ -6543,6 +6565,30 @@
 								}
 							]
 						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Moving an Allied Creature",
+			"source": "MOD",
+			"entries": [
+				"A collection of rules relating to grabbing and moving allied creatures in combat, mostly recorded so I can be consistent.",
+				{
+					"type": "entries",
+					"name": "Grabbing an Ally",
+					"entries": [
+						"In order to grab and reposition an ally, you must grapple them as usual by taking the Attack action and using one attack to make a grapple. However, an ally can choose to not resist the grapple, automatically allowing you to grapple them.",
+						"Dragging an ally still halves your movement."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Stuck Allies",
+					"entries": [
+						"Sometimes, your allies {@i cannot} move- they might be grappled by an enemy, held in place by vines, or just too terrified to move. Generally, you cannot drag an ally who is held in place by an external, physical impediment (such as a grapple) but {@i can} drag allies who are frozen due to internal or ethereal ones (i.e paralysis).",
+						"Grapples are common enough to deserve some special rules. If your ally is {@condition grappled} by another creature, you can try to break them free as part of the action taken to grapple your ally, making a Strength check against the grapple's DC. ",
+						"Other effects are too context-dependent to make a general rule, and will need to rely on rulings."
 					]
 				}
 			]

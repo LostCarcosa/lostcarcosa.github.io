@@ -110,7 +110,7 @@
 				{
 					"type": "list",
 					"items": [
-						"You ignore the loading quality of crossbows with which you are proficient, and you no longer need a free hand to supply ammunition to your crossbow.",
+						"You may choose to ignore the loading quality of crossbows with which you are proficient.",
 						"Being within 5 feet of a hostile creature does not impose disadvantage on your ranged attack rolls with a crossbow against that creature (though you still have disadvantage against creatures more than 5 feet away).",
 						"When you use the {@action Attack} action and attack with a one-handed weapon, you can use a bonus action to attack with a {@item hand crossbow|phb} you are holding."
 					]
