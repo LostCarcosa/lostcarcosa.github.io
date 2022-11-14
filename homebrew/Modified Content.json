@@ -1004,7 +1004,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 7th Level Winter Knight feature}",
-				"Your body has become attuned to the biting cold. You gain resistance to cold damage, and you are permanently under the effects of a {@spell water walking} spell, as liquid water temporarily freezes solid as you walk over it."
+				"Your body has become attuned to the biting cold. You gain resistance to cold damage, and you are permanently under the effects of a {@spell water walk} spell, as liquid water temporarily freezes solid as you walk over it."
 			]
 		},
 		{
@@ -3864,7 +3864,7 @@
 				{
 					"name": "Human Variance",
 					"entries": [
-						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|MOD}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|MOD}, {@feat skilled}, or {@feat tavern brawler}.",
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|TCE}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|TCE}, {@feat skilled}, or {@feat tavern brawler}. If a feature would increase your stats, you do not benefit from the stat increase aspect of the feature.",
 						{
 							"type" : "inset",
 							"name" : "Additional Features",
@@ -3895,7 +3895,7 @@
 				{
 					"name": "Human Variance",
 					"entries": [
-						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|MOD}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|MOD}, {@feat skilled}, or {@feat tavern brawler}.",
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|TCE}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|TCE}, {@feat skilled}, or {@feat tavern brawler}. If a feature would increase your stats, you do not benefit from the stat increase aspect of the feature.",
 						{
 							"type" : "inset",
 							"name" : "Additional Features",
@@ -3926,7 +3926,7 @@
 				{
 					"name": "Human Variance",
 					"entries": [
-						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|MOD}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|MOD}, {@feat skilled}, or {@feat tavern brawler}.",
+						"Humankind is a varied and nuanced race. You gain one of the following features: {@feat actor}, {@feat athlete}, {@feat chef|MOD}, {@feat fey touched|TCE}, {@feat inspiring leader|MOD}, {@feat keen mind}, {@feat linguist}, {@feat magic initiate|MOD}, {@feat observant}, {@feat ritual caster}, {@feat shadow touched|TCE}, {@feat skilled}, or {@feat tavern brawler}. If a feature would increase your stats, you do not benefit from the stat increase aspect of the feature.",
 						{
 							"type" : "inset",
 							"name" : "Additional Features",

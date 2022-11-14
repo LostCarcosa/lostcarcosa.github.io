@@ -772,15 +772,15 @@
 				{
 					"prepared": {
 						"1": [
-							"command",
-							"identify"
+							"tasha's hideous laughter|MOD",
+							"identify|MOD"
 						],
 						"3": [
-							"augury",
-							"suggestion"
+							"detect thoughts",
+							"dark secret|COFSA"
 						],
 						"5": [
-							"nondetection",
+							"intellect fortress|TCE",
 							"speak with dead"
 						],
 						"7": [
@@ -823,16 +823,16 @@
 							"warding bond"
 						],
 						"5": [
-							"life transference",
+							"life transference|MOD",
 							"revivify"
 						],
 						"7": [
 							"insect plague",
-							"mark of objection|COFS:A"
+							"mark of objection|COFSA"
 						],
 						"9": [
 							"mass cure wounds",
-							"contagion"
+							"contagion|MOD"
 						]
 					}
 				}
@@ -856,7 +856,7 @@
 				{
 					"prepared": {
 						"1": [
-							"hand of helious|BDPC",
+							"hand of helios|BDPC",
 							"faerie fire"
 						],
 						"3": [
@@ -864,16 +864,16 @@
 							"silence"
 						],
 						"5": [
-							"daylight",
-							"slow"
+							"illuminate",
+							"slow|MOD"
 						],
 						"7": [
 							"seeking sunfire|BDPC",
-							"slow"
+							"confusion"
 						],
 						"9": [
 							"angelic rebuke|BDPC",
-							"dawn"
+							"dawn|XGE"
 						]
 					},
 					"known": {
@@ -918,7 +918,7 @@
 							"speak with animals"
 						],
 						"3": [
-							"barkskin",
+							"barkskin|MOD",
 							"spike growth"
 						],
 						"5": [
@@ -927,7 +927,7 @@
 						],
 						"7": [
 							"dominate beast",
-							"grasping vine"
+							"grasping vine|MOD"
 						],
 						"9": [
 							"insect plague",
@@ -956,7 +956,7 @@
 					"prepared": {
 						"1": [
 							"fog cloud",
-							"thunderwave"
+							"thunderwave|MOD"
 						],
 						"3": [
 							"gust of wind",
@@ -964,7 +964,7 @@
 						],
 						"5": [
 							"call lightning",
-							"sleet storm"
+							"sleet storm|MOD"
 						],
 						"7": [
 							"control water",
@@ -996,23 +996,23 @@
 				{
 					"prepared": {
 						"1": [
-							"charm person",
+							"charm person|MOD",
 							"disguise self"
 						],
 						"3": [
 							"mirror image",
-							"pass without trace"
+							"pass without trace|MOD"
 						],
 						"5": [
 							"blink",
-							"dispel magic"
+							"dispel magic|MOD"
 						],
 						"7": [
 							"dimension door",
-							"polymorph"
+							"polymorph|MOD"
 						],
 						"9": [
-							"dominate person",
+							"dominate person|MOD",
 							"modify memory"
 						]
 					}
@@ -1046,7 +1046,7 @@
 						],
 						"5": [
 							"crusader's mantle",
-							"funeral pyre|COFS:A"
+							"funeral pyre|COFSA"
 						],
 						"7": [
 							"wall of fire",
@@ -1100,7 +1100,7 @@
 					},
 					"known": {
 						"1": [
-							"spare the dying#c"
+							"spare the dying|MOD#c"
 						]
 					}
 				}
@@ -1135,19 +1135,19 @@
 						],
 						"3": [
 							"hold person",
-							"zone of truth"
+							"zone of truth|MOD"
 						],
 						"5": [
 							"mass healing word",
-							"slow"
+							"slow|MOD"
 						],
 						"7": [
-							"compulsion",
-							"locate creature"
+							"compulsion|MOD",
+							"locate creature|MOD"
 						],
 						"9": [
 							"commune",
-							"dominate person"
+							"dominate person|MOD"
 						]
 					}
 				}
@@ -1183,12 +1183,12 @@
 							"sending"
 						],
 						"7": [
-							"aura of purity",
-							"Otiluke's resilient sphere"
+							"aura of purity|MOD",
+							"Otiluke's resilient sphere|MOD"
 						],
 						"9": [
 							"greater restoration",
-							"Rary's telepathic bond"
+							"Rary's telepathic bond|MOD"
 						]
 					}
 				}
@@ -1216,20 +1216,20 @@
 							"sleep"
 						],
 						"3": [
-							"moonbeam",
+							"moonbeam|MOD",
 							"see invisibility"
 						],
 						"5": [
-							"aura of vitality",
+							"aura of vitality|MOD",
 							"Leomund's tiny hut"
 						],
 						"7": [
-							"aura of life",
+							"aura of life|MOD",
 							"greater invisibility"
 						],
 						"9": [
 							"circle of power",
-							"mislead"
+							"mislead|MOD"
 						]
 					}
 				}
@@ -1661,7 +1661,7 @@
 						],
 						[
 							"7th",
-							"{@spell blight}, {@spell death ward}"
+							"{@spell blight}, {@spell death ward|MOD}"
 						],
 						[
 							"9th",
@@ -1809,15 +1809,15 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell tasha's hideous laughter}, {@spell identify}"
+							"{@spell tasha's hideous laughter|MOD}, {@spell identify|MOD}"
 						],
 						[
 							"3rd",
-							"{@spell detect thoughts}, {@spell dark secrets|COFS:A}"
+							"{@spell detect thoughts}, {@spell dark secret|COFS:A}"
 						],
 						[
 							"5th",
-							"{@spell intellect fortress}, {@spell speak with dead}"
+							"{@spell intellect fortress|TCE}, {@spell speak with dead}"
 						],
 						[
 							"7th",
@@ -1969,15 +1969,15 @@
 						],
 						[
 							"5th",
-							"{@spell life transference}, {@spell revivify}"
+							"{@spell life transference|MOD}, {@spell revivify}"
 						],
 						[
 							"7th",
-							"{@spell insect plague}, {@spell mark of objection|COFS:A}"
+							"{@spell insect plague}, {@spell mark of objection|COFSA}"
 						],
 						[
 							"9th",
-							"{@spell mass cure wounds}, {@spell contagion}"
+							"{@spell mass cure wounds}, {@spell contagion|MOD}"
 						]
 					]
 				},
@@ -2132,7 +2132,7 @@
 						],
 						[
 							"5th",
-							"{@spell daylight}, {@spell slow}"
+							"{@spell illuminate}, {@spell slow|MOD}"
 						],
 						[
 							"7th",
@@ -2140,7 +2140,7 @@
 						],
 						[
 							"9th",
-							"{@spell angelic rebuke}, {@spell dawn}"
+							"{@spell angelic rebuke|BDPC}, {@spell dawn|XGE}"
 						]
 					]
 				},
@@ -2275,7 +2275,7 @@
 						],
 						[
 							"3rd",
-							"{@spell barkskin}, {@spell spike growth}"
+							"{@spell barkskin|MOD}, {@spell spike growth}"
 						],
 						[
 							"5th",
@@ -2283,7 +2283,7 @@
 						],
 						[
 							"7th",
-							"{@spell dominate beast}, {@spell grasping vine}"
+							"{@spell dominate beast}, {@spell grasping vine|MOD}"
 						],
 						[
 							"9th",
@@ -2418,7 +2418,7 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell fog cloud}, {@spell thunderwave}"
+							"{@spell fog cloud}, {@spell thunderwave|MOD}"
 						],
 						[
 							"3rd",
@@ -2426,7 +2426,7 @@
 						],
 						[
 							"5th",
-							"{@spell call lightning}, {@spell sleet storm}"
+							"{@spell call lightning}, {@spell sleet storm|MOD}"
 						],
 						[
 							"7th",
@@ -2563,23 +2563,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell charm person}, {@spell disguise self}"
+							"{@spell charm person|MOD}, {@spell disguise self}"
 						],
 						[
 							"3rd",
-							"{@spell mirror image}, {@spell pass without trace}"
+							"{@spell mirror image}, {@spell pass without trace|MOD}"
 						],
 						[
 							"5th",
-							"{@spell blink}, {@spell dispel magic}"
+							"{@spell blink}, {@spell dispel magic|MOD}"
 						],
 						[
 							"7th",
-							"{@spell dimension door}, {@spell polymorph}"
+							"{@spell dimension door}"
 						],
 						[
 							"9th",
-							"{@spell dominate person}, {@spell modify memory}"
+							"{@spell dominate person|MOD}, {@spell modify memory}"
 						]
 					]
 				},
@@ -2691,23 +2691,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell divine favor}, {@spell shield of faith}"
+							"{@spell divine favor}, {@spell searing smite}"
 						],
 						[
 							"3rd",
-							"{@spell magic weapon}, {@spell spiritual weapon}"
+							"{@spell flame blade}, {@spell spiritual weapon}"
 						],
 						[
 							"5th",
-							"{@spell crusader's mantle}, {@spell spirit guardians}"
+							"{@spell crusader's mantle}, {@spell funeral pyre|COFSA}"
 						],
 						[
 							"7th",
-							"{@spell freedom of movement}, {@spell stoneskin}"
+							"{@spell wall of fire}, {@spell investiture of flame|MOD}"
 						],
 						[
 							"9th",
-							"{@spell flame strike}, {@spell hold monster}"
+							"{@spell immolation|XGE}, {@spell hold monster}"
 						]
 					]
 				},
@@ -3024,19 +3024,19 @@
 						],
 						[
 							"3rd",
-							"{@spell hold person}, {@spell zone of truth}"
+							"{@spell hold person}, {@spell zone of truth|MOD}"
 						],
 						[
 							"5th",
-							"{@spell mass healing word}, {@spell slow}"
+							"{@spell mass healing word}, {@spell slow|MOD}"
 						],
 						[
 							"7th",
-							"{@spell compulsion}, {@spell locate creature}"
+							"{@spell compulsion|MOD}, {@spell locate creature|MOD}"
 						],
 						[
 							"9th",
-							"{@spell commune}, {@spell dominate person}"
+							"{@spell commune}, {@spell dominate person|MOD}"
 						]
 					]
 				},
@@ -3190,52 +3190,6 @@
 				"The balm of peace thrives at the heart of healthy communities, between friendly nations, and in the souls of the kindhearted. The gods of peace inspire people of all sorts to resolve conflict and to stand up against those forces that try to prevent peace from flourishing. See the Peace Deities table for a list of some of the gods associated with this domain.",
 				"Clerics of the Peace Domain preside over the signing of treaties, and they are often asked to arbitrate in disputes. These clerics' blessings draw people together and help them shoulder one another's burdens, and the clerics' magic aids those who are driven to fight for the way of peace.",
 				{
-					"type": "table",
-					"caption": "Peace Deities",
-					"colLabels": [
-						"Example Deity",
-						"Pantheon"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
-					"rows": [
-						[
-							"{@deity Angharradh|Elven|SCAG}",
-							"Elven"
-						],
-						[
-							"{@deity Berronar Truesilver|Dwarven|SCAG}",
-							"Dwarven"
-						],
-						[
-							"{@deity Boldrei|Eberron}",
-							"Eberron"
-						],
-						[
-							"{@deity Cyrrollalee|Halfling|SCAG}",
-							"Halfling"
-						],
-						[
-							"{@deity Eldath}",
-							"Forgotten Realms"
-						],
-						[
-							"Gaerdal",
-							"Ironhand Gnomish"
-						],
-						[
-							"{@deity Paladine|Dragonlance}",
-							"Dragonlance"
-						],
-						[
-							"{@deity Rao|Greyhawk}",
-							"Greyhawk"
-						]
-					]
-				},
-				{
 					"name": "Domain Spells",
 					"type": "entries",
 					"entries": [
@@ -3267,11 +3221,11 @@
 								],
 								[
 									"7th",
-									"{@spell aura of purity}, {@spell Otiluke's resilient sphere}"
+									"{@spell aura of purity|MOD}, {@spell resilient sphere|MOD}"
 								],
 								[
 									"9th",
-									"{@spell greater restoration}, {@spell Rary's telepathic bond}"
+									"{@spell greater restoration}, {@spell telepathic bond|MOD}"
 								]
 							]
 						}
@@ -3395,52 +3349,6 @@
 				"The twilit transition from light into darkness often brings calm and even joy, as the day's labors end and the hours of rest begin. The darkness can also bring terrors, but the gods of twilight guard against the horrors of the night.",
 				"Clerics who serve these deities-examples of which appear on the Twilight Deities table-bring comfort to those who seek rest and protect them by venturing into the encroaching darkness to ensure that the dark is a comfort, not a terror.",
 				{
-					"type": "table",
-					"caption": "Twilight Deities",
-					"colLabels": [
-						"Example Deity",
-						"Pantheon"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
-					"rows": [
-						[
-							"{@deity Boldrei|Eberron}",
-							"Eberron"
-						],
-						[
-							"{@deity Celestian|Greyhawk}",
-							"Greyhawk"
-						],
-						[
-							"{@deity Dol Arrah|Eberron}",
-							"Eberron"
-						],
-						[
-							"{@deity Helm}",
-							"Forgotten Realms"
-						],
-						[
-							"{@deity Ilmater}",
-							"Forgotten Realms"
-						],
-						[
-							"{@deity Mishakal|Dragonlance}",
-							"Dragonlance"
-						],
-						[
-							"{@deity Selûne}",
-							"Forgotten Realms"
-						],
-						[
-							"{@deity Yondalla|Nonhuman}",
-							"Halfling"
-						]
-					]
-				},
-				{
 					"name": "Domain Spells",
 					"type": "entries",
 					"entries": [
@@ -3464,19 +3372,19 @@
 								],
 								[
 									"3rd",
-									"{@spell moonbeam}, {@spell see invisibility}"
+									"{@spell moonbeam|MOD}, {@spell see invisibility}"
 								],
 								[
 									"5th",
-									"{@spell aura of vitality}, {@spell Leomund's tiny hut}"
+									"{@spell aura of vitality|MOD}, TO BE REPLACED"
 								],
 								[
 									"7th",
-									"{@spell aura of life}, {@spell greater invisibility}"
+									"{@spell aura of life|MOD}, {@spell greater invisibility}"
 								],
 								[
 									"9th",
-									"{@spell circle of power}, {@spell mislead}"
+									"{@spell circle of power}, {@spell mislead|MOD}"
 								]
 							]
 						}
@@ -3783,7 +3691,7 @@
 						],
 						[
 							"7th",
-							"{@spell blight}, {@spell death ward}"
+							"{@spell blight}, {@spell death ward|MOD}"
 						],
 						[
 							"9th",
@@ -3813,7 +3721,7 @@
 			"header": 1,
 			"entries": [
 				"At 1st level, you gain the ability to manipulate the line between life and death. When you would normally roll one or more dice to restore hit points with a spell to a creature at 0 hit points, you instead use the highest number possible for each die.",
-				"In addition, you learn the {@spell spare the dying} cantrip, which doesn't count against the number of cleric cantrips you know. For you, it has a range of 30 feet, and you can cast it as a bonus action."
+				"In addition, you learn the {@spell spare the dying|MOD} cantrip, which doesn't count against the number of cleric cantrips you know. For you, it has a range of 30 feet, and you can cast it as a bonus action."
 			]
 		},
 		{

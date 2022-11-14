@@ -1376,7 +1376,7 @@
 				"tides of blood|dapc",
 				"Dominate Beast",
 				"draining thread|dapc",
-				"Dominate Person",
+				"Dominate Person|MOD",
 				"insect Plague"
 			],
 			"additionalSpells": [
@@ -1395,7 +1395,7 @@
 							"draining thread|DAPC"
 						],
 						"5": [
-							"dominate person",
+							"dominate person|MOD",
 							"insect plague"
 						]
 					}
@@ -1432,11 +1432,11 @@
 					"prepared": {
 						"1": [
 							"sleep",
-							"cause fear|XGE"
+							"cause fear|MOD"
 						],
 						"2": [
 							"darkness",
-							"moonbeam"
+							"moonbeam|MOD"
 						],
 						"3": [
 							"fear",
@@ -1473,12 +1473,12 @@
 				"cruorwhip|dapc",
 				"blood seal|dapc",
 				"sanguine rope|dapc",
-				"blood sight|dapc",
+				"bloodsight|dapc",
 				"tides of blood|dapc",
 				"draining thread|dapc",
 				"sanguine sanctum|dapc",
 				"bloodcurse|dapc",
-				"Dominate Person"
+				"Dominate Person|MOD"
 			],
 			"additionalSpells": [
 				{
@@ -1492,7 +1492,7 @@
 							"sanguine rope|DAPC"
 						],
 						"3": [
-							"blood sight|DAPC",
+							"bloodsight|DAPC",
 							"tides of blood|DAPC"
 						],
 						"4": [
@@ -1501,7 +1501,7 @@
 						],
 						"5": [
 							"bloodcurse|DAPC",
-							"dominate person"
+							"dominate person|MOD"
 						]
 					}
 				}
@@ -3087,7 +3087,7 @@
 						],
 						[
 							"9th",
-							"{@spell dominate person}, {@spell insect plague}"
+							"{@spell dominate person|MOD}, {@spell insect plague}"
 						]
 					]
 				}
@@ -3165,11 +3165,11 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell sleep}, {@spell cause fear|XGE}"
+							"{@spell sleep}, {@spell cause fear|MOD}"
 						],
 						[
 							"3rd",
-							"{@spell darkness}, {@spell moonbeam}"
+							"{@spell darkness}, {@spell moonbeam|MOD}"
 						],
 						[
 							"5th",
@@ -3177,7 +3177,7 @@
 						],
 						[
 							"7th",
-							"{@spell greater invisibility}, {@spell rend shadows|DAPC|rend shadows†}"
+							"{@spell greater invisibility}, {@spell rend shadow|DAPC|rend shadow†}"
 						],
 						[
 							"9th",
@@ -3320,7 +3320,7 @@
 						],
 						[
 							"5th",
-							"{@spell blood sight|DAPC|blood sight†}, {@spell tides of blood|DAPC|tides of blood†}"
+							"{@spell bloodsight|DAPC|blood sight†}, {@spell tides of blood|DAPC|tides of blood†}"
 						],
 						[
 							"7th",
@@ -3328,7 +3328,7 @@
 						],
 						[
 							"9th",
-							"{@spell bloodcurse|DAPC|bloodcurse†}, {@spell dominate person|PHB}"
+							"{@spell bloodcurse|DAPC|bloodcurse†}, {@spell dominate person|MOD}"
 						]
 					]
 				},

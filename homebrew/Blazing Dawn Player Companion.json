@@ -343,7 +343,7 @@
 				"Color Spray",
 				"Silent Image",
 				"Magic Mouth",
-				"skywrite|xge",
+				"skywrite|MOD",
 				"Major Image",
 				"Tongues",
 				"Fabricate",
@@ -608,7 +608,7 @@
 						],
 						"3": [
 							"branding smite",
-							"zone of truth"
+							"zone of truth|MOD"
 						],
 						"5": [
 							"clairvoyance",
@@ -616,7 +616,7 @@
 						],
 						"7": [
 							"arcane eye",
-							"locate creature"
+							"locate creature|MOD"
 						],
 						"9": [
 							"commune",
@@ -657,22 +657,22 @@
 					"prepared": {
 						"1": [
 							"hunter's mark",
-							"snare|xge"
+							"snare|MOD"
 						],
 						"3": [
-							"cordon of arrows",
+							"cordon of arrows|MOD",
 							"locate animals or plants"
 						],
 						"5": [
-							"conjure barrage",
-							"lightning arrow"
+							"conjure barrage|MOD",
+							"lightning arrow|MOD"
 						],
 						"7": [
 							"freedom of movement",
-							"locate creature"
+							"locate creature|MOD"
 						],
 						"9": [
-							"conjure volley",
+							"conjure volley|MOD",
 							"scrying"
 						]
 					}
@@ -695,12 +695,12 @@
 			"page": 14,
 			"subclassSpells": [
 				"absorb elements|xge",
-				"chromatic orb",
+				"chromatic orb|MOD",
 				"dragon's breath|xge",
-				"maximilian's earthen grasp|xge",
+				"earthen grasp|xge",
 				"Elemental Weapon",
 				"Protection from Energy",
-				"conjure minor elementals",
+				"summon elemental|TCE",
 				"elemental bane|xge",
 				"conjure elemental",
 				"control winds|xge"
@@ -710,18 +710,18 @@
 					"prepared": {
 						"1": [
 							"absorb elements|xge",
-							"chromatic orb"
+							"chromatic orb|MOD"
 						],
 						"3": [
 							"dragon's breath|xge",
-							"maximilian's earthen grasp|xge"
+							"earthen grasp|xge"
 						],
 						"5": [
-							"elemental weapon",
+							"elemental weapon|MOD",
 							"protection from energy"
 						],
 						"7": [
-							"conjure minor elementals",
+							"summon elemental|TCE",
 							"elemental bane|xge"
 						],
 						"9": [
@@ -747,7 +747,7 @@
 			"classSource": "PHB",
 			"shortName": "Courage",
 			"subclassSpells": [
-				"compelled duel",
+				"compelled duel|MOD",
 				"heroism",
 				"find steed",
 				"spiritual weapon",
@@ -762,7 +762,7 @@
 				{
 					"prepared": {
 						"1": [
-							"compelled duel",
+							"compelled duel|MOD",
 							"heroism"
 						],
 						"3": [
@@ -774,7 +774,7 @@
 							"crusader's mantle"
 						],
 						"7": [
-							"aura of purity",
+							"aura of purity|MOD",
 							"staggering smite"
 						],
 						"9": [
@@ -819,7 +819,7 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell compelled duel}, {@spell heroism}"
+							"{@spell compelled duel|MOD}, {@spell heroism}"
 						],
 						[
 							"3rd",
@@ -831,7 +831,7 @@
 						],
 						[
 							"7th",
-							"{@spell aura of purity}, {@spell staggering smite}"
+							"{@spell aura of purity|MOD}, {@spell staggering smite}"
 						],
 						[
 							"9th",
@@ -986,23 +986,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell absorb elements|xge}, {@spell chromatic orb}"
+							"{@spell absorb elements|xge}, {@spell chromatic orb|MOD}"
 						],
 						[
 							"3rd",
-							"{@spell dragon's breath|xge}, {@spell maximilian's earthen grasp|xge}"
+							"{@spell dragon's breath|xge}, {@spell earthen grasp|xge}"
 						],
 						[
 							"5th",
-							"{@spell elemental weapon}, {@spell protection from energy}"
+							"{@spell elemental weapon|MOD}, {@spell protection from energy}"
 						],
 						[
 							"7th",
-							"{@spell conjure minor elementals}, {@spell elemental bane|xge}"
+							"{@spell summon elemental|TCE}, {@spell elemental bane|xge}"
 						],
 						[
 							"9th",
-							"{@spell conjure volley}, {@spell scrying}"
+							"{@spell summon elemental}, {@spell control winds|XGE}"
 						]
 					]
 				},
@@ -1027,7 +1027,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you gain two cantrips of your choice from the following list: {@spell control flames}, {@spell gust}, {@spell mold earth}, and {@spell shape water}."
+				"When you choose this domain at 1st level, you gain two cantrips of your choice from the following list: {@spell control flames|XGE}, {@spell gust|XGE}, {@spell mold earth|XGE}, and {@spell shape water|XGE}."
 			]
 		},
 		{
@@ -1196,23 +1196,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell hunter's mark}, {@spell snare|xge}"
+							"{@spell hunter's mark}, {@spell snare|MOD}"
 						],
 						[
 							"3rd",
-							"{@spell cordon of arrows}, {@spell locate animals or plants}"
+							"{@spell cordon of arrows|MOD}, {@spell locate animals or plants}"
 						],
 						[
 							"5th",
-							"{@spell conjure barrage}, {@spell lightning arrow}"
+							"{@spell conjure barrage|MOD}, {@spell lightning arrow|MOD}"
 						],
 						[
 							"7th",
-							"{@spell freedom of movement}, {@spell locate creature}"
+							"{@spell freedom of movement}, {@spell locate creature|MOD}"
 						],
 						[
 							"9th",
-							"{@spell conjure volley}, {@spell scrying}"
+							"{@spell conjure volley|MOD}, {@spell scrying}"
 						]
 					]
 				},
@@ -1362,7 +1362,7 @@
 						],
 						[
 							"3rd",
-							"{@spell branding smite}, {@spell zone of truth}"
+							"{@spell branding smite}, {@spell zone of truth|MOD}"
 						],
 						[
 							"5th",
@@ -1370,7 +1370,7 @@
 						],
 						[
 							"7th",
-							"{@spell arcane eye}, {@spell locate creature}"
+							"{@spell arcane eye}, {@spell locate creature|MOD}"
 						],
 						[
 							"9th",
@@ -1784,7 +1784,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Also at 3rd level, you can use a bonus action to allow fiery power to swell within you. When you activate this feature, and at the start of each of your turns for the next minute, you roll a d8. This die increases to a d10 at 10th level and a d12 at 18th level. You conjure a number of embers equal to the number rolled. These embers float around you until they are spent or until they vanish at the start of your next turn",
+				"Also at 3rd level, you can use a bonus action to allow fiery power to swell within you. When you activate this feature, and at the start of each of your turns for the next minute, you roll a d8. This die increases to a d10 at 10th level and a d12 at 18th level. You conjure a number of embers equal to the number rolled. These embers float around you until they are spent or until they vanish at sthe start of your next turn.",
 				"You have two uses of this feature, and you regain all expended uses of it when you finish a long rest. You gain an additional use at 7th level and one more at 15th level. The embers conjured by this feature can be spent to fuel the following abilities:",
 				{
 					"type": "entries",
@@ -1807,7 +1807,7 @@
 					"name": "Smoke Pillars",
 					"page": 20,
 					"entries": [
-						"Pillars. On your turn, you can spend any number of your conjured embers to create pillars of smoke (no action required). For each ember spent, you create a cloud of thick smoke that fills a 5-foot diameter, 10 foot high cylinder centered on a point you can see within 30 feet of you. The smoke heavily obscures its area, and lasts until the start of your next turn."
+						"On your turn, you can spend any number of your conjured embers to create pillars of smoke (no action required). For each ember spent, you create a cloud of thick smoke that fills a 5-foot diameter, 10 foot high cylinder centered on a point you can see within 30 feet of you. The smoke heavily obscures its area, and lasts until the start of your next turn."
 					]
 				}
 			]
@@ -4208,7 +4208,7 @@
 						],
 						[
 							"3rd",
-							"{@spell magic mouth}, {@spell skywrite}"
+							"{@spell magic mouth}, {@spell skywrite|MOD}"
 						],
 						[
 							"5th",
