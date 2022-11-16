@@ -543,7 +543,7 @@
 				"Song of Rest (d12)|Bard||17",
 				"Magical Secrets|Bard||18",
 				"Ability Score Improvement|Bard||19",
-				"Superior Inspiration|Bard||20"
+				"Universal Inspiration|Bard||20"
 			],
 			"subclassTitle": "Bard College",
 			"fluff": [
@@ -1379,7 +1379,7 @@
 			]
 		},
 		{
-			"name": "Superior Inspiration",
+			"name": "Universal Inspiration",
 			"source": "PHB",
 			"page": 51,
 			"srd": true,
@@ -1387,7 +1387,8 @@
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
-				"At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use."
+				"{@i 20th level Bard feature}",
+				"When you use your bonus action to grant bardic inspiration to other creatures, you grant it to (up to) {@i four} other creatures instead of just one."
 			]
 		}
 	],

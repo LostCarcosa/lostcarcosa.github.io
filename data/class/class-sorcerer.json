@@ -277,7 +277,7 @@
 					"gainSubclassFeature": true
 				},
 				"Ability Score Improvement|Sorcerer||19",
-				"Sorcerous Restoration|Sorcerer||20"
+				"Sorcerous Mastery|Sorcerer||20"
 			],
 			"subclassTitle": "Sorcerous Origin",
 			"fluff": [
@@ -1297,7 +1297,7 @@
 			]
 		},
 		{
-			"name": "Sorcerous Restoration",
+			"name": "Sorcerous Mastery",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1305,7 +1305,8 @@
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
-				"At 20th level, you regain 4 expended sorcery points whenever you finish a short rest."
+				"{@i 20th level Sorcerer feature}",
+				"The first three sorcery points you spend on metamagic during each of your turns are free."
 			]
 		}
 	],
