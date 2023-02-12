@@ -1582,6 +1582,13 @@ Parser.optFeatureTypeToFull = function (type) {
 	return type;
 };
 
+
+Parser.sphereTypeToFull = function (type) {
+	if (Parser.OPT_FEATURE_TYPE_TO_FULL[type]) return Parser.OPT_FEATURE_TYPE_TO_FULL[type];
+	if (BrewUtil2.getMetaLookup("optionalFeatureTypes")?.[type]) return BrewUtil2.getMetaLookup("optionalFeatureTypes")[type];
+	return type;
+};
+
 Parser.CHAR_OPTIONAL_FEATURE_TYPE_TO_FULL = {
 	"SG": "Supernatural Gift",
 	"OF": "Optional Feature",

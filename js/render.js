@@ -372,7 +372,8 @@ function Renderer () {
 				case "variantSub": this._renderVariantSub(entry, textStack, meta, options); break;
 				case "spellcasting": this._renderSpellcasting(entry, textStack, meta, options); break;
 				case "quote": this._renderQuote(entry, textStack, meta, options); break;
-				case "optfeature": this._renderOptfeature(entry, textStack, meta, options); break;
+				case "optfeature": this._renderOptfeature(entry, textStack, meta, options); break;4
+				case "sphere": this._renderSphere(entry, textStack, meta, options); break;
 				case "patron": this._renderPatron(entry, textStack, meta, options); break;
 
 				// block
@@ -1063,6 +1064,10 @@ function Renderer () {
 	};
 
 	this._renderOptfeature = function (entry, textStack, meta, options) {
+		this._renderEntriesSubtypes(entry, textStack, meta, options, true);
+	};
+	
+	this._renderSphere = function (entry, textStack, meta, options) {
 		this._renderEntriesSubtypes(entry, textStack, meta, options, true);
 	};
 
@@ -1902,6 +1907,7 @@ Renderer.ENTRIES_WITH_ENUMERATED_TITLES = [
 	{type: "actions", key: "entries", depth: 2},
 	{type: "flowBlock", key: "entries", depth: 2},
 	{type: "optfeature", key: "entries", depthIncrement: 1},
+	{type: "sphere", key: "entries", depthIncrement: 1},
 	{type: "patron", key: "entries"},
 ];
 
@@ -3385,6 +3391,7 @@ Renderer.utils = {
 			case "@background": out.page = UrlUtil.PG_BACKGROUNDS; break;
 			case "@race": out.page = UrlUtil.PG_RACES; break;
 			case "@optfeature": out.page = UrlUtil.PG_OPT_FEATURES; break;
+			case "@sphere": out.page = UrlUtil.PG_SPHERES; break;
 			case "@reward": out.page = UrlUtil.PG_REWARDS; break;
 			case "@feat": out.page = UrlUtil.PG_FEATS; break;
 			case "@psionic": out.page = UrlUtil.PG_PSIONICS; break;
@@ -4968,6 +4975,45 @@ Renderer.optionalfeature = {
 		renderStack.push(`</td></tr>`);
 		renderStack.push(Renderer.optionalfeature.getPreviouslyPrintedText(it));
 		renderStack.push(`<tr><td colspan="6"><p>${Renderer.get().render(`{@note Type: ${Renderer.optionalfeature.getTypeText(it)}}`)}</p></td></tr>`);
+
+		return renderStack.join("");
+	},
+};
+
+Renderer.sphere = {
+	getListPrerequisiteLevelText (prerequisites) {
+		if (!prerequisites || !prerequisites.some(it => it.level)) return "\u2014";
+		const levelPart = prerequisites.find(it => it.level).level;
+		return levelPart.level || levelPart;
+	},
+
+	getPreviouslyPrintedText (it) {
+		return it.previousVersion ? `<tr><td colspan="6"><p class="mt-2">${Renderer.get().render(`{@i An earlier version of this ${it.featureType.map(t => Parser.sphereTypeToFull(t)).join("/")} is available in }${Parser.sourceJsonToFull(it.previousVersion.source)} {@i as {@sphere ${it.previousVersion.name}|${it.previousVersion.source}}.}`)}</p></td></tr>` : "";
+	},
+
+	getTypeText (it) {
+		const commonPrefix = it.featureType.length > 1 ? MiscUtil.findCommonPrefix(it.featureType.map(fs => Parser.sphereTypeToFull(fs)), {isRespectWordBoundaries: true}) : "";
+
+		return [
+			commonPrefix.trim() || null,
+			it.featureType.map(ft => Parser.sphereTypeToFull(ft).substring(commonPrefix.length)).join("/"),
+		].filter(Boolean).join(" ");
+	},
+
+	getCompactRenderedString (it) {
+		const renderer = Renderer.get();
+		const renderStack = [];
+
+		renderStack.push(`
+			${Renderer.utils.getExcludedTr({entity: it, dataProp: "sphere", page: UrlUtil.PG_SPHERES})}
+			${Renderer.utils.getNameTr(it, {page: UrlUtil.PG_SPHERES})}
+			<tr class="text"><td colspan="6">
+			${it.prerequisite ? `<p><i>${Renderer.utils.getPrerequisiteHtml(it.prerequisite)}</i></p>` : ""}
+		`);
+		renderer.recursiveRender({entries: it.entries}, renderStack, {depth: 1});
+		renderStack.push(`</td></tr>`);
+		renderStack.push(Renderer.spheres.getPreviouslyPrintedText(it));
+		renderStack.push(`<tr><td colspan="6"><p>${Renderer.get().render(`{@note Type: ${Renderer.spheres.getTypeText(it)}}`)}</p></td></tr>`);
 
 		return renderStack.join("");
 	},
@@ -8814,6 +8860,7 @@ Renderer.hover = {
 		"background": UrlUtil.PG_BACKGROUNDS,
 		"race": UrlUtil.PG_RACES,
 		"optfeature": UrlUtil.PG_OPT_FEATURES,
+		"sphere": UrlUtil.PG_SPHERES,
 		"reward": UrlUtil.PG_REWARDS,
 		"feat": UrlUtil.PG_FEATS,
 		"psionic": UrlUtil.PG_PSIONICS,
@@ -9999,6 +10046,7 @@ Renderer.hover = {
 			case UrlUtil.PG_FEATS: return Renderer.hover._pCacheAndGet_pLoadSimple(UrlUtil.PG_FEATS, source, hash, opts, "feats.json", "feat");
 			case "raw_optionalfeature":
 			case UrlUtil.PG_OPT_FEATURES: return Renderer.hover._pCacheAndGet_pLoadSimple(UrlUtil.PG_OPT_FEATURES, source, hash, opts, "optionalfeatures.json", "optionalfeature");
+			case UrlUtil.PG_SPHERES: return Renderer.hover._pCacheAndGet_pLoadSimple(UrlUtil.PG_SPHERES, source, hash, opts, "spheres.json", "sphere");
 			case UrlUtil.PG_PSIONICS: return Renderer.hover._pCacheAndGet_pLoadSimple(page, source, hash, opts, "psionics.json", "psionic");
 			case "raw_reward":
 			case UrlUtil.PG_REWARDS: return Renderer.hover._pCacheAndGet_pLoadSimple(UrlUtil.PG_REWARDS, source, hash, opts, "rewards.json", "reward");
@@ -11254,7 +11302,7 @@ Renderer._stripTagLayer = function (str) {
 };
 
 // Generatedd by running `[...Renderer._stripTagLayer.toString().matchAll(/case "@(\w+?)"/g)].map(item => item[1])`
-Renderer.TAGS = ["b", "bold", "i", "italic", "s", "strike", "u", "underline", "code", "style", "unit", "h", "m", "dc", "atk", "chance", "d20", "damage", "dice", "autodice", "hit", "recharge", "ability", "savingThrow", "skillCheck", "damage", "dice", "autodice", "d20", "hit", "recharge", "chance", "ability", "savingThrow", "skillCheck", "scaledice", "scaledamage", "hitYourSpellAttack", "comic", "comicH1", "comicH2", "comicH3", "comicH4", "comicNote", "note", "5etools", "adventure", "book", "filter", "footnote", "link", "loader", "color", "highlight", "help", "quickref", "area", "action", "background", "boon", "charoption", "class", "condition", "creature", "cult", "disease", "feat", "hazard", "item", "language", "object", "optfeature", "psionic", "race", "recipe", "reward", "vehicle", "vehupgrade", "sense", "skill", "spell", "status", "table", "trap", "variantrule", "deity", "classFeature", "subclassFeature", "homebrew"];
+Renderer.TAGS = ["b", "bold", "i", "italic", "s", "strike", "u", "underline", "code", "style", "unit", "h", "m", "dc", "atk", "chance", "d20", "damage", "dice", "autodice", "hit", "recharge", "ability", "savingThrow", "skillCheck", "damage", "dice", "autodice", "d20", "hit", "recharge", "chance", "ability", "savingThrow", "skillCheck", "scaledice", "scaledamage", "hitYourSpellAttack", "comic", "comicH1", "comicH2", "comicH3", "comicH4", "comicNote", "note", "5etools", "adventure", "book", "filter", "footnote", "link", "loader", "color", "highlight", "help", "quickref", "area", "action", "background", "boon", "charoption", "class", "condition", "creature", "cult", "disease", "feat", "hazard", "item", "language", "object", "optfeature", "sphere", "psionic", "race", "recipe", "reward", "vehicle", "vehupgrade", "sense", "skill", "spell", "status", "table", "trap", "variantrule", "deity", "classFeature", "subclassFeature", "homebrew"];
 
 Renderer.getAutoConvertedTableRollMode = function (table) {
 	if (!table.colLabels || table.colLabels.length < 2) return RollerUtil.ROLL_COL_NONE;

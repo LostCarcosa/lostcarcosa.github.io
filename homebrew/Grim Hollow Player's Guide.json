@@ -49,847 +49,6 @@
 		},
 		"_dateLastModifiedHash": "645f1fef92"
 	},
-	"item": [
-		{
-			"name": "Fin Symbiote",
-			"source": "GHPG",
-			"page": 133,
-			"rarity": "rare",
-			"reqAttune": "by an aberrant horror",
-			"wondrous": true,
-			"entries": [
-				"This tendril of flesh harvested from a living aboleth can be embedded into the skin of an aberrant horror. To attune to this item, you must stitch it onto your skin and leave it for the entire attunement period, during which the fin burrows into your body to bond with your muscular system.",
-				"While attuned to this item, you gain a +2 bonus to the saving throw DC of your Transformation Save.",
-				"The fin cannot be removed while you're attuned to it, and you can't voluntarily end your attunement to it. If the tentacle is sliced from your body, it grows back in {@dice 1d4} hours."
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/GHPG/FinSymbiote.jpg"
-						}
-					}
-				]
-			}
-		},
-		{
-			"name": "Stalk Symbiote",
-			"source": "GHPG",
-			"page": 133,
-			"rarity": "uncommon",
-			"reqAttune": "by an aberrant horror",
-			"wondrous": true,
-			"entries": [
-				"This tendril of flesh harvested from a living aberration can be embedded into the skull of an aberrant horror. To attune to this item, you must stitch it onto your scalp and leave it for the entire attunement period, during which the stalk burrows into your skull to bond with your brain.",
-				"While attuned to this item, you have advantage on Wisdom ({@skill Perception}) checks. In addition, you and any of your allies within 30 feet of you can't be surprised, except when {@condition incapacitated} by something other than nonmagical sleep.",
-				"The stalk can't be removed while you're attuned to it, and you can't voluntarily end your attunement to it. If the stalk is sliced from your body, it grows back in {@dice 1d4} hours."
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/GHPG/StalkSymbiote.jpg"
-						}
-					}
-				]
-			}
-		},
-		{
-			"name": "Straitjacket",
-			"source": "GHPG",
-			"page": 133,
-			"rarity": "uncommon",
-			"reqAttune": "by an aberrant horror",
-			"wondrous": true,
-			"entries": [
-				"This stained grey jacket has arms that reach to the floor and dozens of restraining straps. While wearing the straitjacket, an aberrant horror rolls twice on the {@table Unstable Mutations|GH} table and can choose which result occurs.",
-				"The straitjacket takes 10 minutes to don or doff. A creature wearing the straitjacket has disadvantage on attack rolls."
-			]
-		},
-		{
-			"name": "Star Metal Ring",
-			"source": "GHPG",
-			"page": 133,
-			"type": "RG",
-			"rarity": "rare",
-			"reqAttune": "by an aberrant horror",
-			"entries": [
-				"This heavy steel ring is set with a chunk of shimmering star metal. While wearing this ring, your appendages are crusted with iridescent star metal. All your unarmed strikes deal magical damage while you are attuned to this ring."
-			]
-		},
-		{
-			"name": "Queen's Token",
-			"source": "GHPG",
-			"page": 133,
-			"rarity": "legendary",
-			"wondrous": true,
-			"entries": [
-				"This humble acorn is one of the mightiest gifts a faerie queen can bestow upon her subjects. While holding the acorn, a creature can use an action to cast the {@spell wish} spell. After using the acorn in this way, it immediately teleports back to the queen who bestowed it.",
-				"If the {@spell wish} spell is used in a way that the queen would perceive as a threat to herself or her realm, the spell does not work. Instead, the creature who made the wish immediately transforms into an oak tree. Only a {@spell wish} spell cast with the queen's token can return a creature transformed in this way to its original state."
-			],
-			"attachedSpells": [
-				"wish"
-			]
-		},
-		{
-			"name": "Iridescent Armor",
-			"source": "GHPG",
-			"page": 133,
-			"baseItem": "breastplate|PHB",
-			"type": "MA",
-			"rarity": "rare",
-			"weight": 20,
-			"ac": 14,
-			"bonusAc": "+1",
-			"entries": [
-				"This shimmering breastplate is forged from a giant dragonfly's carapace and adorned with a cape of gossamer fabric. You gain a +1 bonus to AC while you wear this armor.",
-				"Once per day, you can use an action to transform the gossamer cape into a pair of dragonfly wings, which grant you a flying speed of 60 feet for one hour. Once the armor is used this way, this property cannot be used again until the following dawn."
-			]
-		},
-		{
-			"name": "Faerie Crown",
-			"source": "GHPG",
-			"page": 134,
-			"rarity": "very rare",
-			"wondrous": true,
-			"entries": [
-				"This crown is woven of aromatic flowers that attract butterflies. The crown has {@dice 1d6 + 3} butterflies that hover around the crown. When a weapon attack would hit you, you can use your reaction to release one of the butterflies. When you do so, the butterfly interposes itself between you and the attack, taking the hit instead of you. A butterfly used in this way is destroyed.",
-				"Once all the butterflies are used, the faerie crown withers and is destroyed."
-			]
-		},
-		{
-			"name": "Toadstool Toddy",
-			"source": "GHPG",
-			"page": 134,
-			"type": "P",
-			"rarity": "uncommon",
-			"entries": [
-				"This carbonated liquid, a potent distillation of faerie magic, is bright fuchsia and tastes of autumn rain. A fey who drinks this potion can withstand 3 additional days in an urban environment without suffering {@condition exhaustion} or penalties to rest."
-			]
-		},
-		{
-			"name": "Ring of Hidden Desire",
-			"source": "GHPG",
-			"page": 134,
-			"type": "RG",
-			"rarity": "uncommon",
-			"reqAttune": "by a fiend",
-			"reqAttuneTags": [
-				{
-					"creatureType": "fiend"
-				}
-			],
-			"entries": [
-				"This rose gold band is set with an obsidian stone carved in the shape of a heart. While wearing this ring, you can use an action to attempt to learn a creature's darkest desire. Select a creature that you can see. That creature must succeed on a DC 13 Wisdom saving throw. On a failed save, you immediately learn the target's darkest desire. On a successful save, you do not learn anything, and the creature is immune to the effects of the ring for 24 hours. If the creature you choose has an Intelligence of 3 or lower, the creature is unaffected."
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/GHPG/RingOfHiddenDesire.jpg"
-						}
-					}
-				]
-			}
-		},
-		{
-			"name": "Profane Charm",
-			"source": "GHPG",
-			"page": 134,
-			"rarity": "uncommon",
-			"reqAttune": "by a fiend",
-			"reqAttuneTags": [
-				{
-					"creatureType": "fiend"
-				}
-			],
-			"wondrous": true,
-			"entries": [
-				"This charm is a charred feather harvested from a fallen angel, wrapped in silver wire. While wearing this charm, you can enter hallowed ground without triggering your hideous appearance. In addition, you cannot be detected as a fiend by the {@spell detect evil and good} spell or a paladin's divine sense ability."
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/GHPG/ProfaneCharm.jpg"
-						}
-					}
-				]
-			}
-		},
-		{
-			"name": "Cinder Coat",
-			"source": "GHPG",
-			"page": 134,
-			"baseItem": "leather armor|PHB",
-			"type": "LA",
-			"rarity": "very rare",
-			"reqAttune": "by a fiend",
-			"reqAttuneTags": [
-				{
-					"creatureType": "fiend"
-				}
-			],
-			"weight": 10,
-			"ac": 11,
-			"bonusAc": "+1",
-			"recharge": "dawn",
-			"charges": 3,
-			"entries": [
-				"This floor-length leather duster is the color of dying embers. You have a +1 bonus to AC while wearing this armor.",
-				"The coat has 3 charges. When you hit a creature with an attack, and that creature is not at maximum hit points, you can expend 1 charge to deal an extra {@damage 1d10} fire damage to the target. The coat regains {@dice 1d3} expended charges daily at dawn."
-			],
-			"rechargeAmount": "{@dice 1d3}"
-		},
-		{
-			"name": "Ardor",
-			"source": "GHPG",
-			"page": 134,
-			"baseItem": "battleaxe|PHB",
-			"type": "M",
-			"rarity": "artifact",
-			"reqAttune": "by a fiend",
-			"reqAttuneTags": [
-				{
-					"creatureType": "fiend"
-				}
-			],
-			"weight": 4,
-			"weaponCategory": "martial",
-			"property": [
-				"V"
-			],
-			"dmg1": "1d8",
-			"dmgType": "S",
-			"dmg2": "1d10",
-			"bonusWeapon": "+3",
-			"axe": true,
-			"weapon": true,
-			"conditionImmune": [
-				"charmed",
-				"frightened",
-				"paralyzed",
-				"poisoned",
-				"stunned"
-			],
-			"attachedSpells": [
-				"bane",
-				"banishment",
-				"bestow curse",
-				"branding smite",
-				"incendiary cloud"
-			],
-			"entries": [
-				"The blades of this greataxe smolder with an inner light. The dark wooden handle is accented with silver.",
-				"When the celestial realm turned back yet another assault from the forces of evil, a fiendish forge master received a vision, allowing them to craft a battleaxe like no other. With the might of Ardor, the fiends now possess a weapon capable of striking down the celestial forces.",
-				"Ardor now lies in the fiendish realm's hidden vaults, waiting to be wielded when the forces of darkness make their ultimate strike to consume the world. The fiends don't realize that an equally powerful weapon rests in the hands of the celestials who wage eternal war against them. The fates who inspired the forge master to craft Ardor also sent a vision to a smith of heaven in the interest of maintaining the balance of power.",
-				{
-					"type": "entries",
-					"name": "Axe of Hell",
-					"entries": [
-						"This magic battleaxe grants a +3 bonus to attack and damage rolls made with it. When you hit with an attack using it, the target takes an extra {@damage 3d10} necrotic damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Champion of Evil",
-					"entries": [
-						"While holding the hammer, you are immune to the {@condition charmed}, {@condition frightened}, {@condition paralyzed}, {@condition poisoned}, and {@condition stunned} conditions."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Ardor's Pursuit",
-					"entries": [
-						"As a bonus action, you can release",
-						"Ardor to hover magically in an unoccupied space within 5 feet of you. If you can see the battleaxe, you can mentally command it as a bonus action to fly up to 50 feet and either make one attack against a target or return to your hands. If any effect targets the hovering axe, you are considered to be holding it. The hovering axe falls if the attuned user dies."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spells",
-					"entries": [
-						"While the axe is on your person, you can use an action to cast one of the following spells (save DC 18): bane, banishment, bestow curse, branding smite, or incendiary cloud. Once you use the axe to cast a spell, that spell can't be cast again from it until the next dawn."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Destroying the Axe",
-					"entries": [
-						"The only thing capable of damaging the battleaxe is its celestial twin Zeal. A creature wielding Zeal can choose to attack Ardor, which has an AC of 21 and 300 HP. No other creature or object can damage Ardor."
-					]
-				}
-			]
-		},
-		{
-			"name": "Funeral Mask",
-			"source": "GHPG",
-			"page": 134,
-			"rarity": "uncommon",
-			"reqAttune": "by a lich",
-			"wondrous": true,
-			"entries": [
-				"This delicate mask is made of thinly beaten copper that molds to the skin when worn. While wearing this mask, you can use an action to alter your appearance for one hour. You decide what you look like, including your height, weight, facial features, the sound of your voice, hair length, coloration, and distinguishing characteristics. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance.",
-				"At any time for the duration of the spell, you can use your action to change your appearance in this way. While altered in this manner, your hideous appearance is concealed. Once you use the mask, you cannot do so again until the following dawn."
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/GHPG/FuneralMask.jpg"
-						}
-					}
-				]
-			}
-		},
-		{
-			"name": "Staff of the Sorcerer King",
-			"source": "GHPG",
-			"page": 135,
-			"srd": true,
-			"baseItem": "staff|PHB",
-			"type": "SCF",
-			"scfType": "arcane",
-			"rarity": "legendary",
-			"reqAttune": "by a spellcaster",
-			"reqAttuneTags": [
-				{
-					"spellcasting": true
-				}
-			],
-			"weight": 4,
-			"weaponCategory": "simple",
-			"property": [
-				"V"
-			],
-			"dmg1": "1d6",
-			"dmgType": "B",
-			"dmg2": "1d8",
-			"grantsProficiency": true,
-			"bonusWeapon": "+2",
-			"bonusSpellAttack": "+2",
-			"staff": true,
-			"entries": [
-				"This ebony staff bears a bronze spear tip and additional blades carved to depict a winged scarab. The staff can be wielded as a magic spear that grants a +2 bonus to attack and damage rolls made with it. You are considered proficient with this weapon while you are attuned to it, even if you aren't proficient with spears. While you hold it, you gain a +2 bonus to spell attack rolls.",
-				{
-					"type": "entries",
-					"name": "Cull Subjects",
-					"entries": [
-						"Humanoids roll at disadvantage to save against spells you cast while attuned to the staff."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spell Shield",
-					"entries": [
-						"While attuned to this staff, you have advantage on saving throws against any spell that targets only you."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Cursed",
-					"entries": [
-						"This staff is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with remove curse or similar magic, you are unwilling to part with the staff, keeping it within reach at all times. In addition, you have disadvantage on attack rolls made with weapons other than this one.",
-						"While you are attuned to the staff, once a day at midnight, you must succeed on a DC 17 Constitution saving throw. On a failed save, your maximum hit points are reduced by 10 unless you are undead. These hit points can only be restored by means of a {@spell wish} spell. If your maximum hit points are reduced to 0 in this way, you die and immediately rise as a {@creature wight}."
-					]
-				}
-			]
-		},
-		{
-			"name": "Rod of Ruin",
-			"source": "GHPG",
-			"page": 135,
-			"type": "RD",
-			"rarity": "rare",
-			"reqAttune": "by a lich",
-			"recharge": "dusk",
-			"charges": 3,
-			"entries": [
-				"This rod is formed of stacked crystal spheres filled with smoke. The rod has 3 charges and regains all its expended charges daily at dusk.",
-				"When a creature you can see within 60 feet of you damages you while you are holding this rod, you can use your reaction to expend 1 charge to force the creature to make a DC 15 Constitution saving throw. On a failed save, the creature ages {@dice 2d10} years and takes one level of {@condition exhaustion}."
-			],
-			"rechargeAmount": 3
-		},
-		{
-			"name": "Armor of Zombie Flesh",
-			"source": "GHPG",
-			"page": 135,
-			"baseItem": "hide armor|PHB",
-			"type": "MA",
-			"rarity": "rare",
-			"reqAttune": "by a lich",
-			"weight": 12,
-			"ac": 12,
-			"grantsProficiency": true,
-			"entries": [
-				"This armor is formed from the tanned flesh of an animated zombie. While wearing this armor, your AC becomes 16 + your Dexterity modifier. You are considered proficient with this armor even if you are not proficient with hide armor."
-			]
-		},
-		{
-			"name": "Second Skin",
-			"source": "GHPG",
-			"page": 136,
-			"baseItem": "hide armor|PHB",
-			"type": "MA",
-			"rarity": "rare",
-			"reqAttune": "by a lycanthrope",
-			"weight": 12,
-			"ac": 12,
-			"entries": [
-				"This harness is woven from the hides of slain lycanthropes. While in your hybrid form, the harness bonds to your flesh like a second pelt, giving you an AC of 18. This AC replaces your usual Transformation AC.",
-				"While you wear the harness, you have disadvantage on Charisma checks to interact with other lycanthropes."
-			]
-		},
-		{
-			"name": "Crimson Mist",
-			"source": "GHPG",
-			"page": 136,
-			"rarity": "uncommon",
-			"wondrous": true,
-			"entries": [
-				"This tiny mist bottle contains a cocktail of prey pheromones, enough for one use. You can use an action to spray the pheromones on one target within 5 feet, and its effect lasts for 24 hours.",
-				"When they fail their Lust for the Hunt saving throw, a lycanthrope must prioritize a target affected by crimson mist over any other target."
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/GHPG/CrimsonMist.jpg"
-						},
-						"title": "Crimson Mist"
-					}
-				]
-			}
-		},
-		{
-			"name": "Rod of the Pack Master",
-			"source": "GHPG",
-			"page": 136,
-			"type": "RD",
-			"rarity": "very rare",
-			"reqAttune": "by a lycanthrope",
-			"entries": [
-				"This rod appears to be a piece of driftwood carved with images of wolves and bears. While holding this rod, you can choose any number of willing creatures you can see within 30 feet. The rod can be held in the teeth and is usable in your hybrid or kindred form. You transform each target into a {@creature wolf} or a {@creature bear} (your lycanthrope heritage determines which).",
-				"The transformation lasts for 24 hours for each target, until you choose to end the effect, or until the target drops to 0 hit points or dies. A target's game statistics are replaced by the chosen beast's statistics, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. The target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked {@condition unconscious}. The creature is limited in the actions it can perform by the nature of its new form, and it can't speak or cast spells.",
-				"The target's gear melds into the new form. The target can't activate, wield, or otherwise benefit from its equipment.",
-				"Once the rod has been used in this way, it cannot be used again until the following dawn."
-			]
-		},
-		{
-			"name": "Iron Fangs",
-			"source": "GHPG",
-			"page": 136,
-			"rarity": "rare",
-			"reqAttune": "by a lycanthrope",
-			"wondrous": true,
-			"entries": [
-				"These iron tooth caps are inscribed with magical runes. If you transform into your hybrid form or kindred form while wearing the iron fangs, the magical metal expands to coat your teeth. Your bite attacks count as magical damage. In addition, while you wear the iron fangs, you cannot transmit the curse of lycanthropy through bites."
-			]
-		},
-		{
-			"name": "Bow of Four",
-			"source": "GHPG",
-			"page": 136,
-			"baseItem": "longbow|PHB",
-			"type": "R",
-			"rarity": "very rare",
-			"reqAttune": "by a primordial",
-			"weight": 2,
-			"weaponCategory": "martial",
-			"property": [
-				"A",
-				"H",
-				"2H"
-			],
-			"range": "150/600",
-			"dmg1": "1d8",
-			"dmgType": "P",
-			"weapon": true,
-			"entries": [
-				"This white wooden bow is set with four gemstones: a ruby, an emerald, a sapphire, and a diamond. When you hold this bow, you can summon a magical arrow composed of one of the four elements. Conjuring an arrow in this way does not require an action. Each time you summon an arrow, you must choose one of the four options below. If you do not fire the arrow within 1 minute of summoning it, it dissolves.",
-				{
-					"type": "entries",
-					"name": "Arrow of Air",
-					"entries": [
-						"On a hit, the arrow of air deals {@damage 2d8} lightning damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Arrow of Earth",
-					"entries": [
-						"On a hit, the arrow of earth deals",
-						"{@dice 2d8} magical bludgeoning damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Arrow of Fire",
-					"entries": [
-						"On a hit, the arrow of fire deals {@damage 3d8} fire damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Arrow of Water",
-					"entries": [
-						"On a hit, the arrow of water deals",
-						"{@damage 2d8} cold damage."
-					]
-				}
-			],
-			"ammoType": "arrow|phb"
-		},
-		{
-			"name": "Lodestone Armor",
-			"source": "GHPG",
-			"page": 137,
-			"baseItem": "plate armor|PHB",
-			"type": "HA",
-			"rarity": "rare",
-			"reqAttune": "by a primordial",
-			"weight": 65,
-			"ac": 18,
-			"strength": "15",
-			"bonusAc": "+1",
-			"stealth": true,
-			"entries": [
-				"This plate armor is lined with magnetic lodestone harvested from the plane of elemental earth. While wearing this armor, you can use a bonus action to enhance its magnetic polarity. When you do so, loose stone, soil, and minerals are immediately pulled to the surface of the armor, granting you a +1 bonus to AC but reducing your speed by 5 feet. You can use a bonus action to activate this property each round cumulatively, up to a maximum of +5 AC and a 25-foot reduction in speed.",
-				"If 1 minute passes without using a bonus action to activate this property, all magnetized material falls off the armor, ending both AC bonuses and speed reduction."
-			]
-		},
-		{
-			"name": "Ring of Radiation",
-			"source": "GHPG",
-			"page": 137,
-			"type": "RG",
-			"rarity": "uncommon",
-			"reqAttune": "by a primordial",
-			"entries": [
-				"This ring is made of braided copper wire. While wearing this ring, your elemental energies are supercharged, allowing them to radiate from your body. When you attack with unarmed strikes, your reach increases by 5 feet."
-			]
-		},
-		{
-			"name": "Rod of Elemental Stasis",
-			"source": "GHPG",
-			"page": 137,
-			"type": "RD",
-			"rarity": "rare",
-			"reqAttune": "by a primordial",
-			"entries": [
-				"This wooden rod is set with four glass spheres that each contain a microcosm of elemental energy.",
-				"If an {@creature air elemental}, a {@creature fire elemental}, an {@creature earth elemental}, or a {@creature water elemental} is slain within 60 feet of you while you are holding the rod, the elemental is absorbed into the rod. A creature absorbed in this way occupies one of the four crystals in the rod. If the four crystals are already full when an elemental dies within range, the elemental dies as normal.",
-				"As an action, you can present the rod and free one of the elementals contained within a crystal. The freed elemental appears within 5 feet of you and is friendly to you and your allies. Roll initiative for the summoned elemental, which has its own turns. The elemental obeys any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures but otherwise take no actions.",
-				"A freed elemental remains for 10 minutes, until you dismiss it, or until it is slain, after which it disappears to its home plane."
-			]
-		},
-		{
-			"name": "Heaven's Herald",
-			"source": "GHPG",
-			"page": 137,
-			"rarity": "very rare",
-			"wondrous": true,
-			"entries": [
-				"This golden trumpet is never dulled by rust or dirt. As an action, a good-aligned creature can blow the trumpet, which emits a rousing battle song that can be heard up to 600 feet away. The creature blowing the trumpet can choose up to 12 allies within the area to receive the benefits of heaven's herald. An allied creature becomes immune to being {@condition frightened} and makes all Wisdom saving throws with advantage. In addition, its hit point maximum increases by {@dice 2d10}, and it gains the same number of hit points. These benefits last for 24 hours. Once used in this way, the herald cannot be used again until dawn.",
-				"If a neutral-aligned creature attempts to use the trumpet, no sound emerges, and nothing happens.",
-				"If an evil-aligned creature attempts to use the trumpet, the creature must succeed on a DC 15 Dexterity saving throw as a column of divine fire roars from the heavens to smite the user. A creature takes {@damage 8d6} radiant damage on a failed save, or half as much damage on a successful one."
-			]
-		},
-		{
-			"name": "Zeal",
-			"source": "GHPG",
-			"page": 137,
-			"baseItem": "warhammer|PHB",
-			"type": "M",
-			"rarity": "artifact",
-			"reqAttune": "by a seraph",
-			"weight": 2,
-			"weaponCategory": "martial",
-			"property": [
-				"V"
-			],
-			"dmg1": "1d8",
-			"dmgType": "B",
-			"dmg2": "1d10",
-			"bonusWeapon": "+3",
-			"weapon": true,
-			"conditionImmune": [
-				"charmed",
-				"frightened",
-				"paralyzed",
-				"poisoned",
-				"stunned"
-			],
-			"attachedSpells": [
-				"banishment",
-				"branding smite",
-				"earthquake",
-				"beacon of hope",
-				"heroism"
-			],
-			"entries": [
-				"The steel head of this warhammer seems to glow with an inner light. The pale wooden handle is accented with white gold.",
-				"When the celestial realm nearly fell into darkness, a heavenly smith received a vision allowing them to craft a hammer like no other. With the might of Zeal, the armies of heaven turned back their foes, restoring cosmic balance.",
-				"Zeal now lies in the hidden vaults of the celestial realms, waiting to be wielded once again when the forces of darkness threaten to consume the world.",
-				"The celestials don't realize that an equally powerful weapon rests in the hands of the very same armies of darkness that drove them back. The fates who inspired the smith to craft Zeal also sent a vision to a forge keeper of hell in the interest of maintaining the balance of power.",
-				{
-					"type": "entries",
-					"name": "Hammer of Heaven",
-					"entries": [
-						"This magic warhammer grants a +3 bonus to attack and damage rolls made with it. When you hit with an attack using it, the target takes an extra {@damage 3d10} radiant damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Champion of Good",
-					"entries": [
-						"While holding the hammer, you are immune to the {@condition charmed}, {@condition frightened}, {@condition paralyzed}, {@condition poisoned}, and {@condition stunned} conditions."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Zealous Pursuit",
-					"entries": [
-						"As a bonus action, you can release Zeal to hover magically in an unoccupied space within 5 feet of you. If you can see the hammer, you can mentally command it as a bonus action to fly up to 50 feet and either make one attack against a target or return to your hands. If any effect targets the hovering hammer, you are considered to be holding it. The hovering hammer falls if the attuned user dies."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spells",
-					"entries": [
-						"While the hammer is on your person, you can use an action to cast one of the following spells (save DC 18): {@spell banishment}, {@spell branding smite}, {@spell beacon of hope}, {@spell earthquake}, or {@spell heroism}. Once you use the hammer to cast a spell, that spell can't be cast again from it until the next dawn."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Destroying the Hammer",
-					"entries": [
-						"The only thing capable of damaging the hammer is its fiendish twin Ardor. A creature wielding Ardor can choose to attack Zeal, which has an AC of 21 and 300 HP. No other creature or object can damage Zeal."
-					]
-				}
-			]
-		},
-		{
-			"name": "Ring of Truth",
-			"source": "GHPG",
-			"page": 138,
-			"type": "RG",
-			"rarity": "uncommon",
-			"reqAttune": true,
-			"entries": [
-				"This golden band is stamped with images of smiling humanoid faces. While attuned to this ring, the wearer continually emits an aura identical to the effects of the zone of truth spell. The zone affects a 15-foot-radius sphere centered on the wearer."
-			]
-		},
-		{
-			"name": "Humble Frock",
-			"source": "GHPG",
-			"page": 138,
-			"rarity": "uncommon",
-			"reqAttune": "by a seraph",
-			"wondrous": true,
-			"entries": [
-				"This rough spawn frock is weather-worn and full of holes. While wearing the frock and no other armor or clothing, a seraph automatically succeeds on checks to conceal their divine appearance."
-			]
-		},
-		{
-			"name": "Ectoplasmic Whip",
-			"source": "GHPG",
-			"page": 138,
-			"baseItem": "whip|PHB",
-			"type": "M",
-			"rarity": "rare",
-			"reqAttune": "by a spectre",
-			"weight": 3,
-			"weaponCategory": "martial",
-			"property": [
-				"F",
-				"R"
-			],
-			"dmg1": "1d4",
-			"dmgType": "S",
-			"bonusWeapon": "+1",
-			"weapon": true,
-			"entries": [
-				"This whip is made of silver plasma that seems to phase in and out of reality. You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
-				"The whip is {@condition invisible} to non-undead creatures. You have advantage on attacks made with the whip against creatures who cannot perceive it."
-			]
-		},
-		{
-			"name": "Banshee Box",
-			"source": "GHPG",
-			"page": 138,
-			"rarity": "uncommon",
-			"reqAttune": "by a spectre",
-			"wondrous": true,
-			"entries": [
-				"This ivory music box is inlaid with silver decorations depicting tiny scenes of gruesome violence. When a creature attuned to the box opens the lid, they can mentally command the box to make a sound of their choosing. Once the lid is open, the sound continues to play until the box is closed. If the attuned user closes the lid then opens it again, they can mentally command the box to play a different sound. If the attuned user travels more than 300 feet away from the box, the lid closes and the music box ceases to play.",
-				"The box can create any soundscape, like haunting piano music, the sounds of a lively party, or a continuous series of screams. When the box is opened, the user can choose whether the sound is audible in a sphere with a 5-foot radius, a 30-foot radius, or a 120-foot radius."
-			]
-		},
-		{
-			"name": "Wand of the Poltergeist",
-			"source": "GHPG",
-			"page": 138,
-			"type": "WD",
-			"rarity": "very rare",
-			"reqAttune": "by a spectre",
-			"recharge": "dusk",
-			"charges": 7,
-			"attachedSpells": [
-				"shatter",
-				"animate objects",
-				"major image"
-			],
-			"entries": [
-				"This wand is a swirl of dark and white wood topped with a carved screaming skull. The wand has 7 charges, which are used to fuel the spells within it. With the wand in hand, you can use your action to cast one of the following spells from the wand. The DC for these spells is equal to your Transformation DC: shatter (1 charge), animate objects (4 charges), or major image (3 charges). No components are required.",
-				"The wand regains {@dice 1d6 + 1} expended charges each day at dusk. If you expend the wand's last charge, roll a {@dice d20}. On a 20, the wand explodes into splinters and is destroyed."
-			],
-			"rechargeAmount": "{@dice 1d6 + 1}"
-		},
-		{
-			"name": "Mortal Coil",
-			"source": "GHPG",
-			"page": 138,
-			"type": "RG",
-			"rarity": "uncommon",
-			"reqAttune": "by a spectre",
-			"entries": [
-				"This ring is composed of hundreds of rose gold wires woven to coil around the finger. While a spectre wears this ring, they can use a bonus action to become completely corporeal. While in this corporeal state, they do not register as undead to any magical effects and can interact with the material world as a typical humanoid. While in a corporeal state, the spectre loses all benefits of their transformation. A spectre can use a bonus action to return to their true form."
-			]
-		},
-		{
-			"name": "Sun Shades",
-			"source": "GHPG",
-			"page": 139,
-			"rarity": "uncommon",
-			"wondrous": true,
-			"entries": [
-				"These black leather goggles are set with cloudy glass that completely obscure the eyes of the wearer. While wearing these dark lenses, you do not have disadvantage on attack rolls and ability checks made while in sunlight. You also cannot see in complete darkness while wearing the shades, even if you have {@sense darkvision}."
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/GHPG/SunShades.jpg"
-						}
-					}
-				]
-			}
-		},
-		{
-			"name": "Blood Capsule",
-			"source": "GHPG",
-			"page": 139,
-			"rarity": "uncommon",
-			"wondrous": true,
-			"entries": [
-				"This cylindrical flask is etched with necrotic runes. Humanoid blood stored in the blood capsule remains fresh for up to one year. The flask stores enough blood to sustain a vampire for one day."
-			]
-		},
-		{
-			"name": "Light Drinker",
-			"source": "GHPG",
-			"page": 139,
-			"baseItem": "longsword|PHB",
-			"type": "M",
-			"rarity": "very rare",
-			"reqAttune": true,
-			"weight": 3,
-			"weaponCategory": "martial",
-			"property": [
-				"V"
-			],
-			"dmg1": "1d8",
-			"dmgType": "S",
-			"dmg2": "1d10",
-			"bonusWeapon": "+2",
-			"sword": true,
-			"weapon": true,
-			"entries": [
-				"This sword's hilt and blade are forged of a single piece of black metal that seems to absorb the light around it. You gain a +2 bonus to attack and damage rolls made with this weapon, which deals cold damage instead of slashing damage. While attuned to the sword, you gain {@sense darkvision} to 60 feet and can see in magical darkness.",
-				"As a bonus action, you can cause the sword to emit magical darkness in a 15-foot radius and dim light for an additional 15 feet. While the darkness is active, you can use an action to expand or reduce its radius of bright and dim light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each. Darkness created by this sword can only be suppressed by an {@spell antimagic field}."
-			]
-		},
-		{
-			"name": "Angelskin Armor",
-			"source": "GHPG",
-			"page": 139,
-			"baseItem": "leather armor|PHB",
-			"type": "LA",
-			"immune": [
-				"bludgeoning",
-				"piercing",
-				"slashing"
-			],
-			"rarity": "rare",
-			"weight": 10,
-			"ac": 11,
-			"entries": [
-				"This leather armor is made from the flayed flesh of angels. While wearing the armor, you are immune to bludgeoning, piercing, and slashing damage from nonmagical attacks. This includes attacks from nonmagical wooden or silvered weapons.",
-				"Any celestial that sees this armor becomes immediately hostile against the wearer."
-			]
-		},
-		{
-			"name": "Watcher's Candle",
-			"source": "GHPG",
-			"page": 140,
-			"rarity": "uncommon",
-			"wondrous": true,
-			"entries": [
-				"This black tapered candle cannot be lit. When a celestial, fiend, undead, or fey comes within 120 feet of the candle, it lights and burns with a purple flame. Once the candle has caught flame, it burns for one hour, and it cannot be used again.",
-				"Watcher's candles cannot function if they are wrapped in packaging or stowed in a container."
-			]
-		},
-		{
-			"name": "Seeing Glass",
-			"source": "GHPG",
-			"page": 140,
-			"rarity": "very rare",
-			"wondrous": true,
-			"entries": [
-				"This ornate silver hand mirror is decorated with a motif of withered roses. The mirror's reflection always shows the true form of any creature viewed in it as if it were seen by the {@spell true seeing} spell. You can see {@condition invisible} creatures, the true form of shapechanger, and the true faces of creatures attempting to disguise their hideous appearance.",
-				"If the seeing glass is turned upon a vampire, the glass immediately shatters and is destroyed."
-			]
-		},
-		{
-			"name": "Stitching Needle",
-			"source": "GHPG",
-			"page": 140,
-			"rarity": "rare",
-			"wondrous": true,
-			"entries": [
-				"This black iron needle easily pierces the skin. If a creature's mouth is sewn shut with a stitching needle, it loses the ability to speak or cast spells with verbal components. The creature gains the ability to communicate with telepathy out to a range of 60 feet. A creature you speak to in this manner does not need to share a language with you to communicate, but it must be able to understand at least one language. A creature without telepathy can receive and respond to messages but can't initiate a conversation with you.",
-				"Stitching the mouth of a willing, {@condition unconscious}, or {@condition incapacitated} creature takes 10 minutes. Removing the stitches takes 1 minute."
-			]
-		},
-		{
-			"name": "Hunter's Mutagen",
-			"source": "GHPG",
-			"page": 140,
-			"type": "P",
-			"immune": [
-				"poison"
-			],
-			"rarity": "rare",
-			"entries": [
-				"This glowing green liquid sends a creature's antibodies into a hyperactive state. When you drink this potion, you are immune to poison and disease for one hour. You also cannot contract curses like lycanthropy or mummy rot for the duration. At the end of the hour, you gain one level of {@condition exhaustion}."
-			]
-		}
-	],
 	"spell": [
 		{
 			"name": "Arboreal Curse",
@@ -3456,19 +2615,7 @@
 		}
 	],
 	"subclass": [
-		{
-			"name": "Path of the Fractured",
-			"source": "GHPG",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"shortName": "Fractured",
-			"subclassFeatures": [
-				"Path of the Fractured|Barbarian||Fractured|GHPG|3",
-				"Brains and Brawn|Barbarian||Fractured|GHPG|6",
-				"Cunning and Brutal|Barbarian||Fractured|GHPG|10",
-				"Better Half|Barbarian||Fractured|GHPG|14"
-			]
-		},
+		
 		{
 			"name": "Path of the Primal Spirit",
 			"source": "GHPG",
@@ -3502,55 +2649,11 @@
 			]
 		},
 		{
-			"name": "College of Adventurers",
-			"source": "GHPG",
-			"className": "Bard",
-			"classSource": "PHB",
-			"shortName": "Adventurers",
-			"subclassFeatures": [
-				"College of Adventurers|Bard||Adventurers|GHPG|3",
-				"Well-Rounded|Bard||Adventurers|GHPG|6",
-				"Improvisational Talent|Bard||Adventurers|GHPG|14"
-			]
-		},
-		{
-			"name": "College of Requiems",
-			"source": "GHPG",
-			"className": "Bard",
-			"classSource": "PHB",
-			"shortName": "Requiems",
-			"subclassFeatures": [
-				"College of Requiems|Bard||Requiems|GHPG|3",
-				"Stir the Bones|Bard||Requiems|GHPG|6",
-				"Dance of the Dead|Bard||Requiems|GHPG|14"
-			],
-			"additionalSpells": [
-				{
-					"ability": "cha",
-					"innate": {
-						"1": {
-							"_": [
-								{
-									"choose": "level=0|school=N",
-									"count": 2
-								}
-							]
-						}
-					},
-					"prepared": {
-						"6": [
-							"animate dead"
-						]
-					}
-				}
-			]
-		},
-		{
-			"name": "Eldritch Domain",
+			"name": "The Forgotten One",
 			"source": "GHPG",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"shortName": "Eldritch",
+			"shortName": "Forgotten",
 			"subclassSpells": [
 				"tasha's hideous laughter",
 				"sleep",
@@ -3602,63 +2705,11 @@
 				}
 			],
 			"subclassFeatures": [
-				"Eldritch Domain|Cleric||Eldritch|GHPG|1",
-				"Channel Divinity: Prophecy of Doom|Cleric||Eldritch|GHPG|2",
-				"Otherworldly Calm|Cleric||Eldritch|GHPG|6",
-				"Potent Spellcasting|Cleric||Eldritch|GHPG|8",
-				"Sing the Song that Ends the World|Cleric||Eldritch|GHPG|17"
-			]
-		},
-		{
-			"name": "Inquisition Domain",
-			"source": "GHPG",
-			"className": "Cleric",
-			"classSource": "PHB",
-			"shortName": "Inquisition",
-			"subclassSpells": [
-				"detect magic",
-				"identify",
-				"silence",
-				"see invisibility",
-				"dispel magic",
-				"remove curse",
-				"arcane eye",
-				"locate creature",
-				"creation",
-				"hallow"
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"detect magic",
-							"identify"
-						],
-						"3": [
-							"see invisibility",
-							"silence"
-						],
-						"5": [
-							"dispel magic",
-							"remove curse"
-						],
-						"7": [
-							"arcane eye",
-							"locate creature"
-						],
-						"9": [
-							"creation",
-							"hallow"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Inquisition Domain|Cleric||Inquisition|GHPG|1",
-				"Channel Divinity: Spell Shield|Cleric||Inquisition|GHPG|2",
-				"Rebuke Invoker|Cleric||Inquisition|GHPG|6",
-				"Divine Strike|Cleric||Inquisition|GHPG|8",
-				"Supernal Safeguard|Cleric||Inquisition|GHPG|17"
+				"The Forgotten One|Cleric||Forgotten|GHPG|1",
+				"Channel Divinity: Prophecy of Doom|Cleric||Forgotten|GHPG|2",
+				"Otherworldly Calm|Cleric||Forgotten|GHPG|6",
+				"Potent Spellcasting|Cleric||Forgotten|GHPG|8",
+				"Sing the Song that Ends the World|Cleric||Forgotten|GHPG|17"
 			]
 		},
 		{
@@ -3704,33 +2755,6 @@
 				"Rite of the Blood Moon|Druid||Blood|GHPG|6",
 				"Blood Lust|Druid||Blood|GHPG|10",
 				"Create Blood Elemental|Druid||Blood|GHPG|14"
-			]
-		},
-		{
-			"name": "Circle of Mutation",
-			"source": "GHPG",
-			"className": "Druid",
-			"classSource": "PHB",
-			"shortName": "Mutation",
-			"subclassFeatures": [
-				"Circle of Mutation|Druid||Mutation|GHPG|2",
-				"Unnatural and Unnerving|Druid||Mutation|GHPG|6",
-				"Endless Evolution|Druid||Mutation|GHPG|10",
-				"Apex Predator Aura|Druid||Mutation|GHPG|14"
-			]
-		},
-		{
-			"name": "The Bulwark Warrior",
-			"source": "GHPG",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"shortName": "Bulwark Warrior",
-			"subclassFeatures": [
-				"The Bulwark Warrior|Fighter||Bulwark Warrior|GHPG|3",
-				"Living Shield|Fighter||Bulwark Warrior|GHPG|7",
-				"Aggressive Defence|Fighter||Bulwark Warrior|GHPG|10",
-				"Improved Second Wind|Fighter||Bulwark Warrior|GHPG|15",
-				"Halt the Assault|Fighter||Bulwark Warrior|GHPG|18"
 			]
 		},
 		{
@@ -4274,10 +3298,11 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, you gain a primal companion, a spirit that accompanies you on your adventures and instinctively fights alongside you. Select either the {@filter Primal Guardian|bestiary|group=Primal Guardian|source=GHPG} or {@filter Primal Striker|bestiary|group=Primal Striker|source=GHPG}, and one of land, sea, or sky. Its in game statistics can be found on one of the following cards, which uses your proficiency bonus (PB) in several places.",
-				"You determine your companion's appearance; however, this does not affect its game statistics. Despite taking on a physical form, your primal companion does not need to breathe, eat, or sleep. You and your primal companion can communicate with one another telepathically while you are both on the same plane.",
-				"As an action, you can temporarily dismiss your primal companion or summon it within 30 feet of you. In combat, your primal companion shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action Dodge} action, unless you use a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {condition incapacitated}, your companion can take any action of its choice.",
-				"You can spend one minute caring for your primal companion. When you do, the spirit regains {@dice 2d6} hit points. Your primal companion regains all lost hit points at the end of a long rest. If your primal companion dies, the spirit manifests in a form of your choice the next time you finish a long rest."
+				"At 3rd level, you gain a primal companion, a spirit that accompanies you on your adventures and instinctively fights alongside you. Select either the {@creature Primal Bear Spirit|GHPG}, {@creature Primal Wolf Spirit|GHPG}, or {@creature Primal Hawk Spirit|GHPG}. Its in game statistics can be found on one of the following cards, which uses your proficiency bonus (PB) in several places.",
+				"Although these primal spirits have prescribed appearances, you can of course reflavor their forms to another suitable beast.",
+				"As an action, you can temporarily dismiss your primal companion or summon it within 30 feet of you. In combat, your primal companion shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action needed). If a primal spirit cannot receive yoru commands for any reason, such as being {@condition deafened} or separated from you, it completes its last received command to the best of its ability and then attempts to defend you or itself to the best of its ability.",
+				"Your primal spirit regains all lost hit points at the end of a short rest. A primal spirit dies if it reaches 0 hit points.",
+				"You can re-summon a primal spirit at the end of a long rest, either to restore it from death or to change its form."
 			]
 		},
 		{
@@ -4305,7 +3330,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you can cast the {@spell animal friendship} and {@spell speak with animals} spells using Constitution as your spellcasting ability. Once you cast a spell using this feature, you can't cast either spell until you finish a short or long rest."
+				"At 6th level, you learn certain spells, using Constitution as your spellcasting ability modifier. You can cast {@spell speak with animals} and {@spell beast sense} at-will, and you can cast {@spell speak with animals} once per short rest."
 			]
 		},
 		{
@@ -4319,9 +3344,9 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you can use an action and choose your primal companion or one beast currently under the effect of your animal friendship spell to enter a trance. For the duration of this trance, you possess the chosen creature.",
+				"At 10th level, you can use an action and choose your primal companion or one beast currently under the effect of your {@spell animal friendship} spell to enter a trance. For the duration of this trance, you possess the chosen creature.",
 				"While possessing a creature, you sense the world through the target's senses, you have total control over its movement and actions, you use the beast's physical statistics and abilities instead of your own, and keep your mental attributes. This possession ends if you choose to exit the trance (no action required by you), the beast you're possessing is reduced to 0 hit points, or you and the beast are on different planes of existence.",
-				"While in this trance, you are blinded and deafened in regard to your own senses and cannot move or take actions. You can remain in the trance for a number of hours up to half your level in this class + your Constitution modifier. Once you use this feature to enter the trance, you cannot do so again until you finish a long rest."
+				"While in this trance, you are blinded and deafened in regard to your own senses and cannot move or take actions. You can remain in the trance for a number of hours up to half your level in this class + your Constitution modifier."
 			]
 		},
 		{
@@ -4572,19 +3597,21 @@
 			]
 		},
 		{
-			"name": "Eldritch Domain",
+			"name": "The Forgotten One",
 			"source": "GHPG",
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "GHPG",
-			"subclassShortName": "Eldritch",
+			"subclassShortName": "Forgotten",
 			"page": 45,
 			"level": 1,
 			"entries": [
-				"Even the most benevolent divine beings operate outside the bounds of mortal comprehension. These eldritch forces sing a siren song that calls out for mortal worshippers through lucid dreams and the whispers of dead gods. The Eldritch domain empowers the devoted followers of unknown and distant forces of chaos, divine entities of eldritch oblivion, and dead gods.",
+				"...",
+				"...",
+				"... ?",
 				{
 					"type": "table",
-					"caption": "Eldritch Domain Spells",
+					"caption": "Forgotten One Spells",
 					"colLabels": [
 						"Cleric Level",
 						"Spells"
@@ -4618,11 +3645,11 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Unpredictable Inspiration|Cleric||Eldritch|GHPG|1|GHPG"
+					"subclassFeature": "Unpredictable Inspiration|Cleric||Forgotten|GHPG|1|GHPG"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Eldritch Contagion|Cleric||Eldritch|GHPG|1|GHPG"
+					"subclassFeature": "Eldritch Contagion|Cleric||Forgotten|GHPG|1|GHPG"
 				}
 			]
 		},
@@ -4632,13 +3659,13 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "GHPG",
-			"subclassShortName": "Eldritch",
+			"subclassShortName": "Forgotten",
 			"page": 46,
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, choose {@filter any cantrip|spells|level=0}. The chosen cantrip counts as a cleric spell for you but does not count against the number of cleric cantrips you know. Each time you finish a long rest you can replace the chosen cantrip with any other cantrip of your choice.",
-				"In addition, you gain proficiency in a skill of your choice. Each time you finish a long rest you can replace the chosen skill with another skill of your choice."
+				"At 1st level, you gain a random cantrip, selected from the list of all bard, cleric, druid, sorcerer, and warlock cantrips. This cantrip counts as a cleric spell for you but does not count against the number of cleric cantrips you know. Whenever you complete a long rest, this cantrip is swapped out for another random cantrip.",
+				"In addition, you gain proficiency in a random skill of your choice. Each time you finish a long rest, the random skill is rerolled. This feature always gives you proficiency in a skill you do not already have."
 			]
 		},
 		{
@@ -4647,7 +3674,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "GHPG",
-			"subclassShortName": "Eldritch",
+			"subclassShortName": "Forgotten",
 			"page": 46,
 			"level": 1,
 			"header": 1,
@@ -4707,7 +3734,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "GHPG",
-			"subclassShortName": "Eldritch",
+			"subclassShortName": "Forgotten",
 			"page": 46,
 			"level": 2,
 			"header": 2,
@@ -4722,7 +3749,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "GHPG",
-			"subclassShortName": "Eldritch",
+			"subclassShortName": "Forgotten",
 			"page": 46,
 			"level": 6,
 			"header": 2,
@@ -4737,7 +3764,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "GHPG",
-			"subclassShortName": "Eldritch",
+			"subclassShortName": "Forgotten",
 			"page": 46,
 			"level": 8,
 			"header": 2,
@@ -4751,7 +3778,7 @@
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassSource": "GHPG",
-			"subclassShortName": "Eldritch",
+			"subclassShortName": "Forgotten",
 			"page": 46,
 			"level": 17,
 			"header": 2,
@@ -4996,14 +4023,14 @@
 				{
 					"type": "list",
 					"items": [
-						"It gains resistance to bludgeoning, piercing, and slashing damage against weapon which are not magical.",
+						"It gains resistance to bludgeoning, piercing, and slashing damage against weapons which are not magical.",
 						"it gains {@sense darkvision} to a range of 60 and advantage on Wisdom ({@skill Perception}) checks",
 						"It can roll a {@dice d8} in place of the normal damage of its unarmed strike. When it takes the {@action Attack} action on its turn, it can make one attack with its unarmed strike as a bonus action.",
 						"Its speed increases by 10 feet.",
-						"It can't speak or cast spells.",
-						"Only one creature at a time can be affected by your Blood Rite. If you use the Rite of the Blood Moon on another creature, the effects of the Rite end for any other creature."
+						"It can't speak or cast spells."
 					]
-				}
+				},
+				"Only one creature at a time can be affected by your Blood Rite. If you use the Rite of the Blood Moon on another creature, the effects of the Rite end for any other creature."
 			]
 		},
 		{
@@ -5031,7 +4058,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, when a creature you can see within 60 feet of you dies, you can use your reaction to fully exsanguinate its corpse, conjuring a {@creature water elemental} composed of its blood and bound to your service.",
+				"Starting at 14th level, when a Medium or larger creature you can see within 60 feet of you dies, you can use your reaction to fully exsanguinate its corpse, conjuring a {@creature water elemental} composed of its blood and bound to your service. This feature can only be used on creatures that have blood.",
 				"Roll initiative for the elemental, which has its own turns. It obeys your verbal commands. The elemental remains in your service for 1 hour or until it is reduced to 0 hit points, at which point it collapses into a pool of blood.",
 				"Once you conjure an elemental with this feature, you can't use the feature again until you finish a long rest."
 			]
@@ -5376,7 +4403,7 @@
 							"name": "Creating Compounds",
 							"page": 52,
 							"entries": [
-								"You learn three compounds of your choice, which are detailed under \"Compounds\" below. You can create any number of these compounds you know by using alchemist's supplies and spending 10 minutes to create them. These compounds remain potent until the end of your next long rest, after which time they become inert and have no effect.",
+								"You learn three compounds of your choice, which are detailed under \"Compounds\" below. Over the course of a long rest, you can use an alchemy kit to create a number of compounds equal to 1 + your Constitution modifier, choosing from the compounds you know; you can make duplicates of a single compound if you wish. These compounds remain potent until you complete another long rest.",
 								"You learn two additional compounds of your choice at 7th, 10th, and 15th level. Each time you learn new compounds, you can also replace one compound you know with another one."
 							]
 						},
@@ -5385,7 +4412,7 @@
 							"name": "Consuming Compounds",
 							"page": 52,
 							"entries": [
-								"As a bonus action you can consume a single compound using this feature. You can safely consume a number of compounds up to 1 + your Constitution modifier (minimum of 1). Each compound you consume after that causes you to gain a level of {@condition exhaustion}. When you finish a long rest, you regain the ability to safely consume compounds. You can benefit from multiple compounds at the same time, but taking the same compound more than once provides no additional effects.",
+								"As a bonus action you can consume a single compound using this feature. You can benefit from multiple compounds at the same time, but taking the same compound more than once provides no additional effects.",
 								"The benefits associated with each compound apply only to you. Any other creature that consumes one of your compounds must succeed on a Constitution saving throw (DC = 8 + your proficiency bonus + your Intelligence modifier) or become poisoned for 1 minute."
 							]
 						}
@@ -5523,8 +4550,9 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, the number of compounds you can safely consume increases to 3 + your Constitution modifier (minimum 1).",
-				"At 18th level, the number of compounds you can safely consume increases to 5 + your Constitution modifier (minimum 1)."
+				"At 10th level, the number of compounds you can produce during a long rest increases to 4 + your Constitution modifier (minimum 1).",
+				"Additionally, you gain the ability to transmute your blood into other substances. As an action, you can choose to take damage equal to two rolls of your hit dice, drawing your blood into a container, and magically transmute the blood into water, alcohol, acid, a {@item potion of healing}, a {@item basic poison (vial)||vial of poison}, a {@item vial of acid}, or a {@item Alchemist's Fire (flask) ||flask of alchemist's fire}.",
+				"Any alchemical item produced by this feature is transient, and turns back into blood if not used within 1 hour. Substances created by this feature are clearly magical in origin, though not necessarily magical in effect."
 			]
 		},
 		{
@@ -5538,7 +4566,8 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"At 15th level, you can use a bonus action to end one effect causing you to be {@condition poisoned}. When you do, you gain temporary hit points equal to your level in this class."
+				"At 15th level, you can use a bonus action to end one effect causing you to be {@condition poisoned}. When you do, you gain temporary hit points equal to your level in this class.",
+				"Additionally, when you use a bonus action to inject a compound, you can inject two compounds instead of 1."
 			]
 		},
 		{
@@ -5552,7 +4581,9 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"At 18th level, when you finish a long rest you can choose to replace one compound you know with another one."
+				"At 18th level, you can produce a number of compounds equal to 7 + your Constitution modifier per long rest.",
+				"Additionally, you can use your bonus action to inject up to three compounds instead of two." 
+				
 			]
 		},
 		{
@@ -9943,7 +8974,7 @@
 			]
 		},
 		{
-			"name": "Primal Striker of the Land",
+			"name": "Primal Wolf Spirit",
 			"size": [
 				"M"
 			],
@@ -9999,26 +9030,24 @@
 					"entries": [
 						"The guardian uses your proficiency bonus to the skills and saving throws. You add double your proficiency bonus to its {@skill Intimidation} checks{@homebrew *|This feature is added because of the platform's limitations.}."
 					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The primal spirit has advantage on an attack roll against a creature if at least one of the spirit's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
 				}
 			],
 			"action": [
 				{
-					"name": "Natural Weapon",
+					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 2 + PB} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) bludgeoning, piercing or slashing damage."
+						"{@atk mw} {@hit 2 + PB} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d12 + 2}) bludgeoning, piercing or slashing damage."
 					]
 				}
 			],
 			"miscTags": [
 				"MW"
-			],
-			"reaction": [
-				{
-					"name": "Harry",
-					"entries": [
-						"When a creature within 5 feet of the striker is attacked, the striker gives that attack roll advantage."
-					]
-				}
 			],
 			"save": {
 				"dex": "+2",
@@ -10029,7 +9058,7 @@
 			]
 		},
 		{
-			"name": "Primal Striker of the Sky",
+			"name": "Primal Hawk Spirit",
 			"size": [
 				"M"
 			],
@@ -10044,11 +9073,11 @@
 				}
 			],
 			"hp": {
-				"special": "5 + four times your barbarian level"
+				"special": "5 + two times your barbarian level"
 			},
 			"speed": {
-				"walk": 40,
-				"fly": 60,
+				"walk": 5,
+				"fly": 40,
 				"canHover": false
 			},
 			"str": 15,
@@ -10093,13 +9122,27 @@
 					"entries": [
 						"The striker doesn't provoke opportunity attacks when it flies out of an enemy's reach."
 					]
+				},
+				{
+					"name": "Keen Sight",
+					"entries": [
+						"The hawk has advantage on Wisdom (Perception) checks that rely on sight."
+					]
 				}
 			],
 			"action": [
 				{
-					"name": "Natural Weapon",
+					"name": "Beak",
 					"entries": [
 						"{@atk mw} {@hit 2 + PB} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) bludgeoning, piercing or slashing damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Harry",
+					"entries": [
+						"When a creature within 5 feet of the striker is attacked, the striker gives that attack roll advantage."
 					]
 				}
 			],
@@ -10118,281 +9161,7 @@
 			]
 		},
 		{
-			"name": "Primal Striker of the Sea",
-			"size": [
-				"M"
-			],
-			"type": "beast",
-			"source": "GHPG",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				{
-					"special": "12 plus PB"
-				}
-			],
-			"hp": {
-				"special": "5 + four times your barbarian level"
-			},
-			"speed": {
-				"walk": 40,
-				"swim": 60
-			},
-			"str": 15,
-			"dex": 15,
-			"con": 14,
-			"int": 4,
-			"wis": 12,
-			"cha": 7,
-			"passive": 11,
-			"page": 41,
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"senseTags": [
-				"D"
-			],
-			"languages": [
-				"understands your languages but can't speak"
-			],
-			"languageTags": [
-				"CS"
-			],
-			"skill": {
-				"perception": "+1",
-				"stealth": "+2"
-			},
-			"trait": [
-				{
-					"name": "Enraged Strikes",
-					"entries": [
-						"While you are raging, the striker's natural weapon attacks gain a damage bonus equal to your Rage Damage."
-					]
-				},
-				{
-					"name": "Primal Companion",
-					"entries": [
-						"The guardian uses your proficiency bonus to the skills and saving throws. You add double your proficiency bonus to its {@skill Intimidation} checks{@homebrew *|This feature is added because of the platform's limitations.}."
-					]
-				},
-				{
-					"name": "Aquatic Assault",
-					"entries": [
-						"While the striker is submerged in water it has advantage on natural weapon attacks made against other creatures without a swim speed submerged in water."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Natural Weapon",
-					"entries": [
-						"{@atk mw} {@hit 2 + PB} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) bludgeoning, piercing or slashing damage."
-					]
-				}
-			],
-			"miscTags": [
-				"MW"
-			],
-			"save": {
-				"dex": "+2",
-				"wis": "+1"
-			},
-			"group": [
-				"Primal Striker"
-			]
-		},
-		{
-			"name": "Primal Guardian of the Sky",
-			"size": [
-				"M"
-			],
-			"type": "beast",
-			"source": "GHPG",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				{
-					"special": "12 plus PB"
-				}
-			],
-			"hp": {
-				"special": "5 + six times your barbarian level"
-			},
-			"speed": {
-				"walk": 30,
-				"fly": 45,
-				"canHover": false
-			},
-			"str": 15,
-			"dex": 12,
-			"con": 16,
-			"int": 4,
-			"wis": 12,
-			"cha": 6,
-			"passive": 11,
-			"page": 41,
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"senseTags": [
-				"D"
-			],
-			"languages": [
-				"understands your languages but can't speak"
-			],
-			"languageTags": [
-				"CS"
-			],
-			"save": {
-				"str": "+2",
-				"con": "+3"
-			},
-			"skill": {
-				"athletics": "+2",
-				"intimidation": "-2",
-				"perception": "+1"
-			},
-			"trait": [
-				{
-					"name": "Protective Instinct",
-					"entries": [
-						"When the guardian's hit points fall below half its maximum, it's enraged for 10 minutes, gaining temporary hit points equal to half of its maximum. While enraged, hostile creatures within 5 feet have disadvantage on attack rolls against creatures other than the guardian."
-					]
-				},
-				{
-					"name": "Vigilant",
-					"entries": [
-						"The guardian can't be surprised."
-					]
-				},
-				{
-					"name": "Primal Companion",
-					"entries": [
-						"The guardian uses your proficiency bonus to the skills and saving throws. You add double your proficiency bonus to its {@skill Intimidation} checks{@homebrew *|This feature is added because of the platform's limitations.}."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Natural Weapon",
-					"entries": [
-						"{@atk mw} {@hit 2 + PB} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning, piercing or slashing damage."
-					]
-				}
-			],
-			"miscTags": [
-				"MW"
-			],
-			"reaction": [
-				{
-					"name": "Body Block",
-					"entries": [
-						"When an ally within 5 feet of it is hit by an attack, the guardian takes the damage instead."
-					]
-				}
-			],
-			"group": [
-				"Primal Guardian"
-			]
-		},
-		{
-			"name": "Primal Guardian of the Sea",
-			"size": [
-				"L"
-			],
-			"type": "beast",
-			"source": "GHPG",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				{
-					"special": "12 plus PB"
-				}
-			],
-			"hp": {
-				"special": "5 + six times your barbarian level"
-			},
-			"speed": {
-				"walk": 30,
-				"swim": 45
-			},
-			"str": 15,
-			"dex": 12,
-			"con": 16,
-			"int": 4,
-			"wis": 12,
-			"cha": 6,
-			"passive": 11,
-			"page": 41,
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"senseTags": [
-				"D"
-			],
-			"languages": [
-				"understands your languages but can't speak"
-			],
-			"languageTags": [
-				"CS"
-			],
-			"save": {
-				"str": "+2",
-				"con": "+3"
-			},
-			"skill": {
-				"athletics": "+2",
-				"intimidation": "-2",
-				"perception": "+1"
-			},
-			"trait": [
-				{
-					"name": "Protective Instinct",
-					"entries": [
-						"When the guardian's hit points fall below half its maximum, it's enraged for 10 minutes, gaining temporary hit points equal to half of its maximum. While enraged, hostile creatures within 5 feet have disadvantage on attack rolls against creatures other than the guardian."
-					]
-				},
-				{
-					"name": "Vigilant",
-					"entries": [
-						"The guardian can't be surprised."
-					]
-				},
-				{
-					"name": "Primal Companion",
-					"entries": [
-						"The guardian uses your proficiency bonus to the skills and saving throws. You add double your proficiency bonus to its {@skill Intimidation} checks{@homebrew *|This feature is added because of the platform's limitations.}."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Natural Weapon",
-					"entries": [
-						"{@atk mw} {@hit 2 + PB} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning, piercing or slashing damage."
-					]
-				}
-			],
-			"miscTags": [
-				"MW"
-			],
-			"reaction": [
-				{
-					"name": "Body Block",
-					"entries": [
-						"When an ally within 5 feet of it is hit by an attack, the guardian takes the damage instead."
-					]
-				}
-			],
-			"group": [
-				"Primal Guardian"
-			]
-		},
-		{
-			"name": "Primal Guardian of the Land",
+			"name": "Primal Bear Spirit",
 			"size": [
 				"L"
 			],
@@ -10463,7 +9232,7 @@
 			],
 			"action": [
 				{
-					"name": "Natural Weapon",
+					"name": "Claw",
 					"entries": [
 						"{@atk mw} {@hit 2 + PB} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning, piercing or slashing damage."
 					]

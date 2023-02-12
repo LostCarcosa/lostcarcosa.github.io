@@ -2249,6 +2249,7 @@ UrlUtil.PG_CLASSES = "classes.html";
 UrlUtil.PG_CONDITIONS_DISEASES = "conditionsdiseases.html";
 UrlUtil.PG_FEATS = "feats.html";
 UrlUtil.PG_OPT_FEATURES = "optionalfeatures.html";
+UrlUtil.PG_OPT_SPHERES = "spheres.html";
 UrlUtil.PG_PSIONICS = "psionics.html";
 UrlUtil.PG_RACES = "races.html";
 UrlUtil.PG_REWARDS = "rewards.html";
@@ -2296,6 +2297,7 @@ UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES] = UrlUtil.URL_TO_HASH_GENERIC;
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CONDITIONS_DISEASES] = UrlUtil.URL_TO_HASH_GENERIC;
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_FEATS] = UrlUtil.URL_TO_HASH_GENERIC;
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES] = UrlUtil.URL_TO_HASH_GENERIC;
+UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_SPHERES] = UrlUtil.URL_TO_HASH_GENERIC;
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_PSIONICS] = UrlUtil.URL_TO_HASH_GENERIC;
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES] = UrlUtil.URL_TO_HASH_GENERIC;
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_REWARDS] = UrlUtil.URL_TO_HASH_GENERIC;
@@ -2335,6 +2337,7 @@ UrlUtil.URL_TO_HASH_BUILDER["disease"] = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_
 UrlUtil.URL_TO_HASH_BUILDER["status"] = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CONDITIONS_DISEASES];
 UrlUtil.URL_TO_HASH_BUILDER["feat"] = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_FEATS];
 UrlUtil.URL_TO_HASH_BUILDER["optionalfeature"] = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES];
+UrlUtil.URL_TO_HASH_BUILDER["spheres"] = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_SPHERES];
 UrlUtil.URL_TO_HASH_BUILDER["psionic"] = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_PSIONICS];
 UrlUtil.URL_TO_HASH_BUILDER["race"] = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES];
 UrlUtil.URL_TO_HASH_BUILDER["subrace"] = (it) => UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES]({name: `${it.name} (${it.raceName})`, source: it.source});
@@ -4412,6 +4415,11 @@ DataUtil = {
 	optionalfeature: class extends _DataUtilPropConfigSingleSource {
 		static _PAGE = UrlUtil.PG_BACKGROUNDS;
 		static _FILENAME = "optionalfeatures.json";
+	},
+	
+	sphere: class extends _DataUtilPropConfigSingleSource {
+		static _PAGE = UrlUtil.PG_BACKGROUNDS;
+		static _FILENAME = "spheres.json";
 	},
 
 	class: class clazz extends _DataUtilPropConfigCustom {

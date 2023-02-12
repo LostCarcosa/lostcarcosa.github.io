@@ -26,19 +26,6 @@
 	},
 	"subclass": [
 		{
-			"name": "Path of the Abomination",
-			"shortName": "Abomination",
-			"source": "TCEE",
-			"subclassFeatures": [
-				"Path of the Abomination|Barbarian||Abomination|TCEE|3",
-				"Aberrant Form|Barbarian||Abomination|TCEE|6",
-				"Monstrous Manifestations|Barbarian||Abomination|TCEE|10",
-				"Twisted Metamorphosis|Barbarian||Abomination|TCEE|14"
-			],
-			"className": "Barbarian",
-			"classSource": "PHB"
-		},
-		{
 			"name": "Path of the Alchemical Brute",
 			"shortName": "Alchemical Brute",
 			"source": "TCEE",
@@ -65,253 +52,16 @@
 			"classSource": "PHB"
 		},
 		{
-			"name": "College of Harmony",
-			"shortName": "Harmony",
+			"name": "Circle of the Blackthorn",
+			"shortName": "Blackthorn",
 			"source": "TCEE",
 			"subclassFeatures": [
-				"College of Harmony|Bard||Harmony|TCEE|3",
-				"Shared Spell|Bard||Harmony|TCEE|6",
-				"Harmonic Link|Bard||Harmony|TCEE|14"
-			],
-			"className": "Bard",
-			"classSource": "PHB"
-		},
-		{
-			"name": "College of Pantomime",
-			"shortName": "Pantomime",
-			"source": "TCEE",
-			"subclassFeatures": [
-				"College of Pantomime|Bard||Pantomime|TCEE|3",
-				"Convincing Performance|Bard||Pantomime|TCEE|6",
-				"Trapped in a Box|Bard||Pantomime|TCEE|14"
-			],
-			"className": "Bard",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Inquisition Domain",
-			"shortName": "Inquisition",
-			"source": "TCEE",
-			"subclassSpells": [
-				"cause fear|xge",
-				"hunter's mark",
-				"branding smite",
-				"detect thoughts",
-				"dispel magic",
-				"speak with dead",
-				"banishment",
-				"locate creature",
-				"dispel evil and good",
-				"flame strike"
-			],
-			"subclassFeatures": [
-				"Inquisition Domain|Cleric||Inquisition|TCEE|1",
-				"Channel Divinity: Cow the Unfaithful|Cleric||Inquisition|TCEE|2",
-				"Expose the Heretics|Cleric||Inquisition|TCEE|6",
-				"Divine Strike|Cleric||Inquisition|TCEE|8",
-				"End Blasphemy|Cleric||Inquisition|TCEE|17"
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"cause fear|XGE",
-							"hunter's mark"
-						],
-						"3": [
-							"branding smite",
-							"detect thoughts"
-						],
-						"5": [
-							"dispel magic",
-							"speak with dead"
-						],
-						"7": [
-							"banishment",
-							"locate creature"
-						],
-						"9": [
-							"dispel evil and good",
-							"flame strike"
-						]
-					}
-				}
-			],
-			"className": "Cleric",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Seership Domain",
-			"shortName": "Seership",
-			"source": "TCEE",
-			"subclassSpells": [
-				"detect magic",
-				"identify",
-				"locate object",
-				"phantasmal force",
-				"clairvoyance",
-				"dispel magic",
-				"hallucinatory terrain",
-				"locate creature",
-				"legend lore",
-				"scrying"
-			],
-			"subclassFeatures": [
-				"Seership Domain|Cleric||Seership|TCEE|1",
-				"Channel Divinity: Woesight|Cleric||Seership|TCEE|2",
-				"Twisting Fate|Cleric||Seership|TCEE|6",
-				"Potent Spellcasting|Cleric||Seership|TCEE|8",
-				"Keeper of Sight|Cleric||Seership|TCEE|17"
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"detect magic",
-							"identify"
-						],
-						"3": [
-							"locate object",
-							"phantasmal force"
-						],
-						"5": [
-							"clairvoyance",
-							"dispel magic"
-						],
-						"7": [
-							"hallucinatory terrain",
-							"locate creature"
-						],
-						"9": [
-							"legend lore",
-							"scrying"
-						]
-					}
-				}
-			],
-			"className": "Cleric",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Trade Domain",
-			"shortName": "Trade",
-			"source": "TCEE",
-			"subclassSpells": [
-				"alarm",
-				"identify",
-				"arcane lock",
-				"locate object",
-				"glyph of warding",
-				"nondetection",
-				"fabricate",
-				"leomund's secret chest",
-				"creation",
-				"dominate person"
-			],
-			"subclassFeatures": [
-				"Trade Domain|Cleric||Trade|TCEE|1",
-				"Channel Divinity: Instant Transaction|Cleric||Trade|TCEE|2",
-				"Channel Divinity: Defensive Deal|Cleric||Trade|TCEE|6",
-				"Potent Spellcasting|Cleric||Trade|TCEE|8",
-				"Buy Loyalty|Cleric||Trade|TCEE|17"
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"alarm",
-							"identify"
-						],
-						"3": [
-							"arcane lock",
-							"locate object"
-						],
-						"5": [
-							"glyph of warding",
-							"nondetection"
-						],
-						"7": [
-							"fabricate",
-							"leomund's secret chest"
-						],
-						"9": [
-							"creation",
-							"dominate person"
-						]
-					}
-				}
-			],
-			"className": "Cleric",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Circle of the Bough",
-			"shortName": "Bough",
-			"source": "TCEE",
-			"subclassFeatures": [
-				"Circle of the Bough|Druid||Bough|TCEE|2",
-				"Wild Growth|Druid||Bough|TCEE|6",
-				"Take Root|Druid||Bough|TCEE|10",
-				"March of the Treants|Druid||Bough|TCEE|14"
+				"Circle of the Blackthorn|Druid||Blackthorn|TCEE|2",
+				"Wild Growth|Druid||Blackthorn|TCEE|6",
+				"Take Root|Druid||Blackthorn|TCEE|10",
+				"March of the Treants|Druid||Blackthorn|TCEE|14"
 			],
 			"className": "Druid",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Circle of the Dragonfriend",
-			"shortName": "Dragonfriend",
-			"source": "TCEE",
-			"subclassFeatures": [
-				"Circle of the Dragonfriend|Druid||Dragonfriend|TCEE|2",
-				"Draconic Gift|Druid||Dragonfriend|TCEE|6",
-				"Greater Draco|Druid||Dragonfriend|TCEE|10",
-				"Draconic Evasion|Druid||Dragonfriend|TCEE|14"
-			],
-			"className": "Druid",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Bodyguard",
-			"shortName": "Bodyguard",
-			"source": "TCEE",
-			"subclassFeatures": [
-				"Bodyguard|Fighter||Bodyguard|TCEE|3",
-				"Vengeful Guardian|Fighter||Bodyguard|TCEE|7",
-				"Always Vigilant|Fighter||Bodyguard|TCEE|10",
-				"Enduring Guardian|Fighter||Bodyguard|TCEE|15",
-				"Perfect Guardian|Fighter||Bodyguard|TCEE|18"
-			],
-			"className": "Fighter",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Fencer",
-			"shortName": "Fencer",
-			"source": "TCEE",
-			"subclassFeatures": [
-				"Fencer|Fighter||Fencer|TCEE|3",
-				"Audacious|Fighter||Fencer|TCEE|7",
-				"Parry and Retort|Fighter||Fencer|TCEE|7",
-				"Improved Precision|Fighter||Fencer|TCEE|10",
-				"Enduring Precision|Fighter||Fencer|TCEE|15",
-				"Excellent Precision|Fighter||Fencer|TCEE|18"
-			],
-			"className": "Fighter",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Scrapper",
-			"shortName": "Scrapper",
-			"source": "TCEE",
-			"subclassFeatures": [
-				"Scrapper|Fighter||Scrapper|TCEE|3",
-				"Heave-Ho|Fighter||Scrapper|TCEE|7",
-				"Read the Room|Fighter||Scrapper|TCEE|7",
-				"Shake It Off|Fighter||Scrapper|TCEE|10",
-				"I Could Do This All Day|Fighter||Scrapper|TCEE|15",
-				"Sucker Punch|Fighter||Scrapper|TCEE|18"
-			],
-			"className": "Fighter",
 			"classSource": "PHB"
 		},
 		{
@@ -940,61 +690,11 @@
 			]
 		},
 		{
-			"name": "Path of the Dragonheart",
-			"source": "TCEE",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"shortName": "Dragonheart",
-			"subclassFeatures": [
-				"Path of the Dragonheart|Barbarian|PHB|Dragonheart|TCEE|3",
-				"Soul Bond|Barbarian|PHB|Dragonheart|TCEE|6",
-				"Heart of Courage|Barbarian|PHB|Dragonheart|TCEE|10",
-				"Legendary Resistance|Barbarian|PHB|Dragonheart|TCEE|14"
-			]
-		},
-		{
-			"name": "Path of the Horned King",
-			"source": "TCEE",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"shortName": "Horned King",
-			"subclassFeatures": [
-				"Path of the Horned King|Barbarian|PHB|Horned King|TCEE|3",
-				"The Horned King's Favor|Barbarian|PHB|Horned King|TCEE|6",
-				"Beast of the Labyrinth|Barbarian|PHB|Horned King|TCEE|6",
-				"Strength in Bloodlust|Barbarian|PHB|Horned King|TCEE|10",
-				"Baleful Bull Rush|Barbarian|PHB|Horned King|TCEE|14"
-			]
-		},
-		{
-			"name": "College of the Requiem",
-			"source": "TCEE",
-			"className": "Bard",
-			"classSource": "PHB",
-			"shortName": "Requiem",
-			"subclassSpells": [
-				"gentle repose",
-				"ray of enfeeblement",
-				"animate dead",
-				"magic circle",
-				"aura of life",
-				"blight",
-				"antilife shell",
-				"danse macabre|xge"
-			],
-			"subclassFeatures": [
-				"College of the Requiem|Bard|PHB|Requiem|TCEE|3",
-				"Moment of Silence|Bard|PHB|Requiem|TCEE|6",
-				"Rest in Peace|Bard|PHB|Requiem|TCEE|6",
-				"Death's Grip|Bard|PHB|Requiem|TCEE|14"
-			]
-		},
-		{
-			"name": "Frost Domain",
+			"name": "The Eternal Winter",
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"shortName": "Frost",
+			"shortName": "Eternal Winter",
 			"subclassSpells": [
 				"armor of agathys",
 				"fog cloud",
@@ -1008,76 +708,12 @@
 				"hold monster"
 			],
 			"subclassFeatures": [
-				"Frost Domain|Cleric|PHB|Frost|TCEE|1",
-				"Channel Divinity: Bitter Casting|Cleric|PHB|Frost|TCEE|2",
-				"Channel Divinity: Blessing of the Hearth|Cleric|PHB|Frost|TCEE|2",
-				"Glacial Mantle|Cleric|PHB|Frost|TCEE|6",
-				"Divine Strike|Cleric|PHB|Frost|TCEE|8",
-				"Frozen Form|Cleric|PHB|Frost|TCEE|17"
-			]
-		},
-		{
-			"name": "Circle of the Coven",
-			"source": "TCEE",
-			"className": "Druid",
-			"classSource": "PHB",
-			"shortName": "Coven",
-			"subclassSpells": [
-				"hold person",
-				"ray of enfeeblement",
-				"bestow curse",
-				"counterspell",
-				"conjure woodland being",
-				"phantasmal killer",
-				"contact other plane",
-				"scrying"
-			],
-			"subclassFeatures": [
-				"Circle of the Coven|Druid|PHB|Coven|TCEE|2",
-				"Witch Step|Druid|PHB|Coven|TCEE|6",
-				"Witching Hour|Druid|PHB|Coven|TCEE|10",
-				"Shared Spellcasting|Druid|PHB|Coven|TCEE|14"
-			]
-		},
-		{
-			"name": "Circle of the Seafarers",
-			"source": "TCEE",
-			"className": "Druid",
-			"classSource": "PHB",
-			"shortName": "Seafarer",
-			"subclassFeatures": [
-				"Circle of the Seafarers|Druid|PHB|Seafarer|TCEE|2",
-				"Extra Attack|Druid|PHB|Seafarer|TCEE|6",
-				"Amphibious|Druid|PHB|Seafarer|TCEE|10",
-				"Spearfisher|Druid|PHB|Seafarer|TCEE|10",
-				"Coastal Warrior|Druid|PHB|Seafarer|TCEE|14"
-			]
-		},
-		{
-			"name": "Circle of the Dragonfriend",
-			"shortName": "Dragonfriend (Updated)",
-			"source": "TCEE",
-			"subclassFeatures": [
-				"Circle of the Dragonfriend|Druid||Dragonfriend (Updated)|TCEE|2",
-				"Draconic Gift|Druid||Dragonfriend (Updated)|TCEE|6",
-				"Greater Draco|Druid||Dragonfriend (Updated)|TCEE|10",
-				"Draconic Evasion|Druid||Dragonfriend (Updated)|TCEE|14"
-			],
-			"className": "Druid",
-			"classSource": "PHB"
-		},
-		{
-			"name": "Phoenix Knight",
-			"source": "TCEE",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"shortName": "Phoenix Knight",
-			"subclassFeatures": [
-				"Phoenix Knight|Fighter|PHB|Phoenix Knight|TCEE|3",
-				"Phoenix Tears|Fighter|PHB|Phoenix Knight|TCEE|7",
-				"Tempered Skin|Fighter|PHB|Phoenix Knight|TCEE|10",
-				"From the Embers|Fighter|PHB|Phoenix Knight|TCEE|15",
-				"Fan the Flames|Fighter|PHB|Phoenix Knight|TCEE|18"
+				"The Eternal Winter|Cleric|PHB|Eternal Winter|TCEE|1",
+				"Channel Divinity: Bitter Casting|Cleric|PHB|Eternal Winter|TCEE|2",
+				"Channel Divinity: Blessing of the Hearth|Cleric|PHB|Eternal Winter|TCEE|2",
+				"Glacial Mantle|Cleric|PHB|Eternal Winter|TCEE|6",
+				"Divine Strike|Cleric|PHB|Eternal Winter|TCEE|8",
+				"Frozen Form|Cleric|PHB|Eternal Winter|TCEE|17"
 			]
 		},
 		{
@@ -1091,19 +727,6 @@
 				"Vile Edict|Monk|PHB|Devils|TCEE|6",
 				"Hellish Tether|Monk|PHB|Devils|TCEE|11",
 				"Fiendish Form|Monk|PHB|Devils|TCEE|17"
-			]
-		},
-		{
-			"name": "Way of the Cosmic Mind",
-			"source": "TCEE",
-			"className": "Monk",
-			"classSource": "PHB",
-			"shortName": "Cosmic Mind",
-			"subclassFeatures": [
-				"Way of the Cosmic Mind|Monk|PHB|Cosmic Mind|TCEE|3",
-				"Bend Perception|Monk|PHB|Cosmic Mind|TCEE|6",
-				"Third Eye Awakened|Monk|PHB|Cosmic Mind|TCEE|11",
-				"Void Impact|Monk|PHB|Cosmic Mind|TCEE|17"
 			]
 		},
 		{
@@ -1708,7 +1331,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"You discover 3 more alchemical formulae, for a total of 6, and you can prepare two doses of each formulae you know when you finish a long rest. Additionally, when you enter a rage, you can consume up to two doses of different prepared alchemical formulae at once."
+				"You discover 2 more alchemical formulae, for a total of 5, and you can prepare two doses of each formulae you know when you finish a long rest. Additionally, when you enter a rage, you can consume up to two doses of different prepared alchemical formulae at once."
 			]
 		},
 		{
@@ -1737,7 +1360,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"You discover additional alchemical formulae equal to your Intelligence modifier (minimum 1), for a total of 6 + your Intelligence modifier. Additionally, whenever you enter a rage, you can gain the effects of up to three alchemical formulae you have prepared."
+				"You discover two more alchemical formulae, for a total of 7. Additionally, whenever you enter a rage, you can gain the effects of up to three alchemical formulae you have prepared."
 			]
 		},
 		{
@@ -1751,8 +1374,7 @@
 			"level": 3,
 			"entries": [
 				"To barbarians who follow the Path of Infiltration, rage does not mean battle cries and violent screams. Instead, it means deafening silence and uncertain shadows. Drawing upon magic from the Shadowfell, these infiltrators breathe in sound and light and hold it within, suppressing it as they lay waste to enemies, doors, and any other barriers between them and their goal.",
-				"In the world of Ravnica, House Dimir makes ample use of these barbarians. In the Forgotten Realms, the Zhentarim includes such ranks. Thieves' guilds, cults, or noble houses might also recruit these silent terrors as thieves or assassins.",
-				"These powers are usually gained from dark rituals or curses. In either case, obtaining and using these powers is often painful, causing these barbarians to become partshadow and suffer\u2014and make others suffer\u2014in silence. At your option, you can pick from or roll on the Infiltration Barbarian Quirks table to create a quirk for your character.",
+				"These powers are usually gained from dark rituals or curses. In either case, obtaining and using these powers is often painful, causing these barbarians to become part shadow. At your option, you can pick from or roll on the Infiltration Barbarian Quirks table to create a quirk for your character.",
 				{
 					"type": "table",
 					"caption": "Infiltration Barbarian Quirks",
@@ -1793,7 +1415,7 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Breaking and Entering|Barbarian||Infiltration|TCEE|3"
+					"subclassFeature": "Aura of Shadow|Barbarian||Infiltration|TCEE|3"
 				},
 				{
 					"type": "refSubclassFeature",
@@ -1802,7 +1424,7 @@
 			]
 		},
 		{
-			"name": "Breaking and Entering",
+			"name": "Aura of Shadow",
 			"source": "TCEE",
 			"page": 11,
 			"className": "Barbarian",
@@ -1811,15 +1433,10 @@
 			"subclassSource": "TCEE",
 			"level": 3,
 			"entries": [
-				"You become adept at finding a way past nearly any obstacle:",
-				{
-					"type": "list",
-					"items": [
-						"You deal double damage to objects.",
-						"You can use a bonus action on each of your turns to make a single weapon attack against an object that isn't being worn or carried.",
-						"While you are raging, your rage doesn't end early as long as you end your turn in dim light or darkness."
-					]
-				}
+				"As a 1-minute ritual, you can inhale light and sound to create a magical aura of silence and shadow. The aura extends 10 feet from you in every direction, but not through total cover. Your aura acts as the areas of both a {@spell silence} spell and of a {@spell pass without trace|MOD} spell. You can still use your Danger Sense even while you are deafened by your aura.",
+				"If you are targeted by a {@spell dispel magic} spell, your aura counts as a spell with a level equal to your proficiency bonus.",
+				"Your aura lasts for 10 minutes, or until you dismiss it as a bonus action.",
+				"You can invoke your Aura a number of times equal to your Constitution modifier per long rest."
 			]
 		},
 		{
@@ -1832,9 +1449,7 @@
 			"subclassSource": "TCEE",
 			"level": 3,
 			"entries": [
-				"Whenever you enter a rage, you can inhale light and sound to create a magical aura of silence and shadow. The aura extends 10 feet from you in every direction, but not through total cover. Your aura lasts until you dismiss it as a bonus action or your rage ends.",
-				"Your aura acts as the areas of both a {@spell silence} spell and of a {@spell pass without trace} spell. You can still use your Danger Sense even while you are deafened by your aura.",
-				"If you are targeted by a {@spell dispel magic} spell, your aura counts as a spell with a level equal to half your barbarian level."
+				"As part of the bonus action used to enter your rage, you can summon your Aura of Shadow. When you invoke your aura in this way, it lasts until the end of your rage."
 			]
 		},
 		{
@@ -1848,8 +1463,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Whenever you hit an object with an attack, the hit is a critical hit.",
-				"In addition, dim light doesn't impose disadvantage on your Wisdom (Perception) checks relying on sight."
+				"You gain the ability to move silently through shadow. While you are raging and you are in dim light or darkness, as a bonus action you can teleport up to 30 feet to an unoccupied space you can see that is also in dim light or darkness.",
+				"You can use this teleport only if you have not moved during the current turn. After you teleport in this way, your speed becomes zero until the start of your next turn."
 			]
 		},
 		{
@@ -1863,7 +1478,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"While you're raging, you are under the effects of a {@spell nondetection} spell, and whenever you would trigger an abjuration spell, such as by walking through the area of an {@spell alarm} or {@spell glyph of warding}, you can make a Constitution saving throw (DC 10 + the spell's level). On a successful save, the spell isn't triggered.",
+				"While your Aura of Shadow is active, you are under the effects of a {@spell nondetection} spell, and whenever you would trigger an abjuration spell, such as by walking through the area of an {@spell alarm} or {@spell glyph of warding}, you can make a Constitution saving throw (DC 10 + the spell's level). On a successful save, the spell isn't triggered.",
 				"Additionally, while you benefit from your Danger Sense, the damage you take from traps is halved. This includes magical traps, such as the {@spell glyph of warding} or {@spell symbol} spells."
 			]
 		},
@@ -2504,23 +2119,23 @@
 			]
 		},
 		{
-			"name": "Circle of the Bough",
+			"name": "Circle of the Blackthorn",
 			"source": "TCEE",
 			"page": 18,
 			"className": "Druid",
 			"classSource": "PHB",
-			"subclassShortName": "Bough",
+			"subclassShortName": "Blackthorn",
 			"subclassSource": "TCEE",
 			"level": 2,
 			"entries": [
-				"There are druids who seek to bond not with beasts, but with the timeless sentinels that blanket the land: the ancient, gnarled trees whose wisdom is beyond compare. These druids\u2014druids of the Bough\u2014learn to shapeshift into the very trees that they revere.",
+				"You are sworn to the Blackthorn Grove- a metaphysical copse of blackened trees whose roots burrow through the world. A piece of it now lives in you, its black vines infesting your flesh, your blood turning dark and viscous, like sap- binding you forever to its service, and granting you a fragment of its power.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Cantrip|Druid||Bough|TCEE|2"
+					"subclassFeature": "Bonus Cantrip|Druid||Blackthorn|TCEE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Treant Form|Druid||Bough|TCEE|2"
+					"subclassFeature": "Treant Form|Druid||Blackthorn|TCEE|2"
 				}
 			]
 		},
@@ -2530,11 +2145,12 @@
 			"page": 18,
 			"className": "Druid",
 			"classSource": "PHB",
-			"subclassShortName": "Bough",
+			"subclassShortName": "Blackthorn",
 			"subclassSource": "TCEE",
 			"level": 2,
 			"entries": [
-				"Beginning at 2nd level, when you choose this druid circle, you learn the {@spell shillelagh} cantrip. If you already know this cantrip, you learn a different cantrip from the druid spell list. It does not count against the number of druid cantrips you know."
+				"Beginning at 2nd level, when you choose this druid circle, you learn the {@spell shillelagh} cantrip. If you already know this cantrip, you learn a different cantrip from the druid spell list. It does not count against the number of druid cantrips you know.",
+				"Whenever you cast the {@spell shillelagh} cantrip, you can summon a black-wood weapon to your hand rather than enchanting an existing one. When you do so, you can have the weapon deal piercing damage rather than bludgeoning."
 			]
 		},
 		{
@@ -2543,18 +2159,19 @@
 			"page": 18,
 			"className": "Druid",
 			"classSource": "PHB",
-			"subclassShortName": "Bough",
+			"subclassShortName": "Blackthorn",
 			"subclassSource": "TCEE",
 			"level": 2,
 			"entries": [
-				"Starting at 2nd level, you can harden your skin into bark and become a treant-like creature. As an action, you can expend a use of your Wild Shape to gain tree-like traits, rather than transforming into a beast form. While this feature is active, you gain the following benefits:",
+				"Starting at 2nd level, you can harden your skin into black bark and become a treant-like creature. As an action, you can expend a use of your Wild Shape to take on the aspect of the Blackthorn Grove, rather than transforming into a beast form. While this feature is active, you gain the following benefits:",
 				{
 					"type": "list",
 					"items": [
 						"You gain 4 temporary hit points for each level you have in this class.",
 						"Your Armor Class is equal to 14 + your Wisdom modifier. You can use a shield and still gain this benefit.",
 						"As a reaction when you take bludgeoning, slashing or piercing damage, you can halve the attack's damage against you.",
-						"Your unarmed strikes are under the effects of a {@spell shillelagh} spell."
+						"Your unarmed strikes are under the effects of a {@spell shillelagh} spell; you can choose for your unarmed strikes to do piercing instead of bludgeoning damage.",
+						"When you use an action to cast a spell of 1st level or higher, you may immediately expend your bonus action to make a single unarmed strike against a target within your reach."
 					]
 				},
 				"These benefits last for 10 minutes, until you lose all these temporary hit points, or until you use your Wild Shape again."
@@ -2566,13 +2183,13 @@
 			"page": 18,
 			"className": "Druid",
 			"classSource": "PHB",
-			"subclassShortName": "Bough",
+			"subclassShortName": "Blackthorn",
 			"subclassSource": "TCEE",
 			"level": 6,
 			"header": 2,
 			"entries": [
 				"When you enter your Treant Shape, you can cause rootlets to sprout out of the ground in a 10 foot radius around you. This ground becomes difficult terrain for all creatures but yourself. If you move, the circle moves with you.",
-				"Additionally, while in your Treant Shape, you can increase your size to Large as a bonus action. When you transform in this way, your unarmed strikes deal an additional {@damage 1d8} bludgeoning damage."
+				"Additionally, while in your Treant Shape, you can increase your size to Large as a bonus action. When you transform in this way, your unarmed strikes have a reach of 10 feet. Furthermore, your unarmed strikes deal an additional {@damage 1d8} bludgeoning damage if you have both of your hands free."
 			]
 		},
 		{
@@ -2581,7 +2198,7 @@
 			"page": 19,
 			"className": "Druid",
 			"classSource": "PHB",
-			"subclassShortName": "Bough",
+			"subclassShortName": "Blackthorn",
 			"subclassSource": "TCEE",
 			"level": 10,
 			"header": 2,
@@ -2591,11 +2208,13 @@
 					"type": "list",
 					"items": [
 						"You have tremor sense out to a range of 60 feet.",
+						"When you take the Attack action on your turn, you can make two attacks rather than one.",
 						"You can telepathically converse with trees within 1 mile of you, as if by a {@spell speak with plants} spell.",
 						"You cannot be knocked prone or moved against your will.",
 						"You have advantage on saving throws made to maintain your concentration on spells."
 					]
-				}
+				},
+				"While rooted, your speed is reduced to 10 feet. If you move more than 10 feet during a single turn for any reason, including teleportation, all effects of this feature immediately end; similarly, if you are ever not touching the ground, this feature ends."
 			]
 		},
 		{
@@ -2604,7 +2223,7 @@
 			"page": 19,
 			"className": "Druid",
 			"classSource": "PHB",
-			"subclassShortName": "Bough",
+			"subclassShortName": "Blackthorn",
 			"subclassSource": "TCEE",
 			"level": 14,
 			"header": 2,
@@ -6339,26 +5958,28 @@
 			]
 		},
 		{
-			"name": "Frost Domain",
+			"name": "The Eternal Winter",
+			"name": "The Eternal Winter",
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 1,
 			"entries": [
-				"Gods of the cold and north, such as Auril, Iborighu, Thrym, and Ulutiu, are, like their element, often severe and demanding. These gods are not usually worshipped for their benevolence, but instead prey upon those who merely wish to survive the unforgiving tundra. Clerics to these gods may not be the warmest people, but they are often seen as saviors to northern settlements that rely on their blessings. These boons are not free though, and clerics of these gods may be sent to gather offerings in return for helping people survive.",
+				"When the nights grow long and dark, when the game grows scarce and forage is thin on the ground... the creeping cold is sure to follow. The earliest days of mankind were defined by the desparate scramble to weather the winter- no wonder, then, that it commands still the awe and dread of mortals everywhere, even in this age of plenty.",
+				"{@deity The Eternal Winter|MOD} finds little true worship in the mainland continent, but remains the most revered and feared deity in the northern tundras.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Domain Spells|Cleric|PHB|Frost|TCEE|1"
+					"subclassFeature": "Domain Spells|Cleric|PHB|Eternal Winter|TCEE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric|PHB|Frost|TCEE|1"
+					"subclassFeature": "Bonus Proficiencies|Cleric|PHB|Eternal Winter|TCEE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Biting Frost|Cleric|PHB|Frost|TCEE|1"
+					"subclassFeature": "Biting Frost|Cleric|PHB|Eternal Winter|TCEE|1"
 				}
 			]
 		},
@@ -6367,14 +5988,14 @@
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 1,
 			"entries": [
-				"You gain domain spells at the cleric levels listed in the Frost Domain Spells table. See the Divine Domain class feature for how domain spells work.",
+				"You gain domain spells at the cleric levels listed in the Eternal Winter Domain Spells table. See the Divine Domain class feature for how domain spells work.",
 				{
 					"type": "table",
-					"caption": "Frost Domain Spells",
+					"caption": "Eternal Winter Domain Spells",
 					"colLabels": [
 						"Cleric Level",
 						"Spell"
@@ -6413,7 +6034,7 @@
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 1,
 			"entries": [
@@ -6425,7 +6046,7 @@
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 1,
 			"entries": [
@@ -6446,12 +6067,12 @@
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"You can use your Channel Divinity to alter your spells and infuse them with the power of your god. If a spell you cast would deal acid, fire, lightning, necrotic, or radiant damage, you can use your Channel Divinity to deal cold damage instead."
+				"You can use your Channel Divinity to alter your spells and infuse them with the power of your god. If a spell you cast would deal acid, fire, lightning, necrotic, or radiant damage, you can expend your Channel Divinity (no action required) to deal cold damage instead."
 			]
 		},
 		{
@@ -6459,7 +6080,7 @@
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 2,
 			"header": 2,
@@ -6473,7 +6094,7 @@
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 6,
 			"header": 2,
@@ -6486,7 +6107,7 @@
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 8,
 			"header": 2,
@@ -6499,7 +6120,7 @@
 			"source": "TCEE",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Frost",
+			"subclassShortName": "Eternal Winter",
 			"subclassSource": "TCEE",
 			"level": 17,
 			"header": 2,
@@ -9036,7 +8657,7 @@
 				"ABF"
 			],
 			"entries": [
-				"When you enter a rage using this formula, you mutate in some manner that gives you the ability to make stupendous leaps, whether that is grotesquely muscular legs, vestigial wings, or some other mutation. For the duration of your rage, you can make a running long jump or running high jump after moving only 5 feet on foot, and your jump distance is doubled.",
+				"When you enter a rage using this formula, you manifest a set of deformed, fleshy wings, which grant you a flying speed equal to your movement speed.",
 				"When your rage ends, the mutation caused by this formula ends."
 			]
 		},
@@ -9094,7 +8715,7 @@
 				"ABF"
 			],
 			"entries": [
-				"During a rage infused with this formula, when you make a saving throw, you can add your Intelligence modifier to the roll. You can gain this bonus only once during each rage, and you can choose to apply it after you know if your saving throw succeeded or failed."
+				"During a rage infused with this formula, when you make a saving throw, you can use your reaction to add your Intelligence modifier to the roll. You can use this ability after you roll."
 			]
 		},
 		{

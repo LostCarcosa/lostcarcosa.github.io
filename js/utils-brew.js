@@ -1010,6 +1010,7 @@ class BrewUtil2 {
 		[UrlUtil.PG_BACKGROUNDS]: ["background"],
 		[UrlUtil.PG_FEATS]: ["feat"],
 		[UrlUtil.PG_OPT_FEATURES]: ["optionalfeature"],
+		[UrlUtil.PG_SPHERES]: ["sphere"],
 		[UrlUtil.PG_RACES]: ["race", "raceFluff", "subrace"],
 		[UrlUtil.PG_OBJECTS]: ["object"],
 		[UrlUtil.PG_TRAPS_HAZARDS]: ["trap", "hazard"],

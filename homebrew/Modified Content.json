@@ -497,6 +497,49 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Silenced",
+			"source": "MOD",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"A silenced creature cannot speak, and cannot cast any spell with a verbal component."
+					]
+				}
+			]
+		},
+		{
+			"name": "Suffocating",
+			"source": "MOD",
+			"entries": [
+				"A suffocating creature cannot breathe, but is still able to hold their breath, preventing them from {@condition drowning|MOD}. If a suffocating creature loses their breath for any reason, they begin {@condition drowning}.",
+				{
+					"type": "list",
+					"items": [
+						"A creature can hold its breath for a number of minutes equal to 1 + its Constitution modifier (minimum 30 seconds). After this time, they lose their breath and begin {@condition drowning|MOD}",
+						"A suffocating creature can still speak or cast verbal spells, but once they do, they begin {@condition drowning|MOD}.",
+						"When a suffocating creature takes damage, they must succeed on a Constitution saving throw against DC 10 or half the damage taken, whichever is larger. On a failure, they lose their breath and begin drowning."
+					]
+				}
+			]
+		},
+		{
+			"name": "Drowning",
+			"source": "MOD",
+			"entries": [
+				"Creatures drown when they are in an environment where they cannot breathe and cannot (or have failed to) hold their breath. It is not strictly aquatic- creatures may drown in space, amongst the choking fumes of a volcano, or even simply because another creature is choking them.",
+				{
+					"type": "list",
+					"items": [
+						"A drowning creature is {@condition silenced|MOD}.",
+						"A creature can survive drowning for a number of rounds equal to its Constitution modifier (minimum 1).",
+						"Past this limit, a creature drops to 0 hit points at the start of its next turn and begins dying. A drowning creature cannot regain hit points or otherwise be stabilized until it can breathe again.",
+						"Once a drowning creature begins to die, they must succeed on a DC 15 death saving throw at the end of each of their turns."
+					]
+				}
+			]
 		}
 	],
 	"feat": [

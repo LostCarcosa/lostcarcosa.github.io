@@ -5,5 +5,5 @@
 		"This file contains as an index for other homebrew files, which should be placed in the same directory.",
 		"For example, add \"My Homebrew.json\" to the \"toImport\" array below, and have a valid JSON homebrew file in this (\"homebrew/\") directory."
 	],
-	"toImport": ["Modified Content.json", "The Compendium of Forgotten Secrets - Awakening.json", "Blazing Dawn Player Companion.json", "Dark Arts Player Companion.json", "Kibbles Assorted Options.json", "Sprouting Chaos Player Companion.json", "Psion.json", "Occultist.json", "Warlord.json"]
+	"toImport": ["Modified Content.json", "The Compendium of Forgotten Secrets - Awakening.json", "Blazing Dawn Player Companion.json", "Dark Arts Player Companion.json", "Kibbles Assorted Options.json", "Sprouting Chaos Player Companion.json", "Psion.json", "Occultist.json", "Warlord.json", "Tasha's Crucible of Everything Else.json", "Grim Hollow Player's Guide.json"]
 }
