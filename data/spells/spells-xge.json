@@ -704,47 +704,6 @@
 			]
 		},
 		{
-			"name": "Create Homunculus",
-			"source": "XGE",
-			"page": 152,
-			"level": 6,
-			"school": "T",
-			"time": [
-				{
-					"number": 1,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "clay, ash, and mandrake root, all of which the spell consumes, and a jewel-encrusted dagger worth at least 1,000 gp",
-					"cost": 100000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"While speaking an intricate incantation, you cut yourself with a jewel-encrusted dagger, taking {@damage 2d4} piercing damage that can't be reduced in any way. You then drip your blood on the spell's other components and touch them, transforming them into a special construct called a {@creature homunculus}.",
-				"The statistics of the {@creature homunculus} are in the Monster Manual. It is your faithful companion, and it dies if you die. Whenever you finish a long rest, you can spend up to half your Hit Dice if the homunculus is on the same plane of existence as you. When you do so, roll each die and add your Constitution modifier to it. Your hit point maximum is reduced by the total, and the homunculus's hit point maximum and current hit points are both increased by it. This process can reduce you to no lower than 1 hit point, and the change to your and the homunculus's hit points ends when you finish your next long rest. The reduction to your hit point maximum can't be removed by any means before then, except by the homunculus's death.",
-				"You can have only one homunculus at a time. If you cast this spell while your homunculus lives, the spell fails."
-			],
-			"miscTags": [
-				"PRM"
-			]
-		},
-		{
 			"name": "Crown of Stars",
 			"source": "XGE",
 			"page": 152,
@@ -855,62 +814,6 @@
 				"UBA"
 			],
 			"hasFluffImages": true
-		},
-		{
-			"name": "Dawn",
-			"source": "XGE",
-			"page": 153,
-			"level": 5,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a sunburst pendant worth at least 100 gp",
-					"cost": 10000
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"The light of dawn shines down on a location you specify within range. Until the spell ends, a 30-foot-radius, 40-foot-high cylinder of bright light glimmers there. This light is sunlight.",
-				"When the cylinder appears, each creature in it must make a Constitution saving throw, taking {@damage 4d10} radiant damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw whenever it ends its turn in the cylinder.",
-				"If you're within 60 feet of the cylinder, you can move it up to 60 feet as a bonus action on your turn."
-			],
-			"damageInflict": [
-				"radiant"
-			],
-			"savingThrow": [
-				"constitution"
-			],
-			"miscTags": [
-				"LGTS",
-				"UBA"
-			],
-			"areaTags": [
-				"Y"
-			]
 		},
 		{
 			"name": "Dragon's Breath",
@@ -1781,47 +1684,6 @@
 			]
 		},
 		{
-			"name": "Invulnerability",
-			"source": "XGE",
-			"page": 160,
-			"level": 9,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a small piece of adamantine worth at least 500 gp, which the spell consumes",
-					"cost": 50000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 10
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You are immune to all damage until the spell ends."
-			]
-		},
-		{
 			"name": "Life Transference",
 			"source": "XGE",
 			"page": 160,
@@ -2427,56 +2289,6 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Shadow of Moil",
-			"source": "XGE",
-			"page": 164,
-			"level": 4,
-			"school": "N",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "an undead eyeball encased in a gem worth at least 150 gp",
-					"cost": 15000
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"Flame-like shadows wreathe your body until the spell ends, causing you to become heavily obscured to others. The shadows turn dim light within 10 feet of you into darkness, and bright light in the same area to dim light.",
-				"Until the spell ends, you have resistance to radiant damage. In addition, whenever a creature within 10 feet of you hits you with an attack, the shadows lash out at that creature, dealing it {@damage 2d8} necrotic damage."
-			],
-			"damageResist": [
-				"radiant"
-			],
-			"damageInflict": [
-				"necrotic"
-			],
-			"areaTags": [
-				"S"
-			]
-		},
-		{
 			"name": "Shape Water",
 			"source": "XGE",
 			"page": 164,
@@ -2750,68 +2562,6 @@
 			],
 			"areaTags": [
 				"S"
-			]
-		},
-		{
-			"name": "Temple of the Gods",
-			"source": "XGE",
-			"page": 167,
-			"level": 7,
-			"school": "C",
-			"time": [
-				{
-					"number": 1,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 120
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a holy symbol worth at least 5 gp",
-					"cost": 500
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 24
-					}
-				}
-			],
-			"entries": [
-				"You cause a temple to shimmer into existence on ground you can see within range. The temple must fit within an unoccupied cube of space, up to 120 feet on each side. The temple remains until the spell ends. It is dedicated to whatever god, pantheon, or philosophy is represented by the holy symbol used in the casting.",
-				"You make all decisions about the temple's appearance. The interior is enclosed by a floor, walls, and a roof, with one door granting access to the interior and as many windows as you wish. Only you and any creatures you designate when you cast the spell can open or close the door.",
-				"The temple's interior is an open space with an idol or altar at one end. You decide whether the temple is illuminated and whether that illumination is bright light or dim light. The smell of burning incense fills the air within, and the temperature is mild.",
-				"The temple opposes types of creatures you choose when you cast this spell. Choose one or more of the following: celestials, elementals, fey, fiends, or undead. If a creature of the chosen type attempts to enter the temple, that creature must make a Charisma saving throw. On a failed save, it can't enter the temple for 24 hours. Even if the creature can enter the temple, the magic there hinders it; whenever it makes an attack roll, an ability check, or a saving throw inside the temple, it must roll a {@dice d4} and subtract the number rolled from the {@dice d20} roll.",
-				"In addition, the sensors created by divination spells can't appear inside the temple, and creatures within can't be targeted by divination spells.",
-				"Finally, whenever any creature in the temple regains hit points from a spell of 1st level or higher, the creature regains additional hit points equal to your Wisdom modifier (minimum 1 hit point).",
-				"The temple is made from opaque magical force that extends into the Ethereal Plane, thus blocking ethereal travel into the temple's interior. Nothing can physically pass through the temple's exterior. It can't be dispelled by {@spell dispel magic}, and {@spell antimagic field} has no effect on it. A {@spell disintegrate} spell destroys the temple instantly.",
-				"Casting this spell on the same spot every day for a year makes this effect permanent."
-			],
-			"savingThrow": [
-				"charisma"
-			],
-			"affectsCreatureType": [
-				"celestial",
-				"elemental",
-				"fey",
-				"fiend",
-				"undead"
-			],
-			"miscTags": [
-				"HL",
-				"PRM",
-				"SGT"
 			]
 		},
 		{
