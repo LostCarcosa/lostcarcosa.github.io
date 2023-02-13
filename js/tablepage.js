@@ -7,13 +7,8 @@ class TableListPage extends ListPage {
 		this._listMetas = {};
 	}
 
-	static _pad (number) {
-		return String(number).padStart(2, "0");
-	}
-
 	_getHash (ent) { throw new Error(`Unimplemented!`); }
 	_getHeaderId (ent) { throw new Error(`Unimplemented!`); }
-	_getDisplayName (ent) { throw new Error(`Unimplemented!`); }
 
 	get primaryLists () {
 		return Object.values(this._listMetas).map(it => it.list);
@@ -29,9 +24,9 @@ class TableListPage extends ListPage {
 			.map(group => {
 				return group.tables
 					.map(tbl => {
-						const out = MiscUtil.copy(group);
+						const out = MiscUtil.copyFast(group);
 						delete out.tables;
-						Object.assign(out, MiscUtil.copy(tbl));
+						Object.assign(out, MiscUtil.copyFast(tbl));
 						return out;
 					});
 			})
@@ -65,7 +60,7 @@ class TableListPage extends ListPage {
 				const $btnHeader = $$`<div class="lst__item-group-header mt-3 split-v-center py-1 no-select clickable">
 					<div class="split-v-center w-100 min-w-0 mr-2">
 						<div class="bold">${ent.name}</div>
-						<div class="${Parser.sourceJsonToColor(ent.source)}" title="${Parser.sourceJsonToFull(ent.source).qq()}" ${BrewUtil2.sourceJsonToStyle(ent.source)}>${Parser.sourceJsonToAbv(ent.source)}</div>
+						<div class="${Parser.sourceJsonToColor(ent.source)}" title="${Parser.sourceJsonToFull(ent.source).qq()}" ${Parser.sourceJsonToStyle(ent.source)}>${Parser.sourceJsonToAbv(ent.source)}</div>
 					</div>
 					${$dispShowHide}
 				</div>`
@@ -119,72 +114,44 @@ class TableListPage extends ListPage {
 	_pOnLoad_bindMiscButtons () { /* No-op */ }
 	pDoLoadSubHash () { /* No-op */ }
 
-	_doLoadHash (id) {
+	_pDoLoadHash (id) {
 		Renderer.get().setFirstSection(true);
 
 		const ent = this._dataList[id];
 
-		const table = ent.table;
-		const tableName = this._getDisplayName(ent);
-		const diceType = ent.diceType;
-
-		const htmlRows = table.map(it => {
-			const range = it.min === it.max ? this.constructor._pad(it.min) : `${this.constructor._pad(it.min)}-${this.constructor._pad(it.max)}`;
-			const ptAttitude = ent.rollAttitude
-				? `<td class="text-center">${it.resultAttitude ? Renderer.get().render(it.resultAttitude) : "\u2014"}</td>`
-				: "";
-			return `<tr><td class="text-center p-0">${range}</td><td class="p-0">${Renderer.get().render(it.result)}</td>${ptAttitude}</tr>`;
+		const entTable = Renderer.table.getConvertedEncounterOrNamesTable({
+			group: ent,
+			tableRaw: ent,
+			fnGetNameCaption: this._getDisplayName.bind(this),
+			colLabel1: this.constructor._COL_NAME_1,
 		});
 
-		let htmlText = `
-		<tr>
-			<td colspan="6">
-				<table class="w-100 stripe-odd-table">
-					<caption>${tableName}</caption>
-					<thead>
-						<tr>
-							<th class="col-2 text-center">
-								<span class="roller" data-name="btn-roll">d${diceType}</span>
-							</th>
-							<th class="${ent.rollAttitude ? "col-8" : "col-10"}">${this.constructor._COL_NAME_1}</th>
-							${ent.rollAttitude ? `<th class="col-2 text-center">"Attitude</th>` : ""}
-						</tr>
-					</thead>
-					<tbody>
-						${htmlRows.join("")}
-					</tbody>
-				</table>
-			</td>
-		</tr>`;
+		const htmlTable = Renderer.get().render(entTable);
 
-		$("#pagecontent")
-			.html(htmlText)
-			.find(`[data-name="btn-roll"]`)
+		const $btnRoll = $(`<span class="roller" data-name="btn-roll">${ent.diceExpression}</span>`)
 			.click(() => {
-				this._roll(ent);
+				this._pRoll(ent);
 			})
 			.mousedown(evt => {
 				evt.preventDefault();
 			});
+
+		$("#pagecontent")
+			.empty()
+			.append(htmlTable)
+			.find(`[data-rd-isroller="true"]`)
+			.first()
+			.attr(`data-rd-isroller`, null)
+			.empty()
+			.append($btnRoll);
 	}
 
-	_roll (ent) {
+	async _pRoll (ent) {
 		const rollTable = ent.table;
 
-		rollTable._rMax = rollTable._rMax == null
-			? Math.max(...rollTable.filter(it => it.min != null).map(it => it.min), ...rollTable.filter(it => it.max != null).map(it => it.max))
-			: rollTable._rMax;
-		rollTable._rMin = rollTable._rMin == null
-			? Math.min(...rollTable.filter(it => it.min != null).map(it => it.min), ...rollTable.filter(it => it.max != null).map(it => it.max))
-			: rollTable._rMin;
+		const roll = await Renderer.dice.parseRandomise2(ent.diceExpression);
 
-		const roll = RollerUtil.randomise(rollTable._rMax, rollTable._rMin);
-
-		const row = rollTable.find(row => {
-			const trueMin = row.max != null && row.max < row.min ? row.max : row.min;
-			const trueMax = row.max != null && row.max > row.min ? row.max : row.min;
-			return roll >= trueMin && roll <= trueMax;
-		});
+		const row = rollTable.find(row => roll >= row.min && roll <= (row.max === 0 ? 100 : row.max));
 
 		if (!row) {
 			return Renderer.dice.addRoll({
@@ -198,7 +165,7 @@ class TableListPage extends ListPage {
 		const ptResult = Renderer.get().render(row.result.replace(/{@dice /, "{@autodice "));
 		const $ptAttitude = this._roll_$getPtAttitude(row);
 
-		const $ele = $$`<span><strong>${this.constructor._pad(roll)}</strong> ${ptResult}${$ptAttitude}</span>`;
+		const $ele = $$`<span><strong>${roll}</strong> ${ptResult}${$ptAttitude}</span>`;
 
 		Renderer.dice.addRoll({
 			rolledBy: {

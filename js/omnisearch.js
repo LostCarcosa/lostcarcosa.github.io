@@ -54,7 +54,7 @@ class Omnisearch {
 			Renderer.hover.cleanTempWindows();
 			switch (evt.key) {
 				case "Enter":
-					if (evt.ctrlKey) {
+					if (evt.ctrlKey || evt.metaKey) {
 						window.location = `${Renderer.get().baseUrl}${UrlUtil.PG_SEARCH}?${this._$iptSearch.val()}`;
 						break;
 					}
@@ -67,7 +67,7 @@ class Omnisearch {
 					break;
 				case "ArrowDown":
 					evt.preventDefault();
-					this._$searchOut.find(`a.omni__lnk-name`).first().focus();
+					this._$searchOut.find(`.omni__lnk-name`).first().focus();
 					break;
 				case "Escape":
 					this._$iptSearch.val("");
@@ -244,7 +244,7 @@ class Omnisearch {
 					continue;
 				}
 
-				const item = await Renderer.hover.pCacheAndGetHash(UrlUtil.PG_ITEMS, r.doc.u);
+				const item = await DataLoader.pCacheAndGetHash(UrlUtil.PG_ITEMS, r.doc.u);
 				if (!Renderer.item.isExcluded(item, {hash: r.doc.u})) resultsNxt.push(r);
 			}
 			results = resultsNxt;
@@ -268,7 +268,7 @@ class Omnisearch {
 	static $getResultLink (r) {
 		const isFauxPage = !!r.hx;
 
-		if (isFauxPage) return $(`<span ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s, {isFauxPage}) : ""} class="omni__lnk-name help-subtle">${r.cf}: ${r.n}</span>`);
+		if (isFauxPage) return $(`<span tabindex="0" ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s, {isFauxPage}) : ""} class="omni__lnk-name help">${r.cf}: ${r.n}</span>`);
 
 		const href = r.c === Parser.CAT_ID_PAGE ? r.u : `${Renderer.get().baseUrl}${UrlUtil.categoryToPage(r.c)}#${r.uh || r.u}`;
 		return $(`<a href="${href}" ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s, {isFauxPage}) : ""} class="omni__lnk-name">${r.cf}: ${r.n}</a>`);
@@ -354,7 +354,7 @@ class Omnisearch {
 				? `<a href="${adventureBookSourceHref}">${ptPageInner}</a>`
 				: ptPageInner;
 
-			const ptSourceInner = source ? `<span class="${Parser.sourceJsonToColor(source)}" ${BrewUtil2.sourceJsonToStyle(source)} title="${Parser.sourceJsonToFull(source)}">${Parser.sourceJsonToAbv(source)}</span>` : `<span></span>`;
+			const ptSourceInner = source ? `<span class="${Parser.sourceJsonToColor(source)}" ${Parser.sourceJsonToStyle(source)} title="${Parser.sourceJsonToFull(source)}">${Parser.sourceJsonToAbv(source)}</span>` : `<span></span>`;
 			const ptSource = ptPage || !adventureBookSourceHref
 				? ptSourceInner
 				: `<a href="${adventureBookSourceHref}">${ptSourceInner}</a>`;
@@ -392,7 +392,7 @@ class Omnisearch {
 		}
 
 		if (this._clickFirst && results.length) {
-			this._$searchOut.find(`a.omni__lnk-name`).first()[0].click();
+			this._$searchOut.find(`.omni__lnk-name`).first()[0].click();
 		}
 
 		if (!results.length) {
@@ -467,6 +467,9 @@ class Omnisearch {
 
 		data.forEach(it => this._addToIndex(it));
 
+		const prereleaseIndex = await PrereleaseUtil.pGetSearchIndex({id: this._maxId + 1});
+		prereleaseIndex.forEach(it => this._addToIndex(it));
+
 		const brewIndex = await BrewUtil2.pGetSearchIndex({id: this._maxId + 1});
 		brewIndex.forEach(it => this._addToIndex(it));
 
@@ -496,17 +499,17 @@ class Omnisearch {
 					const ix = $ele.parent().index() - 1; // offset as the control bar is at position 0
 					$(`.omni__paginate-left`).click();
 					const $psNext = this._$searchOut.find(`.omni__row-result`);
-					$($psNext[ix] || $psNext[$psNext.length - 1]).find(`a.omni__lnk-name`).focus();
+					$($psNext[ix] || $psNext[$psNext.length - 1]).find(`.omni__lnk-name`).focus();
 				}
 				break;
 			}
 			case "ArrowUp": {
 				evt.preventDefault();
-				if ($ele.parent().prev().find(`a.omni__lnk-name`).length) {
-					$ele.parent().prev().find(`a.omni__lnk-name`).focus();
+				if ($ele.parent().prev().find(`.omni__lnk-name`).length) {
+					$ele.parent().prev().find(`.omni__lnk-name`).focus();
 				} else if ($(`.has-results-left`).length) {
 					$(`.omni__paginate-left`).click();
-					this._$searchOut.find(`a.omni__lnk-name`).last().focus();
+					this._$searchOut.find(`.omni__lnk-name`).last().focus();
 				} else {
 					this._$iptSearch.focus();
 				}
@@ -518,17 +521,17 @@ class Omnisearch {
 					const ix = $ele.parent().index() - 1; // offset as the control bar is at position 0
 					$(`.omni__paginate-right`).click();
 					const $psNext = this._$searchOut.find(`.omni__row-result`);
-					$($psNext[ix] || $psNext[$psNext.length - 1]).find(`a.omni__lnk-name`).focus();
+					$($psNext[ix] || $psNext[$psNext.length - 1]).find(`.omni__lnk-name`).focus();
 				}
 				break;
 			}
 			case "ArrowDown": {
 				evt.preventDefault();
-				if ($ele.parent().next().find(`a.omni__lnk-name`).length) {
-					$ele.parent().next().find(`a.omni__lnk-name`).focus();
+				if ($ele.parent().next().find(`.omni__lnk-name`).length) {
+					$ele.parent().next().find(`.omni__lnk-name`).focus();
 				} else if ($(`.has-results-right`).length) {
 					$(`.omni__paginate-right`).click();
-					this._$searchOut.find(`a.omni__lnk-name`).first().focus();
+					this._$searchOut.find(`.omni__lnk-name`).first().focus();
 				}
 				break;
 			}

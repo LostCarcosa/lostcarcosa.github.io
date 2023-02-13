@@ -39,7 +39,10 @@ class FeatsPage extends ListPage {
 	constructor () {
 		const pageFilter = new PageFilterFeats();
 		super({
-			dataSource: "data/feats.json",
+			dataSource: DataUtil.feat.loadJSON.bind(DataUtil.feat),
+			dataSourceFluff: DataUtil.featFluff.loadJSON.bind(DataUtil.featFluff),
+
+			pFnGetFluff: Renderer.feat.pGetFluff.bind(Renderer.feat),
 
 			pageFilter,
 
@@ -65,7 +68,7 @@ class FeatsPage extends ListPage {
 			<span class="bold col-3-5 px-1">${feat.name}</span>
 			<span class="col-3-5 ${feat._slAbility === VeCt.STR_NONE ? "list-entry-none " : ""}">${feat._slAbility}</span>
 			<span class="col-3 ${feat._slPrereq === VeCt.STR_NONE ? "list-entry-none " : ""}">${feat._slPrereq}</span>
-			<span class="source col-1-7 text-center ${Parser.sourceJsonToColor(feat.source)} pr-0" title="${Parser.sourceJsonToFull(feat.source)}" ${BrewUtil2.sourceJsonToStyle(feat.source)}>${source}</span>
+			<span class="source col-1-7 text-center ${Parser.sourceJsonToColor(feat.source)} pr-0" title="${Parser.sourceJsonToFull(feat.source)}" ${Parser.sourceJsonToStyle(feat.source)}>${source}</span>
 		</a>
 		<div class="ve-flex ve-hidden relative lst__wrp-preview">
 			<div class="vr-0 absolute lst__vr-preview"></div>
@@ -93,18 +96,8 @@ class FeatsPage extends ListPage {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
-		FilterBox.selectFirstVisible(this._dataList);
-	}
-
-	_doLoadHash (id) {
-		const feat = this._dataList[id];
-
-		this._$pgContent.empty().append(RenderFeats.$getRenderedFeat(feat));
-
-		this._updateSelected();
+	_renderStats_doBuildStatsTab ({ent}) {
+		this._$pgContent.empty().append(RenderFeats.$getRenderedFeat(ent));
 	}
 }
 

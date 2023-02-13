@@ -19,7 +19,9 @@
 					"page": 209
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -66,7 +68,6 @@
 					"headerEntries": [
 						"The abjurer casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 16}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell dancing lights}",
 						"{@spell mage hand}",
@@ -87,7 +88,8 @@
 							"{@spell wall of force}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -114,7 +116,7 @@
 				{
 					"name": "Arcane Ward {@recharge 4}",
 					"entries": [
-						"When the abjurer or a creature it can see within 30 feet of it takes damage, the abjurer magically creates a protective barrier around itself or the other creature. The barrier reduces the damage to the protected creature by 26 ({@damage 4d10 + 4}), to a minimum of O, and then vanishes."
+						"When the abjurer or a creature it can see within 30 feet of it takes damage, the abjurer magically creates a protective barrier around itself or the other creature. The barrier reduces the damage to the protected creature by 26 ({@damage 4d10 + 4}), to a minimum of 0, and then vanishes."
 					]
 				}
 			],
@@ -134,6 +136,12 @@
 			"damageTags": [
 				"O"
 			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE"
 			],
@@ -142,7 +150,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Adult Kruthik",
@@ -154,7 +163,9 @@
 					"page": 212
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -258,7 +269,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Adult Oblex",
@@ -270,7 +282,9 @@
 					"page": 218
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "ooze",
 			"alignment": [
 				"L",
@@ -330,9 +344,8 @@
 				{
 					"name": "Spellcasting (Psionics)",
 					"headerEntries": [
-						"The oblex casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save DC {@dc 15}):"
+						"The oblex casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
 					],
-					"displayAs": "action",
 					"daily": {
 						"3e": [
 							"{@spell charm person} (as 5th-level spell)",
@@ -341,7 +354,7 @@
 						]
 					},
 					"ability": "int",
-					"type": "spellcasting"
+					"displayAs": "action"
 				}
 			],
 			"trait": [
@@ -380,7 +393,7 @@
 				{
 					"name": "Eat Memories",
 					"entries": [
-						"The oblex targets one creature it can see within 5 feet of it. The target must succeed on a DC {@dc 15} Wisdom saving throw or take 18 ({@damage 4d8}) psychic damage and become memory drained until it finishes a short or long rest or until it benefits from the {@spell greater restoration} or {@spell heal} spell. Constructs, Oozes, Plants, and Undead succeed on the save automatically.",
+						"The oblex targets one creature it can see within 5 feet of it. The target must succeed on a {@dc 15} Wisdom saving throw or take 18 ({@damage 4d8}) psychic damage and become memory drained until it finishes a short or long rest or until it benefits from the {@spell greater restoration} or {@spell heal} spell. Constructs, Oozes, Plants, and Undead succeed on the save automatically.",
 						"While memory drained, the target must roll a {@dice d4} and subtract the number rolled from its ability checks and attack rolls. Each time the target is memory drained beyond the first, the die size increases by one: the {@dice d4} becomes a {@dice d6}, the {@dice d6} becomes a {@dice d8}, and so on until the die becomes a {@dice d20}, at which point the target becomes {@condition unconscious} for 1 hour. The effect then ends.",
 						"The oblex learns all the languages a memory-drained target knows and gains all its skill proficiencies."
 					]
@@ -404,7 +417,8 @@
 				"path": "bestiary/oblex-adult.mp3"
 			},
 			"traitTags": [
-				"Amorphous"
+				"Amorphous",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -436,7 +450,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Air Elemental Myrmidon",
@@ -448,7 +463,9 @@
 					"page": 202
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -555,7 +572,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Alhoon",
@@ -567,7 +585,9 @@
 					"page": 172
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -691,8 +711,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The alhoon makes two Chilling Grasp or Arcane",
-						"Bolt attacks."
+						"The alhoon makes two Chilling Grasp or Arcane Bolt attacks."
 					]
 				},
 				{
@@ -749,6 +768,9 @@
 				"O",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE"
 			],
@@ -761,7 +783,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Alkilith",
@@ -773,7 +796,9 @@
 					"page": 130
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -916,7 +941,8 @@
 				"Amorphous",
 				"False Appearance",
 				"Magic Resistance",
-				"Spider Climb"
+				"Spider Climb",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -937,7 +963,8 @@
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Allip",
@@ -949,7 +976,9 @@
 					"page": 116
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -1028,7 +1057,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The allip can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The allip can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -1067,7 +1096,8 @@
 				"path": "bestiary/allip.mp3"
 			},
 			"traitTags": [
-				"Incorporeal Movement"
+				"Incorporeal Movement",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -1086,7 +1116,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Amnizu",
@@ -1098,7 +1129,9 @@
 					"page": 164
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -1285,6 +1318,12 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -1298,7 +1337,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Angry Sorrowsworn",
@@ -1310,7 +1350,9 @@
 					"page": 231
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -1414,7 +1456,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Annis Hag",
@@ -1426,7 +1469,9 @@
 					"page": 159
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -1543,6 +1588,9 @@
 				"P",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -1550,7 +1598,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Apprentice Wizard",
@@ -1560,9 +1609,14 @@
 				{
 					"source": "VGM",
 					"page": 209
+				},
+				{
+					"source": "SjA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -1605,7 +1659,6 @@
 					"headerEntries": [
 						"The apprentice casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 12})"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell mage hand}",
 						"{@spell prestidigitation}"
@@ -1617,7 +1670,8 @@
 							"{@spell mage armor}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -1642,8 +1696,15 @@
 			"damageTags": [
 				"O"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Archdruid",
@@ -1655,7 +1716,9 @@
 					"page": 210
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1780,6 +1843,9 @@
 				"F",
 				"I"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -1791,7 +1857,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Archer",
@@ -1803,7 +1870,9 @@
 					"page": 210
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -1890,7 +1959,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Armanite",
@@ -1902,7 +1972,9 @@
 					"page": 131
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -2028,7 +2100,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Astral Dreadnought",
@@ -2040,7 +2113,9 @@
 					"page": 117
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -2192,7 +2267,8 @@
 				"path": "bestiary/astral-dreadnought.mp3"
 			},
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -2214,7 +2290,8 @@
 				"incapacitated"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Aurochs",
@@ -2226,7 +2303,9 @@
 					"page": 207
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -2286,7 +2365,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Autumn Eladrin",
@@ -2298,7 +2378,9 @@
 					"page": 195
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -2448,6 +2530,9 @@
 				"S",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RNG",
@@ -2460,7 +2545,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Babau",
@@ -2472,7 +2558,9 @@
 					"page": 136
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -2595,6 +2683,12 @@
 				"A",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -2602,7 +2696,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Bael",
@@ -2615,7 +2710,9 @@
 					"page": 170
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -2813,6 +2910,15 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -2822,7 +2928,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Balhannoth",
@@ -2834,7 +2941,9 @@
 					"page": 119
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -2973,7 +3082,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Banderhobb",
@@ -2985,7 +3095,9 @@
 					"page": 122
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -3109,7 +3221,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Baphomet",
@@ -3122,7 +3235,9 @@
 					"page": 143
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -3306,6 +3421,9 @@
 				"O",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -3318,7 +3436,8 @@
 				"charmed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Bard",
@@ -3330,7 +3449,9 @@
 					"page": 211
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -3458,7 +3579,8 @@
 				"unconscious"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Barghest",
@@ -3470,7 +3592,9 @@
 					"page": 123
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"N",
@@ -3635,6 +3759,12 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -3642,7 +3772,8 @@
 				"charmed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Berbalang",
@@ -3654,7 +3785,9 @@
 					"page": 120
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -3771,11 +3904,15 @@
 				"S",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Bheur Hag",
@@ -3787,7 +3924,9 @@
 					"page": 160
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -3881,7 +4020,7 @@
 				{
 					"name": "Ice Walk",
 					"entries": [
-						"The hag can move across and climb icy surfaces without needing to make an ability check, and difficult terrain composed of ice or snow doesn't cost the hag extra moment."
+						"The hag can move across and climb icy surfaces without needing to make an ability check, and {@quickref difficult terrain||3} composed of ice or snow doesn't cost the hag extra moment."
 					]
 				}
 			],
@@ -3933,6 +4072,13 @@
 				"B",
 				"C"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -3944,7 +4090,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Black Abishai",
@@ -3956,7 +4103,9 @@
 					"page": 160
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -4107,7 +4256,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Blackguard",
@@ -4119,7 +4269,9 @@
 					"page": 211
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4249,6 +4401,9 @@
 				"P",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH",
@@ -4264,7 +4419,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Blue Abishai",
@@ -4276,7 +4432,9 @@
 					"page": 161
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -4440,6 +4598,9 @@
 				"L",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -4448,7 +4609,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Bodak",
@@ -4460,7 +4622,9 @@
 					"page": 127
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -4528,7 +4692,7 @@
 					"name": "Death Gaze",
 					"entries": [
 						"When a creature that can see the bodak's eyes starts its turn within 30 feet of the bodak, the bodak can force it to make a {@dc 13} Constitution saving throw if the bodak isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is reduced to 0 hit points unless it is immune to the {@condition frightened} condition. Otherwise, a creature takes 16 ({@damage 3d10}) psychic damage on a failed save.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it has disadvantage on attack rolls against the bodak until the start of its next turn. If the creature looks at the bodak in the meantime, that creature must immediately make the saving throw."
+						"Unless {@quickref Surprise|PHB|3|0|surprised}, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it has disadvantage on attack rolls against the bodak until the start of its next turn. If the creature looks at the bodak in the meantime, that creature must immediately make the saving throw."
 					]
 				},
 				{
@@ -4576,7 +4740,8 @@
 				"path": "bestiary/bodak.mp3"
 			},
 			"traitTags": [
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -4598,7 +4763,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Boggle",
@@ -4610,7 +4776,9 @@
 					"page": 128
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -4660,7 +4828,7 @@
 				{
 					"name": "Oil Puddle",
 					"entries": [
-						"The boggle creates a puddle of nonflammable oil. The puddle is 1 inch deep and covers the ground in the boggle's space. The puddle is difficult terrain for all creatures except boggles and lasts for 1 hour. The oil has one of the following additional effects of the boggle's choice:",
+						"The boggle creates a puddle of nonflammable oil. The puddle is 1 inch deep and covers the ground in the boggle's space. The puddle is {@quickref difficult terrain||3} for all creatures except boggles and lasts for 1 hour. The oil has one of the following additional effects of the boggle's choice:",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -4745,7 +4913,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Boneclaw",
@@ -4757,7 +4926,9 @@
 					"page": 121
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -4874,7 +5045,8 @@
 				"path": "bestiary/boneclaw.mp3"
 			},
 			"traitTags": [
-				"Rejuvenation"
+				"Rejuvenation",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -4897,7 +5069,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Brontosaurus",
@@ -4909,7 +5082,9 @@
 					"page": 139
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -4990,7 +5165,9 @@
 					"page": 131
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -5089,13 +5266,15 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Cadaver Collector",
@@ -5107,7 +5286,9 @@
 					"page": 122
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -5215,7 +5396,8 @@
 				"path": "bestiary/cadaver-collector.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5240,7 +5422,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Canoloth",
@@ -5252,7 +5435,9 @@
 					"page": 247
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -5336,7 +5521,7 @@
 				{
 					"name": "Uncanny Senses",
 					"entries": [
-						"The canoloth can't be surprised unless it's {@condition incapacitated}."
+						"The canoloth can't be {@quickref Surprise|PHB|3|0|surprised} unless it's {@condition incapacitated}."
 					]
 				}
 			],
@@ -5403,7 +5588,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Catoblepas",
@@ -5415,7 +5601,9 @@
 					"page": 129
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -5494,7 +5682,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Cave Fisher",
@@ -5506,7 +5695,9 @@
 					"page": 130
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -5607,7 +5798,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Champion",
@@ -5619,7 +5811,9 @@
 					"page": 212
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -5720,7 +5914,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Chitine",
@@ -5732,7 +5927,9 @@
 					"page": 131
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -5844,7 +6041,8 @@
 				"THW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Choker",
@@ -5856,7 +6054,9 @@
 					"page": 123
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -5938,6 +6138,9 @@
 				"type": "internal",
 				"path": "bestiary/choker.mp3"
 			},
+			"traitTags": [
+				"Spider Climb"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -5960,7 +6163,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Choldrith",
@@ -5972,7 +6176,9 @@
 					"page": 132
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -6119,6 +6325,9 @@
 				"O",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -6131,7 +6340,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Clockwork Bronze Scout",
@@ -6143,7 +6353,9 @@
 					"page": 125
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -6233,7 +6445,8 @@
 				"path": "bestiary/bronze-scout.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -6249,7 +6462,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Clockwork Iron Cobra",
@@ -6261,7 +6475,9 @@
 					"page": 125
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -6364,7 +6580,8 @@
 				"path": "bestiary/iron-cobra.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -6383,7 +6600,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Clockwork Oaken Bolter",
@@ -6395,7 +6613,9 @@
 					"page": 126
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -6499,7 +6719,8 @@
 				"path": "bestiary/oaken-bolter.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -6524,7 +6745,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Clockwork Stone Defender",
@@ -6536,7 +6758,9 @@
 					"page": 126
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -6622,7 +6846,8 @@
 				"path": "bestiary/stone-defender.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -6640,7 +6865,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Cloud Giant Smiling One",
@@ -6652,7 +6878,9 @@
 					"page": 146
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -6792,6 +7020,9 @@
 				"O",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -6800,7 +7031,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Conjurer Wizard",
@@ -6812,7 +7044,9 @@
 					"page": 212
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -6859,7 +7093,6 @@
 					"headerEntries": [
 						"The conjurer casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell dancing lights}",
 						"{@spell mage hand}",
@@ -6877,7 +7110,8 @@
 							"{@spell web}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -6924,11 +7158,18 @@
 			"damageTags": [
 				"O"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"conditionInflictSpell": [
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Corpse Flower",
@@ -6940,7 +7181,9 @@
 					"page": 127
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"C",
@@ -7037,6 +7280,9 @@
 				"type": "internal",
 				"path": "bestiary/corpse-flower.mp3"
 			},
+			"traitTags": [
+				"Spider Climb"
+			],
 			"senseTags": [
 				"B"
 			],
@@ -7056,7 +7302,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Cranium Rat",
@@ -7068,7 +7315,9 @@
 					"page": 133
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "aberration",
 			"alignment": [
 				"U"
@@ -7143,7 +7392,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Darkling",
@@ -7155,7 +7405,9 @@
 					"page": 134
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -7256,7 +7508,8 @@
 				"blinded"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Darkling Elder",
@@ -7268,7 +7521,9 @@
 					"page": 134
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -7374,7 +7629,8 @@
 				"blinded"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Death Kiss",
@@ -7386,7 +7642,9 @@
 					"page": 124
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -7505,7 +7763,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Deathlock",
@@ -7517,7 +7776,9 @@
 					"page": 128
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -7646,7 +7907,8 @@
 				"path": "bestiary/deathlock.mp3"
 			},
 			"traitTags": [
-				"Turn Resistance"
+				"Turn Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -7660,6 +7922,13 @@
 			"damageTags": [
 				"N"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -7668,7 +7937,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Deathlock Mastermind",
@@ -7680,7 +7950,9 @@
 					"page": 129
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -7818,7 +8090,8 @@
 			},
 			"traitTags": [
 				"Devil's Sight",
-				"Turn Resistance"
+				"Turn Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -7832,6 +8105,12 @@
 			"damageTags": [
 				"N"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -7842,7 +8121,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Deathlock Wight",
@@ -7854,7 +8134,9 @@
 					"page": 129
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -7977,7 +8259,8 @@
 				"path": "bestiary/deathlock-wight.mp3"
 			},
 			"traitTags": [
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -7991,7 +8274,11 @@
 			"damageTags": [
 				"N"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflictSpell": [
@@ -7999,7 +8286,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Deep Rothé",
@@ -8011,7 +8299,9 @@
 					"page": 208
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -8081,7 +8371,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Deep Scion",
@@ -8093,7 +8384,9 @@
 					"page": 135
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -8221,7 +8514,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Deinonychus",
@@ -8233,7 +8527,9 @@
 					"page": 139
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -8336,7 +8632,9 @@
 					"page": 144
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -8548,7 +8846,14 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -8563,7 +8868,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Derro",
@@ -8575,7 +8881,9 @@
 					"page": 158
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -8674,7 +8982,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Derro Savant",
@@ -8686,7 +8995,9 @@
 					"page": 159
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -8803,6 +9114,9 @@
 				"B",
 				"R"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -8811,7 +9125,8 @@
 				"unconscious"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Devourer",
@@ -8823,7 +9138,9 @@
 					"page": 138
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -8912,6 +9229,9 @@
 				"type": "internal",
 				"path": "bestiary/devourer.mp3"
 			},
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"SD"
 			],
@@ -8934,7 +9254,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Dhergoloth",
@@ -8946,7 +9267,9 @@
 					"page": 248
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -9088,6 +9411,9 @@
 			"damageTags": [
 				"O"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -9096,7 +9422,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Dimetrodon",
@@ -9108,7 +9435,9 @@
 					"page": 139
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -9180,7 +9509,9 @@
 					"page": 243
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -9306,7 +9637,8 @@
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Diviner Wizard",
@@ -9318,7 +9650,9 @@
 					"page": 213
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -9365,7 +9699,6 @@
 					"headerEntries": [
 						"The diviner casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 15}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell mage hand}",
 						"{@spell message}",
@@ -9386,7 +9719,8 @@
 							"{@spell true seeing}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -9434,6 +9768,12 @@
 				"R",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE"
 			],
@@ -9441,7 +9781,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Dolphin",
@@ -9453,7 +9794,9 @@
 					"page": 208
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -9525,13 +9868,16 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Dolphin Delighter",
 			"source": "MPMM",
 			"page": 97,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -9641,7 +9987,9 @@
 			"conditionInflict": [
 				"blinded"
 			],
-			"hasFluff": true
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Draegloth",
@@ -9653,7 +10001,9 @@
 					"page": 141
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -9784,12 +10134,16 @@
 				"P",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Drow Arachnomancer",
@@ -9801,7 +10155,9 @@
 					"page": 182
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9974,6 +10330,13 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW"
@@ -9987,7 +10350,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Drow Favored Consort",
@@ -9999,7 +10363,9 @@
 					"page": 183
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10142,6 +10508,13 @@
 				"O",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -10149,7 +10522,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Drow House Captain",
@@ -10161,7 +10535,9 @@
 					"page": 184
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10313,6 +10689,9 @@
 				"P",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH",
@@ -10324,7 +10703,8 @@
 				"unconscious"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Drow Inquisitor",
@@ -10336,7 +10716,9 @@
 					"page": 184
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10505,14 +10887,19 @@
 				"P",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflictSpell": [
 				"deafened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Drow Matron Mother",
@@ -10524,7 +10911,9 @@
 					"page": 186
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10730,6 +11119,12 @@
 				"R",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -10748,7 +11143,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Drow Shadowblade",
@@ -10760,7 +11156,9 @@
 					"page": 187
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10917,6 +11315,9 @@
 				"P",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RNG",
@@ -10927,7 +11328,8 @@
 				"unconscious"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Duergar Despot",
@@ -10939,7 +11341,9 @@
 					"page": 188
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11108,7 +11512,9 @@
 					"page": 188
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "construct",
 				"tags": [
@@ -11223,7 +11629,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Duergar Kavalrachni",
@@ -11235,7 +11642,9 @@
 					"page": 189
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11371,7 +11780,9 @@
 					"page": 189
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11503,7 +11914,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Duergar Screamer",
@@ -11515,7 +11927,9 @@
 					"page": 190
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "construct",
 				"tags": [
@@ -11635,7 +12049,9 @@
 					"page": 190
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11739,7 +12155,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Duergar Stone Guard",
@@ -11751,7 +12168,9 @@
 					"page": 191
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11882,7 +12301,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Duergar Warlord",
@@ -11894,7 +12314,9 @@
 					"page": 192
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -12035,7 +12457,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Duergar Xarrorn",
@@ -12047,7 +12470,9 @@
 					"page": 193
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -12163,7 +12588,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Dybbuk",
@@ -12175,7 +12601,9 @@
 					"page": 132
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -12273,7 +12701,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The dybbuk can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The dybbuk can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -12332,14 +12760,23 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Earth Elemental Myrmidon",
@@ -12351,7 +12788,9 @@
 					"page": 202
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -12451,7 +12890,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Eidolon",
@@ -12463,7 +12903,9 @@
 					"page": 194
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -12538,7 +12980,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The eidolon can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object other than a {@creature sacred statue|MPMM}."
+						"The eidolon can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object other than a {@creature sacred statue|MPMM}."
 					]
 				},
 				{
@@ -12582,7 +13024,8 @@
 			},
 			"traitTags": [
 				"Incorporeal Movement",
-				"Turn Resistance"
+				"Turn Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -12601,7 +13044,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Elder Brain",
@@ -12613,7 +13057,9 @@
 					"page": 173
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -12816,7 +13262,8 @@
 				"incapacitated"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Elder Oblex",
@@ -12828,7 +13275,9 @@
 					"page": 219
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "ooze",
 			"alignment": [
 				"L",
@@ -12882,7 +13331,7 @@
 				{
 					"name": "Spellcasting (Psionics)",
 					"headerEntries": [
-						"The oblex casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save DC {@dc 18}):"
+						"The oblex casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 18}):"
 					],
 					"will": [
 						"{@spell charm person} (as 5th-level spell)",
@@ -12896,9 +13345,8 @@
 							"{@spell telekinesis}"
 						]
 					},
-					"displayAs": "action",
 					"ability": "int",
-					"type": "spellcasting"
+					"displayAs": "action"
 				}
 			],
 			"trait": [
@@ -12961,7 +13409,8 @@
 				"path": "bestiary/elder-oblex.mp3"
 			},
 			"traitTags": [
-				"Amorphous"
+				"Amorphous",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -12976,6 +13425,9 @@
 			"damageTags": [
 				"B",
 				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
 			],
 			"spellcastingTags": [
 				"P"
@@ -12995,7 +13447,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Elder Tempest",
@@ -13007,7 +13460,9 @@
 					"page": 200
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -13178,7 +13633,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Enchanter Wizard",
@@ -13190,7 +13646,9 @@
 					"page": 213
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -13237,7 +13695,6 @@
 					"headerEntries": [
 						"The enchanter casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell friends}",
 						"{@spell mage hand}",
@@ -13253,7 +13710,8 @@
 							"{@spell tongues}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -13294,6 +13752,9 @@
 			"damageTags": [
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"conditionInflictSpell": [
 				"charmed",
 				"invisible",
@@ -13312,7 +13773,9 @@
 					"page": 214
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -13359,7 +13822,6 @@
 					"headerEntries": [
 						"The evoker casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 15}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell light}",
 						"{@spell mage hand}",
@@ -13376,7 +13838,8 @@
 							"{@spell wall of ice}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -13389,7 +13852,7 @@
 				{
 					"name": "Arcane Burst",
 					"entries": [
-						"{@atk ms,rs} {@hit 7} to hit, reach 5 ft. or range 120 ft., one target. {@h}20 ({@damage 3d10 + 3}) force damage."
+						"{@atk ms,rs} {@hit 7} to hit, reach 5 ft. or range 120 ft., one target. {@h}25 ({@damage 4d10 + 3}) force damage."
 					]
 				},
 				{
@@ -13415,6 +13878,14 @@
 			"damageTags": [
 				"O"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"L"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE"
 			],
@@ -13422,7 +13893,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Female Steeder",
@@ -13434,7 +13906,9 @@
 					"page": 238
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -13522,7 +13996,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Fire Elemental Myrmidon",
@@ -13534,7 +14009,9 @@
 					"page": 203
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -13651,7 +14128,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Fire Giant Dreadnought",
@@ -13663,7 +14141,9 @@
 					"page": 147
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -13770,7 +14250,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Firenewt Warlock of Imix",
@@ -13782,7 +14263,9 @@
 					"page": 143
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -13897,6 +14380,9 @@
 				"F",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -13913,7 +14399,9 @@
 					"page": 142
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -14005,7 +14493,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Flail Snail",
@@ -14017,7 +14506,9 @@
 					"page": 144
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"U"
@@ -14120,7 +14611,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Flind",
@@ -14132,11 +14624,13 @@
 					"page": 153
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
-					"Gnoll"
+					"gnoll"
 				]
 			},
 			"alignment": [
@@ -14257,7 +14751,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Fraz-Urb'luu",
@@ -14270,7 +14765,9 @@
 					"page": 146
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -14331,7 +14828,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "that is nonmagical"
+					"note": "that is nonmagical",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -14457,6 +14955,18 @@
 				"O",
 				"Y"
 			],
+			"damageTagsLegendary": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -14473,7 +14983,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Froghemoth",
@@ -14485,7 +14996,9 @@
 					"page": 145
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -14604,7 +15117,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Frost Giant Everlasting One",
@@ -14616,7 +15130,9 @@
 					"page": 148
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -14743,7 +15259,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Frost Salamander",
@@ -14755,7 +15272,9 @@
 					"page": 223
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "elemental",
 			"alignment": [
 				"U"
@@ -14868,7 +15387,8 @@
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gauth",
@@ -14880,7 +15400,9 @@
 					"page": 125
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -14943,7 +15465,7 @@
 					"name": "Stunning Gaze",
 					"entries": [
 						"When a creature that can see the gauth's central eye starts its turn within 30 feet of the gauth, the gauth can force it to make a {@dc 14} Wisdom saving throw if the gauth isn't {@condition incapacitated} and can see the creature. A creature that fails the save is {@condition stunned} until the start of its next turn.",
-						"Unless surprised, a creature can avert its eyes at the start of its turn to avoid the saving throw. If the creature does so, it can't see the gauth until the start of its next turn, when it can avert its eyes again. If the creature looks at the gauth in the meantime, it must immediately make the save."
+						"Unless {@quickref Surprise|PHB|3|0|surprised}, a creature can avert its eyes at the start of its turn to avoid the saving throw. If the creature does so, it can't see the gauth until the start of its next turn, when it can avert its eyes again. If the creature looks at the gauth in the meantime, it must immediately make the save."
 					]
 				},
 				{
@@ -15048,7 +15570,8 @@
 				"unconscious"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gazer",
@@ -15058,9 +15581,14 @@
 				{
 					"source": "VGM",
 					"page": 126
+				},
+				{
+					"source": "SjA"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -15194,6 +15722,7 @@
 			"environment": [
 				"underdark"
 			],
+			"familiar": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gazer.mp3"
@@ -15213,7 +15742,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Geryon",
@@ -15226,7 +15756,9 @@
 					"page": 173
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -15443,7 +15975,20 @@
 				"I",
 				"O"
 			],
+			"damageTagsLegendary": [
+				"C"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -15460,7 +16005,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Giant Strider",
@@ -15472,7 +16018,9 @@
 					"page": 143
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"U"
@@ -15546,7 +16094,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Giff",
@@ -15556,9 +16105,14 @@
 				{
 					"source": "MTF",
 					"page": 204
+				},
+				{
+					"source": "SjA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -15662,7 +16216,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Girallon",
@@ -15674,7 +16229,9 @@
 					"page": 152
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -15755,7 +16312,8 @@
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Githyanki Gish",
@@ -15767,7 +16325,9 @@
 					"page": 205
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -15889,6 +16449,10 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -15900,7 +16464,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Githyanki Kith'rak",
@@ -15912,7 +16477,9 @@
 					"page": 205
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -16046,7 +16613,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Githyanki Supreme Commander",
@@ -16058,7 +16626,9 @@
 					"page": 206
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -16203,6 +16773,10 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"B",
+				"O"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -16213,7 +16787,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Githzerai Anarch",
@@ -16225,7 +16800,9 @@
 					"page": 207
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -16383,7 +16960,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Githzerai Enlightened",
@@ -16395,7 +16973,9 @@
 					"page": 208
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -16526,7 +17106,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gnoll Flesh Gnawer",
@@ -16538,7 +17119,9 @@
 					"page": 154
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -16637,7 +17220,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gnoll Hunter",
@@ -16649,7 +17233,9 @@
 					"page": 154
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -16764,7 +17350,9 @@
 					"page": 155
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -16861,6 +17449,9 @@
 				"type": "internal",
 				"path": "bestiary/gnoll-witherling.mp3"
 			},
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -16879,7 +17470,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gray Render",
@@ -16891,7 +17483,9 @@
 					"page": 209
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -16986,7 +17580,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Graz'zt",
@@ -16999,7 +17594,9 @@
 					"page": 149
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -17194,6 +17791,9 @@
 				"A",
 				"O"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -17204,7 +17804,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Green Abishai",
@@ -17216,7 +17817,9 @@
 					"page": 162
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -17369,6 +17972,14 @@
 				"I",
 				"O"
 			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -17380,7 +17991,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Grung",
@@ -17392,7 +18004,9 @@
 					"page": 156
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -17663,7 +18277,9 @@
 					"page": 157
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -17948,7 +18564,9 @@
 					"page": 157
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -18125,6 +18743,12 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RNG",
@@ -18253,7 +18877,9 @@
 					"page": 91
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -18294,8 +18920,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The guard drake makes one Bite attack and one",
-						"Tail attack."
+						"The guard drake makes one Bite attack and one Tail attack."
 					]
 				},
 				{
@@ -18387,6 +19012,7 @@
 			],
 			"hasToken": true,
 			"hasFluff": true,
+			"hasFluffImages": true,
 			"_versions": [
 				{
 					"name": "Guard Drake (Black)",
@@ -18483,7 +19109,9 @@
 					"page": 140
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -18554,7 +19182,9 @@
 					"page": 165
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -18690,7 +19320,8 @@
 			},
 			"traitTags": [
 				"Immutable Form",
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -18715,7 +19346,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hobgoblin Devastator",
@@ -18727,7 +19359,9 @@
 					"page": 161
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -18846,6 +19480,13 @@
 				"B",
 				"O"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -18853,7 +19494,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hobgoblin Iron Shadow",
@@ -18865,7 +19507,9 @@
 					"page": 162
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -18881,7 +19525,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -18991,6 +19635,9 @@
 				"B",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -18998,7 +19645,8 @@
 				"charmed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Howler",
@@ -19010,7 +19658,9 @@
 					"page": 210
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"C",
@@ -19129,7 +19779,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hungry Sorrowsworn",
@@ -19141,7 +19792,9 @@
 					"page": 232
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -19247,7 +19900,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hutijin",
@@ -19260,7 +19914,9 @@
 					"page": 175
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -19477,6 +20133,16 @@
 				"O",
 				"T"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -19491,7 +20157,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hydroloth",
@@ -19503,7 +20170,9 @@
 					"page": 249
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -19677,6 +20346,12 @@
 				"O",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -19686,7 +20361,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Illusionist Wizard",
@@ -19698,7 +20374,9 @@
 					"page": 214
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -19745,7 +20423,6 @@
 					"headerEntries": [
 						"The illusionist casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 13}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell dancing lights}",
 						"{@spell mage hand}",
@@ -19761,7 +20438,8 @@
 							"{@spell phantom steed}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -19802,11 +20480,18 @@
 			"damageTags": [
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"conditionInflictSpell": [
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Juiblex",
@@ -19819,7 +20504,9 @@
 					"page": 151
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -20014,6 +20701,12 @@
 				"A",
 				"I"
 			],
+			"damageTagsLegendary": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH",
@@ -20032,7 +20725,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ki-rin",
@@ -20044,7 +20738,9 @@
 					"page": 163
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -20218,6 +20914,9 @@
 				"O",
 				"R"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -20226,7 +20925,8 @@
 				"incapacitated"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Kobold Dragonshield",
@@ -20238,7 +20938,9 @@
 					"page": 165
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "dragon",
 			"alignment": [
 				"A"
@@ -20355,7 +21057,8 @@
 				"THW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Kobold Inventor",
@@ -20367,7 +21070,9 @@
 					"page": 166
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -20532,7 +21237,8 @@
 				"incapacitated"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Kobold Scale Sorcerer",
@@ -20544,7 +21250,9 @@
 					"page": 167
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -20666,6 +21374,9 @@
 			"damageTags": [
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -20675,7 +21386,8 @@
 				"charmed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Korred",
@@ -20687,7 +21399,9 @@
 					"page": 168
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -20826,6 +21540,12 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW"
@@ -20838,7 +21558,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Kraken Priest",
@@ -20850,7 +21571,9 @@
 					"page": 215
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -20967,6 +21690,12 @@
 				"L",
 				"T"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"conditionInflict": [
 				"frightened",
 				"prone"
@@ -20976,7 +21705,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Kruthik Hive Lord",
@@ -20988,7 +21718,9 @@
 					"page": 212
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -21101,7 +21833,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Leucrotta",
@@ -21113,7 +21846,9 @@
 					"page": 169
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -21225,7 +21960,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Leviathan",
@@ -21237,7 +21973,9 @@
 					"page": 198
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -21391,7 +22129,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Lonely Sorrowsworn",
@@ -21403,7 +22142,9 @@
 					"page": 232
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -21517,7 +22258,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Lost Sorrowsworn",
@@ -21529,7 +22271,9 @@
 					"page": 233
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -21642,7 +22386,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Male Steeder",
@@ -21654,7 +22399,9 @@
 					"page": 238
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -21754,7 +22501,9 @@
 					"page": 216
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -21763,7 +22512,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -21869,7 +22618,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Marut",
@@ -21881,7 +22631,9 @@
 					"page": 213
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "construct",
 				"tags": [
@@ -22018,7 +22770,8 @@
 			"traitTags": [
 				"Immutable Form",
 				"Legendary Resistances",
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -22041,7 +22794,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Master Thief",
@@ -22053,7 +22807,9 @@
 					"page": 216
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -22164,7 +22920,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Maurezhi",
@@ -22176,7 +22933,9 @@
 					"page": 133
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -22318,7 +23077,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Maw Demon",
@@ -22330,7 +23090,9 @@
 					"page": 137
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -22424,7 +23186,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Meazel",
@@ -22436,7 +23199,9 @@
 					"page": 214
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -22532,7 +23297,8 @@
 				"grappled"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Meenlock",
@@ -22544,7 +23310,9 @@
 					"page": 170
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -22647,7 +23415,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Merregon",
@@ -22659,7 +23428,9 @@
 					"page": 166
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -22793,7 +23564,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Merrenoloth",
@@ -22805,7 +23577,9 @@
 					"page": 250
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -22963,6 +23737,12 @@
 			"damageTags": [
 				"F"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -22976,7 +23756,8 @@
 				"charmed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Mindwitness",
@@ -22988,7 +23769,9 @@
 					"page": 176
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -23093,7 +23876,7 @@
 								{
 									"name": "3: Psychic Ray",
 									"entries": [
-										"The target must succeed on a {@dc 13} Intelligence saving throw or take T1 ({@damage 6d8}) psychic damage."
+										"The target must succeed on a {@dc 13} Intelligence saving throw or take 27 ({@damage 6d8}) psychic damage."
 									],
 									"type": "item"
 								},
@@ -23158,7 +23941,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Moloch",
@@ -23171,7 +23955,9 @@
 					"page": 177
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -23371,6 +24157,15 @@
 				"T",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -23380,7 +24175,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Molydeus",
@@ -23392,7 +24188,9 @@
 					"page": 134
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -23592,7 +24390,14 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -23600,7 +24405,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Morkoth",
@@ -23612,7 +24418,9 @@
 					"page": 177
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -23760,6 +24568,13 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"L",
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -23771,7 +24586,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Mouth of Grolantor",
@@ -23783,7 +24599,9 @@
 					"page": 149
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "giant",
 				"tags": [
@@ -23896,7 +24714,8 @@
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nabassu",
@@ -23908,7 +24727,9 @@
 					"page": 135
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -24052,10 +24873,12 @@
 			],
 			"miscTags": [
 				"AOE",
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nagpa",
@@ -24067,7 +24890,9 @@
 					"page": 215
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -24210,6 +25035,14 @@
 				"B",
 				"N"
 			],
+			"damageTagsSpell": [
+				"F",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -24223,7 +25056,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Narzugon",
@@ -24235,7 +25069,9 @@
 					"page": 167
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -24386,7 +25222,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Necromancer Wizard",
@@ -24398,7 +25235,9 @@
 					"page": 217
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -24448,7 +25287,6 @@
 					"headerEntries": [
 						"The necromancer casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 15}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell dancing lights}",
 						"{@spell mage hand}",
@@ -24465,7 +25303,8 @@
 							"{@spell circle of death}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -24515,11 +25354,20 @@
 			"damageTags": [
 				"N"
 			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"conditionInflictSpell": [
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Neogi",
@@ -24531,7 +25379,9 @@
 					"page": 180
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -24651,7 +25501,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Neogi Hatchling",
@@ -24661,9 +25512,14 @@
 				{
 					"source": "VGM",
 					"page": 179
+				},
+				{
+					"source": "SjA"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -24739,7 +25595,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Neogi Master",
@@ -24751,7 +25608,9 @@
 					"page": 180
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -24912,6 +25771,14 @@
 				"N",
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -24936,7 +25803,9 @@
 					"page": 181
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -25046,6 +25915,9 @@
 				"B",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -25061,7 +25933,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nightwalker",
@@ -25073,7 +25946,9 @@
 					"page": 216
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -25185,6 +26060,9 @@
 				"type": "internal",
 				"path": "bestiary/nightwalker.mp3"
 			},
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"SD"
 			],
@@ -25195,6 +26073,7 @@
 				"N"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -25203,7 +26082,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nilbog",
@@ -25215,7 +26095,9 @@
 					"page": 182
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -25333,6 +26215,9 @@
 				"B",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -25344,7 +26229,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nupperibo",
@@ -25356,7 +26242,9 @@
 					"page": 168
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -25455,7 +26343,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Oblex Spawn",
@@ -25467,7 +26356,9 @@
 					"page": 217
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "ooze",
 			"alignment": [
 				"L",
@@ -25544,7 +26435,8 @@
 				"path": "bestiary/oblex-spawn.mp3"
 			},
 			"traitTags": [
-				"Amorphous"
+				"Amorphous",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -25553,7 +26445,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ogre Battering Ram",
@@ -25565,7 +26458,9 @@
 					"page": 220
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -25661,7 +26556,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ogre Bolt Launcher",
@@ -25673,7 +26569,9 @@
 					"page": 220
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -25761,7 +26659,9 @@
 					"page": 221
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -25843,8 +26743,7 @@
 			],
 			"conditionInflict": [
 				"prone",
-				"stunned",
-				"unconscious"
+				"stunned"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -25859,7 +26758,9 @@
 					"page": 221
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -25935,7 +26836,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Oinoloth",
@@ -25947,7 +26849,9 @@
 					"page": 251
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -26117,8 +27021,15 @@
 				"N",
 				"S"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -26129,7 +27040,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Orcus",
@@ -26142,7 +27054,9 @@
 					"page": 153
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -26187,8 +27101,8 @@
 				"wis": "+13"
 			},
 			"skill": {
-				"arcana": "+12",
-				"perception": "+12"
+				"arcana": "+13",
+				"perception": "+13"
 			},
 			"senses": [
 				"truesight 120 ft."
@@ -26248,6 +27162,11 @@
 					"headerEntries": [
 						"While holding the {@item Wand of Orcus}, Orcus casts one of the following spells (spell save {@dc 18}), some of which require charges; the wand has 7 charges to fuel these spells, and it regains {@dice 1d4 + 3} charges daily at dawn:"
 					],
+					"will": [
+						"{@spell animate dead} (as an action)",
+						"{@spell blight}",
+						"{@spell speak with dead}"
+					],
 					"charges": {
 						"1e": [
 							"{@spell circle of death}",
@@ -26258,11 +27177,6 @@
 						]
 					},
 					"chargesItem": "wand of orcus|dmg",
-					"will": [
-						"{@spell animate dead} (as an action)",
-						"{@spell blight}",
-						"{@spell speak with dead}"
-					],
 					"displayAs": "action"
 				}
 			],
@@ -26308,13 +27222,7 @@
 				{
 					"name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 16} to hit, reach 10 ft., one target."
-					]
-				},
-				{
-					"name": "Hit",
-					"entries": [
-						"21 ({@damage 3d8 + 8}) force damage plus 9 ({@damage 2d8}) poison damage."
+						"{@atk mw} {@hit 16} to hit, reach 10 ft., one target. {@h}21 ({@damage 3d8 + 8}) force damage plus 9 ({@damage 2d8}) poison damage."
 					]
 				},
 				{
@@ -26372,13 +27280,20 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Orthon",
@@ -26390,7 +27305,9 @@
 					"page": 169
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -26507,7 +27424,7 @@
 								{
 									"type": "item",
 									"name": "Entanglement",
-									"entry": "The target must make a successful {@dc 17} Dexterity saving throw or be {@condition restrained} for 1 hour by strands of sticky webbing. The target can escape by taking an action to make a DC {@dc 17} Strength or Dexterity check and succeeding."
+									"entry": "The target must make a successful {@dc 17} Dexterity saving throw or be {@condition restrained} for 1 hour by strands of sticky webbing. The target can escape by taking an action to make a {@dc 17} Strength or Dexterity check and succeeding."
 								},
 								{
 									"type": "item",
@@ -26536,7 +27453,7 @@
 				{
 					"name": "Explosive Retribution",
 					"entries": [
-						"In response to dropping to 15 hit points or fewer, the orthon explodes. All other creatures within 30 feet of it must each make a DC {@dc 17} Dexterity saving throw, taking 9 ({@damage 2d8}) fire damage plus 9 ({@damage 2d8}) thunder damage on a failed save, or half as much damage on a successful one. The orthon, its infernal dagger, and its brass crossbow are destroyed."
+						"In response to dropping to 15 hit points or fewer, the orthon explodes. All other creatures within 30 feet of it must each make a {@dc 17} Dexterity saving throw, taking 9 ({@damage 2d8}) fire damage plus 9 ({@damage 2d8}) thunder damage on a failed save, or half as much damage on a successful one. The orthon, its infernal dagger, and its brass crossbow are destroyed."
 					]
 				}
 			],
@@ -26582,7 +27499,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ox",
@@ -26594,7 +27512,9 @@
 					"page": 208
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -26665,7 +27585,9 @@
 					"page": 199
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -26799,7 +27721,7 @@
 				{
 					"name": "Swoop (Costs 2 Actions)",
 					"entries": [
-						"The phoenix moves up to its speed and makes on Fiery Talons attack."
+						"The phoenix moves up to its speed and makes one Fiery Talons attack."
 					]
 				}
 			],
@@ -26832,7 +27754,8 @@
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Quetzalcoatlus",
@@ -26844,7 +27767,9 @@
 					"page": 140
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -26929,7 +27854,9 @@
 					"page": 187
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -27021,7 +27948,8 @@
 				"THW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Red Abishai",
@@ -27033,7 +27961,9 @@
 					"page": 160
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -27195,7 +28125,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Redcap",
@@ -27207,7 +28138,9 @@
 					"page": 188
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -27312,7 +28245,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Retriever",
@@ -27324,7 +28258,9 @@
 					"page": 222
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -27471,6 +28407,12 @@
 				"O",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -27482,7 +28424,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Rot Troll",
@@ -27494,7 +28437,9 @@
 					"page": 244
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -27593,7 +28538,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Rutterkin",
@@ -27605,7 +28551,9 @@
 					"page": 136
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -27693,7 +28641,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sacred Statue",
@@ -27705,7 +28654,9 @@
 					"page": 194
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				{
@@ -27821,7 +28772,8 @@
 				"path": "bestiary/sacred-statue.mp3"
 			},
 			"traitTags": [
-				"False Appearance"
+				"False Appearance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -27841,7 +28793,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sea Spawn",
@@ -27853,7 +28806,9 @@
 					"page": 189
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -27978,7 +28933,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Shadar-kai Gloom Weaver",
@@ -27990,7 +28946,9 @@
 					"page": 224
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -28127,6 +29085,9 @@
 				"N",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -28136,7 +29097,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Shadar-kai Shadow Dancer",
@@ -28148,7 +29110,9 @@
 					"page": 225
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -28296,7 +29260,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Shadar-kai Soul Monger",
@@ -28308,7 +29273,9 @@
 					"page": 226
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -28458,6 +29425,12 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -28468,7 +29441,8 @@
 				"exhaustion"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Shadow Mastiff",
@@ -28480,7 +29454,9 @@
 					"page": 190
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -28575,7 +29551,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Shadow Mastiff Alpha",
@@ -28587,7 +29564,9 @@
 					"page": 190
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -28701,7 +29680,9 @@
 					"page": 137
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -28823,7 +29804,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sibriex",
@@ -28835,7 +29817,9 @@
 					"page": 137
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -28935,7 +29919,7 @@
 				{
 					"name": "Contamination",
 					"entries": [
-						"The sibriex emits an aura of corruption 30 feet in every direction. Vegetation withers in the aura, and the ground in the aura is difficult terrain for other creatures. Any creature that starts its turn in the aura must succeed on a {@dc 20} Constitution saving throw or take 14 ({@damage 4d6}) poison damage. A creature that succeeds on the save is immune to this sibriex's Contamination for 24 hours."
+						"The sibriex emits an aura of corruption 30 feet in every direction. Vegetation withers in the aura, and the ground in the aura is {@quickref difficult terrain||3} for other creatures. Any creature that starts its turn in the aura must succeed on a {@dc 20} Constitution saving throw or take 14 ({@damage 4d6}) poison damage. A creature that succeeds on the save is immune to this sibriex's Contamination for 24 hours."
 					]
 				},
 				{
@@ -29130,6 +30114,12 @@
 				"I",
 				"O"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -29144,7 +30134,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Skulk",
@@ -29156,7 +30147,9 @@
 					"page": 227
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -29200,25 +30193,34 @@
 				{
 					"name": "Fallible Invisibility",
 					"entries": [
-						"The skulk is {@condition invisible}. This invisibility can be circumvented by three things:"
-					]
-				},
-				{
-					"name": "Charnel Candles",
-					"entries": [
-						"The skulk appears as a dim, translucent form in the light of a candle made of fat rendered from a corpse whose identity is unknown."
-					]
-				},
-				{
-					"name": "Children",
-					"entries": [
-						"Humanoid children, aged 10 and under, can see through this invisibility."
-					]
-				},
-				{
-					"name": "Reflective Surfaces",
-					"entries": [
-						"The skulk appears as a drab, smoothskinned biped if its reflection can be seen in a mirror or on another surface."
+						"The skulk is {@condition invisible}. This invisibility can be circumvented by three things:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Charnel Candles",
+									"entries": [
+										"The skulk appears as a dim, translucent form in the light of a candle made of fat rendered from a corpse whose identity is unknown."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Children",
+									"entries": [
+										"Humanoid children, aged 10 and under, can see through this invisibility."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Reflective Surfaces",
+									"entries": [
+										"The skulk appears as a drab, smoothskinned biped if its reflection can be seen in a mirror or on another surface."
+									]
+								}
+							]
+						}
 					]
 				},
 				{
@@ -29265,7 +30267,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Skull Lord",
@@ -29277,7 +30280,9 @@
 					"page": 230
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -29450,7 +30455,8 @@
 				"path": "bestiary/skull-lord.mp3"
 			},
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -29465,6 +30471,14 @@
 				"B",
 				"N"
 			],
+			"damageTagsSpell": [
+				"C",
+				"I",
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -29472,7 +30486,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Slithering Tracker",
@@ -29484,7 +30499,9 @@
 					"page": 191
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "ooze",
 			"alignment": [
 				"C",
@@ -29620,7 +30637,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Spawn of Kyuss",
@@ -29632,7 +30650,9 @@
 					"page": 192
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -29722,7 +30742,8 @@
 				"path": "bestiary/spawn-of-kyuss.mp3"
 			},
 			"traitTags": [
-				"Regeneration"
+				"Regeneration",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -29743,7 +30764,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Spirit Troll",
@@ -29755,7 +30777,9 @@
 					"page": 244
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -29823,7 +30847,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The troll can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The troll can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -29887,7 +30911,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Spring Eladrin",
@@ -29899,7 +30924,9 @@
 					"page": 196
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -30038,6 +31065,9 @@
 				"S",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RNG",
@@ -30051,7 +31081,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Star Spawn Grue",
@@ -30063,7 +31094,9 @@
 					"page": 234
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -30134,7 +31167,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Star Spawn Hulk",
@@ -30146,7 +31180,9 @@
 					"page": 234
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -30259,7 +31295,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Star Spawn Larva Mage",
@@ -30271,7 +31308,9 @@
 					"page": 235
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -30441,6 +31480,9 @@
 				"N",
 				"O"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -30454,7 +31496,8 @@
 				"charmed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Star Spawn Mangler",
@@ -30466,7 +31509,9 @@
 					"page": 236
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -30577,7 +31622,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Star Spawn Seer",
@@ -30589,7 +31635,9 @@
 					"page": 236
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -30659,7 +31707,7 @@
 				{
 					"name": "Out-Of-Phase Movement",
 					"entries": [
-						"The seer can move through other creatures and objects as if they were difficult terrain, and its movement doesn't provoke {@action opportunity attack||opportunity attacks}.",
+						"The seer can move through other creatures and objects as if they were {@quickref difficult terrain||3}, and its movement doesn't provoke {@action opportunity attack||opportunity attacks}.",
 						"Each creature it moves through takes 5 ({@damage 1d10}) psychic damage; no creature can take this damage more than once per turn.",
 						"The seer takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
@@ -30732,7 +31780,8 @@
 				"incapacitated"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Steel Predator",
@@ -30744,7 +31793,9 @@
 					"page": 239
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -30878,7 +31929,8 @@
 				"path": "bestiary/steel-predator.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B",
@@ -30896,6 +31948,12 @@
 				"O",
 				"T"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -30904,7 +31962,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Stegosaurus",
@@ -30916,7 +31975,9 @@
 					"page": 140
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -30973,7 +32034,8 @@
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Stench Kow",
@@ -30985,7 +32047,9 @@
 					"page": 208
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -31070,7 +32134,9 @@
 					"page": 240
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -31154,7 +32220,8 @@
 				"path": "bestiary/stone-cursed.mp3"
 			},
 			"traitTags": [
-				"False Appearance"
+				"False Appearance",
+				"Unusual Nature"
 			],
 			"languageTags": [
 				"LF"
@@ -31170,7 +32237,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Stone Giant Dreamwalker",
@@ -31182,7 +32250,9 @@
 					"page": 150
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -31299,7 +32369,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Storm Giant Quintessent",
@@ -31311,7 +32382,9 @@
 					"page": 151
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -31468,7 +32541,8 @@
 				"RCH"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Summer Eladrin",
@@ -31480,7 +32554,9 @@
 					"page": 196
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -31617,7 +32693,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Swarm of Cranium Rats",
@@ -31629,7 +32706,9 @@
 					"page": 133
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "aberration",
 				"swarmSize": "T"
@@ -31759,7 +32838,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Swarm of Rot Grubs",
@@ -31771,7 +32851,9 @@
 					"page": 208
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -31855,7 +32937,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Swashbuckler",
@@ -31867,7 +32950,9 @@
 					"page": 217
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -31964,7 +33049,8 @@
 				"THW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sword Wraith Commander",
@@ -31976,7 +33062,9 @@
 					"page": 241
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -32094,7 +33182,8 @@
 				"path": "bestiary/sword-wraith-commander.mp3"
 			},
 			"traitTags": [
-				"Turn Resistance"
+				"Turn Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -32128,7 +33217,9 @@
 					"page": 241
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -32224,6 +33315,9 @@
 				"type": "internal",
 				"path": "bestiary/sword-wraith-warrior.mp3"
 			},
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -32240,7 +33334,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Tanarukk",
@@ -32252,7 +33347,9 @@
 					"page": 186
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -32378,7 +33475,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Thorny Vegepygmy",
@@ -32390,7 +33488,9 @@
 					"page": 197
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"N"
@@ -32479,7 +33579,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Titivilus",
@@ -32492,7 +33593,9 @@
 					"page": 179
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -32693,7 +33796,16 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -32708,7 +33820,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Tlincalli",
@@ -32720,7 +33833,9 @@
 					"page": 193
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -32818,7 +33933,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Tortle",
@@ -32830,7 +33946,9 @@
 					"page": 242
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -32890,7 +34008,7 @@
 				{
 					"name": "Light Crossbow",
 					"entries": [
-						"{@atk rw} {@hit 2} to hit, range 80/320ft., one target. {@h}4 ({@damage 1d8}) piercing damage."
+						"{@atk rw} {@hit 2} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d8}) piercing damage."
 					]
 				},
 				{
@@ -32925,7 +34043,8 @@
 				"THW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Tortle Druid",
@@ -32937,7 +34056,9 @@
 					"page": 242
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -33050,6 +34171,12 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"T"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -33069,7 +34196,9 @@
 					"page": 218
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -33116,7 +34245,6 @@
 					"headerEntries": [
 						"The transmuter casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell light}",
 						"{@spell message}",
@@ -33135,7 +34263,8 @@
 							"{@spell telekinesis}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"trait": [
@@ -33210,11 +34339,18 @@
 			"damageTags": [
 				"A"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"conditionInflictSpell": [
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Trapper",
@@ -33226,7 +34362,9 @@
 					"page": 194
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -33309,7 +34447,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ulitharid",
@@ -33321,7 +34460,9 @@
 					"page": 175
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -33378,7 +34519,6 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting (Psionics)",
-					"displayAs": "action",
 					"headerEntries": [
 						"The ulitharid casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 17}):"
 					],
@@ -33397,7 +34537,8 @@
 							"{@spell telekinesis}"
 						]
 					},
-					"ability": "int"
+					"ability": "int",
+					"displayAs": "action"
 				}
 			],
 			"trait": [
@@ -33465,6 +34606,9 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -33486,7 +34630,8 @@
 				"unconscious"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Vampiric Mist",
@@ -33498,7 +34643,9 @@
 					"page": 246
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -33624,7 +34771,8 @@
 				}
 			],
 			"traitTags": [
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -33633,8 +34781,12 @@
 				"N",
 				"R"
 			],
+			"miscTags": [
+				"HPR"
+			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Vargouille",
@@ -33646,7 +34798,9 @@
 					"page": 195
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fiend",
 			"alignment": [
 				"C",
@@ -33740,7 +34894,8 @@
 				"stunned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Vegepygmy",
@@ -33752,7 +34907,9 @@
 					"page": 196
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"N"
@@ -33862,7 +35019,9 @@
 					"page": 197
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"N"
@@ -33980,7 +35139,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Velociraptor",
@@ -33992,7 +35152,9 @@
 					"page": 140
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": {
 				"type": "beast",
 				"tags": [
@@ -34090,7 +35252,9 @@
 					"page": 245
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -34209,7 +35373,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "War Priest",
@@ -34221,7 +35386,9 @@
 					"page": 218
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -34271,7 +35438,6 @@
 					"headerEntries": [
 						"The war priest casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 15}):"
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell light}",
 						"{@spell spare the dying}",
@@ -34289,7 +35455,8 @@
 							"{@spell revivify}"
 						]
 					},
-					"ability": "wis"
+					"ability": "wis",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -34338,6 +35505,13 @@
 				"B",
 				"R"
 			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -34350,7 +35524,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Warlock of the Archfey",
@@ -34362,7 +35537,9 @@
 					"page": 219
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -34414,7 +35591,6 @@
 					"headerEntries": [
 						"The warlock casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 14}): "
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell dancing lights}",
 						"{@spell disguise self}",
@@ -34431,7 +35607,8 @@
 							"{@spell hold monster}"
 						]
 					},
-					"ability": "cha"
+					"ability": "cha",
+					"displayAs": "action"
 				}
 			],
 			"action": [
@@ -34484,6 +35661,9 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"CL"
 			],
@@ -34509,7 +35689,9 @@
 					"page": 219
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -34569,7 +35751,6 @@
 					"headerEntries": [
 						"The warlock casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 15}): "
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell alter self}",
 						"{@spell mage armor} (self only)",
@@ -34584,7 +35765,8 @@
 							"{@spell suggestion}"
 						]
 					},
-					"ability": "cha"
+					"ability": "cha",
+					"displayAs": "action"
 				}
 			],
 			"trait": [
@@ -34605,7 +35787,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage plus 14 ({@damage 4d6}) fire damage."
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage plus 14 ({@damage 4d6}) fire damage."
 					]
 				},
 				{
@@ -34649,6 +35831,11 @@
 				"F",
 				"N"
 			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"CL"
 			],
@@ -34669,7 +35856,9 @@
 					"page": 220
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -34721,7 +35910,6 @@
 					"headerEntries": [
 						"The warlock casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 15}): "
 					],
-					"displayAs": "action",
 					"will": [
 						"{@spell detect magic}",
 						"{@spell guidance}",
@@ -34738,7 +35926,8 @@
 							"{@spell true seeing}"
 						]
 					},
-					"ability": "cha"
+					"ability": "cha",
+					"displayAs": "action"
 				}
 			],
 			"trait": [
@@ -34811,7 +36000,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Warlord",
@@ -34823,7 +36013,9 @@
 					"page": 220
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid"
 			},
@@ -34947,7 +36139,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Wastrilith",
@@ -34959,7 +36152,9 @@
 					"page": 139
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -35078,7 +36273,7 @@
 				{
 					"name": "Undertow",
 					"entries": [
-						"If the wastrilith is underwater, it causes all water within 60 feet of it to be difficult terrain for other creatures until the start of its next turn."
+						"If the wastrilith is underwater, it causes all water within 60 feet of it to be {@quickref difficult terrain||3} for other creatures until the start of its next turn."
 					]
 				}
 			],
@@ -35120,7 +36315,8 @@
 				"poisoned"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Water Elemental Myrmidon",
@@ -35132,7 +36328,9 @@
 					"page": 203
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -35233,7 +36431,8 @@
 				"THW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "White Abishai",
@@ -35245,7 +36444,9 @@
 					"page": 163
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -35399,7 +36600,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Winter Eladrin",
@@ -35411,7 +36613,9 @@
 					"page": 197
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -35550,6 +36754,9 @@
 				"P",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RNG",
@@ -35562,7 +36769,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Wood Woad",
@@ -35574,7 +36782,9 @@
 					"page": 198
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"L",
@@ -35689,7 +36899,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Wretched Sorrowsworn",
@@ -35701,7 +36912,9 @@
 					"page": 233
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -35782,7 +36995,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Xvart",
@@ -35794,7 +37008,9 @@
 					"page": 200
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -35886,7 +37102,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Xvart Warlock of Raxivort",
@@ -35898,7 +37115,9 @@
 					"page": 200
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -36018,6 +37237,12 @@
 				"I",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -36037,7 +37262,9 @@
 					"page": 252
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -36210,7 +37437,14 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -36221,7 +37455,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yeenoghu",
@@ -36234,7 +37469,9 @@
 					"page": 155
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -36443,6 +37680,12 @@
 				"A",
 				"O"
 			],
+			"damageTagsLegendary": [
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -36460,7 +37703,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yeth Hound",
@@ -36472,7 +37716,9 @@
 					"page": 201
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -36589,7 +37835,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Young Kruthik",
@@ -36601,7 +37848,9 @@
 					"page": 211
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -36651,7 +37900,7 @@
 				{
 					"name": "Tunneler",
 					"entries": [
-						"The kruthik can burrow through solid rock at half its burrowing speed and leaves a 2V2-foot-diameter tunnel in its wake."
+						"The kruthik can burrow through solid rock at half its burrowing speed and leaves a 2½-foot-diameter tunnel in its wake."
 					]
 				}
 			],
@@ -36689,7 +37938,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yuan-ti Anathema",
@@ -36701,7 +37951,9 @@
 					"page": 202
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -36883,7 +38135,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yuan-ti Broodguard",
@@ -36895,7 +38148,9 @@
 					"page": 203
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -37008,7 +38263,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yuan-ti Mind Whisperer",
@@ -37020,7 +38276,9 @@
 					"page": 204
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -37196,7 +38454,8 @@
 				"incapacitated"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yuan-ti Nightmare Speaker",
@@ -37208,7 +38467,9 @@
 					"page": 205
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -37392,7 +38653,8 @@
 				"frightened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yuan-ti Pit Master",
@@ -37404,7 +38666,9 @@
 					"page": 206
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -37578,7 +38842,8 @@
 				"paralyzed"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Zaratan",
@@ -37590,7 +38855,9 @@
 					"page": 201
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -37702,7 +38969,7 @@
 				{
 					"name": "Earth-Shaking Movement",
 					"entries": [
-						"After moving at least 10 feet on the ground, the zaratan sends a shock wave through the ground in a 120-foot-radius circle centered on itself. That area becomes difficult terrain for 1 minute. Each creature on the ground that is concentrating must succeed on a {@dc 25} Constitution saving throw or the creature's concentration is broken. The shock wave deals 100 thunder damage to all structures in contact with the ground in the area. If a creature is near a structure that collapses, the creature might be buried; a creature within half the distance of the structure's height must make a {@dc 25} Dexterity saving throw. On a failed save, the creature takes 17 ({@damage 5d6}) bludgeoning damage, is knocked {@condition prone}, and is trapped in the rubble. A trapped creature is {@condition restrained}, requiring a successful {@dc 20} Strength ({@skill Athletics}) check as an action to escape. Another creature within 5 feet of the buried creature can use its action to clear rubble and grant advantage on the check. If three creatures use their actions in this way, the check is an automatic success. On a successful save, the creature takes half as much damage and doesn't fall {@condition prone} or become trapped."
+						"After moving at least 10 feet on the ground, the zaratan sends a shock wave through the ground in a 120-foot-radius circle centered on itself. That area becomes {@quickref difficult terrain||3} for 1 minute. Each creature on the ground that is concentrating must succeed on a {@dc 25} Constitution saving throw or the creature's concentration is broken. The shock wave deals 100 thunder damage to all structures in contact with the ground in the area. If a creature is near a structure that collapses, the creature might be buried; a creature within half the distance of the structure's height must make a {@dc 25} Dexterity saving throw. On a failed save, the creature takes 17 ({@damage 5d6}) bludgeoning damage, is knocked {@condition prone}, and is trapped in the rubble. A trapped creature is {@condition restrained}, requiring a successful {@dc 20} Strength ({@skill Athletics}) check as an action to escape. Another creature within 5 feet of the buried creature can use its action to clear rubble and grant advantage on the check. If three creatures use their actions in this way, the check is an automatic success. On a successful save, the creature takes half as much damage and doesn't fall {@condition prone} or become trapped."
 					]
 				}
 			],
@@ -37783,7 +39050,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Zariel",
@@ -37796,7 +39064,9 @@
 					"page": 180
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -37995,6 +39265,19 @@
 				"O",
 				"R"
 			],
+			"damageTagsLegendary": [
+				"F"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"N",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -38011,7 +39294,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Zuggtmoy",
@@ -38024,7 +39308,9 @@
 					"page": 157
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -38206,6 +39492,12 @@
 			"damageTags": [
 				"I"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -38218,7 +39510,8 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }

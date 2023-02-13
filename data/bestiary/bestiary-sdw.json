@@ -18,8 +18,14 @@
 			"name": "Expert",
 			"source": "SDW",
 			"level": 9,
-			"size": "M",
-			"type": "humanoid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "expert",
+				"sidekickHidden": true
+			},
 			"ac": [
 				{
 					"ac": 16,
@@ -119,7 +125,9 @@
 		{
 			"name": "Giant Shark Skeleton",
 			"source": "SDW",
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -189,6 +197,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -196,7 +205,9 @@
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "SDW",
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -439,6 +450,13 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"S",
+				"T"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"CS",
 				"I"
@@ -469,8 +487,17 @@
 			"name": "Spellcaster (Healer)",
 			"source": "SDW",
 			"level": 9,
-			"size": "M",
-			"type": "humanoid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"tags": [
+					"healer"
+				],
+				"sidekickHidden": true
+			},
 			"ac": [
 				{
 					"ac": 13,
@@ -581,6 +608,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -596,8 +626,17 @@
 			"name": "Spellcaster (Mage)",
 			"source": "SDW",
 			"level": 9,
-			"size": "M",
-			"type": "humanoid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"tags": [
+					"mage"
+				],
+				"sidekickHidden": true
+			},
 			"ac": [
 				{
 					"ac": 13,
@@ -708,6 +747,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"C",
+				"F"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -724,8 +767,14 @@
 			"name": "Warrior",
 			"source": "SDW",
 			"level": 9,
-			"size": "M",
-			"type": "humanoid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "warrior",
+				"sidekickHidden": true
+			},
 			"ac": [
 				{
 					"ac": 20,

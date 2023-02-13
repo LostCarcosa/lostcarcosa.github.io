@@ -1,15 +1,5 @@
 "use strict";
 
-if (typeof module !== "undefined") {
-	const cv = require("./converterutils.js");
-	Object.assign(global, cv);
-	const cvCreature = require("./converterutils-creature.js");
-	Object.assign(global, cvCreature);
-	global.PropOrder = require("./utils-proporder.js");
-	Object.assign(global, require("./converterutils-markdown.js"));
-	Object.assign(global, require("./converterutils-entries.js"));
-}
-
 class _ParseMeta {
 	constructor (
 		{
@@ -177,6 +167,14 @@ class CreatureParser extends BaseParser {
 
 			// name of monster
 			if (meta.ixToConvert === 0) {
+				// region
+				const mCr = /^(?<name>.*)\s+(?<cr>CR \d+(?:\/\d+)? .*$)/.exec(meta.curLine);
+				if (mCr) {
+					meta.curLine = mCr.groups.name;
+					meta.toConvert.splice(meta.ixToConvert + 1, 0, mCr.groups.cr);
+				}
+				// endregion
+
 				stats.name = this._getAsTitle("name", meta.curLine, options.titleCaseFields, options.isTitleCase);
 				// If the name is immediately repeated, skip it
 				if ((meta.toConvert[meta.ixToConvert + 1] || "").trim() === meta.curLine) meta.toConvert.splice(meta.ixToConvert + 1, 1);
@@ -204,6 +202,14 @@ class CreatureParser extends BaseParser {
 				meta.toConvert.splice(meta.ixToConvert, 1);
 				meta.ixToConvert--;
 
+				continue;
+			}
+
+			// homebrew resources: "souls"
+			if (this._RE_BREW_RESOURCE_SOULS.test(meta.curLine)) {
+				this._brew_setResourceSouls(stats, meta, options);
+				meta.toConvert.splice(meta.ixToConvert, 1);
+				meta.ixToConvert--;
 				continue;
 			}
 
@@ -1486,6 +1492,15 @@ class CreatureParser extends BaseParser {
 
 		if (stats.pbNote && !isNaN(stats.pbNote) && Parser.crToPb(stats.cr) === Number(stats.pbNote)) delete stats.pbNote;
 	}
+
+	// region SHARED HOMEBREW PARSING FUNCTIONS /////////////////////////////////////////////////////////////////////////
+	static _RE_BREW_RESOURCE_SOULS = /^Souls (?<value>\d+) \((?<formula>[^)]+)\)$/;
+
+	static _brew_setResourceSouls (stats, meta, options) {
+		const m = this._RE_BREW_RESOURCE_SOULS.exec(meta.curLine);
+		MiscUtil.set(stats, "resource", "Souls", {value: Number(m.groups.value), formula: m.groups.formula});
+	}
+	// endregion
 }
 CreatureParser.SKILL_SPACE_MAP = {
 	"sleightofhand": "sleight of hand",
@@ -1500,8 +1515,4 @@ CreatureParser._PROPS_ENTRIES = [
 	"mythic",
 ];
 
-if (typeof module !== "undefined") {
-	module.exports = {
-		CreatureParser,
-	};
-}
+globalThis.CreatureParser = CreatureParser;

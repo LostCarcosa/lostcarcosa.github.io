@@ -22,7 +22,9 @@
 			"name": "Abhorrent Overlord",
 			"source": "MOT",
 			"page": 219,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -125,7 +127,7 @@
 				{
 					"name": "Storm of Crows {@recharge}",
 					"entries": [
-						"The abhorrent overlord conjures a swarm of spectral crows and harpies in a 20-foot-radius sphere centered on a point the overlord can see within 120 feet of it. The sphere remains for 1 minute or until the overlord loses concentration (as if concentrating on a spell), and its area is lightly obscured and difficult terrain.",
+						"The abhorrent overlord conjures a swarm of spectral crows and harpies in a 20-foot-radius sphere centered on a point the overlord can see within 120 feet of it. The sphere remains for 1 minute or until the overlord loses concentration (as if concentrating on a spell), and its area is lightly obscured and {@quickref difficult terrain||3}.",
 						"Any creature that moves into the area for the first time on a turn or starts its turn there must make a {@dc 15} Constitution saving throw. A creature takes 16 ({@damage 3d10}) slashing damage plus 16 ({@damage 3d10}) psychic damage on a failed save, or half as much damage on a successful one."
 					]
 				}
@@ -167,7 +169,9 @@
 			"name": "Akroan Hoplite",
 			"source": "MOT",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -259,7 +263,9 @@
 			],
 			"source": "MOT",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -383,7 +389,9 @@
 			"name": "Anvilwrought Raptor",
 			"source": "MOT",
 			"page": 209,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -479,6 +487,7 @@
 					}
 				}
 			],
+			"familiar": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -505,7 +514,9 @@
 			"name": "Aphemia",
 			"source": "MOT",
 			"page": 226,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -637,7 +648,9 @@
 			"isNamedCreature": true,
 			"source": "MOT",
 			"page": 248,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -761,7 +774,7 @@
 				{
 					"name": "Web of Hair {@recharge 4}",
 					"entries": [
-						"Arasta unleashes her hair in the form of webbing that fills a 30-foot cube next to her. The web is difficult terrain, its area is lightly obscured, and it lasts for 1 minute. Any creature that moves into the web or that starts its turn there must make a {@dc 21} Dexterity saving throw. On a failed save, the creature is {@condition restrained} while in the web. A creature can use an action to make a {@dc 21} Strength check. On a success, it can free itself or a creature within 5 feet of it that is {@condition restrained} by the web. This webbing is immune to all damage except magical fire. A 5-foot cube of the web is destroyed if it takes at least 20 fire damage from a spell or other magical source on a single turn."
+						"Arasta unleashes her hair in the form of webbing that fills a 30-foot cube next to her. The web is {@quickref difficult terrain||3}, its area is lightly obscured, and it lasts for 1 minute. Any creature that moves into the web or that starts its turn there must make a {@dc 21} Dexterity saving throw. On a failed save, the creature is {@condition restrained} while in the web. A creature can use an action to make a {@dc 21} Strength check. On a success, it can free itself or a creature within 5 feet of it that is {@condition restrained} by the web. This webbing is immune to all damage except magical fire. A 5-foot cube of the web is destroyed if it takes at least 20 fire damage from a spell or other magical source on a single turn."
 					]
 				}
 			],
@@ -854,7 +867,9 @@
 			"name": "Archon of Falling Stars",
 			"source": "MOT",
 			"page": 212,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -939,7 +954,7 @@
 				{
 					"name": "Mount",
 					"entries": [
-						"If the archon isn't mounted, it can use a bonus action to magically teleport onto the creature serving as its mount, provided the archon and its mount are on the same plane of existence. When it teleports, the archon appears astride the mount, along with any equipment it is wearing or carrying. While mounted and not {@condition incapacitated}, the archon can't be surprised, and both it and its mount have advantage on Dexterity saving throws. If the archon is reduced to 0 hit points while riding its mount, the mount is reduced to 0 hit points as well."
+						"If the archon isn't mounted, it can use a bonus action to magically teleport onto the creature serving as its mount, provided the archon and its mount are on the same plane of existence. When it teleports, the archon appears astride the mount, along with any equipment it is wearing or carrying. While mounted and not {@condition incapacitated}, the archon can't be {@quickref Surprise|PHB|3|0|surprised}, and both it and its mount have advantage on Dexterity saving throws. If the archon is reduced to 0 hit points while riding its mount, the mount is reduced to 0 hit points as well."
 					]
 				},
 				{
@@ -999,6 +1014,10 @@
 				"P",
 				"R"
 			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -1020,7 +1039,9 @@
 			"name": "Ashen Rider",
 			"source": "MOT",
 			"page": 213,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -1104,7 +1125,7 @@
 					"name": "Mount",
 					"entries": [
 						"If the ashen rider isn't mounted, it can use a bonus action to magically teleport onto the creature serving as its mount, provided the ashen rider and its mount are on the same plane of existence. When it teleports, the ashen rider appears astride the mount along with any equipment it is wearing or carrying.",
-						"While mounted and not {@condition incapacitated}, the ashen rider can't be surprised, and both it and its mount have advantage on Dexterity saving throws. If the ashen rider is reduced to 0 hit points while riding its mount, the mount is reduced to 0 hit points as well."
+						"While mounted and not {@condition incapacitated}, the ashen rider can't be {@quickref Surprise|PHB|3|0|surprised}, and both it and its mount have advantage on Dexterity saving throws. If the ashen rider is reduced to 0 hit points while riding its mount, the mount is reduced to 0 hit points as well."
 					]
 				}
 			],
@@ -1162,10 +1183,14 @@
 				"R",
 				"S"
 			],
+			"damageTagsSpell": [
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -1184,7 +1209,9 @@
 			"name": "Blood-Toll Harpy",
 			"source": "MOT",
 			"page": 227,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -1270,7 +1297,9 @@
 			"name": "Broken King Antigonos",
 			"source": "MOT",
 			"page": 189,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -1376,13 +1405,16 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Bronze Sable",
 			"source": "MOT",
 			"page": 210,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1492,7 +1524,9 @@
 			"name": "Burnished Hart",
 			"source": "MOT",
 			"page": 211,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1607,7 +1641,9 @@
 			"name": "Colossus of Akros",
 			"source": "MOT",
 			"page": 218,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1768,7 +1804,9 @@
 			"name": "Doomwake Giant",
 			"source": "MOT",
 			"page": 224,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -1885,7 +1923,9 @@
 			"name": "Eater of Hope",
 			"source": "MOT",
 			"page": 220,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -2007,7 +2047,9 @@
 			"name": "Fleecemane Lion",
 			"source": "MOT",
 			"page": 223,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -2130,7 +2172,9 @@
 			"name": "Flitterstep Eidolon",
 			"source": "MOT",
 			"page": 222,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -2201,7 +2245,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The eidolon can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The eidolon can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -2256,7 +2300,9 @@
 			"name": "Ghostblade Eidolon",
 			"source": "MOT",
 			"page": 222,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -2322,7 +2368,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The eidolon can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The eidolon can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -2371,7 +2417,9 @@
 			"name": "Gold-Forged Sentinel",
 			"source": "MOT",
 			"page": 211,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -2486,7 +2534,9 @@
 			"name": "Hippocamp",
 			"source": "MOT",
 			"page": 227,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -2574,7 +2624,9 @@
 			"name": "Hundred-Handed One",
 			"source": "MOT",
 			"page": 225,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -2630,7 +2682,7 @@
 				{
 					"name": "Vigilant",
 					"entries": [
-						"The giant can't be surprised."
+						"The giant can't be {@quickref Surprise|PHB|3|0|surprised}."
 					]
 				}
 			],
@@ -2692,7 +2744,9 @@
 			"isNamedCreature": true,
 			"source": "MOT",
 			"page": 252,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -2772,7 +2826,7 @@
 				{
 					"name": "Petrifying Gaze",
 					"entries": [
-						"When a creature that can see Hythonia's eyes starts its turn within 30 feet of her, Hythonia can force it to make a {@dc 18} Constitution saving throw if she isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, on a failed save the creature begins to turn to stone and is {@condition restrained}. The {@condition restrained} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the {@spell greater restoration} spell or other magic. Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see Hythonia until the start of its next turn, when it can avert its eyes again. If the creature looks at Hythonia in the meantime, it must immediately make the save. If Hythonia sees herself reflected on a polished surface within 30 feet of her and in an area of bright light, she is affected by her own gaze."
+						"When a creature that can see Hythonia's eyes starts its turn within 30 feet of her, Hythonia can force it to make a {@dc 18} Constitution saving throw if she isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, on a failed save the creature begins to turn to stone and is {@condition restrained}. The {@condition restrained} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the {@spell greater restoration} spell or other magic. Unless {@quickref Surprise|PHB|3|0|surprised}, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see Hythonia until the start of its next turn, when it can avert its eyes again. If the creature looks at Hythonia in the meantime, it must immediately make the save. If Hythonia sees herself reflected on a polished surface within 30 feet of her and in an area of bright light, she is affected by her own gaze."
 					]
 				},
 				{
@@ -2824,7 +2878,7 @@
 				{
 					"name": "Petrified Earth (Costs 2 Actions)",
 					"entries": [
-						"Hythonia causes stone spikes to erupt from the ground in a 30-foot radius centered on her. The area becomes difficult terrain until the start of her next turn. Any creature, other than Hythonia, takes 9 ({@damage 2d8}) piercing damage for every 5 feet it moves on those spikes."
+						"Hythonia causes stone spikes to erupt from the ground in a 30-foot radius centered on her. The area becomes {@quickref difficult terrain||3} until the start of her next turn. Any creature, other than Hythonia, takes 9 ({@damage 2d8}) piercing damage for every 5 feet it moves on those spikes."
 					]
 				}
 			],
@@ -2867,6 +2921,15 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -2891,7 +2954,9 @@
 			"name": "Ironscale Hydra",
 			"source": "MOT",
 			"page": 231,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -3003,7 +3068,9 @@
 			],
 			"source": "MOT",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -3111,6 +3178,9 @@
 			"damageTags": [
 				"N"
 			],
+			"damageTagsSpell": [
+				"N"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3122,7 +3192,9 @@
 			"name": "Leonin Iconoclast",
 			"source": "MOT",
 			"page": 232,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3299,7 +3371,9 @@
 			"name": "Meletian Hoplite",
 			"source": "MOT",
 			"page": 229,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -3411,6 +3485,10 @@
 				"C",
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"S"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -3442,7 +3520,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -3560,6 +3640,9 @@
 			"damageTags": [
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3578,7 +3661,9 @@
 			"name": "Nightmare Shepherd",
 			"source": "MOT",
 			"page": 221,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -3730,7 +3815,9 @@
 			"name": "Nyx-Fleece Ram",
 			"source": "MOT",
 			"page": 233,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -3808,7 +3895,9 @@
 			"name": "Oracle",
 			"source": "MOT",
 			"page": 238,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -3906,6 +3995,9 @@
 			"damageTags": [
 				"O"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3923,7 +4015,9 @@
 			],
 			"source": "MOT",
 			"page": 237,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -4046,6 +4140,9 @@
 			"damageTags": [
 				"F"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -4060,7 +4157,9 @@
 			"name": "Phylaskia",
 			"source": "MOT",
 			"page": 239,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -4131,7 +4230,7 @@
 				{
 					"name": "Vigilant",
 					"entries": [
-						"The phylaskia can't be surprised."
+						"The phylaskia can't be {@quickref Surprise|PHB|3|0|surprised}."
 					]
 				}
 			],
@@ -4184,7 +4283,9 @@
 			"isNamedCreature": true,
 			"source": "MOT",
 			"page": 231,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -4339,7 +4440,9 @@
 			"name": "Returned Drifter",
 			"source": "MOT",
 			"page": 240,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -4431,7 +4534,9 @@
 			"name": "Returned Kakomantis",
 			"source": "MOT",
 			"page": 240,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -4532,7 +4637,9 @@
 			"name": "Returned Palamnite",
 			"source": "MOT",
 			"page": 241,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -4635,7 +4742,9 @@
 			"name": "Returned Sentry",
 			"source": "MOT",
 			"page": 241,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -4736,7 +4845,9 @@
 			"name": "Satyr Reveler",
 			"source": "MOT",
 			"page": 242,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -4839,7 +4950,9 @@
 			"name": "Satyr Thornbearer",
 			"source": "MOT",
 			"page": 243,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -4945,7 +5058,9 @@
 			"name": "Setessan Hoplite",
 			"source": "MOT",
 			"page": 229,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -5040,7 +5155,9 @@
 			"name": "Theran Chimera",
 			"source": "MOT",
 			"page": 216,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -5152,7 +5269,9 @@
 			"name": "Triton Master of Waves",
 			"source": "MOT",
 			"page": 245,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5287,6 +5406,10 @@
 			"damageTags": [
 				"C"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -5298,7 +5421,9 @@
 			"name": "Triton Shorestalker",
 			"source": "MOT",
 			"page": 244,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5425,7 +5550,9 @@
 			"isNamedCreature": true,
 			"source": "MOT",
 			"page": 254,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -5637,7 +5764,9 @@
 			"name": "Two-Headed Cerberus",
 			"source": "MOT",
 			"page": 215,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -5690,7 +5819,7 @@
 				{
 					"name": "Multiheaded",
 					"entries": [
-						"The cerberus can't be surprised, and it has advantage on saving throws against being knocked {@condition unconscious}."
+						"The cerberus can't be {@quickref Surprise|PHB|3|0|surprised}, and it has advantage on saving throws against being knocked {@condition unconscious}."
 					]
 				},
 				{
@@ -5750,7 +5879,9 @@
 			"name": "Typhon",
 			"source": "MOT",
 			"page": 246,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -5866,7 +5997,9 @@
 			"name": "Underworld Cerberus",
 			"source": "MOT",
 			"page": 215,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -5928,7 +6061,7 @@
 				{
 					"name": "Multiheaded",
 					"entries": [
-						"The cerberus can't be surprised, and it has advantage on saving throws against being knocked {@condition unconscious}."
+						"The cerberus can't be {@quickref Surprise|PHB|3|0|surprised}, and it has advantage on saving throws against being knocked {@condition unconscious}."
 					]
 				},
 				{
@@ -5992,7 +6125,9 @@
 			"name": "Winged Bull",
 			"source": "MOT",
 			"page": 214,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"U"
@@ -6055,7 +6190,9 @@
 			"name": "Winged Lion",
 			"source": "MOT",
 			"page": 214,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"U"
@@ -6128,7 +6265,9 @@
 			"name": "Woe Strider",
 			"source": "MOT",
 			"page": 247,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",

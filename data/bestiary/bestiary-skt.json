@@ -19,7 +19,9 @@
 			"name": "Aarakocra Simulacrum",
 			"source": "SKT",
 			"page": 188,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -140,11 +142,16 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 247,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
-					"shield dwarf"
+					{
+						"tag": "dwarf",
+						"prefix": "Shield"
+					}
 				]
 			},
 			"alignment": [
@@ -327,7 +334,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -439,7 +448,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 140,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -665,8 +676,12 @@
 					"displayAs": "action"
 				}
 			],
+			"damageTagsLegendary": [],
+			"damageTagsSpell": [
+				"N"
+			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"hasToken": true
 		},
@@ -827,6 +842,11 @@
 				"DU",
 				"GI"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD",
 				"I"
@@ -838,7 +858,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 192,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"N",
@@ -994,8 +1016,15 @@
 				"B",
 				"P"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"L",
+				"O"
+			],
 			"spellcastingTags": [
-				"I"
+				"I",
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -1024,7 +1053,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1142,6 +1173,7 @@
 				"name": "Adult White Dragon",
 				"source": "MM"
 			},
+			"damageTagsLegendary": [],
 			"hasToken": true
 		},
 		{
@@ -1149,7 +1181,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 253,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1256,7 +1290,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 253,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1389,6 +1425,9 @@
 				"D",
 				"T"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -1450,7 +1489,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 184,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -1570,7 +1611,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 248,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1697,7 +1740,9 @@
 					]
 				}
 			},
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"alignment": [
 				"N",
 				"G"
@@ -1784,6 +1829,10 @@
 				"G",
 				"X"
 			],
+			"damageTagsSpell": [
+				"O",
+				"R"
+			],
 			"hasToken": true
 		},
 		{
@@ -1830,6 +1879,7 @@
 					}
 				}
 			},
+			"damageTagsLegendary": [],
 			"hasToken": true
 		},
 		{
@@ -1837,13 +1887,15 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 255,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
 					{
 						"tag": "dwarf",
-						"prefix": "shield"
+						"prefix": "Shield"
 					}
 				]
 			},
@@ -2017,7 +2069,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 120,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -2141,7 +2195,9 @@
 				"name": "Stone Golem",
 				"source": "MM"
 			},
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"hp": {
 				"average": 195,
 				"formula": "17d12 + 85"
@@ -2152,7 +2208,9 @@
 			"name": "Hulking Crab",
 			"source": "SKT",
 			"page": 240,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2414,6 +2472,7 @@
 				"name": "Adult White Dragon",
 				"source": "MM"
 			},
+			"damageTagsLegendary": [],
 			"hasToken": true
 		},
 		{
@@ -2422,7 +2481,9 @@
 			"isNamedCreature": true,
 			"source": "SKT",
 			"page": 241,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -2601,8 +2662,16 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"B",
+				"L"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C"
+			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -2619,14 +2688,17 @@
 				"restrained"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Jarl Storvald",
 			"isNpc": true,
 			"source": "SKT",
 			"page": 165,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"N",
@@ -2730,7 +2802,7 @@
 				"S"
 			],
 			"spellcastingTags": [
-				"CR"
+				"O"
 			],
 			"miscTags": [
 				"MW",
@@ -2912,14 +2984,17 @@
 				"C",
 				"E"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "King Hekaton",
 			"isNpc": true,
 			"source": "SKT",
 			"page": 222,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -3061,7 +3136,8 @@
 				"deafened"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Klauth",
@@ -3069,7 +3145,9 @@
 			"isNamedCreature": true,
 			"source": "SKT",
 			"page": 95,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -3262,8 +3340,20 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"F"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O"
+			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -3357,7 +3447,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 250,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -3451,7 +3543,9 @@
 			"isNamedCreature": true,
 			"source": "SKT",
 			"page": 241,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -3604,8 +3698,11 @@
 				"B",
 				"F"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -3620,7 +3717,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 248,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3718,7 +3817,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 251,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3918,7 +4019,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 254,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4011,7 +4114,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 252,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4107,8 +4212,12 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
-				"CW"
+				"O"
 			],
 			"miscTags": [
 				"MW"
@@ -4180,6 +4289,9 @@
 				"B",
 				"L",
 				"S"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"hasToken": true
 		},
@@ -4289,11 +4401,16 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 252,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
-					"strongheart halfling"
+					{
+						"tag": "halfling",
+						"prefix": "Strongheart"
+					}
 				]
 			},
 			"alignment": [
@@ -4446,6 +4563,9 @@
 				"L",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true
 		},
 		{
@@ -4498,7 +4618,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 255,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4601,8 +4723,13 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
-				"CS"
+				"O"
 			],
 			"miscTags": [
 				"MW"
@@ -4736,13 +4863,74 @@
 				"DR",
 				"E"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Princess Serissa",
+			"isNpc": true,
+			"source": "SKT",
+			"page": 209,
+			"_copy": {
+				"name": "Storm Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the giant",
+						"with": "Serissa",
+						"flags": "i"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Serissa makes two maul attacks."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 14} to hit, reach 10 ft., one target. {@h}30 ({@damage 6d6 + 9}) bludgeoning damage."
+								]
+							}
+						}
+					]
+				}
+			},
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 200,
+				"formula": "20d12 + 100"
+			},
+			"damageTags": [
+				"B",
+				"L"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Purple Wormling",
 			"source": "SKT",
 			"page": 242,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -4909,63 +5097,6 @@
 			"hasToken": true
 		},
 		{
-			"name": "Serissa",
-			"isNpc": true,
-			"source": "SKT",
-			"page": 209,
-			"_copy": {
-				"name": "Storm Giant",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the giant",
-						"with": "Serissa",
-						"flags": "i"
-					},
-					"action": [
-						{
-							"mode": "replaceArr",
-							"replace": "Multiattack",
-							"items": {
-								"name": "Multiattack",
-								"entries": [
-									"Serissa makes two maul attacks."
-								]
-							}
-						},
-						{
-							"mode": "replaceArr",
-							"replace": "Greatsword",
-							"items": {
-								"name": "Maul",
-								"entries": [
-									"{@atk mw} {@hit 14} to hit, reach 10 ft., one target. {@h}30 ({@damage 6d6 + 9}) bludgeoning damage."
-								]
-							}
-						}
-					]
-				}
-			},
-			"ac": [
-				{
-					"ac": 14,
-					"from": [
-						"{@item hide armor|phb}"
-					]
-				}
-			],
-			"hp": {
-				"average": 200,
-				"formula": "20d12 + 100"
-			},
-			"damageTags": [
-				"B",
-				"L"
-			],
-			"hasToken": true
-		},
-		{
 			"name": "Shaldoor",
 			"isNpc": true,
 			"source": "SKT",
@@ -5029,6 +5160,9 @@
 				"L",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true
 		},
 		{
@@ -5036,7 +5170,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 250,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5220,7 +5356,9 @@
 					}
 				}
 			},
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"hp": {
 				"average": 3,
 				"formula": "1d6"
@@ -5318,7 +5456,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5415,7 +5555,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 247,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5518,7 +5660,9 @@
 			"isNamedCreature": true,
 			"source": "SKT",
 			"page": 224,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -5638,7 +5782,7 @@
 				{
 					"name": "Freedom of Movement",
 					"entries": [
-						"Slarkrethel ignores difficult terrain, and magical effects can't reduce its speed or cause it to be {@condition restrained}. It can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
+						"Slarkrethel ignores {@quickref difficult terrain||3}, and magical effects can't reduce its speed or cause it to be {@condition restrained}. It can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
 					]
 				},
 				{
@@ -5732,6 +5876,18 @@
 				"L",
 				"P"
 			],
+			"damageTagsLegendary": [
+				"L"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"L",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -5771,7 +5927,9 @@
 					}
 				}
 			},
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"hp": {
 				"average": 195,
 				"formula": "17d12 + 85"
@@ -5874,7 +6032,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 153,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"N",
@@ -6003,6 +6163,12 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"spellcastingTags": [
+				"I"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -6021,7 +6187,9 @@
 		},
 		{
 			"name": "The Weevil",
+			"shortName": true,
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "SKT",
 			"page": 114,
 			"_copy": {
@@ -6034,7 +6202,7 @@
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
-						"replace": "dwarf",
+						"replace": "captain",
 						"with": "Weevil"
 					},
 					"action": [
@@ -6116,7 +6284,9 @@
 			"name": "Thunderbeast Skeleton",
 			"source": "SKT",
 			"page": 99,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -6196,7 +6366,9 @@
 					"source": "IMR"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"A"
@@ -6364,7 +6536,7 @@
 				}
 			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"hasToken": true
 		},
@@ -6373,7 +6545,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 254,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6540,7 +6714,9 @@
 			"name": "Uthgardt Shaman",
 			"source": "SKT",
 			"page": 243,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6630,8 +6806,13 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"N",
+				"P",
+				"R"
+			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"miscTags": [
 				"MW",
@@ -6895,6 +7076,9 @@
 				"L",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true
 		},
 		{
@@ -7014,7 +7198,9 @@
 			"name": "Yakfolk Priest",
 			"source": "SKT",
 			"page": 245,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -7141,6 +7327,11 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -7162,7 +7353,9 @@
 			"name": "Yakfolk Warrior",
 			"source": "SKT",
 			"page": 244,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -7288,7 +7481,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 180,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -7358,7 +7553,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 33,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"N",
@@ -7509,9 +7706,14 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"C",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
-				"CW",
-				"I"
+				"I",
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -7536,7 +7738,9 @@
 			"isNpc": true,
 			"source": "SKT",
 			"page": 251,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [

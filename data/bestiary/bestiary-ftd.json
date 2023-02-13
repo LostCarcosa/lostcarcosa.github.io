@@ -7,7 +7,9 @@
 			],
 			"source": "FTD",
 			"page": 161,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -200,13 +202,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -251,7 +246,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -285,6 +280,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -310,7 +308,9 @@
 			],
 			"source": "FTD",
 			"page": 171,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -493,13 +493,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -544,7 +537,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -584,6 +577,9 @@
 				"R",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"R"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -605,7 +601,9 @@
 			"name": "Adult Deep Dragon",
 			"source": "FTD",
 			"page": 174,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N",
@@ -815,7 +813,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -858,6 +856,9 @@
 				"S",
 				"Y"
 			],
+			"damageTagsLegendary": [
+				"I"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -882,7 +883,9 @@
 			],
 			"source": "FTD",
 			"page": 196,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -1077,13 +1080,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -1128,7 +1124,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -1169,6 +1165,9 @@
 				"S",
 				"Y"
 			],
+			"damageTagsLegendary": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -1188,7 +1187,9 @@
 			"name": "Adult Moonstone Dragon",
 			"source": "FTD",
 			"page": 212,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -1367,13 +1368,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -1409,7 +1403,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -1444,6 +1438,9 @@
 				"R",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -1471,7 +1468,9 @@
 			],
 			"source": "FTD",
 			"page": 215,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -1666,13 +1665,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -1717,7 +1709,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -1759,6 +1751,13 @@
 				"S",
 				"T"
 			],
+			"damageTagsLegendary": [
+				"T"
+			],
+			"damageTagsSpell": [
+				"B",
+				"Y"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -1790,7 +1789,9 @@
 			],
 			"source": "FTD",
 			"page": 221,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -1979,13 +1980,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -2030,7 +2024,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2064,6 +2058,12 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"B"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -2083,7 +2083,9 @@
 			],
 			"source": "FTD",
 			"page": 162,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -2214,13 +2216,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -2265,7 +2260,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2312,7 +2307,9 @@
 			],
 			"source": "FTD",
 			"page": 201,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -2510,13 +2507,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -2561,7 +2551,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -2580,7 +2570,8 @@
 			],
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -2613,6 +2604,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -2622,7 +2614,9 @@
 			],
 			"source": "FTD",
 			"page": 160,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -2818,13 +2812,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -2869,7 +2856,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2903,6 +2890,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -2928,7 +2918,9 @@
 			],
 			"source": "FTD",
 			"page": 170,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -3112,13 +3104,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -3163,7 +3148,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -3203,6 +3188,9 @@
 				"R",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"R"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -3225,7 +3213,9 @@
 			"name": "Ancient Deep Dragon",
 			"source": "FTD",
 			"page": 173,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N",
@@ -3435,7 +3425,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -3478,6 +3468,9 @@
 				"S",
 				"Y"
 			],
+			"damageTagsLegendary": [
+				"I"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -3499,7 +3492,9 @@
 			"name": "Ancient Dragon Turtle",
 			"source": "FTD",
 			"page": 191,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -3718,7 +3713,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -3731,7 +3726,8 @@
 			"dragonAge": "ancient",
 			"traitTags": [
 				"Amphibious",
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -3750,6 +3746,9 @@
 				"L",
 				"P",
 				"S"
+			],
+			"damageTagsLegendary": [
+				"F"
 			],
 			"miscTags": [
 				"AOE",
@@ -3773,7 +3772,9 @@
 			],
 			"source": "FTD",
 			"page": 195,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -3969,13 +3970,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -4020,7 +4014,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -4061,6 +4055,12 @@
 				"S",
 				"Y"
 			],
+			"damageTagsLegendary": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -4082,7 +4082,9 @@
 			"name": "Ancient Moonstone Dragon",
 			"source": "FTD",
 			"page": 211,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -4258,13 +4260,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -4300,7 +4295,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -4331,6 +4326,9 @@
 				"R",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -4358,7 +4356,9 @@
 			],
 			"source": "FTD",
 			"page": 214,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -4554,13 +4554,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -4605,7 +4598,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -4647,6 +4640,13 @@
 				"S",
 				"T"
 			],
+			"damageTagsLegendary": [
+				"T"
+			],
+			"damageTagsSpell": [
+				"B",
+				"Y"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -4675,7 +4675,9 @@
 			"name": "Ancient Sea Serpent",
 			"source": "FTD",
 			"page": 219,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -4724,6 +4726,12 @@
 			],
 			"cr": "14",
 			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The sea serpent can breathe air and water."
+					]
+				},
 				{
 					"name": "Legendary Resistance (2/Day)",
 					"entries": [
@@ -4785,6 +4793,7 @@
 			],
 			"dragonAge": "ancient",
 			"traitTags": [
+				"Amphibious",
 				"Legendary Resistances",
 				"Siege Monster"
 			],
@@ -4825,7 +4834,9 @@
 			],
 			"source": "FTD",
 			"page": 220,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -5015,13 +5026,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -5066,7 +5070,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -5100,6 +5104,12 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"B"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -5116,7 +5126,9 @@
 			"name": "Animated Breath",
 			"source": "FTD",
 			"page": 163,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -5248,7 +5260,9 @@
 			"name": "Aspect of Bahamut",
 			"source": "FTD",
 			"page": 165,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -5473,7 +5487,9 @@
 			"name": "Aspect of Tiamat",
 			"source": "FTD",
 			"page": 166,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -5672,7 +5688,9 @@
 			],
 			"source": "FTD",
 			"page": 168,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -5891,7 +5909,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -5911,7 +5929,8 @@
 			"dragonCastingColor": "black",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -5941,6 +5960,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -5950,7 +5970,9 @@
 			],
 			"source": "FTD",
 			"page": 168,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -6169,7 +6191,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -6189,7 +6211,8 @@
 			"dragonCastingColor": "blue",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -6229,7 +6252,9 @@
 			],
 			"source": "FTD",
 			"page": 208,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -6478,7 +6503,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -6498,7 +6523,8 @@
 			"dragonCastingColor": "brass",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -6532,6 +6558,7 @@
 				"restrained",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6541,7 +6568,9 @@
 			],
 			"source": "FTD",
 			"page": 208,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -6790,7 +6819,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -6810,7 +6839,8 @@
 			"dragonCastingColor": "bronze",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -6844,6 +6874,7 @@
 				"restrained",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6853,7 +6884,9 @@
 			],
 			"source": "FTD",
 			"page": 208,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -7102,7 +7135,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -7122,7 +7155,8 @@
 			"dragonCastingColor": "copper",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -7156,6 +7190,7 @@
 				"restrained",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -7165,7 +7200,9 @@
 			],
 			"source": "FTD",
 			"page": 172,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -7278,13 +7315,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -7329,7 +7359,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -7381,7 +7411,9 @@
 			],
 			"source": "FTD",
 			"page": 201,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -7579,13 +7611,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -7630,7 +7655,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -7649,7 +7674,8 @@
 			],
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -7682,13 +7708,16 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Deep Dragon Wyrmling",
 			"source": "FTD",
 			"page": 175,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N",
@@ -7837,7 +7866,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -7854,7 +7883,6 @@
 					]
 				}
 			],
-			"dragonCastingColor": "deep",
 			"dragonAge": "wyrmling",
 			"senseTags": [
 				"B",
@@ -7885,7 +7913,9 @@
 			"name": "Dracohydra",
 			"source": "FTD",
 			"page": 176,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -7992,7 +8022,9 @@
 			"name": "Draconian Dreadnought",
 			"source": "FTD",
 			"page": 177,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"A"
@@ -8101,7 +8133,9 @@
 			"name": "Draconian Foot Soldier",
 			"source": "FTD",
 			"page": 178,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"A"
@@ -8196,7 +8230,9 @@
 			"name": "Draconian Infiltrator",
 			"source": "FTD",
 			"page": 178,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"A"
@@ -8309,7 +8345,9 @@
 			"name": "Draconian Mage",
 			"source": "FTD",
 			"page": 179,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"A"
@@ -8418,6 +8456,9 @@
 				"O",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -8435,7 +8476,9 @@
 			"name": "Draconian Mastermind",
 			"source": "FTD",
 			"page": 180,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"A"
@@ -8564,6 +8607,12 @@
 				"O",
 				"S"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -8583,7 +8632,9 @@
 			"name": "Draconic Shard",
 			"source": "FTD",
 			"page": 181,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"N"
@@ -8692,7 +8743,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The shard can move through creatures and objects as if they were difficult terrain. If it ends its turn inside an object, it takes 5 ({@damage 1d10}) force damage."
+						"The shard can move through creatures and objects as if they were {@quickref difficult terrain||3}. If it ends its turn inside an object, it takes 5 ({@damage 1d10}) force damage."
 					]
 				},
 				{
@@ -8767,7 +8818,8 @@
 			"traitTags": [
 				"Incorporeal Movement",
 				"Legendary Resistances",
-				"Rejuvenation"
+				"Rejuvenation",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B",
@@ -8809,7 +8861,10 @@
 			"source": "FTD",
 			"page": 21,
 			"summonedBySpell": "Summon Draconic Spirit|FTD",
-			"size": "L",
+			"summonedBySpellLevel": 5,
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				{
@@ -8929,7 +8984,9 @@
 			"name": "Dragon Blessed",
 			"source": "FTD",
 			"page": 188,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -9028,6 +9085,13 @@
 				"B",
 				"R"
 			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -9039,7 +9103,9 @@
 			"name": "Dragon Chosen",
 			"source": "FTD",
 			"page": 189,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -9135,7 +9201,9 @@
 			"name": "Dragon Speaker",
 			"source": "FTD",
 			"page": 189,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -9240,6 +9308,9 @@
 			"damageTags": [
 				"T"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"conditionInflictSpell": [
 				"charmed",
 				"prone"
@@ -9252,7 +9323,9 @@
 			"name": "Dragon Turtle Wyrmling",
 			"source": "FTD",
 			"page": 192,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -9384,7 +9457,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -9423,7 +9496,9 @@
 			"name": "Dragonblood Ooze",
 			"source": "FTD",
 			"page": 182,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "ooze",
 			"alignment": [
 				"U"
@@ -9547,7 +9622,9 @@
 			"name": "Dragonbone Golem",
 			"source": "FTD",
 			"page": 183,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -9639,7 +9716,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -9673,7 +9751,9 @@
 			"name": "Dragonborn of Bahamut",
 			"source": "FTD",
 			"page": 184,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"L",
@@ -9787,7 +9867,9 @@
 			"name": "Dragonborn of Sardior",
 			"source": "FTD",
 			"page": 185,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"N"
@@ -9909,6 +9991,10 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"B",
+				"O"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -9930,7 +10016,9 @@
 			"name": "Dragonborn of Tiamat",
 			"source": "FTD",
 			"page": 185,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"C",
@@ -10036,7 +10124,9 @@
 			"name": "Dragonflesh Abomination",
 			"source": "FTD",
 			"page": 187,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -10160,7 +10250,9 @@
 			"name": "Dragonflesh Grafter",
 			"source": "FTD",
 			"page": 186,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -10250,7 +10342,9 @@
 			"name": "Dragonnel",
 			"source": "FTD",
 			"page": 190,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -10341,7 +10435,9 @@
 			"name": "Drake Companion",
 			"source": "FTD",
 			"page": 15,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "dragon",
 			"ac": [
 				{
@@ -10416,7 +10512,9 @@
 			"name": "Egg Hunter Adult",
 			"source": "FTD",
 			"page": 193,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -10531,7 +10629,9 @@
 			"name": "Egg Hunter Hatchling",
 			"source": "FTD",
 			"page": 193,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -10628,7 +10728,9 @@
 			"name": "Elder Brain Dragon",
 			"source": "FTD",
 			"page": 194,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -10759,7 +10861,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Siege Monster"
+				"Siege Monster",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -10798,7 +10901,9 @@
 			],
 			"source": "FTD",
 			"page": 197,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -10919,13 +11024,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -10970,7 +11068,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -11022,7 +11120,9 @@
 			],
 			"source": "FTD",
 			"page": 201,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -11220,13 +11320,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -11271,7 +11364,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -11290,7 +11383,8 @@
 			],
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -11323,13 +11417,16 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Eyedrake",
 			"source": "FTD",
 			"page": 199,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -11458,6 +11555,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"SD"
 			],
@@ -11493,7 +11593,9 @@
 			"name": "Gem Stalker",
 			"source": "FTD",
 			"page": 202,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -11615,7 +11717,8 @@
 				}
 			],
 			"traitTags": [
-				"Spider Climb"
+				"Spider Climb",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -11647,7 +11750,9 @@
 			"name": "Ghost Dragon",
 			"source": "FTD",
 			"page": 203,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -11719,7 +11824,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The ghost dragon can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The ghost dragon can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -11765,7 +11870,8 @@
 			],
 			"traitTags": [
 				"Incorporeal Movement",
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B",
@@ -11802,7 +11908,9 @@
 			"name": "Giant Canary",
 			"source": "FTD",
 			"page": 23,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -11849,7 +11957,9 @@
 			],
 			"source": "FTD",
 			"page": 208,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -12106,7 +12216,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -12126,7 +12236,8 @@
 			"dragonCastingColor": "gold",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -12160,6 +12271,7 @@
 				"restrained",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -12169,7 +12281,9 @@
 			],
 			"source": "FTD",
 			"page": 168,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -12388,7 +12502,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -12408,7 +12522,8 @@
 			"dragonCastingColor": "green",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -12438,13 +12553,16 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Hoard Mimic",
 			"source": "FTD",
 			"page": 204,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -12569,7 +12687,9 @@
 			"name": "Hoard Scarab",
 			"source": "FTD",
 			"page": 205,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -12649,7 +12769,9 @@
 			"name": "Hollow Dragon",
 			"source": "FTD",
 			"page": 206,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -12815,7 +12937,9 @@
 			"name": "Liondrake",
 			"source": "FTD",
 			"page": 207,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -12909,7 +13033,9 @@
 			"name": "Metallic Peacekeeper",
 			"source": "FTD",
 			"page": 210,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N",
@@ -13025,7 +13151,9 @@
 			"name": "Metallic Warbler",
 			"source": "FTD",
 			"page": 210,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"N",
@@ -13134,7 +13262,9 @@
 			"name": "Moonstone Dragon Wyrmling",
 			"source": "FTD",
 			"page": 213,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -13284,7 +13414,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -13328,7 +13458,9 @@
 			],
 			"source": "FTD",
 			"page": 168,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -13555,7 +13687,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -13575,7 +13707,8 @@
 			"dragonCastingColor": "red",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -13616,7 +13749,9 @@
 			],
 			"source": "FTD",
 			"page": 216,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -13749,13 +13884,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -13800,7 +13928,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -13857,7 +13985,9 @@
 			],
 			"source": "FTD",
 			"page": 201,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -14055,13 +14185,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -14106,7 +14229,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -14125,7 +14248,8 @@
 			],
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -14169,7 +14293,9 @@
 			],
 			"source": "FTD",
 			"page": 208,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -14418,7 +14544,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -14438,7 +14564,8 @@
 			"dragonCastingColor": "silver",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -14480,7 +14607,9 @@
 			"name": "Swarm of Hoard Scarabs",
 			"source": "FTD",
 			"page": 205,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"swarmSize": "T"
@@ -14587,7 +14716,9 @@
 			],
 			"source": "FTD",
 			"page": 223,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -14707,13 +14838,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -14758,7 +14882,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -14804,7 +14928,9 @@
 			],
 			"source": "FTD",
 			"page": 201,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -15002,13 +15128,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -15053,7 +15172,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -15072,7 +15191,8 @@
 			],
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -15105,6 +15225,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -15114,7 +15235,9 @@
 			],
 			"source": "FTD",
 			"page": 168,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -15333,7 +15456,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -15353,7 +15476,8 @@
 			"dragonCastingColor": "white",
 			"dragonAge": "greatwyrm",
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -15383,6 +15507,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -15392,7 +15517,9 @@
 			],
 			"source": "FTD",
 			"page": 161,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -15537,13 +15664,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -15588,7 +15708,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -15639,7 +15759,9 @@
 			],
 			"source": "FTD",
 			"page": 172,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -15771,13 +15893,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -15822,7 +15937,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -15878,7 +15993,9 @@
 			"name": "Young Deep Dragon",
 			"source": "FTD",
 			"page": 175,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N",
@@ -16041,7 +16158,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -16095,7 +16212,9 @@
 			"name": "Young Dragon Turtle",
 			"source": "FTD",
 			"page": 192,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -16240,7 +16359,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -16286,7 +16405,9 @@
 			],
 			"source": "FTD",
 			"page": 197,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -16427,13 +16548,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -16478,7 +16592,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -16533,7 +16647,9 @@
 			"name": "Young Moonstone Dragon",
 			"source": "FTD",
 			"page": 213,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -16672,13 +16788,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -16714,7 +16823,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -16743,6 +16852,9 @@
 				"R",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -16762,7 +16874,9 @@
 			],
 			"source": "FTD",
 			"page": 216,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -16909,13 +17023,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -16960,7 +17067,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -16999,6 +17106,10 @@
 				"S",
 				"T"
 			],
+			"damageTagsSpell": [
+				"B",
+				"Y"
+			],
 			"spellcastingTags": [
 				"P"
 			],
@@ -17022,7 +17133,9 @@
 			"name": "Young Sea Serpent",
 			"source": "FTD",
 			"page": 219,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -17072,6 +17185,12 @@
 			"cr": "8",
 			"trait": [
 				{
+					"name": "Amphibious",
+					"entries": [
+						"The sea serpent can breathe air and water."
+					]
+				},
+				{
 					"name": "Siege Monster",
 					"entries": [
 						"The sea serpent deals double damage to objects and structures."
@@ -17112,6 +17231,7 @@
 			],
 			"dragonAge": "young",
 			"traitTags": [
+				"Amphibious",
 				"Siege Monster"
 			],
 			"senseTags": [
@@ -17151,7 +17271,9 @@
 			],
 			"source": "FTD",
 			"page": 223,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "dragon",
 				"tags": [
@@ -17286,13 +17408,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells",
-							"entries": [
-								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
 								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
@@ -17337,7 +17452,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]

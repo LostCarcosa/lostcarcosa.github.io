@@ -24,7 +24,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 73,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -157,7 +159,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 144,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -259,7 +263,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 135,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"N",
@@ -354,7 +360,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 216,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -506,6 +514,9 @@
 				"N",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -522,7 +533,9 @@
 			"name": "Brigganock",
 			"source": "WBtW",
 			"page": 230,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -632,6 +645,12 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -649,7 +668,9 @@
 			"name": "Bullywug Knight",
 			"source": "WBtW",
 			"page": 231,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"L",
@@ -758,7 +779,9 @@
 			"name": "Campestri",
 			"source": "WBtW",
 			"page": 232,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -843,7 +866,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 78,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -921,11 +946,14 @@
 			],
 			"bonus": [
 				{
-					"name": "Unsettling Presence (Recharge 6)",
+					"name": "Unsettling Presence {@recharge}",
 					"entries": [
 						"Clapperclaw targets one creature it can see within 15 feet of it. The target must succeed on a {@dc 11} Wisdom saving throw or be magically {@condition frightened} until the end of Clapperclaw's next turn."
 					]
 				}
+			],
+			"traitTags": [
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -970,7 +998,9 @@
 			"name": "Displacer Beast Kitten",
 			"source": "WBtW",
 			"page": 108,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1039,7 +1069,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 224,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1122,7 +1154,7 @@
 			],
 			"bonus": [
 				{
-					"name": "Feint (Recharge 5-6)",
+					"name": "Feint {@recharge 5}",
 					"entries": [
 						"Elkhorn targets one creature that he can see within 5 feet of him. Elkhorn has advantage on the next attack roll he makes against that target before the end of his turn. If that attack hits, the target takes an extra 7 ({@damage 2d6}) damage of the weapon's type."
 					]
@@ -1163,7 +1195,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 217,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -1257,7 +1291,7 @@
 				{
 					"name": "Uncanny Awareness",
 					"entries": [
-						"Endelyn can't be surprised."
+						"Endelyn can't be {@quickref Surprise|PHB|3|0|surprised}."
 					]
 				}
 			],
@@ -1289,6 +1323,9 @@
 			"damageTags": [
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1299,7 +1336,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 178,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1399,7 +1438,9 @@
 			"name": "Flying Rocking Horse",
 			"source": "WBtW",
 			"page": 121,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1478,7 +1519,8 @@
 				}
 			],
 			"traitTags": [
-				"False Appearance"
+				"False Appearance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -1496,7 +1538,9 @@
 			"name": "Giant Dragonfly",
 			"source": "WBtW",
 			"page": 234,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1563,7 +1607,9 @@
 			"name": "Giant Snail",
 			"source": "WBtW",
 			"page": 234,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1634,7 +1680,9 @@
 			"name": "Giant Swan",
 			"source": "WBtW",
 			"page": 38,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"N",
@@ -1710,7 +1758,9 @@
 			"name": "Glass Pegasus",
 			"source": "WBtW",
 			"page": 181,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -1785,7 +1835,9 @@
 			"name": "Glasswork Golem",
 			"source": "WBtW",
 			"page": 193,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1877,7 +1929,7 @@
 			],
 			"bonus": [
 				{
-					"name": "Dazzling Light (Recharge 5-6)",
+					"name": "Dazzling Light {@recharge 5}",
 					"entries": [
 						"Magical, colored light springs from the golem in a 15-foot cone. Each creature in the cone must succeed on a {@dc 10} Constitution saving throw or be {@condition blinded} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
@@ -1886,7 +1938,8 @@
 			"traitTags": [
 				"False Appearance",
 				"Immutable Form",
-				"Regeneration"
+				"Regeneration",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -1912,7 +1965,9 @@
 			"isNpc": true,
 			"source": "WBtW",
 			"page": 93,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -1984,7 +2039,9 @@
 			"name": "Harengon Brigand",
 			"source": "WBtW",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -2073,7 +2130,9 @@
 			"name": "Harengon Sniper",
 			"source": "WBtW",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -2157,7 +2216,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 205,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -2356,6 +2417,12 @@
 				"N",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE"
 			],
@@ -2377,7 +2444,9 @@
 			"name": "Jabberwock",
 			"source": "WBtW",
 			"page": 236,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -2567,7 +2636,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 70,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2651,7 +2722,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 219,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2777,6 +2850,12 @@
 				"F",
 				"O"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -2795,7 +2874,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 52,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2901,6 +2982,12 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -2917,7 +3004,9 @@
 			"name": "Living Doll",
 			"source": "WBtW",
 			"page": 238,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"N",
@@ -2996,7 +3085,7 @@
 			],
 			"bonus": [
 				{
-					"name": "Cackle (Recharge 4-6)",
+					"name": "Cackle {@recharge 4}",
 					"entries": [
 						"The doll cackles as it targets one or two creatures it can see within 30 feet of it. Each target that can hear the doll's cackling must make a {@dc 11} Wisdom saving throw, succeeding automatically if it has an Intelligence of 4 or lower. On a failed saving throw, the creature takes 5 ({@damage 2d4}) psychic damage and is {@condition incapacitated} for 1 minute as it is overcome by a fit of laughter. At the end of each of its turns, the creature can repeat the saving throw, ending the effect on itself on a success. A creature that succeeds on this saving throw is immune to this doll's Cackle for 24 hours."
 					]
@@ -3004,7 +3093,8 @@
 			],
 			"traitTags": [
 				"False Appearance",
-				"Regeneration"
+				"Regeneration",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -3032,7 +3122,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 224,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3151,6 +3243,9 @@
 				"B",
 				"R"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -3169,7 +3264,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 26,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3232,7 +3329,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"While carrying the Witchlight vane, Light casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
+						"While carrying the {@item Witchlight vane|WbtW}, Light casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
 					],
 					"will": [
 						"{@spell dancing lights}",
@@ -3253,7 +3350,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Light carries and is attuned to the Witchlight vane. In Light's hands, the vane is a finesse weapon."
+						"Light carries and is attuned to the {@item Witchlight vane|WbtW}. In Light's hands, the vane is a finesse weapon."
 					]
 				}
 			],
@@ -3261,7 +3358,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Light makes two Witchlight vane attacks."
+						"Light makes two {@item Witchlight vane|WbtW} attacks."
 					]
 				},
 				{
@@ -3297,6 +3394,12 @@
 				"B",
 				"R"
 			],
+			"damageTagsSpell": [
+				"C"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -3310,7 +3413,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 25,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3364,7 +3469,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"While carrying the Witchlight watch, Witch casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
+						"While carrying the {@item Witchlight watch|WbtW}, Witch casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
 					],
 					"will": [
 						"{@spell fire bolt}",
@@ -3385,7 +3490,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Witch carries and is attuned to the Witchlight watch."
+						"Witch carries and is attuned to the {@item Witchlight watch|WbtW}."
 					]
 				}
 			],
@@ -3429,6 +3534,12 @@
 				"B",
 				"N"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -3445,7 +3556,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 226,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3561,7 +3674,9 @@
 			"name": "Paper Bird",
 			"source": "WBtW",
 			"page": 166,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -3635,7 +3750,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 135,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -3682,7 +3799,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 193,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3799,6 +3918,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3807,7 +3927,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 227,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3892,7 +4014,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Ringlerun wields a staff of power. It has 20 charges when fully charged and regains {@dice 2d8 + 4} expended charges daily at dawn. If its last charge is expended, roll a {@dice d20}. On a 1, the staff retains its +2 bonus to attack and damage rolls but loses its other properties; on a 20, it regains {@dice 1d8 + 2} charges."
+						"Ringlerun wields a {@item staff of power}. It has 20 charges when fully charged and regains {@dice 2d8 + 4} expended charges daily at dawn. If its last charge is expended, roll a {@dice d20}. On a 1, the staff retains its +2 bonus to attack and damage rolls but loses its other properties; on a 20, it regains {@dice 1d8 + 2} charges."
 					]
 				}
 			],
@@ -3900,7 +4022,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Ringlerun makes three Staff of Power or Freezing Ray attacks. He can replace one of those attacks with a use of Spellcasting."
+						"Ringlerun makes three {@item staff of power} or Freezing Ray attacks. He can replace one of those attacks with a use of Spellcasting."
 					]
 				},
 				{
@@ -3918,7 +4040,7 @@
 				{
 					"name": "Staff Spell",
 					"entries": [
-						"While holding his staff of power, Ringlerun can expend 1 or more of its charges to cast one of the following spells from it (spell save {@dc 14}, {@hit 8} to hit with spell attacks): cone of cold ({@damage 8d8} cold damage; 5 charges), fireball ({@damage 10d6} fire damage; 5 charges), globe of invulnerability (6 charges), hold monster (5 charges), levitate (2 charges), lightning bolt ({@damage 10d6} lightning damage; 5 charges), magic missile (1 charge), ray of enfeeblement (1 charge), or wall of force (5 charges)."
+						"While holding his {@item staff of power}, Ringlerun can expend 1 or more of its charges to cast one of the following spells from it (spell save {@dc 14}, {@hit 8} to hit with spell attacks): cone of cold ({@damage 8d8} cold damage; 5 charges), fireball ({@damage 10d6} fire damage; 5 charges), globe of invulnerability (6 charges), hold monster (5 charges), levitate (2 charges), lightning bolt ({@damage 10d6} lightning damage; 5 charges), magic missile (1 charge), ray of enfeeblement (1 charge), or wall of force (5 charges)."
 					]
 				}
 			],
@@ -3934,6 +4056,9 @@
 			"damageTags": [
 				"B",
 				"C",
+				"O"
+			],
+			"spellcastingTags": [
 				"O"
 			],
 			"miscTags": [
@@ -3954,7 +4079,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 241,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4078,7 +4205,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 69,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -4165,7 +4294,7 @@
 				{
 					"name": "+1 Tiny Sword",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5ft., one target. {@h}8 ({@damage 1d4 + 6}) piercing damage."
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d4 + 6}) piercing damage."
 					]
 				},
 				{
@@ -4177,19 +4306,27 @@
 				{
 					"name": "Euphoria Breath {@recharge 5}",
 					"entries": [
-						"Sir Talavar exhales a puff of euphoria gas at one creature within 5 feet of him. The target must succeed on a {@dc 11} Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a {@dice d6} at the start of each of its turns to determine its behavior during the turn:"
-					]
-				},
-				{
-					"name": "1-4",
-					"entries": [
-						"The target takes no action or bonus action and uses all of its movement to move in a random direction."
-					]
-				},
-				{
-					"name": "5-6",
-					"entries": [
-						"The target doesn't move, and the only thing it can do on its turn is make a {@dc 11} Wisdom saving throw, ending the effect on itself on a success."
+						"Sir Talavar exhales a puff of euphoria gas at one creature within 5 feet of him. The target must succeed on a {@dc 11} Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a {@dice d6} at the start of each of its turns to determine its behavior during the turn:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1-4",
+									"entries": [
+										"The target takes no action or bonus action and uses all of its movement to move in a random direction."
+									]
+								},
+								{
+									"type": "item",
+									"name": "5-6",
+									"entries": [
+										"The target doesn't move, and the only thing it can do on its turn is make a {@dc 11} Wisdom saving throw, ending the effect on itself on a success."
+									]
+								}
+							]
+						}
 					]
 				}
 			],
@@ -4233,7 +4370,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 218,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -4366,6 +4505,9 @@
 			"damageTags": [
 				"I"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -4385,7 +4527,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 220,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4491,6 +4635,9 @@
 				"B",
 				"L"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -4509,7 +4656,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 110,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -4581,12 +4730,13 @@
 				{
 					"name": "Boggle Oil (3 Applications)",
 					"entries": [
-						"Squirt expends 1 application of boggle oil to create a 10-foot-square puddle of slippery, non-flammable oil on the ground within 5 feet of it. The puddle is difficult terrain and lasts for 1 hour. Each creature that enters the puddle's area or starts its turn there must succeed on a {@dc 11} Dexterity saving throw or fall {@condition prone}. Boggles are unaffected by the oil. After it expends all 3 applications, Squirt can't use this action again until its supply of boggle oil is replenished."
+						"Squirt expends 1 application of boggle oil to create a 10-foot-square puddle of slippery, non-flammable oil on the ground within 5 feet of it. The puddle is {@quickref difficult terrain||3} and lasts for 1 hour. Each creature that enters the puddle's area or starts its turn there must succeed on a {@dc 11} Dexterity saving throw or fall {@condition prone}. Boggles are unaffected by the oil. After it expends all 3 applications, Squirt can't use this action again until its supply of boggle oil is replenished."
 					]
 				}
 			],
 			"traitTags": [
-				"False Appearance"
+				"False Appearance",
+				"Unusual Nature"
 			],
 			"languageTags": [
 				"C",
@@ -4612,7 +4762,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4731,6 +4883,9 @@
 			"damageTags": [
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -4748,7 +4903,9 @@
 			"name": "Swarm of Campestris",
 			"source": "WBtW",
 			"page": 232,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "plant",
 				"swarmSize": "T"
@@ -4896,7 +5053,9 @@
 			"name": "Tin Soldier",
 			"source": "WBtW",
 			"page": 115,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -4993,7 +5152,9 @@
 			"name": "Treant Sapling",
 			"source": "WBtW",
 			"page": 36,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"C",
@@ -5098,7 +5259,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 221,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5241,7 +5404,9 @@
 			"name": "Witchlight Hand (Medium)",
 			"source": "WBtW",
 			"page": 27,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -5289,7 +5454,7 @@
 				{
 					"name": "Secret Expertise",
 					"entries": [
-						"The hand has one of these additional skills: Acrobatics +6, Animal Handling +5, Arcana +5, Athletics +4, Medicine +5, or Performance +5."
+						"The hand has one of these additional skills: {@skill Acrobatics} {@skillCheck acrobatics 6}, {@skill Animal Handling} {@skillCheck animal_handling 5}, {@skill Arcana} {@skillCheck arcana 5}, {@skill Athletics} {@skillCheck athletics 4}, {@skill Medicine} {@skillCheck medicine 5}, or {@skill Performance} {@skillCheck performance 5}."
 					]
 				}
 			],
@@ -5314,6 +5479,9 @@
 			"damageTags": [
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -5334,7 +5502,9 @@
 					"hasFluffImages": true
 				}
 			},
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"hp": {
 				"average": 7,
 				"formula": "2d6"
@@ -5348,7 +5518,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 222,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5475,7 +5647,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 223,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5586,6 +5760,9 @@
 			"damageTags": [
 				"B",
 				"N"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"MW"

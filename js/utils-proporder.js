@@ -312,11 +312,6 @@ PropOrder._SPELL = [
 	"miscTags",
 	"areaTags",
 
-	"classes",
-	"races",
-	"backgrounds",
-	"eldritchInvocations",
-
 	"hasFluff",
 	"hasFluffImages",
 ];
@@ -338,6 +333,7 @@ PropOrder._ACTION = [
 ];
 PropOrder._ADVENTURE = [
 	"name",
+	"alias",
 
 	"id",
 	"source",
@@ -355,6 +351,7 @@ PropOrder._ADVENTURE = [
 ];
 PropOrder._BOOK = [
 	"name",
+	"alias",
 
 	"id",
 	"source",
@@ -388,6 +385,8 @@ PropOrder._BACKGROUND = [
 			"_preserve",
 		],
 	}),
+
+	"prerequisite",
 
 	"feats",
 
@@ -607,6 +606,7 @@ PropOrder._LANGUAGE = [
 	"srd",
 	"basicRules",
 	"additionalSources",
+	"otherSources",
 
 	"type",
 	"typicalSpeakers",
@@ -777,6 +777,9 @@ PropOrder._FEAT = [
 	"optionalfeatureProgression",
 
 	"entries",
+
+	"hasFluff",
+	"hasFluffImages",
 ];
 PropOrder._VEHICLE = [
 	"name",
@@ -911,7 +914,6 @@ PropOrder._ITEM = [
 	"reqAttuneAltTags",
 
 	"wondrous",
-	"ammunition",
 	"tattoo",
 	"curse",
 	"sentient",
@@ -1007,10 +1009,12 @@ PropOrder._ITEM = [
 	"atomicPackContents",
 	"containerCapacity",
 
+	"optionalfeatures",
 	"attachedSpells",
 	"spellScrollLevel",
 	"lootTables",
 
+	"seeAlsoDeck",
 	"seeAlsoVehicle",
 
 	"miscTags",
@@ -1080,6 +1084,8 @@ PropOrder._OBJECT = [
 
 	"tokenUrl",
 	"hasToken",
+	"hasFluff",
+	"hasFluffImages",
 ];
 PropOrder._OPTIONALFEATURE = [
 	"name",
@@ -1341,6 +1347,8 @@ PropOrder._CHAROPTION = [
 	"source",
 	"page",
 
+	"otherSources",
+
 	"prerequisite",
 
 	"optionType",
@@ -1370,15 +1378,63 @@ PropOrder._SENSE = [
 
 	"entries",
 ];
+PropOrder._DECK = [
+	"name",
+
+	"source",
+	"page",
+	"srd",
+	"basicRules",
+
+	new PropOrder._ObjectKey("_copy", {
+		order: [
+			"name",
+			"source",
+			new PropOrder._ObjectKey("_mod", {
+				fnGetOrder: () => PropOrder._DECK__COPY_MOD,
+			}),
+			"_preserve",
+		],
+	}),
+
+	"cards",
+	"back",
+
+	"entries",
+
+	"hasCardArt",
+];
+
+PropOrder._DECK__COPY_MOD = [
+	"*",
+	"_",
+	...PropOrder._DECK,
+];
+PropOrder._CARD = [
+	"name",
+
+	"source",
+	"set",
+	"page",
+	"srd",
+	"basicRules",
+
+	"face",
+	"back",
+
+	"entries",
+];
 
 PropOrder._PROP_TO_LIST = {
 	"monster": PropOrder._MONSTER,
 	"monsterFluff": PropOrder._GENERIC_FLUFF,
 	"backgroundFluff": PropOrder._GENERIC_FLUFF,
+	"featFluff": PropOrder._GENERIC_FLUFF,
 	"conditionFluff": PropOrder._GENERIC_FLUFF,
 	"itemFluff": PropOrder._GENERIC_FLUFF,
 	"languageFluff": PropOrder._GENERIC_FLUFF,
 	"vehicleFluff": PropOrder._GENERIC_FLUFF,
+	"objectFluff": PropOrder._GENERIC_FLUFF,
 	"raceFluff": PropOrder._RACE_FLUFF,
 	"spell": PropOrder._SPELL,
 	"action": PropOrder._ACTION,
@@ -1423,8 +1479,8 @@ PropOrder._PROP_TO_LIST = {
 	"charoptionFluff": PropOrder._GENERIC_FLUFF,
 	"skill": PropOrder._SKILL,
 	"sense": PropOrder._SENSE,
+	"deck": PropOrder._DECK,
+	"card": PropOrder._CARD,
 };
 
-if (typeof module !== "undefined") {
-	module.exports = PropOrder;
-}
+globalThis.PropOrder = PropOrder;

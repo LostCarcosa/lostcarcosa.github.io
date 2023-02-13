@@ -22,9 +22,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -130,9 +135,14 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -275,6 +285,9 @@
 				"B",
 				"Y"
 			],
+			"damageTagsLegendary": [
+				"Y"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -310,7 +323,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -482,9 +497,20 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -567,6 +593,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -599,9 +628,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -795,7 +829,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -837,6 +871,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"I",
+				"P"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -865,9 +903,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -1036,6 +1079,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"B",
+				"L"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -1077,9 +1124,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -1267,7 +1319,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -1316,6 +1368,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"B",
+				"L"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -1347,7 +1403,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -1562,7 +1620,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -1610,6 +1668,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"B"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -1651,9 +1712,20 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DoSI"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -1880,7 +1952,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -1923,6 +1995,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"S",
+				"T"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -1956,7 +2032,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -2170,7 +2248,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2211,6 +2289,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"P"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -2241,9 +2322,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -2479,7 +2565,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2558,7 +2644,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -2758,7 +2846,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2799,6 +2887,10 @@
 				"I",
 				"P",
 				"S"
+			],
+			"damageTagsLegendary": [
+				"B",
+				"P"
 			],
 			"miscTags": [
 				"AOE",
@@ -2844,7 +2936,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -3040,7 +3134,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -3082,6 +3176,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"F"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -3116,7 +3213,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -3337,7 +3436,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -3379,6 +3478,9 @@
 				"C",
 				"P",
 				"S"
+			],
+			"damageTagsLegendary": [
+				"C"
 			],
 			"miscTags": [
 				"AOE",
@@ -3428,7 +3530,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -3485,7 +3589,7 @@
 				{
 					"name": "Ice Walk",
 					"entries": [
-						"The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement."
+						"The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, {@quickref difficult terrain||3} composed of ice or snow doesn't cost it extra movement."
 					]
 				},
 				{
@@ -3623,7 +3727,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -3670,6 +3774,10 @@
 				"C",
 				"P",
 				"S"
+			],
+			"damageTagsLegendary": [
+				"C",
+				"P"
 			],
 			"miscTags": [
 				"AOE",
@@ -3741,9 +3849,17 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -3875,9 +3991,14 @@
 				},
 				{
 					"source": "WDH"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -3962,7 +4083,9 @@
 			"source": "MM",
 			"page": 87,
 			"srd": true,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -4156,7 +4279,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -4198,6 +4321,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"I",
+				"P"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -4232,7 +4359,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -4420,7 +4549,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -4469,6 +4598,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"B",
+				"L"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -4498,9 +4631,14 @@
 			"otherSources": [
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -4722,7 +4860,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -4771,6 +4909,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"B"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -4802,7 +4943,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -5029,7 +5172,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -5072,6 +5215,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"S",
+				"T"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -5102,7 +5249,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -5323,7 +5472,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -5365,6 +5514,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"P"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -5389,7 +5541,9 @@
 			"source": "MM",
 			"page": 113,
 			"srd": true,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -5625,7 +5779,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -5701,7 +5855,9 @@
 					"source": "DIP"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -5901,7 +6057,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -5943,6 +6099,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"B",
+				"P"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -5980,7 +6140,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -6176,7 +6338,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -6218,6 +6380,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"F"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -6244,7 +6409,9 @@
 			"source": "MM",
 			"page": 116,
 			"srd": true,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -6465,7 +6632,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -6508,6 +6675,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"C"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -6544,7 +6714,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -6601,7 +6773,7 @@
 				{
 					"name": "Ice Walk",
 					"entries": [
-						"The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement."
+						"The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, {@quickref difficult terrain||3} composed of ice or snow doesn't cost it extra movement."
 					]
 				},
 				{
@@ -6739,7 +6911,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -6787,6 +6959,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"C",
+				"P"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -6819,7 +6995,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -7046,6 +7224,13 @@
 				"S",
 				"T"
 			],
+			"damageTagsLegendary": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -7117,7 +7302,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -7234,9 +7421,14 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -7329,7 +7521,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -7409,7 +7603,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -7500,7 +7696,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -7739,6 +7937,16 @@
 				"I",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"N",
+				"O",
+				"P",
+				"S",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I"
@@ -7797,9 +8005,20 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7863,6 +8082,10 @@
 					"name": "Spellcasting",
 					"headerEntries": [
 						"The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 17}, {@hit 9} to hit with spell attacks). The archmage can cast {@spell disguise self} and {@spell invisibility} at will and has the following wizard spells prepared:"
+					],
+					"will": [
+						"{@spell disguise self}",
+						"{@spell invisibility}"
 					],
 					"spells": {
 						"0": {
@@ -7940,17 +8163,13 @@
 							]
 						}
 					},
-					"will": [
-						"{@spell disguise self}",
-						"{@spell invisibility}"
-					],
-					"hidden": [
-						"will"
-					],
 					"footerEntries": [
 						"*The archmage casts these spells on itself before combat."
 					],
-					"ability": "int"
+					"ability": "int",
+					"hidden": [
+						"will"
+					]
 				}
 			],
 			"trait": [
@@ -7993,6 +8212,12 @@
 			],
 			"damageTags": [
 				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"L",
+				"O"
 			],
 			"spellcastingTags": [
 				"CW"
@@ -8081,9 +8306,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -8101,7 +8331,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -8140,7 +8370,7 @@
 				{
 					"name": "Assassinate",
 					"entries": [
-						"During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a surprised creature is a critical hit."
+						"During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a {@quickref Surprise|PHB|3|0|surprised} creature is a critical hit."
 					]
 				},
 				{
@@ -8203,7 +8433,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Awakened Shrub",
@@ -8231,7 +8462,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -8336,7 +8569,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -8433,7 +8668,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -8494,7 +8731,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"L",
@@ -8610,7 +8849,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -8680,7 +8921,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -8742,7 +8985,8 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Balor",
@@ -8766,7 +9010,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -8991,9 +9237,23 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9142,9 +9402,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9162,7 +9430,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -9289,9 +9557,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -9372,7 +9645,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The banshee can move through other creatures and objects as if they were difficult terrain. She takes 5 ({@damage 1d10}) force damage if she ends her turn inside an object."
+						"The banshee can move through other creatures and objects as if they were {@quickref difficult terrain||3}. She takes 5 ({@damage 1d10}) force damage if she ends her turn inside an object."
 					]
 				}
 			],
@@ -9457,7 +9730,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -9627,7 +9902,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -9779,6 +10056,9 @@
 				"B",
 				"P"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -9812,7 +10092,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -9848,7 +10130,7 @@
 					"name": "Petrifying Gaze",
 					"entries": [
 						"If a creature starts its turn within 30 feet of the basilisk and the two of them can see each other, the basilisk can force the creature to make a {@dc 12} Constitution saving throw if the basilisk isn't {@condition incapacitated}. On a failed save, the creature magically begins to turn to stone and is {@condition restrained}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} until freed by the  {@spell greater restoration} spell or other magic.",
-						"A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save.",
+						"A creature that isn't {@quickref Surprise|PHB|3|0|surprised} can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save.",
 						"If the basilisk sees its reflection within 30 feet of it in bright light, it mistakes itself for a rival and targets itself with its gaze."
 					]
 				}
@@ -9907,9 +10189,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -9975,7 +10262,8 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Bearded Devil",
@@ -10002,7 +10290,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -10154,9 +10444,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -10298,9 +10593,17 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -10592,7 +10895,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -10785,7 +11090,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10898,7 +11205,9 @@
 					"source": "IMR"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -10993,7 +11302,9 @@
 					"source": "TftYP"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -11132,7 +11443,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -11204,9 +11515,17 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "ooze",
 			"alignment": [
 				"U"
@@ -11334,7 +11653,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"L",
@@ -11360,7 +11681,7 @@
 				"perception": "+3",
 				"stealth": "+5"
 			},
-			"passive": 10,
+			"passive": 13,
 			"languages": [
 				"Blink Dog",
 				"understands Sylvan but can't speak it"
@@ -11439,7 +11760,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -11524,9 +11847,14 @@
 			"otherSources": [
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -11657,7 +11985,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -11679,6 +12007,12 @@
 				"type": "internal",
 				"path": "bestiary/blue-dragon-wyrmling.mp3"
 			},
+			"altArt": [
+				{
+					"name": "Blue Dragon Wyrmling",
+					"source": "DoSI"
+				}
+			],
 			"senseTags": [
 				"B",
 				"D"
@@ -11713,7 +12047,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -11833,6 +12169,7 @@
 				"Y"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -11867,7 +12204,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -11966,9 +12305,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -12146,7 +12490,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -12254,6 +12600,10 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -12269,7 +12619,14 @@
 			"name": "Bone Naga (Spirit)",
 			"source": "MM",
 			"page": 233,
-			"size": "L",
+			"otherSources": [
+				{
+					"source": "DSotDQ"
+				}
+			],
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -12377,6 +12734,10 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"L"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -12396,7 +12757,9 @@
 			"source": "MM",
 			"page": 106,
 			"srd": true,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -12552,7 +12915,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -12607,7 +12970,14 @@
 			"source": "MM",
 			"page": 109,
 			"srd": true,
-			"size": "M",
+			"otherSources": [
+				{
+					"source": "DoSI"
+				}
+			],
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -12771,7 +13141,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -12786,6 +13156,12 @@
 				"type": "internal",
 				"path": "bestiary/bronze-dragon-wyrmling.mp3"
 			},
+			"altArt": [
+				{
+					"name": "Bronze Dragon Wyrmling",
+					"source": "DoSI"
+				}
+			],
 			"traitTags": [
 				"Amphibious"
 			],
@@ -12843,7 +13219,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -12977,7 +13355,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -13094,7 +13474,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -13229,9 +13611,20 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -13338,7 +13731,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -13476,7 +13871,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -13656,6 +14053,11 @@
 				"F",
 				"P"
 			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -13732,7 +14134,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -13805,7 +14209,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -13944,9 +14350,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -14024,7 +14435,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -14139,7 +14552,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -14251,7 +14666,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -14291,7 +14708,7 @@
 			"senses": [
 				"darkvision 120 ft."
 			],
-			"passive": 8,
+			"passive": 11,
 			"resist": [
 				"cold",
 				{
@@ -14409,7 +14826,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -14534,6 +14953,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -14572,7 +14992,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -14700,7 +15122,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -14836,9 +15260,14 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -14992,9 +15421,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -15145,9 +15579,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				{
@@ -15346,7 +15785,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -15483,9 +15924,20 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -15573,7 +16025,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -15648,7 +16102,9 @@
 			"source": "MM",
 			"page": 111,
 			"srd": true,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -15804,7 +16260,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -15866,7 +16322,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -16015,6 +16473,9 @@
 				"B",
 				"P"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -16049,7 +16510,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -16147,9 +16610,17 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -16262,9 +16733,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -16400,9 +16876,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -16526,6 +17010,11 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -16605,9 +17094,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -16725,9 +17219,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -16847,7 +17346,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -16910,7 +17411,7 @@
 							"{@spell tongues}"
 						],
 						"1e": [
-							"{@spell conjure elemental} (earth elemental only)",
+							"{@spell conjure elemental} ({@creature earth elemental} only)",
 							"{@spell gaseous form}",
 							"{@spell invisibility}",
 							"{@spell phantasmal killer}",
@@ -17004,6 +17505,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -17091,7 +17595,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -17196,9 +17702,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -17302,9 +17813,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -17466,6 +17982,16 @@
 				"N",
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"L",
+				"N",
+				"R",
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CP"
 			],
@@ -17507,9 +18033,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -17685,6 +18216,10 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"F",
+				"I"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -17714,7 +18249,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -17937,7 +18474,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -18082,7 +18621,9 @@
 					"source": "DIP"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -18148,9 +18689,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -18335,6 +18881,12 @@
 			"damageTags": [
 				"N"
 			],
+			"damageTagsLegendary": [
+				"N"
+			],
+			"miscTags": [
+				"HPR"
+			],
 			"conditionInflict": [
 				"blinded",
 				"frightened"
@@ -18386,9 +18938,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -18562,9 +19119,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -18639,7 +19201,8 @@
 			"conditionInflict": [
 				"prone"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Displacer Beast",
@@ -18660,9 +19223,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -18768,9 +19336,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -18918,6 +19491,9 @@
 				"S",
 				"T"
 			],
+			"damageTagsSpell": [
+				"T"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -19032,9 +19608,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -19085,7 +19666,7 @@
 				{
 					"name": "Ambusher",
 					"entries": [
-						"In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it surprised."
+						"In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it {@quickref Surprise|PHB|3|0|surprised}."
 					]
 				},
 				{
@@ -19169,7 +19750,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -19238,9 +19821,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -19389,7 +19977,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -19509,7 +20099,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -19769,7 +20361,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -19981,7 +20575,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -19996,7 +20592,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item studded leather armor|phb}",
+						"{@item studded leather armor|phb|studded leather}",
 						"{@item shield|phb}"
 					]
 				}
@@ -20226,7 +20822,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -20396,6 +20994,16 @@
 				"B",
 				"I"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I"
@@ -20426,7 +21034,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -20628,6 +21238,11 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"P"
+			],
 			"spellcastingTags": [
 				"CC",
 				"I"
@@ -20720,9 +21335,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -20834,6 +21454,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -20876,9 +21500,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"N"
@@ -21041,7 +21670,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -21165,7 +21796,9 @@
 			],
 			"source": "MM",
 			"page": 225,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -21299,7 +21932,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -21353,10 +21988,10 @@
 					"will": [
 						"{@spell sleep}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -21445,7 +22080,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -21507,7 +22144,8 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Earth Elemental",
@@ -21541,7 +22179,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -21686,9 +22326,14 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"L",
@@ -21747,7 +22392,7 @@
 							"{@spell tongues}"
 						],
 						"1e": [
-							"{@spell conjure elemental} (fire elemental only)",
+							"{@spell conjure elemental} ({@creature fire elemental} only)",
 							"{@spell gaseous form}",
 							"{@spell invisibility}",
 							"{@spell major image}",
@@ -21830,6 +22475,9 @@
 				"F",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -21905,7 +22553,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -21997,7 +22647,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -22083,7 +22735,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "celestial",
 				"tags": [
@@ -22254,6 +22908,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -22288,7 +22946,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -22506,7 +23166,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -22660,9 +23322,14 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -22769,7 +23436,9 @@
 			"name": "Faerie Dragon (Blue)",
 			"source": "MM",
 			"page": 133,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -22878,7 +23547,7 @@
 			],
 			"legendaryGroup": {
 				"name": "Faerie Dragon",
-				"source": "FTB"
+				"source": "FTD"
 			},
 			"environment": [
 				"forest"
@@ -22928,7 +23597,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -23036,7 +23707,7 @@
 			],
 			"legendaryGroup": {
 				"name": "Faerie Dragon",
-				"source": "FTB"
+				"source": "FTD"
 			},
 			"environment": [
 				"forest"
@@ -23081,7 +23752,9 @@
 			"name": "Faerie Dragon (Indigo)",
 			"source": "MM",
 			"page": 133,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -23191,7 +23864,7 @@
 			],
 			"legendaryGroup": {
 				"name": "Faerie Dragon",
-				"source": "FTB"
+				"source": "FTD"
 			},
 			"environment": [
 				"forest"
@@ -23236,7 +23909,9 @@
 			"name": "Faerie Dragon (Orange)",
 			"source": "MM",
 			"page": 133,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -23391,7 +24066,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -23548,7 +24225,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -23659,7 +24338,7 @@
 			],
 			"legendaryGroup": {
 				"name": "Faerie Dragon",
-				"source": "FTB"
+				"source": "FTD"
 			},
 			"environment": [
 				"forest"
@@ -23704,7 +24383,9 @@
 			"name": "Faerie Dragon (Yellow)",
 			"source": "MM",
 			"page": 133,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -23892,7 +24573,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -24038,9 +24721,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -24176,9 +24864,17 @@
 				},
 				{
 					"source": "ToA"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -24334,9 +25030,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -24492,6 +25196,10 @@
 			"damageTags": [
 				"F"
 			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -24549,7 +25257,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -24688,9 +25398,14 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -24734,7 +25449,7 @@
 				{
 					"name": "Advanced Telepathy",
 					"entries": [
-						"The flumph can perceive the content of any telepathic communication used within 60 feet of it, and it can't be surprised by creatures with any form of telepathy."
+						"The flumph can perceive the content of any telepathic communication used within 60 feet of it, and it can't be {@quickref Surprise|PHB|3|0|surprised} by creatures with any form of telepathy."
 					]
 				},
 				{
@@ -24815,7 +25530,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -24936,7 +25653,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -25044,9 +25763,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -25157,9 +25881,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -25245,7 +25974,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"N",
@@ -25379,7 +26110,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -25538,9 +26271,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -25669,7 +26407,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -25785,7 +26525,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "ooze",
 			"alignment": [
 				"U"
@@ -25832,7 +26574,7 @@
 				{
 					"name": "Transparent",
 					"entries": [
-						"Even when the cube is in plain sight, it takes a successful {@dc 15} Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube."
+						"Even when the cube is in plain sight, it takes a successful {@dc 15} Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is {@quickref Surprise|PHB|3|0|surprised} by the cube."
 					]
 				}
 			],
@@ -25911,9 +26653,14 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -26084,9 +26831,20 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -26161,7 +26919,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The ghost can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The ghost can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				}
 			],
@@ -26278,9 +27036,17 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -26378,7 +27144,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -26455,9 +27223,14 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -26535,7 +27308,8 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Giant Bat",
@@ -26555,9 +27329,14 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -26648,7 +27427,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -26745,9 +27526,14 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -26837,7 +27623,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -26947,7 +27735,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -27040,9 +27830,14 @@
 				},
 				{
 					"source": "SLW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -27144,7 +27939,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"N",
@@ -27248,7 +28045,9 @@
 					"source": "SKT"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -27353,9 +28152,14 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -27455,7 +28259,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -27543,7 +28349,8 @@
 				"grappled",
 				"restrained"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Giant Goat",
@@ -27568,7 +28375,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -27658,7 +28467,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -27745,9 +28556,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -27891,9 +28707,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -28010,7 +28831,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"N"
@@ -28129,7 +28952,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -28233,7 +29058,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -28321,6 +29148,7 @@
 				"MW"
 			],
 			"hasToken": true,
+			"hasFluffImages": true,
 			"_versions": [
 				{
 					"name": "Giant Rat (Diseased)",
@@ -28358,9 +29186,17 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -28446,9 +29282,14 @@
 			"otherSources": [
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -28552,9 +29393,20 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -28692,9 +29544,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "DSotDQ"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -28824,7 +29684,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -28941,7 +29803,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"N",
@@ -29050,9 +29914,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -29120,7 +29989,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -29213,9 +30084,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -29335,9 +30211,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N"
@@ -29371,7 +30252,7 @@
 				{
 					"name": "Aberrant Ground",
 					"entries": [
-						"The ground in a 10-foot radius around the mouther is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 10} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
+						"The ground in a 10-foot radius around the mouther is doughlike {@quickref difficult terrain||3}. Each creature that starts its turn in that area must succeed on a {@dc 10} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
 					]
 				},
 				{
@@ -29436,9 +30317,14 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -29550,9 +30436,17 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -29656,7 +30550,9 @@
 			"name": "Githzerai Monk",
 			"source": "MM",
 			"page": 161,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -29774,7 +30670,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -29877,6 +30775,9 @@
 				"B",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -29913,7 +30814,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -30127,7 +31030,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -30141,7 +31046,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item studded leather armor|phb}",
+						"{@item studded leather armor|phb|studded leather}",
 						"{@item shield|phb}"
 					]
 				}
@@ -30277,7 +31182,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -30390,7 +31297,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -30514,7 +31423,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -30668,7 +31579,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -30791,9 +31704,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -30926,7 +31844,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -31048,7 +31968,9 @@
 			"source": "MM",
 			"page": 115,
 			"srd": true,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -31220,7 +32142,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -31283,9 +32205,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -31386,7 +32313,9 @@
 			"name": "Goristro",
 			"source": "MM",
 			"page": 59,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -31562,7 +32491,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "ooze",
 			"alignment": [
 				"U"
@@ -31711,7 +32642,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -31888,6 +32821,9 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -31915,7 +32851,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -32057,7 +32995,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -32126,9 +33064,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -32322,6 +33265,9 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I",
@@ -32420,9 +33366,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -32593,6 +33544,9 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -32634,7 +33588,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -32759,9 +33715,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -32868,9 +33829,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -33008,9 +33974,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -33109,7 +34080,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -33264,9 +34237,20 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -33355,7 +34339,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -33509,6 +34495,12 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -33535,9 +34527,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -33728,6 +34725,9 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsLegendary": [
+				"N"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -33760,9 +34760,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -33866,7 +34871,9 @@
 					"source": "IMR"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -34007,9 +35014,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -34117,9 +35129,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -34226,7 +35243,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -34360,9 +35379,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -34510,7 +35534,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -34685,7 +35711,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -34814,7 +35842,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -34937,9 +35967,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -35053,9 +36088,14 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -35177,9 +36217,14 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -35338,7 +36383,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -35433,9 +36480,14 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -35546,7 +36598,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -35710,9 +36764,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -35826,9 +36885,17 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -35946,7 +37013,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -36023,7 +37092,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -36223,7 +37294,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -36279,10 +37352,10 @@
 					"will": [
 						"{@spell fog cloud}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -36396,7 +37469,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -36576,7 +37651,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -36707,6 +37784,7 @@
 				"Y"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -36731,7 +37809,9 @@
 					"source": "ERLW"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -36896,7 +37976,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -37045,7 +38127,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -37198,7 +38282,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -37282,9 +38368,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -37425,9 +38516,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -37468,7 +38564,7 @@
 				{
 					"name": "Ambusher",
 					"entries": [
-						"In the first round of a combat, the kenku has advantage on attack rolls against any creature it surprised."
+						"In the first round of a combat, the kenku has advantage on attack rolls against any creature it {@quickref Surprise|PHB|3|0|surprised}."
 					]
 				},
 				{
@@ -37542,7 +38638,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -37683,9 +38781,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -37830,9 +38936,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -37954,7 +39065,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -38032,7 +39145,7 @@
 				{
 					"name": "Freedom of Movement",
 					"entries": [
-						"The kraken ignores difficult terrain, and magical effects can't reduce its speed or cause it to be {@condition restrained}. It can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
+						"The kraken ignores {@quickref difficult terrain||3}, and magical effects can't reduce its speed or cause it to be {@condition restrained}. It can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
 					]
 				},
 				{
@@ -38132,6 +39245,9 @@
 				"L",
 				"P"
 			],
+			"damageTagsLegendary": [
+				"L"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -38171,7 +39287,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -38316,7 +39434,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -38485,6 +39605,12 @@
 				"B",
 				"L"
 			],
+			"damageTagsSpell": [
+				"B",
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -38510,7 +39636,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -38658,7 +39786,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -38796,6 +39926,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -38829,7 +39962,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -38941,6 +40076,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -38964,7 +40102,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -39076,7 +40216,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -39315,6 +40457,18 @@
 				"C",
 				"N"
 			],
+			"damageTagsLegendary": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"N",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -39345,7 +40499,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -39448,9 +40604,14 @@
 			"otherSources": [
 				{
 					"source": "ToA"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -39516,7 +40677,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -39648,7 +40811,9 @@
 			"name": "Lizard Queen",
 			"source": "MM",
 			"page": 205,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -39815,9 +40980,14 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -39951,7 +41121,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -40088,6 +41260,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"P"
+			],
 			"spellcastingTags": [
 				"CD",
 				"F"
@@ -40178,9 +41354,20 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -40310,6 +41497,12 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -40363,9 +41556,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "SjA"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -40419,10 +41617,10 @@
 					"will": [
 						"{@spell heat metal}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -40491,6 +41689,9 @@
 				"F",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -40524,7 +41725,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -40636,7 +41839,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -40731,7 +41936,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -40849,9 +42056,17 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -40978,9 +42193,17 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -41048,7 +42271,7 @@
 							"{@spell water walk}"
 						],
 						"1e": [
-							"{@spell conjure elemental} (water elemental only)",
+							"{@spell conjure elemental} ({@creature water elemental} only)",
 							"{@spell control water}",
 							"{@spell gaseous form}",
 							"{@spell invisibility}",
@@ -41140,6 +42363,9 @@
 			"damageTags": [
 				"B",
 				"P"
+			],
+			"damageTagsSpell": [
+				"B"
 			],
 			"spellcastingTags": [
 				"I"
@@ -41236,7 +42462,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -41435,9 +42663,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -41530,7 +42763,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -41576,7 +42811,7 @@
 					"name": "Petrifying Gaze",
 					"entries": [
 						"When a creature that can see the medusa's eyes starts its turn within 30 feet of the medusa, the medusa can force it to make a {@dc 14} Constitution saving throw if the medusa isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, a creature that fails the save begins to turn to stone and is {@condition restrained}. The {@condition restrained} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the  {@spell greater restoration} spell or other magic.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.",
+						"Unless {@quickref Surprise|PHB|3|0|surprised}, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.",
 						"If the medusa sees itself reflected on a polished surface within 30 feet of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze."
 					]
 				}
@@ -41655,9 +42890,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -41765,9 +43005,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -41892,7 +43137,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -42064,6 +43311,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"I"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -42119,7 +43369,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -42262,9 +43514,17 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -42417,7 +43677,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -42595,6 +43857,9 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"L"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I",
@@ -42653,7 +43918,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -42785,9 +44052,14 @@
 				},
 				{
 					"source": "IMR"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -42903,7 +44175,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -43034,9 +44308,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -43170,7 +44449,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -43265,9 +44546,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -43400,7 +44686,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -43625,6 +44913,12 @@
 				"B",
 				"N"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"P",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -43658,9 +44952,14 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"L",
@@ -43808,7 +45107,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"L",
@@ -43967,9 +45268,14 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"L",
@@ -44068,7 +45374,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -44239,7 +45547,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"N",
@@ -44358,9 +45668,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"alignment": [
 				"N",
@@ -44583,12 +45898,16 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I",
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflictSpell": [
@@ -44690,7 +46009,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"N",
@@ -44847,9 +46168,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -44964,9 +46293,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -45095,7 +46429,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -45313,9 +46649,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "ooze",
 			"alignment": [
 				"U"
@@ -45435,7 +46776,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -45525,7 +46868,8 @@
 			"conditionInflict": [
 				"grappled"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ogre",
@@ -45581,9 +46925,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -45694,9 +47046,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -45808,9 +47165,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -45945,6 +47307,9 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"C"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -46003,7 +47368,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -46132,7 +47499,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -46258,6 +47627,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -46297,7 +47669,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -46451,7 +47825,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -46588,9 +47964,14 @@
 				},
 				{
 					"source": "IMR"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N"
@@ -46716,7 +48097,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -46844,9 +48227,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -46958,7 +48346,9 @@
 					"source": "WDH"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -47054,9 +48444,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"C",
@@ -47141,7 +48536,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -47288,9 +48685,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -47433,7 +48835,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -47551,7 +48955,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -47653,7 +49059,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -47815,6 +49223,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -47854,7 +49265,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -47941,6 +49354,9 @@
 			"languageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -47969,9 +49385,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -48120,6 +49541,12 @@
 				"R",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"P",
+				"R",
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -48151,9 +49578,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -48244,7 +49676,9 @@
 					"source": "IMR"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -48330,7 +49764,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -48428,7 +49864,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -48498,7 +49936,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The poltergeist can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The poltergeist can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -48576,7 +50014,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -48691,9 +50131,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -48804,6 +50252,11 @@
 				"B",
 				"R"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -48844,7 +50297,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N",
@@ -48995,7 +50450,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -49076,9 +50533,20 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -49192,7 +50660,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -49327,9 +50797,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -49439,7 +50914,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -49529,7 +51006,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -49641,6 +51120,9 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -49686,7 +51168,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -49856,7 +51340,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -49953,7 +51439,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -50124,7 +51612,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -50210,7 +51700,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -50269,7 +51761,8 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Red Dragon Wyrmling",
@@ -50288,9 +51781,14 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -50429,7 +51927,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -50479,9 +51977,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -50626,9 +52129,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -50733,9 +52241,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -50791,7 +52304,7 @@
 					"name": "Swallow",
 					"entries": [
 						"The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the remorhaz's turns.",
-						"If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a {@dc 15} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet oft he remorhaz. If the remorhaz dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition prone}."
+						"If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a {@dc 15} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the remorhaz. If the remorhaz dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition prone}."
 					]
 				}
 			],
@@ -50855,9 +52368,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N"
@@ -51024,7 +52542,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -51119,9 +52639,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -51206,7 +52731,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -51328,9 +52855,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -51491,7 +53023,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -51612,7 +53146,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -51668,7 +53204,7 @@
 					"name": "Antennae",
 					"entries": [
 						"The rust monster corrodes a nonmagical ferrous metal object it can see within 5 feet of it. If the object isn't being worn or carried, the touch destroys a 1-foot cube of it. If the object is being worn or carried by a creature, the creature can make a {@dc 11} Dexterity saving throw to avoid the rust monster's touch.",
-						"If the object touched is either metal armor or a metal shield being worn or carried, its takes a permanent and cumulative \u22121 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. If the object touched is a held metal weapon, it rusts as described in the Rust Metal trait."
+						"If the object touched is either metal armor or a metal shield being worn or carried, it takes a permanent and cumulative \u22121 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. If the object touched is a held metal weapon, it rusts as described in the Rust Metal trait."
 					]
 				}
 			],
@@ -51711,9 +53247,14 @@
 				},
 				{
 					"source": "CoS"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -51817,7 +53358,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -51950,9 +53493,14 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -52096,7 +53644,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -52241,6 +53791,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -52271,9 +53825,17 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -52414,7 +53976,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -52571,7 +54135,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -52696,9 +54262,14 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -52818,9 +54389,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -52959,9 +54538,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -53013,7 +54597,7 @@
 					"name": "Horrific Appearance",
 					"entries": [
 						"Any humanoid that starts its turn within 30 feet of the hag and can see the hag's true form must make a {@dc 11} Wisdom saving throw. On a failed save, the creature is {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the hag is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Horrific Appearance for the next 24 hours.",
-						"Unless the target is surprised or the revelation of the hag's true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the hag."
+						"Unless the target is {@quickref Surprise|PHB|3|0|surprised} or the revelation of the hag's true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the hag."
 					]
 				}
 			],
@@ -53229,7 +54813,9 @@
 			"page": 337,
 			"srd": true,
 			"basicRules": true,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -53314,9 +54900,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "SjA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -53469,9 +55060,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -53551,7 +55147,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The demon can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The demon can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -53636,9 +55232,14 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -53782,7 +55383,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -53913,7 +55516,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -53993,7 +55598,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -54148,7 +55755,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -54248,9 +55855,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -54348,9 +55963,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -54451,7 +56071,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -54503,10 +56125,10 @@
 					"will": [
 						"{@spell dancing lights}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -54598,9 +56220,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -54786,6 +56413,9 @@
 				"R",
 				"S"
 			],
+			"damageTagsSpell": [
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -54828,9 +56458,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "SjA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -55034,9 +56669,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -55106,7 +56746,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The specter can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The specter can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -55147,6 +56787,9 @@
 				"N",
 				"O"
 			],
+			"miscTags": [
+				"HPR"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -55163,9 +56806,14 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -55243,7 +56891,8 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Spined Devil",
@@ -55260,7 +56909,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -55425,9 +57076,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -55566,6 +57222,12 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"L",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -55608,7 +57270,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -55765,9 +57429,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -55890,7 +57559,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -55938,10 +57609,10 @@
 					"will": [
 						"{@spell blur}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -56059,9 +57730,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -56152,7 +57828,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"N"
@@ -56341,9 +58019,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -56483,9 +58169,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -56688,7 +58379,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -56819,6 +58512,7 @@
 				"Y"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -56863,7 +58557,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -56967,7 +58663,9 @@
 			"source": "MM",
 			"page": 338,
 			"srd": true,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -57071,7 +58769,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -57186,9 +58886,17 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "PSX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -57309,9 +59017,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -57426,9 +59139,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -57559,7 +59280,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -57646,7 +59369,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Swarm of Ravens",
@@ -57680,7 +59404,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -57789,7 +59515,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -57918,7 +59646,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -58022,9 +59752,14 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -58220,7 +59955,17 @@
 			"name": "Thri-kreen",
 			"source": "MM",
 			"page": 288,
-			"size": "M",
+			"otherSources": [
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				}
+			],
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -58417,7 +60162,6 @@
 					},
 					"spellcasting": [
 						{
-							"type": "spellcasting",
 							"name": "Innate Spellcasting (Psionics)",
 							"headerEntries": [
 								"The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:"
@@ -58495,9 +60239,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -58621,7 +60373,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -58750,9 +60504,20 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "plant",
 			"alignment": [
 				"C",
@@ -58899,7 +60664,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -58997,7 +60764,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -59080,7 +60849,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -59222,7 +60993,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -59389,7 +61162,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -59507,24 +61282,9 @@
 						}
 					],
 					"_version": {
-						"name": "Toll (Loathsome Limbs)",
+						"name": "Troll (Loathsome Limbs)",
 						"addHeadersAs": "trait"
 					}
-				},
-				{
-					"type": "inset",
-					"name": "Four-Armed Troll",
-					"source": "HotDQ",
-					"entries": [
-						"Sometimes when a troll loses a limb, it regenerates two limbs to replace the one it lost. This can result in trolls with multiple arms. A four-armed troll uses the {@creature troll} stat block, except that it is a challenge rating 6 monster (2,300 XP) and has the following action instead of the troll's normal Multiattack action:",
-						{
-							"type": "entries",
-							"name": "Multiattack",
-							"entries": [
-								"The troll attacks five times, once with its bite and four times with its claws. If two or more claws hit the same target, the troll rends the target, dealing an extra {@dice 2d6} slashing damage."
-							]
-						}
-					]
 				}
 			],
 			"environment": [
@@ -59564,21 +61324,102 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Four-Armed Troll",
-					"source": "HotDQ",
+					"name": "Troll (Loathsome Limb; Severed Arm)",
+					"source": "MM",
 					"_mod": {
-						"action": {
-							"mode": "replaceArr",
-							"replace": "Multiattack",
-							"items": {
-								"name": "Multiattack",
-								"entries": [
-									"The troll attacks five times, once with its bite and four times with its claws. If two or more claws hit the same target, the troll rends the target, dealing an extra {@dice 2d6} slashing damage."
-								]
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": "Keen Smell"
 							}
-						}
+						]
 					},
-					"cr": "6",
+					"size": "T",
+					"ac": [
+						{
+							"ac": 13,
+							"from": [
+								"natural armor"
+							]
+						}
+					],
+					"hp": {
+						"special": "10"
+					},
+					"speed": {
+						"walk": 5
+					},
+					"skill": null,
+					"senses": null,
+					"languages": null,
+					"action": [
+						{
+							"name": "Claw",
+							"entries": [
+								"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) slashing damage. This attack is made with disadvantage unless the troll can see the arm and its target."
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Troll (Loathsome Limb; Severed Head)",
+					"source": "MM",
+					"size": "T",
+					"ac": [
+						{
+							"ac": 13,
+							"from": [
+								"natural armor"
+							]
+						}
+					],
+					"hp": {
+						"special": "10"
+					},
+					"speed": {
+						"walk": 0
+					},
+					"action": [
+						{
+							"name": "Bite",
+							"entries": [
+								"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Troll (Loathsome Limb; Severed Leg)",
+					"source": "MM",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": "Keen Smell"
+							}
+						]
+					},
+					"size": "T",
+					"ac": [
+						{
+							"ac": 13,
+							"from": [
+								"natural armor"
+							]
+						}
+					],
+					"hp": {
+						"special": "10"
+					},
+					"speed": {
+						"walk": 5
+					},
+					"skill": null,
+					"senses": null,
+					"languages": null,
+					"action": null,
 					"variant": null
 				}
 			]
@@ -59608,7 +61449,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"N",
@@ -59719,7 +61562,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -59809,9 +61654,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -59997,6 +61847,13 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"O",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -60032,9 +61889,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -60077,7 +61939,7 @@
 					"entries": [
 						"When a creature starts its turn within 30 feet of the umber hulk and is able to see the umber hulk's eyes, the umber hulk can magically force it to make a {@dc 15} Charisma saving throw, unless the umber hulk is {@condition incapacitated}.",
 						"On a failed saving throw, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does during that turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action but uses all its movement to move in a random direction. On a 7 or 8, the creature makes one melee attack against a random creature, or it does nothing if no creature is within reach.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the umber hulk until the start of its next turn, when it can avert its eyes again. If the creature looks at the umber hulk in the meantime, it must immediately make the save."
+						"Unless {@quickref Surprise|PHB|3|0|surprised}, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the umber hulk until the start of its next turn, when it can avert its eyes again. If the creature looks at the umber hulk in the meantime, it must immediately make the save."
 					]
 				},
 				{
@@ -60159,7 +62021,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -60380,9 +62244,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -60574,6 +62443,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -60623,7 +62493,9 @@
 					"source": "TCE"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -60750,6 +62622,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -60765,7 +62638,9 @@
 					"source": "RoT"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -61011,10 +62886,15 @@
 				"N",
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"N"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -61033,7 +62913,9 @@
 			"name": "Vampire Warrior",
 			"source": "MM",
 			"page": 298,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -61238,6 +63120,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -61312,9 +63195,23 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -61428,7 +63325,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"N",
@@ -61488,7 +63387,7 @@
 				{
 					"name": "Entangling Plants {@recharge 5}",
 					"entries": [
-						"Grasping roots and vines sprout in a 15-foot radius centered on the blight, withering away after 1 minute. For the duration, that area is difficult terrain for nonplant creatures. In addition, each creature of the blight's choice in that area when the plants appear must succeed on a {@dc 12} Strength saving throw or become {@condition restrained}. A creature can use its action to make a {@dc 12} Strength check, freeing it self or another entangled creature within reach on a success."
+						"Grasping roots and vines sprout in a 15-foot radius centered on the blight, withering away after 1 minute. For the duration, that area is {@quickref difficult terrain||3} for nonplant creatures. In addition, each creature of the blight's choice in that area when the plants appear must succeed on a {@dc 12} Strength saving throw or become {@condition restrained}. A creature can use its action to make a {@dc 12} Strength check, freeing itself or another entangled creature within reach on a success."
 					]
 				}
 			],
@@ -61544,9 +63443,14 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -61660,7 +63564,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -61839,7 +63745,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -61939,9 +63847,14 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -62155,9 +64068,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -62262,9 +64180,17 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -62416,9 +64342,17 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -62538,7 +64472,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -62613,7 +64549,9 @@
 					"source": "EGW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -62787,7 +64725,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -62967,7 +64907,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -63115,9 +65057,14 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -63315,7 +65262,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -63475,7 +65424,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -63607,7 +65558,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -63699,9 +65650,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -63711,7 +65667,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -63822,6 +65778,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RNG",
 				"RW"
@@ -63874,9 +65831,17 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -63956,7 +65921,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The will-o'-wisp can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -64028,9 +65993,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "DoSI"
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -64153,7 +66123,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -64303,7 +66275,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -64379,7 +66353,8 @@
 			"conditionInflict": [
 				"prone"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Worg",
@@ -64407,7 +66382,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -64547,9 +66524,17 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -64618,7 +66603,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The wraith can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -64664,6 +66649,7 @@
 				"O"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -64700,9 +66686,14 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -64803,7 +66794,9 @@
 					"source": "WDMM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -64938,9 +66931,14 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -65071,7 +67069,9 @@
 					"source": "CRCotN"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -65252,6 +67252,9 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -65292,7 +67295,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -65444,7 +67449,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -65515,9 +67520,14 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -65661,7 +67671,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -65727,7 +67737,9 @@
 					"source": "SKT"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -65897,7 +67909,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -65971,7 +67983,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -66149,7 +68163,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -66210,7 +68224,9 @@
 					"source": "SKT"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -66380,7 +68396,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -66433,7 +68449,9 @@
 			"source": "MM",
 			"page": 115,
 			"srd": true,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -66620,7 +68638,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -66695,7 +68713,9 @@
 					"source": "RMBRE"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -66851,7 +68871,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -66925,9 +68945,20 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -67079,7 +69110,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -67129,7 +69160,9 @@
 			"name": "Young Red Shadow Dragon",
 			"source": "MM",
 			"page": 85,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -67304,7 +69337,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -67367,7 +69400,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -67453,9 +69488,14 @@
 			"otherSources": [
 				{
 					"source": "SKT"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -67625,7 +69665,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -67696,7 +69736,9 @@
 					"source": "IDRotF"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -67753,7 +69795,7 @@
 				{
 					"name": "Ice Walk",
 					"entries": [
-						"The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement."
+						"The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, {@quickref difficult terrain||3} composed of ice or snow doesn't cost it extra movement."
 					]
 				}
 			],
@@ -67849,7 +69891,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -67925,7 +69967,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -68117,7 +70161,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -68309,7 +70355,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -68489,7 +70537,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -68701,7 +70751,9 @@
 					"source": "CM"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -68824,6 +70876,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"I"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -68896,9 +70951,20 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "DoSI"
+				},
+				{
+					"source": "DSotDQ"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",

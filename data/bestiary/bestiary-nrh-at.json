@@ -122,7 +122,8 @@
 						}
 					]
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Maude",
@@ -141,7 +142,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Mr. Greystone",
@@ -149,7 +151,9 @@
 			"isNamedCreature": true,
 			"source": "NRH-AT",
 			"page": 13,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -248,7 +252,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

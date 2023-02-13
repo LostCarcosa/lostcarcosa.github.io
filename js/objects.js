@@ -38,14 +38,21 @@ class ObjectsSublistManager extends SublistManager {
 class ObjectsPage extends ListPage {
 	constructor () {
 		const pageFilter = new PageFilterObjects();
+		const pFnGetFluff = Renderer.object.pGetFluff.bind(Renderer.object);
+
 		super({
-			dataSource: "data/objects.json",
+			dataSource: DataUtil.object.loadJSON.bind(DataUtil.object),
+			dataSourceFluff: DataUtil.objectFluff.loadJSON.bind(DataUtil.objectFluff),
+
+			pFnGetFluff,
 
 			pageFilter,
 
 			listClass: "objects",
 
 			dataProps: ["object"],
+
+			listSyntax: new ListSyntaxObjects({fnGetDataList: () => this._dataList, pFnGetFluff}),
 		});
 
 		this._$dispToken = null;
@@ -64,7 +71,7 @@ class ObjectsPage extends ListPage {
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
 			<span class="bold col-8 pl-0">${obj.name}</span>
 			<span class="col-2 text-center">${size}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(obj.source)} pr-0" title="${Parser.sourceJsonToFull(obj.source)}" ${BrewUtil2.sourceJsonToStyle(obj.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(obj.source)} pr-0" title="${Parser.sourceJsonToFull(obj.source)}" ${Parser.sourceJsonToStyle(obj.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -87,15 +94,39 @@ class ObjectsPage extends ListPage {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
-		FilterBox.selectFirstVisible(this._dataList);
+	_tabTitleStats = "Stats";
+
+	async _pDoLoadHash (id) {
+		const ent = this._dataList[id];
+
+		const tabMetaStats = new Renderer.utils.TabButton({
+			label: this._tabTitleStats,
+			fnChange: () => {
+				this._$dispToken.showVe();
+			},
+			fnPopulate: () => this._renderStatblock_doBuildStatsTab(ent),
+			isVisible: true,
+		});
+
+		const tabMetasAdditional = this._renderStats_getTabMetasAdditional({ent});
+
+		Renderer.utils.bindTabButtons({
+			tabButtons: [tabMetaStats, ...tabMetasAdditional],
+			tabLabelReference: [tabMetaStats, ...tabMetasAdditional].map(it => it.label),
+			$wrpTabs: this._$wrpTabs,
+			$pgContent: this._$pgContent,
+		});
+
+		this._updateSelected();
+
+		await this._renderStats_pBuildFluffTabs({
+			ent,
+			tabMetaStats,
+			tabMetasAdditional,
+		});
 	}
 
-	_doLoadHash (id) {
-		const obj = this._dataList[id];
-
+	_renderStatblock_doBuildStatsTab (obj) {
 		const renderStack = [];
 
 		if (obj.entries) this._renderer.recursiveRender({entries: obj.entries}, renderStack, {depth: 2});
@@ -110,16 +141,14 @@ class ObjectsPage extends ListPage {
 			const imgLink = Renderer.object.getTokenUrl(obj);
 			this._$dispToken.append(`<a href="${imgLink}" target="_blank" rel="noopener noreferrer"><img src="${imgLink}" id="token_image" class="token" alt="Token Image: ${(obj.name || "").qq()}" loading="lazy"></a>`);
 		}
-
-		this._updateSelected();
 	}
 
-	_getSearchCache (entity) {
-		if (!entity.entries && !entity.actionEntries) return "";
-		const ptrOut = {_: ""};
-		this._getSearchCache_handleEntryProp(entity, "entries", ptrOut);
-		this._getSearchCache_handleEntryProp(entity, "actionEntries", ptrOut);
-		return ptrOut._;
+	_renderStats_onTabChangeStats () {
+		this._$dispToken.showVe();
+	}
+
+	_renderStats_onTabChangeFluff () {
+		this._$dispToken.hideVe();
 	}
 }
 

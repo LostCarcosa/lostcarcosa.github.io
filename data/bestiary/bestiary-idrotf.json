@@ -13,7 +13,10 @@
 				"SKT": "IDRotF",
 				"VRGR": "IDRotF"
 			}
-		}
+		},
+		"internalCopies": [
+			"monster"
+		]
 	},
 	"monster": [
 		{
@@ -22,112 +25,28 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 169,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"goliath"
-				]
-			},
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				{
-					"ac": 12,
-					"from": [
-						"{@item hide armor|PHB}"
+			"_copy": {
+				"name": "Goliath Warrior",
+				"source": "IDRotF",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the goliath",
+						"with": "Aruk",
+						"flags": "i"
+					},
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"insight": 1,
+								"medicine": 1
+							}
+						}
 					]
 				}
-			],
-			"hp": {
-				"average": 67,
-				"formula": "9d8 + 27"
 			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 18,
-			"dex": 11,
-			"con": 16,
-			"int": 10,
-			"wis": 15,
-			"cha": 10,
-			"skill": {
-				"athletics": "+6",
-				"insight": "+4",
-				"medicine": "+4",
-				"perception": "+4",
-				"survival": "+4"
-			},
-			"passive": 14,
-			"resist": [
-				"cold"
-			],
-			"languages": [
-				"Common",
-				"Giant"
-			],
-			"cr": "3",
-			"trait": [
-				{
-					"name": "Mountain Born",
-					"entries": [
-						"Aruk is acclimated to high altitude, including elevations above 20,000 feet."
-					]
-				},
-				{
-					"name": "Powerful Build",
-					"entries": [
-						"Aruk counts as one size larger when determining his carrying capacity and the weight he can push, drag, or lift."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Aruk makes two attacks with his greataxe or hurls two javelins."
-					]
-				},
-				{
-					"name": "Greataxe",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d12 + 4}) slashing damage."
-					]
-				},
-				{
-					"name": "Javelin",
-					"entries": [
-						"{@atk mw,rw} {@hit 6} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Stone's Endurance (Recharges after a Short or Long Rest)",
-					"entries": [
-						"When Aruk takes damage, it reduces the damage taken by 9 ({@dice 1d12 + 3})."
-					]
-				}
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"GI"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
-			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -136,7 +55,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 275,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -220,7 +141,7 @@
 				{
 					"name": "Divine Being",
 					"entries": [
-						"Auril can't be surprised and can't be changed into another form against her will."
+						"Auril can't be {@quickref Surprise|PHB|3|0|surprised} and can't be changed into another form against her will."
 					]
 				},
 				{
@@ -296,7 +217,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD",
@@ -312,6 +234,15 @@
 			"damageTags": [
 				"C",
 				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
 			],
 			"spellcastingTags": [
 				"I"
@@ -329,7 +260,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 277,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -396,7 +329,7 @@
 				{
 					"name": "Divine Being",
 					"entries": [
-						"Auril can't be surprised and can't be changed into another form against her will."
+						"Auril can't be {@quickref Surprise|PHB|3|0|surprised} and can't be changed into another form against her will."
 					]
 				},
 				{
@@ -484,7 +417,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD",
@@ -517,7 +451,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 278,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -590,7 +526,7 @@
 				{
 					"name": "Divine Being",
 					"entries": [
-						"Auril can't be surprised and can't be changed into another form against her will."
+						"Auril can't be {@quickref Surprise|PHB|3|0|surprised} and can't be changed into another form against her will."
 					]
 				},
 				{
@@ -666,7 +602,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B",
@@ -697,7 +634,9 @@
 			"isNpc": true,
 			"source": "IDRotF",
 			"page": 269,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -856,6 +795,12 @@
 				"C",
 				"F"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -873,8 +818,9 @@
 			"name": "Awakened White Moose",
 			"source": "IDRotF",
 			"page": 82,
-			"_isCopy": true,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"N",
@@ -965,115 +911,65 @@
 		},
 		{
 			"name": "Battlehammer Dwarf",
+			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 107,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"dwarf"
-				]
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_trait": {
+					"name": "Mountain Dwarf",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "scout",
+						"with": "dwarf"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Longbow",
+							"items": {
+								"name": "Light Crossbow",
+								"entries": [
+									"{@atk rw} {@hit 4} to hit, ranged 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Shortsword",
+							"items": {
+								"name": "Handaxe",
+								"entries": [
+									"{@atk mw,rw} {@hit 2} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}3 ({@damage 1d6 + 0}) slashing damage."
+								]
+							}
+						}
+					]
+				}
 			},
 			"alignment": [
 				"L",
 				"G"
 			],
-			"ac": [
-				{
-					"ac": 13,
-					"from": [
-						"{@item leather armor|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 16,
-				"formula": "3d8 + 3"
-			},
-			"speed": {
-				"walk": 25
-			},
-			"str": 11,
-			"dex": 14,
-			"con": 12,
-			"int": 11,
-			"wis": 13,
-			"cha": 11,
-			"skill": {
-				"nature": "+4",
-				"perception": "+5",
-				"stealth": "+6",
-				"survival": "+5"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 15,
-			"resist": [
-				"poison"
-			],
-			"languages": [
-				"Common",
-				"Dwarvish"
-			],
-			"cr": "1/2",
-			"trait": [
-				{
-					"name": "Keen Hearing and Sight",
-					"entries": [
-						"The dwarf has advantage on Wisdom (Perception) checks that rely on hearing or sight."
-					]
-				},
-				{
-					"name": "Dwarven Resilience",
-					"entries": [
-						"The dwarf has advantage on saving throws against poison and resistance against poison damage."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The dwarf makes two melee attacks or two ranged attacks."
-					]
-				},
-				{
-					"name": "Handaxe",
-					"entries": [
-						"{@atk mw,rw} {@hit 2} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}3 ({@damage 1d6 + 0}) piercing damage."
-					]
-				},
-				{
-					"name": "Light Crossbow",
-					"entries": [
-						"{@atk rw} {@hit 4} to hit, ranged 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Keen Senses"
-			],
 			"senseTags": [
 				"D"
 			],
-			"actionTags": [
-				"Multiattack"
-			],
 			"languageTags": [
 				"C",
-				"D"
-			],
-			"damageTags": [
-				"P"
+				"D",
+				"X"
 			],
 			"miscTags": [
 				"MW",
 				"RNG",
 				"RW",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Bjornhild Solvigsdottir",
@@ -1081,7 +977,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 306,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1177,7 +1075,9 @@
 			"name": "Chardalyn Berserker",
 			"source": "IDRotF",
 			"page": 280,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"alignment": [
 				"C",
@@ -1276,7 +1176,9 @@
 			"name": "Chardalyn Dragon",
 			"source": "IDRotF",
 			"page": 281,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -1407,7 +1309,8 @@
 			"traitTags": [
 				"Immutable Form",
 				"Magic Resistance",
-				"Siege Monster"
+				"Siege Monster",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -1437,234 +1340,79 @@
 			"name": "Chimeric Baboon",
 			"source": "IDRotF",
 			"page": 246,
-			"_isCopy": true,
-			"size": "S",
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 3,
-				"formula": "1d6"
-			},
-			"speed": {
-				"walk": 30,
-				"climb": 30
-			},
-			"str": 8,
-			"dex": 14,
-			"con": 11,
-			"int": 4,
-			"wis": 12,
-			"cha": 6,
-			"passive": 11,
-			"cr": "0",
-			"trait": [
-				{
-					"name": "Pack Tactics",
-					"entries": [
-						"The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
-					]
+			"_copy": {
+				"name": "Baboon",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Bite",
+						"items": {
+							"name": "Bite",
+							"entries": [
+								"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}1 ({@damage 1d4 - 1}) piercing damage, plus an extra 3 ({@damage 1d6}) poison damage."
+							]
+						}
+					}
 				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}1 ({@damage 1d4 - 1}) piercing damage, plus an extra 3 ({@damage 1d6}) poison damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Pack Tactics"
-			],
-			"damageTags": [
-				"I",
-				"P"
-			],
-			"miscTags": [
-				"MW"
-			]
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Chimeric Cat",
 			"source": "IDRotF",
 			"page": 246,
-			"_isCopy": true,
-			"size": "T",
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 2,
-				"formula": "1d4"
-			},
-			"speed": {
-				"walk": 40,
-				"climb": 30
-			},
-			"str": 3,
-			"dex": 15,
-			"con": 10,
-			"int": 3,
-			"wis": 12,
-			"cha": 7,
-			"skill": {
-				"perception": "+3",
-				"stealth": "+4"
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
 			},
 			"senses": [
 				"blindsight 60 ft.",
 				"tremorsense 60 ft."
 			],
-			"passive": 13,
-			"cr": "0",
-			"trait": [
-				{
-					"name": "Keen Smell",
-					"entries": [
-						"The cat has advantage on Wisdom (Perception) checks that rely on smell."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Keen Senses"
-			],
 			"senseTags": [
 				"B",
 				"T"
 			],
-			"damageTags": [
-				"S"
-			],
-			"miscTags": [
-				"MW"
-			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Chimeric Fox",
 			"source": "IDRotF",
 			"page": 246,
-			"_isCopy": true,
-			"size": "T",
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 2,
-				"formula": "1d4"
-			},
-			"speed": {
-				"walk": 30,
-				"burrow": 5
-			},
-			"str": 2,
-			"dex": 16,
-			"con": 11,
-			"int": 3,
-			"wis": 12,
-			"cha": 6,
-			"skill": {
-				"perception": "+3",
-				"stealth": "+5"
-			},
-			"passive": 13,
-			"cr": "0",
-			"trait": [
-				{
-					"name": "Keen Hearing",
-					"entries": [
-						"The fox has advantage on Wisdom (Perception) checks that rely on hearing."
-					]
-				},
-				{
-					"name": "Chimeric Creation",
-					"entries": [
-						"The fox has fur that changes color to match its surroundings, giving it advantage on Dexterity (Stealth) checks."
-					]
+			"_copy": {
+				"name": "Fox",
+				"source": "IDRotF",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Chimeric Creation",
+							"entries": [
+								"The fox has fur that changes color to match its surroundings, giving it advantage on Dexterity (Stealth) checks."
+							]
+						}
+					}
 				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}1 piercing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Keen Senses"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW"
-			],
+			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Chimeric Hare",
 			"source": "IDRotF",
 			"page": 246,
-			"_isCopy": true,
-			"size": "T",
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 1,
-				"formula": "1d4 - 1"
+			"_copy": {
+				"name": "Hare",
+				"source": "IDRotF"
 			},
 			"speed": {
 				"walk": 20,
 				"burrow": 5,
 				"fly": 30
 			},
-			"str": 1,
-			"dex": 17,
-			"con": 9,
-			"int": 2,
-			"wis": 11,
-			"cha": 4,
-			"skill": {
-				"perception": "+2",
-				"stealth": "+5"
-			},
-			"passive": 12,
-			"cr": "0",
-			"trait": [
-				{
-					"name": "Escape",
-					"entries": [
-						"The hare can take the Dash, Disengage, or Hide action as a bonus action on each of its turns."
-					]
-				}
-			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1685,72 +1433,43 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Chimeric Weasel",
 			"source": "IDRotF",
 			"page": 246,
-			"_isCopy": true,
-			"size": "T",
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 1,
-				"formula": "1d4 - 1"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 3,
-			"dex": 16,
-			"con": 8,
-			"int": 2,
-			"wis": 12,
-			"cha": 3,
-			"skill": {
-				"perception": "+3",
-				"stealth": "+5"
-			},
-			"passive": 13,
-			"cr": "0",
-			"trait": [
-				{
-					"name": "Keen Hearing and Smell",
-					"entries": [
-						"The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell."
-					]
-				},
-				{
-					"name": "Chimeric Creation",
-					"entries": [
-						"The weasel has glowing eyes that emit bright light out in a 20-foot radius and dim light for an additional 20 feet."
-					]
+			"_copy": {
+				"name": "Weasel",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Chimeric Creation",
+							"entries": [
+								"The weasel has glowing eyes that emit bright light out in a 20-foot radius and dim light for an additional 20 feet."
+							]
+						}
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Bite",
+						"items": {
+							"name": "Bite",
+							"entries": [
+								"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+							]
+						}
+					}
 				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Keen Senses"
-			],
-			"damageTags": [
-				"P"
-			],
+			},
 			"miscTags": [
 				"AOE",
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Chwinga",
@@ -1768,7 +1487,9 @@
 			"name": "Coldlight Walker",
 			"source": "IDRotF",
 			"page": 284,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -1855,6 +1576,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -1880,7 +1604,9 @@
 			"name": "Demos Magen",
 			"source": "IDRotF",
 			"page": 300,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1962,7 +1688,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -1984,162 +1711,13 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Dzaan",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "IDRotF",
-			"page": 270,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"human"
-				]
-			},
-			"alignment": [
-				"L",
-				"E"
-			],
-			"ac": [
-				10
-			],
-			"hp": {
-				"average": 49,
-				"formula": "9d8 + 9"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 10,
-			"dex": 11,
-			"con": 12,
-			"int": 16,
-			"wis": 13,
-			"cha": 15,
-			"save": {
-				"int": "+5",
-				"wis": "+3"
-			},
-			"skill": {
-				"arcana": "+5",
-				"deception": "+4",
-				"history": "+5"
-			},
-			"passive": 11,
-			"languages": [
-				"Abyssal",
-				"Common",
-				"Giant",
-				"Infernal"
-			],
-			"cr": "4",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"headerEntries": [
-						"Dzaan is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 13}, {@hit 5} to hit with spell attacks). He has the following wizard spells prepared:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell acid splash}*",
-								"{@spell light}",
-								"{@spell minor illusion}",
-								"{@spell shocking grasp}*"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell detect magic}",
-								"{@spell disguise self}",
-								"{@spell magic missile}*"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell invisibility}",
-								"{@spell levitate}",
-								"{@spell phantasmal force}"
-							]
-						},
-						"3": {
-							"slots": 3,
-							"spells": [
-								"{@spell fireball}",
-								"{@spell sending}",
-								"{@spell slow}"
-							]
-						},
-						"4": {
-							"slots": 3,
-							"spells": [
-								"{@spell arcane eye}",
-								"{@spell confusion}"
-							]
-						},
-						"5": {
-							"slots": 1,
-							"spells": [
-								"{@spell animate objects}"
-							]
-						}
-					},
-					"footerEntries": [
-						"*See \"Actions\" below."
-					],
-					"ability": "int"
-				}
-			],
-			"action": [
-				{
-					"name": "Shocking Grasp (Cantrip)",
-					"entries": [
-						"{@atk ms} {@hit 5} to hit, reach 5 ft., one creature (the attack roll has advantage if the target is wearing armor made of metal). {@h}9 ({@damage 2d8}) lightning damage, and the target can't take reactions until the start of his next turn."
-					]
-				},
-				{
-					"name": "Acid Splash (Cantrip)",
-					"entries": [
-						"Dzaan hurls a bubble of acid at one creature he can see within 60 feet of it, or at two such creatures that are within 5 feet of each other. A target must succeed on a {@dc 13} Dexterity saving throw or take 7 ({@damage 2d6}) acid damage."
-					]
-				},
-				{
-					"name": "Magic Missile (1st-Level Spell; Requires a Spell Slot)",
-					"entries": [
-						"Dzaan creates three darts of magical force. Each dart unerringly strikes one creature Dzaan can see within 120 feet of it, dealing 3 ({@damage 1d4 + 1}) force damage. If Dzaan casts this spell using a 2nd-level spell slot, he creates one more dart."
-					]
-				}
-			],
-			"languageTags": [
-				"AB",
-				"C",
-				"GI",
-				"I"
-			],
-			"damageTags": [
-				"A",
-				"L",
-				"O"
-			],
-			"spellcastingTags": [
-				"CW"
-			],
-			"conditionInflictSpell": [
-				"invisible"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
 			"name": "Dzaan's Simulacrum",
 			"isNpc": true,
 			"source": "IDRotF",
 			"page": 270,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -2247,6 +1825,12 @@
 				"L",
 				"O"
 			],
+			"damageTagsSpell": [
+				"A",
+				"L",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -2289,13 +1873,16 @@
 			"spellcastingTags": [],
 			"miscTags": [],
 			"conditionInflict": [],
-			"conditionInflictSpell": []
+			"conditionInflictSpell": [],
+			"hasToken": true
 		},
 		{
 			"name": "Fox",
 			"source": "IDRotF",
 			"page": 288,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2363,7 +1950,9 @@
 			"name": "Frost Druid",
 			"source": "IDRotF",
 			"page": 288,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2419,7 +2008,7 @@
 				"survival": "+6"
 			},
 			"senses": [
-				"darkvision 60ft. (beast form only)"
+				"darkvision 60 ft. (beast form only)"
 			],
 			"passive": 16,
 			"resist": [
@@ -2527,6 +2116,11 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"R"
+			],
 			"spellcastingTags": [
 				"CD",
 				"F"
@@ -2546,7 +2140,9 @@
 			"name": "Frost Giant Skeleton",
 			"source": "IDRotF",
 			"page": 288,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -2620,6 +2216,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -2649,7 +2248,9 @@
 			"name": "Galvan Magen",
 			"source": "IDRotF",
 			"page": 301,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -2732,7 +2333,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -2754,7 +2356,9 @@
 			"name": "Giant Walrus",
 			"source": "IDRotF",
 			"page": 312,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2833,7 +2437,9 @@
 			"name": "Gnoll Vampire",
 			"source": "IDRotF",
 			"page": 290,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -2971,7 +2577,8 @@
 				"Rampage",
 				"Regeneration",
 				"Shapechanger",
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -2989,6 +2596,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -3003,7 +2611,9 @@
 			"name": "Gnome Ceremorph",
 			"source": "IDRotF",
 			"page": 303,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"A"
@@ -3150,7 +2760,9 @@
 			"name": "Gnome Squidling",
 			"source": "IDRotF",
 			"page": 303,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"U"
@@ -3186,10 +2798,10 @@
 					"headerEntries": [
 						"The squidling's innate spellcasting ability is Intelligence (spell save {@dc 7}). It can innately cast {@spell levitate} at will, requiring no components."
 					],
-					"ability": "int",
 					"will": [
 						"{@spell levitate}"
 					],
+					"ability": "int",
 					"hidden": [
 						"will"
 					]
@@ -3262,7 +2874,9 @@
 			"name": "Goliath Warrior",
 			"source": "IDRotF",
 			"page": 292,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3373,7 +2987,9 @@
 			"name": "Goliath Werebear",
 			"source": "IDRotF",
 			"page": 293,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3531,8 +3147,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 176,
-			"_isCopy": true,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3632,6 +3249,9 @@
 			"damageTags": [
 				"I"
 			],
+			"damageTagsSpell": [
+				"I"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -3649,7 +3269,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 305,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3756,7 +3378,9 @@
 			"name": "Hare",
 			"source": "IDRotF",
 			"page": 294,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -3801,137 +3425,32 @@
 			"name": "Headless Iron Golem",
 			"source": "IDRotF",
 			"page": 244,
-			"_isCopy": true,
-			"size": "L",
-			"type": "construct",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 20,
-					"from": [
-						"natural armor"
-					]
+			"_copy": {
+				"name": "Iron Golem",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Headless",
+							"entries": [
+								"The golem is {@condition blinded} and {@condition deafened}, giving it disadvantage on all its attack rolls, and it can't use its Poison Breath."
+							]
+						}
+					},
+					"action": {
+						"mode": "removeArr",
+						"names": "Poison Breath {@recharge 5}"
+					}
 				}
-			],
+			},
 			"hp": {
 				"average": 150,
 				"formula": "10d10 + 50"
 			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 24,
-			"dex": 9,
-			"con": 20,
-			"int": 3,
-			"wis": 11,
-			"cha": 1,
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 10,
-			"immune": [
-				"fire",
-				"poison",
-				"psychic",
-				{
-					"immune": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks that aren't adamantine",
-					"cond": true
-				}
-			],
-			"conditionImmune": [
-				"charmed",
-				"exhaustion",
-				"frightened",
-				"paralyzed",
-				"petrified",
-				"poisoned"
-			],
-			"languages": [
-				"understands the languages of its creator but can't speak"
-			],
 			"cr": "10",
-			"trait": [
-				{
-					"name": "Fire Absorption",
-					"entries": [
-						"Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt."
-					]
-				},
-				{
-					"name": "Immutable Form",
-					"entries": [
-						"The golem is immune to any spell or effect that would alter its form."
-					]
-				},
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"The golem has advantage on saving throws against spells and other magical effects."
-					]
-				},
-				{
-					"name": "Magic Weapons",
-					"entries": [
-						"The golem's weapon attacks are magical."
-					]
-				},
-				{
-					"name": "Headless",
-					"entries": [
-						"It is {@condition blinded} and {@condition deafened}, giving it disadvantage on all its attack rolls, and it can't use its Poison Breath."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The golem makes two melee attacks."
-					]
-				},
-				{
-					"name": "Slam",
-					"entries": [
-						"{@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}20 ({@damage 3d8 + 7}) bludgeoning damage."
-					]
-				},
-				{
-					"name": "Sword",
-					"entries": [
-						"{@atk mw} {@hit 13} to hit, reach 10 ft., one target. {@h}23 ({@damage 3d10 + 7}) slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Damage Absorption",
-				"Immutable Form",
-				"Magic Resistance",
-				"Magic Weapons"
-			],
-			"senseTags": [
-				"SD"
-			],
 			"actionTags": [
 				"Multiattack"
-			],
-			"languageTags": [
-				"CS"
-			],
-			"damageTags": [
-				"B",
-				"S"
-			],
-			"miscTags": [
-				"MW",
-				"RCH"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -3942,8 +3461,28 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 215,
-			"_isCopy": true,
-			"size": "M",
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "the gladiator",
+							"with": "Hengar",
+							"flags": "i"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
+			},
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3954,114 +3493,16 @@
 				"N",
 				"G"
 			],
-			"ac": [
-				{
-					"ac": 16,
-					"from": [
-						"{@item studded leather armor|PHB|studded leather}",
-						"{@item shield|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 112,
-				"formula": "15d8 + 45"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 18,
-			"dex": 15,
-			"con": 16,
-			"int": 10,
-			"wis": 12,
-			"cha": 15,
-			"save": {
-				"str": "+7",
-				"dex": "+5",
-				"con": "+6"
-			},
-			"skill": {
-				"athletics": "+10",
-				"intimidation": "+5",
-				"survival": "+5"
-			},
-			"passive": 11,
-			"languages": [
-				"Any one language (usually Common)"
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Brave",
-					"entries": [
-						"Hengar has advantage on saving throws against being {@condition frightened}."
-					]
-				},
-				{
-					"name": "Brute",
-					"entries": [
-						"A melee weapon deals one extra die of its damage when Hengar hits with it (included in the attack)."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Hengar makes three melee attacks or two ranged attacks."
-					]
-				},
-				{
-					"name": "Spear",
-					"entries": [
-						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. and range 20/60 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, or 13 ({@damage 2d8 + 4}) piercing damage if used with two hands to make a melee attack."
-					]
-				},
-				{
-					"name": "Shield Bash",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Parry",
-					"entries": [
-						"Hengar adds 3 to his AC against one melee attack that would hit him. To do so, Hengar must see the attacker and be wielding a melee weapon."
-					]
-				}
-			],
-			"traitTags": [
-				"Brute"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Parry"
-			],
-			"languageTags": [
-				"C"
-			],
-			"damageTags": [
-				"B",
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
-			],
-			"conditionInflict": [
-				"prone"
-			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Hypnos Magen",
 			"source": "IDRotF",
 			"page": 301,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -4133,7 +3574,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"languageTags": [
 				"CS",
@@ -4150,82 +3592,29 @@
 			"name": "Ice Piercer",
 			"source": "IDRotF",
 			"page": 226,
-			"_isCopy": true,
-			"size": "M",
-			"type": "monstrosity",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 15,
-					"from": [
-						"natural armor"
-					]
+			"_copy": {
+				"name": "Piercer",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "piercer",
+						"with": "ice piercer"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Drop",
+						"items": {
+							"name": "Drop",
+							"entries": [
+								"{@atk mw} {@hit 3} to hit, one creature directly underneath the piercer. {@h}10 ({@damage 3d6}) piercing damage plus 10 ({@damage 3d6}) cold damage. Miss: The piercer takes half the normal falling damage for the distance fallen."
+							]
+						}
+					}
 				}
-			],
-			"hp": {
-				"average": 22,
-				"formula": "3d8 + 9"
 			},
-			"speed": {
-				"walk": 5,
-				"climb": 5
-			},
-			"str": 10,
-			"dex": 13,
-			"con": 16,
-			"int": 1,
-			"wis": 7,
-			"cha": 3,
-			"skill": {
-				"stealth": "+5"
-			},
-			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 60 ft."
-			],
-			"passive": 8,
 			"immune": [
 				"cold"
-			],
-			"cr": "1/2",
-			"trait": [
-				{
-					"name": "False Appearance",
-					"entries": [
-						"While the ice piercer remains motionless on the ceiling, it is indistinguishable from a normal stalactite."
-					]
-				},
-				{
-					"name": "Spider Climb",
-					"entries": [
-						"The ice piercer can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Drop",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, one creature directly underneath the ice piercer. {@h}10 ({@damage 3d6}) piercing damage plus 10 ({@damage 3d6}) cold damage. Miss: The ice piercer takes half the normal falling damage for the distance fallen."
-					]
-				}
-			],
-			"traitTags": [
-				"False Appearance",
-				"Spider Climb"
-			],
-			"senseTags": [
-				"B",
-				"D"
-			],
-			"damageTags": [
-				"C",
-				"P"
-			],
-			"miscTags": [
-				"MW"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -4234,7 +3623,9 @@
 			"name": "Ice Troll",
 			"source": "IDRotF",
 			"page": 295,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -4344,7 +3735,9 @@
 			"name": "Icewind Kobold",
 			"source": "IDRotF",
 			"page": 296,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4449,7 +3842,9 @@
 			"name": "Icewind Kobold Zombie",
 			"source": "IDRotF",
 			"page": 297,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -4516,7 +3911,8 @@
 				}
 			],
 			"traitTags": [
-				"Undead Fortitude"
+				"Undead Fortitude",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -4541,7 +3937,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 307,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4657,7 +4055,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 305,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4763,137 +4163,46 @@
 		{
 			"name": "Kadroth",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 42,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"tiefling"
-				]
+			"_copy": {
+				"name": "Cult Fanatic",
+				"source": "MM",
+				"_trait": {
+					"name": "Tiefling",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the fanatic",
+						"with": "Kadroth",
+						"flags": "i"
+					}
+				}
 			},
 			"alignment": [
 				"L",
 				"E"
 			],
-			"ac": [
-				{
-					"ac": 13,
-					"from": [
-						"{@item leather armor|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 33,
-				"formula": "6d8 + 6"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 11,
-			"dex": 14,
-			"con": 12,
-			"int": 10,
-			"wis": 13,
-			"cha": 14,
-			"skill": {
-				"deception": "+4",
-				"persuasion": "+4",
-				"religion": "+2"
-			},
-			"senses": [
-				"darkvision 60"
-			],
-			"passive": 11,
-			"resist": [
-				"fire"
-			],
-			"languages": [
-				"Common",
-				"Infernal"
-			],
-			"cr": "2",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"headerEntries": [
-						"The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 11}, {@hit 3} to hit with spell attacks). The fanatic has the following cleric spells prepared:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell light}",
-								"{@spell sacred flame}",
-								"{@spell thaumaturgy}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell command}",
-								"{@spell inflict wounds}",
-								"{@spell shield of faith}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell hold person}",
-								"{@spell spiritual weapon}"
-							]
-						}
-					},
-					"ability": "wis"
-				}
-			],
-			"trait": [
-				{
-					"name": "Dark Devotion",
-					"entries": [
-						"The fanatic has advantage on saving throws against being {@condition charmed} or {@condition frightened}."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The fanatic makes two melee attacks."
-					]
-				},
-				{
-					"name": "Dagger",
-					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one creature. {@h}4 ({@damage 1d4 + 2}) piercing damage."
-					]
-				}
-			],
 			"senseTags": [
 				"D"
 			],
-			"actionTags": [
-				"Multiattack"
-			],
 			"languageTags": [
 				"C",
-				"I"
+				"I",
+				"X"
 			],
-			"damageTags": [
-				"P"
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
 			],
 			"spellcastingTags": [
-				"CC"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
-			],
-			"conditionInflictSpell": [
-				"paralyzed",
-				"prone"
+				"CC",
+				"I"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -4904,8 +4213,9 @@
 			"isNpc": true,
 			"source": "IDRotF",
 			"page": 243,
-			"_isCopy": true,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -4974,143 +4284,39 @@
 			"name": "Knight of the Black Sword",
 			"source": "IDRotF",
 			"page": 259,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"any race"
-				]
-			},
-			"alignment": [
-				"L",
-				"NX",
-				"C",
-				"NY",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 13,
-					"from": [
-						"{@item leather armor|PHB}"
-					]
+			"_copy": {
+				"name": "Cult Fanatic",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Icy Doom",
+							"entries": [
+								"When the cultist dies, its corpse freezes for 9 days, during which time it can't be thawed, harmed by fire, animated, or raised from the dead."
+							]
+						}
+					}
 				}
-			],
-			"hp": {
-				"average": 33,
-				"formula": "6d8 + 6"
 			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 11,
-			"dex": 14,
-			"con": 12,
-			"int": 10,
-			"wis": 13,
-			"cha": 14,
-			"skill": {
-				"deception": "+4",
-				"persuasion": "+4",
-				"religion": "+2"
-			},
-			"passive": 11,
 			"languages": [
 				"Common",
 				"Infernal"
-			],
-			"cr": "2",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"headerEntries": [
-						"The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 11}, {@hit 3} to hit with spell attacks). The fanatic has the following cleric spells prepared:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell light}",
-								"{@spell sacred flame}",
-								"{@spell thaumaturgy}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell command}",
-								"{@spell inflict wounds}",
-								"{@spell shield of faith}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell hold person}",
-								"{@spell spiritual weapon}"
-							]
-						}
-					},
-					"ability": "wis"
-				}
-			],
-			"trait": [
-				{
-					"name": "Dark Devotion",
-					"entries": [
-						"The fanatic has advantage on saving throws against being {@condition charmed} or {@condition frightened}."
-					]
-				},
-				{
-					"name": "Icy Doom",
-					"entries": [
-						"When the cultist dies, its corpse freezes for 9 days, during which time it can't be thawed, harmed by fire, animated, or raised from the dead."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The fanatic makes two melee attacks."
-					]
-				},
-				{
-					"name": "Dagger",
-					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one creature. {@h}4 ({@damage 1d4 + 2}) piercing damage."
-					]
-				}
-			],
-			"actionTags": [
-				"Multiattack"
 			],
 			"languageTags": [
 				"C",
 				"I"
 			],
-			"damageTags": [
-				"P"
-			],
-			"spellcastingTags": [
-				"CC"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
-			],
-			"conditionInflictSpell": [
-				"paralyzed",
-				"prone"
-			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Knucklehead Trout",
 			"source": "IDRotF",
 			"page": 295,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -5180,7 +4386,9 @@
 			"name": "Kobold Vampire Spawn",
 			"source": "IDRotF",
 			"page": 297,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -5273,7 +4481,8 @@
 			"traitTags": [
 				"Pack Tactics",
 				"Regeneration",
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5287,6 +4496,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -5297,7 +4507,9 @@
 			"name": "Living Bigby's Hand",
 			"source": "IDRotF",
 			"page": 298,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -5384,7 +4596,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5404,7 +4617,9 @@
 			"name": "Living Blade of Disaster",
 			"source": "IDRotF",
 			"page": 299,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -5501,7 +4716,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5517,7 +4733,9 @@
 			"name": "Living Demiplane",
 			"source": "IDRotF",
 			"page": 299,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -5595,7 +4813,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5608,130 +4827,22 @@
 			"name": "Lonelywood Banshee",
 			"source": "IDRotF",
 			"page": 81,
-			"_isCopy": true,
-			"size": "M",
-			"type": "undead",
-			"alignment": [
-				"C",
-				"E"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 58,
-				"formula": "13d8"
-			},
-			"speed": {
-				"walk": 0,
-				"fly": {
-					"number": 40,
-					"condition": "(hover)"
-				},
-				"canHover": true
-			},
-			"str": 1,
-			"dex": 14,
-			"con": 10,
-			"int": 12,
-			"wis": 11,
-			"cha": 17,
-			"save": {
-				"wis": "+2",
-				"cha": "+5"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 10,
-			"resist": [
-				"acid",
-				"fire",
-				"lightning",
-				"thunder",
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
+			"_copy": {
+				"name": "Banshee",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Corrupting Touch",
+						"items": {
+							"name": "Spectral Longbow",
+							"entries": [
+								"{@atk rs} {@hit 4} to hit, range 150/600 ft., one target. {@h}12 ({@damage 3d6 + 2}) necrotic damage."
+							]
+						}
+					}
 				}
-			],
-			"immune": [
-				"cold",
-				"necrotic",
-				"poison"
-			],
-			"conditionImmune": [
-				"charmed",
-				"exhaustion",
-				"frightened",
-				"grappled",
-				"paralyzed",
-				"petrified",
-				"poisoned",
-				"prone",
-				"restrained"
-			],
-			"languages": [
-				"Common",
-				"Elvish"
-			],
-			"cr": "4",
-			"trait": [
-				{
-					"name": "Detect Life",
-					"entries": [
-						"The banshee can magically sense the presence of creatures up to 5 miles away that aren't undead or constructs. She knows the general direction they're in but not their exact locations."
-					]
-				},
-				{
-					"name": "Incorporeal Movement",
-					"entries": [
-						"The banshee can move through other creatures and objects as if they were difficult terrain. She takes 5 ({@damage 1d10}) force damage if she ends her turn inside an object."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Spectral Longbow",
-					"entries": [
-						"{@atk rs} {@hit 4} to hit, range 150/600 ft., one target. {@h}12 ({@damage 3d6 + 2}) necrotic damage."
-					]
-				},
-				{
-					"name": "Horrifying Visage",
-					"entries": [
-						"Each non-undead creature within 60 feet of the banshee that can see her must succeed on a {@dc 13} Wisdom saving throw or be {@condition frightened} for 1 minute. A {@condition frightened} target can repeat the saving throw at the end of each of its turns, with disadvantage if the banshee is within line of sight, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the banshee's Horrifying Visage for the next 24 hours."
-					]
-				},
-				{
-					"name": "Wail (1/Day)",
-					"entries": [
-						"The banshee releases a mournful wail, provided that she isn't in sunlight. This wail has no effect on constructs and undead. All other creatures within 30 feet of her that can hear her must make a {@dc 13} Constitution saving throw. On a failure, a creature drops to 0 hit points. On a success, a creature takes 10 ({@damage 3d6}) psychic damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Incorporeal Movement"
-			],
-			"senseTags": [
-				"D"
-			],
-			"languageTags": [
-				"C",
-				"E"
-			],
-			"damageTags": [
-				"N",
-				"O",
-				"Y"
-			],
-			"conditionInflict": [
-				"frightened"
-			],
+			},
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -5739,10 +4850,31 @@
 		{
 			"name": "Mjenir",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 215,
-			"_isCopy": true,
-			"size": "M",
+			"_copy": {
+				"name": "Druid",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "the druid",
+							"with": "Mjenir",
+							"flags": "i"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
+			},
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5752,98 +4884,16 @@
 			"alignment": [
 				"N"
 			],
-			"ac": [
-				11
-			],
-			"hp": {
-				"average": 27,
-				"formula": "5d8 + 5"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 10,
-			"dex": 12,
-			"con": 13,
-			"int": 12,
-			"wis": 15,
-			"cha": 11,
-			"skill": {
-				"medicine": "+4",
-				"nature": "+3",
-				"perception": "+4",
-				"survival": "+4"
-			},
-			"passive": 14,
-			"languages": [
-				"Druidic plus any two languages"
-			],
-			"cr": "2",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"headerEntries": [
-						"Mjenir is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). He has the following druid spells prepared:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell druidcraft}",
-								"{@spell produce flame}",
-								"{@spell shillelagh}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell entangle}",
-								"{@spell longstrider}",
-								"{@spell speak with animals}",
-								"{@spell thunderwave}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell animal messenger}",
-								"{@spell barkskin}"
-							]
-						}
-					},
-					"ability": "wis"
-				}
-			],
-			"action": [
-				{
-					"name": "Quarterstaff",
-					"entries": [
-						"{@atk mw} {@hit 2} to hit ({@hit 4} to hit with shillelagh), reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage, 4 ({@damage 1d8}) bludgeoning damage if wielded with two hands, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh."
-					]
-				}
-			],
-			"languageTags": [
-				"DU",
-				"X"
-			],
-			"damageTags": [
-				"B"
-			],
-			"spellcastingTags": [
-				"CD"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"restrained"
-			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Mountain Goat",
 			"source": "IDRotF",
 			"page": 304,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -5910,7 +4960,9 @@
 			"isNpc": true,
 			"source": "IDRotF",
 			"page": 272,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -6021,7 +5073,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The ghost can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The ghost can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				}
 			],
@@ -6067,6 +5119,10 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"C",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -6086,8 +5142,9 @@
 			"isNpc": true,
 			"source": "IDRotF",
 			"page": 160,
-			"_isCopy": true,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6192,6 +5249,9 @@
 			"damageTags": [
 				"L"
 			],
+			"damageTagsSpell": [
+				"L"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -6206,236 +5266,55 @@
 			"name": "Reghed Chieftain",
 			"source": "IDRotF",
 			"page": 152,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"any race"
-				]
-			},
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				{
-					"ac": 16,
-					"from": [
-						"{@item hide armor|PHB|hide}",
-						"{@item shield|PHB}"
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "gladiator",
+							"with": "chieftain"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
 					]
 				}
-			],
-			"hp": {
-				"average": 112,
-				"formula": "15d8 + 45"
 			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 18,
-			"dex": 15,
-			"con": 16,
-			"int": 10,
-			"wis": 12,
-			"cha": 15,
-			"save": {
-				"str": "+7",
-				"dex": "+5",
-				"con": "+6"
-			},
-			"skill": {
-				"athletics": "+10",
-				"intimidation": "+5",
-				"survival": "+5"
-			},
-			"passive": 11,
-			"languages": [
-				"Common"
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Brave",
-					"entries": [
-						"The chieftain has advantage on saving throws against being {@condition frightened}."
-					]
-				},
-				{
-					"name": "Brute",
-					"entries": [
-						"A melee weapon deals one extra die of its damage when the chieftain hits with it (included in the attack)."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The chieftain makes three melee attacks or two ranged attacks."
-					]
-				},
-				{
-					"name": "Spear",
-					"entries": [
-						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. and range 20/60 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, or 13 ({@damage 2d8 + 4}) piercing damage if used with two hands to make a melee attack."
-					]
-				},
-				{
-					"name": "Shield Bash",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Parry",
-					"entries": [
-						"The chieftain adds 3 to its AC against one melee attack that would hit it. To do so, the chieftain must see the attacker and be wielding a melee weapon."
-					]
-				}
-			],
-			"traitTags": [
-				"Brute"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Parry"
-			],
-			"languageTags": [
-				"C"
-			],
-			"damageTags": [
-				"B",
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
-			],
-			"conditionInflict": [
-				"prone"
-			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Reghed Great Warrior",
 			"source": "IDRotF",
 			"page": 152,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"any race"
-				]
-			},
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				{
-					"ac": 16,
-					"from": [
-						"{@item hide armor|PHB|hide}",
-						"{@item shield|PHB}"
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "gladiator",
+							"with": "great warrior"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
 					]
 				}
-			],
-			"hp": {
-				"average": 112,
-				"formula": "15d8 + 45"
 			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 18,
-			"dex": 15,
-			"con": 16,
-			"int": 10,
-			"wis": 12,
-			"cha": 15,
-			"save": {
-				"str": "+7",
-				"dex": "+5",
-				"con": "+6"
-			},
-			"skill": {
-				"athletics": "+10",
-				"intimidation": "+5",
-				"survival": "+5"
-			},
-			"passive": 11,
-			"languages": [
-				"Common"
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Brave",
-					"entries": [
-						"The great warrior has advantage on saving throws against being {@condition frightened}."
-					]
-				},
-				{
-					"name": "Brute",
-					"entries": [
-						"A melee weapon deals one extra die of its damage when the great warrior hits with it (included in the attack)."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The great warrior makes three melee attacks or two ranged attacks."
-					]
-				},
-				{
-					"name": "Spear",
-					"entries": [
-						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. and range 20/60 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, or 13 ({@damage 2d8 + 4}) piercing damage if used with two hands to make a melee attack."
-					]
-				},
-				{
-					"name": "Shield Bash",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Parry",
-					"entries": [
-						"The great warrior adds 3 to its AC against one melee attack that would hit it. To do so, the great warrior must see the attacker and be wielding a melee weapon."
-					]
-				}
-			],
-			"traitTags": [
-				"Brute"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Parry"
-			],
-			"languageTags": [
-				"C"
-			],
-			"damageTags": [
-				"B",
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
-			],
-			"conditionInflict": [
-				"prone"
-			],
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -6443,102 +5322,37 @@
 			"name": "Reghed Shaman",
 			"source": "IDRotF",
 			"page": 152,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"any race"
-				]
+			"_copy": {
+				"name": "Druid",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "druid",
+							"with": "shaman"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
 			},
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				11
-			],
-			"hp": {
-				"average": 27,
-				"formula": "5d8 + 5"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 10,
-			"dex": 12,
-			"con": 13,
-			"int": 12,
-			"wis": 15,
-			"cha": 11,
-			"skill": {
-				"medicine": "+4",
-				"nature": "+3",
-				"perception": "+4",
-				"survival": "+4"
-			},
-			"passive": 14,
 			"languages": [
 				"Common",
 				"Druidic"
-			],
-			"cr": "2",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"headerEntries": [
-						"The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). It has the following druid spells prepared:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell druidcraft}",
-								"{@spell produce flame}",
-								"{@spell shillelagh}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell entangle}",
-								"{@spell longstrider}",
-								"{@spell speak with animals}",
-								"{@spell thunderwave}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell animal messenger}",
-								"{@spell barkskin}"
-							]
-						}
-					},
-					"ability": "wis"
-				}
-			],
-			"action": [
-				{
-					"name": "Quarterstaff",
-					"entries": [
-						"{@atk mw} {@hit 2} to hit ({@hit 4} to hit with shillelagh), reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage, 4 ({@damage 1d8}) bludgeoning damage if wielded with two hands, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh."
-					]
-				}
 			],
 			"languageTags": [
 				"C",
 				"DU"
 			],
-			"damageTags": [
-				"B"
-			],
 			"spellcastingTags": [
-				"CD"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"restrained"
+				"O"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -6547,75 +5361,35 @@
 			"name": "Reghed Warrior",
 			"source": "IDRotF",
 			"page": 152,
-			"_isCopy": true,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"any race"
-				]
-			},
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				{
-					"ac": 12,
-					"from": [
-						"{@item hide armor|PHB}"
+			"_copy": {
+				"name": "Tribal Warrior",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "tribal warrior",
+							"with": "warrior"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
 					]
 				}
-			],
-			"hp": {
-				"average": 11,
-				"formula": "2d8 + 2"
 			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 13,
-			"dex": 11,
-			"con": 12,
-			"int": 8,
-			"wis": 11,
-			"cha": 8,
 			"skill": {
 				"survival": "+4"
 			},
-			"passive": 10,
 			"languages": [
 				"Common"
 			],
-			"cr": "1/8",
-			"trait": [
-				{
-					"name": "Pack Tactics",
-					"entries": [
-						"The warrior has advantage on an attack roll against a creature if at least one of the warrior's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Spear",
-					"entries": [
-						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
-					]
-				}
-			],
-			"traitTags": [
-				"Pack Tactics"
-			],
 			"languageTags": [
 				"C"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -6635,13 +5409,16 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Seal",
 			"source": "IDRotF",
 			"page": 308,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -6713,8 +5490,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 23,
-			"_isCopy": true,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -6761,10 +5539,10 @@
 					"will": [
 						"{@spell misty step}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -6822,7 +5600,9 @@
 			"name": "Snow Golem",
 			"source": "IDRotF",
 			"page": 308,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -6920,7 +5700,8 @@
 			],
 			"traitTags": [
 				"Damage Absorption",
-				"Immutable Form"
+				"Immutable Form",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -6944,96 +5725,26 @@
 			"name": "Snowy Owlbear",
 			"source": "IDRotF",
 			"page": 309,
-			"_isCopy": true,
-			"size": "L",
-			"type": "monstrosity",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 13,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 59,
-				"formula": "7d10 + 21"
+			"_copy": {
+				"name": "Owlbear",
+				"source": "MM"
 			},
 			"speed": {
 				"walk": 40,
 				"swim": 30
 			},
-			"str": 20,
-			"dex": 12,
-			"con": 17,
-			"int": 3,
-			"wis": 12,
-			"cha": 7,
-			"skill": {
-				"perception": "+3"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 13,
-			"cr": "3",
-			"trait": [
-				{
-					"name": "Keen Sight and Smell",
-					"entries": [
-						"The snowy owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The snowy owlbear makes two attacks: one with its beak and one with its claws."
-					]
-				},
-				{
-					"name": "Beak",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}10 ({@damage 1d10 + 5}) piercing damage."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Keen Senses"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MW"
-			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Spellix Romwod",
 			"isNpc": true,
 			"source": "IDRotF",
 			"page": 144,
-			"_isCopy": true,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7145,6 +5856,14 @@
 				"F",
 				"L"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -7158,7 +5877,9 @@
 			"name": "Sperm Whale",
 			"source": "IDRotF",
 			"page": 309,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -7258,7 +5979,9 @@
 			"name": "Spitting Mimic",
 			"source": "IDRotF",
 			"page": 302,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -7392,108 +6115,32 @@
 			"name": "Telepathic Pentacle",
 			"source": "IDRotF",
 			"page": 244,
-			"_isCopy": true,
-			"size": "H",
-			"type": "monstrosity",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 15,
-					"from": [
-						"natural armor"
-					]
+			"_copy": {
+				"name": "Hydra",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "hydra",
+						"with": "Telepathic Pentacle"
+					}
 				}
-			],
-			"hp": {
-				"average": 172,
-				"formula": "15d12 + 75"
 			},
 			"speed": {
 				"walk": 30,
 				"swim": 30,
 				"climb": 30
 			},
-			"str": 20,
-			"dex": 12,
-			"con": 20,
-			"int": 2,
-			"wis": 10,
-			"cha": 7,
-			"skill": {
-				"perception": "+6"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 16,
-			"cr": "8",
-			"trait": [
-				{
-					"name": "Hold Breath",
-					"entries": [
-						"The Telepathic Pentacle can hold its breath for 1 hour."
-					]
-				},
-				{
-					"name": "Multiple Heads",
-					"entries": [
-						"The Telepathic Pentacle has five heads. While it has more than one head, the Telepathic Pentacle has advantage on saving throws against being {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, and knocked {@condition unconscious}.",
-						"Whenever the Telepathic Pentacle takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the Telepathic Pentacle dies.",
-						"At the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken fire damage since its last turn. The Telepathic Pentacle regains 10 hit points for each head regrown in this way."
-					]
-				},
-				{
-					"name": "Reactive Heads",
-					"entries": [
-						"For each head the Telepathic Pentacle has beyond one, it gets an extra reaction that can be used only for opportunity attacks."
-					]
-				},
-				{
-					"name": "Wakeful",
-					"entries": [
-						"While the Telepathic Pentacle sleeps, at least one of its heads is awake."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The Telepathic Pentacle makes as many bite attacks as it has heads."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}10 ({@damage 1d10 + 5}) piercing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Hold Breath"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RCH"
-			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Tomb Tapper",
 			"source": "IDRotF",
 			"page": 310,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -7596,6 +6243,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"B"
 			],
@@ -7622,27 +6272,27 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Tribal Warrior Spore Servants",
+			"name": "Tribal Warrior Spore Servant",
 			"source": "IDRotF",
 			"page": 52,
-			"_isCopy": true,
-			"size": "M",
+			"_copy": {
+				"name": "Tribal Warrior",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "tribal warrior",
+							"with": "spore servant",
+							"flags": "i"
+						}
+					]
+				}
+			},
 			"type": "plant",
 			"alignment": [
 				"U"
 			],
-			"ac": [
-				{
-					"ac": 12,
-					"from": [
-						"{@item hide armor|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 11,
-				"formula": "2d8 + 2"
-			},
 			"speed": {
 				"walk": 20
 			},
@@ -7655,40 +6305,29 @@
 			"senses": [
 				"blindsight 30 ft. (blind beyond this radius)"
 			],
-			"passive": 10,
 			"conditionImmune": [
 				"blinded",
 				"charmed",
 				"frightened",
 				"paralyzed"
 			],
-			"cr": "1/8",
-			"action": [
-				{
-					"name": "Spear",
-					"entries": [
-						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
-					]
-				}
-			],
+			"languages": null,
+			"trait": null,
+			"traitTags": [],
 			"senseTags": [
 				"B"
 			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
-			]
+			"languageTags": [],
+			"hasToken": true
 		},
 		{
 			"name": "Vellynne Harpell",
 			"isNpc": true,
 			"source": "IDRotF",
 			"page": 273,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7826,6 +6465,10 @@
 			"damageTags": [
 				"N"
 			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -7843,7 +6486,9 @@
 			"name": "Verbeeg Longstrider",
 			"source": "IDRotF",
 			"page": 311,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"N"
@@ -7965,7 +6610,9 @@
 			"name": "Verbeeg Marauder",
 			"source": "IDRotF",
 			"page": 311,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"N",
@@ -8053,7 +6700,9 @@
 			"name": "Walrus",
 			"source": "IDRotF",
 			"page": 312,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -8111,7 +6760,9 @@
 			"isNamedCreature": true,
 			"source": "IDRotF",
 			"page": 287,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -8255,6 +6906,9 @@
 				"O",
 				"P"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -8275,7 +6929,9 @@
 			"name": "Yeti Tyke",
 			"source": "IDRotF",
 			"page": 313,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -8361,81 +7017,45 @@
 			"name": "Young Griffon (Medium)",
 			"source": "IDRotF",
 			"page": 163,
-			"_isCopy": true,
-			"size": "M",
-			"type": "monstrosity",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				12
+			"_copy": {
+				"name": "Griffon",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak",
+							"items": {
+								"name": "Beak",
+								"entries": [
+									"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Claws",
+							"items": {
+								"name": "Claws",
+								"entries": [
+									"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}6 ({@damage 2d4 + 1}) slashing damage."
+								]
+							}
+						}
+					]
+				}
+			},
+			"size": [
+				"M"
 			],
 			"hp": {
 				"average": 32,
 				"formula": "5d6 + 15"
 			},
-			"speed": {
-				"walk": 30,
-				"fly": 80
-			},
 			"str": 12,
 			"dex": 15,
 			"con": 16,
-			"int": 2,
-			"wis": 13,
-			"cha": 8,
-			"skill": {
-				"perception": "+5"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 15,
 			"cr": "1",
-			"trait": [
-				{
-					"name": "Keen Sight",
-					"entries": [
-						"The griffon has advantage on Wisdom (Perception) checks that rely on sight."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The griffon makes two attacks: one with its beak and one with its claws."
-					]
-				},
-				{
-					"name": "Beak",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}6 ({@damage 2d4 + 1}) slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Keen Senses"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MW"
-			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -8444,81 +7064,43 @@
 			"name": "Young Griffon (Small)",
 			"source": "IDRotF",
 			"page": 163,
-			"_isCopy": true,
-			"size": "S",
-			"type": "monstrosity",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				12
+			"_copy": {
+				"name": "Griffon",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak",
+							"items": {
+								"name": "Beak",
+								"entries": [
+									"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4}) piercing damage."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Claws",
+							"items": {
+								"name": "Claws",
+								"entries": [
+									"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4}) slashing damage."
+								]
+							}
+						}
+					]
+				}
+			},
+			"size": [
+				"S"
 			],
 			"hp": {
 				"average": 13,
 				"formula": "2d6 + 6"
 			},
-			"speed": {
-				"walk": 30,
-				"fly": 80
-			},
 			"str": 8,
-			"dex": 15,
-			"con": 16,
-			"int": 2,
-			"wis": 13,
-			"cha": 8,
-			"skill": {
-				"perception": "+5"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 15,
 			"cr": "1/4",
-			"trait": [
-				{
-					"name": "Keen Sight",
-					"entries": [
-						"The griffon has advantage on Wisdom (Perception) checks that rely on sight."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The griffon makes two attacks: one with its beak and one with its claws."
-					]
-				},
-				{
-					"name": "Beak",
-					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4}) piercing damage."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4}) slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Keen Senses"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MW"
-			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -8527,14 +7109,36 @@
 			"name": "Young Griffon (Tiny)",
 			"source": "IDRotF",
 			"page": 163,
-			"_isCopy": true,
-			"size": "T",
-			"type": "monstrosity",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				12
+			"_copy": {
+				"name": "Griffon",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak",
+							"items": {
+								"name": "Beak",
+								"entries": [
+									"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Claws",
+							"items": {
+								"name": "Claws",
+								"entries": [
+									"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 slashing damage."
+								]
+							}
+						}
+					]
+				}
+			},
+			"size": [
+				"T"
 			],
 			"hp": {
 				"average": 5,
@@ -8547,61 +7151,7 @@
 			"str": 2,
 			"dex": 15,
 			"con": 16,
-			"int": 2,
-			"wis": 13,
-			"cha": 8,
-			"skill": {
-				"perception": "+5"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 15,
 			"cr": "0",
-			"trait": [
-				{
-					"name": "Keen Sight",
-					"entries": [
-						"The griffon has advantage on Wisdom (Perception) checks that rely on sight."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The griffon makes two attacks: one with its beak and one with its claws."
-					]
-				},
-				{
-					"name": "Beak",
-					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 piercing damage."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Keen Senses"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MW"
-			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true

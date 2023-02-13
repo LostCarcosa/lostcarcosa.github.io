@@ -1816,7 +1816,7 @@
 									"rows": [
 										[
 											"1",
-											"Rise of a leader of an era"
+											"Rise of a leader or an era"
 										],
 										[
 											"2",
@@ -3825,7 +3825,7 @@
 							"name": "Domains of Dread",
 							"page": 51,
 							"entries": [
-								"In remote corners of the Shadowfell, it is easy to reach horrific demiplanes ruled over by accursed beings of terrible evil. The best known of these is the valley of Barovia, overlooked by the towering spires of Castle Ravenloft and ruled by Count Strahd von Zarovich, the first vampire. Beings of the Shadowfell called the Dark Powers created these domains as prisons these \"darklords,\" and through cruelty or carelessness trapped innocent mortals in these domains as well."
+								"In remote corners of the Shadowfell, it is easy to reach horrific demiplanes ruled over by accursed beings of terrible evil. The best known of these is the valley of Barovia, overlooked by the towering spires of Castle Ravenloft and ruled by Count Strahd von Zarovich, the first vampire. Beings of the Shadowfell called the Dark Powers created these domains as prisons for these \"darklords,\" and through cruelty or carelessness trapped innocent mortals in these domains as well."
 							],
 							"id": "0d2"
 						},
@@ -6568,6 +6568,7 @@
 										{
 											"type": "table",
 											"caption": "XP Thresholds by Character Level",
+											"basicRules": true,
 											"colLabels": [
 												"Character Level",
 												"Easy",
@@ -6812,6 +6813,7 @@
 												{
 													"type": "table",
 													"caption": "Encounter Multipliers",
+													"basicRules": true,
 													"colLabels": [
 														"Number of Monsters",
 														"Multiplier"
@@ -6907,6 +6909,7 @@
 										{
 											"type": "table",
 											"caption": "Adventuring Day XP",
+											"basicRules": true,
 											"colLabels": [
 												"Level",
 												"Adjusted XP per Day per Character"
@@ -7022,7 +7025,7 @@
 								{
 									"type": "list",
 									"items": [
-										"The whole party is surprised, and the enemy isn't.",
+										"The whole party is {@quickref Surprise|PHB|3|0|surprised}, and the enemy isn't.",
 										"The enemy has cover, and the party doesn't.",
 										"The characters are unable to see the enemy.",
 										"The characters are taking damage every round from some environmental effect or magical source, and the enemy isn't.",
@@ -10628,6 +10631,7 @@
 								{
 									"type": "table",
 									"caption": "Precipitation",
+									"srd": true,
 									"colLabels": [
 										"d20",
 										"Precipitation"
@@ -10755,7 +10759,7 @@
 									"name": "Slippery Ice",
 									"page": 110,
 									"entries": [
-										"Slippery ice is difficult terrain. When a creature moves onto slippery ice for the first time on a turn, it must succeed on a DC 10 Dexterity ({@skill Acrobatics}) check or fall {@condition prone}."
+										"Slippery ice is {@quickref difficult terrain||3}. When a creature moves onto slippery ice for the first time on a turn, it must succeed on a DC 10 Dexterity ({@skill Acrobatics}) check or fall {@condition prone}."
 									],
 									"id": "1de"
 								},
@@ -11798,79 +11802,79 @@
 									"rows": [
 										[
 											"2",
-											"Animals on the loose"
+											"{@book Animals on the loose|DMG|5|Animals on the loose}"
 										],
 										[
 											"3",
-											"Announcement"
+											"{@book Announcement|DMG|5|Announcement}"
 										],
 										[
 											"4",
-											"Brawl"
+											"{@book Brawl|DMG|5|Brawl}"
 										],
 										[
 											"5",
-											"Bullies"
+											"{@book Bullies|DMG|5|Bullies}"
 										],
 										[
 											"6",
-											"Companion"
+											"{@book Companion|DMG|5|Companion}"
 										],
 										[
 											"7",
-											"Contest"
+											"{@book Contest|DMG|5|Contest}"
 										],
 										[
 											"8",
-											"Corpse"
+											"{@book Corpse|DMG|5|Corpse}"
 										],
 										[
 											"9",
-											"Draft"
+											"{@book Draft|DMG|5|Draft}"
 										],
 										[
 											"10",
-											"Drunk"
+											"{@book Drunk|DMG|5|Drunk}"
 										],
 										[
 											"11",
-											"Fire"
+											"{@book Fire|DMG|5|Fire}"
 										],
 										[
 											"12",
-											"Found trinket"
+											"{@book Found trinket|DMG|5|Found trinket}"
 										],
 										[
 											"13",
-											"Guard harassment"
+											"{@book Guard harassment|DMG|5|Guard harassment}"
 										],
 										[
 											"14",
-											"Pickpocket"
+											"{@book Pickpocket|DMG|5|Pickpocket}"
 										],
 										[
 											"15",
-											"Procession"
+											"{@book Procession|DMG|5|Procession}"
 										],
 										[
 											"16",
-											"Protest"
+											"{@book Protest|DMG|5|Protest}"
 										],
 										[
 											"17",
-											"Runaway cart"
+											"{@book Runaway cart|DMG|5|Runaway cart}"
 										],
 										[
 											"18",
-											"Shady transaction"
+											"{@book Shady transaction|DMG|5|Shady transaction}"
 										],
 										[
 											"19",
-											"Spectacle"
+											"{@book Spectacle|DMG|5|Spectacle}"
 										],
 										[
 											"20",
-											"Urchin"
+											"{@book Urchin|DMG|5|Urchin}"
 										]
 									]
 								},
@@ -11973,7 +11977,7 @@
 									],
 									"id": "1f6"
 								},
-								"You can determine the trinket by rolling on the Trinket stable in the {@i Player's Handbook}.",
+								"You can determine the trinket by rolling on the {@item Trinket|PHB|Trinkets table} in the {@i Player's Handbook}.",
 								{
 									"type": "entries",
 									"name": "Guard Harassment",
@@ -12400,6 +12404,7 @@
 										{
 											"type": "table",
 											"caption": "Airborne and Waterborne Vehicles",
+											"srd": true,
 											"colLabels": [
 												"Ship",
 												"Cost",
@@ -12571,6 +12576,7 @@
 										{
 											"type": "table",
 											"caption": "Trap Save DCs and Attack Bonuses",
+											"srd": true,
 											"colLabels": [
 												"Trap Danger",
 												"Save DC",
@@ -12602,6 +12608,7 @@
 										{
 											"type": "table",
 											"caption": "Damage Severity by Level",
+											"srd": true,
 											"colLabels": [
 												"Character Level",
 												"Setback",
@@ -14946,6 +14953,7 @@
 												{
 													"type": "table",
 													"caption": "Spell Scroll",
+													"srd": true,
 													"colLabels": [
 														"Spell Level",
 														"Rarity",
@@ -15064,7 +15072,7 @@
 														],
 														[
 															"6",
-															"The spell activates after {@dice 1d12} hours. If the caster was the intended target, the spell takes effect normally. If the caster was not the intended target, the spell goes off in the general direction of the intended target, up to the spell 's maximum range, if the target has moved away."
+															"The spell activates after {@dice 1d12} hours. If the caster was the intended target, the spell takes effect normally. If the caster was not the intended target, the spell goes off in the general direction of the intended target, up to the spell's maximum range, if the target has moved away."
 														]
 													]
 												}
@@ -15291,7 +15299,7 @@
 										],
 										[
 											"17",
-											"Fiend. The item is made of black iron or horn inscribed with runes, and any cloth or leather components are crafted from the hide of fiends. It is warm to the touch and features leering faces or vile runes engraved on its surface. Celestials find the item 's presence repulsive."
+											"Fiend. The item is made of black iron or horn inscribed with runes, and any cloth or leather components are crafted from the hide of fiends. It is warm to the touch and features leering faces or vile runes engraved on its surface. Celestials find the item's presence repulsive."
 										],
 										[
 											"18",
@@ -15337,7 +15345,7 @@
 										],
 										[
 											"5",
-											"Prophecy. The item features in a prophecy: its bearer is destined to play a key role in future events. Someone else who wants to play that role might try to steal the item, or someone who wants to prevent the prophecy from being fulfilled might try to kill the item 's bearer."
+											"Prophecy. The item features in a prophecy: its bearer is destined to play a key role in future events. Someone else who wants to play that role might try to steal the item, or someone who wants to prevent the prophecy from being fulfilled might try to kill the item's bearer."
 										],
 										[
 											"6",
@@ -15403,7 +15411,7 @@
 										],
 										[
 											"10",
-											"Language. The bearer can speak and understand a language of the DM's choice while the item is on the bearer 's person."
+											"Language. The bearer can speak and understand a language of the DM's choice while the item is on the bearer's person."
 										],
 										[
 											"11",
@@ -15469,7 +15477,7 @@
 										],
 										[
 											"3",
-											"Covetous. The item 's bearer becomes obsessed with material wealth."
+											"Covetous. The item's bearer becomes obsessed with material wealth."
 										],
 										[
 											"4",
@@ -16844,15 +16852,15 @@
 										],
 										[
 											"77",
-											"{@item Ioun stone, absorption},"
+											"{@item Ioun stone, absorption}"
 										],
 										[
 											"78",
-											"{@item Ioun stone, agility},"
+											"{@item Ioun stone, agility}"
 										],
 										[
 											"79",
-											"{@item Ioun stone, fortitude},"
+											"{@item Ioun stone, fortitude}"
 										],
 										[
 											"80",
@@ -17277,6 +17285,7 @@
 										{
 											"type": "table",
 											"caption": "Sentient Magic Item Communication",
+											"srd": true,
 											"colLabels": [
 												"d100",
 												"Communication"
@@ -17312,6 +17321,7 @@
 										{
 											"type": "table",
 											"caption": "Sentient Magic Item Senses",
+											"srd": true,
 											"colLabels": [
 												"d4",
 												"Senses"
@@ -17351,6 +17361,7 @@
 										{
 											"type": "table",
 											"caption": "Sentient Magic Item Alignment",
+											"srd": true,
 											"colLabels": [
 												"d100",
 												"Alignment"
@@ -17420,6 +17431,7 @@
 										{
 											"type": "table",
 											"caption": "Sentient Special Purpose",
+											"srd": true,
 											"colLabels": [
 												"d10",
 												"Purpose"
@@ -19181,6 +19193,7 @@
 										{
 											"type": "table",
 											"caption": "Object Armor Class",
+											"srd": true,
 											"colLabels": [
 												"Substance",
 												"AC"
@@ -19232,6 +19245,7 @@
 										{
 											"type": "table",
 											"caption": "Object Hit Points",
+											"srd": true,
 											"colLabels": [
 												"Size",
 												"Fragile",
@@ -19969,11 +19983,11 @@
 									"rows": [
 										[
 											"1",
-											"A large obstacle such as a horse or cart blocks your way. Make a DC 15 Dexterity ({@skill Acrobatics}) check to get past the obstacle. On a failed check, the obstacle counts as 10 feet of difficult terrain."
+											"A large obstacle such as a horse or cart blocks your way. Make a DC 15 Dexterity ({@skill Acrobatics}) check to get past the obstacle. On a failed check, the obstacle counts as 10 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"2",
-											"A crowd blocks your way. Make a DC 10 Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check (your choice) to make your way through the crowd unimpeded. On a failed check, the crowd counts as 10 feet of difficult terrain."
+											"A crowd blocks your way. Make a DC 10 Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check (your choice) to make your way through the crowd unimpeded. On a failed check, the crowd counts as 10 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"3",
@@ -19981,7 +19995,7 @@
 										],
 										[
 											"4",
-											"A maze of barrels, crates, or similar obstacles stands in your way. Make a DC 10 Dexterity ({@skill Acrobatics}) or Intelligence check (your choice) to navigate the maze. On a failed check, the maze counts as 10 feet of difficult terrain."
+											"A maze of barrels, crates, or similar obstacles stands in your way. Make a DC 10 Dexterity ({@skill Acrobatics}) or Intelligence check (your choice) to navigate the maze. On a failed check, the maze counts as 10 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"5",
@@ -19989,15 +20003,15 @@
 										],
 										[
 											"6",
-											"You come upon a pack of dogs fighting over food. Make a DC 10 Dexterity ({@skill Acrobatics}) check to get through the pack unimpeded. On a failed check, you are bitten and take {@dice 1d4} piercing damage, and the dogs count as 5 feet of difficult terrain."
+											"You come upon a pack of dogs fighting over food. Make a DC 10 Dexterity ({@skill Acrobatics}) check to get through the pack unimpeded. On a failed check, you are bitten and take {@dice 1d4} piercing damage, and the dogs count as 5 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"7",
-											"You run into a brawl in progress. Make a DC 15 Strength ({@skill Athletics}), Dexterity ({@skill Acrobatics}), or Charisma ({@skill Intimidation}) check (your choice) to get past the brawlers unimpeded. On a failed check, you take {@dice 2d4} bludgeoning damage, and the brawlers count as 10 feet of difficult terrain."
+											"You run into a brawl in progress. Make a DC 15 Strength ({@skill Athletics}), Dexterity ({@skill Acrobatics}), or Charisma ({@skill Intimidation}) check (your choice) to get past the brawlers unimpeded. On a failed check, you take {@dice 2d4} bludgeoning damage, and the brawlers count as 10 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"8",
-											"A beggar blocks your way. Make a DC 10 Strength ({@skill Athletics}), Dexterity ({@skill Acrobatics}), or Charisma ({@skill Intimidation}) check (your choice) to slip past the beggar. You succeed automatically if you toss the beggar a coin. On a failed check, the beggar counts as 5 feet of difficult terrain."
+											"A beggar blocks your way. Make a DC 10 Strength ({@skill Athletics}), Dexterity ({@skill Acrobatics}), or Charisma ({@skill Intimidation}) check (your choice) to slip past the beggar. You succeed automatically if you toss the beggar a coin. On a failed check, the beggar counts as 5 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"9",
@@ -20027,11 +20041,11 @@
 									"rows": [
 										[
 											"1",
-											"Your path takes you through a rough patch of brush. Make a DC 10 Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check (your choice) to get past the brush. On a failed check, the brush counts as 5 feet of difficult terrain."
+											"Your path takes you through a rough patch of brush. Make a DC 10 Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check (your choice) to get past the brush. On a failed check, the brush counts as 5 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"2",
-											"Uneven ground threatens to slow your progress. Make a DC 10 Dexterity ({@skill Acrobatics}) check to navigate the area. On a failed check, the ground counts as 10 feet of difficult terrain."
+											"Uneven ground threatens to slow your progress. Make a DC 10 Dexterity ({@skill Acrobatics}) check to navigate the area. On a failed check, the ground counts as 10 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"3",
@@ -20039,7 +20053,7 @@
 										],
 										[
 											"4",
-											"A stream, ravine, or rock bed blocks your path. Make a DC 10 Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check (your choice) to cross the impediment. On a failed check, the impediment counts as 10 feet of difficult terrain."
+											"A stream, ravine, or rock bed blocks your path. Make a DC 10 Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check (your choice) to cross the impediment. On a failed check, the impediment counts as 10 feet of {@quickref difficult terrain||3}."
 										],
 										[
 											"5",
@@ -20213,6 +20227,7 @@
 						{
 							"type": "table",
 							"caption": "Poisons",
+							"srd": true,
 							"colLabels": [
 								"Item",
 								"Type",
@@ -20361,8 +20376,8 @@
 							"name": "Going Mad",
 							"page": 259,
 							"entries": [
-								"Various magical effects can inflict madness on an otherwise stable mind. Certain spells, such as contact other plane and symbol, can cause insanity, and you can use the madness rules here instead of the spell effects in the Player's Handbook. Diseases, poisons, and planar effects such as psychic wind or the howling winds of Pandemonium can all inflict madness. Some artifacts can also break the psyche of a character who uses or becomes attuned to them.",
-								"Resisting a madness-inducing effect usually requires a Wisdom or Charisma saving throw. If your game includes the Sanity score (see chapter 9, \"Dungeon Master's Workshop\"), a creature makes a Sanity saving throw instead."
+								"Various magical effects can inflict madness on an otherwise stable mind. Certain spells, such as {@spell contact other plane} and {@spell symbol}, can cause insanity, and you can use the madness rules here instead of the spell effects in the Player's Handbook. Diseases, poisons, and planar effects such as psychic wind or the howling winds of Pandemonium can all inflict madness. Some artifacts can also break the psyche of a character who uses or becomes attuned to them.",
+								"Resisting a madness-inducing effect usually requires a Wisdom or Charisma saving throw. If your game includes the {@variantrule New Ability Scores: Honor and Sanity||Sanity score} (see chapter 9, \"Dungeon Master's Workshop\"), a creature makes a Sanity saving throw instead."
 							],
 							"id": "301"
 						},
@@ -20378,6 +20393,7 @@
 								{
 									"type": "table",
 									"caption": "Short-Term Madness",
+									"srd": true,
 									"colLabels": [
 										"d100",
 										"Effects (lasts 1d10 minutes)"
@@ -20432,6 +20448,7 @@
 								{
 									"type": "table",
 									"caption": "Long-Term Madness",
+									"srd": true,
 									"colLabels": [
 										"d100",
 										"Effects (lasts 1d10 × 10 hours)"
@@ -20451,7 +20468,7 @@
 										],
 										[
 											"21-30",
-											"The character suffers extreme paranoia. The character has disadvantage on Wisdom and Charisma checks"
+											"The character suffers extreme paranoia. The character has disadvantage on Wisdom and Charisma checks."
 										],
 										[
 											"31-40",
@@ -20494,6 +20511,7 @@
 								{
 									"type": "table",
 									"caption": "Indefinite Madness",
+									"srd": true,
 									"colLabels": [
 										"d100",
 										"Flaw (lasts until cured)"
@@ -20878,7 +20896,7 @@
 									"entries": [
 										"If your campaign involves cultures where a rigid code of honor is part of daily life, consider using the Honor score as a means of measuring a character's devotion to that code. This ability fits well in a setting inspired by Asian cultures, such as Kara-Tur in the Forgotten Realms. The Honor ability is also useful in any campaign that revolves around orders of knights.",
 										"Honor measures not only a character's devotion to a code but also the character's understanding of it. The Honor score can also reflect how others perceive a character's honor. A character with a high Honor usually has a reputation that others know about, especially those who have high Honor scores themselves.",
-										"Unlike other abilities, Honor can't be raised with normal ability score increases. Instead, you can award increases to Honor\u2014or impose reductions\u2014based on a character's actions. At the end of an adventure, if you think a character 's actions in the adventure reflected well or poorly on his or her understanding of the code, you can increase or decrease the character's Honor by 1. As with other ability scores, a character's Honor can't exceed 20 or fall below 1.",
+										"Unlike other abilities, Honor can't be raised with normal ability score increases. Instead, you can award increases to Honor\u2014or impose reductions\u2014based on a character's actions. At the end of an adventure, if you think a character's actions in the adventure reflected well or poorly on his or her understanding of the code, you can increase or decrease the character's Honor by 1. As with other ability scores, a character's Honor can't exceed 20 or fall below 1.",
 										{
 											"type": "entries",
 											"name": "Honor Checks",
@@ -20923,7 +20941,7 @@
 									"name": "Sanity Score",
 									"page": 265,
 									"entries": [
-										"Consider using the Sanity score if your campaign revolves around entities of an utterly alien and unspeakable nature, such as Great Cthulhu, whose powers and minions can shatter a character's mind.",
+										"Consider using the {@variantrule New Ability Scores: Honor and Sanity||Sanity score} if your campaign revolves around entities of an utterly alien and unspeakable nature, such as Great Cthulhu, whose powers and minions can shatter a character's mind.",
 										"A character with a high Sanity is level-headed even in the face of insane circumstances, while a character with low Sanity is unsteady, breaking easily when confronted by eldritch horrors that are beyond normal reason.",
 										{
 											"type": "entries",
@@ -21844,7 +21862,7 @@
 								{
 									"type": "list",
 									"items": [
-										"The creature is surprised.",
+										"The creature is {@quickref Surprise|PHB|3|0|surprised}.",
 										"The creature is reduced to half its hit points or fewer for the first time in the battle.",
 										"The creature has no way to harm the opposing side on its turn."
 									]
@@ -21853,7 +21871,7 @@
 								{
 									"type": "list",
 									"items": [
-										"All the creatures in the group are surprised.",
+										"All the creatures in the group are {@quickref Surprise|PHB|3|0|surprised}.",
 										"The group's leader is reduced to 0 hit points, {@condition incapacitated}, taken prisoner, or removed from battle.",
 										"The group is reduced to half its original size with no losses on the opposing side."
 									]
@@ -22312,6 +22330,8 @@
 										{
 											"type": "table",
 											"caption": "Experience Points by Challenge Rating",
+											"basicRules": true,
+											"srd": true,
 											"colLabels": [
 												"CR",
 												"XP"
@@ -22586,6 +22606,8 @@
 												{
 													"type": "table",
 													"caption": "Hit Dice by Size",
+													"srd": true,
+													"basicRules": true,
 													"colLabels": [
 														"Monster Size",
 														"Hit Die",
@@ -24394,7 +24416,7 @@
 							"type": "table",
 							"caption": "Passage Width",
 							"colLabels": [
-								"{@dice d12}/{@dice d20}",
+								"{@dice d12;d20}",
 								"Width"
 							],
 							"colStyles": [
@@ -24649,7 +24671,7 @@
 								]
 							],
 							"footnotes": [
-								"¹ Use the Normal Chamber column on the Chamber Exists table.",
+								"¹ Use the Normal Chamber column on the Chamber Exits table.",
 								"² Use the Large Chamber column on the Chamber Exits table."
 							]
 						},
@@ -25600,7 +25622,7 @@
 										],
 										[
 											"13",
-											"Prison for hold ing captured intruders"
+											"Prison for holding captured intruders"
 										],
 										[
 											"14-15",

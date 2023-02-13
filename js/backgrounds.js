@@ -44,6 +44,8 @@ class BackgroundPage extends ListPage {
 			dataSource: DataUtil.background.loadJSON.bind(DataUtil.background),
 			dataSourceFluff: DataUtil.backgroundFluff.loadJSON.bind(DataUtil.backgroundFluff),
 
+			pFnGetFluff: Renderer.background.pGetFluff.bind(Renderer.background),
+
 			pageFilter,
 
 			listClass: "backgrounds",
@@ -65,7 +67,7 @@ class BackgroundPage extends ListPage {
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
 			<span class="bold col-4 pl-0">${name}</span>
 			<span class="col-6">${bg._skillDisplay}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(bg.source)} pr-0" title="${Parser.sourceJsonToFull(bg.source)}" ${BrewUtil2.sourceJsonToStyle(bg.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(bg.source)} pr-0" title="${Parser.sourceJsonToFull(bg.source)}" ${Parser.sourceJsonToStyle(bg.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -88,55 +90,8 @@ class BackgroundPage extends ListPage {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
-		FilterBox.selectFirstVisible(this._dataList);
-	}
-
-	_doLoadHash (id) {
-		this._$pgContent.empty();
-
-		this._renderer.setFirstSection(true);
-		const bg = this._dataList[id];
-
-		const buildStatsTab = () => {
-			this._$pgContent.append(RenderBackgrounds.$getRenderedBackground(bg));
-		};
-
-		const buildFluffTab = (isImageTab) => {
-			return Renderer.utils.pBuildFluffTab({
-				isImageTab,
-				$content: this._$pgContent,
-				pFnGetFluff: Renderer.background.pGetFluff,
-				entity: bg,
-			});
-		};
-
-		const tabMetas = [
-			new Renderer.utils.TabButton({
-				label: "Traits",
-				fnPopulate: buildStatsTab,
-				isVisible: true,
-			}),
-			new Renderer.utils.TabButton({
-				label: "Info",
-				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(bg, "backgroundFluff"),
-			}),
-			new Renderer.utils.TabButton({
-				label: "Images",
-				fnPopulate: buildFluffTab.bind(null, true),
-				isVisible: Renderer.utils.hasFluffImages(bg, "backgroundFluff"),
-			}),
-		];
-
-		Renderer.utils.bindTabButtons({
-			tabButtons: tabMetas.filter(it => it.isVisible),
-			tabLabelReference: tabMetas.map(it => it.label),
-		});
-
-		this._updateSelected();
+	_renderStats_doBuildStatsTab ({ent}) {
+		this._$pgContent.empty().append(RenderBackgrounds.$getRenderedBackground(ent));
 	}
 }
 

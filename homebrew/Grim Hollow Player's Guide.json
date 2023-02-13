@@ -2615,7 +2615,6 @@
 		}
 	],
 	"subclass": [
-		
 		{
 			"name": "Path of the Primal Spirit",
 			"source": "GHPG",
@@ -4582,8 +4581,7 @@
 			"header": 2,
 			"entries": [
 				"At 18th level, you can produce a number of compounds equal to 7 + your Constitution modifier per long rest.",
-				"Additionally, you can use your bonus action to inject up to three compounds instead of two." 
-				
+				"Additionally, you can use your bonus action to inject up to three compounds instead of two."
 			]
 		},
 		{

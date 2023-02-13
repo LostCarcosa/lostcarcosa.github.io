@@ -2358,7 +2358,7 @@
 									"width": 439,
 									"height": 1000
 								},
-								"See the {@race Half-Orc (Mark of Finding)|ERLW} and {@race Human (Mark of Finding)|ERLW} entries."
+								"See the {@race Half-Orc (Variant; Mark of Finding)|ERLW} and {@race Human (Variant; Mark of Finding)|ERLW} entries."
 							]
 						}
 					]
@@ -6509,9 +6509,15 @@
 								"type": "internal",
 								"path": "book/ERLW/069-map-khorvaire.jpg"
 							},
-							"title": "Map 2.1: the Continent of Khorvaire",
+							"title": "Map 2.1: The Continent of Khorvaire",
 							"width": 5033,
 							"height": 3548,
+							"grid": {
+								"type": "none",
+								"size": 1350,
+								"distance": 1000,
+								"units": "miles"
+							},
 							"imageType": "map"
 						}
 					]
@@ -8285,7 +8291,14 @@
 							"title": "Map 2.2: Islands of Aerenal",
 							"width": 850,
 							"height": 568,
-							"imageType": "map"
+							"grid": {
+								"type": "none",
+								"size": 164,
+								"distance": 300,
+								"units": "miles"
+							},
+							"imageType": "map",
+							"id": "02e"
 						},
 						{
 							"type": "image",
@@ -8293,10 +8306,20 @@
 								"type": "internal",
 								"path": "book/ERLW/083-map-aerenal-large.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2550,
 							"height": 1704,
-							"imageType": "mapPlayer"
+							"imageType": "mapPlayer",
+							"grid": {
+								"type": "none",
+								"size": 492,
+								"distance": 300,
+								"units": "miles"
+							},
+							"mapParent": {
+								"id": "02e",
+								"autoScale": true
+							}
 						}
 					]
 				},
@@ -8891,7 +8914,14 @@
 									"title": "Map 2.3: Continent of Xen'drik",
 									"width": 850,
 									"height": 568,
-									"imageType": "map"
+									"grid": {
+										"type": "none",
+										"size": 150,
+										"distance": 1000,
+										"units": "miles"
+									},
+									"imageType": "map",
+									"id": "02f"
 								},
 								{
 									"type": "image",
@@ -8899,10 +8929,20 @@
 										"type": "internal",
 										"path": "book/ERLW/087-map-xendrik-large.jpg"
 									},
-									"title": "(Player Version)",
+									"title": "Player Version",
 									"width": 2550,
 									"height": 1710,
-									"imageType": "mapPlayer"
+									"grid": {
+										"type": "none",
+										"size": 445,
+										"distance": 1000,
+										"units": "miles"
+									},
+									"imageType": "mapPlayer",
+									"mapParent": {
+										"id": "02f",
+										"autoScale": true
+									}
 								}
 							]
 						},
@@ -13346,7 +13386,14 @@
 													"title": "Map 4.1: Arcane Workshop",
 													"width": 2498,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 115,
+														"offsetX": 57,
+														"offsetY": 37
+													},
+													"imageType": "map",
+													"id": "030"
 												},
 												{
 													"type": "image",
@@ -13354,10 +13401,20 @@
 														"type": "internal",
 														"path": "book/ERLW/107-map41_arcaneworkshop-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2500,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 114,
+														"offsetX": 47,
+														"offsetY": 58
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "030",
+														"autoScale": true
+													}
 												}
 											]
 										},
@@ -13648,7 +13705,11 @@
 													"title": "Map 4.2: Planar Observatory",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square"
+													},
+													"id": "031"
 												},
 												{
 													"type": "image",
@@ -13656,10 +13717,20 @@
 														"type": "internal",
 														"path": "book/ERLW/109-map42_planarobservatory-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetX": 2,
+														"offsetY": 4
+													},
+													"mapParent": {
+														"id": "031",
+														"autoScale": true
+													}
 												}
 											]
 										},
@@ -14086,7 +14157,13 @@
 													"title": "Map 4.3: Ruined Dhakaani Fort",
 													"width": 2945,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 62,
+														"offsetX": 12
+													},
+													"imageType": "map",
+													"id": "032"
 												},
 												{
 													"type": "image",
@@ -14094,10 +14171,18 @@
 														"type": "internal",
 														"path": "book/ERLW/111-map43_ruindhakaanifort-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2945,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 63,
+														"offsetY": 32
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "032"
+													}
 												}
 											]
 										}
@@ -14283,7 +14368,14 @@
 													"title": "Map 4.4: Gatekeeper Seal",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetX": 3,
+														"offsetY": 7
+													},
+													"imageType": "map",
+													"id": "033"
 												},
 												{
 													"type": "image",
@@ -14291,10 +14383,19 @@
 														"type": "internal",
 														"path": "book/ERLW/113-map44_gatekeeperseal-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetX": 3,
+														"offsetY": 7
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "033"
+													}
 												}
 											]
 										}
@@ -15008,7 +15109,14 @@
 													"title": "Map 4.5: Fortified Outpost",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 52,
+														"offsetX": 12,
+														"offsetY": 29
+													},
+													"imageType": "map",
+													"id": "034"
 												},
 												{
 													"type": "image",
@@ -15016,10 +15124,19 @@
 														"type": "internal",
 														"path": "book/ERLW/116-map45_fortifiedoutpost-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2607,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 52,
+														"offsetY": 39
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "034",
+														"autoScale": true
+													}
 												}
 											]
 										}
@@ -15141,7 +15258,14 @@
 													"title": "Map 4.6: Warforged Ossuary",
 													"width": 3063,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 73,
+														"offsetX": -2,
+														"offsetY": -7
+													},
+													"imageType": "map",
+													"id": "035"
 												},
 												{
 													"type": "image",
@@ -15149,10 +15273,20 @@
 														"type": "internal",
 														"path": "book/ERLW/119-map46_warforgedossuary-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 3055,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 73,
+														"offsetX": 27,
+														"offsetY": 37
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "035",
+														"autoScale": true
+													}
 												}
 											]
 										}
@@ -15370,7 +15504,14 @@
 													"title": "Map 4.7: Demon Ruin",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 56,
+														"offsetX": 2,
+														"offsetY": 3
+													},
+													"imageType": "map",
+													"id": "036"
 												},
 												{
 													"type": "image",
@@ -15378,10 +15519,19 @@
 														"type": "internal",
 														"path": "book/ERLW/121-map47_demonruin-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 56,
+														"offsetX": 2,
+														"offsetY": 3
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "036"
+													}
 												}
 											]
 										}
@@ -16158,7 +16308,14 @@
 															"title": "Map 4.8: Fallen Warforged Colossus",
 															"width": 2947,
 															"height": 4000,
-															"imageType": "map"
+															"grid": {
+																"type": "square",
+																"size": 66,
+																"offsetX": 1,
+																"offsetY": 1
+															},
+															"imageType": "map",
+															"id": "037"
 														},
 														{
 															"type": "image",
@@ -16166,10 +16323,19 @@
 																"type": "internal",
 																"path": "book/ERLW/126-map48_fallenwarforge-player.jpg"
 															},
-															"title": "(Player Version)",
+															"title": "Player Version",
 															"width": 2947,
 															"height": 4000,
-															"imageType": "mapPlayer"
+															"grid": {
+																"type": "square",
+																"size": 66,
+																"offsetX": 1,
+																"offsetY": 1
+															},
+															"imageType": "mapPlayer",
+															"mapParent": {
+																"id": "037"
+															}
 														}
 													]
 												}
@@ -16226,7 +16392,14 @@
 													"title": "Map 4.9: Library Vault",
 													"width": 2960,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 97,
+														"offsetX": 50,
+														"offsetY": 74
+													},
+													"imageType": "map",
+													"id": "038"
 												},
 												{
 													"type": "image",
@@ -16234,10 +16407,20 @@
 														"type": "internal",
 														"path": "book/ERLW/128-map49_libraryvault-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 3017,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 98,
+														"offsetX": 66,
+														"offsetY": 55
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "038",
+														"autoScale": true
+													}
 												}
 											]
 										}
@@ -16427,7 +16610,11 @@
 									"title": "Planes of Existence",
 									"width": 850,
 									"height": 850,
-									"imageType": "map"
+									"grid": {
+										"type": "none"
+									},
+									"imageType": "map",
+									"id": "053"
 								},
 								{
 									"type": "image",
@@ -16435,10 +16622,17 @@
 										"type": "internal",
 										"path": "book/ERLW/130-map-planes-large.jpg"
 									},
-									"title": "(Player Version)",
+									"title": "Player Version",
 									"width": 1788,
 									"height": 1788,
-									"imageType": "mapPlayer"
+									"grid": {
+										"type": "none"
+									},
+									"imageType": "mapPlayer",
+									"mapParent": {
+										"id": "053",
+										"autoScale": true
+									}
 								}
 							]
 						},
@@ -17162,7 +17356,15 @@
 															"title": "Map 4.10: Lightning Rail Train Carriages",
 															"width": 2947,
 															"height": 4000,
-															"imageType": "map"
+															"grid": {
+																"type": "square",
+																"size": 66,
+																"offsetX": 40,
+																"offsetY": 19,
+																"distance": 2.5
+															},
+															"imageType": "map",
+															"id": "054"
 														},
 														{
 															"type": "image",
@@ -17170,10 +17372,20 @@
 																"type": "internal",
 																"path": "book/ERLW/133-map410_lightningrailcars-player.jpg"
 															},
-															"title": "(Player Version)",
+															"title": "Player Version",
 															"width": 2947,
 															"height": 4000,
-															"imageType": "mapPlayer"
+															"grid": {
+																"type": "square",
+																"size": 65,
+																"offsetX": 1,
+																"offsetY": 7,
+																"distance": 2.5
+															},
+															"imageType": "mapPlayer",
+															"mapParent": {
+																"id": "054"
+															}
 														}
 													]
 												}
@@ -17511,7 +17723,7 @@
 					"page": 239,
 					"id": "443",
 					"entries": [
-						"Chapter 3 describes the city of Sharn in detail; the following sections focus on the adventures that can happen there. These adventures can unfold among the tallest towers of Skyway, in the deepest depths of the Cogs, or anywhere in between. At the end of this chapter is an introductory adventure, \"{@adventure Forgotten Relics|EFW|0},\" set in Sharn.",
+						"Chapter 3 describes the city of Sharn in detail; the following sections focus on the adventures that can happen there. These adventures can unfold among the tallest towers of Skyway, in the deepest depths of the Cogs, or anywhere in between. At the end of this chapter is an introductory adventure, \"{@adventure Forgotten Relics|EFR|0},\" set in Sharn.",
 						"Sharn can be a grim place that makes good people bad and bad people worse. In its mean streets, gritty detectives contend with corrupt law officers while trying to foil the efforts of merciless gangs and monstrous thugs. In the highest towers, wealthy barons from the dragonmarked houses make shady deals with crime bosses, each of them making profits by exploiting both the ordinary folk and the well-heeled upper crust alike. Corruption can be found among the ranks of government, the watch, the temples, and large businesses. This atmosphere makes Sharn a perfect location for adventures inspired by the noir genre.",
 						"Sharn can also be a place of unrelenting action, ranging from soarsleds speeding between the towertops to confrontations in the dungeon depths far beneath the city's lowest tier. Fallen angels, sinister shapeshifters, and monstrous mercenaries do battle with heroes from all walks of life, while unscrupulous collectors and smugglers carry on a brisk trade in artifacts brought back from the cyclopean ruins of Xen'drik. All these factors make Sharn an equally ideal location for adventures inspired by pulp action.",
 						"You can use the Life in the City table to generate ideas for adventures set in Sharn.",
@@ -18058,7 +18270,14 @@
 													"title": "Map 4.11: Sharn Heights",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetX": 3,
+														"offsetY": 3
+													},
+													"imageType": "map",
+													"id": "055"
 												},
 												{
 													"type": "image",
@@ -18066,10 +18285,19 @@
 														"type": "internal",
 														"path": "book/ERLW/136-map411_sharn_flat_gs-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetX": 3,
+														"offsetY": 3
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "055"
+													}
 												}
 											]
 										}
@@ -18310,7 +18538,13 @@
 													"title": "Map 4.12: Nightclub",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetY": -15
+													},
+													"imageType": "map",
+													"id": "056"
 												},
 												{
 													"type": "image",
@@ -18318,10 +18552,19 @@
 														"type": "internal",
 														"path": "book/ERLW/139-map412_nightclub-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetX": -2,
+														"offsetY": -14
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "056"
+													}
 												}
 											]
 										}
@@ -18583,7 +18826,14 @@
 													"title": "Map 4.13: Cog Hub",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "map"
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetX": 4,
+														"offsetY": 4
+													},
+													"imageType": "map",
+													"id": "057"
 												},
 												{
 													"type": "image",
@@ -18591,10 +18841,19 @@
 														"type": "internal",
 														"path": "book/ERLW/141-map413_coghub-player.jpg"
 													},
-													"title": "(Player Version)",
+													"title": "Player Version",
 													"width": 2947,
 													"height": 4000,
-													"imageType": "mapPlayer"
+													"grid": {
+														"type": "square",
+														"size": 70,
+														"offsetX": 4,
+														"offsetY": 4
+													},
+													"imageType": "mapPlayer",
+													"mapParent": {
+														"id": "057"
+													}
 												}
 											]
 										}
@@ -19144,7 +19403,7 @@
 										],
 										[
 											"3",
-											"The{@i Sharn Inquisitive} publishes an anonymous article accusing several members of the Sharn Watch, the city council, and the dragonmarked houses of being changeling members of the Tyrants. The accused individuals vehemently deny the claims."
+											"The {@i Sharn Inquisitive} publishes an anonymous article accusing several members of the Sharn Watch, the city council, and the dragonmarked houses of being changeling members of the Tyrants. The accused individuals vehemently deny the claims."
 										],
 										[
 											"4",

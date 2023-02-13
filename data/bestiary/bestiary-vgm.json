@@ -17,7 +17,9 @@
 			"reprintedAs": [
 				"Abjurer Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -165,6 +167,12 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -181,7 +189,9 @@
 			"reprintedAs": [
 				"Alhoon|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -393,6 +403,14 @@
 				"C",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"N",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I",
@@ -427,7 +445,9 @@
 			"reprintedAs": [
 				"Annis Hag|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -798,6 +818,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"A"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I",
@@ -1112,7 +1135,9 @@
 			"reprintedAs": [
 				"Apprentice Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1195,6 +1220,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -1225,7 +1253,9 @@
 			"reprintedAs": [
 				"Archdruid|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1393,6 +1423,12 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"I",
+				"R"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -1427,7 +1463,9 @@
 			"reprintedAs": [
 				"Archer|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1441,7 +1479,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -1529,7 +1567,9 @@
 			"reprintedAs": [
 				"Aurochs|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1605,7 +1645,9 @@
 			"reprintedAs": [
 				"Babau|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -1732,6 +1774,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -1751,7 +1796,9 @@
 			"reprintedAs": [
 				"Banderhobb|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -1886,7 +1933,9 @@
 			"reprintedAs": [
 				"Bard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2007,6 +2056,10 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CB"
 			],
@@ -2031,7 +2084,9 @@
 			"reprintedAs": [
 				"Barghest|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -2198,6 +2253,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -2215,7 +2273,9 @@
 			"reprintedAs": [
 				"Bheur Hag|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -2300,7 +2360,7 @@
 				{
 					"name": "Ice Walk",
 					"entries": [
-						"The hag can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost her extra moment."
+						"The hag can move across and climb icy surfaces without needing to make an ability check. Additionally, {@quickref difficult terrain||3} composed of ice or snow doesn't cost her extra moment."
 					]
 				}
 			],
@@ -2581,6 +2641,10 @@
 				"GI"
 			],
 			"damageTags": [
+				"B",
+				"C"
+			],
+			"damageTagsSpell": [
 				"B",
 				"C"
 			],
@@ -2882,7 +2946,9 @@
 			"reprintedAs": [
 				"Guard Drake|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -3004,7 +3070,9 @@
 			"reprintedAs": [
 				"Blackguard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3131,6 +3199,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"R",
+				"T"
+			],
 			"spellcastingTags": [
 				"CP"
 			],
@@ -3157,7 +3229,9 @@
 			"reprintedAs": [
 				"Guard Drake|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -3262,7 +3336,9 @@
 			"reprintedAs": [
 				"Bodak|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -3336,7 +3412,7 @@
 					"name": "Death Gaze",
 					"entries": [
 						"When a creature that can see the bodak's eyes starts its turn within 30 feet of the bodak, the bodak can force it to make a {@dc 13} Constitution saving throw if the bodak isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is reduced to 0 hit points, unless it is immune to the {@condition frightened} condition. Otherwise, a creature takes 16 ({@damage 3d10}) psychic damage on a failed save.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it has disadvantage on attack rolls against the bodak until the start of its next turn. If the creature looks at the bodak in the meantime, it must immediately make the saving throw."
+						"Unless {@quickref Surprise|PHB|3|0|surprised}, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it has disadvantage on attack rolls against the bodak until the start of its next turn. If the creature looks at the bodak in the meantime, it must immediately make the saving throw."
 					]
 				},
 				{
@@ -3410,7 +3486,9 @@
 			"reprintedAs": [
 				"Boggle|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -3482,7 +3560,7 @@
 				{
 					"name": "Oil Puddle",
 					"entries": [
-						"The boggle creates a puddle of oil that is either slippery or sticky (boggle's choice). The puddle is 1 inch deep and covers the ground in the boggle's space. The puddle is difficult terrain For all creatures except boggles and lasts for 1 hour.",
+						"The boggle creates a puddle of oil that is either slippery or sticky (boggle's choice). The puddle is 1 inch deep and covers the ground in the boggle's space. The puddle is {@quickref difficult terrain||3} For all creatures except boggles and lasts for 1 hour.",
 						"If the oil is slippery, any creature that enters the puddle's area or starts its turn there must succeed on a {@dc 11} Dexterity saving throw or fall {@condition prone}.",
 						"If the oil is sticky, any creature that enters the puddle's area or starts its turn there must succeed on a {@dc 11} Strength saving throw or be {@condition restrained}. On its turn. a creature can use an action to try to extricate itself from the sticky puddle, ending the effect and moving into the nearest safe unoccupied space with a successful {@dc 11} Strength check."
 					]
@@ -3547,6 +3625,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3569,6 +3648,7 @@
 			"spellcastingTags": [
 				"CW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3598,6 +3678,7 @@
 					]
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3627,6 +3708,7 @@
 					]
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3656,6 +3738,7 @@
 					]
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3677,6 +3760,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3698,6 +3782,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3715,7 +3800,9 @@
 			"reprintedAs": [
 				"Brontosaurus|MPMM"
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -3779,7 +3866,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Catoblepas",
@@ -3793,7 +3881,9 @@
 			"reprintedAs": [
 				"Catoblepas|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -3888,7 +3978,9 @@
 			"reprintedAs": [
 				"Cave Fisher|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -4011,7 +4103,9 @@
 			"reprintedAs": [
 				"Champion|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4125,7 +4219,9 @@
 			"reprintedAs": [
 				"Chitine|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -4246,7 +4342,9 @@
 			"reprintedAs": [
 				"Choldrith|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -4256,7 +4354,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -4392,6 +4490,9 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -4417,7 +4518,9 @@
 			"reprintedAs": [
 				"Cloud Giant Smiling One|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "giant",
 				"tags": [
@@ -4586,6 +4689,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"CB",
 				"I"
@@ -4611,7 +4717,9 @@
 			"reprintedAs": [
 				"Conjurer Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4743,6 +4851,14 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"F",
+				"I",
+				"O",
+				"S"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -4763,7 +4879,9 @@
 					"source": "DIP"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -4828,7 +4946,9 @@
 			"reprintedAs": [
 				"Cranium Rat|MPMM"
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"L",
@@ -4920,7 +5040,9 @@
 			"reprintedAs": [
 				"Darkling|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -5034,7 +5156,9 @@
 			"reprintedAs": [
 				"Darkling Elder|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -5044,7 +5168,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -5151,7 +5275,9 @@
 			"reprintedAs": [
 				"Death Kiss|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -5274,7 +5400,9 @@
 			"reprintedAs": [
 				"Deep Rothé|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -5309,10 +5437,10 @@
 					"will": [
 						"{@spell dancing lights}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -5368,7 +5496,9 @@
 			"reprintedAs": [
 				"Deep Scion|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5516,7 +5646,9 @@
 			"reprintedAs": [
 				"Deinonychus|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -5610,7 +5742,9 @@
 			"reprintedAs": [
 				"Devourer|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"C",
@@ -5727,7 +5861,9 @@
 			"reprintedAs": [
 				"Dimetrodon|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -5791,7 +5927,9 @@
 			"reprintedAs": [
 				"Diviner Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5946,6 +6084,11 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -5967,7 +6110,9 @@
 			"reprintedAs": [
 				"Dolphin|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -6055,7 +6200,9 @@
 			"reprintedAs": [
 				"Draegloth|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -6202,7 +6349,9 @@
 			"reprintedAs": [
 				"Elder Brain|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -6408,7 +6557,9 @@
 			"reprintedAs": [
 				"Enchanter Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6541,6 +6692,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -6571,7 +6726,9 @@
 			"reprintedAs": [
 				"Evoker Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6711,6 +6868,14 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"L",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -6727,7 +6892,9 @@
 			"reprintedAs": [
 				"Fire Giant Dreadnought|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "giant",
 				"tags": [
@@ -6853,7 +7020,9 @@
 			"reprintedAs": [
 				"Firenewt Warlock of Imix|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6906,10 +7075,10 @@
 					"will": [
 						"{@spell mage armor}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				},
 				{
 					"name": "Spellcasting",
@@ -6981,6 +7150,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"CL",
 				"I"
@@ -7004,7 +7176,9 @@
 			"reprintedAs": [
 				"Firenewt Warrior|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7123,7 +7297,9 @@
 			"reprintedAs": [
 				"Flail Snail|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"U"
@@ -7264,7 +7440,9 @@
 			"reprintedAs": [
 				"Flind|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7402,7 +7580,9 @@
 			"reprintedAs": [
 				"Froghemoth|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -7531,7 +7711,9 @@
 			"reprintedAs": [
 				"Frost Giant Everlasting One|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "giant",
 				"tags": [
@@ -7669,7 +7851,9 @@
 			"reprintedAs": [
 				"Gauth|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -7841,7 +8025,9 @@
 			"reprintedAs": [
 				"Gazer|MPMM"
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -8004,7 +8190,9 @@
 			"reprintedAs": [
 				"Giant Strider|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -8097,7 +8285,9 @@
 			"reprintedAs": [
 				"Girallon|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -8198,7 +8388,9 @@
 			"reprintedAs": [
 				"Gnoll Flesh Gnawer|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -8213,7 +8405,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -8314,7 +8506,9 @@
 			"reprintedAs": [
 				"Gnoll Hunter|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -8433,7 +8627,9 @@
 			"reprintedAs": [
 				"Gnoll Witherling|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -8552,7 +8748,9 @@
 			"reprintedAs": [
 				"Guard Drake|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -8665,7 +8863,9 @@
 			"reprintedAs": [
 				"Grung|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -8939,7 +9139,9 @@
 			"reprintedAs": [
 				"Grung Elite Warrior|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9227,7 +9429,9 @@
 			"reprintedAs": [
 				"Grung Wildling|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9413,6 +9617,9 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"P"
+			],
 			"spellcastingTags": [
 				"CR"
 			],
@@ -9550,7 +9757,9 @@
 			"reprintedAs": [
 				"Hadrosaurus|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -9613,7 +9822,9 @@
 			"reprintedAs": [
 				"Hobgoblin Devastator|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9628,7 +9839,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -9747,6 +9958,15 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"L",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -9764,7 +9984,9 @@
 			"reprintedAs": [
 				"Hobgoblin Iron Shadow|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9908,7 +10130,9 @@
 			],
 			"source": "VGM",
 			"page": 172,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -10196,6 +10420,18 @@
 				"P",
 				"Y"
 			],
+			"damageTagsLegendary": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"N",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I",
@@ -10231,7 +10467,9 @@
 			"reprintedAs": [
 				"Illusionist Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10356,6 +10594,11 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"I",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -10368,7 +10611,8 @@
 				"invisible"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ki-rin",
@@ -10377,7 +10621,9 @@
 			"reprintedAs": [
 				"Ki-rin|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -10629,6 +10875,10 @@
 				"B",
 				"P"
 			],
+			"damageTagsSpell": [
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC",
 				"I"
@@ -10656,7 +10906,9 @@
 			"reprintedAs": [
 				"Kobold Dragonshield|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10789,7 +11041,9 @@
 			"reprintedAs": [
 				"Kobold Inventor|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10967,7 +11221,9 @@
 			"reprintedAs": [
 				"Kobold Scale Sorcerer|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11100,6 +11356,14 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -11127,7 +11391,9 @@
 			"reprintedAs": [
 				"Korred|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -11269,6 +11535,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -11308,7 +11577,9 @@
 			"reprintedAs": [
 				"Kraken Priest|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11421,6 +11692,10 @@
 			"damageTags": [
 				"T"
 			],
+			"damageTagsSpell": [
+				"B",
+				"L"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -11450,7 +11725,9 @@
 			"reprintedAs": [
 				"Leucrotta|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -11587,7 +11864,9 @@
 			"reprintedAs": [
 				"Martial Arts Adept|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11722,7 +12001,9 @@
 			"reprintedAs": [
 				"Master Thief|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -11736,7 +12017,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -11844,7 +12125,8 @@
 				"RW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Maw Demon",
@@ -11858,7 +12140,9 @@
 			"reprintedAs": [
 				"Maw Demon|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -11966,7 +12250,9 @@
 			"reprintedAs": [
 				"Meenlock|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -12076,7 +12362,9 @@
 			],
 			"source": "VGM",
 			"page": 71,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -12231,6 +12519,10 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"B",
+				"Y"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -12260,7 +12552,9 @@
 			"reprintedAs": [
 				"Mindwitness|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -12434,7 +12728,9 @@
 			"reprintedAs": [
 				"Morkoth|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -12633,6 +12929,15 @@
 				"B",
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"L",
+				"O",
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -12661,7 +12966,9 @@
 			"reprintedAs": [
 				"Mouth of Grolantor|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "giant",
 				"tags": [
@@ -12772,7 +13079,9 @@
 			"reprintedAs": [
 				"Necromancer Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -12916,6 +13225,13 @@
 			"damageTags": [
 				"N"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"I",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -12929,7 +13245,9 @@
 			"reprintedAs": [
 				"Neogi|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -13056,7 +13374,9 @@
 			"reprintedAs": [
 				"Neogi Hatchling|MPMM"
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -13141,7 +13461,9 @@
 			"reprintedAs": [
 				"Neogi Master|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -13293,6 +13615,13 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"N",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CL"
 			],
@@ -13325,7 +13654,9 @@
 			"reprintedAs": [
 				"Neothelid|MPMM"
 			],
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -13433,6 +13764,9 @@
 				"B",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -13460,7 +13794,9 @@
 			"reprintedAs": [
 				"Nilbog|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -13579,6 +13915,9 @@
 				"B",
 				"P"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -13602,7 +13941,9 @@
 			"name": "Orc Blade of Ilneval",
 			"source": "VGM",
 			"page": 183,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -13686,7 +14027,7 @@
 					]
 				},
 				{
-					"name": "Ilneval's Command (Recharges 4\u20136)",
+					"name": "Ilneval's Command {@recharge 4}",
 					"entries": [
 						"Up to three allied orcs within 120 feet of this orc that can hear it can use their reactions to each make one weapon attack."
 					]
@@ -13732,7 +14073,9 @@
 			"name": "Orc Claw of Luthic",
 			"source": "VGM",
 			"page": 183,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -13865,6 +14208,10 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -13879,7 +14226,9 @@
 			"name": "Orc Hand of Yurtrus",
 			"source": "VGM",
 			"page": 184,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -14001,6 +14350,9 @@
 			"damageTags": [
 				"N"
 			],
+			"damageTagsSpell": [
+				"N"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -14014,7 +14366,9 @@
 			"name": "Orc Nurtured One of Yurtrus",
 			"source": "VGM",
 			"page": 184,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -14124,7 +14478,9 @@
 			"name": "Orc Red Fang of Shargaas",
 			"source": "VGM",
 			"page": 185,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -14139,7 +14495,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -14192,7 +14548,7 @@
 				{
 					"name": "Slayer",
 					"entries": [
-						"In the first round of a combat, the orc has advantage on attack rolls against any creature that hasn't taken a turn yet. If the orc hits a creature that round who was surprised, the hit is automatically a critical hit."
+						"In the first round of a combat, the orc has advantage on attack rolls against any creature that hasn't taken a turn yet. If the orc hits a creature that round who was {@quickref Surprise|PHB|3|0|surprised}, the hit is automatically a critical hit."
 					]
 				}
 			],
@@ -14268,7 +14624,9 @@
 			"reprintedAs": [
 				"Ox|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -14347,7 +14705,9 @@
 			"reprintedAs": [
 				"Quetzalcoatlus|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -14435,7 +14795,9 @@
 			"reprintedAs": [
 				"Quickling|MPMM"
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -14536,7 +14898,9 @@
 			"reprintedAs": [
 				"Guard Drake|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -14648,7 +15012,9 @@
 			"reprintedAs": [
 				"Redcap|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -14781,7 +15147,9 @@
 			"name": "Rothé",
 			"source": "VGM",
 			"page": 208,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -14852,7 +15220,9 @@
 			"reprintedAs": [
 				"Sea Spawn|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"N",
@@ -14980,7 +15350,9 @@
 			"reprintedAs": [
 				"Shadow Mastiff Alpha|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -15139,7 +15511,9 @@
 			"reprintedAs": [
 				"Shoosuva|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -15293,7 +15667,9 @@
 			"reprintedAs": [
 				"Slithering Tracker|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "ooze",
 			"alignment": [
 				"C",
@@ -15358,7 +15734,7 @@
 				{
 					"name": "Ambusher",
 					"entries": [
-						"In the first round of a combat, the slithering tracker has advantage on attack rolls against any creature it surprised."
+						"In the first round of a combat, the slithering tracker has advantage on attack rolls against any creature it {@quickref Surprise|PHB|3|0|surprised}."
 					]
 				},
 				{
@@ -15454,7 +15830,9 @@
 			"reprintedAs": [
 				"Spawn of Kyuss|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -15576,7 +15954,9 @@
 			"reprintedAs": [
 				"Stegosaurus|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -15638,7 +16018,9 @@
 			"reprintedAs": [
 				"Stench Kow|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -15720,7 +16102,9 @@
 			"reprintedAs": [
 				"Stone Giant Dreamwalker|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "giant",
 				"tags": [
@@ -15856,7 +16240,9 @@
 			"reprintedAs": [
 				"Storm Giant Quintessent|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "giant",
 				"tags": [
@@ -16020,7 +16406,9 @@
 			"reprintedAs": [
 				"Swarm of Cranium Rats|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -16160,7 +16548,9 @@
 			"reprintedAs": [
 				"Swarm of Rot Grubs|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -16264,7 +16654,9 @@
 			"reprintedAs": [
 				"Swashbuckler|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -16377,7 +16769,9 @@
 			"reprintedAs": [
 				"Tanarukk|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -16517,7 +16911,9 @@
 			"reprintedAs": [
 				"Thorny Vegepygmy|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"N"
@@ -16615,7 +17011,9 @@
 			"reprintedAs": [
 				"Tlincalli|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -16728,7 +17126,9 @@
 			"reprintedAs": [
 				"Transmuter Wizard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -16865,6 +17265,17 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"P",
+				"S",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -16886,7 +17297,9 @@
 			"reprintedAs": [
 				"Trapper|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -16984,7 +17397,9 @@
 			"reprintedAs": [
 				"Ulitharid|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -17123,6 +17538,9 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -17155,7 +17573,9 @@
 			"reprintedAs": [
 				"Vargouille|MPMM"
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fiend",
 			"alignment": [
 				"C",
@@ -17263,7 +17683,9 @@
 			"reprintedAs": [
 				"Vegepygmy|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"N"
@@ -17375,7 +17797,9 @@
 			"reprintedAs": [
 				"Vegepygmy Chief|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"N"
@@ -17510,7 +17934,9 @@
 			"reprintedAs": [
 				"Velociraptor|MPMM"
 			],
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -17614,7 +18040,9 @@
 			"reprintedAs": [
 				"War Priest|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -17763,6 +18191,12 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -17779,7 +18213,9 @@
 			"reprintedAs": [
 				"Warlock of the Archfey|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -17919,6 +18355,10 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CL",
 				"I"
@@ -17949,7 +18389,9 @@
 			"reprintedAs": [
 				"Warlock of the Fiend|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -18104,6 +18546,17 @@
 				"B",
 				"F"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"N",
+				"O",
+				"P",
+				"R",
+				"S",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CL",
 				"I"
@@ -18127,7 +18580,9 @@
 			"reprintedAs": [
 				"Warlock of the Great Old One|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -18275,6 +18730,13 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"C",
+				"L",
+				"N",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CL",
 				"I"
@@ -18303,7 +18765,9 @@
 			"reprintedAs": [
 				"Warlord|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -18439,7 +18903,9 @@
 			"reprintedAs": [
 				"Guard Drake|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -18545,7 +19011,9 @@
 			"reprintedAs": [
 				"Wood Woad|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"L",
@@ -18675,7 +19143,9 @@
 			"reprintedAs": [
 				"Xvart|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -18783,7 +19253,9 @@
 			"name": "Xvart Speaker",
 			"source": "VGM",
 			"page": 200,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -18897,7 +19369,9 @@
 			"reprintedAs": [
 				"Xvart Warlock of Raxivort|MPMM"
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -19026,6 +19500,11 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"O"
+			],
 			"spellcastingTags": [
 				"CL",
 				"I"
@@ -19046,7 +19525,9 @@
 			"reprintedAs": [
 				"Yeth Hound|MPMM"
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -19180,7 +19661,9 @@
 			"reprintedAs": [
 				"Yuan-ti Anathema|MPMM"
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -19422,7 +19905,9 @@
 			"reprintedAs": [
 				"Yuan-ti Broodguard|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -19579,7 +20064,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -19757,7 +20244,9 @@
 					"source": "ToA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -19933,7 +20422,9 @@
 			"reprintedAs": [
 				"Yuan-ti Mind Whisperer|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -20139,6 +20630,10 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"I",
+				"O"
+			],
 			"spellcastingTags": [
 				"CL",
 				"F",
@@ -20163,7 +20658,9 @@
 			"reprintedAs": [
 				"Yuan-ti Nightmare Speaker|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -20369,6 +20866,14 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"I",
+				"L",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CL",
 				"F",
@@ -20400,7 +20905,9 @@
 			"reprintedAs": [
 				"Yuan-ti Pit Master|MPMM"
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -20597,6 +21104,12 @@
 			"damageTags": [
 				"I",
 				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"N",
+				"O"
 			],
 			"spellcastingTags": [
 				"CL",

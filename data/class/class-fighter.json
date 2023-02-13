@@ -2649,7 +2649,7 @@
 			"entries": [
 				"{@i 3rd level Cavalier feature}",
 				"Starting at 3rd level, you can enhance your steed's abilities. As a ten minute ritual, you can summon a {@creature bonded steed|MOD}. A bonded steed is a controlled mount that is loyal and obeys your mental orders while you are mounted. You decide your mount's appearance, though it must take the form of a quadrupedal beast; its appearance has no effect on its statistics. It cannot act independently, takes no actions while not mounted, and you can have only one steed summoned by this ability at a time; if you attempt to summon a second steed, the first steed vanishes as soon as the ritual completes.",
-				"If your bonded steed is killed, it dematerializes into smoke, leaving behind any items it was carrying." ,
+				"If your bonded steed is killed, it dematerializes into smoke, leaving behind any items it was carrying.",
 				"Instead of summoning a new steed, you can bolster an existing, willing steed's abilities, replacing its statblock with that of the bonded steed above (except for its size). You follow all the rules above for the bonded steed. However, if the bonded steed perishes while using it in this manner, it does not dematerialize- instead, the bond breaks and the creature's statblock reverts to its original. It keeps any items it is wearing or holding.",
 				"You can conduct this ritual a number of times equal to your proficiency bonus; you regain all uses when you complete a long rest.",
 				{

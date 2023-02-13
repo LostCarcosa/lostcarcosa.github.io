@@ -1277,7 +1277,7 @@
 														"Find the leader of the feathered ones who live among the vines. Though old, he has one more fight left in him."
 													]
 												},
-												"This card refers to {@creature Davian Martikov|CoS} (see {@adventure chapter 12|CoS|13}, \"The Wizard of Wines\"). The old wereraven, realizing that he has a chance to end Strahd's tyranny, leaves his vineyard and winery in the capable hands of his sons, Adrian and Elvir. But before he travels to Castle Ravenloft to face Strahd, Davian insists on reconciling with his third son, Urwin Martikov (see {@adventure chapter 5|CoS|6}, {@area area N2|333|x}).",
+												"This card refers to {@creature Davian Martikov|CoS} (see {@adventure chapter 12|CoS|13}, \"The Wizard of Wines\"). The old wereraven, realizing that he has a chance to end Strahd's tyranny, leaves his vineyard and winery in the capable hands of his sons, Adrian and Elvir. But before he travels to Castle Ravenloft to face Strahd, Davian insists on reconciling with his third son, {@creature Urwin Martikov|CoS} (see {@adventure chapter 5|CoS|6}, {@area area N2|333|x}).",
 												{
 													"type": "insetReadaloud",
 													"id": "06f",
@@ -1573,7 +1573,7 @@
 												"The dark shape in the fire takes the form of a man being knocked from his horse, a spear piercing his side.",
 												"{@creature Stanimir|CoS} continues. \"One night, a wounded soldier staggered into our camp and collapsed. We nursed his terrible injury and quenched his thirst with wine. He survived. When we asked him who he was, he wouldn't say. All he wanted was to return home, but we were deep in the land of his enemies. We took him as one of our own and followed him back toward his homeland. His enemies hunted him. They said he was a prince, yet we didn't give him up, even when their assassins fell upon us like wolves.\"",
 												"Deep in the bonfire, you see the dark figure standing with sword drawn, fighting off a host of shadowy shapes.",
-												"\"This man of royal blood fought to protect us, as we protected him. We bore him safely to his home, and he thanked us. He said, ‘I owe you my life. Stay as long as you wish, leave when you choose, and know that you will always be safe here.'\"",
+												"\"This man of royal blood fought to protect us, as we protected him. We bore him safely to his home, and he thanked us. He said, 'I owe you my life. Stay as long as you wish, leave when you choose, and know that you will always be safe here.'\"",
 												"The figure in the dancing fire vanquishes its final foe, then disperses in a cloud of smoke and embers.",
 												"{@creature Stanimir|CoS}'s face becomes a somber mask. \"A curse has befallen our noble prince, turning him into a tyrant. We alone have the power to leave his domain. We've traveled far and wide to find heroes such as yourselves to end our dread lord's curse and put his troubled soul to rest. Our leader, {@creature Madam Eva|CoS}, knows all. Will you return to Barovia with us and speak with her?\""
 											]
@@ -1826,7 +1826,7 @@
 									"items": [
 										"A creature that starts its turn in the fog must succeed on a DC 20 Constitution saving throw or gain one level of {@condition exhaustion} (see {@book appendix A|PHB|11} in the {@book Player's Handbook|PHB}). This {@condition exhaustion} can't be removed while the creature is in the fog.",
 										"No matter how far a creature travels in the fog, or in which direction it goes, it gets turned around so that it eventually finds itself back in Barovia.",
-										"The area within the fog is heavily obscured (see \"{@book Vision and Light|PHB|8|Vision and Light}\" in chapter 8 of the {@book Player's Handbook|PHB})."
+										"The area within the fog is heavily obscured (see \"{@quickref Vision and Light|PHB|2||Vision and Light}\" in chapter 8 of the {@book Player's Handbook|PHB})."
 									]
 								}
 							]
@@ -2833,7 +2833,7 @@
 												"You spot a wolf trap, its steel jaws caked with rust. Someone has carefully hidden the trap under a thin layer of pine needles and detritus."
 											]
 										},
-										"Barovian hunters and trappers set these traps hoping to thin out the wolf population, but Strahd's wolves are too clever to be caught in them. If none of the characters in the front rank spots the hidden trap, one random party member steps on it. Rules for the {@item hunting trap|PHB} are presented in chapter 5, \"{@book Equipment|PHB|4},\" of the {@book Player's Handbook|PHB}."
+										"Barovian hunters and trappers set these traps hoping to thin out the wolf population, but Strahd's wolves are too clever to be caught in them. If none of the characters in the front rank spots the hidden trap, one random party member steps on it. Rules for the {@item hunting trap|PHB} are presented in chapter 5, \"{@book Equipment|PHB|5},\" of the {@book Player's Handbook|PHB}."
 									]
 								},
 								{
@@ -3740,11 +3740,19 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "hexColsOdd",
+										"size": 69,
+										"offsetX": 9,
+										"offsetY": -4,
+										"distance": 0.25,
+										"units": "miles"
+									},
+									"id": "6c7",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/007-001-thumb.png"
-									},
-									"id": "0bc"
+										"path": "adventure/CoS/thumbnail/007-001.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -3756,8 +3764,17 @@
 									"width": 5025,
 									"height": 3225,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "hexColsOdd",
+										"size": 69,
+										"offsetX": 9,
+										"offsetY": -4,
+										"distance": 0.25,
+										"units": "miles"
+									},
 									"mapParent": {
-										"id": "0bc"
+										"id": "6c7",
+										"autoScale": true
 									}
 								}
 							]
@@ -3991,6 +4008,13 @@
 											"width": 1000,
 											"height": 615,
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 50,
+												"offsetX": 5,
+												"offsetY": -19,
+												"scale": 1.5
+											},
 											"id": "0bc"
 										},
 										{
@@ -4003,7 +4027,13 @@
 											"width": 1950,
 											"height": 1200,
 											"imageType": "mapPlayer",
-											"mapName": "Map 2.2: Tser Pool Encampment (Player Version)",
+											"grid": {
+												"type": "square",
+												"size": 97,
+												"offsetX": 13,
+												"offsetY": 63,
+												"scale": 1.5
+											},
 											"mapParent": {
 												"id": "0bc",
 												"autoScale": true
@@ -4712,11 +4742,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 120,
+										"offsetX": -38,
+										"offsetY": -6,
+										"distance": 40
+									},
+									"id": "0bd",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/013-003-thumb.png"
-									},
-									"id": "0bd"
+										"path": "adventure/CoS/thumbnail/013-003.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -4728,6 +4765,13 @@
 									"width": 1950,
 									"height": 2475,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 120,
+										"offsetX": -38,
+										"offsetY": -6,
+										"distance": 40
+									},
 									"mapParent": {
 										"id": "0bd"
 									}
@@ -5079,11 +5123,16 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 72,
+												"offsetX": -15
+											},
+											"id": "11c",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/018-004-thumb.png"
-											},
-											"id": "11c"
+												"path": "adventure/CoS/thumbnail/018-004.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -5095,6 +5144,11 @@
 											"width": 2400,
 											"height": 1650,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 72,
+												"offsetX": -20
+											},
 											"mapParent": {
 												"id": "11c"
 											}
@@ -5945,7 +5999,7 @@
 												"A crack of thunder shakes the castle, stirring the dust and cobwebs. You hear a voice: \"Good evening.\""
 											]
 										},
-										"Any character who has a passive Wisdom ({@skill Perception}) score lower than 19 is surprised as Strahd appears seemingly out of nowhere. The vampire prefers to attack a surprised character, choosing the one closest to him. Otherwise, see {@area appendix D|7c1|x} for the vampire's tactics."
+										"Any character who has a passive Wisdom ({@skill Perception}) score lower than 19 is {@quickref Surprise|PHB|3|0|surprised} as Strahd appears seemingly out of nowhere. The vampire prefers to attack a {@quickref Surprise|PHB|3|0|surprised} character, choosing the one closest to him. Otherwise, see {@area appendix D|7c1|x} for the vampire's tactics."
 									]
 								},
 								{
@@ -6040,7 +6094,7 @@
 									"page": 52,
 									"id": "196",
 									"entries": [
-										"If any character has a passive Wisdom ({@skill Perception}) score of 16 or higher, the party isn't surprised. In that case, read:",
+										"If any character has a passive Wisdom ({@skill Perception}) score of 16 or higher, the party isn't {@quickref Surprise|PHB|3|0|surprised}. In that case, read:",
 										{
 											"type": "insetReadaloud",
 											"id": "197",
@@ -6295,11 +6349,16 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "none",
+										"size": 125,
+										"distance": 50
+									},
+									"id": "132",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/024-005-thumb.png"
-									},
-									"id": "132"
+										"path": "adventure/CoS/thumbnail/024-005.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -6307,8 +6366,13 @@
 										"type": "internal",
 										"path": "adventure/CoS/024-005-player.jpg"
 									},
-									"title": "Map 2: Walls of Ravenloft (Player Version)",
+									"title": "Player Version",
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "none",
+										"size": 172,
+										"distance": 50
+									},
 									"width": 2750,
 									"height": 3797,
 									"mapParent": {
@@ -7366,11 +7430,16 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "none",
+										"size": 130,
+										"distance": 20
+									},
+									"id": "16f",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/025-006-thumb.png"
-									},
-									"id": "16f"
+										"path": "adventure/CoS/thumbnail/025-006.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -7378,8 +7447,13 @@
 										"type": "internal",
 										"path": "adventure/CoS/025-006-player.jpg"
 									},
-									"title": "Map 3: Main Floor (Player Version)",
+									"title": "Player Version",
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "none",
+										"size": 168,
+										"distance": 20
+									},
 									"width": 3715,
 									"height": 1836,
 									"mapParent": {
@@ -8464,11 +8538,16 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "none",
+										"size": 68,
+										"distance": 10
+									},
+									"id": "172",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/028-007-thumb.png"
-									},
-									"id": "172"
+										"path": "adventure/CoS/thumbnail/028-007.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -8476,8 +8555,13 @@
 										"type": "internal",
 										"path": "adventure/CoS/028-007-player.jpg"
 									},
-									"title": "Map 4: Court of the Count (Player Version)",
+									"title": "Player Version",
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "none",
+										"size": 68,
+										"distance": 10
+									},
 									"width": 2380,
 									"height": 1330,
 									"mapParent": {
@@ -8601,7 +8685,7 @@
 										"This staircase is made of old wood that strains underfoot, creaking and groaning."
 									]
 								},
-								"The staircase climbs from {@area area K16|1c9|x} to {@area area K28|1eb|x}. It seems unstable but is sturdy. The creatures in area K28 can't be surprised by anyone climbing the creaky steps."
+								"The staircase climbs from {@area area K16|1c9|x} to {@area area K28|1eb|x}. It seems unstable but is sturdy. The creatures in area K28 can't be {@quickref Surprise|PHB|3|0|surprised} by anyone climbing the creaky steps."
 							]
 						},
 						{
@@ -9594,11 +9678,16 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "none",
+										"size": 135,
+										"distance": 20
+									},
+									"id": "182",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/030-008-thumb.png"
-									},
-									"id": "182"
+										"path": "adventure/CoS/thumbnail/030-008.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -9606,8 +9695,13 @@
 										"type": "internal",
 										"path": "adventure/CoS/030-008-player.png"
 									},
-									"title": "Map 5: Rooms of Weeping (Player Version)",
+									"title": "Player Version",
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "none",
+										"size": 173,
+										"distance": 20
+									},
 									"width": 2660,
 									"height": 1680,
 									"mapParent": {
@@ -10418,11 +10512,16 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "none",
+										"size": 132,
+										"distance": 20
+									},
+									"id": "191",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/033-009-thumb.png"
-									},
-									"id": "191"
+										"path": "adventure/CoS/thumbnail/033-009.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -10430,8 +10529,13 @@
 										"type": "internal",
 										"path": "adventure/CoS/033-009-player.png"
 									},
-									"title": "Map 6: Spires of Ravenloft (Player Version)",
+									"title": "Player Version",
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "none",
+										"size": 177,
+										"distance": 20
+									},
 									"width": 2520,
 									"height": 1540,
 									"mapParent": {
@@ -11397,11 +11501,16 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "none",
+												"size": 72,
+												"distance": 10
+											},
+											"id": "441",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/036-010-thumb.png"
-											},
-											"id": "441"
+												"path": "adventure/CoS/thumbnail/036-010.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -11409,8 +11518,13 @@
 												"type": "internal",
 												"path": "adventure/CoS/036-010-player.jpg"
 											},
-											"title": "Maps 7-10: Spires and Tower of Ravenloft (Player Version)",
+											"title": "Player Version",
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "none",
+												"size": 72,
+												"distance": 10
+											},
 											"width": 1190,
 											"height": 3290,
 											"mapParent": {
@@ -13902,11 +14016,16 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "none",
+										"size": 72,
+										"distance": 10
+									},
+									"id": "459",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/038-011-thumb.png"
-									},
-									"id": "459"
+										"path": "adventure/CoS/thumbnail/038-011.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -13914,8 +14033,13 @@
 										"type": "internal",
 										"path": "adventure/CoS/038-011-player.jpg"
 									},
-									"title": "Map 11: Larders of Ill Omen & Map 12: Dungeon and Catacombs (Player Version)",
+									"title": "Player Version",
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "none",
+										"size": 72,
+										"distance": 10
+									},
 									"width": 2450,
 									"height": 3010,
 									"mapParent": {
@@ -14122,11 +14246,16 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "none",
+												"size": 157,
+												"distance": 10
+											},
+											"id": "46e",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/039-012-thumb.png"
-											},
-											"id": "46e"
+												"path": "adventure/CoS/thumbnail/039-012.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -14138,6 +14267,11 @@
 											"width": 1200,
 											"height": 3300,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "none",
+												"size": 158,
+												"distance": 10
+											},
 											"mapParent": {
 												"id": "46e"
 											}
@@ -14571,11 +14705,17 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 68,
+										"offsetX": 14,
+										"offsetY": 12
+									},
+									"id": "483",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/042-cos04-17-thumb.png"
-									},
-									"id": "483"
+										"path": "adventure/CoS/thumbnail/042-cos04-17.webp"
+									}
 								},
 								"The water is 3 feet deep in the hallway and opaque. The steps on both sides of the hallway descend another 2 feet before ending at the iron doors to the north and south.",
 								"The floor beneath the water isn't as solid as one might expect. There is a safe path around several weight-sensitive trapdoors (see the Traps in Area K73 diagram), but the water makes it impossible to see where the trapdoors are. For every 10 pounds of weight on a trapdoor, there is a {@chance 5|5 percent} chance that the trapdoor will open. The 10-foot-deep pit under each trapdoor contains a magic teleport trap that activates as soon as the trapdoor opens. Any Medium or smaller creature on a trapdoor when it opens plunges into the pit and is teleported to a cell in either {@area area K74|272|x} or {@area K75|284|x}, as the diagram indicates.",
@@ -16513,11 +16653,16 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "none",
+										"size": 60,
+										"distance": 250
+									},
+									"id": "49f",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/047-013-thumb.png"
-									},
-									"id": "49f"
+										"path": "adventure/CoS/thumbnail/047-013.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -16529,6 +16674,11 @@
 									"width": 1950,
 									"height": 1200,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "none",
+										"size": 60,
+										"distance": 250
+									},
 									"mapParent": {
 										"id": "49f"
 									}
@@ -16638,7 +16788,7 @@
 										"No one hates the burgomaster more than {@creature Lady Fiona Wachter|CoS}, who is often quoted as saying, \"I'd rather serve the devil than a madman.\" She owns an old house in town ({@area area N4|39a|x}) but rarely leaves her estate. Her two adult sons, Nikolai and Karl, are local troublemakers. Lady Wachter also has a mad daughter whom she keeps locked away. The burgomaster doesn't confront Fiona or her offspring because he is afraid of Lady Wachter, whose family has old ties to Strahd.",
 										"Purple flashes of light have been seen emanating from the attic of the burgomaster's mansion.",
 										"Wolves and dire wolves prowl the woods and aren't afraid to attack travelers on the Old Svalich Road. Well-armed groups of hunters and trappers have managed to kill several of the wolves, but more keep coming.",
-										"It's too dangerous to go fishing on Lake Zarovich ({@adventure chapter 2|CoS|3}, {@area area L|121|x}) , but the threat of Strahd's wolves hasn't stopped {@creature Bluto Krogarov|CoS}, the town drunk, from trying. He sets out each morning and returns every evening, but hasn't caught any fish in a while.",
+										"It's too dangerous to go fishing on Lake Zarovich ({@adventure chapter 2|CoS|3}, {@area area L|121|x}), but the threat of Strahd's wolves hasn't stopped {@creature Bluto Krogarov|CoS}, the town drunk, from trying. He sets out each morning and returns every evening, but hasn't caught any fish in a while.",
 										"There have been no recent sightings of {@creature the Mad Mage of Mount Baratok|CoS} ({@adventure chapter 2|CoS|3}, {@area area M|126|x}). Folks used to see him skulking along the north shore of Lake Zarovich, shooting lightning bolts into the water to kill the fish. (If the characters seem interested in meeting this wizard, locals recommend that they use the fishing boats on the south shore to cross the lake, because it's shorter and a lot less dangerous than walking around the lake.)",
 										"There's a Vistani camp in the woods southwest of town ({@area area N9|3e8|x}). The Vistani there aren't very friendly. Vistani aren't welcome in Vallaki.",
 										"West of town is a haunted mansion (see chapter 7, \"{@adventure Argynvostholt|CoS|8}\"). Legend has it that a dragon died there long, long ago.",
@@ -16719,7 +16869,7 @@
 										"Gray smoke issues from the chimney of this large, two-story wooden building with a stone foundation and sagging tile roof, upon which several ravens have perched. A painted wooden sign hanging above the main entrance depicts a blue waterfall."
 									]
 								},
-								"The Blue Water Inn is Vallaki's main gathering place for locals, especially at night. The innkeeper, Urwin Martikov, considers the inn a sanctuary from the evils of this land. In the event of trouble, the windows and doors can all be barred shut from within.",
+								"The Blue Water Inn is Vallaki's main gathering place for locals, especially at night. The innkeeper, {@creature Urwin Martikov|CoS}, considers the inn a sanctuary from the evils of this land. In the event of trouble, the windows and doors can all be barred shut from within.",
 								"A bed for the night costs 1 ep. Characters looking for something to eat are fed hot beet soup and fresh bread at no additional charge. A cooked wolf steak costs 1 ep.",
 								"The inn offers a pint of Purple Grapemash No. 3 wine for 3 cp, or a pint of the superior Red Dragon Crush wine for 1 sp. Urwin is hurt if the characters complain about the wines, for his family makes them.",
 								"The inn's wine supply is almost depleted, and the latest delivery from the Wizard of Wines winery is overdue. If the characters claim to be adventurers, Urwin asks them if they would be so kind as to find out what's holding up the latest shipment, promising them free room and board if they return with the wine.",
@@ -17172,11 +17322,17 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 74,
+												"offsetX": -18,
+												"offsetY": -15
+											},
+											"id": "4ce",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/050-014-thumb.png"
-											},
-											"id": "4ce"
+												"path": "adventure/CoS/thumbnail/050-014.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -17188,6 +17344,12 @@
 											"width": 2400,
 											"height": 3300,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 74,
+												"offsetX": -18,
+												"offsetY": -15
+											},
 											"mapParent": {
 												"id": "4ce"
 											}
@@ -17200,7 +17362,7 @@
 									"page": 98,
 									"id": "335",
 									"entries": [
-										"Urwin Martikov (LG male human) is a {@creature wereraven|VRGR} (see {@area appendix D|7d5|x}) and a high-ranking member of the Keepers of the Feather, a secret society of wereravens that opposes Strahd. Urwin's wife and business partner, Danika Dorakova (LG female human), is also a {@creature wereraven|VRGR}, as are their two sons, Brom and Bray. The boys have only 7 hit points each and, at ages eleven and nine, are too young to be effective combatants.",
+										"{@creature Urwin Martikov|CoS} (LG male human) is a {@creature wereraven|VRGR} (see {@area appendix D|7d5|x}) and a high-ranking member of the Keepers of the Feather, a secret society of wereravens that opposes Strahd. Urwin's wife and business partner, {@creature Danika Dorakova|CoS} (LG female human), is also a {@creature wereraven|VRGR}, as are their two sons, Brom and Bray. The boys have only 7 hit points each and, at ages eleven and nine, are too young to be effective combatants.",
 										"At any given time, another {@dice 1d4} {@creature Wereraven|VRGR|wereravens} (members of the Keepers of the Feather) are present at the inn, either perched on the rooftop in raven form or huddled inside in human form. These wereravens are loyal friends of the Martikovs and help protect the inn.",
 										"If the characters earn the trust of the wereravens in Vallaki, the Keepers of the Feather will watch their backs. The next time the characters get themselves in serious trouble, you can have a group of {@dice 1d4} {@creature Wereraven|VRGR|wereravens} show up to rescue or otherwise help them."
 									]
@@ -17310,7 +17472,7 @@
 											"page": 100,
 											"id": "33e",
 											"entries": [
-												"The lone guest of the Blue Water Inn at present is a colorfully dressed half-elf bard who goes by the name {@creature Rictavio|CoS}\u2014a false identity adopted by the legendary vampire hunter Rudolph van Richten (see {@adventure appendix D|CoS|21|Rictavio}). He regales tavern patrons with stories so outrageous as to be hardly believable, yet he asserts they are true indeed. {@creature Rictavio|CoS} claims to be a carnival ringmaster from a distant land. He's been staying at the inn for almost a month, taking advantage of Urwin Martikov's generosity and good nature. When he arrived, he was accompanied by a monkey named {@creature Piccolo|CoS}. The monkey wasn't welcome at the inn, so {@creature Rictavio|CoS} gave it to the local toymaker (see {@area area N7|3df|x}).",
+												"The lone guest of the Blue Water Inn at present is a colorfully dressed half-elf bard who goes by the name {@creature Rictavio|CoS}\u2014a false identity adopted by the legendary vampire hunter Rudolph van Richten (see {@adventure appendix D|CoS|21|Rictavio}). He regales tavern patrons with stories so outrageous as to be hardly believable, yet he asserts they are true indeed. {@creature Rictavio|CoS} claims to be a carnival ringmaster from a distant land. He's been staying at the inn for almost a month, taking advantage of {@creature Urwin Martikov|CoS}'s generosity and good nature. When he arrived, he was accompanied by a monkey named {@creature Piccolo|CoS}. The monkey wasn't welcome at the inn, so {@creature Rictavio|CoS} gave it to the local toymaker (see {@area area N7|3df|x}).",
 												"{@creature Rictavio|CoS} admits to having no musical talent but manages to entertain locals nonetheless with his stories of faraway places. Twice each day, at dawn and again at dusk, he leaves the inn with a couple of apples and a cooked wolf steak wrapped in a handkerchief. He claims the food is for his portly friend, \"the destitute toymaker\" ({@area area N7|3df|x}) and his pet monkey. In fact, the apples are for his horse Drusilla ({@area area N2f|343|x}), and the steak is for his captured saber-toothed tiger ({@area area N5|3c9|x}).",
 												"During his stay at the inn, {@creature Rictavio|CoS} is quietly gathering information on the Keepers of the Feather, trying to figure out the identities of all the wereravens in town. He's also trying to learn as much as he can about the Vistani, particularly the ones living in the camp just outside town ({@area area N9|3e8|x}). Once he concludes that they are in league with Strahd, {@creature Rictavio|CoS} plans to unleash his trained saber-toothed tiger upon them, with or without the support of the wereravens.",
 												"{@creature Rictavio|CoS} wears a {@item hat of disguise} and a {@item ring of mind shielding} to conceal his identity. He carries an iron key that unlocks the door to his carnival wagon ({@area area N5|3c9|x})."
@@ -17349,7 +17511,7 @@
 												"This room looks like the kitchen of someone who loves to cook. It has piles of pots, walls lined with utensils and shelves of ingredients, and all manner of pleasant odors. Two lanterns hang above a sturdy pine worktable in the middle of the clutter. A pot of soup bubbles on the hearth."
 											]
 										},
-										"Urwin Martikov, who prepares most of the meals, is found here throughout the day. He occasionally receives help from his two boys, but they are easily distracted. A cupboard against the east wall holds most of the inn's supply of cutlery and dishware, none of it valuable. A door in the west wall leads outside and is usually barred from the inside.",
+										"{@creature Urwin Martikov|CoS}, who prepares most of the meals, is found here throughout the day. He occasionally receives help from his two boys, but they are easily distracted. A cupboard against the east wall holds most of the inn's supply of cutlery and dishware, none of it valuable. A door in the west wall leads outside and is usually barred from the inside.",
 										"A secret door at the west end of the south wall can be pushed open to reveal a wooden staircase that leads up to {@area area N2i|349|x}."
 									]
 								},
@@ -17393,7 +17555,7 @@
 												"Dim light spilling in through a pair of dirt-encrusted windows reveals piles of hay with pitchforks sticking out of them. Ravens rule this roost\u2014you can see hundreds of them."
 											]
 										},
-										"Characters who search the loft thoroughly find three pitchforks and a locked wooden chest buried under a pile of hay (see \"Treasure\" below), next to a secret door. If the characters tamper with the chest, the ravens gather into four {@creature Swarm of Ravens||swarms of ravens} and attack. If two swarms are killed, the others flee. Otherwise, they cease their attacks if the characters leave the chest alone. If the fighting continues for more than 3 rounds, Urwin Martikov and two other wereravens hear the ruckus and investigate (in human form).",
+										"Characters who search the loft thoroughly find three pitchforks and a locked wooden chest buried under a pile of hay (see \"Treasure\" below), next to a secret door. If the characters tamper with the chest, the ravens gather into four {@creature Swarm of Ravens||swarms of ravens} and attack. If two swarms are killed, the others flee. Otherwise, they cease their attacks if the characters leave the chest alone. If the fighting continues for more than 3 rounds, {@creature Urwin Martikov|CoS} and two other wereravens hear the ruckus and investigate (in human form).",
 										"A secret door in the back of the loft can be pushed open to reveal a bedchamber ({@area area N2p|358|x}) beyond. No ability check is required to spot the secret door, because light in the room beyond slips through the door's cracks.",
 										{
 											"type": "entries",
@@ -18149,11 +18311,17 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 63,
+												"offsetX": -34,
+												"offsetY": 9
+											},
+											"id": "4eb",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/055-015-thumb.png"
-											},
-											"id": "4eb"
+												"path": "adventure/CoS/thumbnail/055-015.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -18165,6 +18333,12 @@
 											"width": 2400,
 											"height": 3300,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 63,
+												"offsetX": -34,
+												"offsetY": 9
+											},
 											"mapParent": {
 												"id": "4eb"
 											}
@@ -19307,11 +19481,17 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 76,
+												"offsetX": -12,
+												"offsetY": -19
+											},
+											"id": "514",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/058-016-thumb.png"
-											},
-											"id": "514"
+												"path": "adventure/CoS/thumbnail/058-016.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -19323,6 +19503,12 @@
 											"width": 2400,
 											"height": 3300,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 76,
+												"offsetX": -15,
+												"offsetY": -19
+											},
 											"mapParent": {
 												"id": "514"
 											}
@@ -20038,11 +20224,18 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 75,
+												"offsetX": -48,
+												"offsetY": -24,
+												"scale": 2
+											},
+											"id": "5b4",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/063-cos05-13-thumb.png"
-											},
-											"id": "5b4"
+												"path": "adventure/CoS/thumbnail/063-cos05-13.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -20054,6 +20247,13 @@
 											"width": 2400,
 											"height": 1650,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 179,
+												"offsetX": -101,
+												"offsetY": -48,
+												"scale": 2
+											},
 											"mapParent": {
 												"id": "5b4",
 												"autoScale": true
@@ -20834,11 +21034,18 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 69,
+												"offsetX": -11,
+												"offsetY": -7,
+												"distance": 10
+											},
+											"id": "5ba",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/066-018-thumb.png"
-											},
-											"id": "5ba"
+												"path": "adventure/CoS/thumbnail/066-018.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -20850,6 +21057,13 @@
 											"width": 2400,
 											"height": 3300,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 69,
+												"offsetX": -11,
+												"offsetY": -7,
+												"distance": 10
+											},
 											"mapParent": {
 												"id": "5ba"
 											}
@@ -21551,11 +21765,17 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 85,
+												"offsetX": -43,
+												"offsetY": -25
+											},
+											"id": "5cf",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/072-019-thumb.png"
-											},
-											"id": "5cf"
+												"path": "adventure/CoS/thumbnail/072-019.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -21567,6 +21787,12 @@
 											"width": 2400,
 											"height": 1650,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 85,
+												"offsetX": -43,
+												"offsetY": -25
+											},
 											"mapParent": {
 												"id": "5cf"
 											}
@@ -22594,11 +22820,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 144,
+										"offsetX": -44,
+										"offsetY": -16,
+										"distance": 10
+									},
+									"id": "5eb",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/077-020-thumb.png"
-									},
-									"id": "5eb"
+										"path": "adventure/CoS/thumbnail/077-020.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -22610,6 +22843,13 @@
 									"width": 4800,
 									"height": 6600,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 144,
+										"offsetX": -44,
+										"offsetY": -16,
+										"distance": 10
+									},
 									"mapParent": {
 										"id": "5eb"
 									}
@@ -23163,7 +23403,7 @@
 												"type": "internal",
 												"path": "adventure/CoS/079-021.jpg"
 											},
-											"title": "Map 7.2: Argynvostholt (Area Q)",
+											"title": "Map 7.2: Argynvostholt (Area Q) - Rooftop and Beacon",
 											"width": 2400,
 											"height": 3300,
 											"mapRegions": [
@@ -23984,11 +24224,18 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 72,
+												"offsetX": 47,
+												"offsetY": 63,
+												"distance": 10
+											},
+											"id": "602",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/079-021-thumb.png"
-											},
-											"id": "602"
+												"path": "adventure/CoS/thumbnail/079-021.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -24000,6 +24247,13 @@
 											"width": 2400,
 											"height": 3300,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 72,
+												"offsetX": 47,
+												"offsetY": 63,
+												"distance": 10
+											},
 											"mapParent": {
 												"id": "602"
 											}
@@ -24114,8 +24368,8 @@
 										"The roof over this part of the mansion has collapsed, creating a twenty-foot-diameter gaping hole with broken rafters bisecting it. Dark storm clouds roll across the sky overhead. The floor is piled with rocks, broken tiles, shattered beams, and other debris. Beneath the rubble lie a sagging floor and puddles of rainwater."
 									]
 								},
-								"The ceiling here is 20 feet high, and the rubble is difficult terrain.",
-								"{@creature Vladimir Horngaard|CoS} (see {@area area Q36|47e|x}) can hear visitors climbing over the rubble and can't be surprised by them."
+								"The ceiling here is 20 feet high, and the rubble is {@quickref difficult terrain||3}.",
+								"{@creature Vladimir Horngaard|CoS} (see {@area area Q36|47e|x}) can hear visitors climbing over the rubble and can't be {@quickref Surprise|PHB|3|0|surprised} by them."
 							]
 						},
 						{
@@ -24400,7 +24654,7 @@
 							"page": 140,
 							"id": "49a",
 							"entries": [
-								"This 20-foot-diameter hole in the mansion's roof is directly above {@area area Q33|478|x}, the floor of which is 20 feet below. The rubble on the roof surrounding the hole is difficult terrain. The roof is sloped and covered with cracked stone tiles. Climbing the tiled roof requires a successful DC 10 Strength ({@skill Athletics}) check. A failure by 5 or more causes the climber to slide down to the parapet, landing {@condition prone} but taking no damage."
+								"This 20-foot-diameter hole in the mansion's roof is directly above {@area area Q33|478|x}, the floor of which is 20 feet below. The rubble on the roof surrounding the hole is {@quickref difficult terrain||3}. The roof is sloped and covered with cracked stone tiles. Climbing the tiled roof requires a successful DC 10 Strength ({@skill Athletics}) check. A failure by 5 or more causes the climber to slide down to the parapet, landing {@condition prone} but taking no damage."
 							]
 						},
 						{
@@ -24848,11 +25102,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 61,
+										"offsetX": -37,
+										"offsetY": -15,
+										"distance": 50
+									},
+									"id": "619",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/083-022-thumb.png"
-									},
-									"id": "619"
+										"path": "adventure/CoS/thumbnail/083-022.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -24864,6 +25125,13 @@
 									"width": 1950,
 									"height": 2475,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 61,
+										"offsetX": -37,
+										"offsetY": -15,
+										"distance": 50
+									},
 									"mapParent": {
 										"id": "619"
 									}
@@ -25757,11 +26025,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 69,
+										"offsetX": -3,
+										"offsetY": -3,
+										"distance": 10
+									},
+									"id": "631",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/086-023-thumb.png"
-									},
-									"id": "631"
+										"path": "adventure/CoS/thumbnail/086-023.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -25773,6 +26048,13 @@
 									"width": 2400,
 									"height": 3300,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 69,
+										"offsetX": -3,
+										"offsetY": -3,
+										"distance": 10
+									},
 									"mapParent": {
 										"id": "631"
 									}
@@ -26186,11 +26468,18 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 69,
+												"offsetX": -10,
+												"offsetY": -5,
+												"distance": 10
+											},
+											"id": "6bb",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/090-024-thumb.png"
-											},
-											"id": "6bb"
+												"path": "adventure/CoS/thumbnail/090-024.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -26202,6 +26491,13 @@
 											"width": 2400,
 											"height": 1650,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 10069,
+												"offsetX": -10,
+												"offsetY": -5,
+												"distance": 10
+											},
 											"mapParent": {
 												"id": "6bb"
 											}
@@ -26470,7 +26766,7 @@
 											"type": "insetReadaloud",
 											"id": "4fe",
 											"entries": [
-												"Nine mongrel creatures stand in the middle of this room, starting at the doorway in silence with hungry looks in their eyes."
+												"Nine mongrel creatures stand in the middle of this room, staring at the doorway in silence with hungry looks in their eyes."
 											]
 										},
 										"These nine {@creature mongrelfolk|CoS} haven't been fed in days because Clovin doesn't like them. They try to kill and devour any character who sets foot in the room."
@@ -27210,11 +27506,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 68,
+										"offsetX": 47,
+										"offsetY": 46,
+										"distance": 10
+									},
+									"id": "6bc",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/095-025-thumb.png"
-									},
-									"id": "6bc"
+										"path": "adventure/CoS/thumbnail/095-025.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -27226,6 +27529,13 @@
 									"width": 2400,
 									"height": 3300,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 68,
+										"offsetX": 47,
+										"offsetY": 46,
+										"distance": 10
+									},
 									"mapParent": {
 										"id": "6bc"
 									}
@@ -27455,7 +27765,7 @@
 										"The road ahead is cut out of the mountainside, rising steeply to one side and falling away on the other. Mist and snow greatly reduce visibility, and the howling wind cuts through you like a knife."
 									]
 								},
-								"If no character has a passive Wisdom ({@skill Perception}) score of 16 or higher, the party is surprised. Otherwise, read:",
+								"If no character has a passive Wisdom ({@skill Perception}) score of 16 or higher, the party is {@quickref Surprise|PHB|3|0|surprised}. Otherwise, read:",
 								{
 									"type": "insetReadaloud",
 									"id": "54a",
@@ -27533,7 +27843,7 @@
 							]
 						},
 						"The river ranges in depth but is never more than 10 feet deep. Muriel Vinshaw, a wereraven in human form, lurks amid the circle of standing stones ({@area area U6|569|x}) and is using a lantern to signal the heroes. In the village proper, fog prevents a creature from seeing any other creature or object more than 120 feet away.",
-						"A few sections of dirt road have survived, and these places are not difficult terrain. The marsh, however, is difficult terrain. Whenever the characters take a short or long rest in the marsh, even if they barricade themselves in a ruined building, they are accosted by {@dice 1d4} swarms of hungry flies (use the {@creature Swarm of Wasps||swarm of insects (wasps)} stat block in the {@book Monster Manual|MM}). The swarms don't trouble characters in {@area areas U3|55c|x} or {@area U5|565|x}.",
+						"A few sections of dirt road have survived, and these places are not {@quickref difficult terrain||3}. The marsh, however, is {@quickref difficult terrain||3}. Whenever the characters take a short or long rest in the marsh, even if they barricade themselves in a ruined building, they are accosted by {@dice 1d4} swarms of hungry flies (use the {@creature Swarm of Wasps||swarm of insects (wasps)} stat block in the {@book Monster Manual|MM}). The swarms don't trouble characters in {@area areas U3|55c|x} or {@area U5|565|x}.",
 						{
 							"type": "entries",
 							"name": "Marsh Scarecrows",
@@ -27746,11 +28056,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 82,
+										"offsetX": -32,
+										"scale": 2,
+										"distance": 100
+									},
+									"id": "6bd",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/099-026-thumb.png"
-									},
-									"id": "6bd"
+										"path": "adventure/CoS/thumbnail/099-026.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -27762,6 +28079,13 @@
 									"width": 1575,
 									"height": 1575,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 82,
+										"offsetX": -32,
+										"scale": 2,
+										"distance": 100
+									},
 									"mapParent": {
 										"id": "6bd"
 									}
@@ -27905,11 +28229,17 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 80,
+												"offsetX": -21,
+												"offsetY": -37
+											},
+											"id": "6be",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/101-cos10-02-thumb.png"
-											},
-											"id": "6be"
+												"path": "adventure/CoS/thumbnail/101-cos10-02.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -27921,6 +28251,12 @@
 											"width": 1125,
 											"height": 1125,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 90,
+												"offsetX": -23,
+												"offsetY": -42
+											},
 											"mapParent": {
 												"id": "6be",
 												"autoScale": true
@@ -28584,11 +28920,17 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 72,
+												"offsetX": -13,
+												"offsetY": -15
+											},
+											"id": "6bf",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/105-027-thumb.png"
-											},
-											"id": "6bf"
+												"path": "adventure/CoS/thumbnail/105-027.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -28600,6 +28942,12 @@
 											"width": 1200,
 											"height": 3300,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 72,
+												"offsetX": -13,
+												"offsetY": -15
+											},
 											"mapParent": {
 												"id": "6bf"
 											}
@@ -29616,11 +29964,17 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 72,
+										"offsetX": -22,
+										"offsetY": 25
+									},
+									"id": "6c0",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/111-028-thumb.png"
-									},
-									"id": "6c0"
+										"path": "adventure/CoS/thumbnail/111-028.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -29632,6 +29986,12 @@
 									"width": 2400,
 									"height": 3300,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 72,
+										"offsetX": -22,
+										"offsetY": 25
+									},
 									"mapParent": {
 										"id": "6c0"
 									}
@@ -30139,7 +30499,7 @@
 				{
 					"type": "quote",
 					"entries": [
-						"I would not be called ‘death' so soon. I made a pact with death, a pact of blood."
+						"I would not be called 'death' so soon. I made a pact with death, a pact of blood."
 					],
 					"by": "Tome of Strahd"
 				},
@@ -31115,11 +31475,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 76,
+										"offsetX": -14,
+										"offsetY": -18,
+										"distance": 10
+									},
+									"id": "6c1",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/117-029-thumb.png"
-									},
-									"id": "6c1"
+										"path": "adventure/CoS/thumbnail/117-029.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -31131,6 +31498,13 @@
 									"width": 2400,
 									"height": 3300,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 76,
+										"offsetX": -14,
+										"offsetY": -18,
+										"distance": 10
+									},
 									"mapParent": {
 										"id": "6c1"
 									}
@@ -32967,11 +33341,18 @@
 												}
 											],
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 76,
+												"offsetX": 21,
+												"offsetY": -19,
+												"distance": 10
+											},
+											"id": "6c2",
 											"hrefThumbnail": {
 												"type": "internal",
-												"path": "adventure/CoS/thumbnail/120-030-thumb.png"
-											},
-											"id": "6c2"
+												"path": "adventure/CoS/thumbnail/120-030.webp"
+											}
 										},
 										{
 											"type": "image",
@@ -32983,6 +33364,13 @@
 											"width": 2400,
 											"height": 3300,
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 76,
+												"offsetX": 21,
+												"offsetY": -19,
+												"distance": 10
+											},
 											"mapParent": {
 												"id": "6c2"
 											}
@@ -33285,7 +33673,7 @@
 										},
 										{
 											"type": "entries",
-											"name": "West Sarcophagus",
+											"name": "East Sarcophagus",
 											"page": 193,
 											"id": "647",
 											"entries": [
@@ -34046,11 +34434,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 54,
+										"offsetX": -26,
+										"offsetY": -8,
+										"distance": 50
+									},
+									"id": "6c3",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/124-031-thumb.png"
-									},
-									"id": "6c3"
+										"path": "adventure/CoS/thumbnail/124-031.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -34062,6 +34457,13 @@
 									"width": 1950,
 									"height": 2475,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 54,
+										"offsetX": -26,
+										"offsetY": -8,
+										"distance": 50
+									},
 									"mapParent": {
 										"id": "6c3"
 									}
@@ -35173,11 +35575,18 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 74,
+										"offsetX": 14,
+										"offsetY": 36,
+										"distance": 10
+									},
+									"id": "6c4",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/127-032-thumb.png"
-									},
-									"id": "6c4"
+										"path": "adventure/CoS/thumbnail/127-032.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -35189,6 +35598,13 @@
 									"width": 2400,
 									"height": 3300,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 74,
+										"offsetX": 14,
+										"offsetY": 36,
+										"distance": 10
+									},
 									"mapParent": {
 										"id": "6c4"
 									}
@@ -35647,7 +36063,7 @@
 					"name": "Character Background",
 					"page": 209,
 					"entries": [
-						"During character creation, players can select the following background for their characters, with your approval: {@background Haunted One|vrgr}. It is appropriate for any character or campaign associaed with eeriness or horror."
+						"During character creation, players can select the following background for their characters, with your approval: {@background Haunted One|vrgr}. It is appropriate for any character or campaign associated with eeriness or horror."
 					],
 					"id": "016"
 				},
@@ -37192,11 +37608,17 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 165,
+										"offsetX": 80,
+										"offsetY": 54
+									},
+									"id": "6c6",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/CoS/thumbnail/134-deathhousedm-thumb.png"
-									},
-									"id": "6c6"
+										"path": "adventure/CoS/thumbnail/134-deathhousedm.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -37208,6 +37630,12 @@
 									"width": 5455,
 									"height": 7500,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 165,
+										"offsetX": 80,
+										"offsetY": 54
+									},
 									"mapParent": {
 										"id": "6c6"
 									}
@@ -37789,7 +38217,7 @@
 							"page": 218,
 							"id": "712",
 							"entries": [
-								"This alcove contains a {@creature grick} that slithers out to attack the first character it sees within 5 feet of it. Any character with a passive Wisdom ({@skill Perception}) score under 12 is surprised by it. The alcove is otherwise empty."
+								"This alcove contains a {@creature grick} that slithers out to attack the first character it sees within 5 feet of it. Any character with a passive Wisdom ({@skill Perception}) score under 12 is {@quickref Surprise|PHB|3|0|surprised} by it. The alcove is otherwise empty."
 							]
 						},
 						{
@@ -38508,8 +38936,8 @@
 														"path": "adventure/CoS/144-636379873620950408.png"
 													},
 													"title": "{@creature Baba Lysaga|CoS}",
-													"width": 299,
-													"height": 402
+													"width": 745,
+													"height": 1000
 												}
 											]
 										}
@@ -39040,7 +39468,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/CoS/148-636985373100391611.jpeg"
+														"path": "adventure/CoS/148-636985373100391611.jpg"
 													},
 													"title": "{@creature Mongrelfolk|CoS}",
 													"width": 300,
@@ -39503,7 +39931,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/CoS/153-636988936829621698.jpeg"
+												"path": "adventure/CoS/153-636988936829621698.jpg"
 											},
 											"title": "{@creature Strahd von Zarovich|CoS}",
 											"width": 300,

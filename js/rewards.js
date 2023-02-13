@@ -59,7 +59,7 @@ class RewardsPage extends ListPage {
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
 			<span class="col-2 text-center pl-0">${reward.type}</span>
 			<span class="bold col-8">${reward.name}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(reward.source)} pr-0" title="${Parser.sourceJsonToFull(reward.source)}" ${BrewUtil2.sourceJsonToStyle(reward.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(reward.source)} pr-0" title="${Parser.sourceJsonToFull(reward.source)}" ${Parser.sourceJsonToStyle(reward.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -82,19 +82,8 @@ class RewardsPage extends ListPage {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
-		FilterBox.selectFirstVisible(this._dataList);
-	}
-
-	_doLoadHash (id) {
-		Renderer.get().setFirstSection(true);
-		const reward = this._dataList[id];
-
-		this._$pgContent.empty().append(RenderRewards.$getRenderedReward(reward));
-
-		this._updateSelected();
+	_renderStats_doBuildStatsTab ({ent}) {
+		this._$pgContent.empty().append(RenderRewards.$getRenderedReward(ent));
 	}
 }
 

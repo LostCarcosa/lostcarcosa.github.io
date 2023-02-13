@@ -70,7 +70,7 @@ class DeitiesPage extends ListPage {
 			<span class="col-2 text-center">${g.pantheon}</span>
 			<span class="col-2 text-center">${alignment}</span>
 			<span class="col-3 ${g.domains[0] === VeCt.STR_NONE ? `list-entry-none` : ""}">${domains}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(g.source)} pr-0" title="${Parser.sourceJsonToFull(g.source)}" ${BrewUtil2.sourceJsonToStyle(g.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(g.source)} pr-0" title="${Parser.sourceJsonToFull(g.source)}" ${Parser.sourceJsonToStyle(g.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -96,18 +96,8 @@ class DeitiesPage extends ListPage {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
-		FilterBox.selectFirstVisible(this._dataList);
-	}
-
-	_doLoadHash (id) {
-		const deity = this._dataList[id];
-
-		this._$pgContent.empty().append(RenderDeities.$getRenderedDeity(deity));
-
-		this._updateSelected();
+	_renderStats_doBuildStatsTab ({ent}) {
+		this._$pgContent.empty().append(RenderDeities.$getRenderedDeity(ent));
 	}
 }
 

@@ -45,15 +45,19 @@ class TablesPage extends ListPage {
 
 			dataProps: ["table", "tableGroup"],
 
-			bindOtherButtonsOptions: {
-				other: [
-					{
-						name: "Copy as CSV",
-						pFn: () => this._pCopyRenderedAsCsv(),
-					},
-				],
-			},
+			listSyntax: new ListSyntaxTables({fnGetDataList: () => this._dataList}),
 		});
+	}
+
+	get _bindOtherButtonsOptions () {
+		return {
+			other: [
+				{
+					name: "Copy as CSV",
+					pFn: () => this._pCopyRenderedAsCsv(),
+				},
+			],
+		};
 	}
 
 	async _pCopyRenderedAsCsv () {
@@ -85,7 +89,7 @@ class TablesPage extends ListPage {
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
 			<span class="bold col-10 pl-0">${it.name}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil2.sourceJsonToStyle(it.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${Parser.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -108,27 +112,8 @@ class TablesPage extends ListPage {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
-		FilterBox.selectFirstVisible(this._dataList);
-	}
-
-	_doLoadHash (id) {
-		Renderer.get().setFirstSection(true);
-		const it = this._dataList[id];
-
-		this._$pgContent.empty().append(RenderTables.$getRenderedTable(it));
-
-		this._updateSelected();
-	}
-
-	_getSearchCache (entity) {
-		if (!entity.rows && !entity.tables) return "";
-		const ptrOut = {_: ""};
-		this._getSearchCache_handleEntryProp(entity, "rows", ptrOut);
-		this._getSearchCache_handleEntryProp(entity, "tables", ptrOut);
-		return ptrOut._;
+	_renderStats_doBuildStatsTab ({ent}) {
+		this._$pgContent.empty().append(RenderTables.$getRenderedTable(ent));
 	}
 }
 

@@ -40,6 +40,8 @@ class ConditionsDiseasesPage extends ListPage {
 		super({
 			dataSource: "data/conditionsdiseases.json",
 
+			pFnGetFluff: Renderer.condition.pGetFluff.bind(Renderer.condition),
+
 			pageFilter,
 
 			listClass: "conditions",
@@ -63,7 +65,7 @@ class ConditionsDiseasesPage extends ListPage {
 			<span class="col-0-3 px-0 ve-flex-vh-center lst__btn-toggle-expand ve-self-flex-stretch">[+]</span>
 			<span class="col-3 text-center">${PageFilterConditionsDiseases.getDisplayProp(it.__prop)}</span>
 			<span class="bold col-6-7 px-1">${it.name}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil2.sourceJsonToStyle(it.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${Parser.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>
 		<div class="ve-flex ve-hidden relative lst__wrp-preview">
 			<div class="vr-0 absolute lst__vr-preview"></div>
@@ -90,55 +92,8 @@ class ConditionsDiseasesPage extends ListPage {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
-		FilterBox.selectFirstVisible(this._dataList);
-	}
-
-	_doLoadHash (id) {
-		this._$pgContent.empty();
-		const it = this._dataList[id];
-
-		const buildStatsTab = () => {
-			this._$pgContent.append(RenderConditionDiseases.$getRenderedConditionDisease(it));
-		};
-
-		const buildFluffTab = (isImageTab) => {
-			return Renderer.utils.pBuildFluffTab({
-				isImageTab,
-				$content: this._$pgContent,
-				entity: it,
-				pFnGetFluff: Renderer.condition.pGetFluff,
-			});
-		};
-
-		const fluffProp = it.__prop === "condition" ? "conditionFluff" : "diseaseFluff";
-
-		const tabMetas = [
-			new Renderer.utils.TabButton({
-				label: "Traits",
-				fnPopulate: buildStatsTab,
-				isVisible: true,
-			}),
-			new Renderer.utils.TabButton({
-				label: "Info",
-				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(it, fluffProp),
-			}),
-			new Renderer.utils.TabButton({
-				label: "Images",
-				fnPopulate: buildFluffTab.bind(null, true),
-				isVisible: Renderer.utils.hasFluffImages(it, fluffProp),
-			}),
-		];
-
-		Renderer.utils.bindTabButtons({
-			tabButtons: tabMetas.filter(it => it.isVisible),
-			tabLabelReference: tabMetas.map(it => it.label),
-		});
-
-		this._updateSelected();
+	_renderStats_doBuildStatsTab ({ent}) {
+		this._$pgContent.empty().append(RenderConditionDiseases.$getRenderedConditionDisease(ent));
 	}
 }
 

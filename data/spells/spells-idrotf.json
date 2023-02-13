@@ -39,51 +39,6 @@
 			],
 			"areaTags": [
 				"ST"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			}
-		},
-		{
-			"name": "00 Homebrew Version Tracker",
-			"source": "IDRotF",
-			"level": 9,
-			"school": "T",
-			"time": [
-				{
-					"number": 10,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a break"
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"Version 0.1.5",
-				"attempt blacklist of create magen auto-load"
-			],
-			"areaTags": [
-				"ST"
 			]
 		}
 	]

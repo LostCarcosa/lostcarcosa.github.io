@@ -890,27 +890,6 @@
 									]
 								},
 								{
-									"area": "05d",
-									"points": [
-										[
-											507,
-											745
-										],
-										[
-											507,
-											693
-										],
-										[
-											593,
-											693
-										],
-										[
-											593,
-											745
-										]
-									]
-								},
-								{
 									"area": "069",
 									"points": [
 										[
@@ -953,48 +932,6 @@
 									]
 								},
 								{
-									"area": "06f",
-									"points": [
-										[
-											1061,
-											616
-										],
-										[
-											1061,
-											526
-										],
-										[
-											948,
-											526
-										],
-										[
-											948,
-											616
-										]
-									]
-								},
-								{
-									"area": "072",
-									"points": [
-										[
-											1108,
-											578
-										],
-										[
-											1108,
-											491
-										],
-										[
-											1047,
-											491
-										],
-										[
-											1047,
-											578
-										]
-									]
-								},
-								{
 									"area": "06c",
 									"points": [
 										[
@@ -1033,27 +970,6 @@
 										[
 											555,
 											786
-										]
-									]
-								},
-								{
-									"area": "057",
-									"points": [
-										[
-											584,
-											843
-										],
-										[
-											584,
-											694
-										],
-										[
-											724,
-											694
-										],
-										[
-											724,
-											843
 										]
 									]
 								},
@@ -1159,48 +1075,6 @@
 										[
 											1091,
 											708
-										]
-									]
-								},
-								{
-									"area": "053",
-									"points": [
-										[
-											872,
-											1033
-										],
-										[
-											872,
-											871
-										],
-										[
-											932,
-											871
-										],
-										[
-											932,
-											1033
-										]
-									]
-								},
-								{
-									"area": "055",
-									"points": [
-										[
-											985,
-											1083
-										],
-										[
-											985,
-											999
-										],
-										[
-											925,
-											999
-										],
-										[
-											925,
-											1083
 										]
 									]
 								},
@@ -1541,27 +1415,6 @@
 									]
 								},
 								{
-									"area": "03d",
-									"points": [
-										[
-											633,
-											1434
-										],
-										[
-											633,
-											1570
-										],
-										[
-											766,
-											1570
-										],
-										[
-											766,
-											1434
-										]
-									]
-								},
-								{
 									"area": "08a",
 									"points": [
 										[
@@ -1621,27 +1474,6 @@
 										[
 											537,
 											1574
-										]
-									]
-								},
-								{
-									"area": "08e",
-									"points": [
-										[
-											536,
-											1546
-										],
-										[
-											536,
-											1634
-										],
-										[
-											646,
-											1634
-										],
-										[
-											646,
-											1546
 										]
 									]
 								},
@@ -1747,48 +1579,6 @@
 										[
 											736,
 											1942
-										]
-									]
-								},
-								{
-									"area": "09d",
-									"points": [
-										[
-											459,
-											2054
-										],
-										[
-											459,
-											2129
-										],
-										[
-											532,
-											2129
-										],
-										[
-											532,
-											2054
-										]
-									]
-								},
-								{
-									"area": "09b",
-									"points": [
-										[
-											500,
-											2112
-										],
-										[
-											500,
-											2159
-										],
-										[
-											904,
-											2159
-										],
-										[
-											904,
-											2112
 										]
 									]
 								},
@@ -2003,27 +1793,6 @@
 									]
 								},
 								{
-									"area": "0b1",
-									"points": [
-										[
-											1659,
-											1571
-										],
-										[
-											1659,
-											1629
-										],
-										[
-											1766,
-											1629
-										],
-										[
-											1766,
-											1571
-										]
-									]
-								},
-								{
 									"area": "0b2",
 									"points": [
 										[
@@ -2150,27 +1919,6 @@
 									]
 								},
 								{
-									"area": "0c2",
-									"points": [
-										[
-											1537,
-											1877
-										],
-										[
-											1537,
-											1997
-										],
-										[
-											1640,
-											1997
-										],
-										[
-											1640,
-											1877
-										]
-									]
-								},
-								{
 									"area": "0ab",
 									"points": [
 										[
@@ -2230,27 +1978,6 @@
 										[
 											1194,
 											2117
-										]
-									]
-								},
-								{
-									"area": "0cc",
-									"points": [
-										[
-											998,
-											2284
-										],
-										[
-											998,
-											2389
-										],
-										[
-											1142,
-											2389
-										],
-										[
-											1142,
-											2284
 										]
 									]
 								},
@@ -2358,15 +2085,296 @@
 											2454
 										]
 									]
+								},
+								{
+									"area": "05d",
+									"points": [
+										[
+											509,
+											696
+										],
+										[
+											509,
+											742
+										],
+										[
+											585,
+											742
+										],
+										[
+											585,
+											696
+										]
+									]
+								},
+								{
+									"area": "057",
+									"points": [
+										[
+											588,
+											697
+										],
+										[
+											588,
+											875
+										],
+										[
+											719,
+											875
+										],
+										[
+											719,
+											697
+										]
+									]
+								},
+								{
+									"area": "053",
+									"points": [
+										[
+											874,
+											875
+										],
+										[
+											874,
+											1028
+										],
+										[
+											926,
+											1028
+										],
+										[
+											926,
+											875
+										]
+									]
+								},
+								{
+									"area": "055",
+									"points": [
+										[
+											929,
+											1004
+										],
+										[
+											929,
+											1081
+										],
+										[
+											978,
+											1081
+										],
+										[
+											978,
+											1004
+										]
+									]
+								},
+								{
+									"area": "03d",
+									"points": [
+										[
+											641,
+											1454
+										],
+										[
+											641,
+											1542
+										],
+										[
+											740,
+											1542
+										],
+										[
+											740,
+											1454
+										]
+									]
+								},
+								{
+									"area": "08e",
+									"points": [
+										[
+											539,
+											1550
+										],
+										[
+											539,
+											1626
+										],
+										[
+											639,
+											1626
+										],
+										[
+											639,
+											1550
+										]
+									]
+								},
+								{
+									"area": "09d",
+									"points": [
+										[
+											479,
+											2094
+										],
+										[
+											479,
+											2121
+										],
+										[
+											516,
+											2121
+										],
+										[
+											516,
+											2094
+										]
+									]
+								},
+								{
+									"area": "09b",
+									"points": [
+										[
+											519,
+											2123
+										],
+										[
+											519,
+											2150
+										],
+										[
+											902,
+											2150
+										],
+										[
+											902,
+											2123
+										]
+									]
+								},
+								{
+									"area": "0cc",
+									"points": [
+										[
+											1074,
+											2300
+										],
+										[
+											1074,
+											2463
+										],
+										[
+											1117,
+											2463
+										],
+										[
+											1117,
+											2300
+										]
+									]
+								},
+								{
+									"area": "0c2",
+									"points": [
+										[
+											1550,
+											1887
+										],
+										[
+											1550,
+											1991
+										],
+										[
+											1631,
+											1991
+										],
+										[
+											1631,
+											1887
+										]
+									]
+								},
+								{
+									"area": "0b1",
+									"points": [
+										[
+											1677,
+											1579
+										],
+										[
+											1677,
+											1628
+										],
+										[
+											1761,
+											1628
+										],
+										[
+											1761,
+											1579
+										]
+									]
+								},
+								{
+									"area": "072",
+									"points": [
+										[
+											1057,
+											536
+										],
+										[
+											1057,
+											559
+										],
+										[
+											1084,
+											559
+										],
+										[
+											1084,
+											536
+										]
+									]
+								},
+								{
+									"area": "06f",
+									"points": [
+										[
+											982,
+											534
+										],
+										[
+											982,
+											616
+										],
+										[
+											1056,
+											616
+										],
+										[
+											1056,
+											534
+										]
+									]
 								}
 							],
 							"title": "Map 1",
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 78,
+								"offsetX": -25,
+								"offsetY": -29,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "add",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/002-102-thumb.png"
-							},
-							"id": "add"
+								"path": "adventure/WDMM/thumbnail/002-102.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -2374,10 +2382,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/003-103.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 87,
+								"offsetX": -23,
+								"offsetY": 33,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "add",
 								"autoScale": true
@@ -2469,7 +2485,7 @@
 												"{@b Warning}. The words \"Certain death this way!\" are carved in Common on the southeast wall, with an arrow pointing toward the southern exit."
 											]
 										},
-										"The bugbears detect the approach of adventurers with the aid of the intellect devourers' Detect Sentience trait and therefore can't be surprised. As intruders approach their location, the bugbears withdraw down the southern tunnel and circle around to warn the goblinoids in {@area area 23|08b|x} of intruders. The bugbears know the perils of the western tunnel ({@area area 21|087|x}) and avoid it. Characters whose passive Wisdom ({@skill Perception}) scores equal or exceed the bugbears' Dexterity ({@skill Stealth}) checks notice the hiding or fleeing bugbears.",
+										"The bugbears detect the approach of adventurers with the aid of the intellect devourers' Detect Sentience trait and therefore can't be {@quickref Surprise|PHB|3|0|surprised}. As intruders approach their location, the bugbears withdraw down the southern tunnel and circle around to warn the goblinoids in {@area area 23|08b|x} of intruders. The bugbears know the perils of the western tunnel ({@area area 21|087|x}) and avoid it. Characters whose passive Wisdom ({@skill Perception}) scores equal or exceed the bugbears' Dexterity ({@skill Stealth}) checks notice the hiding or fleeing bugbears.",
 										"When a bugbear drops to 0 hit points, the intellect devourer in its skull teleports out to seek a new host.",
 										{
 											"type": "entries",
@@ -3067,7 +3083,7 @@
 							"id": "080",
 							"entries": [
 								"A filthy, 30-foot-square room lies at the end of a long hall, and a putrid stench fills both the room and the hallway.",
-								"A voracious {@creature troll} hunkers in the room's southwest corner and attacks interlopers on sight. It can't be surprised by adventurers who are noisy or who approach with uncovered light sources.",
+								"A voracious {@creature troll} hunkers in the room's southwest corner and attacks interlopers on sight. It can't be {@quickref Surprise|PHB|3|0|surprised} by adventurers who are noisy or who approach with uncovered light sources.",
 								"Halaster {@condition charmed} the troll so that once a day it is compelled to fetch food from {@area area 19a|083|x} and deliver it to the manticores in {@area area 16|076|x}. A successful {@spell dispel magic} cast on the troll (DC 15) ends the {@condition charmed} condition on it but has no effect on its vile disposition. The troll pursues any fleeing prey."
 							]
 						},
@@ -3174,7 +3190,7 @@
 							"page": 21,
 							"id": "08b",
 							"entries": [
-								"The Xanathar Guild maintains a watch post here, called \"Worg's Eye\" by the bugbears that command it. The goblinoids stationed here, two {@creature Bugbear||bugbears} and fifteen {@creature Goblin||goblins}, can't be surprised if they know trouble is on the way. If the two {@creature Bugbear||bugbears} in {@area area 2b|03d|x} managed to make it this far, add them to the roster of enemies.",
+								"The Xanathar Guild maintains a watch post here, called \"Worg's Eye\" by the bugbears that command it. The goblinoids stationed here, two {@creature Bugbear||bugbears} and fifteen {@creature Goblin||goblins}, can't be {@quickref Surprise|PHB|3|0|surprised} if they know trouble is on the way. If the two {@creature Bugbear||bugbears} in {@area area 2b|03d|x} managed to make it this far, add them to the roster of enemies.",
 								{
 									"type": "entries",
 									"name": "23a. Nimraith's Fate",
@@ -3208,7 +3224,7 @@
 												"{@b Shattered Statue}. The remains of a shattered statue lie in the middle of the room. (The bugbears are trying to reassemble it.)"
 											]
 										},
-										"The bugbears detect the approach of adventurers with the aid of the intellect devourers' Detect Sentience trait and therefore can't be surprised. When a bugbear drops to 0 hit points, the intellect devourer inhabiting its skull teleports away to seek a new host.",
+										"The bugbears detect the approach of adventurers with the aid of the intellect devourers' Detect Sentience trait and therefore can't be {@quickref Surprise|PHB|3|0|surprised}. When a bugbear drops to 0 hit points, the intellect devourer inhabiting its skull teleports away to seek a new host.",
 										"This nonmagical statue has broken into seventeen fist-sized chunks of black stone. (Restoring it will take the bugbears a month.) Any character who succeeds on a DC 15 Intelligence ({@skill Investigation}) check can ascertain what the statue depicted: three male human warriors standing together on a stone mound, facing outward and clutching swords."
 									]
 								},
@@ -3370,7 +3386,7 @@
 									"page": 22,
 									"id": "09e",
 									"entries": [
-										"Just around this corner is a {@creature gelatinous cube}. The first character to walk around the corner is surprised by the cube unless that character has a passive Wisdom ({@skill Perception}) score of 15 or higher."
+										"Just around this corner is a {@creature gelatinous cube}. The first character to walk around the corner is {@quickref Surprise|PHB|3|0|surprised} by the cube unless that character has a passive Wisdom ({@skill Perception}) score of 15 or higher."
 									]
 								},
 								{
@@ -3857,7 +3873,7 @@
 									"page": 26,
 									"id": "0d1",
 									"entries": [
-										"Three {@creature Bugbear||bugbears} sit in the middle of the floor, eating from a sack of dead rats and stirges. One of them has an {@creature intellect devourer} in its skull, which is controlling it like a puppeteer. Because of the intellect devourer's Detect Sentience trait, the bugbears can't be surprised by the adventurers. When the intellect devourer's host drops to 0 hit points, the intellect devourer teleports away to seek a new host."
+										"Three {@creature Bugbear||bugbears} sit in the middle of the floor, eating from a sack of dead rats and stirges. One of them has an {@creature intellect devourer} in its skull, which is controlling it like a puppeteer. Because of the intellect devourer's Detect Sentience trait, the bugbears can't be {@quickref Surprise|PHB|3|0|surprised} by the adventurers. When the intellect devourer's host drops to 0 hit points, the intellect devourer teleports away to seek a new host."
 									]
 								},
 								{
@@ -4164,27 +4180,6 @@
 										[
 											988,
 											553
-										]
-									]
-								},
-								{
-									"area": "0ea",
-									"points": [
-										[
-											892,
-											659
-										],
-										[
-											892,
-											729
-										],
-										[
-											986,
-											729
-										],
-										[
-											986,
-											659
 										]
 									]
 								},
@@ -5275,48 +5270,6 @@
 									]
 								},
 								{
-									"area": "15c",
-									"points": [
-										[
-											1487,
-											1771
-										],
-										[
-											1487,
-											1878
-										],
-										[
-											1557,
-											1878
-										],
-										[
-											1557,
-											1771
-										]
-									]
-								},
-								{
-									"area": "15a",
-									"points": [
-										[
-											1550,
-											1784
-										],
-										[
-											1550,
-											1956
-										],
-										[
-											1642,
-											1956
-										],
-										[
-											1642,
-											1784
-										]
-									]
-								},
-								{
 									"area": "158",
 									"points": [
 										[
@@ -5599,14 +5552,89 @@
 											2252
 										]
 									]
+								},
+								{
+									"area": "0ea",
+									"points": [
+										[
+											902,
+											674
+										],
+										[
+											978,
+											674
+										],
+										[
+											978,
+											699
+										],
+										[
+											953,
+											724
+										],
+										[
+											902,
+											724
+										]
+									]
+								},
+								{
+									"area": "15a",
+									"points": [
+										[
+											1555,
+											1947
+										],
+										[
+											1555,
+											1791
+										],
+										[
+											1630,
+											1791
+										],
+										[
+											1630,
+											1947
+										]
+									]
+								},
+								{
+									"area": "15c",
+									"points": [
+										[
+											1500,
+											1790
+										],
+										[
+											1500,
+											1815
+										],
+										[
+											1551,
+											1815
+										],
+										[
+											1551,
+											1790
+										]
+									]
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 78,
+								"offsetX": -23,
+								"offsetY": -12,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bdb",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/005-202-thumb.png"
-							},
-							"id": "bdb"
+								"path": "adventure/WDMM/thumbnail/005-202.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -5614,10 +5642,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/006-203.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 87,
+								"offsetX": -21,
+								"offsetY": 32,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bdb",
 								"autoScale": true
@@ -5693,7 +5729,7 @@
 												"{@b Throne}. A granite throne stands against the north wall atop a rectangular stone dais."
 											]
 										},
-										"The goblin vendors buy and sell stolen goods, including items listed in {@adventure chapter 5|PHB|-1} of the {@book Player's Handbook|PHB}\u2014particularly armor, shields, weapons, adventuring gear, tools, trade goods, food, and drink. The goblins buy goods at half the normal price and sell them at three times the normal price. Their food is of poor quality but edible. A character who succeeds on a DC 12 Charisma ({@skill Intimidation} or {@skill Persuasion}) check can bargain a goblin down to half its asking price for an item.",
+										"The goblin vendors buy and sell stolen goods, including items listed in {@book chapter 5|PHB|5} of the {@book Player's Handbook|PHB}\u2014particularly armor, shields, weapons, adventuring gear, tools, trade goods, food, and drink. The goblins buy goods at half the normal price and sell them at three times the normal price. Their food is of poor quality but edible. A character who succeeds on a DC 12 Charisma ({@skill Intimidation} or {@skill Persuasion}) check can bargain a goblin down to half its asking price for an item.",
 										"The goblin guards have orders to keep the peace. If a brawl or a battle erupts, they attack with the goal of knocking troublesome visitors {@condition unconscious}. Visitors whom the guards subdue are dragged out of the market and left in {@area area 8|111|x} without their weapons or treasure. (Any treasure the goblins take is placed in {@area area 1f|0f3|x}.)",
 										{
 											"type": "entries",
@@ -6141,7 +6177,7 @@
 												"{@b Xanathar Guild}. Seven Xanathar Guild members (NE human {@creature Thug||thugs}) and their leader, Shunn \"Spider Eyes\" Shurreth (see \"{@creature Shunn Shurreth|WDMM}\" below), gather around a campfire in the middle of the hall. Two {@creature Intellect Devourer||intellect devourers} have taken residence in the skulls of two Xanathar Guild members. The creatures use their Detect Sentience trait to telepathically detect intelligent creatures approaching."
 											]
 										},
-										"Shunn and his thugs can't be surprised if the intellect devourers sense intruders approaching. If an intellect devourer's host is killed, it tries to find another.",
+										"Shunn and his thugs can't be {@quickref Surprise|PHB|3|0|surprised} if the intellect devourers sense intruders approaching. If an intellect devourer's host is killed, it tries to find another.",
 										{
 											"type": "entries",
 											"name": "Shunn Shurreth",
@@ -6555,7 +6591,7 @@
 											"page": 37,
 											"id": "142",
 											"entries": [
-												"The wererats have carefully arranged the loose stones on the table to form an accurate map of this level of Undermountain; the map, however, omits the chambers hidden behind secret doors ({@area areas 5|0fe|x}, {@area 20c|100|x}, {@area 20d|15e}, {@area 22e|16c}, {@area 22f|16e}, {@area 25h|17a|x}, and {@area 26b|182}). There's no easy way to transport this map without knocking the stones out of alignment and rendering the map useless."
+												"The wererats have carefully arranged the loose stones on the table to form an accurate map of this level of Undermountain; the map, however, omits the chambers hidden behind secret doors ({@area areas 5|0ff|x}, {@area 20c|100|x}, {@area 20d|15e}, {@area 22e|16c}, {@area 22f|16e}, {@area 25h|17a|x}, and {@area 26b|182}). There's no easy way to transport this map without knocking the stones out of alignment and rendering the map useless."
 											]
 										}
 									]
@@ -7271,7 +7307,7 @@
 											]
 										},
 										"The 10-foot-square section of floor marked X on map 2 is a pressure plate. When 20 or more pounds of pressure depress this plate, a 10-foot-diameter stone sphere painted to look like a bloodshot eyeball careens from an alcove at the top of the sloped hallway and down the passage toward {@area area 26c|183|x}. With a successful DC 20 Wisdom ({@skill Perception}) check, a character searching the hall for traps can spot the pressure plate. Wedging four or more iron spikes or similar objects under the pressure plate prevents the trap from activating.",
-										"When the sphere is released, all creatures present roll initiative, and the sphere rolls initiative with a +8 bonus. On its turn, it moves in a straight line until it reaches a corner, then changes direction to follow the sloped tunnel until it comes to rest in {@area area 26c|183|x}. The sphere can move through other creatures' spaces, and creatures can move through its space, treating it as difficult terrain. Whenever the sphere enters a creature's space or a creature enters its space while the sphere is rolling, that creature must succeed on a DC 15 Dexterity saving throw or take 55 ({@dice 10d10}) bludgeoning damage and be knocked {@condition prone}.",
+										"When the sphere is released, all creatures present roll initiative, and the sphere rolls initiative with a +8 bonus. On its turn, it moves in a straight line until it reaches a corner, then changes direction to follow the sloped tunnel until it comes to rest in {@area area 26c|183|x}. The sphere can move through other creatures' spaces, and creatures can move through its space, treating it as {@quickref difficult terrain||3}. Whenever the sphere enters a creature's space or a creature enters its space while the sphere is rolling, that creature must succeed on a DC 15 Dexterity saving throw or take 55 ({@dice 10d10}) bludgeoning damage and be knocked {@condition prone}.",
 										"A creature within 5 feet of the sphere can attempt to slow it down by using an action to make a DC 20 Strength check. On a successful check, the sphere's speed is reduced by 15 feet. In the sloped hallway, this reduction lasts only until the end of the sphere's next turn. If the sphere's speed drops to 0 on a flat surface, it stops moving and is no longer a threat."
 									]
 								},
@@ -7500,69 +7536,6 @@
 										[
 											1436,
 											662
-										]
-									]
-								},
-								{
-									"area": "19e",
-									"points": [
-										[
-											1349,
-											703
-										],
-										[
-											1349,
-											755
-										],
-										[
-											1394,
-											755
-										],
-										[
-											1394,
-											703
-										]
-									]
-								},
-								{
-									"area": "1a4",
-									"points": [
-										[
-											1392,
-											742
-										],
-										[
-											1392,
-											792
-										],
-										[
-											1488,
-											792
-										],
-										[
-											1488,
-											742
-										]
-									]
-								},
-								{
-									"area": "1a2",
-									"points": [
-										[
-											1362,
-											785
-										],
-										[
-											1362,
-											852
-										],
-										[
-											1433,
-											852
-										],
-										[
-											1433,
-											785
 										]
 									]
 								},
@@ -8236,27 +8209,6 @@
 									]
 								},
 								{
-									"area": "1e7",
-									"points": [
-										[
-											497,
-											1836
-										],
-										[
-											497,
-											1941
-										],
-										[
-											569,
-											1941
-										],
-										[
-											569,
-											1836
-										]
-									]
-								},
-								{
 									"area": "1ea",
 									"points": [
 										[
@@ -8404,27 +8356,6 @@
 										[
 											908,
 											2563
-										]
-									]
-								},
-								{
-									"area": "1d7",
-									"points": [
-										[
-											872,
-											1786
-										],
-										[
-											872,
-											1854
-										],
-										[
-											963,
-											1854
-										],
-										[
-											963,
-											1786
 										]
 									]
 								},
@@ -8716,111 +8647,6 @@
 										[
 											1363,
 											1060
-										]
-									]
-								},
-								{
-									"area": "1aa",
-									"points": [
-										[
-											1379,
-											920
-										],
-										[
-											1379,
-											973
-										],
-										[
-											1435,
-											973
-										],
-										[
-											1435,
-											920
-										]
-									]
-								},
-								{
-									"area": "1ab",
-									"points": [
-										[
-											1283,
-											917
-										],
-										[
-											1283,
-											967
-										],
-										[
-											1339,
-											967
-										],
-										[
-											1339,
-											917
-										]
-									]
-								},
-								{
-									"area": "1af",
-									"points": [
-										[
-											1283,
-											968
-										],
-										[
-											1283,
-											1011
-										],
-										[
-											1335,
-											1011
-										],
-										[
-											1335,
-											968
-										]
-									]
-								},
-								{
-									"area": "1ac",
-									"points": [
-										[
-											1331,
-											951
-										],
-										[
-											1331,
-											1007
-										],
-										[
-											1385,
-											1007
-										],
-										[
-											1385,
-											951
-										]
-									]
-								},
-								{
-									"area": "1b1",
-									"points": [
-										[
-											1382,
-											970
-										],
-										[
-											1382,
-											1008
-										],
-										[
-											1433,
-											1008
-										],
-										[
-											1433,
-											970
 										]
 									]
 								},
@@ -9483,14 +9309,280 @@
 											515
 										]
 									]
+								},
+								{
+									"area": "1a4",
+									"points": [
+										[
+											1393,
+											751
+										],
+										[
+											1393,
+											780
+										],
+										[
+											1426,
+											780
+										],
+										[
+											1426,
+											751
+										]
+									]
+								},
+								{
+									"area": "19e",
+									"points": [
+										[
+											1357,
+											709
+										],
+										[
+											1357,
+											746
+										],
+										[
+											1388,
+											746
+										],
+										[
+											1388,
+											709
+										]
+									]
+								},
+								{
+									"area": "1a2",
+									"points": [
+										[
+											1369,
+											788
+										],
+										[
+											1369,
+											845
+										],
+										[
+											1428,
+											845
+										],
+										[
+											1428,
+											788
+										]
+									]
+								},
+								{
+									"area": "1af",
+									"points": [
+										[
+											1290,
+											974
+										],
+										[
+											1290,
+											1005
+										],
+										[
+											1330,
+											1005
+										],
+										[
+											1330,
+											974
+										]
+									]
+								},
+								{
+									"area": "1ab",
+									"points": [
+										[
+											1289,
+											925
+										],
+										[
+											1289,
+											966
+										],
+										[
+											1330,
+											966
+										],
+										[
+											1330,
+											925
+										]
+									]
+								},
+								{
+									"area": "1aa",
+									"points": [
+										[
+											1386,
+											925
+										],
+										[
+											1386,
+											966
+										],
+										[
+											1427,
+											966
+										],
+										[
+											1427,
+											925
+										]
+									]
+								},
+								{
+									"area": "1b1",
+									"points": [
+										[
+											1386,
+											973
+										],
+										[
+											1386,
+											1005
+										],
+										[
+											1429,
+											1005
+										],
+										[
+											1429,
+											973
+										]
+									]
+								},
+								{
+									"area": "1ac",
+									"points": [
+										[
+											1333,
+											954
+										],
+										[
+											1333,
+											1003
+										],
+										[
+											1380,
+											1003
+										],
+										[
+											1380,
+											954
+										]
+									]
+								},
+								{
+									"area": "1e7",
+									"points": [
+										[
+											513,
+											1842
+										],
+										[
+											523,
+											1842
+										],
+										[
+											534,
+											1846
+										],
+										[
+											544,
+											1843
+										],
+										[
+											545,
+											1862
+										],
+										[
+											550,
+											1886
+										],
+										[
+											550,
+											1899
+										],
+										[
+											557,
+											1918
+										],
+										[
+											566,
+											1925
+										],
+										[
+											556,
+											1932
+										],
+										[
+											538,
+											1923
+										],
+										[
+											527,
+											1912
+										],
+										[
+											506,
+											1906
+										],
+										[
+											510,
+											1886
+										],
+										[
+											513,
+											1871
+										],
+										[
+											514,
+											1853
+										]
+									]
+								},
+								{
+									"area": "1d7",
+									"points": [
+										[
+											881,
+											1801
+										],
+										[
+											881,
+											1841
+										],
+										[
+											957,
+											1841
+										],
+										[
+											957,
+											1801
+										]
+									]
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 59,
+								"offsetX": 33,
+								"offsetY": 5,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bdc",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/009-302-thumb.png"
-							},
-							"id": "bdc"
+								"path": "adventure/WDMM/thumbnail/009-302.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -9498,10 +9590,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/010-303.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 72,
+								"offsetX": -42,
+								"offsetY": 28,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bdc",
 								"autoScale": true
@@ -9551,7 +9651,7 @@
 							"id": "196",
 							"entries": [
 								"Spiderwebs drape across these tunnels, clinging to creatures as they pass until the webs are brushed or burned away. Ghostly faces glimpsed in the webs are actually random patterns among the threads.",
-								"Web-covered areas count as difficult terrain, but they're not strong enough to restrain anyone. A character can use an action to burn a 5-foot cube of web with a torch or to cast a spell that deals fire damage, which clears all the webs in the spell's area.",
+								"Web-covered areas count as {@quickref difficult terrain||3}, but they're not strong enough to restrain anyone. A character can use an action to burn a 5-foot cube of web with a torch or to cast a spell that deals fire damage, which clears all the webs in the spell's area.",
 								{
 									"type": "entries",
 									"name": "4a. Wandering Quaggoths",
@@ -10058,7 +10158,7 @@
 												"{@b Figurehead}. Leaning against the south wall is a ship's figurehead carved in the form of a wailing banshee."
 											]
 										},
-										"The rowboat wreckage is difficult terrain, and sections of it are prone to collapse. Any creature that ends its turn on the wreckage must succeed on a DC 10 Dexterity saving throw or fall {@condition prone}.",
+										"The rowboat wreckage is {@quickref difficult terrain||3}, and sections of it are prone to collapse. Any creature that ends its turn on the wreckage must succeed on a DC 10 Dexterity saving throw or fall {@condition prone}.",
 										"The waterlogged figurehead stands 8 feet tall and weighs 1,200 pounds. A {@spell detect magic} spell reveals an aura of abjuration magic around it. Casting {@spell dispel magic} on the figurehead renders it nonmagical. Unless its magic is dispelled, the banshee figurehead lets out a tremendous wail if any creature other than a sea hag approaches within 10 feet of the {@creature crow|WDMM}'s nest. The banshee's wail echoes throughout the cavern and can be heard as far away as {@area area 10c|1c0|x}. If the hags survive, they gather reinforcements from {@area areas 10a|1be|x} and {@area 10b|1bf} and rush to defend their precious treasure.",
 										{
 											"type": "entries",
@@ -10108,7 +10208,7 @@
 											"id": "1ce",
 											"entries": [
 												"{@b Drider Spellcaster}. A {@creature drider} lurks in the smaller cave to the north and emerges to confront intruders who enter by way of {@area area 11a|1cb|x}. This drider has the Spellcasting trait described in the sidebar that appears in the \"Drider\" entry in the {@book Monster Manual|MM}.",
-												"{@b Statues}. The main cave has a 40-foot-high ceiling filled with the {@condition petrified} victims of a medusa that once lived here. The drider has wrapped these statues in thick webs, creating an eerie forest of gray cocoons. Strung between these cocoons are web strands that create difficult terrain."
+												"{@b Statues}. The main cave has a 40-foot-high ceiling filled with the {@condition petrified} victims of a medusa that once lived here. The drider has wrapped these statues in thick webs, creating an eerie forest of gray cocoons. Strung between these cocoons are web strands that create {@quickref difficult terrain||3}."
 											]
 										},
 										"The drider clings to the walls, staying out of reach of melee weapons while casting spells or shooting its longbow. As it attacks, it says over and over in Elvish, \"The queen is mad\u2014mad at me. She is mad as mad can be.\"",
@@ -10928,13 +11028,11 @@
 												{
 													"type": "item",
 													"name": "Fear Ray",
-													"page": 56,
 													"entry": "The target must succeed on a DC 15 Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 												},
 												{
 													"type": "item",
 													"name": "Paralyzing Ray",
-													"page": 56,
 													"entry": "The target must succeed on a DC 15 Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 												}
 											]
@@ -12125,11 +12223,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 103,
+								"offsetX": 26,
+								"offsetY": 55,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bdd",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/012-402-thumb.png"
-							},
-							"id": "bdd"
+								"path": "adventure/WDMM/thumbnail/012-402.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -12137,10 +12243,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/013-403.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 49,
+								"offsetY": 9,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bdd",
 								"autoScale": true
@@ -12267,7 +12381,7 @@
 									"id": "24b",
 									"entries": [
 										"{@b Xorn}. Three {@creature xorn} feast on crystals near the western edge of the cavern, while harmless bats flutter below the 30-foot-high ceiling.",
-										"{@b Difficult Terrain}. A thick mix of mud and bat guano covers the ground. Treat this area as difficult terrain."
+										"{@b Difficult Terrain}. A thick mix of mud and bat guano covers the ground. Treat this area as {@quickref difficult terrain||3}."
 									]
 								},
 								"The xorn protect their crystalline food source. If a xorn loses more than half its hit points, it disengages from combat on its next turn and sinks into the floor, never to return.",
@@ -12363,7 +12477,7 @@
 							"page": 63,
 							"id": "255",
 							"entries": [
-								"The ceiling of this 30-foot-high cavern is studded with stalactites, and the floor is so uneven that it counts as difficult terrain. A search of the cavern reveals nothing dangerous or valuable."
+								"The ceiling of this 30-foot-high cavern is studded with stalactites, and the floor is so uneven that it counts as {@quickref difficult terrain||3}. A search of the cavern reveals nothing dangerous or valuable."
 							]
 						},
 						{
@@ -12526,7 +12640,7 @@
 											"items": [
 												"Feeding a gold coin into the keystone's slot causes the coin to disappear and the gate to open for 1 minute. Other coins placed in the slot disappear but don't open the gate.",
 												"Characters must be 6th level or higher to pass through this gate (see \"{@area Jhesiyra Kestellharp|016|x}\"). The first creature to pass through the gate triggers an elder rune (see \"{@area Elder Gates|028|x}\").",
-												"A creature that passes through the gate appears in {@area area 5 on level 2|0fe|x}, in the closest unoccupied space next to the identical gate located there."
+												"A creature that passes through the gate appears in {@area area 5 on level 2|0ff|x}, in the closest unoccupied space next to the identical gate located there."
 											]
 										},
 										{
@@ -14847,11 +14961,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 65,
+								"offsetX": 8,
+								"offsetY": -53,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bde",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/016-502-thumb.png"
-							},
-							"id": "bde"
+								"path": "adventure/WDMM/thumbnail/016-502.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -14859,10 +14981,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/017-503.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 72,
+								"offsetX": 30,
+								"offsetY": 28,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bde",
 								"autoScale": true
@@ -16139,7 +16269,7 @@
 							"id": "327",
 							"entries": [
 								"The umber hulks that burrowed into the Lost Level now wander freely here in search of prey.",
-								"A wandering umber hulk detects nearby characters with its {@sense tremorsense}. Such a creature might come stomping down a corridor toward them at any time, smashing through any doors in its path. Or it could burrow through a wall to reach the characters, exploding forth in a hail of stone fragments. If a wandering umber hulk is defeated, remove it from {@area area 26|370|x} or have only one umber hulk in {@area area 34|38b|x}. If the characters have already defeated the three umber hulks in those areas, assume this wandering one is a new arrival."
+								"A wandering umber hulk detects nearby characters with its {@sense tremorsense|MM}. Such a creature might come stomping down a corridor toward them at any time, smashing through any doors in its path. Or it could burrow through a wall to reach the characters, exploding forth in a hail of stone fragments. If a wandering umber hulk is defeated, remove it from {@area area 26|370|x} or have only one umber hulk in {@area area 34|38b|x}. If the characters have already defeated the three umber hulks in those areas, assume this wandering one is a new arrival."
 							]
 						}
 					]
@@ -17818,11 +17948,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 103,
+								"offsetX": 23,
+								"offsetY": -7,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bdf",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/019-602-thumb.png"
-							},
-							"id": "bdf"
+								"path": "adventure/WDMM/thumbnail/019-602.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -17830,10 +17968,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/020-603.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -5,
+								"offsetY": 67,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bdf",
 								"autoScale": true
@@ -18542,7 +18688,7 @@
 							"page": 88,
 							"id": "370",
 							"entries": [
-								"Characters approaching this room hear a loud ruckus. The chamber's stone door has been smashed to rubble, and a hostile {@creature umber hulk} is laying waste to the room. The hulk's {@sense tremorsense} allows it to detect other creatures approaching on foot. When the characters get close, it crashes through the wall north of the doorway, hoping to surprise them.",
+								"Characters approaching this room hear a loud ruckus. The chamber's stone door has been smashed to rubble, and a hostile {@creature umber hulk} is laying waste to the room. The hulk's {@sense tremorsense|MM} allows it to detect other creatures approaching on foot. When the characters get close, it crashes through the wall north of the doorway, hoping to surprise them.",
 								"The dwarves kept alcoholic spirits here. The beverages are long evaporated, and the umber hulk has pulverized the stone shelves, vats, and bottles that remain. Nothing here is salvageable."
 							]
 						},
@@ -18576,7 +18722,7 @@
 									"id": "373",
 									"entries": [
 										"{@b Quartz Pillars}. Six glowing quartz pillars fill the room with bright light.",
-										"{@b Detritus}. Rusted helms, shields, armor fragments, and weapons cover the floor. This detritus makes the entire room difficult terrain. (The arms and armor were fashioned by orcs, goblinoids, drow, duergar, and other enemies of the dwarves. No dwarven items can be found among the wreckage.)",
+										"{@b Detritus}. Rusted helms, shields, armor fragments, and weapons cover the floor. This detritus makes the entire room {@quickref difficult terrain||3}. (The arms and armor were fashioned by orcs, goblinoids, drow, duergar, and other enemies of the dwarves. No dwarven items can be found among the wreckage.)",
 										"{@b Sarcophagus}. A deep alcove in the north wall is mostly clear of metal wreckage and contains a shattered stone sarcophagus. Engraved in the back wall of the alcove is a Dwarvish inscription that reads, \"Our king is with the gods. Here lie his bones.\"",
 										"{@b Secret Door}. A secret door in the south wall swings open into {@area area 29a|375|x}."
 									]
@@ -20943,11 +21089,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 46,
+								"offsetY": 12,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be0",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/022-702-thumb.png"
-							},
-							"id": "be0"
+								"path": "adventure/WDMM/thumbnail/022-702.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -20955,10 +21109,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/023-703.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -5,
+								"offsetY": 42,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be0",
 								"autoScale": true
@@ -22318,7 +22480,7 @@
 					"page": 110,
 					"id": "455",
 					"entries": [
-						"All location descriptions for this level are keyed to map 8. Many tunnels and caves of Slitherswamp are partially flooded with water, ranging from a few inches to several feet in depth, over a layer of thick mud. Areas marked as swamp on the map are difficult terrain for any creature that lacks a swimming speed.",
+						"All location descriptions for this level are keyed to map 8. Many tunnels and caves of Slitherswamp are partially flooded with water, ranging from a few inches to several feet in depth, over a layer of thick mud. Areas marked as swamp on the map are {@quickref difficult terrain||3} for any creature that lacks a swimming speed.",
 						{
 							"type": "image",
 							"href": {
@@ -23086,27 +23248,6 @@
 									]
 								},
 								{
-									"area": "475",
-									"points": [
-										[
-											840,
-											2443
-										],
-										[
-											840,
-											2733
-										],
-										[
-											1013,
-											2733
-										],
-										[
-											1013,
-											2443
-										]
-									]
-								},
-								{
 									"area": "474",
 									"points": [
 										[
@@ -23306,14 +23447,43 @@
 											2471
 										]
 									]
+								},
+								{
+									"area": "475",
+									"points": [
+										[
+											880,
+											2471
+										],
+										[
+											880,
+											2736
+										],
+										[
+											1007,
+											2736
+										],
+										[
+											1007,
+											2471
+										]
+									]
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 103,
+								"offsetX": 23,
+								"offsetY": 17,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be1",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/025-802-thumb.png"
-							},
-							"id": "be1"
+								"path": "adventure/WDMM/thumbnail/025-802.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -23321,10 +23491,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/026-803.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2955,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -5,
+								"offsetY": 32,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be1",
 								"autoScale": true
@@ -23424,7 +23602,7 @@
 									"page": 110,
 									"id": "45f",
 									"entries": [
-										"Any character who succeeds on a DC 12 Wisdom ({@skill Perception}) check is not surprised when three {@creature Shambling Mound||shambling mounds} attack. The shambling mounds chase creatures through the mud but ignore creatures atop the ledge."
+										"Any character who succeeds on a DC 12 Wisdom ({@skill Perception}) check is not {@quickref Surprise|PHB|3|0|surprised} when three {@creature Shambling Mound||shambling mounds} attack. The shambling mounds chase creatures through the mud but ignore creatures atop the ledge."
 									]
 								}
 							]
@@ -23489,7 +23667,7 @@
 												"{@b Crates}. Three open crates are stored in the westernmost alcove. They contain sheets of parchment, small jars of ink, quills, 10 days of edible rations, and five 2-gallon casks of clean water."
 											]
 										},
-										"If the glyph in {@area area 7|463|x} triggers, the flesh golem and the wights can't be surprised. The golem was crafted by Wormriddle the night hag (see {@area level 9|469|x}). If the golem goes berserk, neither Karstis nor any of his other servants can regain control of it."
+										"If the glyph in {@area area 7|463|x} triggers, the flesh golem and the wights can't be {@quickref Surprise|PHB|3|0|surprised}. The golem was crafted by Wormriddle the night hag (see {@area level 9|469|x}). If the golem goes berserk, neither Karstis nor any of his other servants can regain control of it."
 									]
 								},
 								{
@@ -23773,7 +23951,7 @@
 										"{@b Hexacali}. Lurking amid the bones is a {@creature Bone Naga (Spirit)||bone naga} (formerly a spirit naga named Hexacali)."
 									]
 								},
-								"The bone naga tries to slay any living creature that enters its domain. Creatures moving through this area must succeed on a DC 15 Wisdom ({@skill Perception}) check or be surprised when the bone naga attacks."
+								"The bone naga tries to slay any living creature that enters its domain. Creatures moving through this area must succeed on a DC 15 Wisdom ({@skill Perception}) check or be {@quickref Surprise|PHB|3|0|surprised} when the bone naga attacks."
 							]
 						},
 						{
@@ -24268,6 +24446,14 @@
 							},
 							"width": 2259,
 							"height": 3000,
+							"grid": {
+								"type": "square",
+								"size": 68,
+								"offsetX": 40,
+								"offsetY": 15,
+								"scale": 2,
+								"distance": 10
+							},
 							"title": "Map 9",
 							"mapRegions": [
 								{
@@ -25808,11 +25994,11 @@
 								}
 							],
 							"imageType": "map",
+							"id": "be2",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/028-902-thumb.png"
-							},
-							"id": "be2"
+								"path": "adventure/WDMM/thumbnail/028-902.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -25820,10 +26006,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/029-903.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 102,
+								"offsetX": -49,
+								"offsetY": 20,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be2",
 								"autoScale": true
@@ -27095,7 +27289,7 @@
 									"id": "52c",
 									"entries": [
 										"The orb is a rare wondrous item called a {@item professor orb|WDMM}. Each {@item professor orb|WDMM} takes the form of a smooth, solid, 5-pound sphere of smoky gray quartz about the size of a grapefruit. Close examination reveals two or more pinpricks of silver light deep inside the sphere.",
-										"A {@item professor orb|WDMM} is sentient and has the personality of a scholar. Its alignment is determined by rolling on the alignment table in the \"{@adventure Sentient Magic Items|DMG|-1}\" section in chapter 7 of the {@book Dungeon Master's Guide|DMG}. Regardless of its disposition, the orb has an Intelligence of 18, and Wisdom and Charisma scores determined by rolling {@dice 3d6} for each ability. The orb speaks, reads, and understands four languages, and can see and hear normally out to a range of 60 feet. Unlike most sentient items, the orb has no will of its own and can't initiate a conflict with the creature in possession of it.",
+										"A {@item professor orb|WDMM} is sentient and has the personality of a scholar. Its alignment is determined by rolling on the alignment table in the \"{@book Sentient Magic Items|DMG|7|Sentient Magic Items}\" section in chapter 7 of the {@book Dungeon Master's Guide|DMG}. Regardless of its disposition, the orb has an Intelligence of 18, and Wisdom and Charisma scores determined by rolling {@dice 3d6} for each ability. The orb speaks, reads, and understands four languages, and can see and hear normally out to a range of 60 feet. Unlike most sentient items, the orb has no will of its own and can't initiate a conflict with the creature in possession of it.",
 										"A {@item professor orb|WDMM} has extensive knowledge of four narrow academic subjects. When making an Intelligence check to recall lore from any of its areas of expertise, the orb has a +9 bonus to its roll (including its Intelligence modifier).",
 										"In addition to the knowledge it possesses, a {@item professor orb|WDMM} can cast the {@spell mage hand} cantrip at will. It uses the spell only to transport itself. Its spellcasting ability is Intelligence.",
 										{
@@ -27696,7 +27890,7 @@
 									]
 								},
 								{
-									"area": "564",
+									"area": "562",
 									"points": [
 										[
 											819,
@@ -27717,7 +27911,7 @@
 									]
 								},
 								{
-									"area": "566",
+									"area": "562",
 									"points": [
 										[
 											956,
@@ -29256,11 +29450,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 102,
+								"offsetX": -49,
+								"offsetY": 20,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be3",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/031-10-02-thumb.png"
-							},
-							"id": "be3"
+								"path": "adventure/WDMM/thumbnail/031-10-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -29268,10 +29470,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/032-10-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 96,
+								"offsetX": -15,
+								"offsetY": 32,
+								"scale": 4,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be3",
 								"autoScale": true
@@ -29586,7 +29796,7 @@
 									"page": 140,
 									"id": "57a",
 									"entries": [
-										"The floor of this 20-foot-high antechamber is sunken a few inches and covered wall-to-wall with humanoid skulls that are yellow and brittle with age. They look like cobblestones at first glance. The floor is difficult terrain, as the skulls shift and break apart underfoot."
+										"The floor of this 20-foot-high antechamber is sunken a few inches and covered wall-to-wall with humanoid skulls that are yellow and brittle with age. They look like cobblestones at first glance. The floor is {@quickref difficult terrain||3}, as the skulls shift and break apart underfoot."
 									]
 								},
 								{
@@ -32181,11 +32391,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 103,
+								"offsetX": 25,
+								"offsetY": -19,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be4",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/036-11-02-thumb.png"
-							},
-							"id": "be4"
+								"path": "adventure/WDMM/thumbnail/036-11-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -32193,10 +32411,17 @@
 								"type": "internal",
 								"path": "adventure/WDMM/037-11-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -5,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be4",
 								"autoScale": true
@@ -34607,11 +34832,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 47,
+								"offsetY": 4,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be5",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/039-12-02-thumb.png"
-							},
-							"id": "be5"
+								"path": "adventure/WDMM/thumbnail/039-12-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -34619,10 +34852,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/040-12-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -5,
+								"offsetY": -7,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be5",
 								"autoScale": true
@@ -34877,7 +35118,7 @@
 							"page": 162,
 							"id": "660",
 							"entries": [
-								"Maku, a minotaur shaman, has been busily collecting the remains of slaughtered drow, fallen troglodytes and quaggoths, and unfortunate adventurers in this area. He plans to use these remains in a ritual to summon the demon lord Baphomet. If the characters fought any minotaurs in {@area area 7b|65d|x}, Maku and his followers cannot be surprised here.",
+								"Maku, a minotaur shaman, has been busily collecting the remains of slaughtered drow, fallen troglodytes and quaggoths, and unfortunate adventurers in this area. He plans to use these remains in a ritual to summon the demon lord Baphomet. If the characters fought any minotaurs in {@area area 7b|65d|x}, Maku and his followers cannot be {@quickref Surprise|PHB|3|0|surprised} here.",
 								{
 									"type": "entries",
 									"name": "8a. Keep Calm and Carrion",
@@ -35464,7 +35705,7 @@
 								"Fashioned from seamless black stone with veins of silver running through it, this windowless edifice bears a striking resemblance to a crouching spider. From here, Erelal Freth oversees all House Freth ventures in Undermountain, with her brother Drivvin as her advisor.",
 								"The central oval of the keep ({@area areas 19e|6a2|x} through {@area 19k|6ad}) has 15-foot-high walls and a 30-foot-high domed roof. The attached outer structures ({@area areas 19a|69b|x} through {@area 19d|6a1}) have 10-foot-high walls and 20-foot-high domed roofs.",
 								"All outer doors are held shut with {@spell arcane lock} spells that only drow wearing the obsidian insignia scarabs of House Freth can ignore. A successful DC 25 Strength ({@skill Athletics}) check is needed to force open such a door. The inner doors have no locks.",
-								"When an alarm sounds outside, the occupants of the keep prepare for battle but remain where they are. They cannot be surprised, and any ability checks to convince residents that intruding characters are not a threat are made with disadvantage. This state of battle readiness is maintained until Rilna Freth tells occupants of the fortress that it is secure.",
+								"When an alarm sounds outside, the occupants of the keep prepare for battle but remain where they are. They cannot be {@quickref Surprise|PHB|3|0|surprised}, and any ability checks to convince residents that intruding characters are not a threat are made with disadvantage. This state of battle readiness is maintained until Rilna Freth tells occupants of the fortress that it is secure.",
 								{
 									"type": "entries",
 									"name": "19a. Elite Barracks",
@@ -36612,11 +36853,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 87,
+								"offsetX": -37,
+								"offsetY": -44,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be6",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/042-13-02-thumb.png"
-							},
-							"id": "be6"
+								"path": "adventure/WDMM/thumbnail/042-13-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -36624,10 +36873,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/043-13-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 87,
+								"offsetX": -23,
+								"offsetY": 35,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be6",
 								"autoScale": true
@@ -36668,7 +36925,7 @@
 										"{@creature Zox Clammersham|WDMM} is using the scaladar under his control to build the Simulacrux and to defend it, should it come under attack. The Simulacrux is designed to replicate scaladar through a variation of the {@spell simulacrum} spell that uses rust as a component instead of snow. The arch is still months away from completion, and there's a good chance it won't function as intended. A character can ascertain the arch's purpose with a successful DC 30 Intelligence ({@skill Arcana}) check.",
 										"The Simulacrux is a Gargantuan object with AC 19, 400 hit points, immunity to poison and psychic damage, and immunity to bludgeoning, piercing, and slashing damage from nonmagical weapons that aren't made of adamantine. Destroying the arch all but dooms the project, since Zox lacks the resolve to start over.",
 										"The Simulacrux warps magic in its proximity. Any spell cast within 30 feet of the arch automatically triggers a wild magic surge, the effect of which is determined by rolling percentile dice and consulting the {@table Wild Magic Surge|PHB} table in the \"Sorcerer\" section in chapter 3 of the {@book Player's Handbook|PHB}.",
-										"The scrap metal around the arch is difficult terrain for creatures other than scaladar."
+										"The scrap metal around the arch is {@quickref difficult terrain||3} for creatures other than scaladar."
 									]
 								},
 								{
@@ -36904,7 +37161,7 @@
 							"id": "6d4",
 							"entries": [
 								"A 40-foot-high mountain of scrap metal has 10-foot-diameter tunnels winding through it. The scrap metal pile spills into area 2, dominates the cavern north of it, and completely fills the opening between the two caverns.",
-								"The outer surface of the scrap pile is difficult terrain. In addition, any creature that tries to climb or walk across the jagged heap of metal must succeed on a DC 15 Dexterity ({@skill Acrobatics}) check to avoid triggering a small avalanche that causes it to fall {@condition prone} and take 7 ({@dice 2d6}) piercing damage.",
+								"The outer surface of the scrap pile is {@quickref difficult terrain||3}. In addition, any creature that tries to climb or walk across the jagged heap of metal must succeed on a DC 15 Dexterity ({@skill Acrobatics}) check to avoid triggering a small avalanche that causes it to fall {@condition prone} and take 7 ({@dice 2d6}) piercing damage.",
 								"The entrances to the warren are marked with arrows on map 13. The warren contains the following:",
 								{
 									"type": "inset",
@@ -37348,7 +37605,7 @@
 									"page": 179,
 									"id": "6ff",
 									"entries": [
-										"Hobgoblins of Doomcrown's phalanx have secured most of the halls and chambers in Arcturiadoom. Consequently, the only wandering monsters of consequence are hobgoblin patrols. A typical patrol consists of four {@creature Hobgoblin||hobgoblins}. Their marching footsteps and clanking armor can be heard well in advance of their arrival, and characters can't be surprised by them. Combat with a patrol is sure to alert other creatures in the vicinity.",
+										"Hobgoblins of Doomcrown's phalanx have secured most of the halls and chambers in Arcturiadoom. Consequently, the only wandering monsters of consequence are hobgoblin patrols. A typical patrol consists of four {@creature Hobgoblin||hobgoblins}. Their marching footsteps and clanking armor can be heard well in advance of their arrival, and characters can't be {@quickref Surprise|PHB|3|0|surprised} by them. Combat with a patrol is sure to alert other creatures in the vicinity.",
 										"If any hobgoblins are defeated while on patrol, subtract their numbers from the guards in {@area area 32a|764|x}."
 									]
 								}
@@ -38816,11 +39073,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 46,
+								"offsetY": -49,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be7",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/045-14-02-thumb.png"
-							},
-							"id": "be7"
+								"path": "adventure/WDMM/thumbnail/045-14-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -38828,10 +39093,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/046-14-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -5,
+								"offsetY": -6,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be7",
 								"autoScale": true
@@ -39403,7 +39676,7 @@
 										},
 										{
 											"type": "entries",
-											"name": "Belch Fire (Recharge 4\u20136)",
+											"name": "Belch Fire {@recharge 4}",
 											"page": 186,
 											"id": "73d",
 											"entries": [
@@ -40897,27 +41170,6 @@
 									]
 								},
 								{
-									"area": "7a1",
-									"points": [
-										[
-											247,
-											2221
-										],
-										[
-											247,
-											2301
-										],
-										[
-											399,
-											2301
-										],
-										[
-											399,
-											2221
-										]
-									]
-								},
-								{
 									"area": "7a2",
 									"points": [
 										[
@@ -41244,27 +41496,6 @@
 										[
 											1731,
 											1356
-										]
-									]
-								},
-								{
-									"area": "81a",
-									"points": [
-										[
-											1634,
-											1507
-										],
-										[
-											1634,
-											1706
-										],
-										[
-											1920,
-											1706
-										],
-										[
-											1920,
-											1507
 										]
 									]
 								},
@@ -41687,14 +41918,112 @@
 											2836
 										]
 									]
+								},
+								{
+									"area": "780",
+									"points": [
+										[
+											1833,
+											1660
+										],
+										[
+											1844,
+											1564
+										],
+										[
+											1837,
+											1528
+										],
+										[
+											1823,
+											1513
+										],
+										[
+											1852,
+											1500
+										],
+										[
+											1888,
+											1527
+										],
+										[
+											1901,
+											1550
+										],
+										[
+											1926,
+											1576
+										],
+										[
+											1952,
+											1613
+										],
+										[
+											1940,
+											1616
+										],
+										[
+											1931,
+											1606
+										],
+										[
+											1907,
+											1605
+										],
+										[
+											1894,
+											1620
+										],
+										[
+											1874,
+											1627
+										],
+										[
+											1860,
+											1637
+										],
+										[
+											1846,
+											1651
+										]
+									]
+								},
+								{
+									"area": "714",
+									"points": [
+										[
+											354,
+											2230
+										],
+										[
+											354,
+											2265
+										],
+										[
+											395,
+											2265
+										],
+										[
+											395,
+											2230
+										]
+									]
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 46,
+								"offsetY": 59,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be8",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/048-15-02-thumb.png"
-							},
-							"id": "be8"
+								"path": "adventure/WDMM/thumbnail/048-15-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -41702,10 +42031,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/049-15-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -6,
+								"offsetY": -7,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be8",
 								"autoScale": true
@@ -42663,7 +43000,7 @@
 												"{@b Scuff Marks}. Scuff marks on the floor show evidence of stone furnishings long since removed."
 											]
 										},
-										"Characters who hold bright light sources in this room or make a lot of noise alert the githzerai in {@area area 24c|7dc|x}, who remain where they are but can't be surprised.",
+										"Characters who hold bright light sources in this room or make a lot of noise alert the githzerai in {@area area 24c|7dc|x}, who remain where they are but can't be {@quickref Surprise|PHB|3|0|surprised}.",
 										{
 											"type": "entries",
 											"name": "Teleport Trap",
@@ -43451,7 +43788,7 @@
 									"width": 1000,
 									"height": 1087
 								},
-								"Adventurers who explore this area are doomed to face Netherskull the death tyrant if they haven't done so already. Netherskull can't be surprised in its lair.",
+								"Adventurers who explore this area are doomed to face Netherskull the death tyrant if they haven't done so already. Netherskull can't be {@quickref Surprise|PHB|3|0|surprised} in its lair.",
 								{
 									"type": "entries",
 									"name": "39a. Hanging Beholder Statue",
@@ -45123,11 +45460,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 45,
+								"offsetY": -54,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "be9",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/052-16-02-thumb.png"
-							},
-							"id": "be9"
+								"path": "adventure/WDMM/thumbnail/052-16-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -45135,10 +45480,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/053-16-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -6,
+								"offsetY": -5,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "be9",
 								"autoScale": true
@@ -45558,7 +45911,7 @@
 									"page": 215,
 									"id": "855",
 									"entries": [
-										"Loud noises in this area alert the denizens of {@area areas 12f|857|x} and {@area 13|85a}, who remain where they are but can't be surprised.",
+										"Loud noises in this area alert the denizens of {@area areas 12f|857|x} and {@area 13|85a}, who remain where they are but can't be {@quickref Surprise|PHB|3|0|surprised}.",
 										{
 											"type": "inset",
 											"id": "856",
@@ -47273,11 +47626,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 46,
+								"offsetY": 5,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bea",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/055-17-02-thumb.png"
-							},
-							"id": "bea"
+								"path": "adventure/WDMM/thumbnail/055-17-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -47285,10 +47646,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/056-17-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -5,
+								"offsetY": -6,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bea",
 								"autoScale": true
@@ -49236,11 +49605,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 45,
+								"offsetY": -45,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "beb",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/058-18-02-thumb.png"
-							},
-							"id": "beb"
+								"path": "adventure/WDMM/thumbnail/058-18-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -49248,10 +49625,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/059-18-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2850,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -7,
+								"offsetY": -3,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "beb",
 								"autoScale": true
@@ -49649,7 +50034,7 @@
 									"page": 237,
 									"id": "929",
 									"entries": [
-										"The floor of this room, littered with scores of wooden coffins, is difficult terrain. Some of the coffins are intact, while others have fallen apart with age. Most are empty, but three of the coffins contain resting {@creature vampire spawn} named Deviana, Ezra, and Yuri. Characters who succeed on a DC 15 Dexterity ({@skill Stealth}) check can move through this room without waking the spawn. Otherwise, all three awaken and attack.",
+										"The floor of this room, littered with scores of wooden coffins, is {@quickref difficult terrain||3}. Some of the coffins are intact, while others have fallen apart with age. Most are empty, but three of the coffins contain resting {@creature vampire spawn} named Deviana, Ezra, and Yuri. Characters who succeed on a DC 15 Dexterity ({@skill Stealth}) check can move through this room without waking the spawn. Otherwise, all three awaken and attack.",
 										{
 											"type": "entries",
 											"name": "Treasure",
@@ -49883,7 +50268,7 @@
 							"page": 239,
 							"id": "941",
 							"entries": [
-								"This 10-foot-high room is cluttered with decaying furnishings and the skeletal remains of adventurers and monsters killed long ago. Because of the detritus, the floor of the room is difficult terrain."
+								"This 10-foot-high room is cluttered with decaying furnishings and the skeletal remains of adventurers and monsters killed long ago. Because of the detritus, the floor of the room is {@quickref difficult terrain||3}."
 							]
 						},
 						{
@@ -50145,7 +50530,7 @@
 							"page": 241,
 							"id": "95d",
 							"entries": [
-								"{@creature Umbraxakar|WDMM} the shadow dragon dwells here and cannot be surprised by the characters, whose presence he has sensed since they first stepped into the Shadowfell.",
+								"{@creature Umbraxakar|WDMM} the shadow dragon dwells here and cannot be {@quickref Surprise|PHB|3|0|surprised} by the characters, whose presence he has sensed since they first stepped into the Shadowfell.",
 								"Characters who experienced the vision in {@area area 17|935|x} recognize this hall as the same one seen in that vision. The hall contains the following:",
 								{
 									"type": "inset",
@@ -51105,11 +51490,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 45,
+								"offsetY": -16,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bec",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/061-19-02-thumb.png"
-							},
-							"id": "bec"
+								"path": "adventure/WDMM/thumbnail/061-19-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -51117,10 +51510,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/062-19-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2850,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -5,
+								"offsetY": -4,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bec",
 								"autoScale": true
@@ -51132,7 +51533,7 @@
 							"page": 244,
 							"id": "97a",
 							"entries": [
-								"The orb in {@area area 4|988|x} weeps a steady stream of ooze channeled from the Swamp of Oblivion, the border realm between the Elemental Planes of Earth and Water. This ooze is a thick, viscid brown effluvium with streaks of orange, green, yellow, and black. It smells like rotten eggs and sticks to anything it touches. The ooze is never more than 5 feet deep in any given location and is difficult terrain. It moves slowly in the direction indicated by the wavy arrows on map 19 and also behaves like it's alive, occasionally extruding harmless pseudopods or amorphous shapes that bear passing resemblances to familiar creatures."
+								"The orb in {@area area 4|988|x} weeps a steady stream of ooze channeled from the Swamp of Oblivion, the border realm between the Elemental Planes of Earth and Water. This ooze is a thick, viscid brown effluvium with streaks of orange, green, yellow, and black. It smells like rotten eggs and sticks to anything it touches. The ooze is never more than 5 feet deep in any given location and is {@quickref difficult terrain||3}. It moves slowly in the direction indicated by the wavy arrows on map 19 and also behaves like it's alive, occasionally extruding harmless pseudopods or amorphous shapes that bear passing resemblances to familiar creatures."
 							]
 						},
 						{
@@ -51375,7 +51776,7 @@
 									"type": "inset",
 									"id": "991",
 									"entries": [
-										"{@b Rubble}. The floor of this 20-foot-high cave is strewn with stony rubble that acts as difficult terrain.",
+										"{@b Rubble}. The floor of this 20-foot-high cave is strewn with stony rubble that acts as {@quickref difficult terrain||3}.",
 										"{@b Fake Beholder}. A {@creature gas spore}, easily mistaken for a beholder, floats near a pair of 15-foot-tall menhirs made of semitransparent crystal. Imprisoned inside each menhir is a sleeping {@creature nalfeshnee}, its leathery wings wrapped tightly around its head and body."
 									]
 								},
@@ -53201,11 +53602,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 45,
+								"offsetY": 20,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bed",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/066-20-02-thumb.png"
-							},
-							"id": "bed"
+								"path": "adventure/WDMM/thumbnail/066-20-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -53213,10 +53622,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/067-20-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -6,
+								"offsetY": -4,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bed",
 								"autoScale": true
@@ -55580,11 +55997,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -69,
+								"offsetY": -42,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bee",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/069-21-02-thumb.png"
-							},
-							"id": "bee"
+								"path": "adventure/WDMM/thumbnail/069-21-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -55592,10 +56017,17 @@
 								"type": "internal",
 								"path": "adventure/WDMM/070-21-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -7,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bee",
 								"autoScale": true
@@ -57860,11 +58292,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 45,
+								"offsetY": -54,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bef",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/072-22-02-thumb.png"
-							},
-							"id": "bef"
+								"path": "adventure/WDMM/thumbnail/072-22-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -57872,10 +58312,17 @@
 								"type": "internal",
 								"path": "adventure/WDMM/073-22-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -7,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bef",
 								"autoScale": true
@@ -60285,11 +60732,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -39,
+								"offsetY": -55,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bf0",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/076-23-02-thumb.png"
-							},
-							"id": "bf0"
+								"path": "adventure/WDMM/thumbnail/076-23-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -60297,10 +60752,17 @@
 								"type": "internal",
 								"path": "adventure/WDMM/077-23-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2175,
 							"height": 2925,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -7,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bf0",
 								"autoScale": true
@@ -61565,6 +62027,14 @@
 							"width": 2513,
 							"height": 3338,
 							"title": "Map 24",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": 45,
+								"offsetY": 42,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapRegions": [
 								{
 									"area": "b91",
@@ -61885,11 +62355,11 @@
 								}
 							],
 							"imageType": "map",
+							"id": "bf1",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/081-24-02-thumb.png"
-							},
-							"id": "bf1"
+								"path": "adventure/WDMM/thumbnail/081-24-02.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -61897,10 +62367,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/082-24-03.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2250,
 							"height": 2850,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 114,
+								"offsetX": -4,
+								"offsetY": -7,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bf1",
 								"autoScale": true
@@ -62842,11 +63320,19 @@
 								}
 							],
 							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 72,
+								"offsetX": 31,
+								"offsetY": -26,
+								"scale": 3,
+								"distance": 10
+							},
+							"id": "bf2",
 							"hrefThumbnail": {
 								"type": "internal",
-								"path": "adventure/WDMM/thumbnail/083-24-04-thumb.png"
-							},
-							"id": "bf2"
+								"path": "adventure/WDMM/thumbnail/083-24-04.webp"
+							}
 						},
 						{
 							"type": "image",
@@ -62854,10 +63340,18 @@
 								"type": "internal",
 								"path": "adventure/WDMM/084-24-05.jpg"
 							},
-							"title": "(Player Version)",
+							"title": "Player Version",
 							"width": 2100,
 							"height": 2850,
 							"imageType": "mapPlayer",
+							"grid": {
+								"type": "square",
+								"size": 72,
+								"offsetX": -12,
+								"offsetY": -16,
+								"scale": 3,
+								"distance": 10
+							},
 							"mapParent": {
 								"id": "bf2",
 								"autoScale": true
@@ -63263,11 +63757,19 @@
 										}
 									],
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 72,
+										"offsetX": 30,
+										"offsetY": -17,
+										"scale": 3,
+										"distance": 10
+									},
+									"id": "bf3",
 									"hrefThumbnail": {
 										"type": "internal",
-										"path": "adventure/WDMM/thumbnail/085-24-06-thumb.png"
-									},
-									"id": "bf3"
+										"path": "adventure/WDMM/thumbnail/085-24-06.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -63275,10 +63777,18 @@
 										"type": "internal",
 										"path": "adventure/WDMM/086-24-07.jpg"
 									},
-									"title": "(Player Version)",
+									"title": "Player Version",
 									"width": 2100,
 									"height": 1500,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 72,
+										"offsetX": -11,
+										"offsetY": -15,
+										"scale": 3,
+										"distance": 10
+									},
 									"mapParent": {
 										"id": "bf3",
 										"autoScale": true
@@ -63542,7 +64052,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/WDMM/091-636331381858675803.jpeg"
+								"path": "adventure/WDMM/091-636331381858675803.jpg"
 							},
 							"width": 400,
 							"height": 296
@@ -63633,7 +64143,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/WDMM/092-636331340815791689.jpeg"
+								"path": "adventure/WDMM/092-636331340815791689.jpg"
 							},
 							"width": 319,
 							"height": 487

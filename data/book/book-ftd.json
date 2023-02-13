@@ -1439,7 +1439,7 @@
 														{
 															"type": "item",
 															"name": "Special Senses",
-															"entry": "Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}. (See the {@book introduction|MM|0|Senses} to the {@book Monster Manual|MM}.)"
+															"entry": "Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}. (See the {@book introduction|MM|0|Senses} to the {@book Monster Manual|MM}.)"
 														},
 														{
 															"type": "item",
@@ -2942,7 +2942,7 @@
 									"type": "item",
 									"name": "What's the goal of the encounter?",
 									"entries": [
-										"Not every encounter with a dragon needs to involve combat, let alone an all-out fight to the death. Maybe the characters are trying to help a kobold Keeper of Dragons retrieve a wyrmling kidnapped by a gang of goblins (as in \"{@adventure The Sunless Citadel|TftYP|0},\" an adventure found in {@adventure Tales from the Yawning Portal|TftYP}). In this case, fighting the dragon might be necessary if the dragon doesn't want to return, but killing the creature is undesirable. Or perhaps the characters are seriously outmatched by the dragon, and their only reasonable goal is to escape the encounter alive."
+										"Not every encounter with a dragon needs to involve combat, let alone an all-out fight to the death. Maybe the characters are trying to help a kobold Keeper of Dragons retrieve a wyrmling kidnapped by a gang of goblins (as in \"{@adventure The Sunless Citadel|TftYP-TSC|0},\" an adventure found in {@adventure Tales from the Yawning Portal|TftYP-TSC}). In this case, fighting the dragon might be necessary if the dragon doesn't want to return, but killing the creature is undesirable. Or perhaps the characters are seriously outmatched by the dragon, and their only reasonable goal is to escape the encounter alive."
 									]
 								},
 								{
@@ -3452,7 +3452,7 @@
 						"Consciously or not, young dragons establishing lairs for the first time often seek to establish them in sites of magical resonance. A dragon might look for a place where multiple ley lines of flowing magical energy intersect, a site where a meteorite crashed to earth or a strange mystical crystal lies buried underground, or a place where long-forgotten wizards of an ancient magocratic empire saturated the land with their powerful spells. As a result, a dragon's lair is typically not the only unusual and magically powerful feature in its region. You can use the Lair Location table for inspiration when placing a dragon's lair in or near such a feature.",
 						{
 							"type": "table",
-							"caption": " Lair Location",
+							"caption": "Lair Location",
 							"colLabels": [
 								"d10",
 								"Unusual Feature"
@@ -3538,7 +3538,7 @@
 									"entries": [
 										"Fog, storms, precipitation, and supernatural mists can form around a dragon's lair, and some dragons can alter the weather to even greater effect as they see fit. Other weather-related regional effects include the following examples:",
 										"{@b Pleasant Weather}. The weather within 6 miles of the dragon's lair is always sunny and pleasantly warm during the day. Rain falls only at night, and dew waters the ground in the early morning.",
-										"{@b Unending Rain}. Rain falls constantly within 6 miles of the dragon's lair, ranging from light drizzle to a drenching downpour, and it {@book lightly|PHB|8|Vision and Light} or {@book heavily obscures|PHB|8|Vision and Light} the area."
+										"{@b Unending Rain}. Rain falls constantly within 6 miles of the dragon's lair, ranging from light drizzle to a drenching downpour, and it {@quickref Vision and Light|PHB|2||lightly} or {@quickref Vision and Light|PHB|2||heavily obscures} the area."
 									]
 								},
 								{
@@ -3710,7 +3710,7 @@
 								"This linking can add the fun goal of having the characters collect a complete set of divided treasure as they try to find all the caches of a dragon's hoard. The Hoard Linking Items table offers suggestions for item sets that a dragon might use in this way. Ideally, players should be able to deduce the total number of items in the set after they've found one or two caches, so they know how many more pieces need to be collected. Sometimes the correct number is obvious (the number of pieces in a chess set or cards in a deck, for example), but consider having an item found early on be stored in a decorative box whose empty spaces indicate the number of pieces missing.",
 								{
 									"type": "table",
-									"caption": " Hoard Linking Items",
+									"caption": "Hoard Linking Items",
 									"colLabels": [
 										"d10",
 										"Linking Items"
@@ -3809,7 +3809,7 @@
 										"The most certain way to end a haunting is to complete the unfinished business that keeps a spirit bound to the mortal world. In the case of a haunted hoard, you can use the Unfinished Business table to help you decide what that might be.",
 										{
 											"type": "table",
-											"caption": " Unfinished Business",
+											"caption": "Unfinished Business",
 											"colLabels": [
 												"d6",
 												"Unfinished Business"
@@ -3857,7 +3857,7 @@
 										"Use the Hoard Curse Effects table to inspire possible effects for a dragon's lingering curse.",
 										{
 											"type": "table",
-											"caption": " Hoard Curse Effects",
+											"caption": "Hoard Curse Effects",
 											"colLabels": [
 												"d6",
 												"Hoard Curse Effect"
@@ -3897,7 +3897,7 @@
 										"Returning the entire hoard to the dragon's lair ends the curse, but removing even a single coin activates it again. Short of the drastic step of abandoning the treasure, gathering the entire hoard together and performing some specific rite can end the curse. Such a rite might involve any or all of the elements suggested on the Breaking a Hoard Curse table.",
 										{
 											"type": "table",
-											"caption": " Breaking a Hoard Curse",
+											"caption": "Breaking a Hoard Curse",
 											"colLabels": [
 												"d4",
 												"Rite Elements"
@@ -4982,9 +4982,14 @@
 												"path": "book/FTD/040-map-5.1-amethyst-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"distance": 10
+											},
 											"title": "Map 5.1: amethyst dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "012"
 										},
 										{
 											"type": "image",
@@ -4994,8 +4999,15 @@
 											},
 											"imageType": "mapPlayer",
 											"title": "Player Version",
+											"grid": {
+												"type": "square",
+												"distance": 10
+											},
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "012"
+											}
 										}
 									]
 								},
@@ -5471,9 +5483,15 @@
 												"path": "book/FTD/042-map-5.2-black-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"offsetY": -17,
+												"distance": 10
+											},
 											"title": "Map 5.2: black dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "013"
 										},
 										{
 											"type": "image",
@@ -5482,9 +5500,17 @@
 												"path": "book/FTD/043-map-5.2-black-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"offsetY": -15,
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "013"
+											}
 										}
 									]
 								},
@@ -6058,9 +6084,14 @@
 												"path": "book/FTD/046-map-5.3-blue-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"distance": 10
+											},
 											"title": "Map 5.3: blue dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "014"
 										},
 										{
 											"type": "image",
@@ -6069,9 +6100,16 @@
 												"path": "book/FTD/047-map-5.3-blue-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "014"
+											}
 										}
 									]
 								},
@@ -6615,9 +6653,14 @@
 												"path": "book/FTD/048-map-5.4-brass-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"distance": 25
+											},
 											"title": "Map 5.4: brass dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "015"
 										},
 										{
 											"type": "image",
@@ -6626,9 +6669,16 @@
 												"path": "book/FTD/049-map-5.4-brass-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"distance": 25
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "015"
+											}
 										}
 									]
 								},
@@ -6682,7 +6732,7 @@
 												{
 													"type": "item",
 													"name": "Wells",
-													"entry": "Four wells\u2014three in the canyons leading to the main hall and one inside the hoard chamber\u2014provide fresh water for the dragon and any guests, and they also serve as a sort of alarm system. As described in the {@book Monster Manual|MM} , whenever a creature with an Intelligence of 3 or higher comes within 30 feet of one of these wells, the dragon becomes aware of the creature's presence."
+													"entry": "Four wells\u2014three in the canyons leading to the main hall and one inside the hoard chamber\u2014provide fresh water for the dragon and any guests, and they also serve as a sort of alarm system. As described in the {@book Monster Manual|MM}, whenever a creature with an Intelligence of 3 or higher comes within 30 feet of one of these wells, the dragon becomes aware of the creature's presence."
 												}
 											]
 										}
@@ -6712,7 +6762,7 @@
 												{
 													"type": "item",
 													"name": "Obscuring Sand",
-													"entry": "Dust and sand fill the air within 120 feet of the dragon, making the area {@book lightly obscured|PHB|8|Vision and Light} until initiative count 20 on the next round."
+													"entry": "Dust and sand fill the air within 120 feet of the dragon, making the area {@quickref Vision and Light|PHB|2||lightly obscured} until initiative count 20 on the next round."
 												}
 											]
 										}
@@ -7224,9 +7274,17 @@
 														"path": "book/FTD/050-map-5.5-bronze-dragon-lair.webp"
 													},
 													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 143,
+														"offsetX": -30,
+														"offsetY": -1,
+														"distance": 10
+													},
 													"title": "Map 5.5: bronze dragon lair",
 													"width": 4800,
-													"height": 6000
+													"height": 6000,
+													"id": "016"
 												},
 												{
 													"type": "image",
@@ -7235,9 +7293,19 @@
 														"path": "book/FTD/051-map-5.5-bronze-dragon-lair-player.webp"
 													},
 													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 143,
+														"offsetX": -30,
+														"offsetY": -3,
+														"distance": 10
+													},
 													"title": "Player Version",
 													"width": 4800,
-													"height": 6000
+													"height": 6000,
+													"mapParent": {
+														"id": "016"
+													}
 												}
 											]
 										}
@@ -7763,9 +7831,15 @@
 												"path": "book/FTD/052-map-5.6-copper-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 99,
+												"distance": 10
+											},
 											"title": "Map 5.6: copper dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "017"
 										},
 										{
 											"type": "image",
@@ -7774,9 +7848,17 @@
 												"path": "book/FTD/053-map-5.6-copper-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 99,
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "017"
+											}
 										}
 									]
 								},
@@ -8272,9 +8354,14 @@
 												"path": "book/FTD/054-map-5.7-crystal-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 99
+											},
 											"title": "Map 5.7: crystal dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "018"
 										},
 										{
 											"type": "image",
@@ -8283,9 +8370,16 @@
 												"path": "book/FTD/055-map-5.7-crystal-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 99
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "018"
+											}
 										}
 									]
 								},
@@ -9789,9 +9883,14 @@
 												"path": "book/FTD/065-map-5.8-emerald-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"distance": 10
+											},
 											"title": "Map 5.8: emerald dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "019"
 										},
 										{
 											"type": "image",
@@ -9800,9 +9899,16 @@
 												"path": "book/FTD/066-map-5.8-emerald-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "019"
+											}
 										}
 									]
 								},
@@ -10714,9 +10820,13 @@
 												"path": "book/FTD/069-map-5.9-gold-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square"
+											},
 											"title": "Map 5.9: gold dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "01a"
 										},
 										{
 											"type": "image",
@@ -10725,9 +10835,15 @@
 												"path": "book/FTD/070-map-5.9-gold-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square"
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "01a"
+											}
 										}
 									]
 								},
@@ -11301,9 +11417,15 @@
 												"path": "book/FTD/071-map-5.10-green-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 150,
+												"distance": 10
+											},
 											"title": "Map 5.10: green dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "01b"
 										},
 										{
 											"type": "image",
@@ -11312,9 +11434,17 @@
 												"path": "book/FTD/072-map-5.10-green-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 150,
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "01b"
+											}
 										}
 									]
 								},
@@ -12267,9 +12397,15 @@
 												"path": "book/FTD/075-map-5.11-red-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"offsetX": 38,
+												"distance": 10
+											},
 											"title": "Map 5.11: red dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "01c"
 										},
 										{
 											"type": "image",
@@ -12278,9 +12414,17 @@
 												"path": "book/FTD/076-map-5.11-red-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"offsetX": 38,
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "01c"
+											}
 										}
 									]
 								},
@@ -12329,7 +12473,7 @@
 												{
 													"type": "item",
 													"name": "Noxious Smoke",
-													"entry": "A cloud of thick, dark smoke fills a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The sphere spreads around corners, and its area is {@book heavily obscured|PHB|8|Vision and Light}. A creature other than the dragon that starts its turn in the cloud or enters it for the first time on its turn must succeed on a DC 15 Constitution saving throw or be {@condition poisoned} until the end of its turn. The cloud lasts until initiative count 20 on the next round."
+													"entry": "A cloud of thick, dark smoke fills a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The sphere spreads around corners, and its area is {@quickref Vision and Light|PHB|2||heavily obscured}. A creature other than the dragon that starts its turn in the cloud or enters it for the first time on its turn must succeed on a DC 15 Constitution saving throw or be {@condition poisoned} until the end of its turn. The cloud lasts until initiative count 20 on the next round."
 												},
 												{
 													"type": "item",
@@ -12796,9 +12940,15 @@
 												"path": "book/FTD/077-map-5.12-sapphire-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 75,
+												"distance": 10
+											},
 											"title": "Map 5.12: sapphire dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "01d"
 										},
 										{
 											"type": "image",
@@ -12807,9 +12957,17 @@
 												"path": "book/FTD/078-map-5.12-sapphire-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 75,
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "01d"
+											}
 										}
 									]
 								},
@@ -13294,7 +13452,7 @@
 												{
 													"type": "item",
 													"name": "Dying Light",
-													"entry": "Light is diminished within 6 miles of the dragon's lair, {@book lightly obscuring|PHB|8|Vision and Light} the land in gloomy shadows."
+													"entry": "Light is diminished within 6 miles of the dragon's lair, {@quickref Vision and Light|PHB|2||lightly obscuring} the land in gloomy shadows."
 												},
 												{
 													"type": "item",
@@ -13746,9 +13904,14 @@
 												"path": "book/FTD/079-map-5.13-silver-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 150
+											},
 											"title": "Map 5.13: silver dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "01e"
 										},
 										{
 											"type": "image",
@@ -13757,9 +13920,16 @@
 												"path": "book/FTD/080-map-5.13-silver-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 150
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "01e"
+											}
 										}
 									]
 								},
@@ -14247,9 +14417,15 @@
 												"path": "book/FTD/081-map-5.14-topaz-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 99,
+												"distance": 10
+											},
 											"title": "Map 5.14: topaz dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "01f"
 										},
 										{
 											"type": "image",
@@ -14258,9 +14434,17 @@
 												"path": "book/FTD/082-map-5.14-topaz-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"size": 99,
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "01f"
+											}
 										}
 									]
 								},
@@ -14750,9 +14934,14 @@
 												"path": "book/FTD/083-map-5.15-white-dragon-lair.webp"
 											},
 											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"distance": 10
+											},
 											"title": "Map 5.15: white dragon lair",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"id": "020"
 										},
 										{
 											"type": "image",
@@ -14761,9 +14950,16 @@
 												"path": "book/FTD/084-map-5.15-white-dragon-lair-player.webp"
 											},
 											"imageType": "mapPlayer",
+											"grid": {
+												"type": "square",
+												"distance": 10
+											},
 											"title": "Player Version",
 											"width": 4800,
-											"height": 6000
+											"height": 6000,
+											"mapParent": {
+												"id": "020"
+											}
 										}
 									]
 								},

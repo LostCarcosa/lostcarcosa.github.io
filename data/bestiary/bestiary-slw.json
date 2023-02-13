@@ -17,13 +17,19 @@
 			"name": "Expert",
 			"source": "SLW",
 			"level": 7,
-			"size": "M",
-			"type": "humanoid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "expert",
+				"sidekickHidden": true
+			},
 			"ac": [
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -112,7 +118,9 @@
 		{
 			"name": "Skull Flier",
 			"source": "SLW",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -183,13 +191,22 @@
 			"name": "Spellcaster (Healer)",
 			"source": "SLW",
 			"level": 7,
-			"size": "M",
-			"type": "humanoid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"tags": [
+					"healer"
+				],
+				"sidekickHidden": true
+			},
 			"ac": [
 				{
 					"ac": 13,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -288,6 +305,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -300,13 +320,22 @@
 			"name": "Spellcaster (Mage)",
 			"source": "SLW",
 			"level": 7,
-			"size": "M",
-			"type": "humanoid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"tags": [
+					"mage"
+				],
+				"sidekickHidden": true
+			},
 			"ac": [
 				{
 					"ac": 13,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -405,8 +434,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
-				"CC",
 				"CW"
 			],
 			"miscTags": [
@@ -417,7 +448,9 @@
 		{
 			"name": "Statue of Talos",
 			"source": "SLW",
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -531,7 +564,9 @@
 			"name": "Tooth-N-Claw",
 			"isNpc": true,
 			"source": "SLW",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -628,8 +663,14 @@
 			"name": "Warrior",
 			"source": "SLW",
 			"level": 7,
-			"size": "M",
-			"type": "humanoid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "warrior",
+				"sidekickHidden": true
+			},
 			"ac": [
 				{
 					"ac": 20,

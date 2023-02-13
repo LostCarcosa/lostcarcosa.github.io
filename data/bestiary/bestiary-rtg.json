@@ -6,7 +6,9 @@
 			"isNamedCreature": true,
 			"source": "RtG",
 			"page": 32,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"N",
@@ -179,6 +181,19 @@
 				"B",
 				"F"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"P",
+				"R",
+				"S",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CL",
 				"I"
@@ -188,13 +203,16 @@
 			],
 			"conditionInflictSpell": [
 				"incapacitated"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Rotter",
 			"source": "RtG",
 			"page": 34,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -314,7 +332,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

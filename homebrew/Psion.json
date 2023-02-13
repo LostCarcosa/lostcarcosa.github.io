@@ -997,7 +997,7 @@
 			"entries": [
 				"You manipulate the nature of your body with magic temporarily giving it new properties. You immediately take {@damage 3d8} bludgeoning damage as your body forcibly morphs into a new form. You can select three of the following properties:",
 				{
-					"type" : "list",
+					"type": "list",
 					"items": [
 						"You grow one additional appendage. This appendage serves as an arm and a hand, though it can take the shape of an arm, tentacle, or similar appendage.",
 						"You extend the length of your limbs, increasing the reach on melee attacks, touch spells, and object interactions by 5 feet.",
@@ -1173,7 +1173,6 @@
 				"MT"
 			]
 		},
-		
 		{
 			"name": "Devouring Darkness",
 			"level": 5,
@@ -1453,7 +1452,7 @@
 						"You can project it as a bonus action and you can project up 3 weapons or pieces of ammunition at the same time.",
 						"You are proficient with any projected weapon.",
 						"It is no longer restricted to a maximum of 3 feet when it takes the form of a weapon (for a Medium-sized creature).",
-						"You can apply the Astral Construct modifiers Grow and Sustain to Projected Weaponry. Grow adds 1d8 to the weapon’s damage dice. You can expend Psionic Mastery on these modifiers."
+						"You can apply the Astral Construct modifiers Grow and Sustain to Projected Weaponry. Grow adds 1d8 to the weapon's damage dice. You can expend Psionic Mastery on these modifiers."
 					]
 				}
 			],
@@ -1466,7 +1465,7 @@
 		{
 			"name": "Unlimited Imagination",
 			"prerequisite": [
-				{	
+				{
 					"feature": [
 						"Shaper's Mind"
 					],
@@ -1596,7 +1595,7 @@
 				}
 			],
 			"entries": [
-				"You can psionically link yourself to other creatures. As a reaction to a creature taking psychic, necrotic, or radiant damage you can grant them resistance to the damage taken, but you take psychic damage equal to the damage they take (after resistance). The damage you take can’t be reduced or prevented in any way.",
+				"You can psionically link yourself to other creatures. As a reaction to a creature taking psychic, necrotic, or radiant damage you can grant them resistance to the damage taken, but you take psychic damage equal to the damage they take (after resistance). The damage you take can't be reduced or prevented in any way.",
 				"If the damage would inflict any further negative status effect on the target, you can choose for that effect to affect you instead.",
 				"If you have any form of telepathic bond that allows long- distance telepathic communication affecting the creature taking this damage, the range is unlimited and you do not need to be able to see them."
 			],
@@ -1618,7 +1617,7 @@
 			],
 			"entries": [
 				"As an action, you surround yourself with a swirling shield of fire, ice, or lightning. You gain temporary hit points equal to your psion level + your Intelligence modifier. Creatures that strike you while you have these temporary hit points take 1d4 damage of the shield type chosen.",
-				"Once you use this talent, you can’t use it again until you finish a short or long rest."
+				"Once you use this talent, you can't use it again until you finish a short or long rest."
 			],
 			"source": "PSN",
 			"page": 11,
@@ -1688,7 +1687,7 @@
 				}
 			],
 			"entries": [
-				"You gain the ability to cast fire shield without expending psi points. Once you cast it this way, you can’t cast it again until you finish a long rest, unless you spend 4 Psi Points to cast it again."
+				"You gain the ability to cast fire shield without expending psi points. Once you cast it this way, you can't cast it again until you finish a long rest, unless you spend 4 Psi Points to cast it again."
 			],
 			"source": "PSN",
 			"page": 1,
@@ -1711,7 +1710,7 @@
 			],
 			"entries": [
 				"You can manifest your emotions into elemental powers that take physical shape. While you are in an elemental emotion, you can expend 2 psi points to manifest that emotion into the world as a bonus action; this takes the form of a mephit ({@creature ice mephit} for cold, {@creature magma mephit} for fire, and {@creature spark mephit|MOD} for lightning).",
-				"As your emotion, given form, it acts immediately after your initiative at your directive. If not destroyed, it lasts for up to 1 minute, after which it naturally fades away. You can’t manifest more than one emotion at a time, and if it is destroyed, you take {@damage 2d6} psychic damage from the backlash.",
+				"As your emotion, given form, it acts immediately after your initiative at your directive. If not destroyed, it lasts for up to 1 minute, after which it naturally fades away. You can't manifest more than one emotion at a time, and if it is destroyed, you take {@damage 2d6} psychic damage from the backlash.",
 				"This manifestation is not a sentient creature of its own, but simply a manifestation of your emotion.",
 				{
 					"type": "inset",
@@ -1925,7 +1924,7 @@
 				}
 			],
 			"entries": [
-				"When a creature within 120 feet that you can see deals damage to you, you can use your reaction to spend 1 or more psi points (up to your psi limit) to share the pain you experienced back at them, dealing 1d10 psychic damage per point spent. The damage this deals can’t exceed the damage taken from the attack."
+				"When a creature within 120 feet that you can see deals damage to you, you can use your reaction to spend 1 or more psi points (up to your psi limit) to share the pain you experienced back at them, dealing 1d10 psychic damage per point spent. The damage this deals can't exceed the damage taken from the attack."
 			],
 			"source": "PSN",
 			"page": 11,
@@ -1948,10 +1947,9 @@
 						}
 					}
 				}
-				
 			],
 			"entries": [
-				"Your Telepathic Communication gains an unlimited range as long as you have communicated with the creature within the last day, and the target willingly maintains the link. However, it takes an action to focus to communicate over distance if you can’t see the target (or for the target to communicate with you if they can’t see you). You can maintain a link with a number of people equal to your Intelligence modifier in this way. You can convey as much in a turn as you could by speaking normally."
+				"Your Telepathic Communication gains an unlimited range as long as you have communicated with the creature within the last day, and the target willingly maintains the link. However, it takes an action to focus to communicate over distance if you can't see the target (or for the target to communicate with you if they can't see you). You can maintain a link with a number of people equal to your Intelligence modifier in this way. You can convey as much in a turn as you could by speaking normally."
 			],
 			"source": "PSN",
 			"page": 11,
@@ -2546,7 +2544,7 @@
 									"type": "entries",
 									"name": "Project Item",
 									"entries": [
-										"As an action, you can use your powers to project an inanimate object you imagine into your hands. It can’t be larger than 3 feet on any side or weigh more than 10 pounds, and is clearly ethereal in nature. The item behaves as a solid object. Weapons created with this feature deal force damage.",
+										"As an action, you can use your powers to project an inanimate object you imagine into your hands. It can't be larger than 3 feet on any side or weigh more than 10 pounds, and is clearly ethereal in nature. The item behaves as a solid object. Weapons created with this feature deal force damage.",
 										"Projected items fade after 1 minute, and you can have no more than 3 projected items at a time."
 									]
 								},
@@ -2564,7 +2562,7 @@
 										"{@bold Replicate} {@italic (3 psi points)} : You project a copy of your construct anywhere within 60 feet of you that you can see, which retains the effects of any Solidify or Grow command applied to the original. Until the end of your turn, you have two constructs and control both with the same action (commands only affect one of your choice). Pick one construct to fade at the end of your next, or use Sustain.",
 										"{@bold Solidify} {@italic (1 psi point)} : You construct becomes solid, blocking its space until the start of your next turn. You can only use this command if it is not in another creatures space. It has an armor class of 16, and hit points of your Intelligence modifier + your Psion level. The construct becomes ethereal again if it drops to zero hit points.",
 										"{@bold Strike} {@italic (2 psi points)} : The construct makes an attack (even if it has already attacked)",
-										"{@bold Sustain} {@italic (1+ psi point)} : At the start of your turn, you can sustain the effect of a Solidify, Grow or Replicate command for an additional round. An effect that has been replicated can be sustained across all replicated constructs with a single use, but each effect can only be sustained once per turn (for example, you can never sustain more than one replicated construct). This costs 1 psi point for each effect sustained. Sustaining Solidify refreshes the construct’s hit points to its maximum."
+										"{@bold Sustain} {@italic (1+ psi point)} : At the start of your turn, you can sustain the effect of a Solidify, Grow or Replicate command for an additional round. An effect that has been replicated can be sustained across all replicated constructs with a single use, but each effect can only be sustained once per turn (for example, you can never sustain more than one replicated construct). This costs 1 psi point for each effect sustained. Sustaining Solidify refreshes the construct's hit points to its maximum."
 									]
 								},
 								{
@@ -2718,7 +2716,7 @@
 									"type": "entries",
 									"name": "Telepathic Communication",
 									"entries": [
-										"When you gain this feature, you can communicate telepathically with any creature you can see within 30 feet of you. You don’t need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language. Creatures you communicate with telepathically automatically identify you as the speaker, adn they can reply in kind."
+										"When you gain this feature, you can communicate telepathically with any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language. Creatures you communicate with telepathically automatically identify you as the speaker, adn they can reply in kind."
 									]
 								},
 								{
@@ -2801,7 +2799,7 @@
 									"type": "entries",
 									"name": "Flicker Steps",
 									"entries": [
-										"On your turn, you can replace your movement by teleporting 5 feet in any direction to a space you can see. You can pass through creatures but can’t pass through objects, buildings or solid terrain. This distance increases by 5 feet at 5th level (to 10 feet), at 11th level (to 15 feet), and becomes equal to your walking speed at 17th level. This replaces all movement for your turn when used.",
+										"On your turn, you can replace your movement by teleporting 5 feet in any direction to a space you can see. You can pass through creatures but can't pass through objects, buildings or solid terrain. This distance increases by 5 feet at 5th level (to 10 feet), at 11th level (to 15 feet), and becomes equal to your walking speed at 17th level. This replaces all movement for your turn when used.",
 										"You can only use this feature when your movement speed is non-zero."
 									]
 								},
@@ -2816,7 +2814,7 @@
 										"{@bold Blurring} {@italic (1-3 psi points)} : You gain an illusory duplicate, as per the mirror image spell. You gain 1 duplicate per psi point spent (up to a maximum of 3). One remaining image fades at the start of each of your turns.",
 										"{@bold Disruptive} {@italic (1+ psi point)} : Each target that fails their saving throw takes an additional 1d8 force damage.",
 										"{@bold Echoing} {@italic (2 psi points)} : You immediately Phase Rift again with the same action.",
-										"{@bold Ethereal} {@italic (2 psi points)} : You can pass through solid objects, buildings, and terrain as long as you end your Phase Rift in a space you can occupy. If your Phase Rift would end inside a space you can’t occupy, the power fails.",
+										"{@bold Ethereal} {@italic (2 psi points)} : You can pass through solid objects, buildings, and terrain as long as you end your Phase Rift in a space you can occupy. If your Phase Rift would end inside a space you can't occupy, the power fails.",
 										"{@bold Long} {@italic (1-3 psi points)} : You can travel an additional 10 feet for each point spent."
 									]
 								},
@@ -2896,7 +2894,7 @@
 										"{@italic Psionic Power}",
 										"{@bold Casting Time:} 1 action<br />{@bold Range:} 30 feet<br />{@bold Components:} S<br />{@bold Duration:} 1 round",
 										"You can use your mind to create a burst of elemental power, blasting a target you can see within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 cold, fire, force or lightning damage.",
-										"For each die of cold damage dealt, the creature’s speed is reduced by 5 feet until the end of their next turn. For each die of fire damage dealt by the original attack, the creature takes 1d4 fire damage at the start of its next turn. For each die of lightning damage dealt, an arc of lightning strikes another creature of your choice within 20 feet, dealing 1d4 lightning damage (multiple arcs may strike the same creature). Damage from these secondary effects doesn’t add any bonuses (such as Empowered Psionics).",
+										"For each die of cold damage dealt, the creature's speed is reduced by 5 feet until the end of their next turn. For each die of fire damage dealt by the original attack, the creature takes 1d4 fire damage at the start of its next turn. For each die of lightning damage dealt, an arc of lightning strikes another creature of your choice within 20 feet, dealing 1d4 lightning damage (multiple arcs may strike the same creature). Damage from these secondary effects doesn't add any bonuses (such as Empowered Psionics).",
 										"You can spend psi points up to your per use limit to add the following modifiers to (you can add multiple modifiers). The points must be spent when choosing the target of the power.",
 										"{@bold Amplifed} {@italic (1+ psi point)} : The target takes an additional 1d8 cold, fire, force or lightning damage.",
 										"{@bold Lasting} {@italic (1 psi point)} : Your Elemental Blast leaves a 5 foot radius sphere of devestating behind where it strikes until the start of your next turn. Creatures that enter this zone for the first time or end their turn in it must make a Constitution saving throw or suffer the secondary effects (slow, burn, arc) of the blast as if they had been hit by it.",
@@ -3023,7 +3021,7 @@
 											]
 										},
 										"{@bold Omniscient} {@italic (1 psi points)} : The beneficiary of your Seeing is under the effect of {@spell bless} and {@spell guidance|MOD} until the start of your next turn (effectively adding {@dice 1d4} to all attack rolls, ability checks, & saving throws).",
-										"{@bold Piercing} {@italic (1+ psi points)} :  You see through the target’s defenses when granting advantage, increasing the damage of the attack benefiting from advantage by 1d8 per psi point spent if it hits.",
+										"{@bold Piercing} {@italic (1+ psi points)} :  You see through the target's defenses when granting advantage, increasing the damage of the attack benefiting from advantage by 1d8 per psi point spent if it hits.",
 										"{@bold Positioning} {@italic (1+ psi points)} :  he beneficiary of your Seeing can immediately move 5 feet per psi point spent (up to their speed) without provoking opportunity attacks.",
 										"{@bold Thwarting} {@italic (2 psi points)} :  The beneficiary of your Seeing has advantage on the next saving throw they make before the start of your next turn.",
 										"{@bold Withheld} {@italic (0 psi points)} : Rather than granting advantage or disadvantage on the next attack, you can grant advantage or disavantage as a reaction to an attack being made until the start of your next turn."
@@ -3113,7 +3111,7 @@
 										"{@bold Existential} {@italic (1+ psi points)} : You deal an additional 1d4 initial and bonus (if applicable) force damage to the target creature on a failed save.",
 										"{@bold Lingering} {@italic (1+ psi points)} :  You can apply the effect of Disruptive Touch to an affected creature.",
 										"{@bold Supernatural} {@italic (3+ psi points)} : You attempt to end the effects of a spell or a psionic power upon the target. The effect is only ended if the psi points spent on this modifier equals or exceeds the spell level or psi points spent on the effect. Additionally, if the effect has a duration of more than 1 minute, the cost of this ability is doubled; if the effect has a duration of more than 1 day, the cost is doubled again. If the effect lasts indefinitely, you cannot end it with this power.",
-										"You can also try to suppress the magical powers of other creatures. If the property is an innate property of a creature (either of the target creature, or affecting the target of this power), it is only ended if the psi points exceed the CR (or class levels) of the originating creature, and they return at the end of that creature’s next turn. The supernatural effect can’t be its existence, unless it has less than 10 hit points and it would otherwise qualify."
+										"You can also try to suppress the magical powers of other creatures. If the property is an innate property of a creature (either of the target creature, or affecting the target of this power), it is only ended if the psi points exceed the CR (or class levels) of the originating creature, and they return at the end of that creature's next turn. The supernatural effect can't be its existence, unless it has less than 10 hit points and it would otherwise qualify."
 									]
 								},
 								{
@@ -3223,9 +3221,9 @@
 										"{@bold Devouring} {@italic (2 psi points)} : The range of Mind Leech becomes a radius of 5 feet, centered on you",
 										"{@bold Nourishing} {@italic (1 psi points)} : On a failed saving throw, you gain an additional psionic charge.",
 										"{@bold Rending} {@italic (1+ psi points)} :  The target takes an additional die of damage (1d6 or 1d12 as applicable if they are under the effect of a listed condition) per psi point spent on a failed save.",
-										"{@bold Shredding} {@italic (1 psi points)} :   You leave the target’s mind and soul shredded, reducing their next saving throw before the end of your next turn by {@dice 1d4}.",
+										"{@bold Shredding} {@italic (1 psi points)} :   You leave the target's mind and soul shredded, reducing their next saving throw before the end of your next turn by {@dice 1d4}.",
 										"{@bold Stunning} {@italic (4 psi points)} : On a failed saving throw, the target becomes stunned until the start of your next turn. If the power affects multiple targets, select one target for this effect.",
-										"{@bold Thieving} {@italic (1 psi points)} : On a failed saving throw, you can draw a 5th level or lower spell the target can cast from its mind (from a Spellcasting or Psionics feature). You must be aware that it can cast that spell; the target retains the ability to cast the spell, but you gain the ability to cast the spell using your Psionics feature by spending psi points equal to the level of the spell (restricted by your psi point limit; you can’t use Psionic Mastery to cast this spell).",
+										"{@bold Thieving} {@italic (1 psi points)} : On a failed saving throw, you can draw a 5th level or lower spell the target can cast from its mind (from a Spellcasting or Psionics feature). You must be aware that it can cast that spell; the target retains the ability to cast the spell, but you gain the ability to cast the spell using your Psionics feature by spending psi points equal to the level of the spell (restricted by your psi point limit; you can't use Psionic Mastery to cast this spell).",
 										"You can know one spell in this manner at a time, and retain the ability to cast the spell for 1 minute or until cast. If the spell is one that restores hit points, you reduce your own hit points by the amount healed by the spell."
 									]
 								},
@@ -3289,7 +3287,7 @@
 				"PSI:T"
 			],
 			"entries": [
-				"As a bonus action, you can expend 1 psi point to create psionic constructions serving as additional appendages. These arms last for 10 minutes. You determine the arms’ appearance, and they vanish early if you are incapacitated or die. You can use the astral arms to make unarmed strikes. The unarmed strikes you make with the arms use your Intelligence modifier in place of your Strength modifier for the attack and damage rolls. If you hit with one of them, you deal force damage equal to 1d6 + your Intelligence modifier, instead of the bludgeoning damage normal for an unarmed strike.",
+				"As a bonus action, you can expend 1 psi point to create psionic constructions serving as additional appendages. These arms last for 10 minutes. You determine the arms' appearance, and they vanish early if you are incapacitated or die. You can use the astral arms to make unarmed strikes. The unarmed strikes you make with the arms use your Intelligence modifier in place of your Strength modifier for the attack and damage rolls. If you hit with one of them, you deal force damage equal to 1d6 + your Intelligence modifier, instead of the bludgeoning damage normal for an unarmed strike.",
 				"When you create them, or by spending 1 psi point as a bonus action while they are manifested, you can make a single unarmed strike with these arms as a bonus action. You can use Psionic Mastery points on this."
 			]
 		},
@@ -3347,7 +3345,7 @@
 				"PSI:T"
 			],
 			"entries": [
-				"You gain the ability to cast dream. You can cast the spell without expending a spell slot, but once cast, you can’t cast it again until you finish a long rest."
+				"You gain the ability to cast dream. You can cast the spell without expending a spell slot, but once cast, you can't cast it again until you finish a long rest."
 			]
 		},
 		{
@@ -3403,12 +3401,12 @@
 				"PSI:T"
 			],
 			"entries": [
-				"Your power of conviction allows you to believe what you choose to. If you spend at least one minute convincing yourself of something— no matter how absurd—spells and effects to determine if you are telling the truth will register that you believe what you have convinced yourself of.",
+				"Your power of conviction allows you to believe what you choose to. If you spend at least one minute convincing yourself of something\u2014 no matter how absurd\u2014spells and effects to determine if you are telling the truth will register that you believe what you have convinced yourself of.",
 				"Additionally, your psionic powers allow you to impose your will upon reality to a certain extent. When you expend 1 psi point, you can perform a minor alteration to reality:",
 				{
 					"type": "list",
 					"entries": [
-						"As an action, you can conjure any Tiny object you can imagine that is worth 1 sp or less. This creates an object as you envision it, but doesn’t grant you knowledge you do not otherwise have (for example, you would be unable to conjure a key to a lock unless you had a perfect mental image of the correct key).",
+						"As an action, you can conjure any Tiny object you can imagine that is worth 1 sp or less. This creates an object as you envision it, but doesn't grant you knowledge you do not otherwise have (for example, you would be unable to conjure a key to a lock unless you had a perfect mental image of the correct key).",
 						"As an action, you can change the color or taste of a Small or smaller object with 10 feet. This change lasts for 1 minute.",
 						"As a reaction to a creature within 30 feet taking damage (including yourself), you can change the damage type they take."
 					]
@@ -3590,9 +3588,9 @@
 			"entries": [
 				"When you use an Enhancing Surge to empower a creature, you can expend a psi point to augment it with your Telekinesis to further assist them, optionally granting one of the following benefits:",
 				{
-					"type" : "list",
+					"type": "list",
 					"items": [
-						"You can move the creature 10 feet (this movement doesn’t provoke opportunity attacks).",
+						"You can move the creature 10 feet (this movement doesn't provoke opportunity attacks).",
 						"You can telekinetically deflect the first weapon attack against them before the start of your next turn, giving that attack disadvantage.",
 						"You can telekinetically boost their next Strength (Athletics) check or weapon attack before the start of your next turn, granting that check or attack advantage."
 					]
@@ -3625,7 +3623,7 @@
 					"type": "list",
 					"items": [
 						"If the effect would do damage, each 5-foot cube can damage one target. That target must pass a Dexterity saving throw, or take damage equal to a number of d8 dice equal to the level of the spell.",
-						"If the effect would stop a creature, they can’t move through it. If the effect would restrain a creature, that creature must pass a Dexterity saving throw or become restrained until the start of your next turn."
+						"If the effect would stop a creature, they can't move through it. If the effect would restrain a creature, that creature must pass a Dexterity saving throw or become restrained until the start of your next turn."
 					]
 				},
 				"Each 5-foot cube can affect only one creature that is either within it or adjacent to it. The GM may allow other effects at their discretion."
@@ -4260,7 +4258,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Starting at 10th level, the strength of your rampaging mind is such that others’ attempts to control it are futile. You gain immunity to the charmed and frightened conditions, as well as effects that would control your mind while your rampage die is a d8 or more."
+				"Starting at 10th level, the strength of your rampaging mind is such that others' attempts to control it are futile. You gain immunity to the charmed and frightened conditions, as well as effects that would control your mind while your rampage die is a d8 or more."
 			]
 		},
 		{
@@ -4645,40 +4643,40 @@
 			"entries": [
 				"An Elemental Mind is a Psion that can manifest and control elements as an extension of their will.",
 				{
-				  "type": "refSubclassFeature",
-				  "subclassFeature": "Elemental Power|Psion|PSN|Elemental|PSN|1"
+					"type": "refSubclassFeature",
+					"subclassFeature": "Elemental Power|Psion|PSN|Elemental|PSN|1"
 				},
 				{
-				  "type": "refSubclassFeature",
-				  "subclassFeature": "Primordial Aspect|Psion|PSN|Elemental|PSN|1"
+					"type": "refSubclassFeature",
+					"subclassFeature": "Primordial Aspect|Psion|PSN|Elemental|PSN|1"
 				}
 			]
 		},
 		{
-			  "name": "Elemental Power",
-			  "source": "PSN",
-			  "page": 1,
-			  "className": "Psion",
-			  "classSource": "PSN",
-			  "subclassShortName": "Elemental",
-			  "subclassSource": "PSN",
-			  "level": 1,
-			  "header": 1,
-			  "entries": [
+			"name": "Elemental Power",
+			"source": "PSN",
+			"page": 1,
+			"className": "Psion",
+			"classSource": "PSN",
+			"subclassShortName": "Elemental",
+			"subclassSource": "PSN",
+			"level": 1,
+			"header": 1,
+			"entries": [
 				"At 1st level when you select this archetype, you gain a deep intrinsic tie to elemental power, granting you the ability to manipulate it. You gain the psionic discipline of  {@optfeature Psychokinetic Discipline|PSN|Psychokinesis}."
-			  ]
+			]
 		},
 		{
-			  "name": "Primordial Aspect",
-			  "source": "PSN",
-			  "page": 1,
-			  "className": "Psion",
-			  "classSource": "PSN",
-			  "subclassShortName": "Elemental",
-			  "subclassSource": "PSN",
-			  "level": 1,
-			  "header": 1,
-			  "entries": [
+			"name": "Primordial Aspect",
+			"source": "PSN",
+			"page": 1,
+			"className": "Psion",
+			"classSource": "PSN",
+			"subclassShortName": "Elemental",
+			"subclassSource": "PSN",
+			"level": 1,
+			"header": 1,
+			"entries": [
 				"Additionally at 1st level, as an action or when you deal fire, cold, or lightning damage (no action required), you take on an aspect of that element until the end of your next turn or until you take a new primordial aspect.",
 				{
 					"type": "list",
@@ -4781,7 +4779,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Starting at 10th level, when you enter a primordial aspect, you can expend 1 psi point to fully manifest that element, replacing the primordial aspect with the following effect. If you are specialized in that element, it doesn’t require a psi point to fully manifest the power.",
+				"Starting at 10th level, when you enter a primordial aspect, you can expend 1 psi point to fully manifest that element, replacing the primordial aspect with the following effect. If you are specialized in that element, it doesn't require a psi point to fully manifest the power.",
 				{
 					"type": "list",
 					"items": [
@@ -4823,7 +4821,7 @@
 			"header": 2,
 			"entries": [
 				"Starting at 14th level, you can expend 5 psi points to cast shapechange to assume elemental forms. When you cast shapechange in this way it has no verbal or material components, but you can only assume the form of a {@creature water elemental}, {@creature fire elemental}, or {@creature lightning elemental|MOD}. If you are specialized in an element, the cost is reduced to 3 psi points, but you can only assume the form associated with your specialization.",
-				"Once you cast shapechange this way, you can’t do so until you finish a short or long rest."
+				"Once you cast shapechange this way, you can't do so until you finish a short or long rest."
 			]
 		},
 		{
@@ -4836,7 +4834,7 @@
 			"subclassSource": "PSN",
 			"level": 1,
 			"entries": [
-				"A Consuming Mind is a master of a dangerous branch of psionics, born from the ability to sap energy from other creatures. This power can tear away thoughts, minds, and ultimately vitality for the psion’s own consumption. A feared branch of psionics, it is sometimes believed to be one of the primeval roots of all psionic power, as it can be found among mind-eating monsters and ancient psionic space whales... which might have other names in various settings.",
+				"A Consuming Mind is a master of a dangerous branch of psionics, born from the ability to sap energy from other creatures. This power can tear away thoughts, minds, and ultimately vitality for the psion's own consumption. A feared branch of psionics, it is sometimes believed to be one of the primeval roots of all psionic power, as it can be found among mind-eating monsters and ancient psionic space whales... which might have other names in various settings.",
 				"It has been refined by those that seek greater power either from ambition or desperation, and unlocks a terrible but effective path. One example of mortal creatures walking this path are the houses of dark elves, who developed their dark powers from their study of feral, vampiric, brain-eating monsters.",
 				{
 					"type": "refSubclassFeature",
@@ -4874,7 +4872,7 @@
 			"header": 1,
 			"entries": [
 				"Additionally at 1st level, your powers grant you intuition that allows you to better adapt and survive as a mind hunter. You gain proficiency in Stealth and Deception.",
-				"When you use psionic abilities, you can make an Intelligence (Deception) check contested by a target’s Wisdom (Insight) to conceal your use of psionic powers from them, suppressing the ability’s usual visible indicators. If you spend psi points on the ability, you must subtract the psi points spent from your Intelligence (Deception) roll result (concealing greater uses of psionics being more difficult)."
+				"When you use psionic abilities, you can make an Intelligence (Deception) check contested by a target's Wisdom (Insight) to conceal your use of psionic powers from them, suppressing the ability's usual visible indicators. If you spend psi points on the ability, you must subtract the psi points spent from your Intelligence (Deception) roll result (concealing greater uses of psionics being more difficult)."
 			]
 		},
 		{
@@ -4888,7 +4886,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Starting at 3rd level, you gain the Psionic Talent Mind Devourer; this talent ignores the normal level restriction, and doesn’t count against your Psionic Talents known, but can’t be switched out on leveling up.",
+				"Starting at 3rd level, you gain the Psionic Talent Mind Devourer; this talent ignores the normal level restriction, and doesn't count against your Psionic Talents known, but can't be switched out on leveling up.",
 				"Additionally, you can gain the benefit of this Talent from a range of 30 feet when the creature is killed by one of your psionic powers."
 			]
 		},
@@ -4939,8 +4937,8 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, your Mind Leech ability always gains the Shredding modifier, and it doesn’t cost a psi point to add the modifier.",
-				"Further, you can use additional power to leave their mind further vulnerable. You can spend additional psi points on the Shredding modifier to further reduce their next Intelligence, Wisdom, or Charisma saving throw (up to 2 additional points to reduce it by a total of 3d4). Once this effect has been applied to a creature, you can’t spend additional psi points on the Shredding modifier against the creature until 1 hour has passed."
+				"Starting at 14th level, your Mind Leech ability always gains the Shredding modifier, and it doesn't cost a psi point to add the modifier.",
+				"Further, you can use additional power to leave their mind further vulnerable. You can spend additional psi points on the Shredding modifier to further reduce their next Intelligence, Wisdom, or Charisma saving throw (up to 2 additional points to reduce it by a total of 3d4). Once this effect has been applied to a creature, you can't spend additional psi points on the Shredding modifier against the creature until 1 hour has passed."
 			]
 		},
 		{
@@ -4953,7 +4951,7 @@
 			"subclassSource": "PSN",
 			"level": 1,
 			"entries": [
-				"A Wandering Mind is among the more mysterious incarnates of psions, these are individuals that just aren’t quite rooted in the same reality everyone else is... they find it more pliable and slippery, and prone to jumping right through it on occasion. How they get their powers varies. Some were born in the ethereal plane or went through a portal while young.",
+				"A Wandering Mind is among the more mysterious incarnates of psions, these are individuals that just aren't quite rooted in the same reality everyone else is... they find it more pliable and slippery, and prone to jumping right through it on occasion. How they get their powers varies. Some were born in the ethereal plane or went through a portal while young.",
 				"Sometimes it is just that their mind just works along an axis most people cannot understand. No matter its source, they manifest a truly unique ability to treat certain aspects of the metaphysical with a certain mundanity, and are prone to treating their powers as absolutely natural things as one might treat an arm or leg.",
 				{
 					"type": "refSubclassFeature",
@@ -4965,8 +4963,6 @@
 				}
 			]
 		},
-
-
 		{
 			"name": "Spatial Manipulation",
 			"source": "PSN",
@@ -5006,7 +5002,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Starting at 3rd level, you gain the {@optfeature Rift Strike|MOD} talent. If you already have the Rift Strike talent, you can gain one other Psionic Talent of your choice. The Rift Strike talent doesn’t count against your Psionic Talents known, but can’t be switched out on leveling up."
+				"Starting at 3rd level, you gain the {@optfeature Rift Strike|MOD} talent. If you already have the Rift Strike talent, you can gain one other Psionic Talent of your choice. The Rift Strike talent doesn't count against your Psionic Talents known, but can't be switched out on leveling up."
 			]
 		},
 		{
@@ -5048,7 +5044,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, your phase rift no longer has to go in a straight line, though it can only pass through a creature’s space once."
+				"At 10th level, your phase rift no longer has to go in a straight line, though it can only pass through a creature's space once."
 			]
 		},
 		{
@@ -5091,7 +5087,7 @@
 				}
 			],
 			"entries": [
-				"When you use Seeing with yourself as the beneficiary, you can use it as a bonus action. When you use Seeing as a bonus action in this way, it doesn’t grant additional damage to the attack, or reduce damage taken when hit."
+				"When you use Seeing with yourself as the beneficiary, you can use it as a bonus action. When you use Seeing as a bonus action in this way, it doesn't grant additional damage to the attack, or reduce damage taken when hit."
 			],
 			"source": "PSN",
 			"page": 12,
@@ -5132,11 +5128,10 @@
 							"name": "Psion"
 						}
 					}
-				
 				}
 			],
 			"entries": [
-				"When you finish a long rest, your dreams have prepared you for the day to come. Upon waking, you issue reassuring words and advice to your companions to help them survive the day, giving them temporary hit points equal to your Intelligence modifier. During the next 24 hours, you can’t be surprised."
+				"When you finish a long rest, your dreams have prepared you for the day to come. Upon waking, you issue reassuring words and advice to your companions to help them survive the day, giving them temporary hit points equal to your Intelligence modifier. During the next 24 hours, you can't be surprised."
 			],
 			"source": "PSN",
 			"page": 12,
@@ -5158,11 +5153,10 @@
 							"name": "Psion"
 						}
 					}
-				
 				}
 			],
 			"entries": [
-				"You gain the ability to expend 8 psi points to cast antimagic field. Once you cast it this way, you can’t cast it again until you finish a long rest."
+				"You gain the ability to expend 8 psi points to cast antimagic field. Once you cast it this way, you can't cast it again until you finish a long rest."
 			],
 			"source": "PSN",
 			"page": 12,
@@ -5184,7 +5178,6 @@
 							"name": "Psion"
 						}
 					}
-				
 				}
 			],
 			"entries": [
@@ -5211,7 +5204,6 @@
 							"name": "Psion"
 						}
 					}
-				
 				}
 			],
 			"entries": [
@@ -5231,7 +5223,6 @@
 						"entry": "Requires Consumption Discipline",
 						"entrySummary": "Requires Consumption"
 					}
-				
 				}
 			],
 			"entries": [
@@ -5276,7 +5267,6 @@
 							"name": "Psion"
 						}
 					}
-				
 				}
 			],
 			"entries": [
@@ -5296,7 +5286,6 @@
 						"entry": "Requires Consumption Discipline",
 						"entrySummary": "Requires Consumption"
 					}
-				
 				}
 			],
 			"entries": [
@@ -5310,40 +5299,3 @@
 		}
 	]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

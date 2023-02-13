@@ -70,6 +70,7 @@
 	&nav-date {
 		margin-left: -16px;
 		width: 27px;
+		color: $rgb-font--muted;
 	}
 
 	&wrp-download {
@@ -124,6 +125,12 @@
 		left: calc(50% - 30px);
 		width: 90px;
 		text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 3px 3px 5px black;
+	}
+}
+
+.active > .nav__link > .page__ {
+	&nav-date {
+		color: white;
 	}
 }
 
@@ -3263,23 +3270,6 @@ th.border {
 		color: $rgb-name-red--night;
 	}
 
-	.source {
-		$rgb-source-PHB: $rgb-subclass--night;
-		$rgb-source-SADS: #4f63f5;
-
-		&PHB {
-			color: $rgb-source-PHB !important;
-			border-color: $rgb-source-PHB !important;
-			text-decoration-color: $rgb-source-PHB !important;
-		}
-
-		&SADS {
-			color: $rgb-source-SADS !important;
-			border-color: $rgb-source-SADS !important;
-			text-decoration-color: $rgb-source-SADS !important;
-		}
-	}
-
 	.bkmv {
 		background: #272727;
 	}
@@ -3779,6 +3769,16 @@ th.border {
 		box-shadow: none !important;
 		border-color: black !important;
 	}
+
+	.rd__h-toggle {
+		display: none !important;
+	}
+
+	.rd__b-special,
+	.rd__li {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
 	// endregion
 
 	// region books/adventures
@@ -3838,6 +3838,10 @@ th.border {
 	}
 
 	.toast {
+		display: none !important;
+	}
+
+	.cancer__anchor {
 		display: none !important;
 	}
 }

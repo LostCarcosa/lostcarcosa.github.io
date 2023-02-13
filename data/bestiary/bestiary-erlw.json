@@ -19,7 +19,9 @@
 			"isNamedCreature": true,
 			"source": "ERLW",
 			"page": 286,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -237,7 +239,9 @@
 			"name": "Bone Knight",
 			"source": "ERLW",
 			"page": 316,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -365,6 +369,11 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"R",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CP"
 			],
@@ -381,7 +390,9 @@
 			"name": "Changeling",
 			"source": "ERLW",
 			"page": 317,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -494,7 +505,9 @@
 					"page": 81
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -579,7 +592,8 @@
 				"prone"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Corrin Delmaco",
@@ -620,7 +634,9 @@
 			"name": "Dolgaunt",
 			"source": "ERLW",
 			"page": 290,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -734,7 +750,9 @@
 			"name": "Dolgrim",
 			"source": "ERLW",
 			"page": 291,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -832,7 +850,9 @@
 			"name": "Dusk Hag",
 			"source": "ERLW",
 			"page": 292,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -961,6 +981,9 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -981,7 +1004,9 @@
 			"isNamedCreature": true,
 			"source": "ERLW",
 			"page": 288,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -1149,6 +1174,9 @@
 				"S",
 				"Y"
 			],
+			"damageTagsLegendary": [
+				"Y"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -1172,7 +1200,9 @@
 			],
 			"source": "ERLW",
 			"page": 293,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -1257,7 +1287,9 @@
 			],
 			"source": "ERLW",
 			"page": 289,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1329,7 +1361,9 @@
 			],
 			"source": "ERLW",
 			"page": 305,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -1453,6 +1487,9 @@
 				"O",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -1472,7 +1509,9 @@
 			"name": "Inspired",
 			"source": "ERLW",
 			"page": 294,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1603,7 +1642,7 @@
 									"type": "entries",
 									"name": "All Around Vision",
 									"entries": [
-										"The Inspired can't be surprised."
+										"The Inspired can't be {@quickref Surprise|PHB|3|0|surprised}."
 									]
 								},
 								{
@@ -1640,6 +1679,10 @@
 			"damageTags": [
 				"O",
 				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N",
 				"Y"
 			],
 			"spellcastingTags": [
@@ -1685,7 +1728,7 @@
 							"items": {
 								"name": "All Around Vision",
 								"entries": [
-									"The Inspired can't be surprised."
+									"The Inspired can't be {@quickref Surprise|PHB|3|0|surprised}."
 								]
 							}
 						}
@@ -1716,7 +1759,9 @@
 			],
 			"source": "ERLW",
 			"page": 293,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -1812,7 +1857,9 @@
 			],
 			"source": "ERLW",
 			"page": 306,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -1913,13 +1960,13 @@
 				{
 					"name": "All-Around Vision",
 					"entries": [
-						"The quori can't be surprised while it isn't {@condition incapacitated}."
+						"The quori can't be {@quickref Surprise|PHB|3|0|surprised} while it isn't {@condition incapacitated}."
 					]
 				},
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The quori can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The quori can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -1988,6 +2035,9 @@
 				"O",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -2011,7 +2061,9 @@
 			"name": "Kalashtar",
 			"source": "ERLW",
 			"page": 317,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2094,7 +2146,9 @@
 			"name": "Karrnathi Undead Soldier",
 			"source": "ERLW",
 			"page": 295,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -2216,7 +2270,9 @@
 			"isNamedCreature": true,
 			"source": "ERLW",
 			"page": 296,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -2475,6 +2531,15 @@
 				"N",
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -2502,7 +2567,9 @@
 			"name": "Living Burning Hands",
 			"source": "ERLW",
 			"page": 298,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -2607,7 +2674,9 @@
 			"name": "Living Cloudkill",
 			"source": "ERLW",
 			"page": 299,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -2722,7 +2791,9 @@
 			"name": "Living Lightning Bolt",
 			"source": "ERLW",
 			"page": 299,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -2836,7 +2907,9 @@
 			"name": "Magewright",
 			"source": "ERLW",
 			"page": 318,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2901,6 +2974,9 @@
 			"damageTags": [
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -2915,7 +2991,9 @@
 			"isNamedCreature": true,
 			"source": "ERLW",
 			"page": 301,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -3070,6 +3148,18 @@
 				"O",
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"R",
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3084,7 +3174,9 @@
 			"name": "Radiant Idol",
 			"source": "ERLW",
 			"page": 308,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -3222,6 +3314,9 @@
 				"B",
 				"R"
 			],
+			"damageTagsSpell": [
+				"P"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3245,7 +3340,9 @@
 			"isNamedCreature": true,
 			"source": "ERLW",
 			"page": 303,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "fiend",
 			"alignment": [
 				"N",
@@ -3436,6 +3533,12 @@
 			"damageTags": [
 				"O"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R",
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3450,7 +3553,7 @@
 		},
 		{
 			"name": "Sergeant",
-			"source": "WDH",
+			"source": "ERLW",
 			"page": 197,
 			"_copy": {
 				"name": "Guard",
@@ -3462,7 +3565,9 @@
 			"name": "Shifter",
 			"source": "ERLW",
 			"page": 319,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3551,7 +3656,9 @@
 			"isNamedCreature": true,
 			"source": "ERLW",
 			"page": 304,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",
@@ -3755,6 +3862,11 @@
 			"damageTags": [
 				"O"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3776,7 +3888,9 @@
 			"name": "Tarkanan Assassin",
 			"source": "ERLW",
 			"page": 320,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3794,7 +3908,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -3894,6 +4008,14 @@
 				"O",
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3910,7 +4032,9 @@
 			"isNamedCreature": true,
 			"source": "ERLW",
 			"page": 300,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4124,6 +4248,13 @@
 				"O",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"P",
+				"S",
+				"T"
+			],
 			"spellcastingTags": [
 				"CA"
 			],
@@ -4146,7 +4277,9 @@
 			],
 			"source": "ERLW",
 			"page": 307,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"L",
@@ -4287,7 +4420,9 @@
 			"name": "Undying Councilor",
 			"source": "ERLW",
 			"page": 311,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -4494,6 +4629,11 @@
 				"F",
 				"R"
 			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -4515,7 +4655,9 @@
 			"name": "Undying Soldier",
 			"source": "ERLW",
 			"page": 311,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -4640,7 +4782,9 @@
 			"name": "Valenar Hawk",
 			"source": "ERLW",
 			"page": 312,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fey",
 			"alignment": [
 				"N"
@@ -4716,7 +4860,9 @@
 			"name": "Valenar Hound",
 			"source": "ERLW",
 			"page": 312,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"N"
@@ -4800,7 +4946,9 @@
 			"name": "Valenar Steed",
 			"source": "ERLW",
 			"page": 313,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fey",
 			"alignment": [
 				"N"
@@ -4867,7 +5015,9 @@
 			"name": "Warforged Colossus",
 			"source": "ERLW",
 			"page": 314,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -5032,7 +5182,9 @@
 			"name": "Warforged Soldier",
 			"source": "ERLW",
 			"page": 320,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5136,7 +5288,9 @@
 			"name": "Warforged Titan",
 			"source": "ERLW",
 			"page": 315,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -5254,7 +5408,9 @@
 			"name": "Zakya Rakshasa",
 			"source": "ERLW",
 			"page": 309,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"alignment": [
 				"L",

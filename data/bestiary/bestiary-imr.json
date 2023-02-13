@@ -30,7 +30,9 @@
 			"isNpc": true,
 			"source": "IMR",
 			"page": 53,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -236,14 +238,17 @@
 			],
 			"damageTags": [
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Barbatos",
 			"isNpc": true,
 			"source": "IMR",
 			"page": 52,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -258,7 +263,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -364,6 +369,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"P"
+			],
 			"spellcastingTags": [
 				"CR"
 			],
@@ -379,7 +387,8 @@
 			],
 			"conditionInflictSpell": [
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Brain in Iron",
@@ -396,7 +405,9 @@
 					}
 				}
 			},
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -412,7 +423,8 @@
 			],
 			"speed": {
 				"walk": 20
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Dwarven Worker",
@@ -450,7 +462,8 @@
 			"damageTags": [
 				"B",
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Enhanced Medusa",
@@ -487,7 +500,7 @@
 					"name": "Petrifying Gaze",
 					"entries": [
 						"When a creature that can see the medusa's eyes starts its turn within 30 feet of the medusa, the medusa can force it to make a {@dc 14} Constitution saving throw if the medusa isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, a creature that fails the save begins to turn to metal, wood, or porcelain (the medusa's choice) and is {@condition restrained}. The {@condition restrained} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the  {@spell greater restoration} spell or other magic.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.",
+						"Unless {@quickref Surprise|PHB|3|0|surprised}, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.",
 						"If the medusa sees itself reflected on a polished surface within 30 feet of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze."
 					]
 				}
@@ -498,7 +511,8 @@
 			"conditionInflict": [
 				"petrified",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Grandfather Oak",
@@ -525,14 +539,17 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Lynx Creatlach",
 			"isNpc": true,
 			"source": "IMR",
 			"page": 54,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -571,7 +588,7 @@
 				"cha": "+7"
 			},
 			"senses": [
-				"darkvision 60ft."
+				"darkvision 60 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -675,6 +692,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -682,7 +700,9 @@
 			"isNpc": true,
 			"source": "IMR",
 			"page": 55,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -848,6 +868,10 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L"
+			],
 			"spellcastingTags": [
 				"CA"
 			],
@@ -861,7 +885,9 @@
 			"name": "Neo-Otyugh",
 			"source": "IMR",
 			"page": 75,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N"
@@ -1010,7 +1036,7 @@
 							{
 								"name": "Earth Walk",
 								"entries": [
-									"Seodra can move across difficult terrain made of earth or stone without expending extra movement."
+									"Seodra can move across {@quickref difficult terrain||3} made of earth or stone without expending extra movement."
 								]
 							},
 							{
@@ -1038,14 +1064,17 @@
 			"languageTags": [
 				"C",
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Sir Ursas",
 			"isNpc": true,
 			"source": "IMR",
 			"page": 56,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1174,6 +1203,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1194,7 +1224,8 @@
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Skeletal Owlbear",
@@ -1214,7 +1245,8 @@
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Skeletal Polar Bear",
@@ -1234,7 +1266,8 @@
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Skeletal Two-Headed Owlbear",
@@ -1254,7 +1287,8 @@
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Stolos",
@@ -1295,7 +1329,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Tarnhem",
@@ -1328,14 +1363,17 @@
 				"F",
 				"L",
 				"S"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Thessalar",
 			"isNpc": true,
 			"source": "IMR",
 			"page": 57,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1494,6 +1532,14 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"I",
+				"L",
+				"N",
+				"P"
+			],
 			"spellcastingTags": [
 				"CA"
 			],
@@ -1520,7 +1566,7 @@
 						"items": {
 							"name": "Acidic Spittle",
 							"entries": [
-								"{@atk rw} {@hit 4} to hit, range 30ft., one target. {@h}5 ({@damage 1d6 + 2}) acid damage."
+								"{@atk rw} {@hit 4} to hit, range 30 ft., one target. {@h}5 ({@damage 1d6 + 2}) acid damage."
 							]
 						}
 					}
@@ -1533,13 +1579,17 @@
 			"miscTags": [
 				"MW",
 				"RW"
-			]
+			],
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Thessalheart Construct",
 			"source": "IMR",
 			"page": 86,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -1621,7 +1671,9 @@
 			"name": "Thessalkraken",
 			"source": "IMR",
 			"page": 87,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -1700,7 +1752,7 @@
 				{
 					"name": "Freedom of Movement",
 					"entries": [
-						"The thessalkraken ignores difficult terrain, and magical effects can't reduce its speed or cause it to be {@condition restrained}. It can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
+						"The thessalkraken ignores {@quickref difficult terrain||3}, and magical effects can't reduce its speed or cause it to be {@condition restrained}. It can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
 					]
 				}
 			],
@@ -1798,6 +1850,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1824,15 +1877,21 @@
 				"I",
 				"X"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Two-Headed Crocodile",
 			"source": "IMR",
 			"page": 89,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1914,13 +1973,16 @@
 			"conditionInflict": [
 				"grappled",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Two-Headed Owlbear",
 			"source": "IMR",
 			"page": 90,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"

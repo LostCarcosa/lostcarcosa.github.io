@@ -17,12 +17,11 @@
 				"targetSchema": "1"
 			}
 		],
-		"optionalFeatureTypes": {
-		},
+		"optionalFeatureTypes": {},
 		"dateAdded": 1647935526,
 		"dateLastModified": 1647935526
 	},
-	"monster":[
+	"monster": [
 		{
 			"name": "Sapling",
 			"size": [
@@ -329,7 +328,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you can nimbly dodge out of the way of certain area effects, such as an ancient red dragon’s fiery breath or an ice storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+				"Beginning at 10th level, you can nimbly dodge out of the way of certain area effects, such as an ancient red dragon's fiery breath or an ice storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
 			]
 		},
 		{

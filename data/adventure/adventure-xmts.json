@@ -261,7 +261,7 @@
 												],
 												[
 													"6",
-													"The characters discover a treasure cache. All characters with a Treasure token card have a contest of Wisdom ({@skill Perception}), with the character with the highest check trading the token for a card from the {@table hidden plunder|XMtS|item deck}."
+													"The characters discover a treasure cache. All characters with a Treasure token card have a contest of Wisdom ({@skill Perception}), with the character with the highest check trading the token for a card from the {@area hidden plunder|031|x}."
 												]
 											]
 										},
@@ -284,7 +284,7 @@
 												],
 												[
 													"2",
-													"The characters discover a treasure cache. All characters with a Treasure token card have a contest of Wisdom ({@skill Perception}), with the character with the highest check trading the token for a card from the {@table hidden plunder|XMtS|item deck}."
+													"The characters discover a treasure cache. All characters with a Treasure token card have a contest of Wisdom ({@skill Perception}), with the character with the highest check trading the token for a card from the {@area hidden plunder|031|x}."
 												],
 												[
 													"3",
@@ -365,7 +365,7 @@
 							],
 							"id": "01d"
 						},
-						"The area around the waterfall spring is covered in thick foliage and tangles of vines, making it difficult terrain. Because there is no natural path through this region, the party's navigator must succeed on a DC 15 Wisdom ({@skill Survival}) check to find the way through to the next region. If the party is moving at a slow pace, the navigator gains a +5 bonus to the check, while a fast pace imposes a \u22125 penalty. The party's navigator can repeat the check after the party spends {@dice 1d6} hours trying to get back on course.",
+						"The area around the waterfall spring is covered in thick foliage and tangles of vines, making it {@quickref difficult terrain||3}. Because there is no natural path through this region, the party's navigator must succeed on a DC 15 Wisdom ({@skill Survival}) check to find the way through to the next region. If the party is moving at a slow pace, the navigator gains a +5 bonus to the check, while a fast pace imposes a \u22125 penalty. The party's navigator can repeat the check after the party spends {@dice 1d6} hours trying to get back on course.",
 						{
 							"type": "entries",
 							"entries": [
@@ -467,7 +467,7 @@
 												],
 												[
 													"4",
-													"The characters discover a treasure cache. All characters with a Treasure token card have a contest of Wisdom ({@skill Perception}), with the character with the highest check trading the token for a card from the {@table hidden plunder|XMtS|item deck}."
+													"The characters discover a treasure cache. All characters with a Treasure token card have a contest of Wisdom ({@skill Perception}), with the character with the highest check trading the token for a card from the {@area hidden plunder|031|x}."
 												],
 												[
 													"5",

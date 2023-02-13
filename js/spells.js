@@ -51,8 +51,18 @@ class SpellsSublistManager extends SublistManager {
 	}
 }
 
+class SpellsPageSettingsManager extends ListPageSettingsManager {
+	_getSettings () {
+		return {
+			...RenderSpells.SETTINGS,
+		};
+	}
+}
+
 class SpellsPage extends ListPageMultiSource {
 	constructor () {
+		const pFnGetFluff = Renderer.spell.pGetFluff.bind(Renderer.spell);
+
 		super({
 			pageFilter: new PageFilterSpells(),
 
@@ -62,6 +72,8 @@ class SpellsPage extends ListPageMultiSource {
 			},
 
 			dataProps: ["spell"],
+
+			pFnGetFluff,
 
 			bookViewOptions: {
 				$btnOpen: $(`#btn-spellbook`),
@@ -108,26 +120,36 @@ class SpellsPage extends ListPageMultiSource {
 			},
 
 			isMarkdownPopout: true,
-			bindOtherButtonsOptions: {
-				upload: {
-					pFnPreLoad: (...args) => this.pPreloadSublistSources(...args),
-				},
-				sendToBrew: {
-					mode: "spellBuilder",
-					fnGetMeta: () => ({
-						page: UrlUtil.getCurrentPage(),
-						source: Hist.getHashSource(),
-						hash: Hist.getHashParts()[0],
-					}),
-				},
-			},
 
-			jsonDir: "data/spells/",
+			propLoader: "spell",
+
+			listSyntax: new ListSyntaxSpells({fnGetDataList: () => this._dataList, pFnGetFluff}),
+
+			compSettings: new SpellsPageSettingsManager(),
 		});
 
 		this._lastFilterValues = null;
 		this._subclassLookup = {};
 		this._bookViewLastOrder = null;
+	}
+
+	get _bindOtherButtonsOptions () {
+		return {
+			upload: {
+				pFnPreLoad: (...args) => this.pPreloadSublistSources(...args),
+			},
+			sendToBrew: {
+				mode: "spellBuilder",
+				fnGetMeta: () => ({
+					page: UrlUtil.getCurrentPage(),
+					source: Hist.getHashSource(),
+					hash: Hist.getHashParts()[0],
+				}),
+			},
+			other: [
+				this._bindOtherButtonsOptions_openAsSinglePage({slugPage: "spells", fnGetHash: () => Hist.getHashParts()[0]}),
+			].filter(Boolean),
+		};
 	}
 
 	_bookView_popTblGetNumShown ({$wrpContent, $dispName, $wrpControls}) {
@@ -244,7 +266,7 @@ class SpellsPage extends ListPageMultiSource {
 						e_({
 							tag: "span",
 							clazz: `col-1-7 text-center ${Parser.sourceJsonToColor(spell.source)} pr-0`,
-							style: BrewUtil2.sourceJsonToStylePart(spell.source),
+							style: Parser.sourceJsonToStylePart(spell.source),
 							title: `${Parser.sourceJsonToFull(spell.source)}${Renderer.utils.getSourceSubText(spell)}`,
 							text: source,
 						}),
@@ -276,58 +298,10 @@ class SpellsPage extends ListPageMultiSource {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._pageFilter.filterBox.getValues();
-		this._list.filter(li => {
-			const s = this._dataList[li.ix];
-			return this._pageFilter.toDisplay(f, s);
-		});
-		this._onFilterChangeMulti(this._dataList, f);
-	}
+	_tabTitleStats = "Spell";
 
-	doLoadHash (id) {
-		this._lastRender.entity = this._dataList[id];
-		Renderer.get().setFirstSection(true);
-		this._$pgContent.empty();
-		const spell = this._dataList[id];
-
-		const buildStatsTab = () => {
-			this._$pgContent.append(RenderSpells.$getRenderedSpell(spell, this._subclassLookup));
-		};
-
-		const buildFluffTab = (isImageTab) => {
-			return Renderer.utils.pBuildFluffTab({
-				isImageTab,
-				$content: this._$pgContent,
-				entity: spell,
-				pFnGetFluff: Renderer.spell.pGetFluff,
-			});
-		};
-
-		const tabMetas = [
-			new Renderer.utils.TabButton({
-				label: "Spell",
-				fnPopulate: buildStatsTab,
-				isVisible: true,
-			}),
-			new Renderer.utils.TabButton({
-				label: "Info",
-				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(spell, "spellFluff"),
-			}),
-			new Renderer.utils.TabButton({
-				label: "Images",
-				fnPopulate: buildFluffTab.bind(null, true),
-				isVisible: Renderer.utils.hasFluffImages(spell, "spellFluff"),
-			}),
-		];
-
-		Renderer.utils.bindTabButtons({
-			tabButtons: tabMetas.filter(it => it.isVisible),
-			tabLabelReference: tabMetas.map(it => it.label),
-		});
-
-		this._updateSelected();
+	_renderStats_doBuildStatsTab ({ent}) {
+		this._$pgContent.empty().append(RenderSpells.$getRenderedSpell(ent, this._subclassLookup, {settings: this._compSettings.getValues()}));
 	}
 
 	async pDoLoadSubHash (sub) {
@@ -341,15 +315,8 @@ class SpellsPage extends ListPageMultiSource {
 	}
 
 	async _pOnLoad_pPreDataAdd () {
-		const homebrew = await BrewUtil2.pGetBrewProcessed();
-		Renderer.spell.populateHomebrewLookup(homebrew);
-	}
-
-	_getSearchCache (entity) {
-		if (this.constructor._INDEXABLE_PROPS.every(it => !entity[it])) return "";
-		const ptrOut = {_: ""};
-		this.constructor._INDEXABLE_PROPS.forEach(it => this._getSearchCache_handleEntryProp(entity, it, ptrOut));
-		return ptrOut._;
+		Renderer.spell.populatePrereleaseLookup(await PrereleaseUtil.pGetBrewProcessed());
+		Renderer.spell.populateBrewLookup(await BrewUtil2.pGetBrewProcessed());
 	}
 
 	async pPreloadSublistSources (json) {
@@ -375,10 +342,6 @@ class SpellsPage extends ListPageMultiSource {
 	}
 }
 SpellsPage._BOOK_VIEW_MODE_K = "bookViewMode";
-SpellsPage._INDEXABLE_PROPS = [
-	"entries",
-	"entriesHigherLevel",
-];
 
 const spellsPage = new SpellsPage();
 spellsPage.sublistManager = new SpellsSublistManager();

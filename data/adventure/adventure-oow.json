@@ -109,7 +109,10 @@
 							"title": "Map 1.1 Campaign Area",
 							"width": 2625,
 							"height": 1725,
-							"imageType": "map"
+							"imageType": "map",
+							"grid": {
+								"type": "none"
+							}
 						},
 						{
 							"type": "entries",
@@ -496,19 +499,7 @@
 									"entries": [
 										"If the characters enter this shop at any point during their time around the warehouse, they find the short, rotund proprietor standing behind a rough-hewn counter. Jolly (NE male half-orc {@creature thug}) maintains this business as a front for the Xanathar Guild. The number of lamps in the so-called Lamp Emporium totals exactly six. From the looks of those wares, it's not clear that any of the lamps actually work.",
 										"Stolen coins, valuables, and other black-market goods are stored in a secret room in the back until they are ready to be sold. Guild members use the shop's other back rooms to hide from the authorities or plan jobs. At the moment, the only person in the building other than Jolly is a Xanathar Guild agent who goes by the moniker Feather (NE female half-elf {@creature assassin}).",
-										"Feather is lying low after a failed assassination attempt in the South Ward the previous night (see the \"{@area Life in Waterdeep|00b|x}\" sidebar earlier in this episode), and pretends to be Jolly's assistant. A successful DC 15 Wisdom ({@skill Medicine} or {@skill Perception}) check allows a character to notice that Feather moves stiffly, as if her shoulder is badly injured. Before diving headlong into the events of \"The Orrery of the Wanderer\" campaign, you might wish to spend some time having the characters experience and explore the city of Waterdeep. The adventure {@adventure Waterdeep: Dragon Heist|WDH} and the \"Volo's Waterdeep Enchiridion\" section of that book (available at the DMs Guild as a separate download\u2014{@link www.dmsguild.com|http://www.dmsguild.com}) provide a ton of information about the City of Splendors.",
-										"Additionally, you can make use of the following rumors that characters might hear on the streets or in the taverns of that great metropolis. Some of these rumors tie to the adventure, while the truth of others depends on your wishes for the campaign. Either way, feel free to use these rumors as inspiration for new encounters or side treks.",
-										"Omin Dran is one of the fabled Masked Lords of Waterdeep. His presence on the council is the impetus for beneficial changes sweeping across the city.",
-										"Omin Dran is definitely not one of the Masked Lords of Waterdeep. The addition to the council of such a power-hungry and ruthless individual would spell the end of the rule of law in the City of Splendors.",
-										"The earthquake that hit the city two days ago wasn't natural. Strong magic unleashed underground caused it\u2014maybe even magic from Undermountain.",
-										"Acquisitions Incorporated is making a play for control in the city, and the other power groups of Waterdeep are not going to let that happen without a fight. The recent hostilities between groups such as the Xanathar Guild and the Zhentarim have been made even worse by the increasing sway of the company.",
-										"A noble merchant in the South Ward survived an assassination attempt last night. A female half-elf was seen fleeing the scene, bearing a deep cut on her shoulder from a bodyguard's blade. A 50 gp bounty has been offered for bringing her in alive for questioning.",
-										"A killer is stalking the streets of the North Ward, murdering people in broad daylight. The victims' feet are chopped off, as if by a powerful blow with a sharp blade. Then they're decapitated. The heads are left behind, but the feet are taken!",
-										"The famous Waterdavian actor Tystanya Creed has not been seen since leaving the theatre after her last performance several days ago. Her adoring fans fear she is dead.",
-										"Towering forms in black cloaks have been seen around the City of the Dead at night. A number of witnesses swear that those cloaks and their deep hoods concealed skeletal forms.",
-										"A green dragon was spotted flying over the Sea of Swords just west of the city. The Blackstaff and her team are on high alert in case it ventures closer or harasses ships in the area.",
-										"One of the great walking statues of Waterdeep has been reported to be crying over the last three days. No one is sure about the cause of this watery discharge from the eyes, but some say it means the destruction of the City of Splendors is imminent! Others are certain it's a sign of great fortune on the horizon. Still others say it's just the humidity.",
-										"Members of the Guild of Chandlers and Lamplighters are going on strike, leaving the streets of Waterdeep dark and dangerous around the next new moon. The thieves and assassins of the city are already getting prepared for a night of carnage.",
+										"Feather is lying low after a failed assassination attempt in the South Ward the previous night (see the \"{@area Life in Waterdeep|00b|x}\" sidebar earlier in this episode), and pretends to be Jolly's assistant. A successful DC 15 Wisdom ({@skill Medicine} or {@skill Perception}) check allows a character to notice that Feather moves stiffly, as if her shoulder is badly injured.",
 										"Jolly does his best to get the adventurers out of his shop as quickly as possible. If asked about the earthquake or the fissure beneath the warehouse next door, he says only that he heard the ground shake and felt the warehouse cave in. If the adventurers threaten force and succeed on a DC 10 Charisma ({@skill Intimidation}) check, they can convince Jolly to give up the one useful piece of information he knows. The tunnels beneath the warehouse were used by thieves at one time, but they were abandoned because of unknown dangers that came up from the darkness below. Jolly has no idea what those dangers might be."
 									]
 								}
@@ -556,7 +547,104 @@
 									"width": 3000,
 									"height": 2000,
 									"imageType": "map",
-									"id": "328"
+									"grid": {
+										"type": "square",
+										"size": 92,
+										"offsetX": -34,
+										"offsetY": -14,
+										"scale": 2
+									},
+									"id": "328",
+									"mapRegions": [
+										{
+											"area": "02a",
+											"points": [
+												[
+													321,
+													156
+												],
+												[
+													321,
+													276
+												],
+												[
+													910,
+													276
+												],
+												[
+													910,
+													156
+												]
+											]
+										},
+										{
+											"area": "02e",
+											"points": [
+												[
+													930,
+													696
+												],
+												[
+													930,
+													829
+												],
+												[
+													1555,
+													829
+												],
+												[
+													1555,
+													696
+												]
+											]
+										},
+										{
+											"area": "049",
+											"points": [
+												[
+													1970,
+													1040
+												],
+												[
+													1970,
+													1178
+												],
+												[
+													2656,
+													1178
+												],
+												[
+													2656,
+													1040
+												]
+											]
+										},
+										{
+											"area": "03a",
+											"points": [
+												[
+													1706,
+													131
+												],
+												[
+													1706,
+													274
+												],
+												[
+													2325,
+													274
+												],
+												[
+													2325,
+													131
+												]
+											]
+										}
+									],
+									"hrefThumbnail": {
+										"type": "internal",
+										"path": "adventure/OoW/thumbnail/044-map-1-2-dm.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -564,10 +652,17 @@
 										"type": "internal",
 										"path": "adventure/OoW/045-map-1-2-pc.jpg"
 									},
-									"title": "(Player Version)",
+									"title": "Player Version",
 									"width": 3000,
 									"height": 2000,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 91,
+										"offsetX": -8,
+										"offsetY": 7,
+										"scale": 2
+									},
 									"mapParent": {
 										"id": "328"
 									}
@@ -592,14 +687,14 @@
 												"The sinkhole fissure ends at a level floor of worked stone. Dust, debris, rocks, and pieces of wood that once made up the walls and ceiling of the warehouse above are spread across the floor. An underground passage is blocked to the south, but it continues into darkness to the north. Two pairs of human-sized boot prints, easily spotted in the dust, head northward. Smaller fissures, holes, and cracks riddle the passage, though even a halfling would find the largest of them a tight fit."
 											]
 										},
-										"The floor of the corridor is difficult terrain for 20 feet around the point where the characters descend.",
+										"The floor of the corridor is {@quickref difficult terrain||3} for 20 feet around the point where the characters descend.",
 										{
 											"type": "entries",
 											"name": "Creatures",
 											"page": 88,
 											"id": "02c",
 											"entries": [
-												"After the first character has been at the bottom of the fissure for 2 rounds, a group of six {@creature Giant Rat||giant rats} notices the potential feast. Any character at the bottom of the fissure who succeeds on a DC 12 Wisdom ({@skill Perception}) check can hear the approaching rats, and isn't surprised when three rats emerge from cracks in the walls and attack. Three more rats arrive and attack 1 round later. All the rats are dyed a bright green from trap C in {@area area 3|03a|x}."
+												"After the first character has been at the bottom of the fissure for 2 rounds, a group of six {@creature Giant Rat||giant rats} notices the potential feast. Any character at the bottom of the fissure who succeeds on a DC 12 Wisdom ({@skill Perception}) check can hear the approaching rats, and isn't {@quickref Surprise|PHB|3|0|surprised} when three rats emerge from cracks in the walls and attack. Three more rats arrive and attack 1 round later. All the rats are dyed a bright green from trap C in {@area area 3|03a|x}."
 											]
 										},
 										{
@@ -893,7 +988,7 @@
 											"page": 91,
 											"id": "04b",
 											"entries": [
-												"The {@creature giant spider} hides in a dust-filled depression in the floor. A successful DC 17 Wisdom ({@skill Perception}) check spots the arachnid before it springs from its hiding place to attack. Any characters who are focused on the webs above them have disadvantage on the check. Those who fail the check are surprised.",
+												"The {@creature giant spider} hides in a dust-filled depression in the floor. A successful DC 17 Wisdom ({@skill Perception}) check spots the arachnid before it springs from its hiding place to attack. Any characters who are focused on the webs above them have disadvantage on the check. Those who fail the check are {@quickref Surprise|PHB|3|0|surprised}.",
 												"The giant spider initially favors its web attack, hoping to restrain a couple of characters before it starts biting. If reduced to 10 hit points or fewer, the spider retreats into a nearby narrow fissure. However, it attacks again when the characters come back through this area."
 											]
 										},
@@ -913,11 +1008,137 @@
 																"type": "internal",
 																"path": "adventure/OoW/047-map-1-3-dm.jpg"
 															},
-															"title": "Map 1.3: Areas 6-10",
+															"title": "Map 1.3: Areas 6\u201310",
 															"width": 3000,
 															"height": 2000,
 															"imageType": "map",
-															"id": "329"
+															"grid": {
+																"type": "square",
+																"size": 78,
+																"offsetX": -5,
+																"offsetY": 30,
+																"scale": 2
+															},
+															"id": "329",
+															"mapRegions": [
+																{
+																	"area": "04d",
+																	"points": [
+																		[
+																			216,
+																			286
+																		],
+																		[
+																			216,
+																			421
+																		],
+																		[
+																			917,
+																			421
+																		],
+																		[
+																			917,
+																			286
+																		]
+																	]
+																},
+																{
+																	"area": "054",
+																	"points": [
+																		[
+																			1149,
+																			157
+																		],
+																		[
+																			1149,
+																			304
+																		],
+																		[
+																			1818,
+																			304
+																		],
+																		[
+																			1818,
+																			157
+																		]
+																	]
+																},
+																{
+																	"area": "059",
+																	"points": [
+																		[
+																			1947,
+																			131
+																		],
+																		[
+																			1947,
+																			270
+																		],
+																		[
+																			2702,
+																			270
+																		],
+																		[
+																			2702,
+																			131
+																		]
+																	]
+																},
+																{
+																	"area": "05d",
+																	"points": [
+																		[
+																			2099,
+																			773
+																		],
+																		[
+																			2099,
+																			918
+																		],
+																		[
+																			2811,
+																			918
+																		],
+																		[
+																			2811,
+																			773
+																		]
+																	]
+																},
+																{
+																	"area": "063",
+																	"points": [
+																		[
+																			461,
+																			1571
+																		],
+																		[
+																			871,
+																			1571
+																		],
+																		[
+																			871,
+																			1679
+																		],
+																		[
+																			1526,
+																			1679
+																		],
+																		[
+																			1526,
+																			1818
+																		],
+																		[
+																			461,
+																			1818
+																		]
+																	]
+																}
+															],
+															"hrefThumbnail": {
+																"type": "internal",
+																"path": "adventure/OoW/thumbnail/047-map-1-3-dm.webp"
+															}
 														},
 														{
 															"type": "image",
@@ -925,10 +1146,17 @@
 																"type": "internal",
 																"path": "adventure/OoW/048-map-1-3-pc.jpg"
 															},
-															"title": "(Player Version)",
+															"title": "Player Version",
 															"width": 3000,
 															"height": 2000,
 															"imageType": "mapPlayer",
+															"grid": {
+																"type": "square",
+																"size": 78,
+																"offsetX": -5,
+																"offsetY": 28,
+																"scale": 2
+															},
 															"mapParent": {
 																"id": "329"
 															}
@@ -1064,19 +1292,7 @@
 											"page": 93,
 											"id": "058",
 											"entries": [
-												"A murderer in Waterdeep has been killing people, taking their feet, and placing them on an altar hidden in the city as a sacrifice to That-Which-Endures. (A hint of the killings is noted in the \"{@area Life in Waterdeep|00b|x}\" sidebar earlier in this episode.) Any feet placed on the altar teleport to this room. By placing clues on the feet that lead to the murderer, you can create a side trek mystery for the characters. You can also have two more feet suddenly appear in midair near the ceiling, then drop into the room as the adventurers fight. Before diving headlong into the events of \"The Orrery of the Wanderer\" campaign, you might wish to spend some time having the characters experience and explore the city of Waterdeep. The adventure {@adventure Waterdeep: Dragon Heist|WDH} and the \"Volo's Waterdeep Enchiridion\" section of that book (available at the DMs Guild as a separate download\u2014{@link www.dmsguild.com|http://www.dmsguild.com}) provide a ton of information about the City of Splendors.",
-												"Additionally, you can make use of the following rumors that characters might hear on the streets or in the taverns of that great metropolis. Some of these rumors tie to the adventure, while the truth of others depends on your wishes for the campaign. Either way, feel free to use these rumors as inspiration for new encounters or side treks.",
-												"Omin Dran is one of the fabled Masked Lords of Waterdeep. His presence on the council is the impetus for beneficial changes sweeping across the city.",
-												"Omin Dran is definitely not one of the Masked Lords of Waterdeep. The addition to the council of such a power-hungry and ruthless individual would spell the end of the rule of law in the City of Splendors.",
-												"The earthquake that hit the city two days ago wasn't natural. Strong magic unleashed underground caused it\u2014maybe even magic from Undermountain.",
-												"Acquisitions Incorporated is making a play for control in the city, and the other power groups of Waterdeep are not going to let that happen without a fight. The recent hostilities between groups such as the Xanathar Guild and the Zhentarim have been made even worse by the increasing sway of the company.",
-												"A noble merchant in the South Ward survived an assassination attempt last night. A female half-elf was seen fleeing the scene, bearing a deep cut on her shoulder from a bodyguard's blade. A 50 gp bounty has been offered for bringing her in alive for questioning.",
-												"A killer is stalking the streets of the North Ward, murdering people in broad daylight. The victims' feet are chopped off, as if by a powerful blow with a sharp blade. Then they're decapitated. The heads are left behind, but the feet are taken!",
-												"The famous Waterdavian actor Tystanya Creed has not been seen since leaving the theatre after her last performance several days ago. Her adoring fans fear she is dead.",
-												"Towering forms in black cloaks have been seen around the City of the Dead at night. A number of witnesses swear that those cloaks and their deep hoods concealed skeletal forms.",
-												"A green dragon was spotted flying over the Sea of Swords just west of the city. The Blackstaff and her team are on high alert in case it ventures closer or harasses ships in the area.",
-												"One of the great walking statues of Waterdeep has been reported to be crying over the last three days. No one is sure about the cause of this watery discharge from the eyes, but some say it means the destruction of the City of Splendors is imminent! Others are certain it's a sign of great fortune on the horizon. Still others say it's just the humidity.",
-												"Members of the Guild of Chandlers and Lamplighters are going on strike, leaving the streets of Waterdeep dark and dangerous around the next new moon. The thieves and assassins of the city are already getting prepared for a night of carnage."
+												"A murderer in Waterdeep has been killing people, taking their feet, and placing them on an altar hidden in the city as a sacrifice to That-Which-Endures. (A hint of the killings is noted in the \"{@area Life in Waterdeep|00b|x}\" sidebar earlier in this episode.) Any feet placed on the altar teleport to this room. By placing clues on the feet that lead to the murderer, you can create a side trek mystery for the characters. You can also have two more feet suddenly appear in midair near the ceiling, then drop into the room as the adventurers fight."
 											]
 										}
 									]
@@ -1121,7 +1337,7 @@
 											"page": 94,
 											"id": "05c",
 											"entries": [
-												"A massive creature on the demiplane of filth has reached a long tentacle through the weak planar barrier here. The creature's {@sense tremorsense} allows it to detect the presence of creatures in this room, at which point it attacks. Each character must succeed on a DC 10 Wisdom ({@skill Perception}) check to notice ripples on the cesspool before the tentacle emerges. If the characters know the room's story or sensed the magic here, they have advantage on the check. The tentacle surprises anyone who fails the check.",
+												"A massive creature on the demiplane of filth has reached a long tentacle through the weak planar barrier here. The creature's {@sense tremorsense|MM} allows it to detect the presence of creatures in this room, at which point it attacks. Each character must succeed on a DC 10 Wisdom ({@skill Perception}) check to notice ripples on the cesspool before the tentacle emerges. If the characters know the room's story or sensed the magic here, they have advantage on the check. The tentacle surprises anyone who fails the check.",
 												"The {@creature enormous tentacle|OoW} uses the stat block of a {@creature giant constrictor snake} with these changes:",
 												{
 													"type": "list",
@@ -1142,19 +1358,6 @@
 									"id": "05d",
 									"entries": [
 										"A wyrmling brass dragon wound up in this cavern after a green dragon chased it away from its territory. (This is the green dragon mentioned in the \"{@area Life in Waterdeep|00b|x}\" sidebar.) The wyrmling, which calls itself Dabshabah, entered a sea cave near Waterdeep that contained a passage leading to this complex of tunnels and caverns. She was hiding when the earthquake struck, and was trapped beneath fallen rubble.",
-										"Before diving headlong into the events of \"The Orrery of the Wanderer\" campaign, you might wish to spend some time having the characters experience and explore the city of Waterdeep. The adventure {@adventure Waterdeep: Dragon Heist|WDH} and the \"Volo's Waterdeep Enchiridion\" section of that book (available at the DMs Guild as a separate download\u2014{@link www.dmsguild.com|http://www.dmsguild.com}) provide a ton of information about the City of Splendors.",
-										"Additionally, you can make use of the following rumors that characters might hear on the streets or in the taverns of that great metropolis. Some of these rumors tie to the adventure, while the truth of others depends on your wishes for the campaign. Either way, feel free to use these rumors as inspiration for new encounters or side treks.",
-										"Omin Dran is one of the fabled Masked Lords of Waterdeep. His presence on the council is the impetus for beneficial changes sweeping across the city.",
-										"Omin Dran is definitely not one of the Masked Lords of Waterdeep. The addition to the council of such a power-hungry and ruthless individual would spell the end of the rule of law in the City of Splendors.",
-										"The earthquake that hit the city two days ago wasn't natural. Strong magic unleashed underground caused it\u2014maybe even magic from Undermountain.",
-										"Acquisitions Incorporated is making a play for control in the city, and the other power groups of Waterdeep are not going to let that happen without a fight. The recent hostilities between groups such as the Xanathar Guild and the Zhentarim have been made even worse by the increasing sway of the company.",
-										"A noble merchant in the South Ward survived an assassination attempt last night. A female half-elf was seen fleeing the scene, bearing a deep cut on her shoulder from a bodyguard's blade. A 50 gp bounty has been offered for bringing her in alive for questioning.",
-										"A killer is stalking the streets of the North Ward, murdering people in broad daylight. The victims' feet are chopped off, as if by a powerful blow with a sharp blade. Then they're decapitated. The heads are left behind, but the feet are taken!",
-										"The famous Waterdavian actor Tystanya Creed has not been seen since leaving the theatre after her last performance several days ago. Her adoring fans fear she is dead.",
-										"Towering forms in black cloaks have been seen around the City of the Dead at night. A number of witnesses swear that those cloaks and their deep hoods concealed skeletal forms.",
-										"A green dragon was spotted flying over the Sea of Swords just west of the city. The Blackstaff and her team are on high alert in case it ventures closer or harasses ships in the area.",
-										"One of the great walking statues of Waterdeep has been reported to be crying over the last three days. No one is sure about the cause of this watery discharge from the eyes, but some say it means the destruction of the City of Splendors is imminent! Others are certain it's a sign of great fortune on the horizon. Still others say it's just the humidity.",
-										"Members of the Guild of Chandlers and Lamplighters are going on strike, leaving the streets of Waterdeep dark and dangerous around the next new moon. The thieves and assassins of the city are already getting prepared for a night of carnage.",
 										"When the characters enter the chamber from the south, Dabshabah is fending off a pair of darkmantles, so they can hear the fight before they see it.",
 										{
 											"type": "insetReadaloud",
@@ -1524,25 +1727,6 @@
 													"Kofutacti, a {@creature young green dragon}, is touring the Sword Coast looking for trouble (see the \"{@area Life in Waterdeep|00b|x}\" sidebar in episode 1). Thankfully for the characters, the dragon is a cowardly sort that prefers intimidation to combat, and which backs away from most fights. Kofutacti is the dragon who hunted Dabshabah in episode 1, which could be interesting if the brass wyrmling is with the party, or if the green dragon catches her scent on one of the characters if they've been in recent contact with her."
 												]
 											]
-										},
-										{
-											"type": "inset",
-											"id": "07b",
-											"entries": [
-												"Before diving headlong into the events of \"The Orrery of the Wanderer\" campaign, you might wish to spend some time having the characters experience and explore the city of Waterdeep. The adventure {@adventure Waterdeep: Dragon Heist|WDH} and the \"Volo's Waterdeep Enchiridion\" section of that book (available at the DMs Guild as a separate download\u2014{@link www.dmsguild.com|http://www.dmsguild.com}) provide a ton of information about the City of Splendors.",
-												"Additionally, you can make use of the following rumors that characters might hear on the streets or in the taverns of that great metropolis. Some of these rumors tie to the adventure, while the truth of others depends on your wishes for the campaign. Either way, feel free to use these rumors as inspiration for new encounters or side treks.",
-												"Omin Dran is one of the fabled Masked Lords of Waterdeep. His presence on the council is the impetus for beneficial changes sweeping across the city.",
-												"Omin Dran is definitely not one of the Masked Lords of Waterdeep. The addition to the council of such a power-hungry and ruthless individual would spell the end of the rule of law in the City of Splendors.",
-												"The earthquake that hit the city two days ago wasn't natural. Strong magic unleashed underground caused it\u2014maybe even magic from Undermountain.",
-												"Acquisitions Incorporated is making a play for control in the city, and the other power groups of Waterdeep are not going to let that happen without a fight. The recent hostilities between groups such as the Xanathar Guild and the Zhentarim have been made even worse by the increasing sway of the company.",
-												"A noble merchant in the South Ward survived an assassination attempt last night. A female half-elf was seen fleeing the scene, bearing a deep cut on her shoulder from a bodyguard's blade. A 50 gp bounty has been offered for bringing her in alive for questioning.",
-												"A killer is stalking the streets of the North Ward, murdering people in broad daylight. The victims' feet are chopped off, as if by a powerful blow with a sharp blade. Then they're decapitated. The heads are left behind, but the feet are taken!",
-												"The famous Waterdavian actor Tystanya Creed has not been seen since leaving the theatre after her last performance several days ago. Her adoring fans fear she is dead.",
-												"Towering forms in black cloaks have been seen around the City of the Dead at night. A number of witnesses swear that those cloaks and their deep hoods concealed skeletal forms.",
-												"A green dragon was spotted flying over the Sea of Swords just west of the city. The Blackstaff and her team are on high alert in case it ventures closer or harasses ships in the area.",
-												"One of the great walking statues of Waterdeep has been reported to be crying over the last three days. No one is sure about the cause of this watery discharge from the eyes, but some say it means the destruction of the City of Splendors is imminent! Others are certain it's a sign of great fortune on the horizon. Still others say it's just the humidity.",
-												"Members of the Guild of Chandlers and Lamplighters are going on strike, leaving the streets of Waterdeep dark and dangerous around the next new moon. The thieves and assassins of the city are already getting prepared for a night of carnage."
-											]
 										}
 									]
 								},
@@ -1690,7 +1874,7 @@
 											"page": 101,
 											"id": "08a",
 											"entries": [
-												"The two dead horses are {@creature Warhorse Skeleton||warhorse skeletons} whose remaining flesh sloughs off as they fight. When any character comes within 20 feet of the fallen horses, these undead lurch to their feet and attack. When this happens, each character must succeed on a DC 15 Wisdom ({@skill Perception}) check or be surprised."
+												"The two dead horses are {@creature Warhorse Skeleton||warhorse skeletons} whose remaining flesh sloughs off as they fight. When any character comes within 20 feet of the fallen horses, these undead lurch to their feet and attack. When this happens, each character must succeed on a DC 15 Wisdom ({@skill Perception}) check or be {@quickref Surprise|PHB|3|0|surprised}."
 											]
 										},
 										{
@@ -1797,7 +1981,313 @@
 													"title": "Map 2.1 The Town of Phandalin",
 													"width": 2625,
 													"height": 1725,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "none",
+														"size": 107,
+														"distance": 50
+													},
+													"mapRegions": [
+														{
+															"area": "0bd",
+															"points": [
+																[
+																	1224,
+																	808
+																],
+																[
+																	1224,
+																	962
+																],
+																[
+																	1386,
+																	962
+																],
+																[
+																	1386,
+																	808
+																]
+															]
+														},
+														{
+															"area": "0bc",
+															"points": [
+																[
+																	1411,
+																	243
+																],
+																[
+																	1411,
+																	357
+																],
+																[
+																	1685,
+																	357
+																],
+																[
+																	1685,
+																	243
+																]
+															]
+														},
+														{
+															"area": "0be",
+															"points": [
+																[
+																	2150,
+																	531
+																],
+																[
+																	2150,
+																	598
+																],
+																[
+																	2485,
+																	598
+																],
+																[
+																	2485,
+																	531
+																]
+															]
+														},
+														{
+															"area": "09e",
+															"points": [
+																[
+																	1382,
+																	1195
+																],
+																[
+																	1382,
+																	1366
+																],
+																[
+																	1562,
+																	1366
+																],
+																[
+																	1562,
+																	1195
+																]
+															]
+														},
+														{
+															"area": "0b3",
+															"points": [
+																[
+																	792,
+																	1437
+																],
+																[
+																	792,
+																	1558
+																],
+																[
+																	1147,
+																	1558
+																],
+																[
+																	1147,
+																	1437
+																]
+															]
+														},
+														{
+															"area": "0a4",
+															"points": [
+																[
+																	1118,
+																	1370
+																],
+																[
+																	1118,
+																	1429
+																],
+																[
+																	1411,
+																	1429
+																],
+																[
+																	1411,
+																	1370
+																]
+															]
+														},
+														{
+															"area": "0b2",
+															"points": [
+																[
+																	560,
+																	954
+																],
+																[
+																	560,
+																	1064
+																],
+																[
+																	776,
+																	1064
+																],
+																[
+																	776,
+																	954
+																]
+															]
+														},
+														{
+															"area": "0b0",
+															"points": [
+																[
+																	278,
+																	400
+																],
+																[
+																	278,
+																	502
+																],
+																[
+																	474,
+																	502
+																],
+																[
+																	474,
+																	400
+																]
+															]
+														},
+														{
+															"area": "0a2",
+															"points": [
+																[
+																	334,
+																	690
+																],
+																[
+																	334,
+																	786
+																],
+																[
+																	506,
+																	786
+																],
+																[
+																	506,
+																	690
+																]
+															]
+														},
+														{
+															"area": "0a9",
+															"points": [
+																[
+																	733,
+																	157
+																],
+																[
+																	733,
+																	328
+																],
+																[
+																	909,
+																	328
+																],
+																[
+																	909,
+																	157
+																]
+															]
+														},
+														{
+															"area": "0b4",
+															"points": [
+																[
+																	915,
+																	251
+																],
+																[
+																	915,
+																	360
+																],
+																[
+																	1077,
+																	360
+																],
+																[
+																	1077,
+																	251
+																]
+															]
+														},
+														{
+															"area": "0b7",
+															"points": [
+																[
+																	1098,
+																	398
+																],
+																[
+																	1098,
+																	483
+																],
+																[
+																	1267,
+																	483
+																],
+																[
+																	1267,
+																	398
+																]
+															]
+														},
+														{
+															"area": "0b9",
+															"points": [
+																[
+																	1318,
+																	613
+																],
+																[
+																	1318,
+																	682
+																],
+																[
+																	1587,
+																	682
+																],
+																[
+																	1587,
+																	613
+																]
+															]
+														},
+														{
+															"area": "0b5",
+															"points": [
+																[
+																	1686,
+																	560
+																],
+																[
+																	1686,
+																	677
+																],
+																[
+																	1875,
+																	677
+																],
+																[
+																	1875,
+																	560
+																]
+															]
+														}
+													],
+													"hrefThumbnail": {
+														"type": "internal",
+														"path": "adventure/OoW/thumbnail/053-map-2-1-dm.webp"
+													},
+													"id": "32e"
 												}
 											]
 										}
@@ -2432,7 +2922,699 @@
 									"width": 2625,
 									"height": 1725,
 									"imageType": "map",
-									"id": "32a"
+									"grid": {
+										"type": "square",
+										"size": 80,
+										"offsetX": 34,
+										"offsetY": 8
+									},
+									"id": "32a",
+									"mapRegions": [
+										{
+											"area": "106",
+											"points": [
+												[
+													278,
+													251
+												],
+												[
+													278,
+													557
+												],
+												[
+													587,
+													557
+												],
+												[
+													587,
+													251
+												]
+											]
+										},
+										{
+											"area": "101",
+											"points": [
+												[
+													277,
+													656
+												],
+												[
+													277,
+													1043
+												],
+												[
+													670,
+													1043
+												],
+												[
+													670,
+													656
+												]
+											]
+										},
+										{
+											"area": "10b",
+											"points": [
+												[
+													600,
+													251
+												],
+												[
+													600,
+													483
+												],
+												[
+													904,
+													483
+												],
+												[
+													904,
+													251
+												]
+											]
+										},
+										{
+											"area": "0f0",
+											"points": [
+												[
+													1000,
+													251
+												],
+												[
+													1384,
+													251
+												],
+												[
+													1384,
+													325
+												],
+												[
+													1310,
+													325
+												],
+												[
+													1310,
+													485
+												],
+												[
+													1234,
+													485
+												],
+												[
+													1229,
+													494
+												],
+												[
+													1200,
+													486
+												],
+												[
+													1150,
+													496
+												],
+												[
+													1126,
+													486
+												],
+												[
+													1109,
+													493
+												],
+												[
+													1077,
+													490
+												],
+												[
+													1070,
+													483
+												],
+												[
+													1000,
+													483
+												]
+											]
+										},
+										{
+											"area": "0ee",
+											"points": [
+												[
+													1480,
+													250
+												],
+												[
+													1480,
+													480
+												],
+												[
+													1624,
+													480
+												],
+												[
+													1624,
+													250
+												]
+											]
+										},
+										{
+											"area": "0e8",
+											"points": [
+												[
+													1718,
+													250
+												],
+												[
+													1718,
+													800
+												],
+												[
+													1946,
+													800
+												],
+												[
+													1946,
+													250
+												]
+											]
+										},
+										{
+											"area": "0dd",
+											"points": [
+												[
+													1718,
+													818
+												],
+												[
+													1853,
+													818
+												],
+												[
+													1870,
+													835
+												],
+												[
+													1895,
+													818
+												],
+												[
+													2014,
+													818
+												],
+												[
+													2031,
+													835
+												],
+												[
+													2051,
+													818
+												],
+												[
+													2174,
+													818
+												],
+												[
+													2190,
+													834
+												],
+												[
+													2211,
+													818
+												],
+												[
+													2346,
+													818
+												],
+												[
+													2346,
+													966
+												],
+												[
+													2274,
+													966
+												],
+												[
+													2274,
+													1032
+												],
+												[
+													2258,
+													1032
+												],
+												[
+													2252,
+													1038
+												],
+												[
+													2208,
+													1029
+												],
+												[
+													2194,
+													1037
+												],
+												[
+													2194,
+													963
+												],
+												[
+													2051,
+													963
+												],
+												[
+													2034,
+													946
+												],
+												[
+													2014,
+													966
+												],
+												[
+													1890,
+													966
+												],
+												[
+													1867,
+													943
+												],
+												[
+													1845,
+													965
+												],
+												[
+													1718,
+													965
+												]
+											]
+										},
+										{
+											"area": "0f9",
+											"points": [
+												[
+													275,
+													1296
+												],
+												[
+													275,
+													1525
+												],
+												[
+													670,
+													1525
+												],
+												[
+													670,
+													1296
+												]
+											]
+										},
+										{
+											"area": "0f4",
+											"points": [
+												[
+													931,
+													618
+												],
+												[
+													955,
+													642
+												],
+												[
+													957,
+													680
+												],
+												[
+													963,
+													718
+												],
+												[
+													955,
+													800
+												],
+												[
+													955,
+													813
+												],
+												[
+													954,
+													834
+												],
+												[
+													949,
+													877
+												],
+												[
+													942,
+													883
+												],
+												[
+													933,
+													918
+												],
+												[
+													920,
+													954
+												],
+												[
+													938,
+													968
+												],
+												[
+													936,
+													1000
+												],
+												[
+													930,
+													1035
+												],
+												[
+													936,
+													1058
+												],
+												[
+													946,
+													1080
+												],
+												[
+													962,
+													1091
+												],
+												[
+													950,
+													1128
+												],
+												[
+													954,
+													1152
+												],
+												[
+													962,
+													1173
+												],
+												[
+													965,
+													1206
+												],
+												[
+													965,
+													1248
+												],
+												[
+													968,
+													1299
+												],
+												[
+													982,
+													1325
+												],
+												[
+													997,
+													1357
+												],
+												[
+													1022,
+													1379
+												],
+												[
+													1046,
+													1379
+												],
+												[
+													1056,
+													1394
+												],
+												[
+													1069,
+													1427
+												],
+												[
+													1091,
+													1448
+												],
+												[
+													1109,
+													1438
+												],
+												[
+													1150,
+													1434
+												],
+												[
+													1155,
+													1419
+												],
+												[
+													1165,
+													1394
+												],
+												[
+													1163,
+													1363
+												],
+												[
+													1141,
+													1354
+												],
+												[
+													1123,
+													1342
+												],
+												[
+													1115,
+													1333
+												],
+												[
+													1090,
+													1326
+												],
+												[
+													1066,
+													1288
+												],
+												[
+													1072,
+													1216
+												],
+												[
+													1078,
+													1194
+												],
+												[
+													1091,
+													1181
+												],
+												[
+													1110,
+													1147
+												],
+												[
+													1112,
+													1117
+												],
+												[
+													1098,
+													1082
+												],
+												[
+													1085,
+													1059
+												],
+												[
+													1090,
+													1034
+												],
+												[
+													1098,
+													1005
+												],
+												[
+													1091,
+													970
+												],
+												[
+													1109,
+													944
+												],
+												[
+													1110,
+													926
+												],
+												[
+													1099,
+													890
+												],
+												[
+													1082,
+													870
+												],
+												[
+													1080,
+													850
+												],
+												[
+													1083,
+													811
+												],
+												[
+													1078,
+													784
+												],
+												[
+													1075,
+													762
+												],
+												[
+													1066,
+													742
+												],
+												[
+													1066,
+													718
+												],
+												[
+													1061,
+													691
+												],
+												[
+													1045,
+													662
+												],
+												[
+													1022,
+													626
+												],
+												[
+													1010,
+													598
+												],
+												[
+													979,
+													589
+												],
+												[
+													952,
+													582
+												],
+												[
+													941,
+													598
+												]
+											]
+										},
+										{
+											"area": "0d9",
+											"points": [
+												[
+													1400,
+													1052
+												],
+												[
+													1631,
+													1052
+												],
+												[
+													1631,
+													1133
+												],
+												[
+													1704,
+													1133
+												],
+												[
+													1704,
+													1209
+												],
+												[
+													1627,
+													1209
+												],
+												[
+													1627,
+													1364
+												],
+												[
+													1400,
+													1364
+												]
+											]
+										},
+										{
+											"area": "0d3",
+											"points": [
+												[
+													1720,
+													1051
+												],
+												[
+													1947,
+													1051
+												],
+												[
+													1947,
+													1131
+												],
+												[
+													2113,
+													1131
+												],
+												[
+													2113,
+													1051
+												],
+												[
+													2345,
+													1051
+												],
+												[
+													2345,
+													1525
+												],
+												[
+													2109,
+													1525
+												],
+												[
+													2109,
+													1445
+												],
+												[
+													1953,
+													1445
+												],
+												[
+													1953,
+													1526
+												],
+												[
+													1720,
+													1526
+												]
+											]
+										},
+										{
+											"area": "0e3",
+											"points": [
+												[
+													1394,
+													492
+												],
+												[
+													1394,
+													965
+												],
+												[
+													1702,
+													965
+												],
+												[
+													1702,
+													492
+												]
+											]
+										}
+									],
+									"hrefThumbnail": {
+										"type": "internal",
+										"path": "adventure/OoW/thumbnail/058-map-2-2-dm.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -2440,10 +3622,16 @@
 										"type": "internal",
 										"path": "adventure/OoW/059-map-2-2-pc.jpg"
 									},
-									"title": "(Player Version)",
+									"title": "Player Version",
 									"width": 2625,
 									"height": 1725,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 80,
+										"offsetX": 34,
+										"offsetY": 8
+									},
 									"mapParent": {
 										"id": "32a"
 									}
@@ -2790,7 +3978,7 @@
 												"The smell of death is strong in what was probably once a large and ornate hall, long since fallen into ruin. Not only are the walls and supports crumbling, but a ten-foot-deep rift has opened up in the floor. Two wooden bridges span the rift, whose floor is littered with skeletal corpses."
 											]
 										},
-										"The rift floor is difficult terrain because of the bodies. Any character who approaches the edge of the rift and succeeds on a DC 15 Wisdom ({@skill Perception}) check can hear a faint crunching sound emanating from the bodies.",
+										"The rift floor is {@quickref difficult terrain||3} because of the bodies. Any character who approaches the edge of the rift and succeeds on a DC 15 Wisdom ({@skill Perception}) check can hear a faint crunching sound emanating from the bodies.",
 										{
 											"type": "entries",
 											"name": "Creatures",
@@ -3079,7 +4267,7 @@
 										},
 										{
 											"type": "entries",
-											"name": "Acid Spray Gun (Recharge 5\u20136)",
+											"name": "Acid Spray Gun {@recharge 5}",
 											"page": 115,
 											"id": "114",
 											"entries": [
@@ -3564,7 +4752,7 @@
 											"page": 123,
 											"id": "13e",
 											"entries": [
-												"The crew is aboard a 15-foot {@vehicle Longship||longboat} with a sail. The fight takes place 15 feet off shore, where the water is 10 feet deep. The first 10 feet of the shoreline is difficult terrain because of the waves.",
+												"The crew is aboard a 15-foot {@vehicle Longship||longboat} with a sail. The fight takes place 15 feet off shore, where the water is 10 feet deep. The first 10 feet of the shoreline is {@quickref difficult terrain||3} because of the waves.",
 												"If the characters intercede, the sailors fight alongside them until the octopuses are driven away, or the characters convince the sailors to flee to safety."
 											]
 										},
@@ -3682,6 +4870,12 @@
 									"width": 2700,
 									"height": 1800,
 									"imageType": "map",
+									"grid": {
+										"type": "square",
+										"size": 61,
+										"offsetX": 22,
+										"offsetY": 34
+									},
 									"id": "32b"
 								},
 								{
@@ -3690,10 +4884,16 @@
 										"type": "internal",
 										"path": "adventure/OoW/063-map-3-1-pc.jpg"
 									},
-									"title": "(Player Version)",
+									"title": "Player Version",
 									"width": 2700,
 									"height": 1800,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 61,
+										"offsetX": 22,
+										"offsetY": 34
+									},
 									"mapParent": {
 										"id": "32b"
 									}
@@ -4106,7 +5306,144 @@
 									"width": 1200,
 									"height": 1516,
 									"imageType": "map",
-									"id": "32c"
+									"grid": {
+										"type": "square",
+										"size": 82,
+										"offsetX": 33,
+										"offsetY": 28,
+										"scale": 2
+									},
+									"id": "32c",
+									"mapRegions": [
+										{
+											"area": "193",
+											"points": [
+												[
+													142,
+													300
+												],
+												[
+													426,
+													300
+												],
+												[
+													426,
+													545
+												],
+												[
+													344,
+													545
+												],
+												[
+													344,
+													702
+												],
+												[
+													221,
+													702
+												],
+												[
+													221,
+													546
+												],
+												[
+													142,
+													546
+												]
+											]
+										},
+										{
+											"area": "18d",
+											"points": [
+												[
+													140,
+													713
+												],
+												[
+													140,
+													1114
+												],
+												[
+													422,
+													1114
+												],
+												[
+													422,
+													713
+												]
+											]
+										},
+										{
+											"area": "187",
+											"points": [
+												[
+													389,
+													1128
+												],
+												[
+													701,
+													1128
+												],
+												[
+													701,
+													1159
+												],
+												[
+													589,
+													1159
+												],
+												[
+													589,
+													1414
+												],
+												[
+													389,
+													1414
+												]
+											]
+										},
+										{
+											"area": "181",
+											"points": [
+												[
+													715,
+													1045
+												],
+												[
+													795,
+													1045
+												],
+												[
+													795,
+													845
+												],
+												[
+													874,
+													845
+												],
+												[
+													874,
+													1045
+												],
+												[
+													1080,
+													1045
+												],
+												[
+													1080,
+													1246
+												],
+												[
+													715,
+													1246
+												]
+											]
+										}
+									],
+									"hrefThumbnail": {
+										"type": "internal",
+										"path": "adventure/OoW/thumbnail/066-map-3-2-dm.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -4114,10 +5451,17 @@
 										"type": "internal",
 										"path": "adventure/OoW/067-map-3-2-pc.jpg"
 									},
-									"title": "(Player Version)",
+									"title": "Player Version",
 									"width": 1200,
 									"height": 1516,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 82,
+										"offsetX": 33,
+										"offsetY": 26,
+										"scale": 2
+									},
 									"mapParent": {
 										"id": "32c"
 									}
@@ -5039,7 +6383,13 @@
 							"title": "Map 4.1: The Docks",
 							"width": 1200,
 							"height": 1516,
-							"imageType": "map"
+							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 63,
+								"offsetX": 27,
+								"offsetY": -5
+							}
 						},
 						{
 							"type": "entries",
@@ -5523,7 +6873,13 @@
 											"title": "Map 4.2: Pirate Fight",
 											"width": 1215,
 											"height": 1553,
-											"imageType": "map"
+											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 56,
+												"offsetX": 10,
+												"offsetY": 22
+											}
 										},
 										{
 											"type": "insetReadaloud",
@@ -5608,7 +6964,40 @@
 											"title": "Map 4.3: River Barge Crossings",
 											"width": 1215,
 											"height": 1553,
-											"imageType": "map"
+											"imageType": "map",
+											"grid": {
+												"type": "square",
+												"size": 65,
+												"offsetY": 38
+											},
+											"mapRegions": [
+												{
+													"area": "1ef",
+													"points": [
+														[
+															16,
+															1244
+														],
+														[
+															16,
+															1541
+														],
+														[
+															1199,
+															1541
+														],
+														[
+															1199,
+															1244
+														]
+													]
+												}
+											],
+											"hrefThumbnail": {
+												"type": "internal",
+												"path": "adventure/OoW/thumbnail/077-map-4-3-dm.webp"
+											},
+											"id": "32f"
 										},
 										"Read the following, making adjustments as necessary if the characters have already seen the Six operatives:",
 										{
@@ -5622,7 +7011,7 @@
 										"Roll initiative. Having seen the characters (or having seen them again), the mind flayer has used its {@spell plane shift} ability to get back to the portal nexus. There, it prepares for the assault on the Dran Enterprises headquarters, leaving its lackeys to try to get to the outhouse portal before the characters. Of the four human {@creature Scout||scouts} among the Six operatives, two stay behind and fire arrows at the party, while the other two scouts and a human {@creature cult fanatic} race toward the barges.",
 										"The intention of the Six operatives is to cross the river barges as quickly as possible and reach the portal before the characters. The running scouts focus on crossing, though they use their shortswords against any character who jumps into the same or an adjacent barge. The cult fanatic races across the barges as well, but casts {@spell spiritual weapon} as soon as possible. He then uses spells such as {@spell command} or {@spell hold person} on any character who gets a commanding lead.",
 										"The river is 85 feet wide and filled with 10-foot-wide barges. At the start of each round, a barge moves either left or right {@dice 1d4 × 5} feet, either drifting with the current or being poled against it. The movement of the barges adds an unpredictable element to the characters' attempts to get across the river.",
-										"Each barge holds a merchant and {@dice 1d4}\u22121 customers, and all its area counts as difficult terrain. Characters in one barge can jump to a barge within 5 feet without an ability check. However, each barge is filled with different wares, so that some of the barges require checks by both the characters and the Six operatives to successfully cross them. See the Barge Contents table for more information.",
+										"Each barge holds a merchant and {@dice 1d4}\u22121 customers, and all its area counts as {@quickref difficult terrain||3}. Characters in one barge can jump to a barge within 5 feet without an ability check. However, each barge is filled with different wares, so that some of the barges require checks by both the characters and the Six operatives to successfully cross them. See the Barge Contents table for more information.",
 										"Characters are free to try to swim across the river, but doing so while avoiding the shifting barges requires a successful DC 15 Strength ({@skill Athletics}) check for each move made to swim. Any character in the water also attracts the attention of the {@creature giant poisonous snake} from barge 1.",
 										"Between the characters and the Six, the first group to have half its members reach the riverbank wins the race and gets to the portal first. If the characters lose this race, the party gains a failure point.",
 										{
@@ -6183,7 +7572,42 @@
 							"title": "Map 5.1: Horn Enclave",
 							"width": 1215,
 							"height": 1553,
-							"imageType": "map"
+							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 64,
+								"offsetX": 39,
+								"offsetY": 24,
+								"scale": 3
+							},
+							"mapRegions": [
+								{
+									"area": "21b",
+									"points": [
+										[
+											36,
+											1323
+										],
+										[
+											36,
+											1516
+										],
+										[
+											825,
+											1516
+										],
+										[
+											825,
+											1323
+										]
+									]
+								}
+							],
+							"hrefThumbnail": {
+								"type": "internal",
+								"path": "adventure/OoW/thumbnail/081-map-5-1-dm.webp"
+							},
+							"id": "330"
 						},
 						{
 							"type": "entries",
@@ -6777,7 +8201,7 @@
 											"type": "insetReadaloud",
 											"id": "24f",
 											"entries": [
-												"{@i Congratulations on the determination that got you this far in search of the {@item wheel of stars|AI}! And sorry that your reward has been denied you. The wheel has been with me always, and even as this ruse is ended, I promise it shall never be given over to those who would use the power of the orrery for woe. If that be you, feel free to face me\u2014and know your doom. But if perchance you have come here seeking the orrery so as to destroy it}...{@i  well, then, you have piqued my interest}.",
+												"{@i Congratulations on the determination that got you this far in search of the {@item wheel of stars|AI}! And sorry that your reward has been denied you. The wheel has been with me always, and even as this ruse is ended, I promise it shall never be given over to those who would use the power of the orrery for woe. If that be you, feel free to face me\u2014and know your doom. But if perchance you have come here seeking the orrery so as to destroy it}...{@i well, then, you have piqued my interest}.",
 												"{@i My name is Lottie. Find me if you can}."
 											]
 										}
@@ -7048,7 +8472,7 @@
 								"Dropping out from behind a dark cloud is an airship held aloft by a large balloon\u2014emblazoned with the sigil of the Six! A crew of hobgoblins and goblins can be seen swarming the deck, and a ballista and three harpoon guns are trained on your vessel. To arms!"
 							]
 						},
-						"If the {@vehicle battle balloon|AI} took more than 20 damage, the chaos of the storm has distracted the characters and crew. In that event, all creatures on the characters' battle balloon are surprised by the airship sent by the Six to engage the franchise\u2014and to steal the franchise's orrery components. Use the battle balloon stat block from {@book appendix C|AI|5} for the Six's airship, but substitute the following Blowout Ballista attack for the Green Flame Arbalester attack:",
+						"If the {@vehicle battle balloon|AI} took more than 20 damage, the chaos of the storm has distracted the characters and crew. In that event, all creatures on the characters' battle balloon are {@quickref Surprise|PHB|3|0|surprised} by the airship sent by the Six to engage the franchise\u2014and to steal the franchise's orrery components. Use the battle balloon stat block from {@book appendix C|AI|5} for the Six's airship, but substitute the following Blowout Ballista attack for the Green Flame Arbalester attack:",
 						"{@i Ranged Weapon Attack}: +8 to hit, range 200/800 ft. (can't hit targets within 60 ft. of it), one target. {@i Hit}: 16 ({@dice 3d10}) piercing damage and 22 ({@dice 4d10}) fire damage.",
 						"The airship's crew is made up of a female {@creature hobgoblin captain} named Garla, six {@creature Hobgoblin||hobgoblins}, six {@creature Goblin||goblins}, six {@creature Smoke Mephit||smoke mephits}, and a {@creature hippogriff} (serving as the captain's mount). All these creatures are recent mercenary hires, so none of them have the iconic affiliate of the Six features. They employ the following strategy, hoping to distract the characters while they steal the orrery housing and as many of its components as they can.",
 						{
@@ -7251,7 +8675,432 @@
 							"title": "Map 5.2: Lottie's Palace",
 							"width": 1148,
 							"height": 1466,
-							"imageType": "map"
+							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 51,
+								"offsetX": 7,
+								"offsetY": 10
+							},
+							"mapRegions": [
+								{
+									"area": "28b",
+									"points": [
+										[
+											858,
+											669
+										],
+										[
+											805,
+											730
+										],
+										[
+											858,
+											861
+										],
+										[
+											858,
+											1022
+										],
+										[
+											970,
+											1134
+										],
+										[
+											970,
+											1078
+										],
+										[
+											1022,
+											1026
+										],
+										[
+											1022,
+											881
+										],
+										[
+											970,
+											829
+										],
+										[
+											970,
+											774
+										],
+										[
+											1022,
+											722
+										],
+										[
+											1022,
+											681
+										],
+										[
+											872,
+											681
+										]
+									]
+								},
+								{
+									"area": "283",
+									"points": [
+										[
+											256,
+											818
+										],
+										[
+											315,
+											818
+										],
+										[
+											365,
+											818
+										],
+										[
+											414,
+											818
+										],
+										[
+											465,
+											767
+										],
+										[
+											669,
+											767
+										],
+										[
+											723,
+											821
+										],
+										[
+											775,
+											821
+										],
+										[
+											829,
+											875
+										],
+										[
+											829,
+											980
+										],
+										[
+											829,
+											1081
+										],
+										[
+											771,
+											1139
+										],
+										[
+											720,
+											1139
+										],
+										[
+											668,
+											1191
+										],
+										[
+											466,
+											1191
+										],
+										[
+											415,
+											1140
+										],
+										[
+											361,
+											1140
+										],
+										[
+											309,
+											1088
+										],
+										[
+											256,
+											1088
+										],
+										[
+											203,
+											1035
+										],
+										[
+											203,
+											877
+										]
+									]
+								},
+								{
+									"area": "28a",
+									"points": [
+										[
+											214,
+											1188
+										],
+										[
+											258,
+											1144
+										],
+										[
+											354,
+											1240
+										],
+										[
+											310,
+											1284
+										],
+										[
+											264,
+											1284
+										],
+										[
+											214,
+											1234
+										]
+									]
+								},
+								{
+									"area": "290",
+									"points": [
+										[
+											162,
+											524
+										],
+										[
+											257,
+											524
+										],
+										[
+											257,
+											574
+										],
+										[
+											308,
+											625
+										],
+										[
+											308,
+											725
+										],
+										[
+											261,
+											772
+										],
+										[
+											214,
+											772
+										],
+										[
+											112,
+											670
+										],
+										[
+											112,
+											574
+										]
+									]
+								},
+								{
+									"area": "28f",
+									"points": [
+										[
+											824,
+											620
+										],
+										[
+											824,
+											572
+										],
+										[
+											874,
+											522
+										],
+										[
+											1024,
+											522
+										],
+										[
+											1076,
+											574
+										],
+										[
+											1076,
+											618
+										],
+										[
+											1025,
+											669
+										],
+										[
+											876,
+											669
+										]
+									]
+								},
+								{
+									"area": "299",
+									"points": [
+										[
+											676,
+											418
+										],
+										[
+											724,
+											370
+										],
+										[
+											820,
+											370
+										],
+										[
+											870,
+											420
+										],
+										[
+											870,
+											513
+										],
+										[
+											823,
+											466
+										],
+										[
+											724,
+											466
+										]
+									]
+								},
+								{
+									"area": "295",
+									"points": [
+										[
+											265,
+											572
+										],
+										[
+											265,
+											522
+										],
+										[
+											315,
+											472
+										],
+										[
+											422,
+											472
+										],
+										[
+											472,
+											422
+										],
+										[
+											665,
+											422
+										],
+										[
+											719,
+											476
+										],
+										[
+											817,
+											476
+										],
+										[
+											864,
+											523
+										],
+										[
+											818,
+											569
+										],
+										[
+											818,
+											619
+										],
+										[
+											772,
+											619
+										],
+										[
+											721,
+											670
+										],
+										[
+											415,
+											670
+										],
+										[
+											365,
+											620
+										],
+										[
+											318,
+											620
+										]
+									]
+								},
+								{
+									"area": "29a",
+									"points": [
+										[
+											519,
+											119
+										],
+										[
+											618,
+											119
+										],
+										[
+											670,
+											67
+										],
+										[
+											822,
+											67
+										],
+										[
+											871,
+											116
+										],
+										[
+											871,
+											264
+										],
+										[
+											822,
+											313
+										],
+										[
+											668,
+											313
+										],
+										[
+											618,
+											363
+										],
+										[
+											521,
+											363
+										],
+										[
+											521,
+											315
+										],
+										[
+											469,
+											263
+										],
+										[
+											469,
+											167
+										]
+									]
+								}
+							],
+							"hrefThumbnail": {
+								"type": "internal",
+								"path": "adventure/OoW/thumbnail/085-map-5-2-dm.webp"
+							},
+							"id": "331"
 						},
 						{
 							"type": "entries",
@@ -7933,7 +9782,207 @@
 									"width": 3000,
 									"height": 1971,
 									"imageType": "map",
-									"id": "32d"
+									"grid": {
+										"type": "square",
+										"size": 98,
+										"offsetX": -32,
+										"offsetY": 20
+									},
+									"id": "32d",
+									"mapRegions": [
+										{
+											"area": "2d4",
+											"points": [
+												[
+													170,
+													505
+												],
+												[
+													452,
+													505
+												],
+												[
+													452,
+													1483
+												],
+												[
+													168,
+													1483
+												],
+												[
+													168,
+													1295
+												],
+												[
+													271,
+													1295
+												],
+												[
+													271,
+													691
+												],
+												[
+													170,
+													691
+												]
+											]
+										},
+										{
+											"area": "2d2",
+											"points": [
+												[
+													644,
+													212
+												],
+												[
+													644,
+													314
+												],
+												[
+													1251,
+													314
+												],
+												[
+													1251,
+													213
+												],
+												[
+													1436,
+													213
+												],
+												[
+													1436,
+													498
+												],
+												[
+													471,
+													498
+												],
+												[
+													446,
+													473
+												],
+												[
+													446,
+													429
+												],
+												[
+													463,
+													412
+												],
+												[
+													463,
+													212
+												]
+											]
+										},
+										{
+											"area": "2d3",
+											"points": [
+												[
+													659,
+													212
+												],
+												[
+													757,
+													212
+												],
+												[
+													757,
+													111
+												],
+												[
+													1146,
+													111
+												],
+												[
+													1146,
+													212
+												],
+												[
+													1242,
+													212
+												],
+												[
+													1242,
+													302
+												],
+												[
+													659,
+													302
+												]
+											]
+										},
+										{
+											"area": "2d3",
+											"points": [
+												[
+													69,
+													801
+												],
+												[
+													108,
+													801
+												],
+												[
+													120,
+													778
+												],
+												[
+													138,
+													776
+												],
+												[
+													151,
+													764
+												],
+												[
+													151,
+													742
+												],
+												[
+													169,
+													730
+												],
+												[
+													169,
+													703
+												],
+												[
+													259,
+													703
+												],
+												[
+													259,
+													1279
+												],
+												[
+													168,
+													1279
+												],
+												[
+													168,
+													1262
+												],
+												[
+													171,
+													1244
+												],
+												[
+													171,
+													1188
+												],
+												[
+													69,
+													1188
+												]
+											]
+										}
+									],
+									"hrefThumbnail": {
+										"type": "internal",
+										"path": "adventure/OoW/thumbnail/090-map-6-1-dm.webp"
+									}
 								},
 								{
 									"type": "image",
@@ -7941,10 +9990,16 @@
 										"type": "internal",
 										"path": "adventure/OoW/091-map-6-1-pc.jpg"
 									},
-									"title": "(Player Version)",
+									"title": "Player Version",
 									"width": 3000,
 									"height": 1971,
 									"imageType": "mapPlayer",
+									"grid": {
+										"type": "square",
+										"size": 98,
+										"offsetX": -32,
+										"offsetY": 20
+									},
 									"mapParent": {
 										"id": "32d"
 									}
@@ -8877,7 +10932,13 @@
 							"title": "Map 6.2: Ritual Site",
 							"width": 1350,
 							"height": 1725,
-							"imageType": "map"
+							"imageType": "map",
+							"grid": {
+								"type": "square",
+								"size": 59,
+								"offsetX": 47,
+								"offsetY": 38
+							}
 						},
 						{
 							"type": "entries",
@@ -8949,7 +11010,7 @@
 											"page": 192,
 											"id": "314",
 											"entries": [
-												"The steps leading up the mesa shift underfoot as a result of Far Realm energy flooding through them, making them difficult terrain. Additionally, each flight of steps is trapped at its midpoint with a magical rune that can be detected only with a successful DC 13 Intelligence ({@skill Investigation}) or Wisdom ({@skill Perception}) check.",
+												"The steps leading up the mesa shift underfoot as a result of Far Realm energy flooding through them, making them {@quickref difficult terrain||3}. Additionally, each flight of steps is trapped at its midpoint with a magical rune that can be detected only with a successful DC 13 Intelligence ({@skill Investigation}) or Wisdom ({@skill Perception}) check.",
 												"Once detected, a rune can be disabled with a DC 15 Intelligence ({@skill Arcana}) check or Dexterity check using thieves' tools. A character aware of the rune can also attempt a DC 14 Strength ({@skill Athletics}) check to jump safely over it. Moving past the rune otherwise deals 5 ({@dice 1d10}) necrotic damage to a creature and teleports it back to the cavern entrance. The runes remain active until disabled."
 											]
 										},

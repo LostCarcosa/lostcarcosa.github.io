@@ -513,7 +513,11 @@
 								"path": "book/MaBJoV/003.webp"
 							},
 							"width": 1844,
-							"height": 2387
+							"height": 2387,
+							"grid": {
+								"type": "none"
+							},
+							"imageType": "map"
 						},
 						{
 							"type": "inset",
@@ -1253,7 +1257,11 @@
 										"path": "book/MaBJoV/007.webp"
 									},
 									"width": 1829,
-									"height": 2371
+									"height": 2371,
+									"grid": {
+										"type": "none"
+									},
+									"imageType": "map"
 								},
 								{
 									"type": "inset",
@@ -2003,7 +2011,11 @@
 								"path": "book/MaBJoV/010.webp"
 							},
 							"width": 1842,
-							"height": 2389
+							"height": 2389,
+							"grid": {
+								"type": "none"
+							},
+							"imageType": "map"
 						},
 						{
 							"type": "inset",
@@ -2848,7 +2860,11 @@
 										"path": "book/MaBJoV/012.webp"
 									},
 									"width": 1846,
-									"height": 2390
+									"height": 2390,
+									"grid": {
+										"type": "none"
+									},
+									"imageType": "map"
 								},
 								{
 									"type": "inset",
@@ -6143,7 +6159,7 @@
 			"name": "Monsters",
 			"page": 131,
 			"entries": [
-				"his bestiary has game statistics for a dozen monsters. These are monsters that can often be found on the Sword Coast or are allies of a particular Campaign Villain. They might play a role in one of the Hometowns or the region surrounding it. Feel free to use them however you like.",
+				"This bestiary has game statistics for a dozen monsters. These are monsters that can often be found on the Sword Coast or are allies of a particular Campaign Villain. They might play a role in one of the Hometowns or the region surrounding it. Feel free to use them however you like.",
 				{
 					"type": "list",
 					"columns": 3,

@@ -373,7 +373,7 @@ class SublistManager {
 
 	async _pHandleJsonDownload () {
 		const entities = await this.getPinnedEntities();
-		entities.forEach(ent => DataUtil.cleanJson(MiscUtil.copy(ent)));
+		entities.forEach(ent => DataUtil.cleanJson(MiscUtil.copyFast(ent)));
 		DataUtil.userDownload(`${this._getDownloadName()}-data`, entities);
 	}
 
@@ -654,7 +654,7 @@ class SublistManager {
 		const page = UrlUtil.getCurrentPage();
 
 		for (const it of list.items) {
-			let toSend = await Renderer.hover.pCacheAndGetHash(page, it.h);
+			let toSend = await DataLoader.pCacheAndGetHash(page, it.h);
 
 			toSend = await Renderer.hover.pApplyCustomHashId(UrlUtil.getCurrentPage(), toSend, it.customHashId);
 
@@ -720,11 +720,110 @@ class SublistManager {
 	doSublistDeselectAll () { this._listSub.deselectAll(); }
 }
 
+class ListPageStateManager extends BaseComponent {
+	static _STORAGE_KEY;
+
+	async pInit () {
+		const saved = await this._pGetPersistedState();
+		if (!saved) return;
+		this.setStateFrom(saved);
+	}
+
+	async _pGetPersistedState () {
+		return StorageUtil.pGetForPage(this.constructor._STORAGE_KEY);
+	}
+
+	async _pPersistState () {
+		await StorageUtil.pSetForPage(this.constructor._STORAGE_KEY, this.getSaveableState());
+	}
+
+	addHookBase (prop, hk) { return this._addHookBase(prop, hk); }
+	removeHookBase (prop, hk) { return this._removeHookBase(prop, hk); }
+}
+
+class ListPageSettingsManager extends ListPageStateManager {
+	static _STORAGE_KEY = "listPageSettings";
+
+	static _SETTINGS = [];
+
+	_getSettings () { return {}; }
+
+	bindBtnOpen ({btn}) {
+		if (!btn) return;
+
+		btn
+			.addEventListener(
+				"click",
+				() => {
+					const $btnReset = $(`<button class="btn btn-default btn-xs" title="Reset"><span class="glyphicon glyphicon-refresh"></span></button>`)
+						.click(() => {
+							this._proxyAssignSimple("state", this._getDefaultState(), true);
+							this._pPersistState()
+								.then(() => Hist.hashChange());
+						});
+
+					const {$modalInner} = UiUtil.getShowModal({
+						isIndestructible: true,
+						isHeaderBorder: true,
+						title: "Settings",
+						cbClose: () => {
+							this._pPersistState()
+								.then(() => Hist.hashChange());
+						},
+						$titleSplit: $btnReset,
+					});
+
+					const $rows = Object.entries(this._getSettings())
+						.map(([prop, setting]) => {
+							switch (setting.type) {
+								case "boolean": {
+									return $$`<label class="split-v-center stripe-even py-1">
+										<span>${setting.name}</span>
+										${ComponentUiUtil.$getCbBool(this, prop)}
+									</label>`;
+								}
+
+								case "enum": {
+									return $$`<label class="split-v-center stripe-even py-1">
+										<span>${setting.name}</span>
+										${ComponentUiUtil.$getSelEnum(this, prop, {values: setting.enumVals})}
+									</label>`;
+								}
+
+								default: throw new Error(`Unhandled type "${setting.type}"`);
+							}
+						});
+
+					$$($modalInner)`<div class="ve-flex-col">
+						${$rows}
+					</div>`;
+				},
+			);
+	}
+
+	getValues () {
+		return MiscUtil.copyFast(this.__state);
+	}
+
+	async pSet (key, val) {
+		this._state[key] = val;
+		await this._pPersistState();
+	}
+
+	get (key) { return this._state[key]; }
+
+	_getDefaultState () {
+		return SettingsUtil.getDefaultSettings(this._getSettings());
+	}
+}
+
 class ListPage {
 	/**
 	 * @param opts Options object.
 	 * @param opts.dataSource Main JSON data url or function to fetch main data.
+	 * @param [opts.prereleaseDataSource] Function to fetch prerelease data.
 	 * @param [opts.brewDataSource] Function to fetch brew data.
+	 * @param [opts.pFnGetFluff] Function to fetch fluff for a given entity.
 	 * @param [opts.dataSourceFluff] Fluff JSON data url or function to fetch fluff data.
 	 * @param [opts.filters] Array of filters to use in the filter box. (Either `filters` and `filterSource` or
 	 * `pageFilter` must be specified.)
@@ -745,15 +844,18 @@ class ListPage {
 	 * @param [opts.tableViewOptions] Table view options.
 	 * @param [opts.hasAudio] True if the entities have pronunciation audio.
 	 * @param [opts.isPreviewable] True if the entities can be previewed in-line as part of the list.
-	 * @param [opts.bindOtherButtonsOptions]
 	 * @param [opts.isLoadDataAfterFilterInit] If the order of data loading and filter-state loading should be flipped.
 	 * @param [opts.isBindHashHandlerUnknown] If the "unknown hash" handler function should be bound.
 	 * @param [opts.isMarkdownPopout] If the sublist Popout button supports Markdown on CTRL.
 	 * @param [opts.propEntryData]
+	 * @param [opts.listSyntax]
+	 * @param [opts.compSettings]
 	 */
 	constructor (opts) {
 		this._dataSource = opts.dataSource;
+		this._prereleaseDataSource = opts.prereleaseDataSource;
 		this._brewDataSource = opts.brewDataSource;
+		this._pFnGetFluff = opts.pFnGetFluff;
 		this._dataSourcefluff = opts.dataSourceFluff;
 		this._filters = opts.filters;
 		this._filterSource = opts.filterSource;
@@ -766,10 +868,11 @@ class ListPage {
 		this._hasAudio = opts.hasAudio;
 		this._isPreviewable = opts.isPreviewable;
 		this._isMarkdownPopout = !!opts.isMarkdownPopout;
-		this._bindOtherButtonsOptions = opts.bindOtherButtonsOptions;
 		this._isLoadDataAfterFilterInit = !!opts.isLoadDataAfterFilterInit;
 		this._isBindHashHandlerUnknown = !!opts.isBindHashHandlerUnknown;
 		this._propEntryData = opts.propEntryData;
+		this._listSyntax = opts.listSyntax || new ListUiUtil.ListSyntax({fnGetDataList: () => this._dataList, pFnGetFluff: opts.pFnGetFluff});
+		this._compSettings = opts.compSettings ? opts.compSettings : null;
 
 		this._renderer = Renderer.get();
 		this._list = null;
@@ -777,11 +880,13 @@ class ListPage {
 		this._dataList = [];
 		this._ixData = 0;
 		this._bookView = null;
-		this._$pgContent = null;
 		this._bookViewToShow = null;
 		this._sublistManager = null;
 		this._btnsTabs = {};
 		this._lastRender = {};
+
+		this._$pgContent = null;
+		this._$wrpTabs = null;
 
 		this._contextMenuList = null;
 
@@ -799,10 +904,15 @@ class ListPage {
 	async pOnLoad () {
 		Hist.setListPage(this);
 
-		this._$pgContent = $(`#pagecontent`);
+		this._pOnLoad_findPageElements();
 
-		await BrewUtil2.pInit();
+		await Promise.all([
+			PrereleaseUtil.pInit(),
+			BrewUtil2.pInit(),
+		]);
 		await ExcludeUtil.pInitialise();
+
+		await this._pOnLoad_pInitSettingsManager();
 
 		let data;
 		// For pages which can load data without filter state, load the data early
@@ -849,7 +959,7 @@ class ListPage {
 		this._pOnLoad_tableView();
 
 		// bind hash-change functions for hist.js to use
-		window.loadHash = this.doLoadHash.bind(this);
+		window.loadHash = this.pDoLoadHash.bind(this);
 		window.loadSubHash = this.pDoLoadSubHash.bind(this);
 		if (this._isBindHashHandlerUnknown) window.pHandleUnknownHash = this.pHandleUnknownHash.bind(this);
 
@@ -867,6 +977,18 @@ class ListPage {
 		window.dispatchEvent(new Event("toolsLoaded"));
 	}
 
+	_pOnLoad_findPageElements () {
+		this._$pgContent = $(`#pagecontent`);
+		this._$wrpTabs = $(`#stat-tabs`);
+	}
+
+	async _pOnLoad_pInitSettingsManager () {
+		if (!this._compSettings) return;
+
+		await this._compSettings.pInit();
+		this._compSettings.bindBtnOpen({btn: document.getElementById("btn-list-settings")});
+	}
+
 	async _pOnLoad_pInitPrimaryLists () {
 		const $iptSearch = $("#lst__search");
 		const $btnReset = $("#reset");
@@ -877,7 +999,7 @@ class ListPage {
 			$btnClear: $(`#lst__search-glass`),
 			dispPageTagline: document.getElementById(`page__subtitle`),
 			isPreviewable: this._isPreviewable,
-			syntax: this._listSyntax,
+			syntax: this._listSyntax.build(),
 			isBindFindHotkey: true,
 			optsList: this._listOptions,
 		});
@@ -920,9 +1042,10 @@ class ListPage {
 
 	async _pOnLoad_pGetData () {
 		const data = await (typeof this._dataSource === "string" ? DataUtil.loadJSON(this._dataSource) : this._dataSource());
+		const prerelease = await (this._prereleaseDataSource ? this._prereleaseDataSource() : PrereleaseUtil.pGetBrewProcessed());
 		const homebrew = await (this._brewDataSource ? this._brewDataSource() : BrewUtil2.pGetBrewProcessed());
 
-		return BrewUtil2.getMergedData(data, homebrew);
+		return BrewUtil2.getMergedData(PrereleaseUtil.getMergedData(data, prerelease), homebrew);
 	}
 
 	_pOnLoad_bookView () {
@@ -1067,6 +1190,18 @@ class ListPage {
 		});
 	}
 
+	/* Implement as required */
+	get _bindOtherButtonsOptions () { return null; }
+
+	_bindOtherButtonsOptions_openAsSinglePage ({slugPage, fnGetHash}) {
+		if (!IS_DEPLOYED) return null;
+		return {
+			name: "Open Page",
+			type: "link",
+			fn: () => `${location.origin}/${slugPage}/${UrlUtil.getSluggedHash(fnGetHash())}`,
+		};
+	}
+
 	_addListItem (listItem) {
 		this._list.addItem(listItem);
 	}
@@ -1133,40 +1268,7 @@ class ListPage {
 		dispExpandedInner.innerHTML = "";
 	}
 
-	get _listSyntax () {
-		return {
-			text: {
-				help: `"text:<text>" to search within text.`,
-				fn: (listItem, searchTerm) => {
-					if (listItem.data._textCache == null) listItem.data._textCache = this._getSearchCache(this._dataList[listItem.ix]);
-					return listItem.data._textCache && listItem.data._textCache.includes(searchTerm);
-				},
-			},
-		};
-	}
-
-	// TODO(Future) the ideal solution to this is to render every entity to plain text (or failing that, Markdown) and
-	//   indexing that text with e.g. elasticlunr.
-	_getSearchCache (entity) {
-		if (!entity.entries) return "";
-		const ptrOut = {_: ""};
-		this._getSearchCache_handleEntryProp(entity, "entries", ptrOut);
-		return ptrOut._;
-	}
-
-	_getSearchCache_handleEntryProp (entity, prop, ptrOut) {
-		if (!entity[prop]) return;
-		ListPage._READONLY_WALKER.walk(
-			entity[prop],
-			{
-				string: (str) => this._getSearchCache_handleString(ptrOut, str),
-			},
-		);
-	}
-
-	_getSearchCache_handleString (ptrOut, str) {
-		ptrOut._ += `${Renderer.stripTags(str).toLowerCase()} -- `;
-	}
+	// ==================
 
 	static _checkShowAllExcluded (list, $pagecontent) {
 		if (!ExcludeUtil.isAllContentExcluded(list)) return;
@@ -1219,7 +1321,7 @@ class ListPage {
 			.on("click", async evt => {
 				let url = window.location.href;
 
-				if (evt.ctrlKey) {
+				if (evt.ctrlKey || evt.metaKey) {
 					await MiscUtil.pCopyTextToClipboard(this._filterBox.getFilterTag());
 					JqueryUtil.showCopiedEffect($btn);
 					return;
@@ -1307,13 +1409,12 @@ class ListPage {
 			optsList,
 		},
 	) {
-		const list = new List({$iptSearch, $wrpList, syntax, ...optsList});
-
 		const helpText = [];
+		if (isBindFindHotkey) helpText.push(`Hotkey: f.`);
+
+		const list = new List({$iptSearch, $wrpList, syntax, helpText, ...optsList});
 
 		if (isBindFindHotkey) {
-			helpText.push(`Hotkey: f.`);
-
 			$(document.body).on("keypress", (evt) => {
 				if (!EventUtil.noModifierKeys(evt) || EventUtil.isInInput(evt)) return;
 				if (EventUtil.getKeyIgnoreCapsLock(evt) === "f") {
@@ -1322,16 +1423,6 @@ class ListPage {
 				}
 			});
 		}
-
-		if (syntax) {
-			Object.values(syntax)
-				.filter(({help}) => help)
-				.forEach(({help}) => {
-					helpText.push(help);
-				});
-		}
-
-		if (helpText.length) $iptSearch.title(helpText.join(" "));
 
 		$btnReset.click(() => {
 			$iptSearch.val("");
@@ -1609,14 +1700,19 @@ class ListPage {
 			contextOptions.push(action);
 		}
 
-		if (opts.other) {
+		if (opts.other?.length) {
 			if (contextOptions.length) contextOptions.push(null); // Add a spacer after the previous group
 
 			opts.other.forEach(oth => {
-				const action = new ContextUtil.Action(
-					oth.name,
-					oth.pFn,
-				);
+				const action = oth.type === "link"
+					? new ContextUtil.ActionLink(
+						oth.name,
+						oth.fn,
+					)
+					: new ContextUtil.Action(
+						oth.name,
+						oth.pFn,
+					);
 				contextOptions.push(action);
 			});
 		}
@@ -1634,14 +1730,12 @@ class ListPage {
 
 	doDeselectAll () { this.primaryLists.forEach(list => list.deselectAll()); }
 
-	doLoadHash (id) {
+	async pDoLoadHash (id) {
 		this._lastRender.entity = this._dataList[id];
-		this._doLoadHash(id);
+		await this._pDoLoadHash(id);
 	}
 
 	getListItem () { throw new Error(`Unimplemented!`); }
-	handleFilterChange () { throw new Error(`Unimplemented!`); }
-	_doLoadHash (id) { throw new Error(`Unimplemented!`); }
 	pHandleUnknownHash () { throw new Error(`Unimplemented!`); }
 
 	async pDoLoadSubHash (sub) {
@@ -1649,8 +1743,138 @@ class ListPage {
 		if (this._sublistManager) sub = await this._sublistManager.pSetFromSubHashes(sub);
 		return sub;
 	}
+
+	/* -------------------------------------------- */
+
+	handleFilterChange () {
+		const f = this._filterBox.getValues();
+		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
+		FilterBox.selectFirstVisible(this._dataList);
+	}
+
+	/* -------------------------------------------- */
+
+	_tabTitleStats = "Traits";
+
+	async _pDoLoadHash (id) {
+		this._$pgContent.empty();
+
+		this._renderer.setFirstSection(true);
+		const ent = this._dataList[id];
+
+		const tabMetaStats = new Renderer.utils.TabButton({
+			label: this._tabTitleStats,
+			fnChange: this._renderStats_onTabChangeStats.bind(this),
+			fnPopulate: this._renderStats_doBuildStatsTab.bind(this, {ent}),
+			isVisible: true,
+		});
+
+		const tabMetasAdditional = this._renderStats_getTabMetasAdditional({ent});
+
+		Renderer.utils.bindTabButtons({
+			tabButtons: [tabMetaStats, ...tabMetasAdditional].filter(it => it.isVisible),
+			tabLabelReference: [tabMetaStats, ...tabMetasAdditional].map(it => it.label),
+			$wrpTabs: this._$wrpTabs,
+			$pgContent: this._$pgContent,
+		});
+
+		this._updateSelected();
+
+		await this._renderStats_pBuildFluffTabs({
+			ent,
+			tabMetaStats,
+			tabMetasAdditional,
+		});
+	}
+
+	_renderStats_getTabMetasAdditional ({ent}) { return []; }
+
+	_renderStats_onTabChangeStats () { /* Implement as required. */ }
+	_renderStats_onTabChangeFluff () { /* Implement as required. */ }
+
+	async _renderStats_pBuildFluffTabs (
+		{
+			ent,
+			tabMetaStats,
+			tabMetasAdditional,
+		},
+	) {
+		const propFluff = `${ent.__prop}Fluff`;
+
+		const [hasFluffText, hasFluffImages] = await Promise.all([
+			Renderer.utils.pHasFluffText(ent, propFluff),
+			Renderer.utils.pHasFluffImages(ent, propFluff),
+		]);
+
+		if (!hasFluffText && !hasFluffImages) return;
+
+		const tabMetas = [
+			tabMetaStats,
+			new Renderer.utils.TabButton({
+				label: "Info",
+				fnChange: this._renderStats_onTabChangeFluff.bind(this),
+				fnPopulate: this._renderStats_doBuildFluffTab.bind(this, {ent, isImageTab: false}),
+				isVisible: hasFluffText,
+			}),
+			new Renderer.utils.TabButton({
+				label: "Images",
+				fnChange: this._renderStats_onTabChangeFluff.bind(this),
+				fnPopulate: this._renderStats_doBuildFluffTab.bind(this, {ent, isImageTab: true}),
+				isVisible: hasFluffImages,
+			}),
+			...tabMetasAdditional,
+		];
+
+		Renderer.utils.bindTabButtons({
+			tabButtons: tabMetas.filter(it => it.isVisible),
+			tabLabelReference: tabMetas.map(it => it.label),
+			$wrpTabs: this._$wrpTabs,
+			$pgContent: this._$pgContent,
+		});
+	}
+
+	_renderStats_doBuildFluffTab ({ent, isImageTab = false}) {
+		this._$pgContent.empty();
+
+		return Renderer.utils.pBuildFluffTab({
+			isImageTab,
+			$content: this._$pgContent,
+			pFnGetFluff: this._pFnGetFluff,
+			entity: ent,
+			$headerControls: this._renderStats_doBuildFluffTab_$getHeaderControls({ent, isImageTab}),
+		});
+	}
+
+	_renderStats_doBuildFluffTab_$getHeaderControls ({ent, isImageTab = false}) {
+		if (isImageTab) return null;
+
+		const actions = [
+			new ContextUtil.Action(
+				"Copy as JSON",
+				async () => {
+					const fluffEntries = (await this._pFnGetFluff(ent))?.entries || [];
+					MiscUtil.pCopyTextToClipboard(JSON.stringify(fluffEntries, null, "\t"));
+					JqueryUtil.showCopiedEffect($btnOptions);
+				},
+			),
+			new ContextUtil.Action(
+				"Copy as Markdown",
+				async () => {
+					const fluffEntries = (await this._pFnGetFluff(ent))?.entries || [];
+					const rendererMd = RendererMarkdown.get().setFirstSection(true);
+					MiscUtil.pCopyTextToClipboard(fluffEntries.map(f => rendererMd.render(f)).join("\n"));
+					JqueryUtil.showCopiedEffect($btnOptions);
+				},
+			),
+		];
+		const menu = ContextUtil.getMenu(actions);
+
+		const $btnOptions = $(`<button class="btn btn-default btn-xs btn-stats-name" title="Other Options"><span class="glyphicon glyphicon-option-vertical"/></button>`)
+			.click(evt => ContextUtil.pOpenMenu(evt, menu));
+
+		return $$`<div class="ve-flex-v-center btn-group ml-2">${$btnOptions}</div>`;
+	}
+
+	/** @abstract */
+	_renderStats_doBuildStatsTab ({ent}) { throw new Error("Unimplemented!"); }
 }
-ListPage._READONLY_WALKER = MiscUtil.getWalker({
-	keyBlocklist: new Set(["type", "colStyles", "style"]),
-	isNoModification: true,
-});

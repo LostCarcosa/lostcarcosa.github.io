@@ -62,6 +62,8 @@ class BlocklistUtil {
 	}
 }
 
+globalThis.BlocklistUtil = BlocklistUtil;
+
 class BlocklistUi {
 	constructor (
 		{
@@ -147,7 +149,7 @@ class BlocklistUi {
 				let [name, source] = uid.split("|");
 				source = Parser.getTagSource("item", source);
 				const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ITEMS]({name, source});
-				const item = await Renderer.hover.pCacheAndGet(UrlUtil.PG_ITEMS, source, hash);
+				const item = await DataLoader.pCacheAndGet(UrlUtil.PG_ITEMS, source, hash);
 				if (!item) return null;
 				return {displayName: item.name, hash, category: "item", source: item.source};
 			})).filter(Boolean);
@@ -155,13 +157,27 @@ class BlocklistUi {
 			MiscUtil.set(this._subBlocklistEntries, "itemGroup", itemGroupHash, subBlocklist);
 		}
 
-		for (const it of (this._data.race || []).filter(it => it._isBaseRace)) {
+		for (const it of (this._data.race || []).filter(it => it._isBaseRace || it._versions?.length)) {
 			const baseRaceHash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES](it);
+			const subBlocklist = [];
 
-			const subBlocklist = it._subraces.map(sr => {
-				const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES](sr);
-				return {displayName: sr.name, hash, category: "race", source: sr.source};
-			});
+			if (it._isBaseRace) {
+				subBlocklist.push(
+					...it._subraces.map(sr => {
+						const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES](sr);
+						return {displayName: sr.name, hash, category: "race", source: sr.source};
+					}),
+				);
+			}
+
+			if (it._versions?.length) {
+				subBlocklist.push(
+					...DataUtil.proxy.getVersions(it.__prop, it).map(ver => {
+						const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES](ver);
+						return {displayName: ver.name, hash, category: "race", source: ver.source};
+					}),
+				);
+			}
 
 			MiscUtil.set(this._subBlocklistEntries, "race", baseRaceHash, subBlocklist);
 		}
@@ -658,6 +674,8 @@ class BlocklistUi {
 		this._list.update();
 	}
 }
+
+globalThis.BlocklistUi = BlocklistUi;
 
 BlocklistUi.Component = class extends BaseComponent {
 	get source () { return this._state.source; }

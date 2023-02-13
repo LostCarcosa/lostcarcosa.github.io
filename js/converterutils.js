@@ -46,6 +46,11 @@ class BaseParser {
 		iptClean = iptClean
 			.replace(/((?: | ")[A-Za-z][a-z]+)- *\n([a-z])/g, "$1$2");
 
+		// Connect line-broken parentheses
+		iptClean = this._getCleanInput_parens(iptClean, "(", ")");
+		iptClean = this._getCleanInput_parens(iptClean, "[", "]");
+		iptClean = this._getCleanInput_parens(iptClean, "{", "}");
+
 		// Apply `PAGE=...`
 		iptClean = iptClean
 			.replace(/(?:\n|^)PAGE=(?<page>\d+)(?:\n|$)/gi, (...m) => {
@@ -54,6 +59,28 @@ class BaseParser {
 			});
 
 		return iptClean;
+	}
+
+	static _getCleanInput_parens (iptClean, cOpen, cClose) {
+		const lines = iptClean
+			.split("\n");
+
+		for (let i = 0; i < lines.length; ++i) {
+			const line = lines[i];
+			const lineNxt = lines[i + 1];
+			if (!lineNxt) continue;
+
+			const cntOpen = line.split(cOpen).length - 1;
+			const cntClose = line.split(cClose).length - 1;
+
+			if (cntOpen <= cntClose) continue;
+
+			lines[i] = `${line} ${lineNxt}`.replace(/ {2}/g, " ");
+			lines.splice(i + 1, 1);
+			i--;
+		}
+
+		return lines.join("\n");
 	}
 
 	static _hasEntryContent (trait) {
@@ -138,6 +165,9 @@ class TaggerUtils {
 
 		const doFind = arr => arr.find(it => it.name.toLowerCase() === name && it.source.toLowerCase() === source);
 
+		const fromPrerelease = typeof PrereleaseUtil !== "undefined" ? doFind(PrereleaseUtil.getBrewProcessedFromCache("legendaryGroup")) : null;
+		if (fromPrerelease) return fromPrerelease;
+
 		const fromBrew = typeof BrewUtil2 !== "undefined" ? doFind(BrewUtil2.getBrewProcessedFromCache("legendaryGroup")) : null;
 		if (fromBrew) return fromBrew;
 
@@ -149,6 +179,9 @@ class TaggerUtils {
 		source = source.toLowerCase();
 
 		const doFind = arr => arr.find(s => (s.name.toLowerCase() === name || (typeof s.srd === "string" && s.srd.toLowerCase() === name)) && s.source.toLowerCase() === source);
+
+		const fromPrerelease = typeof PrereleaseUtil !== "undefined" ? doFind(PrereleaseUtil.getBrewProcessedFromCache("spell")) : null;
+		if (fromPrerelease) return fromPrerelease;
 
 		const fromBrew = typeof BrewUtil2 !== "undefined" ? doFind(BrewUtil2.getBrewProcessedFromCache("spell")) : null;
 		if (fromBrew) return fromBrew;
@@ -207,7 +240,7 @@ class TaggerUtils {
 		const knownSpells = {};
 		strSpellcasting.replace(/{@spell ([^}]+)}/g, (...m) => {
 			let [spellName, spellSource] = m[1].split("|").map(it => it.toLowerCase());
-			spellSource = spellSource || SRC_PHB.toLowerCase();
+			spellSource = spellSource || Parser.SRC_PHB.toLowerCase();
 
 			(knownSpells[spellSource] = knownSpells[spellSource] || new Set()).add(spellName);
 		});
@@ -1097,20 +1130,16 @@ Object.entries(AlignmentUtil.ALIGNMENTS_RAW).forEach(([k, v]) => {
 	};
 });
 
-if (typeof module !== "undefined") {
-	module.exports = {
-		ConvertUtil,
-		ConverterConst,
-		BaseParser,
-		TagCondition,
-		SenseTag,
-		DiceConvert,
-		ArtifactPropertiesTag,
-		EntryConvert,
-		SkillTag,
-		ActionTag,
-		TaggerUtils,
-		TagUtil,
-		AlignmentUtil,
-	};
-}
+globalThis.ConvertUtil = ConvertUtil;
+globalThis.ConverterConst = ConverterConst;
+globalThis.BaseParser = BaseParser;
+globalThis.TagCondition = TagCondition;
+globalThis.SenseTag = SenseTag;
+globalThis.DiceConvert = DiceConvert;
+globalThis.ArtifactPropertiesTag = ArtifactPropertiesTag;
+globalThis.EntryConvert = EntryConvert;
+globalThis.SkillTag = SkillTag;
+globalThis.ActionTag = ActionTag;
+globalThis.TaggerUtils = TaggerUtils;
+globalThis.TagUtil = TagUtil;
+globalThis.AlignmentUtil = AlignmentUtil;

@@ -11,7 +11,7 @@ class OptionalFeaturesSublistManager extends SublistManager {
 	}
 
 	pGetSublistItem (it, hash) {
-		const prerequisite = Renderer.utils.getPrerequisiteHtml(it.prerequisite, {isListMode: true, blocklistKeys: new Set(["level"])});
+		const prerequisite = Renderer.utils.prerequisite.getHtml(it.prerequisite, {isListMode: true, blocklistKeys: new Set(["level"])});
 		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite);
 
 		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col">
@@ -77,7 +77,7 @@ class OptionalFeaturesPage extends ListPage {
 
 		const source = Parser.sourceJsonToAbv(it.source);
 		const hash = UrlUtil.autoEncodeHash(it);
-		const prerequisite = Renderer.utils.getPrerequisiteHtml(it.prerequisite, {isListMode: true, blocklistKeys: new Set(["level"])});
+		const prerequisite = Renderer.utils.prerequisite.getHtml(it.prerequisite, {isListMode: true, blocklistKeys: new Set(["level"])});
 		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite);
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
@@ -86,7 +86,7 @@ class OptionalFeaturesPage extends ListPage {
 			<span class="col-1-5 text-center" title="${it._dFeatureType}">${it._lFeatureType}</span>
 			<span class="col-4-7 text-center">${prerequisite}</span>
 			<span class="col-1 text-center">${level}</span>
-			<span class="col-1-5 ${Parser.sourceJsonToColor(it.source)} text-center pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil2.sourceJsonToStyle(it.source)}>${source}</span>
+			<span class="col-1-5 ${Parser.sourceJsonToColor(it.source)} text-center pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${Parser.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>
 		<div class="ve-flex ve-hidden relative lst__wrp-preview">
 			<div class="vr-0 absolute lst__vr-preview"></div>
@@ -115,23 +115,14 @@ class OptionalFeaturesPage extends ListPage {
 		return listItem;
 	}
 
-	handleFilterChange () {
-		const f = this._filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, this._dataList[item.ix]));
-		FilterBox.selectFirstVisible(this._dataList);
-	}
+	_renderStats_doBuildStatsTab ({ent}) {
+		this._$wrpTabs.find(`.opt-feature-type`).remove();
+		const $wrpOptFeatType = $(`<div class="opt-feature-type"/>`).prependTo(this._$wrpTabs);
 
-	_doLoadHash (id) {
-		const it = this._dataList[id];
-
-		const $wrpTab = $(`#stat-tabs`);
-		$wrpTab.find(`.opt-feature-type`).remove();
-		const $wrpOptFeatType = $(`<div class="opt-feature-type"/>`).prependTo($wrpTab);
-
-		const commonPrefix = it.featureType.length > 1 ? MiscUtil.findCommonPrefix(it.featureType.map(fs => Parser.optFeatureTypeToFull(fs)), {isRespectWordBoundaries: true}) : "";
+		const commonPrefix = ent.featureType.length > 1 ? MiscUtil.findCommonPrefix(ent.featureType.map(fs => Parser.optFeatureTypeToFull(fs)), {isRespectWordBoundaries: true}) : "";
 		if (commonPrefix) $wrpOptFeatType.append(`${commonPrefix.trim()} `);
 
-		it.featureType.forEach((ft, i) => {
+		ent.featureType.forEach((ft, i) => {
 			if (i > 0) $wrpOptFeatType.append("/");
 			$(`<span class="roller">${Parser.optFeatureTypeToFull(ft).substring(commonPrefix.length)}</span>`)
 				.click(() => {
@@ -141,9 +132,7 @@ class OptionalFeaturesPage extends ListPage {
 				.appendTo($wrpOptFeatType);
 		});
 
-		this._$pgContent.empty().append(RenderOptionalFeatures.$getRenderedOptionalFeature(it));
-
-		this._updateSelected();
+		this._$pgContent.empty().append(RenderOptionalFeatures.$getRenderedOptionalFeature(ent));
 	}
 
 	async pDoLoadSubHash (sub) {

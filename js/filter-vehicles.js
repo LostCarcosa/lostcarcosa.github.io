@@ -59,8 +59,9 @@ class PageFilterVehicles extends PageFilter {
 		it._fCreatureCapacity = (it.capCrew || 0) + (it.capPassenger || 0) + (it.capCreature || 0);
 
 		it._fMisc = it.srd ? ["SRD"] : [];
-		if (it.hasFluff) it._fMisc.push("Has Info");
-		if (it.hasFluffImages) it._fMisc.push("Has Images");
+		if (it.tokenUrl || it.hasToken) it._fMisc.push("Has Token");
+		if (it.hasFluff || it.fluff?.entries) it._fMisc.push("Has Info");
+		if (it.hasFluffImages || it.fluff?.images) it._fMisc.push("Has Images");
 	}
 
 	addToFilters (it, isExcluded) {
@@ -105,3 +106,30 @@ class PageFilterVehicles extends PageFilter {
 		);
 	}
 }
+
+globalThis.PageFilterVehicles = PageFilterVehicles;
+
+class ListSyntaxVehicles extends ListUiUtil.ListSyntax {
+	static _INDEXABLE_PROPS = [
+		"control",
+		"movement",
+		"weapon",
+		"other",
+		"entries",
+
+		"actionStation",
+
+		"action",
+		"trait",
+		"reaction",
+	];
+
+	_getSearchCacheStats (entity) {
+		if (this.constructor._INDEXABLE_PROPS.every(it => !entity[it])) return "";
+		const ptrOut = {_: ""};
+		this.constructor._INDEXABLE_PROPS.forEach(it => this._getSearchCache_handleEntryProp(entity, it, ptrOut));
+		return ptrOut._;
+	}
+}
+
+globalThis.ListSyntaxVehicles = ListSyntaxVehicles;

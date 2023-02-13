@@ -48,7 +48,9 @@
 			"name": "Animated Table",
 			"source": "TftYP",
 			"page": 230,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -192,7 +194,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 9,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -282,6 +286,11 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -359,7 +368,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 23,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -450,7 +461,9 @@
 			"name": "Centaur Mummy",
 			"source": "TftYP",
 			"page": 231,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -679,6 +692,14 @@
 				"average": 30,
 				"formula": "8d10 + 40"
 			},
+			"languages": [
+				"Elvish",
+				"Draconic"
+			],
+			"cr": {
+				"cr": "5",
+				"xp": 450
+			},
 			"actionTags": [],
 			"hasToken": true
 		},
@@ -686,7 +707,9 @@
 			"name": "Dread Warrior",
 			"source": "TftYP",
 			"page": 233,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -875,7 +898,9 @@
 			"name": "Duergar Spy",
 			"source": "TftYP",
 			"page": 234,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -890,7 +915,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -1019,7 +1044,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 25,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1136,7 +1163,9 @@
 				"name": "Black Pudding",
 				"source": "MM"
 			},
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"hp": {
 				"average": 130,
 				"formula": "10d12 + 30"
@@ -1176,7 +1205,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 22,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1270,6 +1301,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -1277,7 +1311,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Estia",
@@ -1416,7 +1451,9 @@
 			"name": "Four-Armed Gargoyle",
 			"source": "TftYP",
 			"page": 129,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -1541,7 +1578,9 @@
 				"name": "Rug of Smothering",
 				"source": "MM"
 			},
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"hp": {
 				"average": 63,
 				"formula": "6d20"
@@ -1552,7 +1591,9 @@
 			"name": "Giant Crayfish",
 			"source": "TftYP",
 			"page": 235,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1633,7 +1674,9 @@
 			"name": "Giant Ice Toad",
 			"source": "TftYP",
 			"page": 235,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -1737,7 +1780,9 @@
 			"name": "Giant Lightning Eel",
 			"source": "TftYP",
 			"page": 236,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1831,7 +1876,9 @@
 					"source": "IMR"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -1938,7 +1985,9 @@
 			"name": "Giant Subterranean Lizard",
 			"source": "TftYP",
 			"page": 236,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2123,7 +2172,9 @@
 					"source": "IMR"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -2232,7 +2283,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 25,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2333,6 +2386,10 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -2368,7 +2425,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 21,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2492,7 +2551,9 @@
 					"source": "SLW"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2580,7 +2641,9 @@
 				"name": "Ochre Jelly",
 				"source": "MM"
 			},
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"hp": {
 				"average": 51,
 				"formula": "6d12 + 12"
@@ -2595,7 +2658,9 @@
 				"name": "Polar Bear",
 				"source": "MM"
 			},
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"hp": {
 				"average": 65,
 				"formula": "5d12 + 15"
@@ -2718,7 +2783,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 45,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2854,6 +2921,11 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"I"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -2875,7 +2947,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 238,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -2978,7 +3052,9 @@
 			"name": "Kelpie",
 			"source": "TftYP",
 			"page": 238,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"N",
@@ -3190,7 +3266,8 @@
 				"F",
 				"S"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Kobold Commoner",
@@ -3319,6 +3396,7 @@
 			},
 			"spellcasting": null,
 			"legendary": null,
+			"damageTagsSpell": [],
 			"spellcastingTags": [],
 			"hasToken": true
 		},
@@ -3345,7 +3423,9 @@
 			"name": "Malformed Kraken",
 			"source": "TftYP",
 			"page": 239,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -3443,7 +3523,7 @@
 				{
 					"name": "Fling",
 					"entries": [
-						"One Medium or smaller object held or creature {@condition grappled} by the kraken 's tentacles is thrown up to 60 feet in a random direction and knocked {@condition prone}. If a thrown target strikes a solid surface, the target takes 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a {@dc 16} Dexterity saving throw or take the same damage and be knocked {@condition prone}."
+						"One Medium or smaller object held or creature {@condition grappled} by the kraken's tentacles is thrown up to 60 feet in a random direction and knocked {@condition prone}. If a thrown target strikes a solid surface, the target takes 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a {@dc 16} Dexterity saving throw or take the same damage and be knocked {@condition prone}."
 					]
 				},
 				{
@@ -3516,7 +3596,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 91,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -3568,7 +3650,7 @@
 				{
 					"name": "Ambusher",
 					"entries": [
-						"In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it has surprised."
+						"In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it has {@quickref Surprise|PHB|3|0|surprised}."
 					]
 				},
 				{
@@ -3661,7 +3743,9 @@
 			"name": "Nereid",
 			"source": "TftYP",
 			"page": 240,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -3871,7 +3955,8 @@
 			},
 			"str": 16,
 			"cha": 16,
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ogre Skeleton",
@@ -3897,7 +3982,9 @@
 			"name": "Ooze Master",
 			"source": "TftYP",
 			"page": 241,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -4080,6 +4167,12 @@
 				"A",
 				"B"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"I",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -4176,6 +4269,7 @@
 					"source": "TftYP"
 				}
 			},
+			"damageTagsLegendary": [],
 			"hasToken": true
 		},
 		{
@@ -4629,7 +4723,9 @@
 					"page": 252
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -4805,7 +4901,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 242,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4912,6 +5010,10 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -4925,7 +5027,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 243,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5012,7 +5116,8 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluff": true
 		},
 		{
 			"name": "Siren",
@@ -5024,7 +5129,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -5137,7 +5244,8 @@
 				"charmed",
 				"invisible"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluff": true
 		},
 		{
 			"name": "Snarla",
@@ -5147,7 +5255,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 102,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5305,6 +5415,12 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -5339,7 +5455,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 53,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5471,6 +5589,11 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -5528,7 +5651,9 @@
 			"isNamedCreature": true,
 			"source": "TftYP",
 			"page": 244,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -5747,6 +5872,14 @@
 			"damageTags": [
 				"C"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -5766,7 +5899,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 245,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -5894,7 +6029,9 @@
 			"name": "Thayan Apprentice",
 			"source": "TftYP",
 			"page": 245,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5996,6 +6133,10 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -6004,13 +6145,16 @@
 				"RW",
 				"THW"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Thayan Warrior",
 			"source": "TftYP",
 			"page": 246,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6162,7 +6306,8 @@
 				"B",
 				"S"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Therzt",
@@ -6198,7 +6343,9 @@
 			"name": "Thorn Slinger",
 			"source": "TftYP",
 			"page": 246,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -6276,7 +6423,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 68,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -6337,11 +6486,11 @@
 					"headerEntries": [
 						"Tloques can cast {@spell hold person} ({@dc 14}) at will, requiring no components, but his target must be able to see him."
 					],
-					"hidden": [
-						"will"
-					],
 					"will": [
 						"{@spell hold person}"
+					],
+					"hidden": [
+						"will"
 					]
 				}
 			],
@@ -6498,7 +6647,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 248,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "ooze",
 			"alignment": [
 				"C",
@@ -6773,7 +6924,9 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 248,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6882,6 +7035,14 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -6889,7 +7050,8 @@
 				"MW"
 			],
 			"hasToken": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }

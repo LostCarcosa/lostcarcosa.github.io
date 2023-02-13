@@ -18,7 +18,10 @@
 			"source": "TCE",
 			"page": 109,
 			"summonedBySpell": "Summon Aberration|TCE",
-			"size": "M",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"U"
@@ -114,7 +117,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Adult Red Dracolich",
@@ -131,14 +135,18 @@
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
-			]
+			],
+			"damageTagsLegendary": [],
+			"hasToken": true
 		},
 		{
 			"name": "Beast of the Land",
 			"source": "TCE",
 			"page": 61,
 			"summonedByClass": "Ranger|PHB",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -213,7 +221,9 @@
 			"source": "TCE",
 			"page": 61,
 			"summonedByClass": "Ranger|PHB",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -289,7 +299,9 @@
 			"source": "TCE",
 			"page": 61,
 			"summonedByClass": "Ranger|PHB",
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"N"
@@ -361,7 +373,10 @@
 			"source": "TCE",
 			"page": 109,
 			"summonedBySpell": "Summon Beast|TCE",
-			"size": "S",
+			"summonedBySpellLevel": 2,
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -452,14 +467,18 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Celestial Spirit",
 			"source": "TCE",
 			"page": 110,
 			"summonedBySpell": "Summon Celestial|TCE",
-			"size": "L",
+			"summonedBySpellLevel": 5,
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"U"
@@ -546,7 +565,10 @@
 			"source": "TCE",
 			"page": 111,
 			"summonedBySpell": "Summon Construct|TCE",
-			"size": "M",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -635,14 +657,17 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Dancing Item",
 			"source": "TCE",
 			"page": 29,
 			"summonedByClass": "Bard|PHB",
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"sizeNote": "or smaller",
 			"type": "construct",
 			"alignment": [
@@ -731,7 +756,10 @@
 			"source": "TCE",
 			"page": 111,
 			"summonedBySpell": "Summon Elemental|TCE",
-			"size": "M",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"U"
@@ -856,14 +884,18 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Fey Spirit",
 			"source": "TCE",
 			"page": 112,
 			"summonedBySpell": "Summon Fey|TCE",
-			"size": "S",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"S"
+			],
 			"type": "fey",
 			"alignment": [
 				"U"
@@ -906,7 +938,7 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3 + summonSpellLevel} piercing damage{@damage  + 1d6} force damage."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3 + summonSpellLevel} piercing damage {@damage + 1d6} force damage."
 					]
 				}
 			],
@@ -958,14 +990,18 @@
 			],
 			"conditionInflict": [
 				"charmed"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Fiendish Spirit",
 			"source": "TCE",
 			"page": 112,
 			"summonedBySpell": "Summon Fiend|TCE",
-			"size": "L",
+			"summonedBySpellLevel": 6,
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"U"
@@ -1082,7 +1118,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Homunculus Servant",
@@ -1095,7 +1132,9 @@
 				}
 			],
 			"summonedByClass": "Artificer|TCE",
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -1181,7 +1220,9 @@
 			"name": "Juvenile Mimic",
 			"source": "TCE",
 			"page": 167,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -1280,7 +1321,9 @@
 			"name": "Mighty Servant of Leuk-o",
 			"source": "TCE",
 			"page": 131,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1344,7 +1387,8 @@
 				"petrified",
 				"poisoned",
 				"restrained",
-				"stunned"
+				"stunned",
+				"unconscious"
 			],
 			"languages": [
 				"understands the languages of creatures attuned to it but can't speak"
@@ -1397,7 +1441,8 @@
 			],
 			"traitTags": [
 				"Magic Resistance",
-				"Regeneration"
+				"Regeneration",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -1460,7 +1505,10 @@
 			"source": "TCE",
 			"page": 114,
 			"summonedBySpell": "Summon Shadowspawn|TCE",
-			"size": "M",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1568,7 +1616,9 @@
 				}
 			],
 			"summonedByClass": "Artificer|TCE",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -1618,7 +1668,7 @@
 				{
 					"name": "Vigilant",
 					"entries": [
-						"The defender can't be surprised."
+						"The defender can't be {@quickref Surprise|PHB|3|0|surprised}."
 					]
 				}
 			],
@@ -1662,7 +1712,10 @@
 			"source": "TCE",
 			"page": 114,
 			"summonedBySpell": "Summon Undead|TCE",
-			"size": "M",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -1710,7 +1763,7 @@
 				{
 					"name": "Incorporeal Passage (Ghostly Only)",
 					"entries": [
-						"The spirit can move through other creatures and objects as if they were difficult terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes {@damage 1d10} force damage for every 5 feet traveled."
+						"The spirit can move through other creatures and objects as if they were {@quickref difficult terrain||3}. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes {@damage 1d10} force damage for every 5 feet traveled."
 					]
 				},
 				{
@@ -1770,14 +1823,17 @@
 				"frightened",
 				"paralyzed",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Wildfire Spirit",
 			"source": "TCE",
 			"page": 40,
 			"summonedByClass": "Druid|PHB",
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"U"

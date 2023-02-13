@@ -1,9 +1,10 @@
 {
 	"name": "5etools",
 	"author": "TheGiddyLimit",
-	"version": "1.168.2",
+	"version": "1.175.2",
 	"license": "MIT",
 	"description": "A site dedicated to making playing games with your friends as easy as possible.",
+	"type": "module",
 	"scripts": {
 		"version-bump": "npm version -m \"chore(version): bump\"",
 		"gen": "node node/generate-all.js",
@@ -11,11 +12,13 @@
 		"clean-jsons": "node node/clean-jsons.js",
 		"minify:js": "terser --keep-classnames --keep-fnames",
 		"minify:json": "node node/minify-json.js",
-		"test:js": "eslint .",
-		"lint:js": "eslint . --fix",
-		"test:styles": "stylelint scss/*.scss scss/includes/*.scss",
+		"test:js": "eslint . --ext .js,.cjs,.mjs",
+		"lint:js": "eslint . --ext .js,.cjs,.mjs --fix",
+		"test:css": "stylelint scss/*.scss scss/includes/*.scss",
 		"test:data": "node test/test-all.js",
-		"test": "npm run test:js && npm run test:styles && npm run test:data",
+		"test:json": "node test/test-json.js",
+		"test:tags": "node test/test-tags.js",
+		"test": "npm run test:js && npm run test:css && npm run test:data",
 		"build:css": "sass --style=compressed scss/:css/ && node node/rm.js css/includes/",
 		"build:deploy:dev": "bash build/deploy-prep-dev.sh",
 		"build:deploy:prod": "bash build/deploy-prep-prod.sh",
@@ -36,19 +39,21 @@
 		"url": "git+https://github.com/5etools-mirror-1/5etools-mirror-1.github.io.git"
 	},
 	"devDependencies": {
-		"ajv": "^8.10.0",
+		"5etools-utils": "^0.5.13",
+		"ajv": "^8.11.2",
+		"ajv-formats": "^2.1.1",
 		"esbuild": "^0.14.38",
-		"eslint": "^8.5.0",
-		"http-server": "^0.12.3",
+		"eslint": "^8.28.0",
+		"http-server": "^14.1.1",
 		"json-source-map": "^0.6.1",
 		"probe-image-size": "^6.0.0",
 		"readline-sync": "^1.4.10",
-		"sass": "^1.45.0",
+		"sass": "^1.56.1",
 		"sharp": "^0.30.5",
-		"simple-git": "2.34.2",
+		"simple-git": "^3.15.1",
 		"stylelint": "^13.13.1",
 		"stylelint-config-sass-guidelines": "^8.0.0",
-		"terser": "^5.10.0",
+		"terser": "^5.15.1",
 		"workbox-cli": "^6.5.3"
 	},
 	"bugs": {
@@ -59,5 +64,8 @@
 	"directories": {
 		"lib": "lib",
 		"test": "test"
+	},
+	"dependencies": {
+		"workbox-build": "^6.5.4"
 	}
 }

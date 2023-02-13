@@ -11,7 +11,9 @@
 			"name": "Bodytaker Plant",
 			"source": "VRGR",
 			"page": 226,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "plant",
 			"ac": [
 				{
@@ -96,7 +98,8 @@
 				}
 			],
 			"traitTags": [
-				"Rejuvenation"
+				"Rejuvenation",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -129,7 +132,9 @@
 			"name": "Boneless",
 			"source": "VRGR",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				12
@@ -201,6 +206,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -235,7 +243,9 @@
 					"page": 278
 				}
 			],
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -349,7 +359,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -360,6 +371,9 @@
 			"damageTags": [
 				"N",
 				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
 			],
 			"spellcastingTags": [
 				"I",
@@ -386,7 +400,9 @@
 			"name": "Carrion Stalker",
 			"source": "VRGR",
 			"page": 230,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "monstrosity",
 			"ac": [
 				{
@@ -469,7 +485,9 @@
 			"name": "Carrionette",
 			"source": "VRGR",
 			"page": 231,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -535,6 +553,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"damageTags": [
 				"N",
 				"P"
@@ -553,7 +574,9 @@
 			"name": "Death's Head",
 			"source": "VRGR",
 			"page": 232,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -620,6 +643,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"damageTags": [
 				"N",
 				"P"
@@ -639,7 +665,9 @@
 			"name": "Dullahan",
 			"source": "VRGR",
 			"page": 233,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -767,7 +795,8 @@
 				}
 			],
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -800,7 +829,9 @@
 			"isNamedCreature": true,
 			"source": "VRGR",
 			"page": 143,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -920,7 +951,9 @@
 			"name": "Gallows Speaker",
 			"source": "VRGR",
 			"page": 234,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				12
@@ -993,7 +1026,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The gallows speaker can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends it turn inside an object."
+						"The gallows speaker can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends it turn inside an object."
 					]
 				},
 				{
@@ -1018,7 +1051,8 @@
 				}
 			],
 			"traitTags": [
-				"Incorporeal Movement"
+				"Incorporeal Movement",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -1038,7 +1072,9 @@
 			"name": "Greater Star Spawn Emissary",
 			"source": "VRGR",
 			"page": 245,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "aberration",
 			"ac": [
 				{
@@ -1145,7 +1181,7 @@
 				{
 					"name": "Warp Space (Costs 2 Actions)",
 					"entries": [
-						"The emissary causes the ground in a 20-foot square that it can see within 90 feet of it to turn into teeth and maws until the start of its next turn. The area becomes difficult terrain for the duration. Any creature takes 10 ({@damage 3d6}) piercing damage for each 5 feet it moves on this terrain."
+						"The emissary causes the ground in a 20-foot square that it can see within 90 feet of it to turn into teeth and maws until the start of its next turn. The area becomes {@quickref difficult terrain||3} for the duration. Any creature takes 10 ({@damage 3d6}) piercing damage for each 5 feet it moves on this terrain."
 					]
 				},
 				{
@@ -1156,7 +1192,8 @@
 				}
 			],
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -1186,7 +1223,9 @@
 			"name": "Gremishka",
 			"source": "VRGR",
 			"page": 235,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "monstrosity",
 			"ac": [
 				12
@@ -1216,7 +1255,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 2}) piercing damage plus 3 ({@damage 1d6}) force damage."
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4 + 2}) piercing damage plus 3 ({@damage 1d6}) force damage."
 					]
 				}
 			],
@@ -1266,7 +1305,9 @@
 			"name": "Inquisitor of the Mind Fire",
 			"source": "VRGR",
 			"page": 248,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
@@ -1400,7 +1441,9 @@
 			"name": "Inquisitor of the Sword",
 			"source": "VRGR",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
@@ -1514,6 +1557,9 @@
 				"O",
 				"S"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -1532,7 +1578,9 @@
 			"name": "Inquisitor of the Tome",
 			"source": "VRGR",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				11
@@ -1669,7 +1717,9 @@
 			"isNamedCreature": true,
 			"source": "VRGR",
 			"page": 86,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -1816,6 +1866,11 @@
 				"R",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -1837,7 +1892,9 @@
 			"name": "Jiangshi",
 			"source": "VRGR",
 			"page": 236,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -1924,6 +1981,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"SD"
 			],
@@ -1949,7 +2009,9 @@
 			"name": "Lesser Star Spawn Emissary",
 			"source": "VRGR",
 			"page": 245,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"ac": [
 				{
@@ -2073,7 +2135,8 @@
 				}
 			],
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -2108,7 +2171,9 @@
 			],
 			"source": "VRGR",
 			"page": 237,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -2242,7 +2307,8 @@
 				"SD"
 			],
 			"actionTags": [
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -2267,7 +2333,9 @@
 			"name": "Necrichor",
 			"source": "VRGR",
 			"page": 238,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				12
@@ -2375,7 +2443,8 @@
 			"traitTags": [
 				"Legendary Resistances",
 				"Rejuvenation",
-				"Spider Climb"
+				"Spider Climb",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -2405,7 +2474,9 @@
 			"name": "Nosferatu",
 			"source": "VRGR",
 			"page": 239,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -2508,7 +2579,8 @@
 			"traitTags": [
 				"Regeneration",
 				"Spider Climb",
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -2527,6 +2599,7 @@
 			],
 			"miscTags": [
 				"AOE",
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -2537,7 +2610,9 @@
 			"name": "Podling",
 			"source": "VRGR",
 			"page": 227,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"ac": [
 				10
@@ -2590,6 +2665,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"B"
 			],
@@ -2610,7 +2688,9 @@
 			"name": "Priest of Osybus",
 			"source": "VRGR",
 			"page": 241,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
@@ -2751,7 +2831,7 @@
 										"type": "entries",
 										"name": "Spectral",
 										"entries": [
-											"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were difficult terrain, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
+											"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
 										]
 									}
 								],
@@ -2840,18 +2920,18 @@
 							"headerEntries": [
 								"The priest casts one of the following spells, requiring no components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
 							],
-							"daily": {
-								"1e": [
-									"{@spell animate dead}",
-									"{@spell create undead}"
-								]
-							},
 							"will": [
 								{
 									"entry": "{@spell circle of death}",
 									"hidden": true
 								}
 							],
+							"daily": {
+								"1e": [
+									"{@spell animate dead}",
+									"{@spell create undead}"
+								]
+							},
 							"ability": "int",
 							"displayAs": "action"
 						}
@@ -2901,7 +2981,7 @@
 							"items": {
 								"name": "Spectral Boon",
 								"entries": [
-									"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were difficult terrain, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
+									"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
 								]
 							}
 						}
@@ -2932,7 +3012,9 @@
 			"name": "Relentless Juggernaut",
 			"source": "VRGR",
 			"page": 243,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"ac": [
 				{
@@ -3039,7 +3121,7 @@
 				{
 					"name": "Implacable Advance",
 					"entries": [
-						"The juggernaut moves up to its speed, ignoring difficult terrain. Any object in its path takes 55 ({@damage 10d10}) bludgeoning damage if it isn't being worn or carried."
+						"The juggernaut moves up to its speed, ignoring {@quickref difficult terrain||3}. Any object in its path takes 55 ({@damage 10d10}) bludgeoning damage if it isn't being worn or carried."
 					]
 				},
 				{
@@ -3051,7 +3133,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Regeneration"
+				"Regeneration",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -3084,7 +3167,9 @@
 			"name": "Relentless Slasher",
 			"source": "VRGR",
 			"page": 242,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"ac": [
 				{
@@ -3200,7 +3285,9 @@
 			"name": "Strigoi",
 			"source": "VRGR",
 			"page": 246,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"ac": [
 				{
@@ -3308,7 +3395,9 @@
 			"name": "Swarm of Gremishkas",
 			"source": "VRGR",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"swarmSize": "T"
@@ -3407,7 +3496,9 @@
 			"name": "Swarm of Maggots",
 			"source": "VRGR",
 			"page": 247,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -3514,7 +3605,9 @@
 			"name": "Swarm of Scarabs",
 			"source": "VRGR",
 			"page": 247,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -3609,7 +3702,9 @@
 			"name": "Swarm of Zombie Limbs",
 			"source": "VRGR",
 			"page": 254,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"swarmSize": "T"
@@ -3690,6 +3785,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"B"
 			],
@@ -3763,7 +3861,9 @@
 			"name": "Unspeakable Horror",
 			"source": "VRGR",
 			"page": 250,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"ac": [
 				{
@@ -4063,7 +4163,9 @@
 			"name": "Vampiric Mind Flayer",
 			"source": "VRGR",
 			"page": 252,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -4162,7 +4264,7 @@
 			],
 			"bonus": [
 				{
-					"name": "Disrupt Psyche (Recharge 5-6)",
+					"name": "Disrupt Psyche {@recharge 5}",
 					"entries": [
 						"The mind flayer magically emits psionic energy in a 30-foot-radius sphere centered on itself. Each creature in that area must succeed on a {@dc 15} Intelligence saving throw or be {@condition incapacitated} for 1 minute. The {@condition incapacitated} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
@@ -4170,7 +4272,8 @@
 			],
 			"traitTags": [
 				"Spider Climb",
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -4217,7 +4320,9 @@
 					"page": 242
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4299,13 +4404,6 @@
 					]
 				}
 			],
-			"altArt": [
-				{
-					"name": "Wereraven (Alt)",
-					"source": "CoS",
-					"page": 242
-				}
-			],
 			"traitTags": [
 				"Regeneration",
 				"Shapechanger"
@@ -4333,7 +4431,9 @@
 			"name": "Zombie Clot",
 			"source": "VRGR",
 			"page": 255,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -4420,7 +4520,8 @@
 				}
 			],
 			"traitTags": [
-				"Undead Fortitude"
+				"Undead Fortitude",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -4452,7 +4553,9 @@
 			"name": "Zombie Plague Spreader",
 			"source": "VRGR",
 			"page": 255,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				10
@@ -4530,7 +4633,8 @@
 				}
 			],
 			"traitTags": [
-				"Undead Fortitude"
+				"Undead Fortitude",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"

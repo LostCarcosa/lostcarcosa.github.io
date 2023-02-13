@@ -903,7 +903,14 @@
 									"title": "Map 3.1: world of theros",
 									"width": 3631,
 									"height": 5000,
-									"imageType": "map"
+									"imageType": "map",
+									"grid": {
+										"type": "none",
+										"size": 104,
+										"distance": 10,
+										"units": "miles"
+									},
+									"id": "018"
 								},
 								{
 									"type": "image",
@@ -914,7 +921,16 @@
 									"title": "Player Version",
 									"width": 3631,
 									"height": 5000,
-									"imageType": "mapPlayer"
+									"imageType": "mapPlayer",
+									"grid": {
+										"type": "none",
+										"size": 104,
+										"distance": 10,
+										"units": "miles"
+									},
+									"mapParent": {
+										"id": "018"
+									}
 								}
 							]
 						},
@@ -4222,7 +4238,12 @@
 													"title": "Map 4.1: Underworld Crossing",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "019"
 												},
 												{
 													"type": "image",
@@ -4233,7 +4254,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "019"
+													}
 												}
 											]
 										}
@@ -4641,7 +4669,14 @@
 													"title": "Map 4.2: Asora",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75,
+														"offsetX": -1,
+														"offsetY": -1
+													},
+													"id": "01a"
 												},
 												{
 													"type": "image",
@@ -4652,7 +4687,16 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75,
+														"offsetX": -1,
+														"offsetY": -1
+													},
+													"mapParent": {
+														"id": "01a"
+													}
 												}
 											]
 										}
@@ -5058,7 +5102,12 @@
 													"title": "Map 4.3: Graveyard",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "01b"
 												},
 												{
 													"type": "image",
@@ -5069,7 +5118,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "01b"
+													}
 												}
 											]
 										}
@@ -5472,7 +5528,12 @@
 													"title": "Map 4.4: Sun Temple",
 													"width": 4200,
 													"height": 5880,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 70
+													},
+													"id": "01c"
 												},
 												{
 													"type": "image",
@@ -5483,7 +5544,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5880,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 70
+													},
+													"mapParent": {
+														"id": "01c"
+													}
 												}
 											]
 										}
@@ -5877,10 +5945,16 @@
 														"type": "internal",
 														"path": "book/MOT/096-map-4.5-arena.jpg"
 													},
-													"title": "Map 4.5: arena",
+													"title": "Map 4.5: Arena",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75,
+														"distance": 10
+													},
+													"id": "01d"
 												},
 												{
 													"type": "image",
@@ -5891,7 +5965,15 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75,
+														"distance": 10
+													},
+													"mapParent": {
+														"id": "01d"
+													}
 												}
 											]
 										}
@@ -6308,7 +6390,12 @@
 													"title": "Map 4.6: Arbor Watchtower",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "01e"
 												},
 												{
 													"type": "image",
@@ -6319,7 +6406,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "01e"
+													}
 												}
 											]
 										}
@@ -6730,7 +6824,12 @@
 													"title": "Map 4.7: Oracular Conflux",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "01f"
 												},
 												{
 													"type": "image",
@@ -6741,7 +6840,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "01f"
+													}
 												}
 											]
 										}
@@ -7209,7 +7315,11 @@
 													"title": "Map 4.8: Abandoned Temple",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square"
+													},
+													"id": "020"
 												},
 												{
 													"type": "image",
@@ -7220,7 +7330,13 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square"
+													},
+													"mapParent": {
+														"id": "020"
+													}
 												}
 											]
 										}
@@ -7637,7 +7753,12 @@
 													"title": "Map 4.9: Temple of Mystery",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "021"
 												},
 												{
 													"type": "image",
@@ -7648,7 +7769,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "021"
+													}
 												}
 											]
 										}
@@ -8058,7 +8186,13 @@
 													"title": "Map 4.10: Canyon Shrine",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75,
+														"distance": 10
+													},
+													"id": "022"
 												},
 												{
 													"type": "image",
@@ -8069,7 +8203,15 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75,
+														"distance": 10
+													},
+													"mapParent": {
+														"id": "022"
+													}
 												}
 											]
 										}
@@ -8496,7 +8638,12 @@
 													"title": "Map 4.11: Forest Shrine",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "023"
 												},
 												{
 													"type": "image",
@@ -8507,7 +8654,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "023"
+													}
 												}
 											]
 										}
@@ -8913,7 +9067,12 @@
 													"title": "Map 4.12: Healing Pools",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "024"
 												},
 												{
 													"type": "image",
@@ -8924,7 +9083,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "024"
+													}
 												}
 											]
 										}
@@ -9327,7 +9493,12 @@
 													"title": "Map 4.13: Amphitheater",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "025"
 												},
 												{
 													"type": "image",
@@ -9338,7 +9509,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "025"
+													}
 												}
 											]
 										}
@@ -9754,7 +9932,12 @@
 													"title": "Map 4.14: Volcano Temple",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "026"
 												},
 												{
 													"type": "image",
@@ -9765,7 +9948,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "026"
+													}
 												}
 											]
 										}
@@ -10180,7 +10370,12 @@
 													"title": "Map 4.15: Coastal Temple",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "map"
+													"imageType": "map",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"id": "027"
 												},
 												{
 													"type": "image",
@@ -10191,7 +10386,14 @@
 													"title": "Player Version",
 													"width": 4200,
 													"height": 5700,
-													"imageType": "mapPlayer"
+													"imageType": "mapPlayer",
+													"grid": {
+														"type": "square",
+														"size": 75
+													},
+													"mapParent": {
+														"id": "027"
+													}
 												}
 											]
 										}
@@ -11288,7 +11490,7 @@
 										],
 										[
 											"5",
-											"{@b Nyx Step}. The Nyxborn can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@dice 1d10}) force damage if it ends its turn inside an object."
+											"{@b Nyx Step}. The Nyxborn can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@dice 1d10}) force damage if it ends its turn inside an object."
 										],
 										[
 											"6",

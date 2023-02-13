@@ -5,5 +5,21 @@
 		"This file contains as an index for other homebrew files, which should be placed in the same directory.",
 		"For example, add \"My Homebrew.json\" to the \"toImport\" array below, and have a valid JSON homebrew file in this (\"homebrew/\") directory."
 	],
-	"toImport": ["Modified Content.json", "The Compendium of Forgotten Secrets - Awakening.json", "Blazing Dawn Player Companion.json", "Dark Arts Player Companion.json", "Sprouting Chaos Player Companion.json", "Psion.json", "Occultist.json", "Warlord.json", "Monster Manual Expanded.json", "Monster Manual Expanded II.json", "Monster Manual Expanded III.json", "Monster Module.json", "Creature Codex.json", "Tome of Beasts 2.json", "Tome of Beasts.json"]
+	"toImport": [
+		"Modified Content.json",
+		"The Compendium of Forgotten Secrets - Awakening.json",
+		"Blazing Dawn Player Companion.json",
+		"Dark Arts Player Companion.json",
+		"Sprouting Chaos Player Companion.json",
+		"Psion.json",
+		"Occultist.json",
+		"Warlord.json",
+		"Monster Manual Expanded.json",
+		"Monster Manual Expanded II.json",
+		"Monster Manual Expanded III.json",
+		"Monster Module.json",
+		"Creature Codex.json",
+		"Tome of Beasts 2.json",
+		"Tome of Beasts.json"
+	]
 }

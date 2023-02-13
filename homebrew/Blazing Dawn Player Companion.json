@@ -1414,7 +1414,7 @@
 			"header": 1,
 			"entries": [
 				"Also at 1st level, you can use your divine power to defend your allies and rebuke your enemies. When a creature you can see within 30 feet of you takes damage, you can use your reaction to halve the damage taken by the target.",
-				"You take an equal amount of damage, which can't be reduced in any way, and you gain advantage on the next attack roll you make against the creature that damaged the target before the end of your next turn. On a hit, the attack deals 1d4 bonus radiant damage.", 
+				"You take an equal amount of damage, which can't be reduced in any way, and you gain advantage on the next attack roll you make against the creature that damaged the target before the end of your next turn. On a hit, the attack deals 1d4 bonus radiant damage.",
 				"You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
 			]
 		},
@@ -1747,8 +1747,8 @@
 			"page": 20,
 			"level": 3,
 			"entries": [
-				"An ember knight employs martial techniques combined with potent fire magic. While ember knights are often mistaken for the more common eldritch knights at first glance, the source of an ember knight’s magic comes from within, rather than from the study of magic. In this way they are comparable to sorcerers. While the potential to become an ember knight might be within someone from birth, this potential typically doesn’t manifest until that person has a few battles under their belt. This event is generally referred to as an ember knight’s “kindling,” where they first begin to wield their fiery powers.",
-				"Once an ember knight “kindles,” their skills become a desired commodity. Their presence can inspire fear in their opponents, and awe in their onlookers, as their fiery weapons and arrays of burning embers sow death and destruction. Many become mercenaries, or even leaders of mercenary groups, and their services are often highly sought after. Anyone that employs an ember knight finds them to be worth their price.",
+				"An ember knight employs martial techniques combined with potent fire magic. While ember knights are often mistaken for the more common eldritch knights at first glance, the source of an ember knight's magic comes from within, rather than from the study of magic. In this way they are comparable to sorcerers. While the potential to become an ember knight might be within someone from birth, this potential typically doesn't manifest until that person has a few battles under their belt. This event is generally referred to as an ember knight's \"kindling,\" where they first begin to wield their fiery powers.",
+				"Once an ember knight \"kindles,\" their skills become a desired commodity. Their presence can inspire fear in their opponents, and awe in their onlookers, as their fiery weapons and arrays of burning embers sow death and destruction. Many become mercenaries, or even leaders of mercenary groups, and their services are often highly sought after. Anyone that employs an ember knight finds them to be worth their price.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Gifted Pyromancer|Fighter||Ember Knight|BDPC|3|BDPC"
@@ -1791,7 +1791,7 @@
 					"name": "Ember Strike",
 					"page": 20,
 					"entries": [
-						"When you hit a creature with an attack, you can cause any number of your conjured embers to fly at the attack’s target. The target takes 1 fire damage for each ember you spend."
+						"When you hit a creature with an attack, you can cause any number of your conjured embers to fly at the attack's target. The target takes 1 fire damage for each ember you spend."
 					]
 				},
 				{
@@ -2101,7 +2101,6 @@
 					"name": "Rally Spirit",
 					"entries": [
 						"As a bonus action, you can cause a creature you can see within 30 feet of you to gain temporary hit points equal to your Martial Arts die. When you use this option, you can choose to spend up to 2 ki to increase the number of temporary hit points gained by one Martial Arts die per ki point spent. These temporary hit points last until the end of your next turn."
-						
 					]
 				},
 				{
@@ -2627,7 +2626,8 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Sunlit Spear|BDPC"
-						},{
+						},
+						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Swift Sunstep|BDPC"
 						}
@@ -4500,7 +4500,7 @@
 			"entries": [
 				"{@i 3rd level Celestial Avatar feature}",
 				"When you adopt this path, you pledge yourself to the Celestial Tide, gaining the ability to channel divine magic through your rage. You gain access to the following spells: {@spell compelled duel|MOD}, {@spell divine favor}, and {@spell heroism}. Charisma is your spellcasting ability for all the spells granted by this feature.",
-				"As part of the bonus action used to start your rage, you can cast one of the spells you gained with this feature without expending a spell slot or using material components. The spell is cast at 1st level, doesn’t require concentration if it normally does, and lasts for the duration of rage rather than the spell’s normal duration.",
+				"As part of the bonus action used to start your rage, you can cast one of the spells you gained with this feature without expending a spell slot or using material components. The spell is cast at 1st level, doesn't require concentration if it normally does, and lasts for the duration of rage rather than the spell's normal duration.",
 				"This feature improves at 10th and 14th level."
 			]
 		},
@@ -6699,9 +6699,9 @@
 			],
 			"entries": [
 				"A ring of radiant energy forms along the edge of a 20-foot radius, 10-foot high cylinder centered on a point within range. Until the spell ends, bright light fills the cylinder, and dim light extends 10 feet byond it.",
-				"When a hostile creature enters the spell’s area for the first time on a turn or starts its turn there, it must make a Constitution saving throw. The creature takes 3d10 radiant damage on a failed save or half as much damage on a successful one.",
-				"When a friendly creature enters the spell’s area for the first time on a turn or starts its turn there, it gains 3d4 temporary hit points. These temporary hit points last for as long as the creature remains within the area.",
-				"The outer edge of the cylinder forms a wall that traps hostile creatures within. A hostile creature within 5 feet of the edge of the cylinder can use its action to attempt to push through the cylinder’s wall. It must make a Strength check against your spell save DC. On a success, it moves 5 feet outside of the cylinder."
+				"When a hostile creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Constitution saving throw. The creature takes 3d10 radiant damage on a failed save or half as much damage on a successful one.",
+				"When a friendly creature enters the spell's area for the first time on a turn or starts its turn there, it gains 3d4 temporary hit points. These temporary hit points last for as long as the creature remains within the area.",
+				"The outer edge of the cylinder forms a wall that traps hostile creatures within. A hostile creature within 5 feet of the edge of the cylinder can use its action to attempt to push through the cylinder's wall. It must make a Strength check against your spell save DC. On a success, it moves 5 feet outside of the cylinder."
 			],
 			"entriesHigherLevel": [
 				{

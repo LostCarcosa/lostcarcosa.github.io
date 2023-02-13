@@ -24,13 +24,16 @@
 						"with": "angel"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Archon Of Redemption",
 			"source": "PSZ",
 			"page": 22,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -174,6 +177,12 @@
 				"R",
 				"S"
 			],
+			"damageTagsSpell": [
+				"N",
+				"R",
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -197,7 +206,8 @@
 						"with": "baloth"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Boulderfoot Giant",
@@ -206,7 +216,8 @@
 			"_copy": {
 				"name": "Stone Giant",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Caustic Crawler",
@@ -222,7 +233,8 @@
 						"with": "crawler"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Drake (Large)",
@@ -238,7 +250,8 @@
 						"with": "drake"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Drake (Small)",
@@ -254,7 +267,8 @@
 						"with": "drake"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Emrakul",
@@ -276,13 +290,16 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Felidar",
 			"source": "PSZ",
 			"page": 23,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -459,7 +476,8 @@
 						"with": "gnarlid"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Gomazoa",
@@ -478,7 +496,8 @@
 			},
 			"speed": {
 				"fly": 10
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Great Cat",
@@ -494,7 +513,8 @@
 						"with": "cat"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Griffin (Type 1)",
@@ -510,7 +530,8 @@
 						"with": "griffin"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Griffin (Type 2)",
@@ -526,7 +547,8 @@
 						"with": "griffin"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Heartstabber Mosquito",
@@ -542,7 +564,8 @@
 						"with": "mosquito"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Hellion",
@@ -558,7 +581,8 @@
 						"with": "hellion"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Hurda",
@@ -584,7 +608,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Iona",
@@ -602,7 +627,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Kozilek",
@@ -624,13 +650,17 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"damageTagsLegendary": [],
+			"hasToken": true
 		},
 		{
 			"name": "Kraken",
 			"source": "PSZ",
 			"page": 25,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -777,7 +807,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Ogre Channeler",
@@ -793,7 +824,8 @@
 						"with": "ogre"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Oxen",
@@ -809,7 +841,8 @@
 						"with": "oxen"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Pestilence Demon",
@@ -825,7 +858,8 @@
 						"with": "demon"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Shade",
@@ -841,7 +875,8 @@
 						"with": "shadow"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Shatterskull Giant",
@@ -850,7 +885,8 @@
 			"_copy": {
 				"name": "Boulderfoot Giant",
 				"source": "PSZ"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Shoal Serpent",
@@ -866,7 +902,8 @@
 						"with": "serpent"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Sphinx (Type 1)",
@@ -875,7 +912,9 @@
 			"_copy": {
 				"name": "Androsphinx",
 				"source": "MM"
-			}
+			},
+			"damageTagsLegendary": [],
+			"hasToken": true
 		},
 		{
 			"name": "Sphinx (Type 2)",
@@ -884,7 +923,9 @@
 			"_copy": {
 				"name": "Gynosphinx",
 				"source": "MM"
-			}
+			},
+			"damageTagsLegendary": [],
+			"hasToken": true
 		},
 		{
 			"name": "Spirit",
@@ -900,7 +941,8 @@
 						"with": "spirit"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Surrakar",
@@ -916,7 +958,8 @@
 						"with": "surrakar"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Terastodon",
@@ -932,7 +975,8 @@
 						"with": "terastodon"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Terra Stomper",
@@ -948,7 +992,8 @@
 						"with": "terra stomper"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Timbermaw",
@@ -964,7 +1009,8 @@
 						"with": "timbermaw"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Trench Giant",
@@ -980,7 +1026,8 @@
 						"with": "giant"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Turntimber Giant",
@@ -989,7 +1036,8 @@
 			"_copy": {
 				"name": "Cloud Giant",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Ulamog",
@@ -1011,7 +1059,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Vampire Null",
@@ -1027,7 +1076,8 @@
 						"with": "null"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Woodcrasher Baloth",
@@ -1040,7 +1090,8 @@
 			"speed": {
 				"walk": 30,
 				"climb": 50
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Wraith",
@@ -1049,7 +1100,8 @@
 			"_copy": {
 				"name": "Wraith",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Wurm",
@@ -1065,7 +1117,8 @@
 						"with": "wurm"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Zendikar Dragon",
@@ -1075,7 +1128,8 @@
 				"name": "Young Red Dragon",
 				"source": "MM"
 			},
-			"int": 8
+			"int": 8,
+			"hasToken": true
 		},
 		{
 			"name": "Zendikar Golem",
@@ -1084,7 +1138,8 @@
 			"_copy": {
 				"name": "Stone Golem",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		}
 	]
 }

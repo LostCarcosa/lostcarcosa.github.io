@@ -314,6 +314,8 @@
 						{
 							"type": "table",
 							"caption": "Ability Score Summary",
+							"srd": true,
+							"basicRules": true,
 							"colStyles": [
 								"col-12"
 							],
@@ -327,7 +329,7 @@
 										"entries": [
 											"{@i Measures:} Natural athleticism, bodily power",
 											"{@i Important for:} Barbarian, fighter, paladin",
-											"{@filter Races that have a bonus to Strength|races|Ability Bonus (Including Subrace)=Strength +any}"
+											"{@filter Races that have a bonus to Strength|races|Ability Scores (Including Subrace)=Strength +any}"
 										],
 										"id": "019"
 									}
@@ -353,7 +355,7 @@
 										"entries": [
 											"{@i Measures:} Physical agility, reflexes, balance, poise",
 											"{@i Important for:} Monk, ranger, rogue",
-											"{@filter Races that have a bonus to Dexterity|races|Ability Bonus (Including Subrace)=Dexterity +any}"
+											"{@filter Races that have a bonus to Dexterity|races|Ability Scores (Including Subrace)=Dexterity +any}"
 										],
 										"id": "01a"
 									}
@@ -379,7 +381,7 @@
 										"entries": [
 											"{@i Measures:} Health, stamina, vital force",
 											"{@i Important for:} Everyone",
-											"{@filter Races that have a bonus to Constitution|races|Ability Bonus (Including Subrace)=Constitution +any}"
+											"{@filter Races that have a bonus to Constitution|races|Ability Scores (Including Subrace)=Constitution +any}"
 										],
 										"id": "01b"
 									}
@@ -405,7 +407,7 @@
 										"entries": [
 											"{@i Measures:} Mental acuity, information recall, analytical skill",
 											"{@i Important for:} Wizard",
-											"{@filter Races that have a bonus to Intelligence|races|Ability Bonus (Including Subrace)=Intelligence +any}"
+											"{@filter Races that have a bonus to Intelligence|races|Ability Scores (Including Subrace)=Intelligence +any}"
 										],
 										"id": "01c"
 									}
@@ -431,7 +433,7 @@
 										"entries": [
 											"{@i Measures:} Awareness, intuition, insight",
 											"{@i Important for:} Cleric, druid",
-											"{@filter Races that have a bonus to Wisdom|races|Ability Bonus (Including Subrace)=Wisdom +any}"
+											"{@filter Races that have a bonus to Wisdom|races|Ability Scores (Including Subrace)=Wisdom +any}"
 										],
 										"id": "01d"
 									}
@@ -457,7 +459,7 @@
 										"entries": [
 											"{@i Measures:} Confidence, eloquence, leadership",
 											"{@i Important for:} Bard, sorcerer, warlock",
-											"{@filter Races that have a bonus to Charisma|races|Ability Bonus (Including Subrace)=Charisma +any}"
+											"{@filter Races that have a bonus to Charisma|races|Ability Scores (Including Subrace)=Charisma +any}"
 										],
 										"id": "01e"
 									}
@@ -488,6 +490,8 @@
 								{
 									"type": "table",
 									"caption": "Ability Score Point Cost",
+									"basicRules": true,
+									"srd": true,
 									"colLabels": [
 										"Score",
 										"Cost",
@@ -530,6 +534,8 @@
 								{
 									"type": "table",
 									"caption": "Ability Scores and Modifiers",
+									"srd": true,
+									"basicRules": true,
 									"colLabels": [
 										"Score",
 										"Modifier",
@@ -710,7 +716,7 @@
 					"name": "Beyond 1st Level",
 					"page": 15,
 					"entries": [
-						"As your character goes on adventures and overcomes challenges, he or she gains experience, represented by experience points. A character who reaches a specified experience point total advances in capability. This advancement is called {@b gaining a level}. YEEB YEEB YEEB",
+						"As your character goes on adventures and overcomes challenges, he or she gains experience, represented by experience points. A character who reaches a specified experience point total advances in capability. This advancement is called {@b gaining a level}.",
 						"When your character gains a level, his or her class often grants additional features, as detailed in the class description. Some of these features allow you to increase your ability scores, either increasing two scores by 1 each or increasing one score by 2. You can't increase an ability score above 20. In addition, every character's proficiency bonus increases at certain levels.",
 						"Each time you gain a level, you gain 1 additional Hit Die. Roll that Hit Die, add your Constitution modifier to the roll, and add the total (minimum of 1) to your hit point maximum. Alternatively, you can use the fixed value shown in your class entry, which is the average result of the die roll (rounded up).",
 						"When your Constitution modifier increases by 1, your hit point maximum increases by 1 for each level you have attained. For example, when Bruenor reaches 8th level as a fighter, he increases his Constitution score from 17 to 18, thus increasing his Constitution modifier from +3 to +4. His hit point maximum then increases by 8.",
@@ -730,6 +736,9 @@
 						},
 						{
 							"type": "table",
+							"caption": "Character Advancement",
+							"srd": true,
+							"basicRules": true,
 							"colLabels": [
 								"Experience Points",
 								"Level",
@@ -1051,6 +1060,7 @@
 				"Twelve classes\u2014listed in the Classes table\u2014are found in almost every D&D world and define most typical adventurers.",
 				{
 					"type": "table",
+					"basicRules": true,
 					"colLabels": [
 						"Class",
 						"Description",
@@ -1222,6 +1232,7 @@
 								{
 									"type": "table",
 									"caption": "Random Height and Weight",
+									"basicRules": true,
 									"colLabels": [
 										"Race",
 										"Base Height",
@@ -1397,10 +1408,12 @@
 							"entries": [
 								"Your race indicates the languages your character can speak by default, and your background might give you access to one or more additional languages of your choice. Note these languages on your character sheet.",
 								"With your DM's permission, you can instead choose a language from the Exotic Languages table or a secret language, such as thieves' cant or the tongue of druids.",
-								"Some of these languages are actually families of languages with many dialects. For example, the Primordial language includes the {@language Auran}, {@language Aquan}, {@language Ignan}, and {@language Terran} dialects, one for each of the four elemental planes. Creatures that speak different dialects of the same language can communicate with one another.",
+								"Some of these languages are actually families of languages with many dialects. For example, the Primordial language includes the {@language Primordial||Auran}, {@language Primordial||Aquan}, {@language Primordial||Ignan}, and {@language Primordial||Terran} dialects, one for each of the four elemental planes. Creatures that speak different dialects of the same language can communicate with one another.",
 								{
 									"type": "table",
 									"caption": "Standard Languages",
+									"srd": true,
+									"basicRules": true,
 									"colLabels": [
 										"Language",
 										"Typical Speakers",
@@ -1457,6 +1470,8 @@
 								{
 									"type": "table",
 									"caption": "Exotic Languages",
+									"basicRules": true,
+									"srd": true,
 									"colLabels": [
 										"Language",
 										"Typical Speakers",
@@ -1614,7 +1629,7 @@
 					"entries": [
 						"Every story has a beginning. Your character's background reveals where you came from, how you became an adventurer, and your place in the world. Your fighter might have been a courageous knight or a grizzled soldier. Your wizard could have been a sage or an artisan. Your rogue might have gotten by as a guild thief or commanded audiences as a jester.",
 						"Choosing a background provides you with important story cues about your character's identity. The most important question to ask about your background is what changed? Why did you stop doing whatever your background describes and start adventuring? Where did you get the money to purchase your starting gear, or, if you come from a wealthy background, why don't you have more money? How did you learn the skills of your class? What sets you apart from ordinary people who share your background?",
-						"The sample backgrounds in this chapter provide both concrete benefits (features, proficiencies, and languages) and roleplaying suggestions.",
+						"The {@5etools sample backgrounds|backgrounds.html} in this chapter provide both concrete benefits (features, proficiencies, and languages) and roleplaying suggestions.",
 						{
 							"type": "entries",
 							"name": "Proficiencies",
@@ -1699,6 +1714,7 @@
 						{
 							"type": "table",
 							"caption": "Starting Wealth by Class",
+							"basicRules": true,
 							"colLabels": [
 								"Class",
 								"Funds"
@@ -1784,6 +1800,8 @@
 								{
 									"type": "table",
 									"caption": "Standard Exchange Rates",
+									"srd": true,
+									"basicRules": true,
 									"colLabels": [
 										"Coin",
 										"cp",
@@ -1916,6 +1934,8 @@
 						{
 							"type": "table",
 							"caption": "Armor",
+							"srd": true,
+							"basicRules": true,
 							"colLabels": [
 								"Armor",
 								"Cost",
@@ -2378,6 +2398,8 @@
 								{
 									"type": "table",
 									"caption": "Donning and Doffing Armor",
+									"basicRules": true,
+									"srd": true,
 									"colLabels": [
 										"Category",
 										"Don",
@@ -2430,6 +2452,8 @@
 						{
 							"type": "table",
 							"caption": "Weapons",
+							"srd": true,
+							"basicRules": true,
 							"colLabels": [
 								"Name",
 								"Cost",
@@ -3078,6 +3102,8 @@
 						{
 							"type": "table",
 							"caption": "Adventuring Gear",
+							"srd": true,
+							"basicRules": true,
 							"colLabels": [
 								"Item",
 								"Cost",
@@ -4098,6 +4124,8 @@
 						{
 							"type": "table",
 							"caption": "Container Capacity",
+							"srd": true,
+							"basicRules": true,
 							"colLabels": [
 								"Container",
 								"Capacity"
@@ -4257,6 +4285,8 @@
 										{
 											"type": "entries",
 											"name": "Artisan's Tools",
+											"basicRules": true,
+											"srd": true,
 											"page": 154,
 											"entries": [
 												"These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
@@ -4748,6 +4778,8 @@
 						{
 							"type": "table",
 							"caption": "Mounts and Other Animals",
+							"basicRules": true,
+							"srd": true,
 							"colLabels": [
 								"Item",
 								"Cost",
@@ -4814,6 +4846,8 @@
 						{
 							"type": "table",
 							"caption": "Tack, Harness, and Drawn Vehicles",
+							"basicRules": true,
+							"srd": true,
 							"colLabels": [
 								"Item",
 								"Cost",
@@ -4921,6 +4955,8 @@
 						{
 							"type": "table",
 							"caption": "Waterborne Vehicles",
+							"basicRules": true,
+							"srd": true,
 							"colLabels": [
 								"Item",
 								"Cost",
@@ -4974,12 +5010,15 @@
 					},
 					"name": "Trade Goods",
 					"page": 157,
+					"basicRules": true,
+					"srd": true,
 					"entries": [
 						"Most wealth is not in coins. It is measured in livestock, grain, land, rights to collect taxes, or rights to resources (such as a mine or a forest).",
 						"Guilds, nobles, and royalty regulate trade. Chartered companies are granted rights to conduct trade along certain routes, to send merchant ships to various ports, or to buy or sell specific goods. Guilds set prices for the goods or services that they control, and determine who may or may not offer those goods and services. Merchants commonly exchange trade goods without using currency. The Trade Goods table shows the value of commonly exchanged goods.",
 						{
 							"type": "table",
 							"caption": "Trade Goods",
+							"srd": true,
 							"colLabels": [
 								"Cost",
 								"Goods"
@@ -5059,6 +5098,8 @@
 							"type": "entries",
 							"name": "Lifestyle Expenses",
 							"page": 157,
+							"basicRules": true,
+							"srd": true,
 							"entries": [
 								"Lifestyle expenses provide you with a simple way to account for the cost of living in a fantasy world. They cover your accommodations, food and drink, and all your other necessities. Furthermore, expenses cover the cost of maintaining your equipment so you can be ready when adventure next calls.",
 								"At the start of each week or month (your choice), choose a lifestyle from the Expenses table and pay the price to sustain that lifestyle. The prices listed are per day, so if you wish to calculate the cost of your chosen lifestyle over a thirty-day period, multiply the listed price by 30. Your lifestyle might change from one period to the next, based on the funds you have at your disposal, or you might maintain the same lifestyle throughout your character's career.",
@@ -5187,6 +5228,8 @@
 								{
 									"type": "table",
 									"caption": "Food, Drink, and Lodging",
+									"basicRules": true,
+									"srd": true,
 									"colLabels": [
 										"Item",
 										"Cost"
@@ -5383,6 +5426,8 @@
 								{
 									"type": "table",
 									"caption": "Services",
+									"basicRules": true,
+									"srd": true,
 									"colLabels": [
 										"Service",
 										"Pay"
@@ -5504,6 +5549,7 @@
 								{
 									"type": "table",
 									"caption": "Multiclassing Prerequisites",
+									"srd": true,
 									"colLabels": [
 										"Class",
 										"Ability Score Minimum"
@@ -5603,6 +5649,7 @@
 								{
 									"type": "table",
 									"caption": "Multiclassing Proficiencies",
+									"srd": true,
 									"colLabels": [
 										"Class",
 										"Proficiencies Gained"
@@ -5738,6 +5785,7 @@
 										{
 											"type": "table",
 											"caption": "Multiclass Spellcaster: Spell Slots per Spell Level",
+											"srd": true,
 											"colLabels": [
 												"Lvl.",
 												"1st",
@@ -6088,6 +6136,8 @@
 						{
 							"type": "table",
 							"caption": "Ability Scores and Modifiers",
+							"basicRules": true,
+							"srd": true,
 							"colLabels": [
 								"Score",
 								"Modifier",
@@ -6199,6 +6249,8 @@
 						{
 							"type": "table",
 							"caption": "Typical Difficulty Classes",
+							"basicRules": true,
+							"srd": true,
 							"colLabels": [
 								"Task Difficulty",
 								"DC"
@@ -6700,7 +6752,7 @@
 											"name": "Religion",
 											"page": 178,
 											"entries": [
-												"Your Wisdom ({@skill Religion}) check measures your ability to recall lore about religions, cults, deities, as well as beings related to the Celestial or Infernal Planes, as well as your ability to engage in religious tasks, such as performing rites."
+												"Your Intelligence ({@skill Religion}) check measures your ability to recall lore about deities, rites and prayers, religious hierarchies, holy symbols, and the practices of secret cults."
 											],
 											"id": "12e"
 										},
@@ -6976,7 +7028,7 @@
 					"page": 181,
 					"entries": [
 						"Swimming across a rushing river, sneaking down a dungeon corridor, scaling a treacherous mountain slope all sorts of movement play a key role in D&D adventures.",
-						"The DM can summarize the adventurers' movement without calculating exact distances or travel times: \"You travel through the forest and find the dungeon entrance late in the evening of the third day.\" Even in a dungeon, particularly a large dungeon or a cave network, the DM can summarize movement between encounters: \"After killing the guardian at the entrance to the ancient dwarven stronghold, you consult your map, which leads you through miles of echoing corridors to a chasm bridged by a narrow stone arch.\"Sometimes it's important, though, to know how long it takes to get from one spot to another, whether the answer is in days, hours, or minutes. The rules for determining travel time depend on two factors: the speed and travel pace of the creatures moving and the terrain they're moving over.",
+						"The DM can summarize the adventurers' movement without calculating exact distances or travel times: \"You travel through the forest and find the dungeon entrance late in the evening of the third day.\" Even in a dungeon, particularly a large dungeon or a cave network, the DM can summarize movement between encounters: \"After killing the guardian at the entrance to the ancient dwarven stronghold, you consult your map, which leads you through miles of echoing corridors to a chasm bridged by a narrow stone arch.\" Sometimes it's important, though, to know how long it takes to get from one spot to another, whether the answer is in days, hours, or minutes. The rules for determining travel time depend on two factors: the speed and travel pace of the creatures moving and the terrain they're moving over.",
 						{
 							"type": "entries",
 							"name": "Speed",
@@ -7017,6 +7069,8 @@
 										{
 											"type": "table",
 											"caption": "Travel Pace",
+											"basicRules": true,
+											"srd": true,
 											"colLabels": [
 												"Pace",
 												"Distance Traveled per Minute",
@@ -7088,7 +7142,7 @@
 									"name": "Climbing, Swimming, and Crawling",
 									"page": 182,
 									"entries": [
-										"Each foot of movement costs 1 extra foot (2 extra feet in difficult terrain) when you're climbing, swimming, or crawling. You ignore this extra cost if you have a climbing speed and use it to climb, or a swimming speed and use it to swim. At the DM's option, climbing a slippery vertical surface or one with few handholds requires a successful Strength ({@skill Athletics}) check. Similarly, gaining any distance in rough water might require a successful Strength ({@skill Athletics}) check."
+										"Each foot of movement costs 1 extra foot (2 extra feet in {@quickref difficult terrain||3}) when you're climbing, swimming, or crawling. You ignore this extra cost if you have a climbing speed and use it to climb, or a swimming speed and use it to swim. At the DM's option, climbing a slippery vertical surface or one with few handholds requires a successful Strength ({@skill Athletics}) check. Similarly, gaining any distance in rough water might require a successful Strength ({@skill Athletics}) check."
 									],
 									"id": "14d"
 								},
@@ -7108,7 +7162,7 @@
 											"entries": [
 												"When you make a long jump, you cover a number of feet up to your Strength score if you move at least 10 feet on foot immediately before the jump. When you make a standing long jump, you can leap only half that distance. Either way, each foot you clear on the jump costs a foot of movement.",
 												"This rule assumes that the height of your jump doesn't matter, such as a jump across a stream or chasm. At your DM's option, you must succeed on a DC 10 Strength ({@skill Athletics}) check to clear a low obstacle (no taller than a quarter of the jump's distance), such as a hedge or low wall. Otherwise, you hit it.",
-												"When you land in difficult terrain, you must succeed on a DC 10 Dexterity ({@skill Acrobatics}) check to land on your feet. Otherwise, you land {@condition prone}."
+												"When you land in {@quickref difficult terrain||3}, you must succeed on a DC 10 Dexterity ({@skill Acrobatics}) check to land on your feet. Otherwise, you land {@condition prone}."
 											],
 											"id": "14f"
 										},
@@ -7184,7 +7238,7 @@
 											"name": "Surprising Foes",
 											"page": 183,
 											"entries": [
-												"If the adventurers encounter a hostile creature or group, the DM determines whether the adventurers or their foes might be surprised when combat erupts. See chapter 9 for more about surprise."
+												"If the adventurers encounter a hostile creature or group, the DM determines whether the adventurers or their foes might be {@quickref Surprise|PHB|3|0|surprised} when combat erupts. See chapter 9 for more about surprise."
 											],
 											"id": "157"
 										}
@@ -7614,7 +7668,7 @@
 								{
 									"type": "item",
 									"name": "1. Determine surprise",
-									"entry": "The DM determines whether anyone involved in the combat encounter is surprised."
+									"entry": "The DM determines whether anyone involved in the combat encounter is {@quickref Surprise|PHB|3|0|surprised}."
 								}
 							]
 						},
@@ -7680,8 +7734,8 @@
 							"page": 189,
 							"entries": [
 								"A band of adventurers sneaks up on a bandit camp, springing from the trees to attack them. A gelatinous cube glides down a dungeon passage, unnoticed by the adventurers until the cube engulfs one of them. In these situations, one side of the battle gains surprise over the other.",
-								"The DM determines who might be surprised. If neither side tries to be stealthy, they automatically notice each other. Otherwise, the DM compares the Dexterity ({@skill Stealth}) checks of anyone hiding with the passive Wisdom ({@skill Perception}) score of each creature on the opposing side. Any character or monster that doesn't notice a threat is surprised at the start of the encounter.",
-								"If you're surprised, you can't move or take an action on your first turn of the combat, and you can't take a reaction until that turn ends. A member of a group can be surprised even if the other members aren't."
+								"The DM determines who might be {@quickref Surprise|PHB|3|0|surprised}. If neither side tries to be stealthy, they automatically notice each other. Otherwise, the DM compares the Dexterity ({@skill Stealth}) checks of anyone hiding with the passive Wisdom ({@skill Perception}) score of each creature on the opposing side. Any character or monster that doesn't notice a threat is {@quickref Surprise|PHB|3|0|surprised} at the start of the encounter.",
+								"If you're {@quickref Surprise|PHB|3|0|surprised}, you can't move or take an action on your first turn of the combat, and you can't take a reaction until that turn ends. A member of a group can be {@quickref Surprise|PHB|3|0|surprised} even if the other members aren't."
 							],
 							"data": {
 								"quickrefIndex": true
@@ -7848,7 +7902,7 @@
 							"entries": [
 								"Combatants often find themselves lying on the ground, either because they are knocked down or because they throw themselves down. In the game, they are {@condition prone}, a condition described in the appendix.",
 								"You can drop {@condition prone} without using any of your speed. Standing up takes more effort; doing so costs an amount of movement equal to half your speed. For example, if your speed is 30 feet, you must spend 15 feet of movement to stand up. You can't stand up if you don't have enough movement left or if your speed is 0.",
-								"To move while {@condition prone}, you must crawl or use magic such as teleportation. Every foot of movement while crawling costs 1 extra foot. Crawling 1 foot in difficult terrain, therefore, costs 3 feet of movement."
+								"To move while {@condition prone}, you must crawl or use magic such as teleportation. Every foot of movement while crawling costs 1 extra foot. Crawling 1 foot in {@quickref difficult terrain||3}, therefore, costs 3 feet of movement."
 							],
 							"id": "189"
 						},
@@ -7857,7 +7911,7 @@
 							"name": "Moving around Other Creatures",
 							"page": 191,
 							"entries": [
-								"You can move through a nonhostile creature's space. In contrast, you can move through a hostile creature's space only if the creature is at least two sizes larger or smaller than you. Remember that another creature's space is difficult terrain for you.",
+								"You can move through a nonhostile creature's space. In contrast, you can move through a hostile creature's space only if the creature is at least two sizes larger or smaller than you. Remember that another creature's space is {@quickref difficult terrain||3} for you.",
 								"Whether a creature is a friend or an enemy, you can't willingly end your move in its space.",
 								"If you leave a hostile creature's reach during your move, you provoke an opportunity attack, as explained later in the chapter."
 							],
@@ -7885,6 +7939,8 @@
 								{
 									"type": "table",
 									"caption": "Size Categories",
+									"basicRules": true,
+									"srd": true,
 									"colLabels": [
 										"Size",
 										"Space"
@@ -7975,7 +8031,7 @@
 									"type": "entries",
 									"entries": [
 										"To enter a square, you must have at least 1 square of movement left, even if the square is diagonally adjacent to the square you're in. (The rule for diagonal movement sacrifices realism for the sake of smooth play. The Dungeon Master's Guide provides guidance on using a more realistic approach.)",
-										"If a square costs extra movement, as a square of difficult terrain does, you must have enough movement left to pay for entering it. For example, you must have at least 2 squares of movement left to enter a square of difficult terrain."
+										"If a square costs extra movement, as a square of {@quickref difficult terrain||3} does, you must have enough movement left to pay for entering it. For example, you must have at least 2 squares of movement left to enter a square of {@quickref difficult terrain||3}."
 									],
 									"id": "192"
 								},
@@ -10994,6 +11050,7 @@
 								{
 									"type": "table",
 									"caption": "Deities of the Forgotten Realms",
+									"basicRules": true,
 									"colLabels": [
 										"Deity",
 										"Alignment",
@@ -11989,6 +12046,7 @@
 								{
 									"type": "table",
 									"caption": "Celtic Deities",
+									"srd": true,
 									"colLabels": [
 										"Deity",
 										"Alignment",
@@ -12100,6 +12158,7 @@
 								{
 									"type": "table",
 									"caption": "Greek Deities",
+									"srd": true,
 									"colLabels": [
 										"Deity",
 										"Alignment",
@@ -12243,6 +12302,7 @@
 								{
 									"type": "table",
 									"caption": "Egyptian Deities",
+									"srd": true,
 									"colLabels": [
 										"Deity",
 										"Alignment",
@@ -12355,6 +12415,7 @@
 								{
 									"type": "table",
 									"caption": "Norse Deities",
+									"srd": true,
 									"colLabels": [
 										"Deity",
 										"Alignment",
@@ -12566,7 +12627,7 @@
 									"name": "Spells",
 									"page": 301,
 									"entries": [
-										"A number of spells allow direct or indirect access to other planes of existence. Plane shift and gate can transport adventurers directly to any other plane of existence, with different degrees of precision. Etherealness allows adventurers to enter the Ethereal Plane and travel from there to any of the planes it touches\u2014the Shadowfell, the Feywild, or the Elemental Planes. And the {@spell astral projection} spell lets adventurers project themselves into the Astral Plane and travel to the Outer Planes."
+										"A number of spells allow direct or indirect access to other planes of existence. {@spell Plane shift} and {@spell gate} can transport adventurers directly to any other plane of existence, with different degrees of precision. Etherealness allows adventurers to enter the Ethereal Plane and travel from there to any of the planes it touches\u2014the Shadowfell, the Feywild, or the Elemental Planes. And the {@spell astral projection} spell lets adventurers project themselves into the Astral Plane and travel to the Outer Planes."
 									],
 									"id": "20b"
 								},
