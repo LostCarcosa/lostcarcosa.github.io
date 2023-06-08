@@ -7703,48 +7703,6 @@
 			]
 		},
 		{
-			"name": "Message",
-			"source": "PHB",
-			"page": 259,
-			"srd": true,
-			"level": 0,
-			"school": "T",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 120
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": "a short piece of copper wire"
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "round",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.",
-				"You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings."
-			],
-			"areaTags": [
-				"ST"
-			]
-		},
-		{
 			"name": "Meteor Swarm",
 			"source": "PHB",
 			"page": 259,
@@ -9669,44 +9627,6 @@
 			],
 			"areaTags": [
 				"MT"
-			]
-		},
-		{
-			"name": "Sending",
-			"source": "PHB",
-			"page": 274,
-			"srd": true,
-			"level": 3,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "unlimited"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": "a short piece of fine copper wire"
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "round",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
-				"You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a {@chance 5|||Message lost!|Message arrives} chance that the message doesn't arrive."
 			]
 		},
 		{
