@@ -4723,7 +4723,6 @@
 			"name": "Upgrade: Rope Winch",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4749,7 +4748,6 @@
 			"name": "Upgrade: Aerodynamic",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4764,7 +4762,6 @@
 			"name": "Upgrade: Armor Piercing",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4786,7 +4783,6 @@
 			"name": "Upgrade: Vicious",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4807,7 +4803,6 @@
 			"name": "Upgrade: Adaptable",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4828,7 +4823,6 @@
 			"name": "Upgrade: Flourish",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4842,7 +4836,6 @@
 			"name": "Upgrade: Concealed",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4858,7 +4851,6 @@
 			"name": "Upgrade: Elongated",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4873,7 +4865,6 @@
 			"name": "Upgrade: Defender",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4888,7 +4879,6 @@
 			"name": "Upgrade: Hooked",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4903,7 +4893,6 @@
 			"name": "Upgrade: Massive",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4919,7 +4908,6 @@
 			"name": "Upgrade: Quick",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4934,7 +4922,6 @@
 			"name": "Upgrade: Executioner",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4948,7 +4935,6 @@
 			"name": "Upgrade: Welded",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4963,7 +4949,6 @@
 			"name": "Upgrade: Powerful",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4984,7 +4969,6 @@
 			"name": "Upgrade: Stancebreaker",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -4999,7 +4983,6 @@
 			"name": "Upgrade: Combo",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
@@ -5021,7 +5004,6 @@
 			"name": "Upgrade: Precise",
 			"source": "MOD",
 			"rarity": "none",
-			"value": 0,
 			"weight": 0,
 			"property": [
 				"SC"
