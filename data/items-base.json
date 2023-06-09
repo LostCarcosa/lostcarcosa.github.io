@@ -150,7 +150,6 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"weaponCategory": "simple",
 			"property": [
 				"L"
@@ -180,7 +179,6 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"weaponCategory": "simple",
 			"property": [
 				"F",
@@ -202,7 +200,6 @@
 			"type": "R",
 			"rarity": "none",
 			"weight": 0,
-			"value": 0,
 			"weaponCategory": "simple",
 			"property": [
 				"F",
@@ -431,7 +428,6 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"weaponCategory": "simple",
 			"property": [
 				"L",
@@ -476,7 +472,6 @@
 			"type": "MA",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"ac": 12,
 			"armor": true,
 			"entries": [
@@ -586,7 +581,6 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"weaponCategory": "simple",
 			"property": [
 				"L",
@@ -771,7 +765,6 @@
 			"type": "LA",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"ac": 11,
 			"armor": true,
 			"stealth": true,
@@ -1010,7 +1003,6 @@
 			"type": "M",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"weaponCategory": "simple",
 			"property": [
 				"L"
@@ -1027,7 +1019,6 @@
 			"basicRules": true,
 			"type": "R",
 			"rarity": "none",
-			"value": 0,
 			"weaponCategory": "simple",
 			"property": [
 				"A"

@@ -4152,7 +4152,6 @@
 			"type": "G",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"entries": [
 				"A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
 			]
@@ -24740,7 +24739,6 @@
 			"type": "G",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"entries": [
 				"This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch\u2014or anything else with abundant, exposed fuel\u2014takes an action. Lighting any other fire takes 1 minute."
 			]
@@ -24938,7 +24936,6 @@
 			"type": "G",
 			"rarity": "none",
 			"weight": 1,
-			"value": 0,
 			"entries": [
 				"A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
 			]
