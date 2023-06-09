@@ -22,8 +22,7 @@
 			"basicRules": true,
 			"type": "A",
 			"rarity": "none",
-			"weight": 0,
-			"value": 0
+			"weight": 0
 		},
 		{
 			"name": "Battleaxe",
@@ -84,8 +83,7 @@
 			"basicRules": true,
 			"type": "A",
 			"rarity": "none",
-			"weight": 0,
-			"value": 0
+			"weight": 0
 		},
 		{
 			"name": "Breastplate",
@@ -167,8 +165,7 @@
 			"basicRules": true,
 			"type": "A",
 			"rarity": "none",
-			"weight": 0,
-			"value": 0
+			"weight": 0
 		},
 		{
 			"name": "Dagger",
