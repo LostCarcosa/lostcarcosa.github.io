@@ -10,5 +10,6 @@
 	"ranger": "class-ranger.json",
 	"rogue": "class-rogue.json",
 	"sorcerer": "class-sorcerer.json",
-	"warlock": "class-warlock.json"
+	"warlock": "class-warlock.json",
+	"wizard": "class-wizard.json"
 }

@@ -89,35 +89,17 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
 					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
 					"A {@item spellbook|phb}"
 				],
 				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
 						"a": [
-							"quarterstaff|phb"
-						],
-						"b": [
-							"dagger|phb"
-						]
-					},
-					{
-						"a": [
 							"component pouch|phb"
 						],
 						"b": [
 							"arcane focus|phb"
-						]
-					},
-					{
-						"a": [
-							"scholar's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
 						]
 					},
 					{
@@ -226,7 +208,7 @@
 							0
 						],
 						[
-							3,
+							4,
 							0,
 							0,
 							0,
@@ -248,7 +230,7 @@
 							0
 						],
 						[
-							4,
+							5,
 							3,
 							0,
 							0,
@@ -259,7 +241,7 @@
 							0
 						],
 						[
-							4,
+							5,
 							3,
 							2,
 							0,
@@ -270,8 +252,8 @@
 							0
 						],
 						[
+							5,
 							4,
-							3,
 							3,
 							0,
 							0,
@@ -281,8 +263,8 @@
 							0
 						],
 						[
+							5,
 							4,
-							3,
 							3,
 							1,
 							0,
@@ -292,9 +274,9 @@
 							0
 						],
 						[
+							5,
 							4,
-							3,
-							3,
+							4,
 							2,
 							0,
 							0,
@@ -303,9 +285,9 @@
 							0
 						],
 						[
+							5,
 							4,
-							3,
-							3,
+							4,
 							3,
 							1,
 							0,
@@ -314,10 +296,10 @@
 							0
 						],
 						[
+							5,
 							4,
-							3,
-							3,
-							3,
+							4,
+							4,
 							2,
 							0,
 							0,
@@ -325,10 +307,10 @@
 							0
 						],
 						[
+							5,
 							4,
-							3,
-							3,
-							3,
+							4,
+							4,
 							2,
 							1,
 							0,
@@ -336,76 +318,65 @@
 							0
 						],
 						[
+							5,
+							4,
+							4,
 							4,
 							3,
-							3,
-							3,
-							2,
 							1,
 							0,
 							0,
 							0
 						],
 						[
+							5,
+							4,
+							4,
 							4,
 							3,
-							3,
-							3,
-							2,
 							1,
 							1,
 							0,
 							0
 						],
 						[
+							5,
+							4,
+							4,
 							4,
 							3,
-							3,
-							3,
-							2,
 							1,
 							1,
 							0,
 							0
 						],
 						[
+							5,
+							4,
+							4,
 							4,
 							3,
-							3,
-							3,
-							2,
 							1,
 							1,
 							1,
 							0
 						],
 						[
+							5,
+							4,
+							4,
 							4,
 							3,
-							3,
-							3,
-							2,
 							1,
 							1,
 							1,
 							0
 						],
 						[
+							5,
 							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							1
-						],
-						[
 							4,
-							3,
-							3,
-							3,
+							4,
 							3,
 							1,
 							1,
@@ -413,10 +384,21 @@
 							1
 						],
 						[
+							5,
+							4,
+							4,
 							4,
 							3,
-							3,
-							3,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							5,
+							4,
+							4,
+							4,
 							3,
 							2,
 							1,
@@ -424,10 +406,10 @@
 							1
 						],
 						[
+							5,
 							4,
-							3,
-							3,
-							3,
+							4,
+							4,
 							3,
 							2,
 							2,
@@ -444,7 +426,6 @@
 					"classFeature": "Arcane Tradition|Wizard||2",
 					"gainSubclassFeature": true
 				},
-				"Cantrip Formulas|Wizard||3|TCE",
 				"Ability Score Improvement|Wizard||4",
 				{
 					"classFeature": "Arcane Tradition feature|Wizard||6",
@@ -477,10 +458,10 @@
 						"Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, and brute-force mind control. Their magic conjures monsters from other planes of existence, glimpses the future, or turns slain foes into zombies. Their mightiest spells change one substance into another, call meteors down from the sky, or open portals to other worlds.",
 						{
 							"type": "entries",
-							"name": "Scholars of the Arcane",
+							"name": "Sheer Will and Talent",
 							"entries": [
-								"Wild and enigmatic, varied in form and function, the power of magic draws students who seek to master its mysteries. Some aspire to become like the gods, shaping reality itself. Though the casting of a typical spell requires merely the utterance of a few strange words, fleeting gestures, and sometimes a pinch or clump of exotic materials, these surface components barely hint at the expertise attained after years of apprenticeship and countless hours of study.",
-								"Wizards live and die by their spells. Everything else is secondary. They learn new spells as they experiment and grow in experience. They can also learn them from other wizards, from ancient tomes or inscriptions, and from ancient creatures (such as the fey) that are steeped in magic."
+								"Most other casters channel their magic through some form of blessing, whether it be divine will, the power of the land, or a gifted bloodline. Wizards, however, are living proof that one doesn't need supernatural aid to harness the magic of the cosmos. Through hard work and extensive training, wizards learn to tap into the power of the magical weave directly- without any need for... shortcuts.",
+								"Wizards harness magic through strict, rigorous knowledge and understanding. Their magic is precise, delicate, and must be prepared ahead of time. Wizards have a reputation for being both the most intelligent and most paranoid of adventurers- unsurprising, considering their survival so heavily depends on their ability to anticipate future threats before they arrive."
 							]
 						},
 						{
@@ -969,9 +950,8 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
-				"For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots.",
-				"You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+				"You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher. Eacj recovered spell slot has the same spell it was originally prepared with (so if you recover a 3rd level spell slot that originally contained {@spell fireball}, it still can only be used to cast {@spell fireball}.",
+				"For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a second level spell slot or two first level spell slots."
 			]
 		},
 		{
@@ -1001,12 +981,19 @@
 				},
 				{
 					"type": "entries",
-					"name": "Preparing and Casting Spells",
+					"name": "Vancian Spellcasting",
 					"entries": [
-						"The Wizard table shows how many spell slots you have to cast your wizard spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.",
-						"For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell {@spell magic missile}, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-						"You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list."
+						"Unlike their fellow casters, wizards must employ a rigorous and inflexible method of spellcasting, heavily relying on good planning and advance intel. Though far less adaptable than most of their magical counterparts (especially the sorcerer), the wizard makes up for this deficiency by having an extremely robust pool of spells to pick from.",
+						"At the end of a long rest, you prepare your spells for the day. To do this, you must assign one spell to each individual spell slot. That spell slot can {@i only} be used to cast that spell. The spell slot must be of sufficient level to cast the chosen spell. There is no limit to how many times you prepare an individual spell, or how many different spells you prepare, except the inherent limit imposed by how many spell slots you have.",
+						"For example, a third level wizard has 4 1st level slots and 2 second level slots. They could prepare six {@spell magic missile|magic missiles} (of which two would be upcast to 2nd level) to be able to cast magic missile 6 times, or they could prepare {@spell ice knife}, {@spell grease}, {@spell magic missile}, {@spell burning hands}, {@spell absorb elements}, {@spell scorching ray}, and {@spell darkness} in order to be able to cast each of the six spells once.",
+						{
+							"type": "inset",
+							"name": "Design Notes",
+							"entries": [
+								"Taken from how spellcasting works in older editions. It's pretty intentionally restrictive, forcing the player to plan their spell usage ahead of time. It's essentially the polar opposite of the sorcerer, who has near-total flexibility with their spell points but has access to relatively few spells.",
+								"In exchange for this limited flexibility, wizards have a higher-than-normal number of baseline spell slots, which couples with Arcane Recovery to allow them to draw on significant magical reserves over the course of an adventuring day."
+							]
+						}
 					]
 				},
 				{
@@ -1052,6 +1039,13 @@
 					]
 				},
 				{
+					"type": "entries",
+					"name": "Specialization",
+					"entries": [
+						"When you gain your first wizard level, you must designate one school of magic as your Specialization and one different school of magic as your Weakness. You may copy spells of your Specialization into your spellbook using half the time and cost (rounded up); however, you may not learn or cast spells from your Weakness through any means. Certain subclasses may require specific Specializations (or barr specific Weaknesses)."
+					]
+				},
+				{
 					"type": "inset",
 					"name": "Your Spellbook",
 					"entries": [
@@ -1066,7 +1060,7 @@
 									"entries": [
 										"When you find a wizard spell of 1st level or higher, you can add it to your spellbook if it is of a spell level you can prepare and if you can spare the time to decipher and copy it.",
 										"Copying a spell into your spellbook involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation.",
-										"For each level of the spell, the process takes 2 hours and costs 50 gp. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.",
+										"For each level of the spell, the process takes 2 hours and costs 1 COIN. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.",
 										{
 											"type": "entries",
 											"name": "Copying from a Spell Scroll",
@@ -1087,7 +1081,7 @@
 									"type": "entries",
 									"name": "Replacing the Book",
 									"entries": [
-										"You can copy a spell from your own spellbook into another book\u2014for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.",
+										"You can copy a spell from your own spellbook into another book\u2014for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour per level of the copied spell, and 1 COIN for every 10 collective levels of spells transcribed (rounded up).",
 										"If you lose your spellbook, you can use the same procedure to transcribe the spells that you have prepared into a new spellbook. Filling out the remainder of your spellbook requires you to find new spells to do so, as normal. For this reason, many wizards keep backup spellbooks in a safe place."
 									]
 								}
@@ -1120,19 +1114,6 @@
 			"level": 2,
 			"entries": [
 				"When you reach 2nd level, you choose an arcane tradition from the list of available traditions, shaping your practice of magic. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
-			]
-		},
-		{
-			"name": "Cantrip Formulas",
-			"source": "TCE",
-			"page": 75,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"level": 3,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 3rd-level wizard {@variantrule optional class features|tce|optional feature}}",
-				"You have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one wizard cantrip you know with another cantrip from the wizard spell list."
 			]
 		},
 		{
@@ -1471,10 +1452,6 @@
 				"Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Abjuration Savant|Wizard||Abjuration||2"
-				},
-				{
-					"type": "refSubclassFeature",
 					"subclassFeature": "Arcane Ward|Wizard||Abjuration||2"
 				}
 			]
@@ -1565,10 +1542,6 @@
 				"As a conjurer, you favor spells that produce objects and creatures out of thin air. You can conjure billowing clouds of killing fog or summon creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Conjuration Savant|Wizard||Conjuration||2"
-				},
-				{
-					"type": "refSubclassFeature",
 					"subclassFeature": "Minor Conjuration|Wizard||Conjuration||2"
 				}
 			]
@@ -1656,10 +1629,6 @@
 			"level": 2,
 			"entries": [
 				"The counsel of a diviner is sought by royalty and commoners alike, for all seek a clearer understanding of the past, present, and future. As a diviner, you strive to part the veils of space, time, and consciousness so that you can see clearly. You work to master spells of discernment, remote viewing, supernatural knowledge, and foresight.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Divination Savant|Wizard||Divination||2"
-				},
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Portent|Wizard||Divination||2"
@@ -1783,10 +1752,6 @@
 				"As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Enchantment Savant|Wizard||Enchantment||2"
-				},
-				{
-					"type": "refSubclassFeature",
 					"subclassFeature": "Hypnotic Gaze|Wizard||Enchantment||2"
 				}
 			]
@@ -1878,10 +1843,6 @@
 			"level": 2,
 			"entries": [
 				"You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Evocation Savant|Wizard||Evocation||2"
-				},
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Sculpt Spells|Wizard||Evocation||2"
@@ -1982,10 +1943,6 @@
 				"You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists\u2014including many gnome wizards\u2014are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Illusion Savant|Wizard||Illusion||2"
-				},
-				{
-					"type": "refSubclassFeature",
 					"subclassFeature": "Improved Minor Illusion|Wizard||Illusion||2"
 				}
 			]
@@ -2075,10 +2032,6 @@
 			"entries": [
 				"The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate.",
 				"Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Necromancy Savant|Wizard||Necromancy||2"
-				},
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Grim Harvest|Wizard||Necromancy||2"
@@ -2176,10 +2129,6 @@
 			"entries": [
 				"You are a student of spells that modify energy and matter. To you, the world is not a fixed thing, but eminently mutable, and you delight in being an agent of change. You wield the raw stuff of creation and learn to alter both physical forms and mental qualities. Your magic gives you the tools to become a smith on reality's forge.",
 				"Some transmuters are tinkerers and pranksters, turning people into toads and transforming copper into silver for fun and occasional profit. Others pursue their magical studies with deadly seriousness, seeking the power of the gods to make and destroy worlds.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Transmutation Savant|Wizard||Transmutation||2"
-				},
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Minor Alchemy|Wizard||Transmutation||2"

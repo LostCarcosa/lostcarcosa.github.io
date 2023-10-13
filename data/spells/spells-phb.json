@@ -2237,84 +2237,6 @@
 			]
 		},
 		{
-			"name": "Conjure Barrage",
-			"source": "PHB",
-			"page": 225,
-			"level": 3,
-			"school": "C",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "cone",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": "one piece of ammunition or a thrown weapon"
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"You throw a nonmagical weapon or fire a piece of nonmagical ammunition into the air to create a cone of identical weapons that shoot forward and then disappear. Each creature in a 60-foot cone must succeed on a Dexterity saving throw. A creature takes {@damage 3d8} damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the weapon or ammunition used as a component."
-			],
-			"savingThrow": [
-				"dexterity"
-			],
-			"areaTags": [
-				"N"
-			]
-		},
-		{
-			"name": "Conjure Volley",
-			"source": "PHB",
-			"page": 226,
-			"level": 5,
-			"school": "C",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 150
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": "one piece of ammunition or one thrown weapon"
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"You fire a piece of nonmagical ammunition from a ranged weapon or throw a nonmagical weapon into the air and choose a point within range. Hundreds of duplicates of the ammunition or weapon fall in a volley from above and then disappear. Each creature in a 40-foot-radius, 20-foot-high cylinder centered on that point must make a Dexterity saving throw. A creature takes {@damage 8d8} damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the ammunition or weapon."
-			],
-			"savingThrow": [
-				"dexterity"
-			],
-			"areaTags": [
-				"Y"
-			]
-		},
-		{
 			"name": "Contact Other Plane",
 			"source": "PHB",
 			"page": 226,
@@ -5459,47 +5381,6 @@
 			],
 			"areaTags": [
 				"ST"
-			]
-		},
-		{
-			"name": "Gentle Repose",
-			"source": "PHB",
-			"page": 245,
-			"srd": true,
-			"level": 2,
-			"school": "N",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": "a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration"
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "day",
-						"amount": 10
-					}
-				}
-			],
-			"meta": {
-				"ritual": true
-			},
-			"entries": [
-				"You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
-				"The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as {@spell raise dead}."
 			]
 		},
 		{
@@ -11830,50 +11711,6 @@
 			],
 			"abilityCheck": [
 				"wisdom"
-			]
-		},
-		{
-			"name": "Zone of Truth",
-			"source": "PHB",
-			"page": 289,
-			"srd": true,
-			"level": 2,
-			"school": "E",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 10
-					}
-				}
-			],
-			"entries": [
-				"You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point of your choice within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw.",
-				"An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such creatures can be evasive in its answers as long as it remains within the boundaries of the truth."
-			],
-			"savingThrow": [
-				"charisma"
-			],
-			"areaTags": [
-				"S"
 			]
 		}
 	]

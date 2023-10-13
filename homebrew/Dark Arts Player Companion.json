@@ -1540,6 +1540,34 @@
 				"Shroud of Darkness|Bard||Shadowfell|DAPC|6",
 				"Umbral Body|Bard||Shadowfell|DAPC|14"
 			]
+		},
+		{
+			"name": "School of Hemomancy",
+			"source": "DAPC",
+			"page": 22,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"shortName": "Hemomancy",
+			"subclassFeatures": [
+				"School of Hemomancy|Wizard||Hemomancy|DAPC|2",
+				"Deepen Wound|Wizard||Hemomancy|DAPC|6",
+				"Improved Endurance|Wizard||Hemomancy|DAPC|10",
+				"Dance with Dead|Wizard||Hemomancy|DAPC|14"
+			]
+		},
+		{
+			"name": "School of Reawakening",
+			"source": "DAPC",
+			"page": 22,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"shortName": "Reawakening",
+			"subclassFeatures": [
+				"School of Reawakening|Wizard||Reawakening|DAPC|2",
+				"Volatile Soul|Wizard||Reawakening|DAPC|6",
+				"Consume|Wizard||Reawakening|DAPC|10",
+				"Lasting Creation|Wizard||Reawakening|DAPC|14"
+			]
 		}
 	],
 	"subclassFeature": [
@@ -2776,7 +2804,8 @@
 			"header": 1,
 			"entries": [
 				"{@i (3rd-level Way of the Bloodied Fist feature)}",
-				"Starting when you choose this tradition at 3rd level, you can use your ki to duplicate the effects of certain spells. As an action, you can spend 2 ki points to cast {@spell blackblood|DAPC|blackblood†}, {@spell blood seal|DAPC|blood seal†}, or {@spell sanguine rope|DAPC|sanguine rope†} as 2nd-level spells without providing material components. Additionally, you gain the {@spell bloodletting|DAPC|bloodletting†} cantrip if you don't already know it. You must still pay the hemomancy costs associated with each spell."
+				"Starting when you choose this tradition at 3rd level, you can use your ki to duplicate the effects of certain spells. As an action, you can spend 2 ki points to cast {@spell blackblood|DAPC|blackblood†}, {@spell blood seal|DAPC|blood seal†}, or {@spell sanguine rope|DAPC|sanguine rope†} as 2nd-level spells without providing material components. Additionally, you gain the {@spell bloodletting|DAPC|bloodletting†} cantrip if you don't already know it. You must still pay the hemomancy costs associated with each spell.",
+				"Wisdom is your spellcasting ability modifier for these spells."
 			]
 		},
 		{

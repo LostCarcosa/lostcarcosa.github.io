@@ -33,7 +33,7 @@
 			]
 		},
 		{
-			"name": "Network",
+			"name": "Occult",
 			"source": "MOD",
 			"page": 0,
 			"entries": [
@@ -70,7 +70,7 @@
 			"entries": [
 				"The best type of preparation is the kind that is done beforehand, but sometimes you need to learn some little information in the middle of combat. Perhaps you need to know whether a creature is resistant to fire damage before your mage blows a large spell slot. Perhaps you want to know if Dominate Monster is viable, or if it'll be shrugged off without issue.",
 				"You can use the Analyze action to learn some information about creatures you are fighting, though you must be able to see and hear them clearly, and must be within 60 feet of them, and must be actively fighting (i.e in initiative). The Analyze action represents gathering information through combat, rather than simply remembering pre-existing information.",
-				"When you take the Analyze action, you first declare what type of creature you are fighting- berast, undead, human, etc. You then roll the appropriate ability check based on creature type, as in the table below.",
+				"When you take the Analyze action, you must roll an appropriate ability check depending on the creature's type.",
 				{
 					"type": "table",
 					"caption": "Monster Types and Corresponding Knowledge Check",
@@ -141,7 +141,6 @@
 						]
 					]
 				},
-				"If you {@i incorrectly} determine the creature type- for example, if a creature is disguising its type- the information you obtain may be erroneous.",
 				"If you succeed on the check, you can learn one of the following pieces of information. You gain 1 additional piece of information for every 5 you roll above the check's DC. (So a roll of a 25 against a DC of 15 would earn you 3 pieces of information.)",
 				{
 					"type": "list",
@@ -440,7 +439,7 @@
 						"You cannot concentrate on any spell or effect.",
 						"You cannot take reactions. During your turn, you can take an action or a bonus action, but not both.",
 						"Any effect that ends if you are incapacitated (such as a Barbarian's Rage) ends when you arrive at Death's Door, though you may manually resume such effects (i.e by re-entering a Rage).",
-						"All attack rolls against you have advantage (but are not automatically critical hits). You have disadvantage on all saving throws, except death saving throws."
+						"All attack rolls against you have advantage (but are not automatically critical hits)."
 					]
 				}
 			]
@@ -6100,9 +6099,10 @@
 					"type": "entries",
 					"name": "Death Saves",
 					"entries": [
-						"If you take damage while you are at {@condition Death's Door}, you must make a death saving throw with a DC equal to 5 or half the damage taken (whichever is higher). Death saves are still made with a +0 modifier by default. Rolling a natural 1 on a death save still causes 2 failures. Rolling a natural 20 restores 2d8 hit points to you (although you remain at Death's Door if your hit points are still below 0).",
+						"If you take damage while you are at {@condition Death's Door}, you must make a death saving throw with a DC equal to 10 or half the damage taken (whichever is higher). Death saves are still made with a +0 modifier by default, and cannot benefit from any modifiers or bonuses.",
+						"Rolling a natural 1 on a death save causes 2 failures. Rolling a natural 20 restores 2d8 hit points to you (although you remain at Death's Door if your hit points are still below 0).",
 						"You can no longer 'stabilize'; succeeding on death saves does nothing. You only stop making death saves if you fail 3 death saves (see \"Mortality\", below) or if you escape from Death's Door (i.e are healed above 0 hit points).",
-						"Temporary hit points don't allow you to leave Death's Door; however, any damage absorbed by temporary hit points is not counted in the death save DC calculation. (If you have 6 temp hp and you take 20 damage, you would only need to succeed on a DC 7 death saving throw rather than a DC 10). You still must make a death saving throw even if all damage taken is absorbed by your temporary hit points.",
+						"Temporary hit points don't allow you to leave Death's Door; however, any damage absorbed by temporary hit points is not counted in the death save DC calculation. (If you have 6 temp hp and you take 30 damage, you would only need to succeed on a DC 12 death saving throw rather than a DC 15). You still must make a death saving throw even if all the damage is absorbed by your temporary hit points.",
 						"{@b Death saves do not reset upon leaving Death's Door.} It takes 10 minutes of medical care from a character trained in {@skill Medicine} or {@item Surgeon's Tools|MOD}, or 20 minutes from an untrained character, to heal a death save, although no other resources are required. Death Saves also reset upon completion of a short or long rest."
 					]
 				},
@@ -6110,7 +6110,8 @@
 					"type": "entries",
 					"name": "Mortality",
 					"entries": [
-						"Heroes tend to be resilient- even a mortal blow doesn't necessarily mean certain death. If you fail 3 (or more) death saving throws, you must roll a single d6 and reference the below table to determine what happens.",
+						"Heroes tend to be resilient- even a mortal blow doesn't necessarily mean certain death. If you fail 3 (or more) death saving throws, you must roll a single {@dice d8}, subtract the number of active wounds on your character, and reference the below table to determine what happens.",
+						"An active wound is a lingering injury that still has an active mechanical effect on your character.",
 						{
 							"type": "table",
 							"caption": "Mortality Result",
@@ -6124,11 +6125,11 @@
 							],
 							"rows": [
 								[
-									"1",
+									"0 or less",
 									"You die."
 								],
 								[
-									"2-7",
+									"1-7",
 									"Your character survives, but suffers a severe lingering injury and is removed from the encounter. Resurrection magic can return your character back to functioning form; otherwise, they cannot meaningfully contribute until they spend at least an hour recovering."
 								],
 								[
@@ -6187,8 +6188,17 @@
 					"type": "entries",
 					"entries": [
 						"Adventurers are adaptable and hardy. Many injuries can be recovered from through simple time and care, perhaps augmented with some healing magic. More severe injuries may require surgery- either by one of your stalwart companions, or, if you don't trust the barbarian with delicate instruments, by a city surgeon.",
-						"Many of the listed injuries can be treated with an ability check over a short or long rest. Only one ability check can be made over these rests- it's assumed that only one doctor can be operating on the patient at once, and that the treatment occupies much of the rest's time. Some injuries require Surgeries, which are much more specialized operations that benefit from proficiency in the {@item Surgeon's Tools|MOD}. A Surgery check can be repeated, but every check causes the patient to lose a portion of their maximum hit points, so be careful.",
-						"Even if treatment fails and an injury becomes permanent, don't fret- even a permanent injury may be adapted to and worked around. Prosthetics can be acquired and custom weapons can be made to accomodate for the effects of long-lasting injuries, though they may require some time to get used to."
+						"Many of the listed injuries can be treated with an ability check over a short or long rest. Only one ability check can be made over these rests- it's assumed that only one doctor can be operating on the patient at once, and that the treatment occupies much of the rest's time. Some injuries require {@variantrule surgery|MOD|Surgeries}, which are much more specialized operations that benefit from proficiency in the {@item Surgeon's Tools|MOD}. A Surgery check can be repeated, but every check causes the patient to lose a portion of their maximum hit points, so be careful."
+					]
+				},
+				{
+					"name": "Overcoming Permanent Injuries",
+					"type": "entries",
+					"entries": [
+						"Sometimes, injuries are less \"lingering\" and more \"permanent\". Perhaps an owlbear tore your arm off, or your eyes were burnt out by an ankheg's acid. Such injuries can be crippling to an adventurer, as sharp senses and a strong physique are generally required to survive a dangerous life.",
+						"Fortunately, adventurers are nothing if not adaptable. With some time and effort, your character can find ways to cope with their injuries. A fighter might deal with the loss of their sword arm by finding a suitable prosthetic, commissioning new weaponry to adapt to their missing limb, or developing a new one-armed fighting style. A druid who loses their sight could forge a special bond with their familiar, allowing them to permanently borrow their companion's sight, even in combat.",
+						"The possibilities are many, and therefore are not mechanically defined here. Work out how your character adapts to their injuries with your DM.",
+						"It will take your character some time to adapt. They will likely not be the same as before- even as they move past the grievous harm inflicted upon them, they will still bear its mark and memory- but that's no reason your character can't continue to journey onward."
 					]
 				},
 				{
@@ -6313,6 +6323,28 @@
 						}
 					]
 				}
+			]
+		},
+		{
+			"name": "Surgery",
+			"source": "MOD",
+			"entries": [
+				"Some {@variantrule Lingering Injuries|MOD|lingering injuries} will require treatment via Surgery, which is an advanced medical procedure. Creatures untrained in Surgery may make Surgery checks using their Wisdom (Medicine) skill.",
+				"A surgery proceeds as follows:",
+				{
+					"type": "list",
+					"style": "list-decimal",
+					"items": [
+						"Begin the surgery by identifying the surgeon, the patient, and the injury. The DM will announce the DC.",
+						"The Surgeon attempts a surgery check against the DC.",
+						"If the surgeon succeeds on the check, congratulations! The surgery successfully ends and the injury is treated.",
+						"If the surgeon fails the check, then the patient takes damage and loses maximum hit points equal to one roll of their hit dice (not including constitution modifier). If the check was failed by 5 or more, then the patient instead takes damage and loses maximum hit points equal to two rolls of their hit dice. Either way, the surgery DC then increases by 1.",
+						"The surgeon must decide whether to continue surgery. If so, repeat from step 2; otherwise, the surgery ends. The DC for a surgery only resets after the paient completes a long rest. If a patient drops to 0 hit points during the surgery, the surgery cannot continue until they are healed to 1 or more hit points."
+					]
+				},
+				"Surgery takes time- assume each check takes about 15 minutes to attempt. Bonuses and modifiers to skill checks can only apply to Surgery checks if they last at least 15 minutes; for example, the guidance spell would not affect a Surgery check but the enhance ability spell would.",
+				"When possible, it is generally to your advantage to seek out professional surgeons, doctors, or healers- they will generally have high bonuses to their Surgery checks, and particularly skilled surgeons will have advantage on their checks. Most large cities will have skilled surgeons available for hire.",
+				"However, sometimes you may have to conduct surgery yourself- some wounds are time-sensitive and require rapid treatment. You cannot perform Surgery on yourself, so it pays to have trustworthy allies."
 			]
 		},
 		{
@@ -14640,7 +14672,8 @@
 				}
 			],
 			"entries": [
-				"You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take {@damage 1d8} necrotic damage. If the target is missing more than half of its hit points, it instead takes {@damage 1d12} necrotic damage.",
+				"You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. Ihe target must succeed on a Wisdom saving throw or take {@damage 1d4} necrotic damage. If the target is missing more than half of its hit points, it instead takes {@damage 1d12} necrotic damage.",
+				"A {@condition deafened} target succeeds on the saving throw automatically.",
 				"The spell's damage increases by one die when you reach 5th level ({@damage 2d4} or {@damage 2d12}), 11th level ({@damage 3d4} or {@damage 3d12}), and 17th level ({@damage 4d4} or {@damage 4d12})."
 			],
 			"scalingLevelDice": [
@@ -22203,6 +22236,48 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "Gentle Repose",
+			"source": "MOD",
+			"page": 0,
+			"srd": true,
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "day",
+						"amount": 10
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
+				"The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as {@spell raise dead}.",
+				"Alternatively, you may touch a single {@variantrule lingering injury} and delay its progression. If the injury has a limited window in which it can be effectively treated, this extends that window by the duration of this spell. An injury cannot be affected by this spell more than once."
 			]
 		}
 	],

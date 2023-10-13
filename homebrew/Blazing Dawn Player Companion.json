@@ -356,7 +356,7 @@
 				"Channel Divinity: Bring to Life|Cleric||Artistry|BDPC|2|BDPC",
 				"Channel Divinity: Illusory Theatre|Cleric||Artistry|BDPC|6|BDPC",
 				"Potent Spellcasting|Cleric||Artistry|BDPC|8|BDPC",
-				"Improved Artisanship|Cleric||Artistry|BDPC|17|BDPC"
+				"Aura of Artistry|Cleric||Artistry|BDPC|17|BDPC"
 			]
 		},
 		{
@@ -790,6 +790,52 @@
 				"Paragon of Valor|Cleric||Courage|BDPC|6|BDPC",
 				"Divine Strike|Cleric||Courage|BDPC|8|BDPC",
 				"Undaunted|Cleric||Courage|BDPC|17|BDPC"
+			]
+		},
+		{
+			"name": "School of Pyromancy",
+			"source": "BDPC",
+			"page": 32,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"shortName": "Pyromancy",
+			"subclassFeatures": [
+				"School of Pyromancy|Wizard||Pyromancy|BDPC|2|BDPC",
+				"Controlled Wisps|Wizard||Pyromancy|BDPC|6|BDPC",
+				"Scorching Fire|Wizard||Pyromancy|BDPC|10|BDPC",
+				"Master of the Inferno|Wizard||Pyromancy|BDPC|14|BDPC"
+			]
+		},
+		{
+			"name": "School of Heliomancy",
+			"source": "BDPC",
+			"page": 31,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"shortName": "Heliomancy",
+			"subclassSpells": [
+				"Blinding Smite",
+				"Branding Smite",
+				"crusader's mantle",
+				"destructive wave",
+				"divine favor",
+				"flame strike",
+				"forbiddance",
+				"guardian of faith",
+				"holy weapon",
+				"guiding bolt",
+				"holy weapon",
+				"moonbeam",
+				"sacred flame",
+				"spirit guardians",
+				"word of radiance|xge"
+			],
+			"subclassFeatures": [
+				"School of Heliomancy|Wizard||Heliomancy|BDPC|2|BDPC",
+				"Potent Luminosity|Wizard||Heliomancy|BDPC|6|BDPC",
+				"Solar Magic|Wizard||Heliomancy|BDPC|6|BDPC",
+				"Arcane Radiance|Wizard||Heliomancy|BDPC|10|BDPC",
+				"Exposing Light|Wizard||Heliomancy|BDPC|14|BDPC"
 			]
 		}
 	],
@@ -4340,7 +4386,7 @@
 			]
 		},
 		{
-			"name": "Improved Artisanship",
+			"name": "Aura of Artistry",
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -4350,7 +4396,9 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, both of the Channel Divinities granted by this domain are improved. You can use Bring to Life as an action, rather than a minute-long ritual, and you can use it to create beasts of up to CR 2. Also, the maximum area of Illusory Theatre is increased to a 50-foot cube, and concentration is no longer required to maintain it."
+				"Starting at 17th level, certain spells you cast will create auras of divine magic. Whenever you cast an enchantment or illusion spell, you can cause magical energy to radiate from you in an aura with a 10-foot radius. For 1 minute or until you use this feature again, the aura moves with you, centered on you. The effects of the aura depend on the spell’s school of magic:",
+				"Enchantment. The aura is filled with inspiring music. A friendly creature that starts its turn within the aura gains 2d6 temporary hit points that last until it leaves the aura.",
+				"Illusion. The aura is filled with illusory images and sounds that distract opponents. Hostile creatures within the aura have disadvantage on attack rolls."
 			]
 		},
 		{
