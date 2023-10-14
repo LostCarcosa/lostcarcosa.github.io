@@ -6636,7 +6636,7 @@
 			"type": "table",
 			"caption": "Acid Injury",
 			"colLabels": [
-				"d8",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -6646,23 +6646,23 @@
 			"rows": [
 				[
 					"1",
-					"{@b Ocular Corrosion.} Acid has splashed over both of your eyes. You are blinded and both your eyes are {@b nonfunctional}. If you do not receive surgery within 30 minutes your vision will be permanently missing. Requires a DC 20 Surgery to treat."
+					"{@b Ocular Corrosion.} Acid has splashed over both of your eyes. You are blinded and both your eyes are {@b nonfunctional}. If you do not receive surgery within 7 days, your vision will be permanently missing. Requires a DC 20 Surgery to treat."
 				],
 				[
 					"2",
-					"{@b Dissolved Limb.} Acid coats one of your limbs, and you hear the sizzle as it starts to dissolve. This limb is {@b nonfunctional}; if you do not recieve surgery within 1 hour, the limb dissolves away and is {@b missing}. Requires a DC 20 Surgery to treat."
+					"{@b Dissolved Limb.} Acid coats one of your limbs, and you hear the sizzle as it starts to dissolve. This limb is {@b nonfunctional}; if you do not recieve surgery within 7 days, the limb dissolves away and is {@b missing}. Requires a DC 20 Surgery to treat."
 				],
 				[
 					"3",
-					"{@bold Vocal Cord Damage} The acid's caustic fumes have wreaked havoc on your vocal cords. Your voice is nonfunctional and you are {@condition silenced}. If you do not receive treatment within 30 minutes it will be permanently missing. (DC 17 Surgery)"
+					"{@bold Vocal Cord Damage} The acid's caustic fumes have wreaked havoc on your vocal cords. Your voice is nonfunctional and you are {@condition silenced}. Requires a DC 17 Surgery to treat."
 				],
 				[
 					"4",
-					"{@bold Dissolved Magic.} The acid has eaten into the essence of one of your magic items, expelling its arcane energy and rendering it mundane. One random magic item on your person (prioritizing attuned, worn, and wielded items) loses its magic. A master craftsman can potentially restore the item. A legendary or artifact item is instead suppressed for 1d4 long rests."
+					"{@bold Dissolved Magic.} The acid has eaten into the essence of one of your magic items, expelling its arcane energy and rendering it mundane. One random magic item on your person (prioritizing attuned, worn, and wielded items) loses its magic. A master craftsman can potentially restore the item. A legendary or artifact item is instead suppressed for 3 long rests."
 				],
 				[
 					"5-6",
-					"{@bold Corroded Armor.} Your armor takes a -3 penalty to the AC it provides until repaired. If its base AC is reduced to 10 or lower, it is destroyed. (If your armor is magical, it cannot be destroyed by this injury, but is rendered useless if brought below 10 base AC until repaired). If you are wearing no armor, treat this result as a 9."
+					"{@bold Corroded Armor.} Your armor takes a -3 penalty to the AC it provides until repaired. If its base AC is reduced to 10 or lower, it is destroyed. (If your armor is magical, it cannot be destroyed by this injury, but is rendered useless if brought to 10 base AC or lower until repaired). If you are wearing no armor, treat this result as a 9."
 				],
 				[
 					"7-8",
@@ -6670,7 +6670,7 @@
 				],
 				[
 					"9-10",
-					"{@bold Caustic Burn.} The acid has left you with a painful burn. You take 1 point of acid damage for every 5 feet you move while in initative, or while exerting yourself (i.e running away). A DC 16 Medicine check made over a short rest ends this effect."
+					"{@bold Caustic Burn.} The acid has left you with a painful burn. You take 1 point of acid damage for every 5 feet you move while in initative, or while exerting yourself (i.e running away). A DC 16 Medicine check made over a long ends this effect."
 				],
 				[
 					"11-12",
@@ -6694,7 +6694,7 @@
 			"rows": [
 				[
 					"1",
-					"{@b Ruptured Eardrum.} A violent impact to the side of your head causes one of your eardrums to rupture, rendering the ear {@b nonfunctional}. If not treated within 24 hours, it is permanently {@b missing}. Treat with a DC 20 Surgery."
+					"{@b Ruptured Eardrum.} A violent impact to the side of your head causes one of your eardrums to rupture, rendering the ear {@b nonfunctional}. If not treated within 7 days, it is permanently {@b missing}. Treat with a DC 20 Surgery."
 				],
 				[
 					"2",
@@ -6702,23 +6702,23 @@
 				],
 				[
 					"3",
-					"{@bold Serious Concussion.} A strike to your head has left you with dizziness, nausea, and a lingering headache. You have disadvantage on mental ability checks and Concentration saving throws. Every time you fail a mental saving throw, there is a 50% chance you are {@condition stunned} until the end of your next turn. This concussion lingers for 1d3 long rests. Treating it with a DC 20 Medicine check reduces the duration of this injury by 1d2 long rests."
+					"{@bold Serious Concussion.} A strike to your head has left you with dizziness, nausea, and a lingering headache. You have disadvantage on mental ability checks and Concentration saving throws. Every time you fail a mental saving throw, there is a 50% chance you are {@condition stunned} until the end of your next turn. This concussion lingers for 2 long rests."
 				],
 				[
 					"4",
-					"{@bold Broken Limb.} One of your limbs is broken, rendering it {@b nonfunctional} for 1d3 long rests. Treating it with a DC 15 Medicine check over a short rest reduces the duration by 1d2 long rests."
+					"{@bold Broken Limb.} One of your limbs is broken, rendering it {@b nonfunctional} for 2 long rests."
 				],
 				[
 					"5-6",
-					"{@bold Mild Concussion.} You have disadvantage on mental ability checks and Concentration saving throws. This injury lasts for 1d2 long rests, and can be treated with a DC 15 Medicine check over a short rest."
+					"{@bold Mild Concussion.} You have disadvantage on mental ability checks and Concentration saving throws. This injury lasts for 2 long rests, and can be treated with a DC 15 Medicine check over a long rest."
 				],
 				[
 					"7-8",
-					"{@bold Cracked Rib.} One or more of your ribs is cracked. Any time you make an Athletics or Acrobatics check, you take 1d8 bludgeoning damage. This injury resolves on its own after 1d2 long rests."
+					"{@bold Cracked Rib.} One or more of your ribs is cracked. Any time you make an Athletics or Acrobatics check, you take {@damage 1d8} bludgeoning damage. This injury resolves on its own after 2 long rests."
 				],
 				[
 					"9-10",
-					"{@bold Serious Bruise.} Your entire body aches and you are left with some extensive ugly bruises. You have disadvantage on Persuasion checks. These bruises heal on their own after 1d2 long rests."
+					"{@bold Serious Bruise.} Your entire body aches and you are left with some extensive ugly bruises. You have disadvantage on Persuasion checks. These bruises heal on their own after 2 long rests."
 				],
 				[
 					"11-12",
@@ -6754,7 +6754,7 @@
 				],
 				[
 					"4",
-					"{@bold Weakened Constitution.} The cold has weakened your body, leaving you weak and frail. Lose {@dice 1d4} from your Constitution score, to a minimum of 1. Every time you complete a long rest, your Constitution score heals by 1."
+					"{@bold Weakened Constitution.} The cold has weakened your body, leaving you weak and frail. Your Constitution score is reduced by 3, to a minimum of 1. Every time you complete a long rest, your Constitution score heals by 1."
 				],
 				[
 					"5-6",
@@ -6766,7 +6766,7 @@
 				],
 				[
 					"9-10",
-					"{@bold Shivers.} Your hands shake uncontrollably and your voice quavers as you speak. You have disadvantage on checks that involve fine manipulation of objects, as well as Persuasion, Deception, and Intimidation checks."
+					"{@bold Shivers.} Your hands shake uncontrollably and your voice quavers as you speak. You have disadvantage on checks that involve fine manipulation of objects, as well as Persuasion, Deception, and Intimidation checks. This injury heals itself naturally after completing two long rests."
 				],
 				[
 					"11-12",
@@ -6790,23 +6790,23 @@
 			"rows": [
 				[
 					"1",
-					"{@b Third Degree Burn.} You have a deep burn penetrating into your skin, resulting in a cracked, red wound. While in initiative or exerting yourself, you take 1 fire damage for every 5 feet of movement. In addition, you take 1d4 fire damage every time you take an action or bonus action. This injury lasts 1d2 long rests. A DC 16 Medicine check made over a long rest reduces the duration by 1 long rest."
+					"{@b Third Degree Burn.} You have a deep burn penetrating into your skin, resulting in a cracked, red wound. While in initiative or exerting yourself, you take 1 fire damage for every 5 feet of movement. In addition, you take 1d4 fire damage every time you take an action or bonus action. This injury heals naturally after two long rests."
 				],
 				[
 					"2",
-					"{@b Airway Burn.} You've inhaled the scorching air around you and it burns a path straight down to your lungs. Your sense of taste and smell are {@b nonfunctional} and if not treated within 24 hours will be permanently {@b missing}. Treat with a DC20 Surgery."
+					"{@b Airway Burn.} You've inhaled the scorching air around you and it burns a path straight down to your lungs. Your sense of taste and smell are {@b nonfunctional} and if not treated within 7 days will be permanently {@b missing}. Treat with a DC20 Surgery."
 				],
 				[
 					"3",
-					"{@bold Welded Armor.} Your armor half-melts in the heat and partially melds into your skin. Until fixed, you cannot doff your armor, and your armor cannot undergo any sort of modification or improvement until it is removed. Sleeping in medium or heavy armor is uncomfortable- see {@variantrule Sleeping in Armor} If you are not wearing armor, reroll the injury."
+					"{@bold Welded Armor.} Your armor half-melts in the heat and partially melds into your skin. Until fixed, you cannot doff your armor, and your armor cannot undergo any sort of modification or improvement until it is removed. Sleeping in medium or heavy armor is uncomfortable- see {@variantrule sleeping|MOD|Sleeping in Armor} If you are not wearing armor, reroll the injury."
 				],
 				[
 					"4",
-					"{@bold Heat Stroke.} You gain two levels of {@condition exhaustion}, which can be cured as normal."
+					"{@bold Heat Stroke.} You gain two levels of {@condition exhaustion}."
 				],
 				[
 					"5-6",
-					"{@bold Second Degree Burn.} Your skin bubbles and blisters. While in initiative or exerting yourself, you take 1 fire damage for every 5 feet of movement. This injury lasts 1d2 long rests. A DC 12 Medicine check made over a long rest reduces the duration by 1 long rest."
+					"{@bold Second Degree Burn.} Your skin bubbles and blisters. While in initiative or exerting yourself, you take 1 fire damage for every 5 feet of movement. This injury lasts 2 long rests. A DC 12 Medicine check made over a long rest reduces the duration by 1 long rest."
 				],
 				[
 					"7-8",
@@ -6838,31 +6838,31 @@
 			"rows": [
 				[
 					"1",
-					"{@b Third Eye Blinded.} Something vitla, yet intangible within you falls deathly silent. You feel... disconnected. You lose the ability to communicate telepathically, and all magical communication that specifically targets you fails (such as the {@spell message}, {@spell sending}, and {@spell telepathic bond} spells. Your mind cannot be magically read."
+					"{@b Third Eye Blinded.} Something vital, yet intangible within you falls deathly silent. You feel... disconnected. You lose the ability to communicate telepathically, and all magical communication that specifically targets you fails (such as the {@spell message}, {@spell sending}, and {@spell telepathic bond} spells. Your mind cannot be magically read."
 				],
 				[
 					"2",
-					"{@b Magical Anathema.} You shake your head from the force of the arcane blow and... it's gone- the knowledge, that is, not your head. You lose the ability to cast your most recently cast spell permanently. You can never cast this spell again by any means (including class features, racial traits, or magical items). If your class allows you to replace spells on your spell list when leveling up, you may still replace this spell normally."
+					"{@b Magical Anathema.} You shake your head from the force of the arcane blow and... it's gone- the knowledge, that is, not your head. You lose the ability to cast your most recently cast spell permanently. You can never cast this spell again by any means (including class features, racial traits, or magical items). If your class allows you to replace spells on your spell list when leveling up, you may still replace this spell normally. If you are not a spellcaster, treat this roll as an 11."
 				],
 				[
 					"3",
-					"{@bold Pertinax Machina.} Your spells struggle to take and always seem like they need a little something extra. Any spell with material component cost requires double that cost to cast."
+					"{@bold Pertinax Machina.} Your spells struggle to take and always seem like they need a little something extra. Any spell with material component cost requires double that cost to cast. This effect lasts until cured by a {@spell greater restoration|MOD} spell. If you are not a spellcaster, treat this roll as an 11."
 				],
 				[
 					"4",
-					"{@bold Null Arcana.} As the arcane energy strikes you, something in you sputters and fizzles. Every spell you cast has a 50% chance of failure, wasting the action and slot. This lasts for 1d3 long rests."
+					"{@bold Null Arcana.} As the arcane energy strikes you, something in you sputters and fizzles. Every spell you cast has a 50% chance of failure, wasting the action and slot. This lasts for 2 long rests."
 				],
 				[
 					"5-6",
-					"{@bold Ligo Secare.} You feel the abrupt and disconcerting recoin of a severed connection. You lose attunement to all items you are currently attuned to, and you cannot attune to anything until you complet 1d2 long rests."
+					"{@bold Ligo Secare.} You feel the abrupt and disconcerting recoin of a severed connection. You lose attunement to all items you are currently attuned to, and you cannot attune to anything until you complete 2 long rests."
 				],
 				[
 					"7-8",
-					"{@bold Mana Syphon.} You feel the energy suck away your arcan eessence, leaving you with a lingering feeling of emptiness. Two of your highest level spell slots are harmlessly expended, and cannot be regained for {@dice 1d4} long rests. A DC 18 Arcana check made over a short rest can reduce the duration by {@dice 1d2} long rests."
+					"{@bold Mana Syphon.} You feel the energy suck away your arcan eessence, leaving you with a lingering feeling of emptiness. Two of your highest level spell slots are harmlessly expended, and cannot be regained for 3 long rests. A DC 18 Arcana check made over a long rest can reduce the duration by 1 long rest. If you are not a spellcaster, treat this roll as an 11."
 				],
 				[
 					"9-10",
-					"{@bold Null Scola.} You feel the magic pulse and resonate with the arcane residue that clings to you from the last spell you cast. There's a searing feeling deep in your mind. You lose the ability to cast spells from the same school of magic as the most recent spell you've cast for {@dice 1d4} long rests."
+					"{@bold Null Scola.} You feel the magic pulse and resonate with the arcane residue that clings to you from the last spell you cast. There's a searing feeling deep in your mind. You lose the ability to cast spells from the same school of magic as the most recent spell you've cast for 3 long rests. If you are not a spellcaster, treat this roll as an 11."
 				],
 				[
 					"11-12",
@@ -6890,7 +6890,7 @@
 				],
 				[
 					"2",
-					"{@b Heart Palpitations.} Shocked through the heart, and you're to blame... Any time you are {@condition charmed} or {@condition frightened}, you must succeed on a DC 20 Constitution saving throw or gain 1 level of Exhaustion. Treat with a DC 22 Surgery."
+					"{@b Heart Palpitations.} Shocked through the heart, and you're to blame... Any time you are {@condition charmed} or {@condition frightened}, you must succeed on a DC 20 Constitution saving throw or gain 1 level of {@condition exhaustion}. Treat with a DC 22 Surgery."
 				],
 				[
 					"3",
@@ -6902,11 +6902,11 @@
 				],
 				[
 					"5-6",
-					"{@bold Muscle Spasms.} Your muscles twitch in reptitive patterns and you have difficulty coordinating your movement. You have disadvantage on all Dexterity attacks, checks, and saves for 1d4 long rests. Treat with a DC 15 Medicine check to reduce duration by 1d2."
+					"{@bold Muscle Spasms.} Your muscles twitch in reptitive patterns and you have difficulty coordinating your movement. You have disadvantage on all Dexterity attacks, checks, and saves for 3 long rests. Treat with a DC 15 Medicine check to reduce duration by 1 long rest."
 				],
 				[
 					"7-8",
-					"{@bold Numbed Nerves.} Your nerves are shot and you feel numb. You cannot take reactions. Treat with a DC 14 Medicine check over a short rest."
+					"{@bold Numbed Nerves.} Your nerves are shot and you feel numb. You cannot take reactions. Treat with a DC 20 Medicine check over a short rest."
 				],
 				[
 					"9-10",
@@ -6934,7 +6934,7 @@
 			"rows": [
 				[
 					"1",
-					"{@b Gouged Eye.} You've taken heavy damage directly to one of your eyes. Your eye is {@b nonfunctional}. If untreated within 8 hours, your vision will be beyond saving and considered {@b missing} Treat with a DC 20 Surgery."
+					"{@b Gouged Eye.} You've taken heavy damage directly to one of your eyes. Your eye is {@b nonfunctional}. If untreated within 5 days, your vision will be beyond saving and considered {@b missing}. Treat with a DC 20 Surgery."
 				],
 				[
 					"2",
@@ -6946,7 +6946,7 @@
 				],
 				[
 					"4",
-					"{@bold Perforated Gut.} You've taken a nasty wound in the gut, and it's only a matter of time until it turns septic. you are {@condition poisoned}. Every 24 hours, you gain 1 level of {@condition exhaustion}. This level of exhaustion cannot be removed by nonmagical means. A DC 21 Surgery will treat the wound, and any effect that cures disease can remove 1 level of exhaustion. The poisoned condition cannot be cured until the infection is treated."
+					"{@bold Perforated Gut.} You've taken a nasty wound in the gut, and it's only a matter of time until it turns septic. you are {@condition poisoned}. Every 3 days, you gain 1 level of {@condition exhaustion}. This level of exhaustion cannot be removed by nonmagical means. A DC 21 Surgery will treat the wound, and any effect that cures disease can remove 1 level of exhaustion from this injury. The poisoned condition cannot be cured until the infection is treated."
 				],
 				[
 					"5-6",
@@ -6958,7 +6958,7 @@
 				],
 				[
 					"9-10",
-					"{@bold Punctured Lung.} The wound makes it past your ribs and into your lung. You amek Strength (Athletics) and Dexterity (Acrobatics) checks at disadvantage for 1d2 long rests. Treat with a DC 15 Medicine check over a short rest, which reduces the duration by 1 long rest."
+					"{@bold Punctured Lung.} The wound makes it past your ribs and into your lung. You make Strength (Athletics) and Dexterity (Acrobatics) checks at disadvantage for 2 long rests."
 				],
 				[
 					"11-12",
@@ -6982,7 +6982,7 @@
 			"rows": [
 				[
 					"1",
-					"{@b Anemic.} When the poison has run its course, you are left with a lingering weakness. Your carrying capacity is reduced by 3 slots."
+					"{@b Anemic.} When the poison has run its course, you are left with a lingering weakness. Your carrying capacity is halved. This can be cured by the {@spell greater restoration|MOD} spell or similar magic."
 				],
 				[
 					"2",
@@ -6998,7 +6998,7 @@
 				],
 				[
 					"5-6",
-					"{@bold Weak in the Knees.} Your stamina collapses. If you try to travel for more than an hour at a time, you gain a level of exhaustion. Every time you take a short rest, you can make a DC 12 Constitution saving throw, ending this effect on a success."
+					"{@bold Weak in the Knees.} Your stamina collapses. If you try to travel for more than an hour at a time, you gain a level of exhaustion. Every time you take a short rest, you can make a DC 18 Constitution saving throw, ending this effect on a success."
 				],
 				[
 					"7-8",
@@ -7034,19 +7034,19 @@
 				],
 				[
 					"2",
-					"{@b Crippling Phobia.} Unconsciously, your brain has made a connection between something random and the pain it felt, and now you cannot help but associate the two. The DM chooses something about the source of the damage or the setting. Any time you move iwthin 15 feet of this phobia, you are {@b frightened} until you move at least 50 feet away from it."
+					"{@b Crippling Phobia.} Unconsciously, your brain has made a connection between something random and the pain it felt, and now you cannot help but associate the two. The DM chooses something about the source of the damage or the setting. Any time you move within 15 feet of this phobia, you are {@b frightened} until you move at least 50 feet away from it."
 				],
 				[
 					"3",
-					"{@bold Tower of Babel.} The language center of your brain has fried. You lose proficiency in all languages, and you cannot read or write; all communication sounds like a garbled string of random words.. Verbal components of spells automatically fail. This injury lasts until treated with a DC 20 Insight check over a long rest, and can be suppressed by a {@spell calm emotion} spell."
+					"{@bold Tower of Babel.} The language center of your brain has fried. You lose proficiency in all languages, and you cannot read or write; all communication sounds like a garbled string of random words. Verbal components of spells automatically fail. This injury lasts until treated with a DC 20 Insight check over a long rest, and can be temporarily suppressed by a {@spell calm emotion} spell."
 				],
 				[
 					"4",
-					"{@b Psychic Disruption.} Your mental focus is shattered. You lose the ability to use all Psionic abilities, including telepathy and any ability that mentions 'psi' in the name or description. Treat with a DC 22 Surgery on the brain."
+					"{@b Psychic Disruption.} Your mental focus is shattered. You lose the ability to use all Psionic abilities, including telepathy and any ability that mentions 'psi' in the name or description. Treat with a DC 22 Surgery."
 				],
 				[
 					"5-6",
-					"{@bold Headache.} Your head throbs and the light aggravates you. You cannot benefit from a short rest until you complete 1d2 long rests."
+					"{@bold Headache.} Your head throbs and the light aggravates you. You cannot benefit from a short rest until you complete a long rest."
 				],
 				[
 					"7-8",
@@ -7054,7 +7054,7 @@
 				],
 				[
 					"9-10",
-					"{@bold Paranoia.} You find it difficult to stop being distracted by the feeling that there is someone or something out to get you. Whenever you must maintain concentration, roll {@dice 1d4}. This is the maximum amount of rounds you may maintain concentration for that spell or effect."
+					"{@bold Paranoia.} You find it difficult to stop being distracted by the feeling that there is someone or something out to get you. Whenever you must maintain concentration, roll {@dice 1d4}. This is the maximum amount of rounds you may maintain concentration for that spell or effect. Treat with a DC 16 Insight check administered by another creature over a long rest."
 				],
 				[
 					"11-12",
@@ -7078,7 +7078,7 @@
 			"rows": [
 				[
 					"1",
-					"{@b Penitent Mercy.} You've lost your stomach for killing. The thought of taking a life fills you with abject discust. You can no longer willingly take a life, and if you reduce a creature to 0 hit points, you immediately gain a level of exhaustion."
+					"{@b Penitent Mercy.} You've lost your stomach for killing. The thought of taking a life fills you with abject discust. You can no longer willingly take a life, and if you kill a living creature, you immediately gain a level of {@condition exhaustion}."
 				],
 				[
 					"2",
@@ -7086,11 +7086,11 @@
 				],
 				[
 					"3",
-					"{@bold Purged Soul.} Your soul is partially severed from your body, leaving it exposed and vulnerable. If you die before this is treated, your soul is claimed, and you cannot be resurrected by any means short of a Wish spell. Treat with a DC 25 Religion check over a long rest."
+					"{@bold Purged Soul.} Your soul is partially severed from your body, leaving it exposed and vulnerable. If you die before this is treated, your soul is claimed, and you cannot be resurrected by any means short of a {@spell wish|MOD} spell. Treat with a DC 25 Religion check over a long rest."
 				],
 				[
 					"4",
-					"{@bold Irradiated.} The energy that has washed over you has left you with a lingering feeling of sickness and nausea. You are {@condition poisoned}, and every time you take a short or long rest, you lose {@dice 2d8} maximum hit points. You die if this reduces your hit point maximum to 0. Treat with a DC 25 Medicine check over a long rest."
+					"{@bold Irradiated.} The energy that has washed over you has left you with a lingering feeling of sickness and nausea. You are {@condition poisoned}, and every time you take a short or long rest, you lose {@dice 2d8} maximum hit points. You die if this reduces your hit point maximum to 0. Treat with a DC 25 Medicine check over a long rest. Successful treatment of this wound stops your maximum hit points from being reduced further, but does not cure the maximum hit points reduction already afflicted."
 				],
 				[
 					"5-6",
@@ -7102,7 +7102,7 @@
 				],
 				[
 					"9-10",
-					"{@bold Unearthly Glow.} Youa re afflicted by a dull, yellow-green glow, which affects you in the same manner as a {@spell faerie fire} spell, though the effect itself is nonmagical. Treat over a short rest with a DC 18 Religion check."
+					"{@bold Unearthly Glow.} You are afflicted by a dull, yellow-green glow. This glow causes you to emit dim light for 10 feet. Attack rolls against you have advantage as long as the attacker can see you, and you cannot benefit from being {@condition invisible}. Treat over a long rest with a DC 18 Religion check."
 				],
 				[
 					"11-12",
@@ -7126,11 +7126,11 @@
 			"rows": [
 				[
 					"1",
-					"{@b Severed Limb.} One of your limbs has been sliced clean off. It lands severed at your feet and is {@b missing}. Treat with a DC 22 Surgery. The DC increases by 1 for every hour that passes."
+					"{@b Severed Limb.} One of your limbs has been sliced clean off. It lands severed at your feet and is {@b missing}. Treat with a DC 20 Surgery. The DC increases by 1 for every day that passes."
 				],
 				[
 					"2",
-					"{@bold Stubborn Bleeding.} The wound simply won't close. For every hour that passes, you lose 1 hit point. Treat with a DC 22 Surgery."
+					"{@bold Stubborn Bleeding.} The wound simply won't close. For every hour that passes, you lose 1 hit point. Treat with a DC 22 Surgery. Receiving at least 5 points of magical healing seals the wound for 24 hours."
 				],
 				[
 					"3",
@@ -7138,11 +7138,11 @@
 				],
 				[
 					"4",
-					"{@bold Severed Nerves.} Some of your nerves have been cut- leaving you in excruciating pain. You cannot maintain concentration on spells and effects, and any time you make an attack or cast a spell, you take {@damage 1d8} piercing damage. Treat with a DC 22 Surgery (and do it soon.)"
+					"{@bold Severed Nerves.} Some of your nerves have been cut- leaving you in excruciating pain. You cannot maintain concentration on spells and effects, and the first time per round you make an attack or cast a spell, you take {@damage 1d8} piercing damage. Treat with a DC 22 Surgery"
 				],
 				[
 					"5-6",
-					"{@b Severed Appendage.} You're almost {@i impressed} with the accuracy of that blow- it takes a lot of skill to take a nose or a ear clean off. You'd be more impressed if you weren't suddenly missing a body part. One of your ears or your nose is cut clean off, and is considered {@b missing}. Reattach with a DC 20 Surgery; the DC increases by 1 for every hour that passes."
+					"{@b Severed Appendage.} You're almost {@i impressed} with the accuracy of that blow- it takes a lot of skill to take a nose or a ear clean off. You'd be more impressed if you weren't suddenly missing a body part. One of your ears or your nose is cut clean off, and is considered {@b missing}. Reattach with a DC 20 Surgery; the DC increases by 1 for every day that passes."
 				],
 				[
 					"7-8",
@@ -7150,7 +7150,7 @@
 				],
 				[
 					"9-10",
-					"{@bold Festering Wound.} The wound looks angyr near the edges, and stubbornly refuses to heal. You cannot heal hit points through any means of nonmagical healing, such as a long or short rest. Treat with a DC 18 Medicine check over a long rest (though if cured over a long rest, you still regain no hit points from that rest.)"
+					"{@bold Festering Wound.} The wound looks angyr near the edges, and stubbornly refuses to heal. You cannot heal hit points through any nonmagical means, such as a long or short rest. Treat with a DC 18 Medicine check over a long rest (though if cured over a long rest, you still regain no hit points from that rest.)"
 				],
 				[
 					"11-12",
@@ -7174,11 +7174,11 @@
 			"rows": [
 				[
 					"1",
-					"{@b Cursed by Fate.} A malicious curse settles upon your soul. While cursed, you treat any 20 you roll as a 1."
+					"{@b Cursed by Fate.} A malicious curse settles upon your soul. While cursed, you treat any 20 you roll as a 1. This curse is resistant to restorative effects; any attempt to cure it must succeed on a DC 20 spellcasting check to succeed."
 				],
 				[
 					"2",
-					"{@b Tenuous Grip on Life.} You feel like you've seen the face of death, and can recall her grim visage with ease. You now require one less failed death saving throw before you must make a Mortality roll."
+					"{@b Tenuous Grip on Life.} You feel like you've seen the face of death, and can recall her grim visage with ease. You now require one less failed death saving throw before you must make a Mortality roll. This injury heals on its own after completing 3 long rests."
 				],
 				[
 					"3",
@@ -7198,7 +7198,7 @@
 				],
 				[
 					"9-10",
-					"{@bold Chronoscarred.} Every cell in your body protests as they are assaulted by the flow of time. Your body suddenly ages 2d10 years. Your mind is unaffected."
+					"{@bold Chronoscarred.} Every cell in your body protests as they are assaulted by the flow of time. Your body suddenly ages {@dice 2d10} years. Your mind is unaffected."
 				],
 				[
 					"11-12",
@@ -7222,15 +7222,15 @@
 			"rows": [
 				[
 					"1",
-					"{@b Ruptured Eardrums.} The sonic assault has blown out your eardrums. You are {@b deafened} and your ears are {@b nonfunctional}. If not treated within 24 hours, your hearing will be permanently {@b missing}."
+					"{@b Ruptured Eardrums.} The sonic assault has blown out your eardrums. You are {@b deafened} and your ears are {@b nonfunctional}. If not treated within 7 days, your hearing will be permanently {@b missing}."
 				],
 				[
 					"2",
-					"{@b Unlucky Shrapnel.} An unlucky piece of shrapnel has ricocheted straight into your eye, leaving it {@b nonfunctional}. If not treated within 4 hours, your vision is permanently {@b missing} in that eye. Treat with a DC 20 Surgery."
+					"{@b Unlucky Shrapnel.} An unlucky piece of shrapnel has ricocheted straight into your eye, leaving it {@b nonfunctional}. If not treated within 3 days, your vision is permanently {@b missing} in that eye. Treat with a DC 20 Surgery."
 				],
 				[
 					"3",
-					"{@bold Barotrauma.} The concussive force reverberates through your lungs, doing major damage. You can no longer hold your breath for longer than 1 round at a time, and shouting causes you to take {@damage 1d4} piercing damage."
+					"{@bold Barotrauma.} The concussive force reverberates through your lungs, doing major damage. You can no longer hold your breath for longer than 1 round at a time, and raising your voice causes you to take {@damage 1d4} piercing damage."
 				],
 				[
 					"4",
@@ -7238,7 +7238,7 @@
 				],
 				[
 					"5-6",
-					"{@bold Shrapnel Destruction.} Shrapnel tears through your armor, rendering it damaged. Your armor or shield takes a -2 penalty to the AC granted; if your armor's base AC is reduced to 10 or lower, it is rendered unusable."
+					"{@bold Shrapnel Destruction.} Shrapnel tears through your armor, rendering it damaged. Your armor or shield takes a -2 penalty to the AC granted; if your armor's base AC is reduced to 10 or lower, it is rendered unusable until repaired."
 				],
 				[
 					"7-8",
