@@ -803,8 +803,8 @@
 			]
 		},
 		{
-			"name": "The Flayed God",
-			"shortName": "Flayed God",
+			"name": "The Mendicant-Sage",
+			"shortName": "Mendicant-Sage",
 			"source": "PHB",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -838,11 +838,11 @@
 				}
 			],
 			"subclassFeatures": [
-				"The Flayed God|Cleric||Flayed God||1",
-				"Channel Divinity: Preserve Life|Cleric||Flayed God||2",
-				"Blessed Healer|Cleric||Flayed God||6",
-				"Divine Strike|Cleric||Flayed God||8",
-				"Plague Martyr|Cleric||Flayed God||17"
+				"The Mendicant-Sage|Cleric||Mendicant-Sage||1",
+				"Channel Divinity: Preserve Life|Cleric||Mendicant-Sage||2",
+				"Blessed Healer|Cleric||Mendicant-Sage||6",
+				"Divine Strike|Cleric||Mendicant-Sage||8",
+				"Plague Martyr|Cleric||Mendicant-Sage||17"
 			]
 		},
 		{
@@ -986,8 +986,8 @@
 			]
 		},
 		{
-			"name": "Trickery Domain",
-			"shortName": "Trickery",
+			"name": "The Divine Thief",
+			"shortName": "Divine Thief",
 			"source": "PHB",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -1019,16 +1019,16 @@
 				}
 			],
 			"subclassFeatures": [
-				"Trickery Domain|Cleric||Trickery||1",
-				"Channel Divinity: Invoke Duplicity|Cleric||Trickery||2",
-				"Double Trick|Cleric||Trickery||6",
-				"Divine Strike|Cleric||Trickery||8",
-				"Improved Duplicity|Cleric||Trickery||17"
+				"The Divine Thief|Cleric||Divine Thief||1",
+				"Channel Divinity: Invoke Duplicity|Cleric||Divine Thief||2",
+				"Double Trick|Cleric||Divine Thief||6",
+				"Divine Strike|Cleric||Divine Thief||8",
+				"Improved Duplicity|Cleric||Divine Thief||17"
 			]
 		},
 		{
-			"name": "The Burned Lady",
-			"shortName": "Burned Lady",
+			"name": "The Maiden of Battle",
+			"shortName": "Maiden of Battle",
 			"source": "PHB",
 			"className": "Cleric",
 			"classSource": "PHB",
@@ -1060,11 +1060,11 @@
 				}
 			],
 			"subclassFeatures": [
-				"The Burned Lady|Cleric||Burned Lady||1",
-				"Channel Divinity: Guided Strike|Cleric||Burned Lady||2",
-				"Extra Attack|Cleric||Burned Lady||6",
-				"Divine Strike|Cleric||Burned Lady||8",
-				"Avatar of Battle|Cleric||Burned Lady||17"
+				"The Maiden of Battle|Cleric||Maiden of Battle||1",
+				"Channel Divinity: Guided Strike|Cleric||Maiden of Battle||2",
+				"Extra Attack|Cleric||Maiden of Battle||6",
+				"Divine Strike|Cleric||Maiden of Battle||8",
+				"Avatar of Battle|Cleric||Maiden of Battle||17"
 			]
 		},
 		{
@@ -1934,18 +1934,19 @@
 			]
 		},
 		{
-			"name": "The Flayed God",
+			"name": "The Mendicant-Sage",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Flayed God",
+			"subclassShortName": "Mendicant-Sage",
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"You are an adherent of {@deity the Flayed God|MOD}, the deity of redemption, martyrdom, and plague. The Flayed God holds you to the principles of empathy and compassion, to an extreme degree, and you have been granted a sliver of power and tasked with the duty of helping the defenseless- by bearing their pain and burdens yourself, if necessary. Adherents of the Flayed God are able to absorb the diseases from others and hold them in their own body, easing the suffering of others, at the cost of their own well-being- and, it must be said, their appearance. Many devotees of the Flayed God use a mask to hide their faces, concealing the disfiguring effects of the diseases they carry.",
+				"You are an adherent of the Mendicant-Sage, an aspect of {@deity the Flayed God|MOD}, the deity of redemption, martyrdom, and plague. The aspect of the Mendicant-Sage focuses on the ideals of healing and restoration, though the prevailing theme of martyrdom persists throughout.The Sage holds you to the principles of empathy and compassion, to an extreme degree, and you have been granted a sliver of power and tasked with the duty of helping the defenseless- by bearing their pain and burdens yourself, if necessary.",
+				"Adherents of the Mendicant-Sage are able to absorb the diseases from others and hold them in their own body, easing the suffering of others, at the cost of their own well-being- and, it must be said, their appearance. Many devotees of the Mendicant-Sage use a mask to hide their faces, concealing the disfiguring effects of the diseases they carry.",
 				"At each indicated cleric level, you add the listed spells to your spells prepared.",
 				{
 					"type": "table",
@@ -1983,11 +1984,11 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Strength of Body|Cleric||Flayed God||1"
+					"subclassFeature": "Strength of Body|Cleric||Mendicant-Sage||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Disciple of Life|Cleric||Flayed God||1"
+					"subclassFeature": "Disciple of Life|Cleric||Mendicant-Sage||1"
 				}
 			]
 		},
@@ -1999,12 +2000,12 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Flayed God",
+			"subclassShortName": "Mendicant-Sage",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st level Flayed God feature}",
+				"{@i 1st level Mendicant-Sage feature}",
 				"Your maximum hit points increases by an amount equal to your cleric level. Additionally, you have advantage on saving throws against poison and disease, and you can neutralize a number of diseases in your body equal to your proficiency modifier.",
 				"You still bear the physical marks of a neutralized disease, such as rashes, flesh discoloration, or decay, but a neutralized disease otherwise has no effect on you. While neutralized, a disease is not contagious, and any duration on the disease is suspended, so it cannot get either better or more severe naturally.",
 				"You can allow a disease to become active again within your body, un-neutralizing it as an action, but once you do, you cannot re-neutralize this instance of the disease again."
@@ -2018,13 +2019,14 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Flayed God",
+			"subclassShortName": "Mendicant-Sage",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st level Flayed God feature}",
-				"Your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
+				"{@i 1st level Mendicant-Sage feature}",
+				"Your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level.",
+				"Additionally, whenever you invoke this feature, you may spend a hit die to restore additional hit points to the creature equal to a roll of the hit die."
 			]
 		},
 		{
@@ -2035,7 +2037,7 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Flayed God",
+			"subclassShortName": "Mendicant-Sage",
 			"subclassSource": "PHB",
 			"level": 2,
 			"header": 2,
@@ -2056,7 +2058,7 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Flayed God",
+			"subclassShortName": "Mendicant-Sage",
 			"subclassSource": "PHB",
 			"level": 6,
 			"header": 2,
@@ -2072,7 +2074,7 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Flayed God",
+			"subclassShortName": "Mendicant-Sage",
 			"subclassSource": "PHB",
 			"level": 8,
 			"header": 2,
@@ -2088,7 +2090,7 @@
 			"basicRules": true,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Flayed God",
+			"subclassShortName": "Mendicant-Sage",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
@@ -2538,20 +2540,21 @@
 			]
 		},
 		{
-			"name": "Trickery Domain",
+			"name": "The Divine Thief",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Trickery",
+			"subclassShortName": "Divine Thief",
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Gods of trickery\u2014such as {@deity Tymora}, {@deity Beshaba}, {@deity Olidammara|Greyhawk}, {@deity the Traveler|Eberron}, {@deity Garl Glittergold|Nonhuman}, and {@deity Loki|Norse}\u2014are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They're patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.",
+				"You owe no loyalty to the gods or any church- no, you stole the power of divinity from under their very noses, to be used for whatever purpose you see fit. It was remarkably easy, actually; other priests seem to put in a lot of wasted effort.",
+				"Yes, it's smooth sailing from here. You're a masterful conman, thief extraordinaire. Totally in control. No reason to doubt it.",
 				"At each indicated cleric level, you add the listed spells to your spells prepared.",
 				{
 					"type": "table",
-					"caption": "Trickery Domain Spells",
+					"caption": "Divine Thief Domain Spells",
 					"colLabels": [
 						"Cleric Level",
 						"Spells"
@@ -2585,7 +2588,7 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Blessing of the Trickster|Cleric||Trickery||1"
+					"subclassFeature": "Blessing of the Trickster|Cleric||Divine Thief||1"
 				}
 			]
 		},
@@ -2595,7 +2598,7 @@
 			"page": 62,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Trickery",
+			"subclassShortName": "Divine Thief",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
@@ -2609,7 +2612,7 @@
 			"page": 62,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Trickery",
+			"subclassShortName": "Divine Thief",
 			"subclassSource": "PHB",
 			"level": 2,
 			"header": 2,
@@ -2618,7 +2621,7 @@
 			},
 			"entries": [
 				"Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself.",
-				"As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until it takes damage. The illusion appears in an unoccupied space that you can see within 30 feet of you. As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
+				"As a bonus action, you create a perfect illusion of yourself in an unoccupied space that you can see within 30 feet of you. that lasts for 1 minute, or until it takes damage. The illusion appears in an unoccupied space that you can see within 30 feet of you. As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
 				"At the same time that the illusion appears, you turn {@condition invisible}, and can make a check to Hide as long as your opponents cannot see you. This invisibility lasts until the start of your next turn.",
 				"For the duration, you can cast spells as though you were in the illusion's space, but you must use your own senses. Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature, given how distracting the illusion is to the target."
 			]
@@ -2629,13 +2632,14 @@
 			"page": 62,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Trickery",
+			"subclassShortName": "Divine Thief",
 			"subclassSource": "PHB",
 			"level": 6,
 			"header": 2,
 			"entries": [
 				"Starting at 6th level, you can use your Invoke Duplicity as a reaction to taking damage. When you do so, you summon the double to take the damage for you, transferring all damage and negative effects to the double, which shatters immediately.",
-				"You then turn invisible until the start of your next turn."
+				"You then turn invisible until the start of your next turn.",
+				"If you have an active illusion from Invoke Duplicity, you may sacrifice that illusion to use this feature instead of expending a new use of the feature."
 			]
 		},
 		{
@@ -2644,7 +2648,7 @@
 			"page": 62,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Trickery",
+			"subclassShortName": "Divine Thief",
 			"subclassSource": "PHB",
 			"level": 8,
 			"header": 2,
@@ -2658,7 +2662,7 @@
 			"page": 62,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Trickery",
+			"subclassShortName": "Divine Thief",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
@@ -2667,16 +2671,16 @@
 			]
 		},
 		{
-			"name": "The Burned Lady",
+			"name": "The Maiden of Battle",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Burned Lady",
+			"subclassShortName": "Maiden of Battle",
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"You are a worshipper of {@deity the Burned Lady|MOD}, god of fire, warfare, and rebirth. The spirit of the Lady compels you into the front lines of battle, wielding magics to protect your allies and bathing your foes in flame.",
+				"You are a worshipper of the Maiden of Battle, one of the aspects of{@deity the Burned Lady|MOD}- god of fire, warfare, and rebirth. The spirit of the Maiden compels you into the front lines of battle, weaving potent abjurations to protect your allies and drowning your foes in purifying flame.",
 				{
 					"type": "table",
 					"caption": "War Domain Spells",
@@ -2713,11 +2717,11 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||Burned Lady||1"
+					"subclassFeature": "Bonus Proficiencies|Cleric||Maiden of Battle||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "War Priest|Cleric||Burned Lady||1"
+					"subclassFeature": "War Priest|Cleric||Maiden of Battle||1"
 				}
 			]
 		},
@@ -2727,7 +2731,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Burned Lady",
+			"subclassShortName": "Maiden of Battle",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
@@ -2741,7 +2745,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Burned Lady",
+			"subclassShortName": "Maiden of Battle",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
@@ -2755,12 +2759,12 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Burned Lady",
+			"subclassShortName": "Maiden of Battle",
 			"subclassSource": "PHB",
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the {@action Attack} action, you can make one weapon attack as a bonus action. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the {@action Attack} action or cast a spell, you can make one weapon attack as a bonus action. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
 			]
 		},
 		{
@@ -2769,7 +2773,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Burned Lady",
+			"subclassShortName": "Maiden of Battle",
 			"subclassSource": "PHB",
 			"level": 2,
 			"header": 2,
@@ -2787,7 +2791,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Burned Lady",
+			"subclassShortName": "Maiden of Battle",
 			"subclassSource": "PHB",
 			"level": 6,
 			"header": 2,
@@ -2801,7 +2805,7 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Burned Lady",
+			"subclassShortName": "Maiden of Battle",
 			"subclassSource": "PHB",
 			"level": 8,
 			"header": 2,
@@ -2815,12 +2819,14 @@
 			"page": 63,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Burned Lady",
+			"subclassShortName": "Maiden of Battle",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+				"At 17th level, you can invoke the form of the Maiden of War to inspire your allies in battle. As an action, you don the mantle of the Maiden, and begin glowing with divine light; all allies within a 30-foot radius gain advantage on attack rolls, are immune to being {@condition charmed} and {@condition frightened}, and gain 10 temporary hit points at the start of each of their turns.",
+				"Enemies who witness your initial transformation must succeed on a Charisma saving throw or become {@condition frightened} of you for 1 minute. They may repeat the save at the end of their turn to end this effect.",
+				"This aura lasts for up to 1 minute, or until you are {@condition incapacitated}."
 			]
 		},
 		{
@@ -3663,7 +3669,7 @@
 			"subclassSource": "XGE",
 			"level": 1,
 			"entries": [
-				"Grave Clerics of Sorspecto find their allegience split between two deities: {@deity The Unbroken circle|Sorspecto|mod} and {@deity The Last Star|Sorspecto|mod}. Both are gods of the dead, but the former emphasizes the cyclical nature of life and death as well as the nature of decay, while the latter focuses on the emptiness of death and the void.",
+				"Grave Clerics of Sorspecto find their allegience split between two deities: {@deity The Unbroken Circle|Sorspecto|mod} and {@deity The Last Star|Sorspecto|mod}. Both are gods of the dead, but the former emphasizes the cyclical nature of life and death as well as the nature of decay, while the latter focuses on the emptiness of death and the void.",
 				"Ultimately, it is up to the individual how they wish to pursue and uphold their faith. Whether you consider the undead to be an abomination and descecration of the dead, or the continuation of life; a grave cleric's responsibility is to comfort and guide those at the end.",
 				{
 					"type": "table",

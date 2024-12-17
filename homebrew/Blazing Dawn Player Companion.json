@@ -127,7 +127,7 @@
 							"name": "Cleric Domains",
 							"page": 12,
 							"entries": [
-								"At 1st level, a cleric gains the Divine Domain feature. When a cleric gains this feature, the following additional options are available to them: the {@class Cleric|PHB|Artistry Domain|Artistry|BDPC}, {@class Cleric|PHB|Courage Domain|Courage|BDPC}, {@class Cleric|PHB|Elemental Domain|Elemental|BDPC}, {@class Cleric|PHB|Hunt Domain|Hunt|BDPC}, and {@class Cleric|PHB|Justice Domain|He Who Weighs Our Sins|BDPC}."
+								"At 1st level, a cleric gains the Divine Domain feature. When a cleric gains this feature, the following additional options are available to them: the {@class Cleric|PHB|Rapturous Chorus|Rapturous Chorus|BDPC}, {@class Cleric|PHB|Courage Domain|Courage|BDPC}, {@class Cleric|PHB|Elemental Domain|Elemental|BDPC}, {@class Cleric|PHB|Hunt Domain|Hunt|BDPC}, and {@class Cleric|PHB|Justice Domain|He Who Weighs Our Sins|BDPC}."
 							]
 						},
 						{
@@ -333,30 +333,30 @@
 			]
 		},
 		{
-			"name": "Artistry Domain",
+			"name": "The Rapturous Chorus",
 			"source": "BDPC",
 			"page": 12,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"shortName": "Artistry",
+			"shortName": "Rapturous Chorus",
 			"subclassSpells": [
 				"Color Spray",
 				"Silent Image",
 				"Magic Mouth",
-				"skywrite|MOD",
+				"Enthrall|MOD",
 				"Major Image",
-				"Tongues",
+				"Hypnotic Pattern",
 				"Fabricate",
 				"Stone Shape",
 				"Creation",
 				"Dream"
 			],
 			"subclassFeatures": [
-				"Artistry Domain|Cleric||Artistry|BDPC|1|BDPC",
-				"Channel Divinity: Bring to Life|Cleric||Artistry|BDPC|2|BDPC",
-				"Channel Divinity: Illusory Theatre|Cleric||Artistry|BDPC|6|BDPC",
-				"Potent Spellcasting|Cleric||Artistry|BDPC|8|BDPC",
-				"Aura of Artistry|Cleric||Artistry|BDPC|17|BDPC"
+				"The Rapturous Chorus|Cleric||Rapturous Chorus|BDPC|1|BDPC",
+				"Channel Divinity: Sing the Song of Life|Cleric||Rapturous Chorus|BDPC|2|BDPC",
+				"Channel Divinity: Illusory Theatre|Cleric||Rapturous Chorus|BDPC|6|BDPC",
+				"Potent Spellcasting|Cleric||Rapturous Chorus|BDPC|8|BDPC",
+				"Aura of Inspiration|Cleric||Rapturous Chorus|BDPC|17|BDPC"
 			]
 		},
 		{
@@ -549,23 +549,6 @@
 			]
 		},
 		{
-			"name": "Devout",
-			"source": "BDPC",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"shortName": "Devout",
-			"page": 19,
-			"subclassFeatures": [
-				"Devout|Fighter||Devout|BDPC|3|BDPC",
-				"Scholar of Evil and Good|Fighter||Devout|BDPC|7|BDPC",
-				"Greater Zealotry|Fighter||Devout|BDPC|7|BDPC",
-				"Improved Zealotry|Fighter||Devout|BDPC|10|BDPC",
-				"Surge of Faith|Fighter||Devout|BDPC|10|BDPC",
-				"Endless Fervor|Fighter||Devout|BDPC|15|BDPC",
-				"Deus Ex Machina|Fighter||Devout|BDPC|18|BDPC"
-			]
-		},
-		{
 			"name": "Ember Knight",
 			"source": "BDPC",
 			"className": "Fighter",
@@ -631,112 +614,6 @@
 				"Channel Divinity: Chains of Reckoning|Cleric||He Who Weighs Our Sins|BDPC|6|BDPC",
 				"Divine Strike|Cleric||He Who Weighs Our Sins|BDPC|8|BDPC",
 				"Divine Truth|Cleric||He Who Weighs Our Sins|BDPC|17|BDPC"
-			]
-		},
-		{
-			"name": "Hunt Domain",
-			"source": "BDPC",
-			"className": "Cleric",
-			"classSource": "PHB",
-			"shortName": "Hunt",
-			"page": 15,
-			"subclassSpells": [
-				"hunter's mark",
-				"snare",
-				"cordon of arrows",
-				"locate animals or plants",
-				"conjure barrage",
-				"lightning arrow",
-				"freedom of movement",
-				"locate creature",
-				"conjure volley",
-				"scrying"
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"hunter's mark",
-							"snare|MOD"
-						],
-						"3": [
-							"cordon of arrows|MOD",
-							"locate animals or plants"
-						],
-						"5": [
-							"conjure barrage|MOD",
-							"lightning arrow|MOD"
-						],
-						"7": [
-							"freedom of movement",
-							"locate creature|MOD"
-						],
-						"9": [
-							"conjure volley|MOD",
-							"scrying"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Hunt Domain|Cleric||Hunt|BDPC|1|BDPC",
-				"Channel Divinity: Prized Quarry|Cleric||Hunt|BDPC|2|BDPC",
-				"Precise Attacker|Cleric||Hunt|BDPC|6|BDPC",
-				"Divine Strike|Cleric||Hunt|BDPC|8|BDPC",
-				"Master of the Hunt|Cleric||Hunt|BDPC|17|BDPC"
-			]
-		},
-		{
-			"name": "Elemental Domain",
-			"source": "BDPC",
-			"className": "Cleric",
-			"classSource": "PHB",
-			"shortName": "Elemental",
-			"page": 14,
-			"subclassSpells": [
-				"absorb elements|xge",
-				"chromatic orb|MOD",
-				"dragon's breath|xge",
-				"earthen grasp|xge",
-				"Elemental Weapon",
-				"Protection from Energy",
-				"summon elemental|TCE",
-				"elemental bane|xge",
-				"conjure elemental",
-				"control winds|xge"
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"absorb elements|xge",
-							"chromatic orb|MOD"
-						],
-						"3": [
-							"dragon's breath|xge",
-							"earthen grasp|xge"
-						],
-						"5": [
-							"elemental weapon|MOD",
-							"protection from energy"
-						],
-						"7": [
-							"summon elemental|TCE",
-							"elemental bane|xge"
-						],
-						"9": [
-							"conjure elemental",
-							"control winds|xge"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Elemental Domain|Cleric||Elemental|BDPC|1|BDPC",
-				"Channel Divinity: Elemental Avatar|Cleric||Elemental|BDPC|2|BDPC",
-				"Nature's Energies|Cleric||Elemental|BDPC|6|BDPC",
-				"Potent Spellcasting|Cleric||Elemental|BDPC|8|BDPC",
-				"Improved Avatar|Cleric||Elemental|BDPC|17|BDPC"
 			]
 		},
 		{
@@ -4226,19 +4103,19 @@
 			]
 		},
 		{
-			"name": "Artistry Domain",
+			"name": "The Rapturous Chorus",
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Artistry",
+			"subclassShortName": "Rapturous Chorus",
 			"subclassSource": "BDPC",
 			"page": 12,
 			"level": 1,
 			"entries": [
-				"Gods of artistry\u2014such as Denier, Milil, Branchala, and Apollo\u2014promote creativity and imagination above all. These gods value all of the arts, including music, painting, sculpting, and other skilled crafts, though they often specialize in one craft above the others. Clerics of a god of artistry are creative souls infused with the desire to create and share their emotions with others, whether through song, artwork, or other means. Many of their compositions are created or improved through magic, and are often a glorious sight to behold or listen to.",
+				"You are a cleric of {@deity the Rapturous Chorus|MOD}, god of artistry, creativity, and beauty- no matter what form it takes. The Chorus has few official churches, as its adherents tend to resist the restraints of canonization; instead, its tenets are upheld by artists, writers, painters, and sculptors of all sorts throughout the world. One need not be pious to be an adherent of the Chorus- it asks nothing except for creation.",
 				{
 					"type": "table",
-					"caption": "Artistry Domain Spells",
+					"caption": "Rapturous Chorus Spells",
 					"colLabels": [
 						"Cleric Level",
 						"Spells"
@@ -4254,11 +4131,11 @@
 						],
 						[
 							"3rd",
-							"{@spell magic mouth}, {@spell skywrite|MOD}"
+							"{@spell magic mouth}, {@spell enthrall|MOD}"
 						],
 						[
 							"5th",
-							"{@spell major image}, {@spell tongues}"
+							"{@spell major image}, {@spell hypnotic pattern}"
 						],
 						[
 							"7th",
@@ -4272,26 +4149,28 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||Artistry|BDPC|1|BDPC"
+					"subclassFeature": "Artistic Talent|Cleric||Rapturous Chorus|BDPC|1|BDPC"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Artistic Compositions|Cleric||Artistry|BDPC|1|BDPC"
+					"subclassFeature": "Artistic Compositions|Cleric||Rapturous Chorus|BDPC|1|BDPC"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiencies",
+			"name": "Artistic Talent",
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Artistry",
+			"subclassShortName": "Rapturous Chorus",
 			"subclassSource": "BDPC",
 			"page": 12,
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you gain proficiency in the {@skill Performance} skill, and one of the following artisan's tools: {@item calligrapher's supplies|phb}, {@item glassblower's tools|phb}, {@item jeweler's tools|phb}, {@item painter's supplies|phb}, {@item potter's tools|phb}, or {@item woodcarver's tools|phb}. Also, you gain proficiency in a musical instrument of your choice."
+				"{@i 1st-level Rapturous Chorus feature}",
+				"An adherent of the chorus must necessarily be a creative talent of some sort. Choose some school of artistry- such as painting, singing, dancing, scupting, poetry, etc. Your character has expertise on ability checks substantially relating to your artistic domain (which can range from attempts to perform/create to recalling information related to your art).",
+				"You are encouraged to be creative with your artistic domain."
 			]
 		},
 		{
@@ -4299,7 +4178,7 @@
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Artistry",
+			"subclassShortName": "Rapturous Chorus",
 			"subclassSource": "BDPC",
 			"page": 12,
 			"level": 1,
@@ -4311,7 +4190,7 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Musical Composition",
+							"name": "Sing the Rapturous Song",
 							"page": 12,
 							"entries": [
 								"You write a musical composition upon a few conjured pages. As an action, you can cause the music to magically play within the mind of a creature you can see within 15 feet of you. That creature must succeed on a Wisdom saving throw or be {@condition charmed} by you until the start of your next turn. A creature {@condition charmed} this way can't willingly move away from you.",
@@ -4320,7 +4199,7 @@
 						},
 						{
 							"type": "entries",
-							"name": "Painting",
+							"name": "Sink into the Gray Portrait",
 							"page": 12,
 							"entries": [
 								"You conjure a painting of your design that fits within a rectangular area no larger than 3 feet on a side, and no smaller than half a foot on a side. As an action, you can enter into the painting if you are within 5 feet of it. You, along with anything you're wearing or carrying, disappears before appearing at a location of your choice within the painting. You can remain within the painting for up to 10 minutes, though you are also forced out if the painting takes any damage. While within the painting, you can see, hear, and smell as normal.",
@@ -4329,7 +4208,7 @@
 						},
 						{
 							"type": "entries",
-							"name": "Sculpture",
+							"name": "A Sculpture is but a Shadow of the Self",
 							"page": 12,
 							"entries": [
 								"You conjure a tiny sculpture of yourself. While you are within 30 feet of the sculpture, you can use your bonus action to teleport to its location. If there is insufficient room at the sculpture's location, you teleport to the location nearest to the sculpture that has sufficient room for you.",
@@ -4341,18 +4220,19 @@
 			]
 		},
 		{
-			"name": "Channel Divinity: Bring to Life",
+			"name": "Channel Divinity: Sing the Song of Life",
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Artistry",
+			"subclassShortName": "Rapturous Chorus",
 			"subclassSource": "BDPC",
 			"page": 12,
 			"level": 2,
 			"header": 2,
 			"entries": [
 				"Beginning at 2nd level, you can use your Channel Divinity to create real creatures and objects from artwork.",
-				"During a minute-long ritual, you touch a piece of artwork and cause a single object or creature depicted within that piece to be conjured at an unoccupied location within 30 feet of you, in a perfectly realistic form. To be an eligible target, the real version of a selected creature or object must fit within a 10-foot cube, and, if its a creature, must be of CR 0. A conjured creature can be of any creature type, is friendly to you, and obeys your commands. Anything conjured with this Channel Divinity lasts for up to 1 hour. You can dismiss the conjured creature or object by using a bonus action on your turn."
+				"During a minute-long ritual, you touch a piece of artwork and cause a single nonmagical object or creature depicted within that piece to be conjured at an unoccupied location within 30 feet of you, in a perfectly realistic form. To be an eligible target, the real version of a selected creature or object must fit within a 10-foot cube, and, if its a creature, must be of CR 0. A conjured creature can be of any creature type, is friendly to you, and obeys your commands. Anything conjured with this Channel Divinity lasts for up to 1 hour. You can dismiss the conjured creature or object by using a bonus action on your turn.",
+				"Though a conjured object behaves like its mundane counterpart, it cannot be used as a material component for spells, and close inspection will reveal its true nature. If you are attempting to create a specific object, you must have detailed knowledge of that object first."
 			]
 		},
 		{
@@ -4360,7 +4240,7 @@
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Artistry",
+			"subclassShortName": "Rapturous Chorus",
 			"subclassSource": "BDPC",
 			"page": 12,
 			"level": 6,
@@ -4376,7 +4256,7 @@
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Artistry",
+			"subclassShortName": "Rapturous Chorus",
 			"subclassSource": "BDPC",
 			"page": 12,
 			"level": 8,
@@ -4386,11 +4266,11 @@
 			]
 		},
 		{
-			"name": "Aura of Artistry",
+			"name": "Aura of Inspiration",
 			"source": "BDPC",
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Artistry",
+			"subclassShortName": "Rapturous Chorus",
 			"subclassSource": "BDPC",
 			"page": 12,
 			"level": 17,

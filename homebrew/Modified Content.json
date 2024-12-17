@@ -5649,7 +5649,8 @@
 			"name": "Crafting Magic Items",
 			"source": "MOD",
 			"entries": [
-				"Players do not generally have the ability to create magic items. In Sorspecto, most magic items are a relic of an older age, and the ability to create more is an exceedingly rare talent."
+				"We do not use any standardized system for crafting arbitrary magic items. On the continent of Sorspecto, magic item crafting is a rare skill, and most magic items are relics of a bygone age rather than new creations.",
+				"That said, on occasion, components from notable or supernatural enemies may be fashioned into a magic item of some sort by a sufficiently skilled craftsman. There is no standard system for this; all cases are evaluated individually."
 			]
 		},
 		{
@@ -6370,11 +6371,20 @@
 			]
 		},
 		{
+			"name": "Using Homebrew Content",
+			"source": "MOD",
+			"entries": [
+				"A lot of new third-party and homebrew content has been introduced into the system. Homebrew is generally assumed to be balanced with respect to the core system, but there's no way to guarantee any two homebrews are balanced against each other (or don't have aberrant interactions).",
+				"Each player may freely use content from any core source (Player's Handbook, Xanathar's Guide, Tasha's Cauldron, Fizban's Treasury), plus the special homebrew source Modified Content (abbrev. MOD), which mostly serves to contain core content that has been altered. Each player may only use content from {@i one} other homebrew source.",
+				"For example, if you decide that you want to use the third-party Occultist class, you may use content from the PHB, XGE, TCE, FTD, and MOD, as well as the Occultist content, but you could not then take spells from the Sprouting Chaos Player's Companion."
+			]
+		},
+		{
 			"name": "Using Creature Statblocks for Players",
 			"source": "MOD",
 			"entries": [
 				"Sometimes, a feature will have you summon a creature to the field (such as the various Summon X spells), or will ask you to pick from a range of statblocks in some way (such as the {@spell polymorph|MOD} spell or a druid's Wildshape.)",
-				"If you are ever told to select from a range of creatures, assume you are limited to creatures included in the Monster Manual.",
+				"If you are ever told to select from a range of creatures, assume you are limited to creatures included in the Monster Manual unless specifically indicated otherwise.",
 				"Additionally, you must prepare these abilities ahead of time- if you have a set statblock, you must let me know what it is so it can be imported into Foundry, and if you select from a range of statblocks, you should choose a selection of statblocks to cover your basic use cases so they can be pre-imported into Foundry.",
 				"Addendum: If a Monster Manual statblock is reprinted in Mordenkainen Presents: Monsters of the Multiverse, you should still use the original Monster Manual statblock."
 			]
@@ -6684,7 +6694,7 @@
 			"type": "table",
 			"caption": "Bludgeoning Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -6732,7 +6742,7 @@
 			"type": "table",
 			"caption": "Cold Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -6780,7 +6790,7 @@
 			"type": "table",
 			"caption": "Fire Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -6828,7 +6838,7 @@
 			"type": "table",
 			"caption": "Force Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -6876,7 +6886,7 @@
 			"type": "table",
 			"caption": "Lightning Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -6924,7 +6934,7 @@
 			"type": "table",
 			"caption": "Piercing Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -6972,7 +6982,7 @@
 			"type": "table",
 			"caption": "Poison Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -7020,7 +7030,7 @@
 			"type": "table",
 			"caption": "Psychic Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -7068,7 +7078,7 @@
 			"type": "table",
 			"caption": "Radiant Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -7116,7 +7126,7 @@
 			"type": "table",
 			"caption": "Slashing Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -7164,7 +7174,7 @@
 			"type": "table",
 			"caption": "Necrotic Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [
@@ -7212,7 +7222,7 @@
 			"type": "table",
 			"caption": "Thunder Injury",
 			"colLabels": [
-				"d10",
+				"d12",
 				"Injury"
 			],
 			"colStyles": [

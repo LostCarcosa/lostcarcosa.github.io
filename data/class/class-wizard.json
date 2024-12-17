@@ -749,8 +749,8 @@
 			"subclassFeatures": [
 				"School of Abjuration|Wizard||Abjuration||2",
 				"Projected Ward|Wizard||Abjuration||6",
-				"Improved Abjuration|Wizard||Abjuration||10",
-				"Spell Resistance|Wizard||Abjuration||14"
+				"Shelter of the Faithful|Wizard||Abjuration||10",
+				"Aegis|Wizard||Abjuration||14"
 			]
 		},
 		{
@@ -805,8 +805,8 @@
 			"srd": true,
 			"basicRules": true,
 			"subclassFeatures": [
-				"School of Evocation|Wizard||Evocation||2",
-				"Potent Cantrip|Wizard||Evocation||6",
+				"Elemental Warp|Wizard||Evocation||2",
+				"Zonemaster|Wizard||Evocation||6",
 				"Empowered Evocation|Wizard||Evocation||10",
 				"Overchannel|Wizard||Evocation||14"
 			]
@@ -829,23 +829,23 @@
 			],
 			"subclassFeatures": [
 				"School of Illusion|Wizard||Illusion||2",
-				"Malleable Illusions|Wizard||Illusion||6",
-				"Illusory Step|Wizard||Illusion||10",
+				"Instant Decoy|Wizard||Illusion||6",
+				"Hall of Mirrors|Wizard||Illusion||10",
 				"Illusory Reality|Wizard||Illusion||14"
 			]
 		},
 		{
 			"name": "School of Necromancy",
-			"shortName": "Necromancy",
 			"source": "PHB",
+			"page": 22,
 			"className": "Wizard",
 			"classSource": "PHB",
-			"page": 118,
+			"shortName": "Necromancy",
 			"subclassFeatures": [
-				"School of Necromancy|Wizard||Necromancy||2",
-				"Undead Thralls|Wizard||Necromancy||6",
-				"Inured to Undeath|Wizard||Necromancy||10",
-				"Command Undead|Wizard||Necromancy||14"
+				"School of Necromancy|Wizard||Necromancy|PHB|2",
+				"Volatile Soul|Wizard||Necromancy|PHB|6",
+				"Consume|Wizard||Necromancy|PHB|10",
+				"Lasting Creation|Wizard||Necromancy|PHB|14"
 			]
 		},
 		{
@@ -860,82 +860,6 @@
 				"Transmuter's Stone|Wizard||Transmutation||6",
 				"Shapechanger|Wizard||Transmutation||10",
 				"Master Transmuter|Wizard||Transmutation||14"
-			]
-		},
-		{
-			"name": "War Magic",
-			"shortName": "War",
-			"source": "XGE",
-			"className": "Wizard",
-			"classSource": "PHB",
-			"page": 59,
-			"subclassFeatures": [
-				"War Magic|Wizard||War|XGE|2",
-				"Power Surge|Wizard||War|XGE|6",
-				"Durable Magic|Wizard||War|XGE|10",
-				"Deflecting Shroud|Wizard||War|XGE|14"
-			]
-		},
-		{
-			"name": "Chronurgy Magic",
-			"shortName": "Chronurgy",
-			"source": "EGW",
-			"className": "Wizard",
-			"classSource": "PHB",
-			"page": 184,
-			"subclassFeatures": [
-				"Chronurgy Magic|Wizard||Chronurgy|EGW|2",
-				"Momentary Stasis|Wizard||Chronurgy|EGW|6",
-				"Arcane Abeyance|Wizard||Chronurgy|EGW|10",
-				"Convergent Future|Wizard||Chronurgy|EGW|14"
-			]
-		},
-		{
-			"name": "Graviturgy Magic",
-			"shortName": "Graviturgy",
-			"source": "EGW",
-			"className": "Wizard",
-			"classSource": "PHB",
-			"page": 185,
-			"subclassFeatures": [
-				"Graviturgy Magic|Wizard||Graviturgy|EGW|2",
-				"Gravity Well|Wizard||Graviturgy|EGW|6",
-				"Violent Attraction|Wizard||Graviturgy|EGW|10",
-				"Event Horizon|Wizard||Graviturgy|EGW|14"
-			]
-		},
-		{
-			"name": "Bladesinging",
-			"shortName": "Bladesinging",
-			"source": "TCE",
-			"className": "Wizard",
-			"classSource": "PHB",
-			"page": 76,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 141
-				}
-			],
-			"subclassFeatures": [
-				"Bladesinging|Wizard||Bladesinging|TCE|2",
-				"Extra Attack|Wizard||Bladesinging|TCE|6",
-				"Song of Defense|Wizard||Bladesinging|TCE|10",
-				"Song of Victory|Wizard||Bladesinging|TCE|14"
-			]
-		},
-		{
-			"name": "Order of Scribes",
-			"shortName": "Scribes",
-			"source": "TCE",
-			"className": "Wizard",
-			"classSource": "PHB",
-			"page": 77,
-			"subclassFeatures": [
-				"Order of Scribes|Wizard||Scribes|TCE|2",
-				"Manifest Mind|Wizard||Scribes|TCE|6",
-				"Master Scrivener|Wizard||Scribes|TCE|10",
-				"One with the Word|Wizard||Scribes|TCE|14"
 			]
 		}
 	],
@@ -983,7 +907,7 @@
 					"type": "entries",
 					"name": "Vancian Spellcasting",
 					"entries": [
-						"Unlike their fellow casters, wizards must employ a rigorous and inflexible method of spellcasting, heavily relying on good planning and advance intel. Though far less adaptable than most of their magical counterparts (especially the sorcerer), the wizard makes up for this deficiency by having an extremely robust pool of spells to pick from.",
+						"Unlike their fellow casters, wizards must employ a rigorous and inflexible method of spellcasting, heavily relying on good planning and advance intel. Though far less adaptable than most of their magical counterparts (especially the sorcerer), the wizard makes up for this deficiency by having an extremely robust range of spells to pick from, as well as a larger mana pool than most other mages.",
 						"At the end of a long rest, you prepare your spells for the day. To do this, you must assign one spell to each individual spell slot. That spell slot can {@i only} be used to cast that spell. The spell slot must be of sufficient level to cast the chosen spell. There is no limit to how many times you prepare an individual spell, or how many different spells you prepare, except the inherent limit imposed by how many spell slots you have.",
 						"For example, a third level wizard has 4 1st level slots and 2 second level slots. They could prepare six {@spell magic missile|magic missiles} (of which two would be upcast to 2nd level) to be able to cast magic missile 6 times, or they could prepare {@spell ice knife}, {@spell grease}, {@spell magic missile}, {@spell burning hands}, {@spell absorb elements}, {@spell scorching ray}, and {@spell darkness} in order to be able to cast each of the six spells once.",
 						{
@@ -1042,14 +966,15 @@
 					"type": "entries",
 					"name": "Specialization",
 					"entries": [
-						"When you gain your first wizard level, you must designate one school of magic as your Specialization and one different school of magic as your Weakness. You may copy spells of your Specialization into your spellbook using half the time and cost (rounded up); however, you may not learn or cast spells from your Weakness through any means. Certain subclasses may require specific Specializations (or barr specific Weaknesses)."
+						"When you gain your first wizard level, you must designate one school of magic as your Specialization and one different school of magic as your Antithesis. You may copy spells of your specialization into your spellbook using half the time and cost (rounded up); however, you may not learn or cast spells from your antithesis through any means.",
+						"Many subclasses will require a school to be selected as your specialization, or bar a school from being selected as your antithesis. You will select a subclass at level 2; it is recommended that you plan ahead."
 					]
 				},
 				{
 					"type": "inset",
 					"name": "Your Spellbook",
 					"entries": [
-						"The spells that you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the multiverse. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard's chest, for example, or in a dusty tome in an ancient library.",
+						"The spells that you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the universe. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard's chest, for example, or in a dusty tome in an ancient library.",
 						"A spellbook doesn't contain cantrips.",
 						{
 							"type": "entries",
@@ -1059,8 +984,8 @@
 									"name": "Copying a Spell into the Book",
 									"entries": [
 										"When you find a wizard spell of 1st level or higher, you can add it to your spellbook if it is of a spell level you can prepare and if you can spare the time to decipher and copy it.",
-										"Copying a spell into your spellbook involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation.",
-										"For each level of the spell, the process takes 2 hours and costs 1 COIN. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.",
+										"Copying a spell into your spellbook involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation. The time spent copying the spell into your book represents both the literal time spent scribing as well as the necessary time to become proficient in the spell via practice.",
+										"For each level of the spell, the process takes 1 day and costs 1 COIN. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.",
 										{
 											"type": "entries",
 											"name": "Copying from a Spell Scroll",
@@ -1452,12 +1377,16 @@
 				"Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed.",
 				{
 					"type": "refSubclassFeature",
+					"subclassFeature": "Specialization: Abjuration|Wizard||Abjuration||2"
+				},
+				{
+					"type": "refSubclassFeature",
 					"subclassFeature": "Arcane Ward|Wizard||Abjuration||2"
 				}
 			]
 		},
 		{
-			"name": "Abjuration Savant",
+			"name": "Specialization: Abjuration",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1467,7 +1396,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy an abjuration spell into your spellbook is halved."
+				"In order to take this subclass, you must have selected abjuration as your specialization and evocation as your antithesis at level 1."
 			]
 		},
 		{
@@ -1483,7 +1412,14 @@
 			"entries": [
 				"Starting at 2nd level, you can weave magic around yourself for protection. When you cast an {@filter abjuration spell of 1st level or higher|spells|school=A|level=!0}, you can simultaneously use a strand of the spell's magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has a hit point maximum equal to twice your wizard level + your Intelligence modifier. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hit points, you take any remaining damage.",
 				"While the ward has 0 hit points, it can't absorb damage, but its magic remains. Whenever you cast an {@filter abjuration spell of 1st level or higher|spells|school=A|level=!0}, the ward regains a number of hit points equal to twice the level of the spell.",
-				"Once you create the ward, you can't create it again until you finish a long rest."
+				"Once you create the ward, you can't create it again until you finish a long rest.",
+				{
+					"type": "inset",
+					"name": "Clarification",
+					"entries": [
+						"A major benefit of the Arcane Ward is that as long as it can absorb all the damage, it doesn't count as you taking damage, which prevents you from needing to make any Concentration saves."
+					]
+				}
 			]
 		},
 		{
@@ -1501,7 +1437,7 @@
 			]
 		},
 		{
-			"name": "Improved Abjuration",
+			"name": "Shelter of the Faithful",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1511,11 +1447,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, when you cast an abjuration spell that requires you to make an ability check as a part of casting that spell (as in {@spell counterspell} and {@spell dispel magic}), you add your proficiency bonus to that ability check."
+				"Beginning at 10th level, whenever you complete a long rest, you may designate up to 4 other willing creatures within 20 feet of you as your Kin.",
+				"Your Kin always count as within range for your Projected Ward feature (though you must be able to see them). Additionally, Projected Ward no longer consumes your reaction, though you can only use it once between each of your turns, and you cannot use it if you are unable to take reactions.",
+				"Your Arcane Ward also recovers faster now, and regenerates hit points equal to three times the level of the spell (instead of two times) whenever you cast an abjuration spell of 1st level or higher.)"
 			]
 		},
 		{
-			"name": "Spell Resistance",
+			"name": "Aegis",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1525,8 +1463,9 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, you have advantage on saving throws against spells.",
-				"Furthermore, you have resistance against the damage of spells."
+				"Starting at 14th level, you gain the ability to extend your abjuration more effectively to protect your Kin.",
+				"Whenever you cast a non-self abjuration spell that targets a single creature, you can cause it to also target one of your Kin as long as they're within range.",
+				"Furthermore, when you cast an abjuration spell that targets self, you can cause it to affect one of your Kin instead. If the spell is a reaction to something occuring to yourself, you can extend the trigger to your Kin as well (for example, you could trigger and cast {@spell shield} on an ally if they are attacked)."
 			]
 		},
 		{
@@ -1542,12 +1481,16 @@
 				"As a conjurer, you favor spells that produce objects and creatures out of thin air. You can conjure billowing clouds of killing fog or summon creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant.",
 				{
 					"type": "refSubclassFeature",
+					"subclassFeature": "Specialization: Conjuration|Wizard||Conjuration||2"
+				},
+				{
+					"type": "refSubclassFeature",
 					"subclassFeature": "Minor Conjuration|Wizard||Conjuration||2"
 				}
 			]
 		},
 		{
-			"name": "Conjuration Savant",
+			"name": "Specialization: Conjuration",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1557,7 +1500,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a conjuration spell into your spellbook is halved."
+				"In order to take this subclass, you must have selected conjuration as your specialization at level 1."
 			]
 		},
 		{
@@ -1572,7 +1515,8 @@
 			"header": 1,
 			"entries": [
 				"Starting at 2nd level when you select this school, you can use your action to conjure up an inanimate object in your hand or on the ground in an unoccupied space that you can see within 10 feet of you. This object can be no larger than 3 feet on a side and weigh no more than 10 pounds, and its form must be that of a nonmagical object that you have seen. The object is visibly magical, radiating dim light out to 5 feet.",
-				"The object disappears after 1 hour, when you use this feature again, if it takes any damage, or if it deals any damage."
+				"The object disappears after 1 hour, when you use this feature again, if it takes any damage, or if it deals any damage.",
+				"You can only create objects that you are familiar with. For example, creating a cup would be trivial, but creating a key to a lock would require you to have examined the original key in detail, and accurately conjuring a book would require you to somehow have memorized the entire text."
 			]
 		},
 		{
@@ -1631,12 +1575,16 @@
 				"The counsel of a diviner is sought by royalty and commoners alike, for all seek a clearer understanding of the past, present, and future. As a diviner, you strive to part the veils of space, time, and consciousness so that you can see clearly. You work to master spells of discernment, remote viewing, supernatural knowledge, and foresight.",
 				{
 					"type": "refSubclassFeature",
+					"subclassFeature": "Specialization: Divination|Wizard||Divination||2"
+				},
+				{
+					"type": "refSubclassFeature",
 					"subclassFeature": "Portent|Wizard||Divination||2"
 				}
 			]
 		},
 		{
-			"name": "Divination Savant",
+			"name": "Specialization: Divination",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1646,7 +1594,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a divination spell into your spellbook is halved."
+				"In order to take this subclass, you must have selected divination as your specialization at level 1."
 			]
 		},
 		{
@@ -1660,7 +1608,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two {@dice d20}s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn.",
+				"Starting at 2nd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two {@dice d20}s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You can do this after seeing the result of the roll, but you cannot replace a roll in this way more than once per turn, and a single roll cannot be affected by more than one use of this feature.",
 				"Each foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls."
 			]
 		},
@@ -1752,14 +1700,18 @@
 				"As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.",
 				{
 					"type": "refSubclassFeature",
+					"subclassFeature": "Specialization: Enchantment|Wizard||Enchantment||2"
+				},
+				{
+					"type": "refSubclassFeature",
 					"subclassFeature": "Hypnotic Gaze|Wizard||Enchantment||2"
 				}
 			]
 		},
 		{
-			"name": "Enchantment Savant",
+			"name": "Specialization: Enchantment",
 			"source": "PHB",
-			"page": 117,
+			"page": 116,
 			"className": "Wizard",
 			"classSource": "PHB",
 			"subclassShortName": "Enchantment",
@@ -1767,7 +1719,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy an enchantment spell into your spellbook is halved."
+				"In order to take this subclass, you must have selected Enchantment as your specialization at level 1."
 			]
 		},
 		{
@@ -1845,12 +1797,30 @@
 				"You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Sculpt Spells|Wizard||Evocation||2"
+					"subclassFeature": "Specialization: Evocation|Wizard||Evocation||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Elemental Warp|Wizard||Evocation||2"
 				}
 			]
 		},
 		{
-			"name": "Evocation Savant",
+			"name": "Specialization: Evocation",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"In order to take this subclass, you must have selected evocation as your specialization and abjuration as your antithesis at level 1."
+			]
+		},
+		{
+			"name": "Elemental Warp",
 			"source": "PHB",
 			"page": 117,
 			"srd": true,
@@ -1862,27 +1832,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved."
+				"{@i 2nd level School of Evocation feature}",
+				"The fundamentals of evocation relies upon elemental spells. Whenever you cast an evocation spell of 1st level or higher that deals acid, cold, fire, lightning, or poison damage, you may switch its damage type to another from the aforementioned list.",
+				"You can do this a number of times equal to your intelligence modifier per long rest. If you have no uses remaining, you may instead burn a single hit die to use this feature."
 			]
 		},
 		{
-			"name": "Sculpt Spells",
-			"source": "PHB",
-			"page": 117,
-			"srd": true,
-			"basicRules": true,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"subclassShortName": "Evocation",
-			"subclassSource": "PHB",
-			"level": 2,
-			"header": 1,
-			"entries": [
-				"Beginning at 2nd level, you can create pockets of relative safety within the effects of your evocation spells. When you cast an evocation spell that affects other creatures that you can see, you can choose a number of them equal to 1 + the spell's level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save."
-			]
-		},
-		{
-			"name": "Potent Cantrip",
+			"name": "Zonemaster",
 			"source": "PHB",
 			"page": 117,
 			"srd": true,
@@ -1894,7 +1850,36 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, your damaging cantrips affect even creatures that avoid the brunt of the effect. When a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip's damage (if any) but suffers no additional effect from the cantrip."
+				"{@i 6th level School of Evocation feature}",
+				"You have developed the ability to manipulate your damaging area spells to a much greater ability. Whenever you cast a damaging evocation spell of 1st level or higher that targets a sphere, cylinder, line, or cone, you can choose to modify the area effect as follows:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Line",
+							"entries": [
+								"You can cause your Line effects to bounce off of walls and other solid obstructions, changing their angle but otherwise continuing their trajectory. The total length of the line cannot exceed the original line length of the spell."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cone",
+							"entries": [
+								"You can cause your Cones to emit a secondary backblast, generating a second cone with the same origin, half the length, and oriented in exactly the oopposite direction."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Spheres/Cylinders",
+							"entries": [
+								"You can increase the radius of your sphere/cylinder effects by 50%, but doing so cuts the range of the spell in half. (Careful! You might scorch yourself.)"
+							]
+						}
+					]
+				},
+				"Some of these effects cause spells to split into multiple areas. Even if a creature is in multiple overlapping areas, they are never affected more than once per spell. (More generally, a multi-area spell is essentially treated as one very oddly-shaped area.)"
 			]
 		},
 		{
@@ -1927,7 +1912,8 @@
 			"header": 2,
 			"entries": [
 				"Starting at 14th level, you can increase the power of your simpler spells. When you cast a wizard spell of 1st through 5th-level that deals damage, you can deal maximum damage with that spell.",
-				"The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take {@damage 2d12} necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by {@dice 1d12}. This damage ignores resistance and immunity."
+				"The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take {@damage 2d12} necrotic damage for each level of the spell, immediately after you cast it. Your maximum hit points are also reduced by the same amount. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by {@dice 1d12}. This damage ignores resistance and immunity, pierces temporary hit points, and cannot be avoided in any way.",
+				"Furthermore, if you use this feature while at {@condition Death's Door|MOD}, you fail one death save per spell level."
 			]
 		},
 		{
@@ -1941,9 +1927,14 @@
 			"level": 2,
 			"entries": [
 				"You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists\u2014including many gnome wizards\u2014are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain.",
+				
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Improved Minor Illusion|Wizard||Illusion||2"
+					"subclassFeature": "Specialization: Illusion|Wizard||Illusion||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Malleable Illusions|Wizard||Illusion||2"
 				}
 			]
 		},
@@ -1962,9 +1953,9 @@
 			]
 		},
 		{
-			"name": "Improved Minor Illusion",
+			"name": "Specialization: Illusion",
 			"source": "PHB",
-			"page": 118,
+			"page": 115,
 			"className": "Wizard",
 			"classSource": "PHB",
 			"subclassShortName": "Illusion",
@@ -1972,8 +1963,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"When you choose this school at 2nd level, you learn the {@spell minor illusion} cantrip. If you already know this cantrip, you learn a different wizard cantrip of your choice. The cantrip doesn't count against your number of cantrips known.",
-				"When you cast {@spell minor illusion}, you can create both a sound and an image with a single casting of the spell."
+				"In order to take this subclass, you must have selected illusion as your specialization at level 1."
 			]
 		},
 		{
@@ -1984,14 +1974,31 @@
 			"classSource": "PHB",
 			"subclassShortName": "Illusion",
 			"subclassSource": "PHB",
-			"level": 6,
+			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, when you cast an illusion spell that has a duration of 1 minute or longer, you can use your action to change the nature of that illusion (using the spell's normal parameters for the illusion), provided that you can see the illusion."
+				"{@i 2nd level School of Illusion feature}",
+				"When you cast an illusion spell that has a duration of 1 minute or longer, you can use your bonus action to change the nature of that illusion (using the spell's normal parameters for the illusion), provided that you can see the illusion."
 			]
 		},
 		{
-			"name": "Illusory Step",
+			"name": "Instant Decoy",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th level School of Illusion feature}",
+				"You can create an illusory duplicate of yourself as an instant, almost instinctual reaction to danger. When a creature makes an attack roll against you, you can use your reaction to interpose the illusory duplicate between the attacker and yourself. The attack automatically misses you, then the illusion dissipates.",
+				"Once you use this feature, you can't use it again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Hall of Mirrors",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -1999,10 +2006,13 @@
 			"subclassShortName": "Illusion",
 			"subclassSource": "PHB",
 			"level": 10,
-			"header": 2,
+			"header": 1,
 			"entries": [
-				"Beginning at 10th level, you can create an illusory duplicate of yourself as an instant, almost instinctual reaction to danger. When a creature makes an attack roll against you, you can use your reaction to interpose the illusory duplicate between the attacker and yourself. The attack automatically misses you, then the illusion dissipates.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
+				"{@i 10th level School of Illusion feature}",
+				"1/short rest as a bonus action, you can split yourself into three illusory duplicates of yourself, removing yourself from the field in the process. Other creatures cannot tell which duplicate is the 'real' you. Each illusory duplicate counts as a creature and exists under the following special rules.",
+				"You still act on your own intitiative and control all three duplicates when you do so, although you still have only one action and bonus action. You may use spells, features, and attacks from the position of any of your duplicates, though doing so still consumes your own resources. Each duplicate may take their standard movement in full.",
+				"A duplicate vanishes if it is more than 60 feet away from another duplicate. A duplicate also vanishes if it takes any damage or fails a saving throw, revealing it to be an illusion. Once there is only one duplicate left, this effect ends; the final duplicate is revealed to be the true you. You are placed back on the field in its position and the final duplicate disappears.",
+				"At 14th level, you split into four duplicates instead of three."
 			]
 		},
 		{
@@ -2017,7 +2027,7 @@
 			"header": 2,
 			"entries": [
 				"By 14th level, you have learned the secret of weaving shadow magic into your illusions to give them a semireality. When you cast an illusion spell of 1st level or higher, you can choose one inanimate, nonmagical object that is part of the illusion and make that object real. You can do this on your turn as a bonus action while the spell is ongoing. The object remains real for 1 minute. For example, you can create an illusion of a bridge over a chasm and then make it real long enough for your allies to cross.",
-				"The object can't deal damage or otherwise directly harm anyone."
+				"The object can't deal damage or otherwise directly harm anyone. As an ephemeral creation, the object also has no value, and therefore cannot be used as a costly spell component."
 			]
 		},
 		{
@@ -2658,6 +2668,113 @@
 			"header": 2,
 			"entries": [
 				"At 14th level, your Arcane Deflection becomes infused with deadly magic. When you use your Arcane Deflection feature, you can cause magical energy to arc from you. Up to three creatures of your choice that you can see within 60 feet of you each take force damage equal to half your wizard level."
+			]
+		},
+		{
+			"name": "School of Necromancy",
+			"source": "PHB",
+			"page": 22,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"As a member of the school of reawakening, you combine the forces of necromancy with the power of conjuration. By transforming the necromantic energies of the creatures you kill into completely new conjurations, you bridge the gap between these two school of magic, creating a hybrid school that combines elements of both Conjuration and Necromancy. As you progress, you learn to shape together ever more powerful conjurations.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Reanimate|Wizard||Necromancy|PHB|2"
+				}
+			]
+		},
+		{
+			"name": "Specialization: Necromancy",
+			"source": "PHB",
+			"page": 22,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"In order to take this subclass, you must have selected necromancy as your specialization at level 1."
+			]
+		},
+		{
+			"name": "Reanimate",
+			"source": "PHB",
+			"page": 22,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd level School of Necromancy Feature}",
+				"You gain the ability to resurrect the corpses of your foes to fight for you. By conducting a taxing 10 minute ritual upon the corpse of a creature, you can create a Corpse Trinket- a weight 1 item fashioned out of some vital or symbolic element of the creature's body, such as a skull or a heart. The rest of the corpse is (messily) destroyed. The ritual cannot be used on undead or constructs.",
+				"This ritual requires you to sacrifice 2 hit points per CR of the creature; the ritual fails if you do not have enough hit points to sacrifice.",
+				"You may create multiple Corpse Trinkets, but the total challenge rating of the creatures the trinkets were made from cannot be more than half of your wizard level, rounded down. (For example, a level 10 wizard could hold a single CR5 trinket, or a CR3 trinket and a CR2 trinket, but could not hold two CR3 trinkets, or a single CR6 trinket.)",
+				"While holding a Corpse Trinket, you may use an action to reanimate the creature it was taken from. If you have multiple Corpse Trinkets, you may reanimate up to three at once with the same action. The reanimated creature is undead; it keeps its statblock, except for the following changes:",
+				{
+					"type": "list",
+					"items": [
+						"The creature's type becomes undead.",
+						"The creature becomes resistant to necrotic, but loses all resistances to bludgeoning, piercing, slashing, and radiant damage.",
+						"The creature gains immunity to the {@condition charmed} and {@condition frightened} conditions.",
+						"The creature's Intelligence, Wisdom, and Charisma stats become 2, if they were higher.",
+						"The creature loses access to all spellcasting, and cannot take legendary or lair actions."
+					]
+				},
+				"The summoned undead acts on its own initiative. You can issue verbal commands to determine what it does on its next turn as a free action. If the reanimated creature recieves no commands, it automatically spends its turn moving toward and attacking the nearest living creature (excluding you).",
+				"Once formed, the creature lasts for 1 hour. You must maintain concentration on the summoning as if it were a spell; if your concentration is broken, then the creature persists but is released from your control, and treats all other living creatures (including you) as hostile. If you reanimated multiple creatures, they all share the same concentration.",
+				"You can reanimate creatures with a total challenge rating of half your wizard level (rounded down); once this budget is exhausted, you cannot reanimate any more until you complete a long rest (though you may continue to create Corpse Trinkets.)"
+			]
+		},
+		{
+			"name": "Volatile Soul",
+			"source": "PHB",
+			"page": 22,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Beginning at 6th level, the creatures you create through your Reanimate feature can be used as arcane explosives. Whenever one of the creatures is reduced to zero hit points, it explodes in a burst of necrotic essence.",
+				"Each creature within a 10 ft radius of the exploding creature must make a Dexterity saving throw against your spell save DC. On a failed save, a creature takes {@dice 2d6} necrotic damage for every point of that creature's CR. Creatures below CR 1 deal {@dice 1d6} necrotic damage. On a successful save, a creature takes half damage."
+			]
+		},
+		{
+			"name": "Consume",
+			"source": "PHB",
+			"page": 22,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, you can consume your Corpse Trinkets to restore hitpoints to yourself. As an action, you can devour a Corpse Trinket, regaining {@dice 2d4} hit points per CR of the creature. Creatures with CR of less than 1 grant no hit points.",
+				"As an action, you may drink the contents of the vial, regaining {@dice 2d4} hit points for every point of that creature's CR. This feature cannot restore hitpoints to a creature other than yourself.",
+				"Once you use this feature, you can't use it again until you complete a short or long rest."
+			]
+		},
+		{
+			"name": "Lasting Creation",
+			"source": "PHB",
+			"page": 22,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, the creature created through your Reanimate feature lasts for 8 hours, and no longer requires concentration to maintain; however, your control over the creature is lost if you drop to 0 hit points."
 			]
 		}
 	]

@@ -346,7 +346,6 @@
 								{
 									"type": "list",
 									"items": [
-										"{@class Wizard|PHB|School of Reawakening|Reawakening|DAPC}",
 										"{@class Wizard|PHB|School of Hemomancy|Hemomancy|DAPC}"
 									]
 								}
@@ -1409,59 +1408,6 @@
 			]
 		},
 		{
-			"name": "Night Domain",
-			"shortName": "Night",
-			"source": "DAPC",
-			"page": 11,
-			"className": "Cleric",
-			"classSource": "PHB",
-			"subclassSpells": [
-				"Sleep",
-				"cause fear|xge",
-				"Darkness",
-				"Moonbeam",
-				"Fear",
-				"Feign Death",
-				"Greater Invisibility",
-				"rend shadows|dapc",
-				"Dream",
-				"shadow stride|dapc"
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"sleep",
-							"cause fear|MOD"
-						],
-						"2": [
-							"darkness",
-							"moonbeam|MOD"
-						],
-						"3": [
-							"fear",
-							"feign death"
-						],
-						"4": [
-							"greater invisibility}",
-							"rend shadows|DAPC"
-						],
-						"5": [
-							"dream",
-							"shadow stride|DAPC"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Night Domain|Cleric||Night|DAPC|1",
-				"Channel Divinity: Midnight Gloom|Cleric||Night|DAPC|2",
-				"Moonlight Strike|Cleric||Night|DAPC|6",
-				"Divine Strike|Cleric||Night|DAPC|8",
-				"Nightstalker|Cleric||Night|DAPC|17"
-			]
-		},
-		{
 			"name": "Blood Domain",
 			"shortName": "Blood",
 			"source": "DAPC",
@@ -1552,21 +1498,7 @@
 				"School of Hemomancy|Wizard||Hemomancy|DAPC|2",
 				"Deepen Wound|Wizard||Hemomancy|DAPC|6",
 				"Improved Endurance|Wizard||Hemomancy|DAPC|10",
-				"Dance with Dead|Wizard||Hemomancy|DAPC|14"
-			]
-		},
-		{
-			"name": "School of Reawakening",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"shortName": "Reawakening",
-			"subclassFeatures": [
-				"School of Reawakening|Wizard||Reawakening|DAPC|2",
-				"Volatile Soul|Wizard||Reawakening|DAPC|6",
-				"Consume|Wizard||Reawakening|DAPC|10",
-				"Lasting Creation|Wizard||Reawakening|DAPC|14"
+				"Dance with Death|Wizard||Hemomancy|DAPC|14"
 			]
 		}
 	],
@@ -1582,10 +1514,6 @@
 			"level": 2,
 			"entries": [
 				"The School of Hemomancy studies the ancient arcane art of blood magic. As you select this tradition, you learn to manipulate your own life force so that you may manipulate the life force of others. As you progress through this school, you learn how to transform that vital energy into a force of immeasurable power, capable of defeating even the greatest of foes.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Hemomancy Savant|Wizard||Hemomancy|DAPC|2"
-				},
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Arcane Endurance|Wizard||Hemomancy|DAPC|2"
@@ -1646,11 +1574,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, your ability to cast Hemomancy spells is greatly augmented. When you spend hitpoints to cast a spell with the hemomancy tag, you now gain temporary hit points equal to the total amount spent on the spell."
+				"At 10th level, your ability to cast Hemomancy spells is greatly augmented. When you spend hitpoints to cast a spell with the hemomancy tag, you now gain temporary hit points equal to the total amount spent on the spell. This replaces the benefits of Arcane Endurance.",
+				"Additionally, you no longer provoke a concentration check when you spend hit points to cast hemomancy spells."
 			]
 		},
 		{
-			"name": "Dance with Dead",
+			"name": "Dance with Death",
 			"source": "DAPC",
 			"page": 22,
 			"className": "Wizard",
@@ -1660,103 +1589,8 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, your body learns to repair itself when it is near death. At the start of each of your turns, you regain a number of hit points equal to your Intelligence modifier (minimum 1) if you have no more than half of your maximum hit points remaining. You don't gain this benefit if you start your turn with 0 hit points."
-			]
-		},
-		{
-			"name": "School of Reawakening",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"subclassShortName": "Reawakening",
-			"subclassSource": "DAPC",
-			"level": 2,
-			"entries": [
-				"As a member of the school of reawakening, you combine the forces of necromancy with the power of conjuration. By transforming the necromantic energies of the creatures you kill into completely new conjurations, you bridge the gap between these two school of magic, creating a hybrid school that combines elements of both Conjuration and Necromancy. As you progress, you learn to shape together ever more powerful conjurations.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Dual Savant|Wizard||Reawakening|DAPC|2"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Reawaken Soul|Wizard||Reawakening|DAPC|2"
-				}
-			]
-		},
-		{
-			"name": "Dual Savant",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"subclassShortName": "Reawakening",
-			"subclassSource": "DAPC",
-			"level": 2,
-			"header": 1,
-			"entries": [
-				"Beginning when you select this school at 2nd level, the time you must spend to copy a necromancy or conjuration spell into your spellbook is halved."
-			]
-		},
-		{
-			"name": "Reawaken Soul",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"subclassShortName": "Reawakening",
-			"subclassSource": "DAPC",
-			"level": 2,
-			"header": 1,
-			"entries": [
-				"At 2nd level, you gain the ability to store a creature's soul for later use. You gain a Soul Vial, which can be used to store the soul of a creature with a challenge rating as high as 1/2. By using a 10 minute ritual on a creature that has died within the last hour, you can store that creature's soul in the vial. If there is already a soul within the vial, then the new soul replaces it.",
-				"Once you have a soul contained within your Soul Vial, you can release it to reform that creature. The creature has the same statistics as the creature you gathered the soul from, but it appears slightly translucent and visibly magical. Once formed, the creature lasts for up to 1 hour, and requires your concentration to maintain. The creature is friendly to you and your companions, and obeys your spoken commands (no action required by you). If you don't issue any commands to it, it defends itself from hostile creatures, but otherwise takes no actions. Once the duration ends, the creature's soul is freed and the vial is emptied.",
-				"Once you form a creature, you can't do so again until you finish a long rest.",
-				"Starting at 6th level, you can capture the soul of a creature with a CR as high as your wizard level divided by 3, rounded down."
-			]
-		},
-		{
-			"name": "Volatile Soul",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"subclassShortName": "Reawakening",
-			"subclassSource": "DAPC",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Beginning at 6th level, the creatures you create through your Reawaken Soul feature can be used as arcane explosives. When one of the creatures is reduced to zero hit points, it explodes in a burst of necrotic essence.",
-				"Each creature of your choice within a 10 ft radius of the exploding creature must make a Dexterity saving throw against your spell save DC. On a failed save, a creature takes {@dice 2d6} necrotic damage for every point of that creature's CR. Creatures below CR 1 deal {@dice 1d6} necrotic damage. On a successful save, a creature takes half damage."
-			]
-		},
-		{
-			"name": "Consume",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"subclassShortName": "Reawakening",
-			"subclassSource": "DAPC",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Starting at 10th level, you can consume the soul within your Soul Vial to restore hitpoints to yourself. As an action, you may drink the contents of the vial, regaining {@dice 2d4} hit points for every point of that creature's CR. This feature cannot restore hitpoints to a creature other than yourself.",
-				"Once you use this feature, you can't use it again until you complete a short or long rest."
-			]
-		},
-		{
-			"name": "Lasting Creation",
-			"source": "DAPC",
-			"page": 22,
-			"className": "Wizard",
-			"classSource": "PHB",
-			"subclassShortName": "Reawakening",
-			"subclassSource": "DAPC",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, the creature created through your Reawaken Soul feature lasts for up to 8 hours, and no longer requires concentration to maintain."
+				"At 14th level, your body learns to repair itself when it is near death. At the start of each of your turns, you regain a number of hit points equal to your Intelligence modifier (minimum 1) if you have no more than half of your maximum hit points remaining (even if you are at {@condition Death's Door|MOD}).",
+				"Furthermore, you can maintain concentration at {@condition Death's Door|MOD}."
 			]
 		},
 		{
