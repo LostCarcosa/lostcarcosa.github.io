@@ -2406,7 +2406,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"As an action, you can use your Channel Divinity to teleport to an unoccupied location within 5 feet of a creature you can see within 30 feet of you. That creature must succeed on a Constitution saving throw or become {@condition blinded} for up to 1 minute. The creature can repeat this save at the end of each of its turns, ending the effect on a success. Also, other creatures of your choice within 5 feet of you after you teleport must also make Constitution saving throws. On a failed save, a creature has disadvantage on attack rolls until the start of your next turn."
+				"As a bonus action, you can use your Channel Divinity to teleport to an unoccupied location within 5 feet of a creature you can see within 30 feet of you. That creature and all other creatures within 10 feet of your destination must succeed on a Constitution saving throw or become {@condition blinded} until the end of their next turn."
 			]
 		},
 		{

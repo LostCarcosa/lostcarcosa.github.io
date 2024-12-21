@@ -636,6 +636,30 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Perfect Persona",
+			"source": "MOD",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "changeling"
+						}
+					]
+				}
+			],
+			"entries": [
+				"{@i Oh, to be a mirror, so silver, so exact...}",
+				"Whether for utility or survival, you've exalted your innate shapeshifting abilities. When you use your Facethief ability, you gain the following benefits:",
+				{
+					"type": "list",
+					"items":[ 
+						"You can now retain a stolen appearance for much longer; your facethief transformations can be kept until you complete a long rest.",
+						"You may take a specific memory rather than a random one using Sympathetic Memory, though you must have some idea of what memory you are looking for. Similarly, you may choose what skill proficiency you gain from a target as long as you know (or can guess) that they have a certain proficiency."
+					]
+				}
+			]
 		}
 	],
 	"subclass": [

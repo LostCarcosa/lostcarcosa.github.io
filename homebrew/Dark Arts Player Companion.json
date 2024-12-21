@@ -2545,7 +2545,7 @@
 					"name": "Icy Repose",
 					"type": "entries",
 					"entries": [
-						"As an action, you present your holy symbol and speak a prayer against undead, using your Channel Divinity. Each undead taht can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creatures fails its saving throw, it takes cold damage equal to your plaadin level, and is frozen for 1 minute or until it takes damage again.",
+						"As an action, you present your holy symbol and speak a prayer against undead, using your Channel Divinity. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creatures fails its saving throw, it takes cold damage equal to your plaadin level, and is frozen for 1 minute or until it takes damage again.",
 						"A frozen creature is affected by the {@condition petrified} condition until the frozen effect ends, at which point the creature is freed and able to act normally."
 					]
 				},
@@ -2553,7 +2553,7 @@
 					"name": "Restbringer",
 					"type": "entries",
 					"entries": [
-						"As action, you can imbue one weapon that you are holding with necrotic energy, using your Channel Divinity. For 1 minute, you add 1 + your Charisma modifier necrotic damage (minimum 1) to your damage rolls made with that weapon. Additionally, hitting a target with the weapon marks them until the end of your next turn. A marked target can't regain hit points, and if it dies while marked, it is automatically placed under the effects of a {@spell gentle repose} spell.",
+						"As a bonus action, you can imbue one weapon that you are holding with necrotic energy, using your Channel Divinity. For 1 minute, you add 1 + your Charisma modifier necrotic damage (minimum 1) to your damage rolls made with that weapon. Additionally, hitting a target with the weapon marks them until the end of your next turn. A marked target can't regain hit points, and if it dies while marked, it is automatically placed under the effects of a {@spell gentle repose} spell.",
 						"You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends."
 					]
 				}
