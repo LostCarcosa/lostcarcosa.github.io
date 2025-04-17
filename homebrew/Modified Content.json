@@ -1038,19 +1038,19 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd Level Winter Knight feature}",
-				"Also at 3rd level, you can conjure magical blades of freezing ice. This feature has 4 uses when you gain it, and the number of uses increases to 6 at 7th level, 7 at 10th level, and 8 at 15th level. You regain all expended uses when you finish a long rest.",
-				"As a bonus action, you can spend one use of this ability to summon a number of floating ice weapons. These blades last for up to 10 minutes after they're summoned, and float around you for their duration. You cannot have more blades than your proficiency bonus active at once.",
+				"Also at 3rd level, you can conjure magical weapons made of freezing ice. This feature has 4 uses when you gain it, and the number of uses increases to 6 at 7th level, 7 at 10th level, and 8 at 15th level. You regain all expended uses when you finish a long rest.",
+				"As a bonus action, you can spend one use of this ability to summon a number of floating ice weapons equal to your proficiency bonus. These weapons last for up to 10 minutes after they're summoned, and float around you for their duration. You cannot have more weapons than your proficiency bonus active at once.",
 				"When you summon these icy weapons, you can choose to have them adopt the form of spears or blades, which each have unique benefits (detailed below), though every weapon adopts the same form.",
-				"As long as you have at least one of these blades summoned, you gain the following benefits:",
+				"As long as you have at least one of these weapons summoned, you gain the following benefits:",
 				{
 					"type": "list",
 					"items": [
-						"The weapons are considered martial melee weapons with which you are proficient. As the blades float, you do not need to hold them to attack with them, but attacks with them are otherwise made as normal.",
+						"The weapons are considered martial melee weapons with which you are proficient. As the weapons float, you do not need to hold them to attack with them, but attacks with them are otherwise made as normal.",
 						"If you summoned weapons in the form of spears, they have the finesse and reach properties, and deal {@dice 1d6} slashing + {@dice 1d6 cold} damage on a hit. Additionally, you can use them as a thrown weapon with a range of 60 feet, although an ice spear is destroyed after being thrown in this way.",
 						"If you summoned weapons in the form of blades, they have the finesse and light properties, and deal {@dice 1d4} slashing + {@dice 1d4} cold damage on a hit. You may use two-weapon fighting with these blades, but only if you are not wielding a shield.",
 						"Once per round when you hit a creature with a weapon attack, you can deal {@dice 1d4} bonus cold damage to your target. This damage increases to {@dice 1d6} at 7th level, {@dice 1d8} at 10th level, {@dice 1d10} at 15th level, and {@dice 1d12} at 18th level.",
-						"When a creature you can see within 30 feet of you misses you with an attack, you can use your reaction to command a blade to counterattack. Make a melee weapon attack with the blade against your attacker. This attack is as described in the first bullet point, except its reach is increased to 30 feet. After it counterattacks, the blade is destroyed.",
-						"When a creature you can see within 30 feet of you hits you with an attack, you can use your reaction to command a blade to parry. Your AC is increased by 4 against that attack, potentially causing the attack to miss you. After it parries, the blade is destroyed."
+						"When a creature you can see within 30 feet of you misses you with an attack, you can use your reaction to command an ice weapon to counterattack. Make a melee weapon attack with the ice weapon against your attacker. This attack is as described in the first bullet point, except its reach is increased to 30 feet. After it counterattacks, the weapon is destroyed.",
+						"When a creature you can see within 30 feet of you hits you with an attack, you can use your reaction to command an ice weapon to parry. Your AC is increased by 4 against that attack, potentially causing the attack to miss you. After it parries, the weapon is destroyed."
 					]
 				}
 			]
@@ -1081,14 +1081,14 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 7thLevel Winter Knight feature}",
+				"{@i 10th Level Winter Knight feature}",
 				"Starting at 10th level, you become more adept at counterattacking and parrying with the blades summoned by your Blades of Ice feature. The features are improved as follows:",
 				{
 					"type": "entries",
 					"name": "Counterattack",
 					"page": 20,
 					"entries": [
-						"When you command a blade to counterattack, it deals {@dice 2d6} bonus cold damage to its target on a hit. Hit or miss, you can choose to detonate the blade in a fiery burst after its attack. Each creature within a 5-foot-radius around the target, other than the target, must succeed on a Dexterity saving throw with a DC of 8 + your proficiency bonus + your Constitution modifier or take {@dice 2d10} cold damage."
+						"When you command an ice weapon to counterattack, it deals {@dice 2d6} bonus cold damage to its target on a hit. Hit or miss, you can choose to detonate the weapon in an freezing burst after its attack. Each creature within a 5-foot-radius around the target, other than the target, must succeed on a Dexterity saving throw with a DC of 8 + your proficiency bonus + your Constitution modifier or take {@dice 2d10} cold damage."
 					]
 				},
 				{
@@ -1096,7 +1096,7 @@
 					"name": "Parry",
 					"page": 20,
 					"entries": [
-						"When you command a blade to parry, the initial AC bonus against the triggering attack is increased to 6, and you also gain a +3 bonus to your AC until the start of your next turn."
+						"When you command an ice weapon to parry, the initial AC bonus against the triggering attack is increased to 6. Afterward, you also gain a +3 bonus to your AC until the start of your next turn."
 					]
 				}
 			]
@@ -1128,7 +1128,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 18th Level Winter Knight feature}",
-				"An icy blizzard now surrounds you, granting you unnatural protection",
+				"An icy blizzard now surrounds you, granting you unnatural protection.",
 				{
 					"type": "list",
 					"items": [
