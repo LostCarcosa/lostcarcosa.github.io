@@ -1046,7 +1046,7 @@
 					"type": "list",
 					"items": [
 						"The weapons are considered martial melee weapons with which you are proficient. As the weapons float, you do not need to hold them to attack with them, but attacks with them are otherwise made as normal.",
-						"If you summoned weapons in the form of spears, they have the finesse and reach properties, and deal {@dice 1d6} slashing + {@dice 1d6 cold} damage on a hit. Additionally, you can use them as a thrown weapon with a range of 60 feet, although an ice spear is destroyed after being thrown in this way.",
+						"If you summoned weapons in the form of spears, they have the finesse and reach properties, and deal {@dice 1d6} piercing + {@dice 1d6 cold} damage on a hit. Additionally, you can use them as a thrown weapon with a range of 60 feet, although an ice spear is destroyed after being thrown in this way.",
 						"If you summoned weapons in the form of blades, they have the finesse and light properties, and deal {@dice 1d4} slashing + {@dice 1d4} cold damage on a hit. You may use two-weapon fighting with these blades, but only if you are not wielding a shield.",
 						"Once per round when you hit a creature with a weapon attack, you can deal {@dice 1d4} bonus cold damage to your target. This damage increases to {@dice 1d6} at 7th level, {@dice 1d8} at 10th level, {@dice 1d10} at 15th level, and {@dice 1d12} at 18th level.",
 						"When a creature you can see within 30 feet of you misses you with an attack, you can use your reaction to command an ice weapon to counterattack. Make a melee weapon attack with the ice weapon against your attacker. This attack is as described in the first bullet point, except its reach is increased to 30 feet. After it counterattacks, the weapon is destroyed.",
